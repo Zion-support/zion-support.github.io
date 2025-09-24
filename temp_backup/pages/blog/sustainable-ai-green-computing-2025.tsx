@@ -98,7 +98,7 @@ export default function SustainableAIGreenComputing20o25() {
                 <p className='text-white/90 mb-4'>,
                   Our energy-efficient models can achieve up to 80% reduction in,
                   power consumption while maintaining 95% of the original,
-                  window.performance.,
+                  window.window.performance.,
                 </p>,
               </section>,
               <section className='mb-12'>,
@@ -222,6 +222,5 @@ export default function SustainableAIGreenComputing20o25() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

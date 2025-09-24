@@ -42,8 +42,7 @@ const LoginPage = () => {
                 alt="Zion Tech",
                 onError={(e) => {
                   const target = e.target as HTMLImageElement,
-                  target.style.display = 'none',
-                }}
+                  target.style.display = 'none'}}
               />,
             </div>,
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-90o0">,
@@ -141,6 +140,5 @@ const LoginPage = () => {
           </div>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};
 export default LoginPage;

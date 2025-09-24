@@ -17,8 +17,7 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string,
     email?: string,
-    id?: string,
-  };
+    id?: string};
   onSubmitSuccess?: () => void}
 ,
 export function HireRequestForm({ talentonCloseinitialJobTitleuserDetailsonSubmitSuccess }: HireRequestFormProps) {

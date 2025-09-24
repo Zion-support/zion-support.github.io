@@ -13,7 +13,6 @@ const particles: Array< {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5),
 for (let i = 0, i < count, i++) {
   particles && particles.push ({
-,
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -21,7 +20,6 @@ for (let i = 0, i < count, i++) {
   animationSpeed = 1.0;
   enableHolographic = true;
   enableQuantumEffects = true}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
-,
   children,
   intensity = 'medium',
   theme = 'quantum',
@@ -38,7 +36,6 @@ for (let i = 0, i < count, i++) {
     canvas && canvas.width = window && window.innerWidth,
     canvas && canvas.height = window && window.innerHeight,
     const particles: Array<{
-,
       x: number,
       y: number,
 export default /**,
@@ -58,8 +55,7 @@ function UltraAdvancedFuturisticBackground() {export default function UltraAdvan
     const canvas = canvas_ref.current,
     // Check condition,
 if (return) {
-  $2,
-}
+  $2}
     const ctx = canvas.get_context ('2d'),
     // Check condition,
 if (return) {
@@ -78,8 +74,7 @@ if (return) {
       life: number,
       max_life: number,
       rotation: number,
-      rotation_speed: number,
-    }> = [],
+      rotation_speed: number}> = [],
       x: number;
       y: number;
       vx: number;
@@ -91,8 +86,7 @@ if (return) {
       life: number;
       maxLife: number;
       rotation: number;
-      rotationSpeed: number,
-}> = [],
+      rotationSpeed: number}> = [],
     const colors = {
       quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'];
       neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'];
@@ -124,8 +118,7 @@ if (return) {
           life: Math.random() * 100;
           maxLife: 100 + Math.random() * 100;
           rotation: Math.random() * Math.PI * 2;
-          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed,
-        })}
+          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed})}
     };
     // Enhanced animation loop with quantum effects,
     const animate = () => {
@@ -219,8 +212,7 @@ if (return) {
           life: Math.random () * 100;
           max_life: 100 + Math.random () * 100;
           rotation: Math.random () * Math.PI * 2;
-          rotation_speed: (Math.random () - 0.5) * 0.1 * animation_speed,
-        })}
+          rotation_speed: (Math.random () - 0.5) * 0.1 * animation_speed})}
 ,
     // Enhanced animation loop with quantum effects,
     const animate = () =>: any {
@@ -237,8 +229,7 @@ if (return) {
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.95)'),
         gradient.addColorStop (0.3, 'rgba (0, 255, 255, 0.1)'),
         gradient.addColorStop (0.6, 'rgba (255, 0, 255, 0.05)'),
-        gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)'),
-} else {
+        gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)')} else {
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.9)'),
         gradient.addColorStop (0.5, 'rgba (0, 0, 0, 0.95)'),
         gradient.addColorStop (1, 'rgba (0, 0, 0, 0.98)')}      } else {
@@ -275,8 +266,7 @@ if (return) {
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * particle.opacity})`,
             ctx.lineWidth = 1,
             ctx.moveTo(particle.x, particle.y),
-            ctx.lineTo(partner.x, partner.y),
-}
+            ctx.lineTo(partner.x, partner.y)}
         }
 ,
             ctx.stroke()}

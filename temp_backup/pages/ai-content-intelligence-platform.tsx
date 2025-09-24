@@ -20,6 +20,5 @@ export default function AiContentIntelligencePlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

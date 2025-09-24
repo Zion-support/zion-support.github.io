@@ -45,8 +45,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void;
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
-  onViewDetails: (quote: QuoteRequest) => void,
-}
+  onViewDetails: (quote: QuoteRequest) => void}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   onViewDetails}) => {
   return (
@@ -205,8 +204,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void;
   toggleArchive: (id: string, isArchived: boolean) => void;
   deleteQuote: (id: string) => void;
-  onViewDetails: (quote: QuoteRequest) => void,
-}
+  onViewDetails: (quote: QuoteRequest) => void}
 ,
 export const QuotesTable: React.FC<QuotesTableProps> = ({
   quotes;
@@ -337,8 +335,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           <DropdownMenuItem
                             onClick={() => {
                               if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
-                                deleteQuote(quote && quote.id),
-}
+                                deleteQuote(quote && quote.id)}
                             }}
                             className="text-red-500">,
                             <Trash2 className="h-4 w-4 mr-2" />,

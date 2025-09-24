@@ -61,8 +61,7 @@ export default function Innovative20o26ServicesShowcase() {
           case 'emerging':,
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic'),
           default: ,
-            return true,
-        }
+            return true}
       })}
 ,
     // Price range filter,
@@ -77,8 +76,7 @@ export default function Innovative20o26ServicesShowcase() {
           case 'high':,
             return price > 10o00,
           default: ,
-            return true,
-        }
+            return true}
       })}
 ,
     // Search filter,
@@ -100,8 +98,7 @@ export default function Innovative20o26ServicesShowcase() {
         case 'popularity':,
           return b.customers - a.customers,
         default: ,
-          return a.name.localeCompare(b.name),
-      }
+          return a.name.localeCompare(b.name)}
     }),
     return filtered}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
   const containerVariants ={
@@ -109,8 +106,7 @@ export default function Innovative20o26ServicesShowcase() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -119,8 +115,7 @@ export default function Innovative20o26ServicesShowcase() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -206,8 +201,7 @@ export default function Innovative20o26ServicesShowcase() {
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-30o0 ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-blue-60o0/30 to-purple-60o0/30 border-blue-50o0/50 text-blue-30o0',
-                        : 'bg-gray-90o0/30 border-gray-70o0/50 text-gray-30o0 hover: bg-gray-80o0/50',
-                    }`}
+                        : 'bg-gray-90o0/30 border-gray-70o0/50 text-gray-30o0 hover: bg-gray-80o0/50'}`}
                   >,
                     <span className="mr-2">{category.icon}</span>,
                     {category.name} ({category.count}),
@@ -221,8 +215,7 @@ export default function Innovative20o26ServicesShowcase() {
                     className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-30o0 ${
                       selectedPriceRange === range.id,
                         ? 'bg-gradient-to-r from-green-60o0/30 to-emerald-60o0/30 border-green-50o0/50 text-green-30o0',
-                        : 'bg-gray-90o0/30 border-gray-70o0/50 text-gray-30o0 hover: bg-gray-80o0/50',
-                    }`}
+                        : 'bg-gray-90o0/30 border-gray-70o0/50 text-gray-30o0 hover: bg-gray-80o0/50'}`}
                   >,
                     {range.name}
                   </button>))}
@@ -376,5 +369,4 @@ export default function Innovative20o26ServicesShowcase() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

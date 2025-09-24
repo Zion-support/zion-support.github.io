@@ -1,8 +1,7 @@
 import React, { useState } from 'react',
 type PersonaConfig = {
   voice: string,
-  language: string,
-};
+  language: string};
 type Episode = {
   id: string,
   title: string,
@@ -14,8 +13,7 @@ type Episode = {
   audio?: {
     mp3Url?: string,
     wavUrl?: string,
-    mp4Url?: string,
-  };
+    mp4Url?: string};
 };
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({

@@ -11,8 +11,7 @@ export type ReviewFormValues = {
     communication?: number,
     qualityOfWork?: number,
     timeliness?: number,
-    wouldWorkWithAgain?: boolean,
-  };
+    wouldWorkWithAgain?: boolean};
   anonymous?: boolean};
 type Props = {
   initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>};
@@ -49,8 +48,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setMessage('Review submitted! Pending admin approval.')} catch (err: any) {
-      setMessage(err.message),
-    } finally {
+      setMessage(err.message)} finally {
       setSubmitting(false)}
   }
 ,

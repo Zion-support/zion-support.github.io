@@ -20,14 +20,12 @@ interface Service {
   targetAudience?: string,
   competitiveAdvantage?: string,
   integration?: string[],
-  useCases?: string[],
-}
+  useCases?: string[]}
 ,
 interface UltraFuturisticServiceCard20o36Props {
   service: Service,
   variant?: 'ai' | 'quantum' | 'space' | 'automation' | 'cyber' | 'default',
-  className?: string,
-}
+  className?: string}
 ,
 const categoryIcons: { [key: string]: React.ReactNode } ={
   'AI & Data': <Brain className="w-5 h-5"  />;
@@ -51,43 +49,37 @@ const variantConfig ={
     border: 'border-green-50o0/30';
     glow: 'shadow-green-50o0/20';
     accent: 'text-green-40o0';
-    bg: 'from-green-90o0/20 to-emerald-90o0/20',
-  };
+    bg: 'from-green-90o0/20 to-emerald-90o0/20'};
   quantum: {
     gradient: 'from-cyan-50o0 via-blue-50o0 to-purple-50o0';
     border: 'border-cyan-50o0/30';
     glow: 'shadow-cyan-50o0/20';
     accent: 'text-cyan-40o0';
-    bg: 'from-cyan-90o0/20 to-blue-90o0/20',
-  };
+    bg: 'from-cyan-90o0/20 to-blue-90o0/20'};
   space: {
     gradient: 'from-purple-50o0 via-pink-50o0 to-red-50o0';
     border: 'border-purple-50o0/30';
     glow: 'shadow-purple-50o0/20';
     accent: 'text-purple-40o0';
-    bg: 'from-purple-90o0/20 to-pink-90o0/20',
-  };
+    bg: 'from-purple-90o0/20 to-pink-90o0/20'};
   automation: {
     gradient: 'from-orange-50o0 via-red-50o0 to-pink-50o0';
     border: 'border-orange-50o0/30';
     glow: 'shadow-orange-50o0/20';
     accent: 'text-orange-40o0';
-    bg: 'from-orange-90o0/20 to-red-90o0/20',
-  };
+    bg: 'from-orange-90o0/20 to-red-90o0/20'};
   cyber: {
     gradient: 'from-blue-50o0 via-indigo-50o0 to-purple-50o0';
     border: 'border-blue-50o0/30';
     glow: 'shadow-blue-50o0/20';
     accent: 'text-blue-40o0';
-    bg: 'from-blue-90o0/20 to-indigo-90o0/20',
-  };
+    bg: 'from-blue-90o0/20 to-indigo-90o0/20'};
   default: {
     gradient: 'from-gray-50o0 via-slate-50o0 to-zinc-50o0';
     border: 'border-gray-50o0/30';
     glow: 'shadow-gray-50o0/20';
     accent: 'text-gray-40o0';
-    bg: 'from-gray-90o0/20 to-slate-90o0/20',
-  }
+    bg: 'from-gray-90o0/20 to-slate-90o0/20'}
 };
 export default function UltraFuturisticServiceCard20o36({
   service;
@@ -102,16 +94,14 @@ export default function UltraFuturisticServiceCard20o36({
       scale: 1;
       transition: {
         duration: 0.5;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     };
     hover: {
       y: -5;
       scale: 1.0o2;
       transition: {
         duration: 0.3;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const iconVariants ={
@@ -121,16 +111,14 @@ export default function UltraFuturisticServiceCard20o36({
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "backOut" as const,
-      }
+        ease: "backOut" as const}
     };
     hover: {
       rotate: 360;
       scale: 1.1;
       transition: {
         duration: 0.6;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   };
   return (

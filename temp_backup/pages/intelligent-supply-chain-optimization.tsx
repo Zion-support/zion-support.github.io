@@ -122,6 +122,5 @@ export default function IntelligentSupplyChainOptimization() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

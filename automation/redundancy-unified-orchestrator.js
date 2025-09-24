@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [UNIFIED-REDUNDANCY] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,14 +17,13 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
@@ -47,20 +46,17 @@ const REDUNDANCY_SYSTEMS ={
       "redundancy-performance-monitor";
       "redundancy-dependency-monitor";
       "redundancy-health-orchestrator"];
-    status: "unknown",
-  };
+    status: "unknown"};
   githubActions: {
     name: "GitHub Actions Redundancy";
     workflows: [
       "marketing-sync";
       "sync-health"];
-    status: "unknown",
-  };
+    status: "unknown"};
   netlifyFunctions: {
     name: "Netlify Functions Redundancy";
     functionsCount: 0;
-    status: "unknown",
-  }
+    status: "unknown"}
 };
 function checkPM2Redundancy() {
   log("Checking PM2 redundancy system..."),
@@ -212,8 +208,7 @@ function runRedundancyTests() {
     const testResults ={
       pm2: null;
       githubActions: null;
-      netlifyFunctions: null,
-    };
+      netlifyFunctions: null};
     // Test PM2 redundancy,
     testResults.pm2 = checkPM2Redundancy(),
     // Test GitHub Actions redundancy,
@@ -237,8 +232,7 @@ function generateUnifiedReport() {
     generatedAt: nowIso();
     systemStatus: {};
     testResults: null;
-    summary: "Unified redundancy system report",
-  };
+    summary: "Unified redundancy system report"};
   try {
     // Check all systems,
     report.systemStatus.pm2 = checkPM2Redundancy(),
@@ -303,7 +297,7 @@ ${JSON.stringify(report, null, 2)}
 }
 ,
 function showHelp() {
-  // console.log(`,
+  // // console.log(`,
 Unified Redundancy Orchestrator,
 Usage: node automation/redundancy-unified-orchestrator.js [command],
 Commands:,
@@ -318,8 +312,7 @@ Examples:,
   node automation/redundancy-unified-orchestrator.js status,
   node automation/redundancy-unified-orchestrator.js start,
   node automation/redundancy-unified-orchestrator.js test,
-`),
-}
+`)}
 ,
 // Main execution,
 function main() {

@@ -15,6 +15,5 @@ export default function PublishPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

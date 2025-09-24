@@ -20,6 +20,5 @@ export default function Comprehensive20o37ServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

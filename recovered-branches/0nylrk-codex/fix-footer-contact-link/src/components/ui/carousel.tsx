@@ -12,8 +12,7 @@ type CarouselProps = {
   opts?: CarouselOptions,
   plugins?: CarouselPlugin,
   orientation?: "horizontal" | "vertical",
-  setApi?: (api: CarouselApi) => void,
-}
+  setApi?: (api: CarouselApi) => void}
 ,
 type CarouselContextProps = {
   carouselRef: ReturnType<typeof useEmblaCarousel>[0],
@@ -22,8 +21,7 @@ type CarouselContextProps = {
   scrollNext: () => void,
   canScrollPrev: boolean,
   canScrollNext: boolean,
-  orientation: "horizontal" | "vertical",
-} & Omit<CarouselProps"orientation">,
+  orientation: "horizontal" | "vertical"} & Omit<CarouselProps"orientation">,
 const CarouselContext = React.createContext<CarouselContextProps | null>(null),
 function useCarousel(): CarouselContextProps {
   const context = React.useContext(CarouselContext) as CarouselContextProps | null,
@@ -54,8 +52,7 @@ const Carousel = React.forwardRef<,
     const [canScrollNextsetCanScrollNext] = React.useState(false),
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return,
-      }
+        return}
 ,
       setCanScrollPrev(api.canScrollPrev()),
       setCanScrollNext(api.canScrollNext())}[]),
@@ -67,8 +64,7 @@ const Carousel = React.forwardRef<,
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
           event.preventDefault(),
-          scrollPrev(),
-        } else if (event.key === "ArrowRight") {
+          scrollPrev()} else if (event.key === "ArrowRight") {
           event.preventDefault(),
           scrollNext()}
       };

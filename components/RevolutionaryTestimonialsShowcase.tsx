@@ -11,8 +11,7 @@ const testimonials = [
     content: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 30o0% ROI within the first year. Their expertise in automation is unmatched.";
     results: "30o0% ROI in 12 months";
     image: "/images/testimonials/sarah-chen.jpg";
-    featured: true,
-  };
+    featured: true};
   {
     id: 2;
     name: "Michael Rodriguez";
@@ -23,8 +22,7 @@ const testimonials = [
     content: "The predictive maintenance system they implemented saved us $2M annually. Our downtime reduced by 80% and efficiency increased by 45%.";
     results: "$2M annual savings";
     image: "/images/testimonials/michael-rodriguez.jpg";
-    featured: true,
-  };
+    featured: true};
   {
     id: 3;
     name: "Dr. Emily Watson";
@@ -35,8 +33,7 @@ const testimonials = [
     content: "Their AI diagnostic platform revolutionized our patient care. Diagnosis accuracy improved to 98% and processing time reduced by 90%.";
     results: "98% diagnosis accuracy";
     image: "/images/testimonials/emily-watson.jpg";
-    featured: false,
-  };
+    featured: false};
   {
     id: 4;
     name: "James Park";
@@ -47,8 +44,7 @@ const testimonials = [
     content: "Zion Tech 'Group', 's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.";
     results: "99.7% fraud detection";
     image: "/images/testimonials/james-park.jpg";
-    featured: false,
-  };
+    featured: false};
   {
     id: 5;
     name: "Lisa Thompson";
@@ -59,8 +55,7 @@ const testimonials = [
     content: "The AI-powered inventory optimization transformed our supply chain. We reduced costs by 35% and improved customer satisfaction by 60%.";
     results: "35% cost reduction";
     image: "/images/testimonials/lisa-thompson.jpg";
-    featured: false,
-  };
+    featured: false};
   {
     id: 6;
     name: "David Kim";
@@ -71,8 +66,7 @@ const testimonials = [
     content: "Their route optimization AI reduced our delivery times by 40% and fuel costs by 25%. The ROI was visible within 3 months of implementation.";
     results: "40% faster delivery";
     image: "/images/testimonials/david-kim.jpg";
-    featured: false,
-  }
+    featured: false}
 ],
 const stats = [
   { label: "Client Satisfaction"value: "98%"icon: Star };
@@ -229,5 +223,4 @@ export default function RevolutionaryTestimonialsShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

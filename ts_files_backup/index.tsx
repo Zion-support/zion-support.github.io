@@ -25,76 +25,64 @@ export default function HomePage() {
       icon: Brain;
       title: "AI Autonomous Ecosystem";
       description: "Revolutionary autonomous AI solutions that adapt and evolve";
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       icon: Atom;
       title: "Quantum AI Neural Networks";
       description: "Quantum-powered AI with advanced consciousness capabilities";
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       icon: Shield;
       title: "Quantum Cybersecurity";
       description: "Quantum-resistant security with AI-powered threat detection";
-      color: "from-red-500 to-orange-500",
-    };
+      color: "from-red-500 to-orange-500"};
     {
       icon: Rocket;
       title: "Space Resource Intelligence";
       description: "AI-powered space resource discovery and optimization";
-      color: "from-indigo-500 to-purple-500",
-    };
+      color: "from-indigo-500 to-purple-500"};
     {
       icon: Cpu;
       title: "Autonomous DevOps";
       description: "AI-powered DevOps optimization and automation";
-      color: "from-emerald-500 to-teal-500",
-    };
+      color: "from-emerald-500 to-teal-500"};
     {
       icon: Database;
       title: "Edge Computing Orchestration";
       description: "Advanced edge computing optimization platform";
-      color: "from-yellow-500 to-orange-500",
-    }
+      color: "from-yellow-500 to-orange-500"}
   ],
   const services = [
     {
       title: "AI & Machine Learning";
       description: "Custom AI solutionsneural networksand autonomous systems";
       icon: Brain;
-      color: "from-purple-500 to-pink-500",
-    };
+      color: "from-purple-500 to-pink-500"};
     {
       title: "Quantum Computing";
       description: "Quantum algorithmscryptographyand quantum AI integration";
       icon: Atom;
-      color: "from-blue-500 to-cyan-500",
-    };
+      color: "from-blue-500 to-cyan-500"};
     {
       title: "Cybersecurity";
       description: "Advanced threat detectionquantum-resistant encryption";
       icon: Shield;
-      color: "from-red-500 to-orange-500",
-    };
+      color: "from-red-500 to-orange-500"};
     {
       title: "Cloud Infrastructure";
       description: "Scalable cloud solutionsedge computingand DevOps";
       icon: Cloud;
-      color: "from-emerald-500 to-teal-500",
-    };
+      color: "from-emerald-500 to-teal-500"};
     {
       title: "Data Analytics";
       description: "Big data processingpredictive analyticsand insights";
       icon: BarChart3;
-      color: "from-indigo-500 to-purple-500",
-    };
+      color: "from-indigo-500 to-purple-500"};
     {
       title: "Digital Transformation";
       description: "End-to-end digital transformation and modernization";
       icon: Rocket;
-      color: "from-yellow-500 to-orange-500",
-    }
+      color: "from-yellow-500 to-orange-500"}
   ],
   const stats = [
     { number: "500+"label: "Projects Delivered"icon: CheckCircle };

@@ -18,8 +18,7 @@ interface OptimizedImageProps {
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down',
   rounded?: boolean,
   shadow?: boolean,
-  hover?: boolean,
-}
+  hover?: boolean}
 ,
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -96,8 +95,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Generate optimized src with quality parameter,
   const getOptimizedSrc = (src: string) => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
-      return src,
-    }
+      return src}
 ,
     // Add quality parameter for external images if possible,
     try {
@@ -149,8 +147,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
             Image failed to load,
           </p>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className='relative' style={{ width, height }}>,

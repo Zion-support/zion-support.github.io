@@ -3,8 +3,7 @@ import { getFraudStore } from '../../../../utils/fraud/store',
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'],
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured,
-  return token === process.env.ADMIN_TOKEN,
-}
+  return token === process.env.ADMIN_TOKEN}
 ,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {

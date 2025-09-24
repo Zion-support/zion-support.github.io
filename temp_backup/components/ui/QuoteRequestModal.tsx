@@ -8,14 +8,12 @@ export type QuoteFormValues = {
   timelineStart?: string,
   timelineEnd?: string,
   budgetRange?: string,
-  email: string,
-};
+  email: string};
 type Props = {
   open: boolean,
   onClose: () => void,
   service?: ServiceItem | null,
-  onSubmit: (values: QuoteFormValues) => Promise<void> | void,
-};
+  onSubmit: (values: QuoteFormValues) => Promise<void> | void};
 const budgetOptions = [
   'Under $1,0o00';
   '$1,0o00 - $5,0o00';
@@ -51,10 +49,8 @@ export default function QuoteRequestModal({
     setError(null),
     try {
       await onSubmit(values),
-      setConfirmed(true),
-    } catch (err: any) {
-      setError(err?.message || 'Something went wrong'),
-    } finally {
+      setConfirmed(true)} catch (err: any) {
+      setError(err?.message || 'Something went wrong')} finally {
       setSubmitting(false)}
   };
   const content = confirmed ? (

@@ -60,7 +60,7 @@ class ErrorBoundary extends React.Component<
 
 		if (typeof window !== 'undefined') {
 			// eslint-disable-next-line no-console
-			// console.log('Error would be sent to error tracking service:', errorDetails);
+			// // console.log('Error would be sent to error tracking service:', errorDetails);
 		}
 		this.setState({
 			error,

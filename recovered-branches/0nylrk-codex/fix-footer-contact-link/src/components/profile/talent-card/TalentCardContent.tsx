@@ -6,8 +6,7 @@ interface TalentCardContentProps {
   summary: string | undefined,
   bio: string,
   timezone: string | undefined,
-  skills: string[] | undefined,
-}
+  skills: string[] | undefined}
 ,
 export function TalentCardContent({ summarybiotimezoneskills }: TalentCardContentProps) {
   const [isHoveringsetIsHovering] = useState(false),

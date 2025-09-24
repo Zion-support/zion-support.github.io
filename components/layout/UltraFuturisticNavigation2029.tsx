@@ -114,7 +114,6 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Briefcase,
-,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
@@ -225,8 +224,7 @@ import {
         name: 'AI Customer Service Automation',
         href: '/ai-customer-service-automation',
         description: 'Intelligent customer support',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'AI Education Platform',
         href: '/ai-education-platform',

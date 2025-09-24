@@ -128,6 +128,5 @@ export default function RevolutionaryTechShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -15,6 +15,5 @@ export default function BackupPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

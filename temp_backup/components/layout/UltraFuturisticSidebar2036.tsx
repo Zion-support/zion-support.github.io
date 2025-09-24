@@ -27,8 +27,7 @@ import {
 } from 'lucide-react',
 interface SidebarProps {
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 const contactInfo = {
   mobile: '+1 30o2 464 0950';

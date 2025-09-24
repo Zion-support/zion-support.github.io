@@ -73,8 +73,7 @@ if ('generateStaticParams' in entry) {
     Diff<,
       {
         __tag__: 'generateStaticParams',
-        __return_type__: any[] | Promise<any[]>,
-      };
+        __return_type__: any[] | Promise<any[]>};
       {
         __tag__: 'generateStaticParams',
         __return_type__: ReturnType<MaybeField<TEntry 'generateStaticParams'>>}

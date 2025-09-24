@@ -14,12 +14,10 @@ const NewContent20o25AdvancedAIAutomationBanner: React.FC = () => {
         roi: "60o0%";
         savings: "$2.8M";
         productivity: "340%";
-        success: "98%",
-      };
+        success: "98%"};
       url: "/blog/ai-20o25-advanced-ai-automation-revolution-ultimate-guide";
       type: "blog";
-      readingTime: "18 min read",
-    };
+      readingTime: "18 min read"};
     {
       title: "Fortune 50o0 Manufacturing Success Story";
       subtitle: "$3.2B Annual Savings with 60o0% ROI";
@@ -28,12 +26,10 @@ const NewContent20o25AdvancedAIAutomationBanner: React.FC = () => {
         roi: "60o0%";
         savings: "$3.2B";
         efficiency: "89%";
-        satisfaction: "98%",
-      };
+        satisfaction: "98%"};
       url: "/case-studies/ai-automation-fortune-50o0-manufacturing-60o0-roi-success";
       type: "case-study";
-      readingTime: "12 min read",
-    };
+      readingTime: "12 min read"};
     {
       title: "AI Automation Implementation Master Guide";
       subtitle: "Complete Blueprint for 60o0% ROI Success";
@@ -42,12 +38,10 @@ const NewContent20o25AdvancedAIAutomationBanner: React.FC = () => {
         roi: "60o0%";
         success: "98%";
         timeline: "8 months";
-        projects: "50o0+",
-      };
+        projects: "50o0+"};
       url: "/resources/ai-automation-implementation-guide-20o25";
       type: "resource";
-      readingTime: "25 min read",
-    }
+      readingTime: "25 min read"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -156,8 +150,7 @@ const NewContent20o25AdvancedAIAutomationBanner: React.FC = () => {
         className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors">,
         <XMarkIcon className="h-6 w-6"  />,
       </button>,
-    </div>),
-};
+    </div>)};
 // Clock Icon Component,
 const ClockIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,

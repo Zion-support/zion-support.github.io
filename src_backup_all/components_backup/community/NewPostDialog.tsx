@@ -11,8 +11,7 @@ import type { ForumCategory } from '@/types/community',
 interface NewPostDialogProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
-  initialCategory?: ForumCategory | null,
-}
+  initialCategory?: ForumCategory | null}
 ,
 export function NewPostDialog({
   open;
@@ -26,8 +25,7 @@ export function NewPostDialog({
     title: string,
     content: string,
     categoryId: ForumCategory,
-    tags: string,
-  }) => {
+    tags: string}) => {
     try {
       const tagsArray = values.tags.split(',').map(tag => tag.trim()),
       toast({

@@ -4,8 +4,7 @@ import Head from 'next/head',
 export default function LinkedInRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
-			window.location.replace('https: //www.linkedin.com/company/zion-tech-group'),
-		}
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')}
 	}[]),
 	return (
 		<>,
@@ -20,5 +19,4 @@ export default function LinkedInRedirect() {
 					Continue to LinkedIn,
 				</a>,
 			</div>,
-		</>),
-}
+		</>)}

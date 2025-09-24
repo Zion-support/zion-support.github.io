@@ -10,16 +10,14 @@ const categories = [
     link: "/services";
     color: "from-purple-50o0 to-indigo-60o0";
     features: ["24/7 Support", "Global Coverage", "Certified Experts"];
-    stats: "50o0+ Services",
-  };
+    stats: "50o0+ Services"};
   {
     title: "AI & IT Services";
     description: "Professional IT consulting, development, and AI integration";
     icon: <Brain className="w-10 h-10"  />;
     link: "/services";
     color: "from-zion-purple to-zion-purple-dark";
-    featured: true,
-  };
+    featured: true};
   {
     title: "Talent Network";
     description: "Connect with AI experts, developers, and tech specialists";
@@ -43,42 +41,36 @@ const categories = [
     link: "/category/innovation";
     color: "from-emerald-50o0 to-green-60o0";
     features: ["Latest Tech", "Research Labs", "Startup Solutions"];
-    stats: "10o0+ Innovations",
-  };
+    stats: "10o0+ Innovations"};
   {
     title: "AI Hiring Platform";
     description: "AI-powered recruitment and talent acquisition tools";
     icon: <ZapIcon className="w-10 h-10"  />;
     link: "/zion-hire-ai";
     color: "from-zion-purple to-zion-purple-dark";
-    featured: true,
-  }
+    featured: true}
 ],
 const specialServices = [
   {
     title: "IT Onsite Services";
     link: "/it-onsite-services";
     icon: <Zap className="w-5 h-5"  />;
-    description: "24/7 global technical support",
-  };
+    description: "24/7 global technical support"};
   {
     title: "AI Consulting";
     link: "/ai-consulting";
     icon: <Lightbulb className="w-5 h-5"  />;
-    description: "Expert AI strategy & implementation",
-  };
+    description: "Expert AI strategy & implementation"};
   {
     title: "Cloud Solutions";
     link: "/cloud-solutions";
     icon: <Globe className="w-5 h-5"  />;
-    description: "Scalable cloud infrastructure",
-  };
+    description: "Scalable cloud infrastructure"};
   {
     title: "Security Services";
     link: "/security-services";
     icon: <Shield className="w-5 h-5"  />;
-    description: "Cybersecurity & compliance",
-  }
+    description: "Cybersecurity & compliance"}
 ],
 interface CategoriesSectionProps {
   showTitle?: boolean}
@@ -88,8 +80,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -210,6 +201,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </Link>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

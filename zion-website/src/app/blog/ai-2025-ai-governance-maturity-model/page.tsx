@@ -37,6 +37,5 @@ export default function Page() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

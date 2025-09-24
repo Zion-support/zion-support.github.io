@@ -8,8 +8,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -19,8 +18,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const floatingElements = [
@@ -46,8 +44,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
             transition={{
               duration: 20;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>,
         {/* Floating geometric shapes */}
@@ -60,8 +57,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -71,8 +67,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-40o0/30 transform rotate-45",
@@ -82,8 +77,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Animated grid lines */}
         <div className="absolute inset-0 opacity-20">,
@@ -94,15 +88,13 @@ const UltraFuturisticHero20o29: React.FC = () => {
                 linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
                 linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               `;
-              backgroundSize: '50px 50px',
-            }}
+              backgroundSize: '50px 50px'}}
             animate={{
               backgroundPosition: ['0px 0px', '50px 50px']}}
             transition={{
               duration: 20;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />,
         </div>,
         {/* Floating neon orbs */}
@@ -115,8 +107,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-purple-40o0 rounded-full shadow-lg shadow-purple-40o0/50",
@@ -127,8 +118,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Energy waves */}
         <motion.div,
@@ -141,8 +131,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       <div className="max-w-7xl mx-auto text-center relative z-10">,
@@ -184,8 +173,7 @@ const UltraFuturisticHero20o29: React.FC = () => {
                   duration: 4;
                   delay: element.delay;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
               >,
                 <element.icon  />,
               </motion.div>))}

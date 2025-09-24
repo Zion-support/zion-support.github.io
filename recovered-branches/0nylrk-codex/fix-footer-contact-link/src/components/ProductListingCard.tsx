@@ -7,8 +7,7 @@ import { StarDollarSign } from "lucide-react",
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void,
-}
+  onRequestQuote?: (id: string) => void}
 ,
 export function ProductListingCard({
   listing,
@@ -26,8 +25,7 @@ export function ProductListingCard({
     return `${listing.currency}${listing.price.toLocaleString()}`};
   // Handle image loading errors,
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg',
-  };
+    e.currentTarget.src = '/placeholder.svg'};
   // Handle navigating to listing detail,
   const handleViewListing = () => {
     navigate(`/listing/${listing.id}`)};
@@ -36,8 +34,7 @@ export function ProductListingCard({
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestQuote) {
-      onRequestQuote(listing.id),
-    } else {
+      onRequestQuote(listing.id)} else {
       // Default behavior if no handler provided,
       navigate(`/request-quote?listing=${listing.id}`)}
   };

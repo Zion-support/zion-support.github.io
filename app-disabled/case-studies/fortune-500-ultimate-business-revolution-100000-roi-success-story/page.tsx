@@ -608,6 +608,5 @@ export default function Fortune50o0SuccessStoryPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

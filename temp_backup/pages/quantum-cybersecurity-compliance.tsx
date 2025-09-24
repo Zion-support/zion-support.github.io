@@ -314,8 +314,7 @@ export default function QuantumCybersecurityCompliance() {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
                     index === 1,
                       ? 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover: from-purple-60o0 hover:to-pink-70o0',
-                      : 'bg-gray-70o0 hover:bg-gray-60o0 border border-gray-60o0',
-                  }`}
+                      : 'bg-gray-70o0 hover:bg-gray-60o0 border border-gray-60o0'}`}
                 >,
                   {index === 1 ? 'Start Free Trial' : 'Get Started'}
                 </button>,
@@ -494,6 +493,5 @@ export default function QuantumCybersecurityCompliance() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

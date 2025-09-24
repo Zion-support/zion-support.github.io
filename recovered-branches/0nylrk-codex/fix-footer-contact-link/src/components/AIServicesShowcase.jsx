@@ -14,8 +14,7 @@ const aiServices = [
         features: ['Multi-language support', 'Custom training', 'API access', 'Analytics'];
         icon: Brain;
         color: 'from-purple-50o0 to-purple-70o0';
-        status: 'active',
-    };
+        status: 'active'};
     {
         id: 'ai-vision';
         name: 'VisionAI Suite';
@@ -27,8 +26,7 @@ const aiServices = [
         features: ['Real-time processing', 'Custom models', 'Batch processing', 'SDK'];
         icon: Cpu;
         color: 'from-blue-50o0 to-blue-70o0';
-        status: 'beta',
-    };
+        status: 'beta'};
     {
         id: 'ai-data';
         name: 'DataMind Analytics';
@@ -40,8 +38,7 @@ const aiServices = [
         features: ['Predictive analytics', 'Real-time insights', 'Custom dashboards', 'API'];
         icon: Database;
         color: 'from-green-50o0 to-green-70o0';
-        status: 'active',
-    };
+        status: 'active'};
     {
         id: 'ai-global';
         name: 'GlobalAI Network';
@@ -53,8 +50,7 @@ const aiServices = [
         features: ['Global deployment', 'Auto-scaling', 'Load balancing', 'Monitoring'];
         icon: Globe;
         color: 'from-orange-50o0 to-orange-70o0';
-        status: 'new',
-    };
+        status: 'new'};
     {
         id: 'ai-code-review';
         name: 'AI Code Reviewer';
@@ -66,8 +62,7 @@ const aiServices = [
         features: ['PR annotations', 'OWASP checks', 'Refactor suggestions'];
         icon: Code;
         color: 'from-cyan-50o0 to-blue-60o0';
-        status: 'active',
-    };
+        status: 'active'};
     {
         id: 'ai-rag-assistant';
         name: 'Knowledge RAG Assistant';
@@ -79,8 +74,7 @@ const aiServices = [
         features: ['Policy-aware retrieval', 'Redaction', 'Human-in-the-loop'];
         icon: Bot;
         color: 'from-purple-60o0 to-fuchsia-60o0';
-        status: 'active',
-    };
+        status: 'active'};
     {
         id: 'ai-vision-edge';
         name: 'Edge Vision Inspector';
@@ -92,8 +86,7 @@ const aiServices = [
         features: ['Offline inference', 'Model drift alerts', 'Web dashboard'];
         icon: Scan;
         color: 'from-emerald-50o0 to-teal-60o0';
-        status: 'beta',
-    }
+        status: 'beta'}
 ],
 const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analytics', 'Infrastructure', 'Developer AI'],
 export function AIServicesShowcase() {
@@ -119,8 +112,7 @@ export function AIServicesShowcase() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.1;
-                delayChildren: 0.2,
-            }
+                delayChildren: 0.2}
         }
     };
     const itemVariants ={
@@ -131,8 +123,7 @@ export function AIServicesShowcase() {
             scale: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">,

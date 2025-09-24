@@ -16,13 +16,11 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
         roi: '8,50o0%';
         savings: '$45.2B';
         efficiency: '2,40o0%';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation.';
       url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide';
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ultimate-transformation-case-study';
       title: 'Fortune 50o0 Ultimate Business Transformation Success Story';
@@ -32,13 +30,11 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
         roi: '8,50o0%';
         savings: '$45.2B';
         timeline: '18 months';
-        satisfaction: '99.8%',
-      };
+        satisfaction: '99.8%'};
       description: 'The most successful AI transformation in business history documented.';
       url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story';
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ultimate-implementation-guide';
       title: 'AI 20o25-20o26 Ultimate Business Transformation Implementation Guide';
@@ -52,8 +48,7 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
       description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformation.';
       url: '/resources/ai-20o25-20o26-ultimate-business-transformation-implementation-guide';
       readingTime: '45 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   // Auto-rotate slides,
   useEffect(() => {

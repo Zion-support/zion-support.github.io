@@ -21,8 +21,7 @@ interface MilestoneCardProps {
   status: string,
   dueDate?: string,
   onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>,
-}
+  onReject?: (id: string) => Promise<void>}
 ,
 export function MilestoneCard({
   id;
@@ -47,8 +46,7 @@ export function MilestoneCard({
       case 'rejected':,
         return 'bg-red-50o0',
       default: ,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   }
 ,
   return (

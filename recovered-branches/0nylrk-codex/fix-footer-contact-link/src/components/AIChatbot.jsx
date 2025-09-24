@@ -5,8 +5,7 @@ import { useAnalytics } from '../hooks/useAnalytics',
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 10o00 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true;
-        enableUserBehaviorTracking: true,
-    }),
+        enableUserBehaviorTracking: true}),
     const [isOpen, setIsOpen] = useState(false),
     const [isMinimized, setIsMinimized] = useState(false),
     const [messages, setMessages] = useState([]),
@@ -37,8 +36,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const newMessage ={
             ...message;
             id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
         setMessages(prev => {
             const updated = [...prev, newMessage],
             // Keep only the last maxMessages,
@@ -57,8 +55,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         trackChatbotInteraction('bot_response', {
             messageId: message.id;
             intent: metadata?.intent;
-            confidence: metadata?.confidence,
-        }),
+            confidence: metadata?.confidence}),
         return message}, [addMessage, trackChatbotInteraction]),
     // Simulate AI processing,
     const simulateAIProcessing = useCallback(async (userInput) => {
@@ -72,8 +69,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
             return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
-            return "You can reach us at: \n📧 kleber@ziontechgroup.com\n📞 +1 (30o2) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?",
-        }
+            return "You can reach us at: \n📧 kleber@ziontechgroup.com\n📞 +1 (30o2) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
@@ -87,13 +83,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         // Add user message,
         const userMessage = addMessage({
             type: 'user';
-            content: input.trim(),
-        }),
+            content: input.trim()}),
         // Track user input,
         trackChatbotInteraction('user_input', {
             messageId: userMessage.id;
-            inputLength: input.length,
-        }),
+            inputLength: input.length}),
         // Clear input,
         setInputValue(''),
         setIsTyping(true),
@@ -112,17 +106,14 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             // Track successful interaction,
             trackChatbotInteraction('conversation_success', {
                 userInput: input;
-                responseLength: response.length,
-            })}
+                responseLength: response.length})}
         catch (error) {
             // Handle error,
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
                 intent: 'error';
-                confidence: 0.8,
-            }),
+                confidence: 0.8}),
             trackChatbotInteraction('conversation_error', {
-                error: error instanceof Error ? error.message : 'Unknown error',
-            })}
+                error: error instanceof Error ? error.message : 'Unknown error'})}
         finally {
             setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]),

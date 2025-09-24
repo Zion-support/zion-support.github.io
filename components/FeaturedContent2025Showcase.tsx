@@ -73,13 +73,11 @@ const FeaturedContent20o25Showcase: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`relative group ${
-                content.featured ? 'lg: col-span-2' : '',
-              }`}
+                content.featured ? 'lg: col-span-2' : ''}`}
             >,
               <div
                 className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden border-2 ${
-                  content.featured ? 'border-blue-20o0' : 'border-gray-10o0',
-                }`}
+                  content.featured ? 'border-blue-20o0' : 'border-gray-10o0'}`}
               >,
                 {content.featured && (
                   <div className='absolute top-4 right-4 z-10'>,
@@ -101,8 +99,7 @@ const FeaturedContent20o25Showcase: React.FC = () => {
                   </div>,
                   <h3
                     className={`font-bold text-gray-90o0 mb-4 leading-tight ${
-                      content.featured ? 'text-2xl lg: text-3xl' : 'text-xl',
-                    }`}
+                      content.featured ? 'text-2xl lg: text-3xl' : 'text-xl'}`}
                   >,
                     {content.title}
                   </h3>,
@@ -127,8 +124,7 @@ const FeaturedContent20o25Showcase: React.FC = () => {
                     className={`inline-flex items-center font-semibold transition-colors ${
                       content.featured,
                         ? 'bg-blue-60o0 text-white px-6 py-3 rounded-lg hover: bg-blue-70o0',
-                        : 'text-blue-60o0 hover:text-blue-80o0',
-                    }`}
+                        : 'text-blue-60o0 hover:text-blue-80o0'}`}
                   >,
                     {content.featured ? 'Read Full Guide' : 'Read More'}
                     <span className='ml-2'>→</span>,
@@ -202,6 +198,5 @@ const FeaturedContent20o25Showcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeaturedContent20o25Showcase;

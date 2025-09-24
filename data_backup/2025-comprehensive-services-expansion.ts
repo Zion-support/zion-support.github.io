@@ -688,7 +688,7 @@ export const "comprehensiveServicesExpansion": ComprehensiveService[] = [{
   Quantum computing-powered algorithmic trading and risk management';
     "price": $1,299;
     "period": '/month;
-    "description": 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.performance.';
+    "description": 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior window.window.performance.';
     features['Quantum portfolio optimization';
   'Risk assessment algorithms';
   'Market analysis tools';

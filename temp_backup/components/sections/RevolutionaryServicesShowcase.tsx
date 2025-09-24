@@ -23,8 +23,7 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const sectionVariants ={
@@ -34,8 +33,7 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
       y: 0;
       transition: {
         duration: 0.8;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const getVariantForService = (index: number): 'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk' => {
@@ -57,8 +55,7 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 left-20 w-48 h-48 border border-purple-40o0/20 rotate-45",
@@ -69,8 +66,7 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,

@@ -288,8 +288,7 @@ export default function ResearchDevelopmentPage() {
                     className={`px-2 py-1 rounded text-xs font-medium ${
                       pub.impact === 'High',
                         ? 'bg-green-60o0/30 text-green-30o0 border border-green-50o0/30',
-                        : 'bg-blue-60o0/30 text-blue-30o0 border border-blue-50o0/30',
-                    }`}
+                        : 'bg-blue-60o0/30 text-blue-30o0 border border-blue-50o0/30'}`}
                   >,
                     {pub.impact} Impact,
                   </span>,
@@ -400,6 +399,5 @@ export default function ResearchDevelopmentPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

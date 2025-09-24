@@ -17,8 +17,7 @@ export default function ServicesShowcase20o26V4() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <UltraFuturisticBackground20o26>,
       <div className="min-h-screen">,

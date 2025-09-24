@@ -25,20 +25,17 @@ const AI20o25SuccessStoriesPromotionBanner = () => {
       quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.";
       company: "TechCorp Solutions";
       industry: "Manufacturing";
-      result: "20o0% efficiency increase",
-    };
+      result: "20o0% efficiency increase"};
     {
       quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.";
       company: "FinanceFlow Inc";
       industry: "Financial Services",
-      result: "99.8% accuracy rate",
-    };
+      result: "99.8% accuracy rate"};
     {
       quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.";
       company: "HealthTech Partners";
       industry: "Healthcare";
-      result: "30o0% faster analysis",
-    }
+      result: "30o0% faster analysis"}
   ],
   const stats = [
     { icon: TrendingUpvalue: "340%"label: "Average ROI" };

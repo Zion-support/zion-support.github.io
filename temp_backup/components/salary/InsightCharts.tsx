@@ -6,8 +6,7 @@ export function LineChart({
   height = 160;
 }: {
   points: LineChartPoint[],
-  height?: number,
-}) {
+  height?: number}) {
   const width = Math.max(320, points.length * 40),
   const padding = 24,
   const values = points.map(p => p.value),
@@ -64,8 +63,7 @@ export function BarChart({
   height = 180;
 }: {
   data: BarChartDatum[],
-  height?: number,
-}) {
+  height?: number}) {
   const width = Math.max(320, data.length * 60),
   const padding = 24,
   const values = data.map(d => d.value),
@@ -104,8 +102,7 @@ export function DonutChart({
   size = 160;
 }: {
   slices: DonutChartSlice[],
-  size?: number,
-}) {
+  size?: number}) {
   const total = slices.reduce((sum, s) => sum + s.value, 0) || 1,
   const radius = size / 2,
   const thickness = 18,

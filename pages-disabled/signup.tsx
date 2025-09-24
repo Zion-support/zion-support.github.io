@@ -27,8 +27,7 @@ export default function Signup(...args: any[]): any {
     phone: '';
     website: '';
     industry: '';
-    useCase: '',
-  }),
+    useCase: ''}),
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -84,7 +83,7 @@ export default function Signup(...args: any[]): any {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve, 20o00)),
       // Success - redirect or show success message,
-      // console.log('Signup successful:', formData)} catch (error) {
+      // // console.log('Signup successful:', formData)} catch (error) {
       console.error('Signup error:', error)} finally {
       setIsSubmitting(false)}
   }
@@ -174,8 +173,7 @@ export default function Signup(...args: any[]): any {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                            errors.firstName ? 'border-red-50o0' : 'border-zion-blue-light',
-                          }`}
+                            errors.firstName ? 'border-red-50o0' : 'border-zion-blue-light'}`}
                           placeholder="Enter your first name",
                          />,
                       </div>,
@@ -198,8 +196,7 @@ export default function Signup(...args: any[]): any {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                            errors.lastName ? 'border-red-50o0' : 'border-zion-blue-light',
-                          }`}
+                            errors.lastName ? 'border-red-50o0' : 'border-zion-blue-light'}`}
                           placeholder="Enter your last name",
                          />,
                       </div>,
@@ -224,8 +221,7 @@ export default function Signup(...args: any[]): any {
                         value={formData.email}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.email ? 'border-red-50o0' : 'border-zion-blue-light',
-                        }`}
+                          errors.email ? 'border-red-50o0' : 'border-zion-blue-light'}`}
                         placeholder="Enter your email address",
                        />,
                     </div>,
@@ -249,8 +245,7 @@ export default function Signup(...args: any[]): any {
                         value={formData.password}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.password ? 'border-red-50o0' : 'border-zion-blue-light',
-                        }`}
+                          errors.password ? 'border-red-50o0' : 'border-zion-blue-light'}`}
                         placeholder="Create a strong password",
                        />,
                       <button
@@ -280,8 +275,7 @@ export default function Signup(...args: any[]): any {
                         value={formData.confirmPassword}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-                          errors.confirmPassword ? 'border-red-50o0' : 'border-zion-blue-light',
-                        }`}
+                          errors.confirmPassword ? 'border-red-50o0' : 'border-zion-blue-light'}`}
                         placeholder="Confirm your password",
                        />,
                       <button

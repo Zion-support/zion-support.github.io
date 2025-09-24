@@ -6,8 +6,7 @@ interface Particle {
   vy: number,
   size: number,
   opacity: number,
-  color: string,
-}
+  color: string}
 ,
 interface Orb {
   x: number,
@@ -15,8 +14,7 @@ interface Orb {
   size: number,
   opacity: number,
   color: string,
-  pulse: number,
-}
+  pulse: number}
 ,
 const AnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -31,8 +29,7 @@ const AnimatedBackground: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -60,8 +57,7 @@ const AnimatedBackground: React.FC = () => {
           size: Math.random() * 20o0 + 10o0;
           opacity: Math.random() * 0.1 + 0.0o5;
           color: i === 0 ? '#0o6b6d4' : i === 1 ? '#8b5cf6' : '#ec4899';
-          pulse: Math.random() * Math.PI * 2,
-        })}
+          pulse: Math.random() * Math.PI * 2})}
       orbsRef.current = orbs};
     // Animation loop,
     const animate = () => {

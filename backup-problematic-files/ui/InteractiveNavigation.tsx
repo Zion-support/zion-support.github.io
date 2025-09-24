@@ -6,13 +6,11 @@ import { ChevronDown, Menu, X } from 'lucide-react',
 interface NavItem {
   label: string,
   href: string,
-  children?: NavItem[],
-}
+  children?: NavItem[]}
 ,
 interface InteractiveNavigationProps {
   items: NavItem[],
-  className?: string,
-}
+  className?: string}
 ,
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items;
@@ -21,8 +19,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const toggleMenu = () => setIsOpen(!isOpen),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)};
   return (
     <nav className={'bg-white shadow-lg ' + className}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,

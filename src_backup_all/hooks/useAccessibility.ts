@@ -5,15 +5,13 @@ interface UseAccessibilityOptions {
   enableScreenReaderSupport?: boolean,
   enableHighContrast?: boolean,
   enableReducedMotion?: boolean,
-  enableLargeText?: boolean,
-}
+  enableLargeText?: boolean}
 ,
 interface AccessibilityFeatures {
   isHighContrast: boolean,
   isReducedMotion: boolean,
   isLargeText: boolean,
-  isScreenReader: boolean,
-}
+  isScreenReader: boolean}
 ,
 export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
   const {
@@ -33,8 +31,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
         isHighContrast: false;
         isReducedMotion: false;
         isLargeText: false;
-        isScreenReader: false,
-      };
+        isScreenReader: false};
     }
 ,
     const mediaQueries ={
@@ -45,8 +42,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
       isHighContrast: mediaQueries.highContrast.matches;
       isReducedMotion: mediaQueries.reducedMotion.matches;
       isLargeText: false, // Would need to check font size preferences,
-      isScreenReader: false // Would need to detect screen reader usage,
-    };
+      isScreenReader: false // Would need to detect screen reader usage};
   }, []),
   // Keyboard navigation,
   const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
@@ -91,8 +87,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
     if (!enableFocusManagement) return,
     // Store last focused element,
     if (document.activeElement instanceof HTMLElement) {
-      lastFocusedElementRef.current = document.activeElement,
-    }
+      lastFocusedElementRef.current = document.activeElement}
 ,
     // Focus the new element,
     element.focus(),
@@ -107,8 +102,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
     focusTrapRef.current = container,
     const focusableElements = getFocusableElements(container),
     if (focusableElements.length > 0) {
-      focusableElements[0].focus(),
-    }
+      focusableElements[0].focus()}
 ,
     // Store focusable elements,
     focusableElementsRef.current = focusableElements}, [enableFocusManagement]),
@@ -138,8 +132,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
     const currentIndex = focusableElements.indexOf(currentElement),
     let nextIndex: number,
     if (direction === 'forward') {
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0,
-    } else {
+      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 ,
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]),
@@ -153,8 +146,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
     if (currentIndex === -1) return,
     let nextIndex: number,
     if (direction === 'up') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1,
-    } else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 ,
     const nextElement = items[nextIndex] as HTMLElement,
@@ -171,8 +163,7 @@ export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
     if (currentIndex === -1) return,
     let nextIndex: number,
     if (direction === 'left') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1,
-    } else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 ,
     const nextElement = items[nextIndex] as HTMLElement,

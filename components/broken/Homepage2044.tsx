@@ -38,10 +38,8 @@ interface Service {
   type: string,
   category: string,
   pricing: {
-    starter: string,
-  };
-  slug: string,
-}
+    starter: string};
+  slug: string}
 ,
 const Homepage2044: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -109,8 +107,7 @@ const Homepage2044: React.FC = () => {
     // Performance optimization: Use requestIdleCallback for non-critical operations,
     const initializePage = () => {
       setIsVisible(true),
-      setIsLoading(false),
-    };
+      setIsLoading(false)};
     if ('requestIdleCallback' in window) {
       (window as any).requestIdleCallback(initializePage)} else {
       setTimeout(initializePage100)}
@@ -192,8 +189,7 @@ const Homepage2044: React.FC = () => {
                     duration: 8 + i * 0.3;
                     repeat: Infinity as any;
                     delay: i * 0.2;
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   style={{
                     left: `${Math.random() * 100}%`;
                     top: `${Math.random() * 100}%`}}
@@ -203,8 +199,7 @@ const Homepage2044: React.FC = () => {
             <div className="absolute inset-0 opacity-20">,
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1pxrgba(6,182,212,0.3) 1pxtransparent 0)`;
-                backgroundSize: '60px 60px',
-              }}></div>,
+                backgroundSize: '60px 60px'}}></div>,
             </div>,
             {/* Floating geometric shapes - optimized animations */}
             <motion.div,
@@ -216,8 +211,7 @@ const Homepage2044: React.FC = () => {
               transition={{
                 duration: 10;
                 repeat: Infinity as any;
-                ease: "linear",
-              }}
+                ease: "linear"}}
             />,
             <motion.div,
               className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full",
@@ -227,8 +221,7 @@ const Homepage2044: React.FC = () => {
               transition={{
                 duration: 8;
                 repeat: Infinity as any;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />,
           </div>,
         </div>,
@@ -380,8 +373,7 @@ const Homepage2044: React.FC = () => {
                     className={`px-6 py-3 rounded-full border transition-all duration-300 flex items-center gap-2 ${
                       selectedCategory === category.id,
                         ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-lg`,
-                        : 'bg-gray-900/50 text-gray-300 border-gray-600 hover: border-gray-500 hover:text-white',
-                    }`}
+                        : 'bg-gray-900/50 text-gray-300 border-gray-600 hover: border-gray-500 hover:text-white'}`}
                   >,
                     <category.icon className="w-4 h-4" />,
                     {category.name}

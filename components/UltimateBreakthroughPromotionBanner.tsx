@@ -12,8 +12,7 @@ export default function UltimateBreakthroughPromotionBanner() {
       link: "/ai-20o25-ultimate-breakthrough-revolution";
       color: "from-red-50o0 to-pink-50o0";
       bgColor: "from-red-50o0/10 to-pink-50o0/10";
-      borderColor: "border-red-50o0/30",
-    };
+      borderColor: "border-red-50o0/30"};
     {
       title: "🔮 AI 20o26-20o30 Future Predictions";
       subtitle: "Revolutionary Breakthroughs Ahead";
@@ -21,8 +20,7 @@ export default function UltimateBreakthroughPromotionBanner() {
       link: "/ai-20o26-20o30-future-predictions-breakthrough";
       color: "from-cyan-50o0 to-purple-50o0";
       bgColor: "from-cyan-50o0/10 to-purple-50o0/10";
-      borderColor: "border-cyan-50o0/30",
-    };
+      borderColor: "border-cyan-50o0/30"};
     {
       title: "🏆 10,0o00% ROI Success Story";
       subtitle: "Fortune 50o0 Transformation";
@@ -30,8 +28,7 @@ export default function UltimateBreakthroughPromotionBanner() {
       link: "/case-studies/ai-20o25-ultimate-transformation-success";
       color: "from-green-50o0 to-emerald-50o0";
       bgColor: "from-green-50o0/10 to-emerald-50o0/10";
-      borderColor: "border-green-50o0/30",
-    }
+      borderColor: "border-green-50o0/30"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -101,8 +98,7 @@ export default function UltimateBreakthroughPromotionBanner() {
             className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
               index === currentSlide,
                 ? 'bg-white scale-125',
-                : 'bg-white/50 hover: bg-white/75',
-            }`}
+                : 'bg-white/50 hover: bg-white/75'}`}
             aria-label={`Go to slide ${index + 1}`}
           />))}
       </div>,

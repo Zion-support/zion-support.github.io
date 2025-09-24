@@ -140,8 +140,7 @@ export default function TalentDashboardSuggestedJobs() {
   }: {
     title: string,
     items: JobSuggestion[],
-    highlightNew?: boolean,
-  }) => (
+    highlightNew?: boolean}) => (
     <section className="space-y-3">,
       <h2 className="text-lg font-semibold text-gray-900">{title}</h2>,
       <div className="grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3">,
@@ -156,8 +155,7 @@ export default function TalentDashboardSuggestedJobs() {
               className={`relative rounded-2xl border bg-white p-4 shadow-sm hover: shadow-md ${
                 highlightNew && (s.status || "new") === "new",
                   ? "border-emerald-200 ring-1 ring-emerald-200",
-                  : "border-gray-200",
-              }`}
+                  : "border-gray-200"}`}
             >,
               {(s.status || "new") === "new" && (
                 <span className="absolute right-3 top-3 inline-flex items-center rounded-full bg-emerald-600/10 px-2 py-0.5 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-600/20">,

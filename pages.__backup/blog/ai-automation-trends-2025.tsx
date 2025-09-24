@@ -284,6 +284,5 @@ export default function AIAutomationTrends20o25() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

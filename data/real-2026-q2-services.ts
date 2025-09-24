@@ -9,8 +9,7 @@ export type RealService = {
     yearly: number,
     currency: string,
     trialDays: number,
-    setupTime: string,
-  };
+    setupTime: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -26,8 +25,7 @@ export type RealService = {
   launchDate: string,
   customers?: number,
   rating?: number,
-  reviews?: number,
-};
+  reviews?: number};
 export const real20o26Q2Services: RealService[] = [
   {
     id: 'ai-internal-linking-assistant';

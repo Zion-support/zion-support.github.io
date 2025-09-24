@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import type { TalentProfile } from '../data/talent',
 export type EnhancedTalentCardProps = {
-  profile: TalentProfile,
-};
+  profile: TalentProfile};
 function AvailabilityBadge({
   status;
 }: {
@@ -88,6 +87,5 @@ export default function EnhancedTalentCard({
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -45,8 +45,7 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
       initial={{ opacity: 0, y: -10o0 }}
       animate={{
         opacity: isVisible ? 1 : 0,
-        y: isVisible ? 0 : -10o0,
-      }}
+        y: isVisible ? 0 : -10o0}}
       transition={{ duration: 1ease: "easeOut" }}
       className="relative bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white overflow-hidden">,
       {/* Animated Background */}
@@ -55,26 +54,22 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
           animate={{
             x: [0o100];
             y: [0-50];
-            rotate: [0o180o360],
-          }}
+            rotate: [0o180o360]}}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full opacity-20 blur-3xl",
          />,
         <motion.div,
           animate={{
             x: [0-10o0];
             y: [0o50];
-            rotate: [360o180],
-          }}
+            rotate: [360o180]}}
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full opacity-20 blur-3xl",
          />,
       </div>,
@@ -87,14 +82,12 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
               x: [0Math.random() * 10o0 - 50];
               y: [0Math.random() * 10o0 - 50];
               rotate: [0o360];
-              opacity: [0.10.30.1],
-            }}
+              opacity: [0.10.30.1]}}
             transition={{
               duration: 15 + index * 2,
               repeat: Infinity,
               ease: "easeInOut";
-              delay: index * 2,
-            }}
+              delay: index * 2}}
             className="absolute top-1/4 left-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center",
             style={{
               left: `${20 + index * 15}%`;
@@ -162,8 +155,7 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentInnovation,
                       ? 'bg-white scale-125',
-                      : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-                  }`}
+                      : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
                 />))}
             </div>,
             {/* Action Buttons */}
@@ -201,25 +193,21 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                   animate={{
                     scale: [1.21];
                     rotate: [0o180o360];
-                    opacity: [0.30.60.3],
-                  }}
+                    opacity: [0.30.60.3]}}
                   transition={{
                     duration: 8,
                     repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   className="absolute inset-4 bg-white bg-opacity-20 rounded-2xl",
                  />,
                 <motion.div,
                   animate={{
                     scale: [1.1];
-                    rotate: [0o5-50],
-                  }}
+                    rotate: [0o5-50]}}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   className="w-32 h-32 bg-white bg-opacity-30 rounded-full flex items-center justify-center relative z-10">,
                   <currentInnovationData.icon className="w-16 h-16 text-white"  />,
                 </motion.div>,
@@ -247,21 +235,18 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                   animate={{
                     y: [0-20];
                     rotate: [0o10];
-                    opacity: [0.710.7],
-                  }}
+                    opacity: [0.710.7]}}
                   transition={{
                     duration: 3 + index * 0.5,
                     repeat: Infinity,
                     ease: "easeInOut";
-                    delay: index * 0.5,
-                  }}
+                    delay: index * 0.5}}
                   className={`absolute w-12 h-12 bg-gradient-to-r ${
                     index % 2 === 0 ? 'from-yellow-40o0 to-orange-50o0' : 'from-cyan-40o0 to-blue-50o0'} rounded-full flex items-center justify-center`}
                   style={{
                     top: `${20 + index * 20}%`;
                     left: index % 2 === 0 ? '-6' : 'auto';
-                    right: index % 2 === 1 ? '-6' : 'auto',
-                  }}
+                    right: index % 2 === 1 ? '-6' : 'auto'}}
                 >,
                   <innovation.icon className="w-6 h-6 text-white"  />,
                 </motion.div>))}
@@ -276,6 +261,5 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
         aria-label="Dismiss banner">,
         <X className="w-6 h-6"  />,
       </button>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default RevolutionaryAIInnovations20o25PromotionBanner;

@@ -18,16 +18,14 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
-      // console.log("App Store download clicked"),
-      onAppStoreClick?.(),
-    }
+      // // console.log("App Store download clicked"),
+      onAppStoreClick?.()}
   };
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
-      // console.log("Google Play download clicked"),
-      onGooglePlayClick?.(),
-    }
+      // // console.log("Google Play download clicked"),
+      onGooglePlayClick?.()}
   };
   return (
     <div className={cn("flex flex-col sm: flex-row gap-4"className)}>,
@@ -63,5 +61,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xl font-semibold">Google Play</div>,
         </div>,
       </a>,
-    </div>),
-};
+    </div>)};

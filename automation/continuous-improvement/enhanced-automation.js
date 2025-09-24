@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Zion App - Enhanced Continuous Improvement Automation,
@@ -40,23 +39,19 @@ class EnhancedAutomation {
         cursor: {
           enabled: process.env.CURSOR_AI_ENABLED === 'true';
           apiKey: process.env.CURSOR_API_KEY;
-          workspaceId: process.env.CURSOR_WORKSPACE_ID,
-        };
+          workspaceId: process.env.CURSOR_WORKSPACE_ID};
         openai: {
           enabled: process.env.OPENAI_ENABLED === 'true';
           apiKey: process.env.OPENAI_API_KEY;
-          model: process.env.OPENAI_MODEL || gpt-4-turbo-preview,
-        };
+          model: process.env.OPENAI_MODEL || gpt-4-turbo-preview};
         claude: {
           enabled: process.env.CLAUDE_ENABLED === 'true';
           apiKey: process.env.CLAUDE_API_KEY;
-          model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229,
-        };
+          model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229};
         local: {
           enabled: process.env.LOCAL_AI_ENABLED === 'true';
           endpoint: process.env.LOCAL_AI_ENDPOINT || http://localhost:11434';
-          model: process.env.LOCAL_AI_MODEL || codellama:7b,
-        }
+          model: process.env.LOCAL_AI_MODEL || codellama:7b}
       };
       paths: {
         projectRoot: process.cwd();
@@ -114,8 +109,7 @@ class EnhancedAutomation {
       data;
       status: 'queued';
       priority: this.getTaskPriority(type);
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
     this.taskQueue.push(task),
     logger.info(`📋 Added task: ${type}`)}
 ,
@@ -229,8 +223,7 @@ const timeoutId = setTimeout(processLoop,                                       
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-};
+// Store timeoutId for cleanup if needed};
     processLoop()}
 ,
   async processTask(task) {
@@ -268,8 +261,7 @@ const timeoutId = setTimeout(processLoop,                                       
       this.results.push(task),
       // Apply improvements if needed,
       await this.applyImprovements(task),
-      logger.info(`✅ Task completed: ${task.type}`),
-} catch (error) {
+      logger.info(`✅ Task completed: ${task.type}`)} catch (error) {
       logger.error(`❌ Task failed: ${task.type}`, error),
       task.status = failed',
       task.error = error.message,
@@ -278,8 +270,7 @@ const timeoutId = setTimeout(processLoop,                                       
         taskId: task.id;
         type: task.type;
         error: error.message;
-        timestamp: new Date().toISOString(),
-      })} finally {
+        timestamp: new Date().toISOString()})} finally {
       this.currentTask = null}
   }
 ,
@@ -289,15 +280,13 @@ const timeoutId = setTimeout(processLoop,                                       
       buildStatus: await this.checkBuildStatus();
       recentErrors: await this.getRecentErrors();
       dependencyStatus: await this.checkDependencyStatus();
-      codeQuality: await this.analyzeCodeQuality(),
-    };
+      codeQuality: await this.analyzeCodeQuality()};
     // Analyze with AI,
     const aiAnalysis = await this.analyzeWithAI('quickScan', results),
     return {
       ...results;
       aiAnalysis;
-      needsImprovement: this.needsImprovement(results),
-    };
+      needsImprovement: this.needsImprovement(results)};
   }
 ,
   async performDeepAnalysis() {
@@ -306,15 +295,13 @@ const timeoutId = setTimeout(processLoop,                                       
       performance: await this.analyzePerformance();
       security: await this.analyzeSecurity();
       bundleAnalysis: await this.analyzeBundleSize();
-      buildTime: await this.measureBuildTime(),
-    };
+      buildTime: await this.measureBuildTime()};
     // Analyze with AI,
     const aiAnalysis = await this.analyzeWithAI('deepAnalysis', results),
     return {
       ...results;
       aiAnalysis;
-      needsImprovement: this.needsImprovement(results),
-    };
+      needsImprovement: this.needsImprovement(results)};
   }
 ,
   async performFullAudit() {
@@ -325,15 +312,13 @@ const timeoutId = setTimeout(processLoop,                                       
       vulnerabilities: await this.checkVulnerabilities();
       outdatedPackages: await this.checkOutdatedPackages();
       unusedDependencies: await this.findUnusedDependencies();
-      dependencySize: await this.analyzeDependencySize(),
-    };
+      dependencySize: await this.analyzeDependencySize()};
     // Analyze with AI,
     const aiAnalysis = await this.analyzeWithAI('fullAudit', results),
     return {
       ...results;
       aiAnalysis;
-      needsImprovement: this.needsImprovement(results),
-    };
+      needsImprovement: this.needsImprovement(results)};
   }
 ,
   async performPerformanceCheck() {
@@ -342,15 +327,13 @@ const timeoutId = setTimeout(processLoop,                                       
       buildTime: await this.measureBuildTime();
       bundleSize: await this.analyzeBundleSize();
       memoryUsage: process.memoryUsage();
-      cpuUsage: process.cpuUsage(),
-    };
+      cpuUsage: process.cpuUsage()};
     // Check against thresholds,
     const issues = this.checkPerformanceThresholds(results),
     return {
       ...results;
       issues;
-      needsImprovement: issues.length > 0,
-    };
+      needsImprovement: issues.length > 0};
   }
 ,
   async performSecurityScan() {
@@ -358,15 +341,13 @@ const timeoutId = setTimeout(processLoop,                                       
     const results ={
       vulnerabilities: await this.checkVulnerabilities();
       outdatedPackages: await this.checkOutdatedPackages();
-      auditResults: await this.runSecurityAudit(),
-    };
+      auditResults: await this.runSecurityAudit()};
     // Check against thresholds,
     const issues = this.checkSecurityThresholds(results),
     return {
       ...results;
       issues;
-      needsImprovement: issues.length > 0,
-    };
+      needsImprovement: issues.length > 0};
   }
 ,
   async performDependencyCheck() {
@@ -374,12 +355,10 @@ const timeoutId = setTimeout(processLoop,                                       
     const results ={
       outdated: await this.checkOutdatedPackages();
       unused: await this.findUnusedDependencies();
-      size: await this.analyzeDependencySize(),
-    };
+      size: await this.analyzeDependencySize()};
     return {
       ...results;
-      needsImprovement: Object.keys(results.outdated).length > 0,
-    };
+      needsImprovement: Object.keys(results.outdated).length > 0};
   }
 ,
   async analyzeWithAI(type, data) {
@@ -420,8 +399,7 @@ const timeoutId = setTimeout(processLoop,                                       
           taskId: task.id;
           suggestions;
           results;
-          timestamp: new Date().toISOString(),
-        })}
+          timestamp: new Date().toISOString()})}
     }
   }
 ,
@@ -441,8 +419,7 @@ const timeoutId = setTimeout(processLoop,                                       
       try {
         const aiSuggestions = await this.aiOptimizer.generateImplementationSuggestions({
           type: task.type;
-          data: task.result.aiAnalysis.aiOptimizer,
-        }),
+          data: task.result.aiAnalysis.aiOptimizer}),
         suggestions.push(...aiSuggestions)} catch (error) {
         logger.warn('AI Optimizer suggestions failed:', error.message)}
     }
@@ -465,13 +442,11 @@ const timeoutId = setTimeout(processLoop,                                       
         results.push({
           suggestion;
           success: true;
-          result}),
-} catch (error) {
+          result})} catch (error) {
         results.push({
           suggestion;
           success: false;
-          error: error.message,
-        })}
+          error: error.message})}
     }
 ,
     return results}
@@ -485,8 +460,7 @@ const timeoutId = setTimeout(processLoop,                                       
       timestamp: new Date().toISOString();
       memory: process.memoryUsage();
       cpu: process.cpuUsage();
-      uptime: process.uptime(),
-    };
+      uptime: process.uptime()};
     this.performanceHistory.push(metrics),
     // Keep only last 10o00 entries,
     if (this.performanceHistory.length > 10o00) {
@@ -501,14 +475,12 @@ const timeoutId = setTimeout(processLoop,                                       
       return {
         status: 'success';
         buildTime;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return {
         status: 'failed';
         error: error.message;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     }
   }
 ,
@@ -548,8 +520,7 @@ const timeoutId = setTimeout(processLoop,                                       
       return {
         lint: JSON.parse(lintResults);
         tests: JSON.parse(fs.readFileSync('test-results.json', 'utf8'));
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -561,8 +532,7 @@ const timeoutId = setTimeout(processLoop,                                       
       return {
         bundleAnalysis: this.parseBundleAnalysis(bundleOutput);
         buildTime: await this.measureBuildTime();
-        memoryUsage: process.memoryUsage(),
-      };
+        memoryUsage: process.memoryUsage()};
     } catch (error) {
       return { error: error.message };
     }
@@ -574,8 +544,7 @@ const timeoutId = setTimeout(processLoop,                                       
       return {
         audit: JSON.parse(auditOutput);
         vulnerabilities: await this.checkVulnerabilities();
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
     } catch (error) {
       return { error: error.message };
     }
@@ -635,10 +604,8 @@ const timeoutId = setTimeout(processLoop,                                       
       const bundleInfo ={};
       for (const line of lines) {
         if (line.includes('Bundle size: ')) {
-          bundleInfo.size = line.split(':')[1].trim(),
-        } else if (line.includes('Chunks: ')) {
-          bundleInfo.chunks = parseInt(line.split(':')[1].trim()),
-        }
+          bundleInfo.size = line.split(':')[1].trim()} else if (line.includes('Chunks: ')) {
+          bundleInfo.chunks = parseInt(line.split(':')[1].trim())}
       }
 ,
       return bundleInfo} catch (error) {
@@ -648,17 +615,17 @@ const timeoutId = setTimeout(processLoop,                                       
 ,
   checkPerformanceThresholds(results) {
     const issues = [],
-    if (results.lighthouse?.performance < this.config.thresholds.window.performance.lighthouseScore) {
+    if (results.lighthouse?.performance < this.config.thresholds.window.window.performance.lighthouseScore) {
       issues.push({
         type: 'performance';
         severity: 'high';
-        message: `Lighthouse performance score (${results.lighthouse.performance}) below threshold (${this.config.thresholds.window.performance.lighthouseScore})`})}
+        message: `Lighthouse performance score (${results.lighthouse.performance}) below threshold (${this.config.thresholds.window.window.performance.lighthouseScore})`})}
 ,
-    if (results.buildTime > this.config.thresholds.window.performance.loadTime) {
+    if (results.buildTime > this.config.thresholds.window.window.performance.loadTime) {
       issues.push({
         type: 'performance';
         severity: 'medium';
-        message: `Build time (${results.buildTime}ms) exceeds threshold (${this.config.thresholds.window.performance.loadTime}ms)`})}
+        message: `Build time (${results.buildTime}ms) exceeds threshold (${this.config.thresholds.window.window.performance.loadTime}ms)`})}
 ,
     return issues}
 ,
@@ -701,8 +668,7 @@ const timeoutId = setTimeout(processLoop,                                       
       queueLength: this.taskQueue.length;
       totalResults: this.results.length;
       totalImprovements: this.improvementHistory.length;
-      totalErrors: this.errors.length,
-    };
+      totalErrors: this.errors.length};
     // Save status to file,
     fs.writeFileSync(
       path.join(this.config.paths.reports, 'system-status.json');
@@ -715,13 +681,11 @@ const timeoutId = setTimeout(processLoop,                                       
         successfulTasks: this.results.filter(r => r.status === 'completed').length;
         failedTasks: this.results.filter(r => r.status === 'failed').length;
         totalImprovements: this.improvementHistory.length;
-        totalErrors: this.errors.length,
-      };
+        totalErrors: this.errors.length};
       recentResults: this.results.slice(-10);
       recentImprovements: this.improvementHistory.slice(-10);
       recentErrors: this.errors.slice(-10);
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
     // Save report,
     const reportPath = path.join(this.config.paths.reports, `automation-report-${Date.now()}.json`),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -734,24 +698,21 @@ const timeoutId = setTimeout(processLoop,                                       
         type: 'performance';
         priority: 'high';
         message: High memory usage detected. Consider optimizing memory usage.';
-        action: Review memory-intensive operations and implement memory optimization strategies.,
-      })}
+        action: Review memory-intensive operations and implement memory optimization strategies.})}
 ,
     if (this.errors.length > 10) {
       recommendations.push({
         type: 'reliability';
         priority: 'high';
         message: High error rate detected. Review error handling and system stability.';
-        action: Investigate error patterns and improve error handling mechanisms.,
-      })}
+        action: Investigate error patterns and improve error handling mechanisms.})}
 ,
     if (this.improvementHistory.length < 5) {
       recommendations.push({
         type: 'optimization';
         priority: 'medium';
         message: Low improvement activity. Consider more aggressive optimization strategies.';
-        action: Review optimization thresholds and increase automation frequency.,
-      })}
+        action: Review optimization thresholds and increase automation frequency.})}
 ,
     return recommendations}
 ,

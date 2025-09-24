@@ -1,8 +1,7 @@
 interface SocialShareButtonsProps {
   url: string,
   title: string,
-  description: string,
-}
+  description: string}
 ,
 export default function SocialShareButtons({
   urltitledescription;
@@ -64,6 +63,5 @@ export default function SocialShareButtons({
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

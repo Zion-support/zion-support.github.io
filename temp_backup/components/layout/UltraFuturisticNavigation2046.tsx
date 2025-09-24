@@ -15,15 +15,13 @@ interface NavigationItem {
   icon?: React.ReactNode,
   description?: string,
   badge?: string,
-  featured?: boolean,
-}
+  featured?: boolean}
 ,
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home';
     href: '/';
-    icon: <Zap className="w-4 h-4"  />,
-  };
+    icon: <Zap className="w-4 h-4"  />};
   {
     label: 'AI & Machine Learning';
     children: [
@@ -33,43 +31,37 @@ const navigationItems: NavigationItem[] = [
         icon: <Brain className="w-4 h-4"  />;
         description: 'Revolutionary brain-computer interfaces';
         badge: 'Revolutionary';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Autonomous AI Enterprise';
         href: '/autonomous-ai-enterprise-orchestrator-20o46';
         icon: <Brain className="w-4 h-4"  />;
         description: 'Fully autonomous business management';
         badge: 'Hot';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Quantum Emotion Intelligence';
         href: '/quantum-emotion-intelligence-platform-20o46';
         icon: <Heart className="w-4 h-4"  />;
         description: 'Advanced emotion recognition and response';
-        badge: 'New',
-      };
+        badge: 'New'};
       {
         label: 'Autonomous AI Research';
         href: '/autonomous-ai-research-assistant-20o46';
         icon: <Lightbulb className="w-4 h-4"  />;
         description: 'Fully autonomous scientific research';
-        badge: 'Trending',
-      };
+        badge: 'Trending'};
       {
         label: 'Quantum Creative AI';
         href: '/quantum-creative-ai-platform-20o46';
         icon: <Palette className="w-4 h-4"  />;
         description: 'Revolutionary creative content generation';
-        badge: 'Innovative',
-      };
+        badge: 'Innovative'};
       {
         label: 'View All AI Services';
         href: '/ai-services';
         icon: <ArrowRight className="w-4 h-4"  />;
-        description: 'Complete AI service portfolio',
-      }
+        description: 'Complete AI service portfolio'}
     ]};
   {
     label: 'IT & Infrastructure';
@@ -80,43 +72,37 @@ const navigationItems: NavigationItem[] = [
         icon: <Satellite className="w-4 h-4"  />;
         description: 'Space-based quantum computing infrastructure';
         badge: 'Revolutionary';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Autonomous Cybersecurity';
         href: '/autonomous-cybersecurity-orchestrator-20o46';
         icon: <Shield className="w-4 h-4"  />;
         description: 'Fully autonomous security management';
         badge: 'Hot';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Quantum Cloud Hybrid';
         href: '/quantum-cloud-hybrid-platform-20o46';
         icon: <Cloud className="w-4 h-4"  />;
         description: 'Quantum-enhanced hybrid cloud platform';
-        badge: 'New',
-      };
+        badge: 'New'};
       {
         label: 'Autonomous DevOps';
         href: '/autonomous-devops-intelligence-platform-20o46';
         icon: <Code className="w-4 h-4"  />;
         description: 'Fully autonomous DevOps management';
-        badge: 'Trending',
-      };
+        badge: 'Trending'};
       {
         label: 'Quantum Data Center';
         href: '/quantum-data-center-optimization-20o46';
         icon: <Server className="w-4 h-4"  />;
         description: 'Quantum data center optimization';
-        badge: 'Innovative',
-      };
+        badge: 'Innovative'};
       {
         label: 'View All IT Services';
         href: '/it-services';
         icon: <ArrowRight className="w-4 h-4"  />;
-        description: 'Complete IT service portfolio',
-      }
+        description: 'Complete IT service portfolio'}
     ]};
   {
     label: 'Micro SAAS Solutions';
@@ -127,50 +113,43 @@ const navigationItems: NavigationItem[] = [
         icon: <Globe className="w-4 h-4"  />;
         description: 'Quantum sustainability optimization';
         badge: 'Revolutionary';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Autonomous HR Intelligence';
         href: '/autonomous-hr-intelligence-suite-20o46';
         icon: <Users className="w-4 h-4"  />;
         description: 'Fully autonomous HR management';
         badge: 'Hot';
-        featured: true,
-      };
+        featured: true};
       {
         label: 'Quantum Financial Intelligence';
         href: '/quantum-financial-intelligence-platform-20o46';
         icon: <BarChart3 className="w-4 h-4"  />;
         description: 'Quantum financial management';
-        badge: 'New',
-      };
+        badge: 'New'};
       {
         label: 'Autonomous Supply Chain';
         href: '/autonomous-supply-chain-orchestrator-20o46';
         icon: <Network className="w-4 h-4"  />;
         description: 'Fully autonomous supply chain management';
-        badge: 'Trending',
-      };
+        badge: 'Trending'};
       {
         label: 'Quantum Customer Experience';
         href: '/quantum-customer-experience-optimizer-20o46';
         icon: <Target className="w-4 h-4"  />;
         description: 'Quantum customer experience optimization';
-        badge: 'Innovative',
-      };
+        badge: 'Innovative'};
       {
         label: 'View All Micro SAAS';
         href: '/micro-saas';
         icon: <ArrowRight className="w-4 h-4"  />;
-        description: 'Complete micro SAAS portfolio',
-      }
+        description: 'Complete micro SAAS portfolio'}
     ]};
   {
     label: 'Innovative 20o46 Services';
     href: '/innovative-20o46-futuristic-services-showcase';
     icon: <Rocket className="w-4 h-4"  />;
-    badge: 'Revolutionary',
-  };
+    badge: 'Revolutionary'};
   {
     label: 'Solutions';
     children: [
@@ -178,26 +157,22 @@ const navigationItems: NavigationItem[] = [
         label: 'Enterprise Solutions';
         href: '/enterprise-solutions';
         icon: <Server className="w-4 h-4"  />;
-        description: 'Large-scale enterprise solutions',
-      };
+        description: 'Large-scale enterprise solutions'};
       {
         label: 'Startup Solutions';
         href: '/startup-solutions';
         icon: <Rocket className="w-4 h-4"  />;
-        description: 'Innovative startup solutions',
-      };
+        description: 'Innovative startup solutions'};
       {
         label: 'Government Solutions';
         href: '/government-solutions';
         icon: <Shield className="w-4 h-4"  />;
-        description: 'Secure government solutions',
-      };
+        description: 'Secure government solutions'};
       {
         label: 'Healthcare Solutions';
         href: '/healthcare-solutions';
         icon: <Heart className="w-4 h-4"  />;
-        description: 'Advanced healthcare solutions',
-      }
+        description: 'Advanced healthcare solutions'}
     ]};
   {
     label: 'About';
@@ -206,26 +181,22 @@ const navigationItems: NavigationItem[] = [
         label: 'Our Mission';
         href: '/mission';
         icon: <Target className="w-4 h-4"  />;
-        description: 'Learn about our mission and vision',
-      };
+        description: 'Learn about our mission and vision'};
       {
         label: 'Leadership Team';
         href: '/team';
         icon: <Users className="w-4 h-4"  />;
-        description: 'Meet our leadership team',
-      };
+        description: 'Meet our leadership team'};
       {
         label: 'Company History';
         href: '/history';
         icon: <Clock className="w-4 h-4"  />;
-        description: 'Our journey and milestones',
-      };
+        description: 'Our journey and milestones'};
       {
         label: 'Careers';
         href: '/careers';
         icon: <Briefcase className="w-4 h-4"  />;
-        description: 'Join our revolutionary team',
-      }
+        description: 'Join our revolutionary team'}
     ]};
   {
     label: 'Resources';
@@ -234,26 +205,22 @@ const navigationItems: NavigationItem[] = [
         label: 'Blog & Insights';
         href: '/blog';
         icon: <Lightbulb className="w-4 h-4"  />;
-        description: 'Latest insights and trends',
-      };
+        description: 'Latest insights and trends'};
       {
         label: 'Case Studies';
         href: '/case-studies';
         icon: <BarChart3 className="w-4 h-4"  />;
-        description: 'Success stories and results',
-      };
+        description: 'Success stories and results'};
       {
         label: 'White Papers';
         href: '/white-papers';
         icon: <FileText className="w-4 h-4"  />;
-        description: 'In-depth research and analysis',
-      };
+        description: 'In-depth research and analysis'};
       {
         label: 'Webinars';
         href: '/webinars';
         icon: <Video className="w-4 h-4"  />;
-        description: 'Educational webinars and events',
-      }
+        description: 'Educational webinars and events'}
     ]}
 ],
 const UltraFuturisticNavigation20o46: React.FC = () => {
@@ -266,8 +233,7 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -276,8 +242,7 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
     setIsOpen(false),
     setActiveDropdown(null)}, [router.asPath]),
   const handleDropdownToggle = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)};
   const renderDropdown = (items: NavigationItem[], isMobile: boolean = false) => (
     <AnimatePresence>,
       {items.map((item) => (
@@ -293,15 +258,13 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
             className={`group flex items-center gap-3 p-3 rounded-lg transition-all duration-30o0 ${
               isMobile,
                 ? 'text-gray-30o0 hover: text-white hover:bg-gray-80o0',
-                : 'text-gray-70o0 hover:text-gray-90o0 hover:bg-gray-50',
-            }`}
+                : 'text-gray-70o0 hover:text-gray-90o0 hover:bg-gray-50'}`}
           >,
             {item.icon && (
               <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
                 item.featured,
                   ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white',
-                  : 'bg-gray-10o0 text-gray-60o0 group-hover: bg-gray-20o0',
-              }`}>,
+                  : 'bg-gray-10o0 text-gray-60o0 group-hover: bg-gray-20o0'}`}>,
                 {item.icon}
               </div>)}
             <div className="flex-1">,

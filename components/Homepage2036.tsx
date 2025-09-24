@@ -14,8 +14,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const featuredServices = [
   ...real20o36InnovativeServices.slice(0, 3);
   ...real20o36SpecializedServices.slice(0, 3)],
@@ -40,8 +39,7 @@ export default function Homepage20o36() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -50,8 +48,7 @@ export default function Homepage20o36() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -275,8 +272,7 @@ export default function Homepage20o36() {
                       rating: service.rating;
                       marketSize: service.marketSize;
                       targetAudience: service.targetAudience;
-                      competitiveAdvantage: service.competitiveAdvantage,
-                    }}
+                      competitiveAdvantage: service.competitiveAdvantage}}
                     variant={
                       service.category.includes('AI') ? 'ai' :,
                       service.category.includes('Quantum') ? 'quantum' :,
@@ -332,38 +328,32 @@ export default function Homepage20o36() {
                   icon: <Brain className="w-8 h-8"  />;
                   title: 'AI-First Approach';
                   description: 'Leverage the latest artificial intelligence and machine learning technologies to solve complex business challenges.';
-                  color: 'from-green-50o0 to-emerald-60o0',
-                };
+                  color: 'from-green-50o0 to-emerald-60o0'};
                 {
                   icon: <Atom className="w-8 h-8"  />;
                   title: 'Quantum Innovation';
                   description: 'Stay ahead with quantum computing solutions that provide exponential performance improvements.';
-                  color: 'from-cyan-50o0 to-blue-60o0',
-                };
+                  color: 'from-cyan-50o0 to-blue-60o0'};
                 {
                   icon: <Rocket className="w-8 h-8"  />;
                   title: 'Space Technology';
                   description: 'Access cutting-edge space technology solutions for advanced applications and research.';
-                  color: 'from-purple-50o0 to-pink-60o0',
-                };
+                  color: 'from-purple-50o0 to-pink-60o0'};
                 {
                   icon: <Shield className="w-8 h-8"  />;
                   title: 'Enterprise Security';
                   description: 'Bank-grade security and compliance for mission-critical business applications.';
-                  color: 'from-blue-50o0 to-indigo-60o0',
-                };
+                  color: 'from-blue-50o0 to-indigo-60o0'};
                 {
                   icon: <Zap className="w-8 h-8"  />;
                   title: 'Performance Optimized';
                   description: 'Lightning-fast performance with edge computing and advanced optimization techniques.';
-                  color: 'from-yellow-50o0 to-orange-60o0',
-                };
+                  color: 'from-yellow-50o0 to-orange-60o0'};
                 {
                   icon: <Globe className="w-8 h-8"  />;
                   title: 'Global Reach';
                   description: 'Worldwide deployment and support with local expertise in key markets.';
-                  color: 'from-red-50o0 to-pink-60o0',
-                }
+                  color: 'from-red-50o0 to-pink-60o0'}
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -412,5 +402,4 @@ export default function Homepage20o36() {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-}
+    </Layout>)}

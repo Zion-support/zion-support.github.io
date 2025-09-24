@@ -76,8 +76,7 @@ const RevolutionaryContentShowcase20o25: React.FC = () => {
             <div
               key={index}
               className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured Badge */}
               {item.featured && (
@@ -149,6 +148,5 @@ const RevolutionaryContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContentShowcase20o25;

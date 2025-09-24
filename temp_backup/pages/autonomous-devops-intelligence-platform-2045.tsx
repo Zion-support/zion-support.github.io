@@ -22,6 +22,5 @@ export default function AutonomousDevopsIntelligencePlatform20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

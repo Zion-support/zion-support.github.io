@@ -83,8 +83,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
       rotationSpeed: number,
       pulse: number,
       pulseSpeed: number,
-      connectionTargets: number[],
-    }> = [],
+      connectionTargets: number[]}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -113,8 +112,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
           rotationSpeed: (Math.random() - 0.5) * 0.1;
           pulse: Math.random() * Math.PI * 2;
           pulseSpeed: Math.random() * 0.0o5 + 0.0o2;
-          connectionTargets: [],
-        })}
+          connectionTargets: []})}
     };
     // Initialize connections between particles,
     const initConnections = () => {
@@ -247,8 +245,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
     const animate = () => {
       updateParticles(),
       drawParticles(),
-      animationId = requestAnimationFrame(animate),
-    };
+      animationId = requestAnimationFrame(animate)};
     initParticles(),
     initConnections(),
     animate(),
@@ -258,8 +255,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
         const rect = canvas.getBoundingClientRect(),
         setMousePosition({
           x: e.clientX - rect.left;
-          y: e.clientY - rect.top,
-        })};
+          y: e.clientY - rect.top})};
       const handleMouseEnter = () => setIsHovered(true),
       const handleMouseLeave = () => setIsHovered(false),
       canvas.addEventListener('mousemove', handleMouseMove),
@@ -303,8 +299,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl",
@@ -314,8 +309,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {children}

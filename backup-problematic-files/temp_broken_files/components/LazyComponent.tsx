@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>,
   fallback?: React.ReactNode,
-  [key: string]: any,
-}
+  [key: string]: any}
 ,
 const LazyComponent: React.FC<LazyComponentProps> = ({
   component;
@@ -13,7 +12,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
       <LazyLoadedComponent {...props}  />,
     </Suspense>)}
 export default LazyComponent;
-,
 const LazyComponent: React.FC<LazyComponentProps> = ({
   component;
   fallback = <div>Loading...</div>;

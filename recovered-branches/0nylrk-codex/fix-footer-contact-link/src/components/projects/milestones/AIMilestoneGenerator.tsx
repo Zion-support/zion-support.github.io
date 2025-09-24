@@ -17,8 +17,7 @@ interface AIMilestoneGeneratorProps {
   endDate: string | null,
   projectType: string,
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,
-  onAddMilestone: (milestone: GeneratedMilestone) => void,
-}
+  onAddMilestone: (milestone: GeneratedMilestone) => void}
 ,
 export function AIMilestoneGenerator({
   scope;
@@ -55,12 +54,10 @@ export function AIMilestoneGenerator({
       ...prev;
       [index]: !prev[index]}))};
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone),
-  };
+    onAddMilestone(milestone)};
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString)'MMM ddyyyy'),
-    } catch (error) {
+      return format(parseISO(dateString)'MMM ddyyyy')} catch (error) {
       return dateString}
   };
   return (

@@ -20,6 +20,5 @@ export default function AnalyticsSuite() {
       ]}
       industries={['Startups', 'SMBs', 'Agencies', 'Publishers']}
       canonical='https: //ziontechgroup.com/analytics-suite',
-    />),
-}
+    />)}
 ,

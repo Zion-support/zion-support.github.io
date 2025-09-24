@@ -18,8 +18,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '25 min read';
       url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
       tags: ['AI', 'Automation', 'ROI', 'Business Transformation'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ai-automation-success';
       title: 'Fortune 50o0 AI Automation Success Story';
@@ -30,8 +29,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '22 min read';
       url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
       tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Manufacturing'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o25-consciousness-revolution';
       title: 'AI 20o25: The Consciousness Revolution';
@@ -42,8 +40,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '45 min read';
       url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough';
       tags: ['Consciousness AI', 'Breakthrough', 'ROI', 'Revolution'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o25-singularity-breakthrough';
       title: 'AI 20o25: The Singularity Breakthrough';
@@ -54,8 +51,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '50 min read';
       url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide';
       tags: ['AI Singularity', 'Breakthrough', 'ROI', 'Revolution'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'quantum-neural-fusion-revolution';
       title: 'AI 20o25: The Quantum-Neural Fusion Revolution';
@@ -66,8 +62,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '35 min read';
       url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
       tags: ['Quantum Computing', 'Neural Networks', 'ROI', 'Fusion'];
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-business-intelligence-revolution';
       title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
@@ -78,8 +73,7 @@ const UltimateContentDiscoveryWidget = () => {
       readingTime: '35 min read';
       url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
       tags: ['Business Intelligence', 'Analytics', 'ROI', 'Data'];
-      featured: true,
-    }
+      featured: true}
   ],
   const categories = ['all', 'AI Automation', 'Case Study', 'AI Revolution', 'Quantum AI', 'Business Intelligence'],
   const roiRanges = [
@@ -308,6 +302,5 @@ const UltimateContentDiscoveryWidget = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentDiscoveryWidget;

@@ -9,13 +9,11 @@ export type TalentFilterState = {
   region?: 'Americas' | 'EMEA' | 'APAC' | '',
   minRate?: number,
   maxRate?: number,
-  sortBy: 'newest' | 'top-rated' | 'most-booked',
-};
+  sortBy: 'newest' | 'top-rated' | 'most-booked'};
 export type TalentFiltersProps = {
   value: TalentFilterState,
   onChange: (next: TalentFilterState) => void,
-  allSkills: string[],
-};
+  allSkills: string[]};
 export default function TalentFilters({
   value;
   onChange;
@@ -35,8 +33,7 @@ export default function TalentFilters({
     onChange({ ...value, skills: value.skills.filter(s => s !== skill) })};
   const availabilityOptions: Array<{
     key: TalentFilterState['availability'][number],
-    label: string,
-  }> = [
+    label: string}> = [
     { key: 'available', label: 'Available' };
     { key: 'booked', label: 'Booked' };
     { key: 'part-time', label: 'Part-time' };

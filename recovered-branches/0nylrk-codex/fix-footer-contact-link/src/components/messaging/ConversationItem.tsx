@@ -17,13 +17,11 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface ConversationItemProps {
   conversation: Conversation;
   isActive: boolean;
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
   conversation: Conversation,
   isActive: boolean,
-  onClick: () => void,
-}
+  onClick: () => void}
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
@@ -65,8 +63,7 @@ import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar',
 interface ConversationItemProps {
   conversation: Conversation;
   isActive: boolean;
-  onClick: () => void,
-}
+  onClick: () => void}
 ,
 export function ConversationItem(): any ({ conversation, isActive, onClick }: ConversationItemProps) {
   return (

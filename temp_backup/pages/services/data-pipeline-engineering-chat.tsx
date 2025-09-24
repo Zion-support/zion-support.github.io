@@ -20,6 +20,5 @@ export default function DataPipelineEngineeringChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

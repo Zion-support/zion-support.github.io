@@ -5,8 +5,7 @@ type EventRow ={
   page?: string,
   userType?: string,
   properties?: Record<string any>,
-  at: string,
-};
+  at: string};
 const LOG_FILE = path.join(process.cwd(), 'data', 'analytics', 'events.log.jsonl'),
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
@@ -23,8 +22,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at),
         if (start && t < start) continue,
         if (end && t > end) continue,
-        rows.push(obj),
-      } catch {}
+        rows.push(obj)} catch {}
     }
     return rows} catch {
     return []}

@@ -551,6 +551,5 @@ export default function AIComputerVision20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

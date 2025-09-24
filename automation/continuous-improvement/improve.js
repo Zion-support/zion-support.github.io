@@ -228,8 +228,7 @@ class ContinuousImprovement {
             content: `,
 interface ErrorBoundaryState {
   hasError: boolean,
-  error?: Error,
-}
+  error?: Error}
 ,
 interface ErrorBoundaryProps {
   children: React.ReactNode,
@@ -301,11 +300,10 @@ if (require.main === module) {
       break,
     case 'suggest':,
       improvement.generateExampleSuggestions().then((suggestions) => {
-        // console.log(JSON.stringify(suggestions, null, 2))}),
+        // // console.log(JSON.stringify(suggestions, null, 2))}),
       break,
     default: ,
-      logger.info('Usage: node improve.js [apply|suggest]'),
-  }
+      logger.info('Usage: node improve.js [apply|suggest]')}
 }
 ,
 module.exports = ContinuousImprovement,

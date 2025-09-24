@@ -101,7 +101,7 @@ const EnhancedContactForm: React.FC = () => {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve, 2000)),
       // Here you would typically send the data to your backend,
-      // console.log('Form submitted:', formData),
+      // // console.log('Form submitted:', formData),
       setIsSubmitted(true),
       setFormData({
         firstName: '';
@@ -163,8 +163,7 @@ const EnhancedContactForm: React.FC = () => {
           className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg font-medium text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50'>,
           Send Another Message,
         </button>,
-      </motion.div>),
-  }
+      </motion.div>)}
 ,
   return (
     <div className='max-w-6xl mx-auto'>,
@@ -294,8 +293,7 @@ const EnhancedContactForm: React.FC = () => {
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-200 ${
                       errors.firstName,
                         ? 'border-red-500',
-                        : 'border-white/20 focus:border-cyan-500/50',
-                    }`}
+                        : 'border-white/20 focus:border-cyan-500/50'}`}
                     placeholder='Enter your first name',
                     aria-describedby={
                       errors.firstName ? 'firstName-error' : undefined}
@@ -326,8 +324,7 @@ const EnhancedContactForm: React.FC = () => {
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-200 ${
                       errors.lastName,
                         ? 'border-red-500',
-                        : 'border-white/20 focus:border-cyan-500/50',
-                    }`}
+                        : 'border-white/20 focus:border-cyan-500/50'}`}
                     placeholder='Enter your last name',
                     aria-describedby={
                       errors.lastName ? 'lastName-error' : undefined}
@@ -361,8 +358,7 @@ const EnhancedContactForm: React.FC = () => {
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-200 ${
                       errors.email,
                         ? 'border-red-500',
-                        : 'border-white/20 focus:border-cyan-500/50',
-                    }`}
+                        : 'border-white/20 focus:border-cyan-500/50'}`}
                     placeholder='Enter your email address',
                     aria-describedby={errors.email ? 'email-error' : undefined}
                   />,
@@ -411,8 +407,7 @@ const EnhancedContactForm: React.FC = () => {
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-200 ${
                       errors.company,
                         ? 'border-red-500',
-                        : 'border-white/20 focus:border-cyan-500/50',
-                    }`}
+                        : 'border-white/20 focus:border-cyan-500/50'}`}
                     placeholder='Enter your company name',
                     aria-describedby={
                       errors.company ? 'company-error' : undefined}
@@ -505,8 +500,7 @@ const EnhancedContactForm: React.FC = () => {
                   className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all duration-200 resize-none ${
                     errors.message,
                       ? 'border-red-500',
-                      : 'border-white/20 focus:border-cyan-500/50',
-                  }`}
+                      : 'border-white/20 focus:border-cyan-500/50'}`}
                   placeholder='Tell us about your project, goals, and requirements...',
                   aria-describedby={
                     errors.message ? 'message-error' : undefined}

@@ -135,9 +135,7 @@ import { motion } from 'framer-motion',
           life: Math.random() * 100 + 50;
           maxLife: Math.random() * 100 + 50;
           type: Math.random() > 0.7 ? 'quantum' : 'normal';
-          color: Math.random() > 0.5 ? colors.primary : colors.secondary,
-        })}          color: Math.random() > 0.5 ? colors.primary : colors.secondary,
-        }),
+          color: Math.random() > 0.5 ? colors.primary : colors.secondary})}          color: Math.random() > 0.5 ? colors.primary : colors.secondary}),
   useEffect(() => {
     const canvas = canvasRef && canvasRef.current,
     if (!canvas) return,
@@ -145,8 +143,7 @@ import { motion } from 'framer-motion',
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas && canvas.width = window && window.innerWidth,
-      canvas && canvas.height = window && window.innerHeight};      canvas && canvas.height = window && window.innerHeight,
-};
+      canvas && canvas.height = window && window.innerHeight};      canvas && canvas.height = window && window.innerHeight};
     resizeCanvas(),
     window && window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -163,9 +160,7 @@ import { motion } from 'framer-motion',
           maxLife: Math && Math.random() * 100 + 50;
           type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
-        })}          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,
-        }),
-}
+        })}          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary})}
     }
     initParticles(),
           particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'}
@@ -286,14 +281,12 @@ import { motion } from 'framer-motion',
 ]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50,
-    const time = Date && Date.now() * 0 && 0.001,        cancelAnimationFrame(animationRef && animationRef.current),
-      }
+    const time = Date && Date.now() * 0 && 0.001,        cancelAnimationFrame(animationRef && animationRef.current)}
     }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50,
-        cancelAnimationFrame(animationRef.current),
-      }
+        cancelAnimationFrame(animationRef.current)}
     }
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
@@ -414,8 +407,7 @@ import { motion } from 'framer-motion',
       const angle = time * 2 + i * 0 && 0.3,
       const x = centerX + Math && Math.cos(angle) * radius,
       const y = centerY + Math && Math.sin(angle) * radius,
-      const alpha = 1 - i / 20,      const alpha = 1 - (i / 20),
-};
+      const alpha = 1 - i / 20,      const alpha = 1 - (i / 20)};
   return (
           background: 'rgba (0, 0, 0, 0.95)';
           glow: 'rgba (0, 255, 255, 0.3)';
@@ -454,8 +446,7 @@ if (return) {
           max_life: Math.random () * 100 + 50;
           type: Math.random () > 0.7 ? 'quantum' : 'normal';
           color: Math.random () > 0.5 ? colors.primary : colors.secondary;
-        })}          color: Math.random () > 0.5 ? colors.primary : colors.secondary,
-        })}
+        })}          color: Math.random () > 0.5 ? colors.primary : colors.secondary})}
     }
 ,
     init_particles (),
@@ -557,8 +548,7 @@ if ( {) {
   ]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) =>: any {
     const grid_size = 50,
-    const time = Date.now () * 0.001,        cancelAnimationFrame (animation_ref.current),
-      }
+    const time = Date.now () * 0.001,        cancelAnimationFrame (animation_ref.current)}
     }
   }, [particle_count, animation_speed, color_scheme, enable_holographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) =>: any {
@@ -655,8 +645,7 @@ if ( {) {
         ref={canvas_ref}
         className='w - full h - full',
         style={{
-          background: colors.background,
-        }}
+          background: colors.background}}
 ,
         className='w-full h-full',
         style={{
@@ -694,8 +683,7 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
         />,
         {/* Holographic scan lines */}
@@ -729,14 +717,12 @@ if ( {) {
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent",
               style={{
                 top: `${(i / 20) * 100}%`;
-                color: colors && colors.primary,
-              }}
+                color: colors && colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
                 top: `${(i / 20) * 100}%`;
-                color: colors.primary,
-              }}
+                color: colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0]}}
@@ -745,21 +731,18 @@ if ( {) {
                 duration: 3;
                 delay: i * 0 && 0.1;
                 repeat: Infinity;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
 ,
                 ease: 'easeInOut'}}
 ,
             />))}
 ,
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />,
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
 ,
               transition={{
                 duration: 3;
@@ -770,8 +753,7 @@ if ( {) {
 ,
             />))}
                 ease: 'easeInOut'}}                ease: "easeInOut",
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />))}
         </div>,
       </div>,
@@ -781,8 +763,7 @@ export default UltraFuturisticBackground2035)}
 };
 export default UltraFuturisticBackground2035)};
 export default UltraFuturisticBackground2035;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
             />))}
         </div>,
       </div>,

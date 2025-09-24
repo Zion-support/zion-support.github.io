@@ -134,6 +134,5 @@ export default function DataAnalytics() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

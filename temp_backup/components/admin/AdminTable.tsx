@@ -322,6 +322,5 @@ export default function AdminTable() {
           </button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -41,8 +41,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Ideal for writersdevelopersresearchersand anyone who needs AI assistance with complex tasks.';
       pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'];
       cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'];
-      bestFor: 'Content creatorsdevelopersresearchers',
-    };
+      bestFor: 'Content creatorsdevelopersresearchers'};
     {
       name: 'Midjourney';
       description: 'AI-powered image generation tool that creates stunning artworkillustrationsand designs from text descriptions.';
@@ -63,8 +62,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Perfect for designersmarketerscontent creatorsand businesses needing custom visual content.';
       pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'];
       cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'];
-      bestFor: 'Designersmarketerscontent creators',
-    };
+      bestFor: 'Designersmarketerscontent creators'};
     {
       name: 'Jasper';
       description: 'AI writing assistant that helps create marketing copyblog postsocial media contentand more.';
@@ -85,8 +83,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Essential for marketing teamscontent creatorsand businesses that need high-quality written content at scale.';
       pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'];
       cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'];
-      bestFor: 'Marketing teamscontent creatorsbusinesses',
-    };
+      bestFor: 'Marketing teamscontent creatorsbusinesses'};
     {
       name: 'Synthesia';
       description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.';
@@ -107,8 +104,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Perfect for creating training videosmarketing contentand presentations without hiring actors or video crews.';
       pros: ['Professional 'quality', 'Multiple 'languages', 'Custom 'avatars', 'Easy to use'];
       cons: ['Limited avatar 'options', 'Expensive'Subscription required'];
-      bestFor: 'Training departmentsmarketerseducators',
-    };
+      bestFor: 'Training departmentsmarketerseducators'};
     {
       name: 'Copy.ai';
       description: 'AI copywriting tool that generates marketing copyproduct descriptionsand creative content for businesses.';
@@ -129,8 +125,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Great for small businessesentrepreneursand marketers who need quality copy without hiring writers.';
       pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'];
       cons: ['Limited 'customization', 'Quality 'varies', 'Basic features'];
-      bestFor: 'Small businessesentrepreneursmarketers',
-    };
+      bestFor: 'Small businessesentrepreneursmarketers'};
     {
       name: 'Grammarly';
       description: 'AI-powered writing assistant that checks grammarspellingtoneand style to improve your writing.';
@@ -151,8 +146,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Essential for anyone who writes professionallyincluding studentsprofessionalsand content creators.';
       pros: ['Excellent 'accuracy', 'Multiple 'platforms', 'Free 'tier', 'User-friendly'];
       cons: ['Limited free 'features', 'Privacy 'concerns', 'Can be overzealous'];
-      bestFor: 'Studentsprofessionalscontent creators',
-    };
+      bestFor: 'Studentsprofessionalscontent creators'};
     {
       name: 'Lumen5';
       description: 'AI video maker that transforms text content into engaging videos for social media and marketing.';
@@ -173,8 +167,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Perfect for marketersocial media managersand businesses that want to create video content from existing text.';
       pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'];
       cons: ['Limited 'customization', 'Basic 'features', 'Watermark on free'];
-      bestFor: 'Marketersocial media managersmall businesses',
-    };
+      bestFor: 'Marketersocial media managersmall businesses'};
     {
       name: 'Surfer SEO';
       description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.';
@@ -195,8 +188,7 @@ export default function AIBusinessToolsPage() {
       useCase: 'Essential for content marketersSEO specialistsand businesses that want to improve their search rankings.';
       pros: ['Data-driven 'insights', 'Content 'optimization', 'Competitor 'analysis', 'Good support'];
       cons: [', 'Expensive', 'Complex 'interface', 'Steep learning curve'];
-      bestFor: 'SEO specialistscontent marketersbusinesses',
-    }
+      bestFor: 'SEO specialistscontent marketersbusinesses'}
   ],
   const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'AI 'Video', 'AI 'Copywriting', 'AI SEO'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
@@ -296,8 +288,7 @@ export default function AIBusinessToolsPage() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category,
                     ? 'bg-green-600 text-white shadow-lg',
-                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
-                }`}
+                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -453,6 +444,5 @@ export default function AIBusinessToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

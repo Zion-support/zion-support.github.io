@@ -43,8 +43,7 @@ export default function ServiceOnboarding() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth(),
   // If not authenticated, redirect to login,
@@ -85,6 +84,5 @@ if ( {) {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}})

@@ -15,8 +15,7 @@ const AI20o25UltimateContentRevolutionBanner = () => {
         revenue: '$445M';
         production: '2,40o0%';
         engagement: '1,80o0%'};
-      description: 'Revolutionary AI-powered content creation transforming Fortune 50o0 companies',
-    };
+      description: 'Revolutionary AI-powered content creation transforming Fortune 50o0 companies'};
     {
       id: 'fortune-50o0-content-success';
       title: 'Fortune 50o0 Content Revolution: $445M Annual Revenue Success';
@@ -26,10 +25,8 @@ const AI20o25UltimateContentRevolutionBanner = () => {
         roi: '25,0o00%';
         savings: '$2.8B';
         efficiency: '3,20o0%';
-        accuracy: '99.7%',
-      };
-      description: 'Proven success story of content revolution implementation',
-    };
+        accuracy: '99.7%'};
+      description: 'Proven success story of content revolution implementation'};
     {
       id: 'content-implementation-guide';
       title: 'AI Content Revolution Implementation Guide: Complete Roadmap';
@@ -39,10 +36,8 @@ const AI20o25UltimateContentRevolutionBanner = () => {
         roi: '25,0o00%';
         timeline: '18 months';
         success: '99.7%';
-        guide: '45 min read',
-      };
-      description: 'Step-by-step implementation roadmap for content revolution success',
-    }
+        guide: '45 min read'};
+      description: 'Step-by-step implementation roadmap for content revolution success'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

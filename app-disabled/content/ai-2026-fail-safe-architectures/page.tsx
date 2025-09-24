@@ -54,6 +54,5 @@ export default function Page() {
           Zero‑Trust Architecture,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

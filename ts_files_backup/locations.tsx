@@ -17,6 +17,5 @@ export default function LocationsPage() {
 				</div>,
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>,
 			</div>,
-		</div>),
-}
+		</div>)}
 ,

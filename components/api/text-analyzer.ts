@@ -154,8 +154,7 @@ export default async function handler(
     else if (sentimentScore <= 3) sentimentLabel = 'positive',
     else sentimentLabel = 'very-positive',
     // Keyword analysis,
-    const wordCounts = new Map<string number>(),
-}
+    const wordCounts = new Map<string number>()}
     }),
         word;
         count;
@@ -170,8 +169,7 @@ export default async function handler(
         count,
         frequency: Math.round((count / words) * 1000) / 10})),        word,
         count,
-        frequency: Math.round((count / words) * 1000) / 10,
-      })),
+        frequency: Math.round((count / words) * 1000) / 10})),
     // Bigrams and trigrams,
     const wordsArray = text && text.toLowerCase().split(/\s+/),
     const bigramCounts = new Map<string number>(),
@@ -224,8 +222,7 @@ export default async function handler(
         paragraphs,
         syllables,
         readingTime,
-        speakingTime,
-      }
+        speakingTime}
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100,
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
@@ -233,14 +230,12 @@ export default async function handler(
         smog: Math.round(smog * 100) / 100,
         colemanLiau: Math.round(colemanLiau * 100) / 100,
         automatedReadability: Math.round(automatedReadability * 100) / 100,
-        averageGrade,
-      }
+        averageGrade}
       sentiment: {
         score: sentimentScore,
         label: sentimentLabel,
         positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word)),
-      }
+        negativeWords: textWords.filter(word => negativeWords.includes(word))}
 ,
       language: {
         topWords;
@@ -248,8 +243,7 @@ export default async function handler(
         trigrams;
       };
     };
-    res && res.status(200).json(result),
-} catch (error) {
+    res && res.status(200).json(result)} catch (error) {
     console && console.error('Text analysis error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}        score: sentimentScore,
         label: sentimentLabel,
@@ -265,8 +259,7 @@ export default async function handler(
         paragraphs,
         syllables,
         readingTime,
-        speakingTime,
-    };
+        speakingTime};
     readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
         gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100;
@@ -275,8 +268,7 @@ export default async function handler(
       sentiment: {
         score: sentimentScore, label: sentimentLabel;
         positiveWords: textWords.filter(word => positiveWords.includes(word));
-        negativeWords: textWords.filter(word => negativeWords.includes(word)),
-    };
+        negativeWords: textWords.filter(word => negativeWords.includes(word))};
     language: {
         detectedLanguage,
         confidence,

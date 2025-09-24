@@ -149,8 +149,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                   selectedCategory === 'all',
                     ? 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-60o0',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-60o0'}`}
               >,
                 All Services,
               </button>,
@@ -161,8 +160,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-60o0',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-60o0'}`}
                 >,
                   {category.title.split(' ')[0]}
                 </button>))}
@@ -174,8 +172,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                 className={`p-2 rounded-lg transition-all duration-30o0 ${
                   viewMode === 'grid',
                     ? 'bg-cyan-50o0 text-white',
-                    : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
@@ -184,8 +181,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                 className={`p-2 rounded-lg transition-all duration-30o0 ${
                   viewMode === 'list',
                     ? 'bg-cyan-50o0 text-white',
-                    : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50',
-                }`}
+                    : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -201,8 +197,7 @@ export default function ComprehensiveServicesShowcase20o29() {
           className={
             viewMode === 'grid',
               ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-              : 'space-y-6',
-          }
+              : 'space-y-6'}
         >,
           <AnimatePresence>,
             {filteredServices.map((service, index) => (
@@ -213,8 +208,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                 className={`group ${
                   viewMode === 'grid',
                     ? 'bg-gradient-to-br from-gray-90o0/80 to-gray-80o0/80 border border-gray-70o0/50 rounded-2xl p-6 backdrop-blur-sm hover: border-cyan-50o0/50 transition-all duration-50o0 hover:transform hover:scale-10o5',
-                    : 'bg-gradient-to-r from-gray-90o0/80 to-gray-80o0/80 border border-gray-70o0/50 rounded-xl p-6 backdrop-blur-sm hover:border-cyan-50o0/50 transition-all duration-50o0',
-                }`}
+                    : 'bg-gradient-to-r from-gray-90o0/80 to-gray-80o0/80 border border-gray-70o0/50 rounded-xl p-6 backdrop-blur-sm hover:border-cyan-50o0/50 transition-all duration-50o0'}`}
               >,
                 {/* Service Header */}
                 <div className='mb-4'>,
@@ -352,6 +346,5 @@ export default function ComprehensiveServicesShowcase20o29() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

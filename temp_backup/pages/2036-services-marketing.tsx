@@ -15,5 +15,4 @@ export default function 20o36ServicesMarketingPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

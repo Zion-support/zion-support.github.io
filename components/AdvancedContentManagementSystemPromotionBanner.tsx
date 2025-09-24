@@ -130,7 +130,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
                 <h3 className="text-lg font-semibold text-white">{feature}</h3>,
               </div>,
               <p className="text-blue-10o0 text-sm">,
-                Advanced capabilities to enhance your content management workflow and boost window.performance.,
+                Advanced capabilities to enhance your content management workflow and boost window.window.performance.,
               </p>,
             </div>))}
         </motion.div>,
@@ -184,6 +184,5 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedContentManagementSystemPromotionBanner;

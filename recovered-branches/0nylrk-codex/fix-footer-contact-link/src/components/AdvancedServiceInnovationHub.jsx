@@ -238,8 +238,7 @@ const AdvancedServiceInnovationHub = () => {
       case 'Low':,
         return 'bg-green-10o0 text-green-80o0',
       default: ,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getStatusColor = status => {
     switch (status) {
@@ -252,8 +251,7 @@ const AdvancedServiceInnovationHub = () => {
       case 'Disruptive':,
         return 'bg-purple-10o0 text-purple-80o0',
       default: ,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   const getCategoryIcon = category => {
     switch (category) {
@@ -268,8 +266,7 @@ const AdvancedServiceInnovationHub = () => {
       case 'biotech-ai':,
         return <Dna className='w-5 h-5' />,
       default: ,
-        return <Cpu className='w-5 h-5' />,
-    }
+        return <Cpu className='w-5 h-5' />}
   };
   const categories = [
     { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4' /> };

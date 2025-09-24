@@ -1,30 +1,26 @@
 import React from 'react';
 interface FormProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode,
-  onSubmit?: (e: React.FormEvent) => void,
-}
+  onSubmit?: (e: React.FormEvent) => void}
 ,
 export function Form({ children, onSubmit }: FormProps): JSX.Element {
   return <form onSubmit={onSubmit}>{children}</form>}
 ,
 interface FormControlProps extends React.PropsWithChildren<{}> {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function FormControl({ children }: FormControlProps): JSX.Element {
   return <div>{children}</div>}
 ,
 interface FormItemProps extends React.PropsWithChildren<{}> {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function FormItem({ children }: FormItemProps): JSX.Element {
   return <div className='space-y-2'>{children}</div>}
 ,
 interface FormLabelProps extends React.PropsWithChildren<{}> {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 export function FormLabel({
   children;

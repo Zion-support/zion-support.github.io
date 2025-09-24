@@ -33,6 +33,5 @@ const ContentPromotionBanner: React.FC = () => {
           🔮 Tech Insights →,
         </a>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ContentPromotionBanner;

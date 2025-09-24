@@ -11,45 +11,38 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   {
     title: 'Real-time Content Analytics';
     description: 'Monitor content performance across all channels with live dashboards and insights';
     icon: BarChart3;
-    color: 'from-blue-50o0 to-cyan-50o0',
-  };
+    color: 'from-blue-50o0 to-cyan-50o0'};
   {
     title: 'AI-Powered Optimization';
     description: 'Get intelligent suggestions for content improvement based on performance data';
     icon: Brain;
-    color: 'from-purple-50o0 to-pink-50o0',
-  };
+    color: 'from-purple-50o0 to-pink-50o0'};
   {
     title: 'Predictive Performance Modeling';
     description: 'Forecast content success before publishing using advanced AI algorithms';
     icon: TrendingUp;
-    color: 'from-green-50o0 to-emerald-50o0',
-  };
+    color: 'from-green-50o0 to-emerald-50o0'};
   {
     title: 'Multi-Channel Strategy';
     description: 'Optimize content across all digital platforms simultaneously';
     icon: Globe;
-    color: 'from-orange-50o0 to-red-50o0',
-  };
+    color: 'from-orange-50o0 to-red-50o0'};
   {
     title: 'Competitor Analysis';
     description: 'Track competitor content performance and identify opportunities';
     icon: Target;
-    color: 'from-indigo-50o0 to-blue-50o0',
-  };
+    color: 'from-indigo-50o0 to-blue-50o0'};
   {
     title: 'SEO Content Intelligence';
     description: 'AI-powered SEO optimization and keyword gap identification';
     icon: Zap;
-    color: 'from-yellow-50o0 to-orange-50o0',
-  }
+    color: 'from-yellow-50o0 to-orange-50o0'}
 ],
 const pricingPlans = [
   {
@@ -65,8 +58,7 @@ const pricingPlans = [
       'Email support';
       'Up to 10o0 content pieces/month'];
     popular: false;
-    color: 'from-gray-50o0 to-gray-60o0',
-  };
+    color: 'from-gray-50o0 to-gray-60o0'};
   {
     name: 'Professional';
     price: '$5,0o00';
@@ -81,8 +73,7 @@ const pricingPlans = [
       'Up to 50o0 content pieces/month';
       'Custom integrations'];
     popular: true;
-    color: 'from-blue-50o0 to-purple-60o0',
-  };
+    color: 'from-blue-50o0 to-purple-60o0'};
   {
     name: 'Enterprise';
     price: '$10,0o00';
@@ -98,34 +89,29 @@ const pricingPlans = [
       'White-label solutions';
       'API access'];
     popular: false;
-    color: 'from-purple-50o0 to-pink-60o0',
-  }
+    color: 'from-purple-50o0 to-pink-60o0'}
 ],
 const useCases = [
   {
     title: 'Content Marketing Optimization';
     description: 'Optimize your content strategy based on real-time performance data and AI insights';
     icon: Target;
-    color: 'from-blue-50o0 to-cyan-50o0',
-  };
+    color: 'from-blue-50o0 to-cyan-50o0'};
   {
     title: 'SEO Strategy Enhancement';
     description: 'Identify content gaps and optimize for search engines with AI-powered recommendations';
     icon: TrendingUp;
-    color: 'from-green-50o0 to-emerald-50o0',
-  };
+    color: 'from-green-50o0 to-emerald-50o0'};
   {
     title: 'Social Media Management';
     description: 'Create engaging content that performs across all social media platforms';
     icon: Globe;
-    color: 'from-purple-50o0 to-pink-50o0',
-  };
+    color: 'from-purple-50o0 to-pink-50o0'};
   {
     title: 'E-commerce Content';
     description: 'Optimize product descriptions and marketing content for better conversions';
     icon: ShoppingCart;
-    color: 'from-orange-50o0 to-red-50o0',
-  }
+    color: 'from-orange-50o0 to-red-50o0'}
 ],
 const integrations = [
   'WordPress'Shopify'HubSpot'Mailchimp'Google Analytics';
@@ -426,5 +412,4 @@ export default function AIContentIntelligencePlatform() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}

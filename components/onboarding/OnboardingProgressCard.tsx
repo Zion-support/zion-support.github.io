@@ -5,18 +5,15 @@ export type OnboardingStep = {
   label: string,
   completed: boolean,
   ctaLabel?: string,
-  ctaHref?: string,
-};
+  ctaHref?: string};
 export type OnboardingProgressCardProps = {
   title: string,
   steps: OnboardingStep[],
-  highlightColorClass?: string,
-};
+  highlightColorClass?: string};
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps || steps.length === 0) return 0,
   const completedCount = steps.filter(s => s.completed).length,
-  return Math.round((completedCount / steps.length) * 100),
-}
+  return Math.round((completedCount / steps.length) * 100)}
 ,
 export default function OnboardingProgressCard({
   titlestepshighlightColorClass = 'from-neon-green to-neon-blue';

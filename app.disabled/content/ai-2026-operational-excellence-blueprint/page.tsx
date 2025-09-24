@@ -135,6 +135,5 @@ export default function OperationalExcellenceBlueprint20o26Page() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

@@ -63,8 +63,7 @@ const ModernFooter: React.FC = () => {
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <footer className="bg-gray-90o0 text-white relative overflow-hidden">,
       {/* Animated Background */}
@@ -115,8 +114,7 @@ const ModernFooter: React.FC = () => {
                       href={category.href}
                       className="flex items-center space-x-2 text-gray-30o0 hover: text-blue-40o0 transition-colors group">,
                       {React.createElement(category.icon, {
-                        className: "w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors",
-                      })}
+                        className: "w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors"})}
                       <span>{category.name}</span>,
                     </Link>,
                   </li>))}
@@ -263,6 +261,5 @@ const ModernFooter: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default ModernFooter;

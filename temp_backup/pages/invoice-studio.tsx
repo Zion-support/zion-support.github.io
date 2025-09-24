@@ -20,6 +20,5 @@ export default function InvoiceStudio() {
       ]}
       industries={['Freelancers', 'Agencies', 'SMBs', 'SaaS']}
       canonical='https: //ziontechgroup.com/invoice-studio',
-    />),
-}
+    />)}
 ,

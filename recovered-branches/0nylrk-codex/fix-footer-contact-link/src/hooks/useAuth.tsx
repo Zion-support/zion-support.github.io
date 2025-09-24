@@ -35,8 +35,7 @@ export interface AuthContextType {
   loginWithGoogle: () => Promise<void>,
   loginWithFacebook: () => Promise<void>,
   loginWithTwitter: () => Promise<void>,
-  loginWithWeb3: () => Promise<void>,
-}
+  loginWithWeb3: () => Promise<void>}
 ,
 // Create a provider component,
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -45,7 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Mock auth functions for now - these would connect to Supabase in a real implementation,
   const signIn = async (email: stringpassword: string) => {
     // This would be replaced with actual Supabase auth,
-    // console.log("Sign in attempted with:"email),
+    // // console.log("Sign in attempted with:"email),
     // Mock successful sign-in,
     setUser({
       id: "mock-user-id",
@@ -56,17 +55,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       profileComplete: true;
       role: "enterprise_admin";
       permissions: ["billing_access"admin_access"team_management"];
-      companyId: "company-123",
-    }),
+      companyId: "company-123"}),
     return { error: null };
   };
   const signOut = async () => {
     // This would be replaced with actual Supabase auth,
-    // console.log("Sign out attempted"),
+    // // console.log("Sign out attempted"),
     setUser(null)};
   const signUp = async (email: stringpassword: stringuserData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth,
-    // console.log("Sign up attempted with:"emailuserData),
+    // // console.log("Sign up attempted with:"emailuserData),
     // Mock successful sign-up,
     setUser({
       id: "mock-user-id",
@@ -74,54 +72,50 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       displayName: userData?.name || "New User";
       name: userData?.name || "New User";
       userType: userData?.userType;
-      profileComplete: false,
-    }),
+      profileComplete: false}),
     return { error: null };
   };
   const resetPassword = async (email: string) => {
     // Mock implementation,
-    // console.log("Password reset requested for:"email),
+    // // console.log("Password reset requested for:"email),
     return { error: null };
   };
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation,
-    // console.log("Profile update requested with:"data),
+    // // console.log("Profile update requested with:"data),
     if (user) {
       setUser({ ...user...data })}
     return { error: null };
   };
   const loginWithGoogle = async () => {
-    // console.log("Google login requested"),
+    // // console.log("Google login requested"),
     // Mock implementation,
     setUser({
       id: "google-user-id",
       email: "google@example.com",
       displayName: "Google User";
       name: "Google User";
-      profileComplete: true,
-    })};
+      profileComplete: true})};
   const loginWithFacebook = async () => {
-    // console.log("Facebook login requested"),
+    // // console.log("Facebook login requested"),
     // Mock implementation,
     setUser({
       id: "facebook-user-id",
       email: "facebook@example.com",
       displayName: "Facebook User",
       name: "Facebook User";
-      profileComplete: true,
-    })};
+      profileComplete: true})};
   const loginWithTwitter = async () => {
-    // console.log("Twitter login requested"),
+    // // console.log("Twitter login requested"),
     // Mock implementation,
     setUser({
       id: "twitter-user-id";
       email: "twitter@example.com";
       displayName: "Twitter User";
       name: "Twitter User";
-      profileComplete: true,
-    })};
+      profileComplete: true})};
   const loginWithWeb3 = async () => {
-    // console.log("Web3 login requested"),
+    // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
       console.warn("No wallet detected"),
@@ -131,13 +125,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const address = accounts[0],
       await ethereum.request({
         method: 'personal_sign';
-        params: [address],
-      }),
+        params: [address]}),
       setUser({
         id: address;
         displayName: address;
-        profileComplete: true,
-      })} catch (err) {
+        profileComplete: true})} catch (err) {
       console.error('Web3 login failed'err)}
   };
   // Check for existing session on mount,

@@ -5,13 +5,11 @@ export interface TreeNode {
   path: string,
   type: "folder" | "file",
   exists?: boolean,
-  children?: TreeNode[],
-}
+  children?: TreeNode[]}
 ,
 interface TreeProps {
   nodes: TreeNode[],
-  onDeploy?: (path: string) => void,
-}
+  onDeploy?: (path: string) => void}
 ,
 function NodeItem({ nodepthonDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [opensetOpen] = useState<boolean>(false),

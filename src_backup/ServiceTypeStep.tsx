@@ -25,8 +25,7 @@ const listingSchema = z.object({
 const listingsSchema = z.array(listingSchema);
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -78,8 +77,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     updateFormData({
       specificItem: item;
       serviceCategory: item.category;
-      serviceType: item.category.toLowerCase() as ServiceType,
-    })};
+      serviceType: item.category.toLowerCase() as ServiceType})};
   const sourceListings = listings;
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected,
@@ -99,8 +97,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("service")}
           >,
             <h4 className="font-medium text-white">Services</h4>,
@@ -110,8 +107,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("talent")}
           >,
             <h4 className="font-medium text-white">Talent</h4>,
@@ -121,8 +117,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("equipment")}
           >,
             <h4 className="font-medium text-white">Equipment</h4>,
@@ -167,8 +162,7 @@ const listing_schema = z.object ({
     updateFormData({
       specificItem: item;
       serviceCategory: item.category;
-      serviceType: item.category.toLowerCase() as ServiceType,
-    })};
+      serviceType: item.category.toLowerCase() as ServiceType})};
   const sourceListings = listings;
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected,
@@ -188,8 +182,7 @@ const listing_schema = z.object ({
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("service")}
           >,
             <h4 className="font-medium text-white">Services</h4>,
@@ -199,8 +192,7 @@ const listing_schema = z.object ({
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("talent")}
           >,
             <h4 className="font-medium text-white">Talent</h4>,
@@ -210,8 +202,7 @@ const listing_schema = z.object ({
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment",
                 ? "bg-zion-purple/20 border-zion-purple",
-                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50",
-            }`}
+                : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"}`}
             onClick={() => handleTypeSelect("equipment")}
           >,
             <h4 className="font-medium text-white">Equipment</h4>,
@@ -264,5 +255,4 @@ const listing_schema = z.object ({
           </div>,
         </div>)}
     </div>)}
-,
 ,

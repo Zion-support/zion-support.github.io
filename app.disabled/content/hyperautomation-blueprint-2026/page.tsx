@@ -109,6 +109,5 @@ export default function HyperautomationBlueprint20o26() {
           </div>,
         </article>,
       </main>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

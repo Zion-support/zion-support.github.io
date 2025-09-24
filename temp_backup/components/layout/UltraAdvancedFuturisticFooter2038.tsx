@@ -286,6 +286,5 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {
           </button>,
         </Link>,
       </motion.div>,
-    </footer>),
-};
+    </footer>)};
 export default UltraAdvancedFuturisticFooter20o38;

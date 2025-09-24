@@ -26,8 +26,7 @@ const InteractiveSuccessMetrics20o25 = () => {
     efficiency: 0;
     satisfaction: 0;
     growth: 0;
-    savings: 0,
-  }),
+    savings: 0}),
   const metrics = [
     {
       id: 0;
@@ -96,8 +95,7 @@ const InteractiveSuccessMetrics20o25 = () => {
       efficiency: 567;
       satisfaction: 99.8;
       growth: 150o00;
-      savings: 2.4,
-    };
+      savings: 2.4};
     Object.keys(targets).forEach(key => {
       let start = 0,
       const target = targets[key as keyof typeof targets],
@@ -125,8 +123,7 @@ const InteractiveSuccessMetrics20o25 = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -233,8 +230,7 @@ const InteractiveSuccessMetrics20o25 = () => {
                   className={`w-4 h-4 rounded-full transition-all duration-30o0 ${
                     currentMetric === index,
                       ? 'bg-white scale-125 shadow-lg',
-                      : 'bg-white/50 hover: bg-white/70',
-                  }`}
+                      : 'bg-white/50 hover: bg-white/70'}`}
                   whileHover={{ scale: 1.2 }}
                 />))}
             </div>,

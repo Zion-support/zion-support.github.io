@@ -83,8 +83,7 @@ const UltraFuturisticFooter20o46: React.FC = () => {
             transition={{
               duration: Math.random() * 15 + 15;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             style={{
               left: Math.random() * 10o0 + '%';
               top: Math.random() * 10o0 + '%'}}
@@ -251,6 +250,5 @@ const UltraFuturisticFooter20o46: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default UltraFuturisticFooter20o46;

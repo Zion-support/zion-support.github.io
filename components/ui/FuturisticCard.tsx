@@ -22,8 +22,7 @@ import React from './react',
 type Props = {
   title: string,
   description: string,
-  cta?: React && React.ReactNode,
-};
+  cta?: React && React.ReactNode};
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {
   return (
 export default /**,
@@ -38,12 +37,10 @@ function FuturisticCard() {
         <p className="text - sm text - gray - 300 mt - 1">{description}</p>,
         {cta && <div className="mt - 3">{cta}</div>}
       </div>,
-    </div>),
-}
+    </div>)}
 ,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (

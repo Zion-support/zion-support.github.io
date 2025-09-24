@@ -70,8 +70,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-space-technology";
     "title": "AI Space Technology Suite";
@@ -114,8 +113,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-biotechnology";
     "title": "AI Biotechnology Platform";
@@ -158,8 +156,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-chatbot-builder";
     "title": "AI Chatbot Builder Pro";
@@ -199,8 +196,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-content-generator";
     "title": "AI Content Generator Suite";
@@ -240,8 +236,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-customer-service";
     "title": "AI Customer Service Platform";
@@ -278,8 +273,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-sales-copilot";
     "title": "AI Sales Copilot Pro";
@@ -319,8 +313,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-compliance-assistant";
     "title": "AI Compliance Assistant";
@@ -360,8 +353,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-auto-email-responder";
     "title": "AI Auto Email Responder";
@@ -401,8 +393,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "llm-content-studio";
     "title": "LLM Content Studio";
@@ -442,8 +433,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "finops-advisor";
     "title": "FinOps Advisor Pro";
@@ -483,8 +473,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "quantum-ai-platform";
     "title": "Quantum AI Platform";
@@ -524,8 +513,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "edge-ai-processor";
     "title": "Edge AI Processor";
@@ -565,8 +553,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-cybersecurity-suite";
     "title": "AI Cybersecurity Suite";
@@ -606,8 +593,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "data-pipeline-automation";
     "title": "Data Pipeline Automation";
@@ -647,8 +633,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-testing-automation";
     "title": "AI Testing Automation";
@@ -688,8 +673,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "blockchain-ai-platform";
     "title": "Blockchain AI Platform";
@@ -729,8 +713,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-healthcare-analytics";
     "title": "AI Healthcare Analytics";
@@ -770,8 +753,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-supply-chain-optimizer";
     "title": "AI Supply Chain Optimizer";
@@ -811,8 +793,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-marketing-automation";
     "title": "AI Marketing Automation";
@@ -852,8 +833,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-hr-assistant";
     "title": "AI HR Assistant";
@@ -893,8 +873,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-legal-assistant";
     "title": "AI Legal Assistant";
@@ -934,8 +913,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  };
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"};
   {
     "id": "ai-education-platform";
     "title": "AI Education Platform";
@@ -975,8 +953,7 @@ export const "MICRO_SAAS_SERVICES": MicroSaasService[] = [{
       "avatarUrl": "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
       "verified": true};
     "images": ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"];
-    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z",
-  }
+    "createdAt": "20o24-0o1-15T10: 0o0:0o0.0o00Z"}
 ],
 export const getMicroSaasServiceById = ("id": string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id)};

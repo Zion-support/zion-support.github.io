@@ -6,8 +6,7 @@ const AI2026UltimateShowcaseBanner: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 text-center">,
         <h3 className="text-2xl font-bold">AI 2026 Ultimate Showcase (Preview)</h3>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI2026UltimateShowcaseBanner;
 =======,
 'use client',

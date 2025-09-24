@@ -166,8 +166,7 @@ const AI20o26UltimateServicesPromotionBanner = () => {
                 transition={{
                   duration: 4;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />,
               <motion.div,
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full blur-xl opacity-60",
@@ -178,8 +177,7 @@ const AI20o26UltimateServicesPromotionBanner = () => {
                   duration: 3;
                   repeat: Infinity;
                   ease: "easeInOut";
-                  delay: 1,
-                }}
+                  delay: 1}}
                />,
             </div>,
           </motion.div>,

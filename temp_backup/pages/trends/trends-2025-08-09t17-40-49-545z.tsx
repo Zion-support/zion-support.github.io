@@ -20,6 +20,5 @@ export default function Trends20o250809t1740o49545zPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

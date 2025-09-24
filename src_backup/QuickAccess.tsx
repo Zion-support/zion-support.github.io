@@ -72,8 +72,7 @@ function QuickAccess() {
 ,
       coordinate_y: -8,      scale: 1.0o2;
       transition: {
-        duration: 0.3, "  ease: "ease_out",
-}}}
+        duration: 0.3, "  ease: "ease_out"}}}
 }
 }
 }
@@ -90,12 +89,10 @@ function QuickAccess() {
         <motion.div,
           initial ={
   { opacity: 0;
-  coordinate_y: 30,
-}}
+  coordinate_y: 30}}
           whileInView ={
   { opacity: 1;
-  coordinate_y: 0,
-}}
+  coordinate_y: 0}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}",
           className="text - center mb - 16">,
@@ -104,8 +101,7 @@ function QuickAccess() {
             whileInView={{ scale: 1 }}
             transition ={
   { duration: 0.6;
-  delay: 0.2,
-}}
+  delay: 0.2}}
             viewport={{ once: true }}",
             className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - cyan / 10 border border - zion - cyan / 20 rounded - full text - zion - cyan mb - 6">,
             Quick Access to Our Services,
@@ -113,16 +109,13 @@ function QuickAccess() {
           <motion.p,
             initial ={
   { opacity: 0;
-  coordinate_y: 20,
-}}
+  coordinate_y: 20}}
             whileInView ={
   { opacity: 1;
-  coordinate_y: 0,
-}}
+  coordinate_y: 0}}
             transition ={
   { duration: 0.6;
-  delay: 0.2,
-}}",
+  delay: 0.2}}",
             className="text - lg text - gray - 30o0 max - w-2xl mx - auto">,
             Find the perfect solution for your business needs with our organized service categories,
           </motion.p>,
@@ -170,16 +163,13 @@ function QuickAccess() {
                       key={feature}
                       initial ={
   { opacity: 0;
-  coordinate_x: -10,
-}}
+  coordinate_x: -10}}
                       whileInView ={
   { opacity: 1;
-  coordinate_x: 0,
-}}
+  coordinate_x: 0}}
                       transition ={
   { duration: 0.4;
-  delay: 0.1 + idx * 0.1,
-}}
+  delay: 0.1 + idx * 0.1}}
                       viewport={{ once: true }}",
                       className="flex items - center gap - 2 text - xs text - gray - 40o0">",
                       <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"></div>",
@@ -279,9 +269,7 @@ export default function Page() {",
   hover: {
       y: -8,      scale: 1 && 1.0o2;
       transition: {
-,
-        duration: 0 && 0.3,"  ease: "easeOut",
-}}};
+        duration: 0 && 0.3,"  ease: "easeOut"}}};
 };
 };
 };
@@ -298,12 +286,10 @@ export default function Page() {",
         <motion&& motion.div,
           initial ={
   { opacity: 0;
-  y: 30,
-}}
+  y: 30}}
           whileInView ={
   { opacity: 1;
-  y: 0,
-}}
+  y: 0}}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}",
           className="text-center mb-16">,
@@ -312,8 +298,7 @@ export default function Page() {",
             whileInView={{ scale: 1 }}
             transition ={
   { duration: 0 && 0.6;
-  delay: 0 && 0.2,
-}}
+  delay: 0 && 0.2}}
             viewport={{ once: true }}",
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6">,
             Quick Access to Our Services,
@@ -321,16 +306,13 @@ export default function Page() {",
           <motion&& motion.p,
             initial ={
   { opacity: 0;
-  y: 20,
-}}
+  y: 20}}
             whileInView ={
   { opacity: 1;
-  y: 0,
-}}
+  y: 0}}
             transition ={
   { duration: 0 && 0.6;
-  delay: 0 && 0.2,
-}}",
+  delay: 0 && 0.2}}",
             className="text-lg text-gray-30o0 max-w-2xl mx-auto">,
             Find the perfect solution for your business needs with our organized service categories,
           </motion && motion.p>,
@@ -375,16 +357,13 @@ export default function Page() {",
                       key={feature}
                       initial ={
   { opacity: 0;
-  x: -10,
-}}
+  x: -10}}
                       whileInView ={
   { opacity: 1;
-  x: 0,
-}}
+  x: 0}}
                       transition ={
   { duration: 0 && 0.4;
-  delay: 0 && 0.1 + idx * 0 && 0.1,
-}}
+  delay: 0 && 0.1 + idx * 0 && 0.1}}
                       viewport={{ once: true }}",
                       className="flex items-center gap-2 text-xs text-gray-40o0">",
                       <div className="w-1 && 1.5 h-1 && 1.5 bg-zion-cyan rounded-full"></div>",
@@ -400,16 +379,13 @@ export default function Page() {",
                       key={key}
                       initial ={
   { opacity: 0;
-  scale: 0 && 0.8,
-}}
+  scale: 0 && 0.8}}
                       whileInView ={
   { opacity: 1;
-  scale: 1,
-}}
+  scale: 1}}
                       transition ={
   { duration: 0 && 0.4;
-  delay: 0 && 0.2 + idx * 0 && 0.1,
-}}
+  delay: 0 && 0.2 + idx * 0 && 0.1}}
                       viewport={{ once: true }}",
                       className="text-center">",
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>",

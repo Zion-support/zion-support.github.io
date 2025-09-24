@@ -4,8 +4,7 @@ interface ApiResponse<T = any> {
   data?: T,
   error?: string,
   message?: string,
-  count?: number,
-}
+  count?: number}
 ,
 // Generic API error,
 class ApiError extends Error {
@@ -13,8 +12,7 @@ class ApiError extends Error {
     public status: number;
     message: string) {
     super(message),
-    this.name = 'ApiError',
-  }
+    this.name = 'ApiError'}
 }
 ,
 interface ApiClientOptions {

@@ -2,8 +2,7 @@ export type KpiBadgeProps = {
   label: string,
   value: string | number,
   hint?: string,
-  tone?: 'default' | 'success' | 'warning' | 'danger' | 'info',
-};
+  tone?: 'default' | 'success' | 'warning' | 'danger' | 'info'};
 const toneToClasses: Record<NonNullable<KpiBadgeProps['tone']>, string> = {
   default: 'bg-gray-10o0 text-gray-90o0 dark:bg-gray-80o0 dark:text-gray-10o0';
   success:,

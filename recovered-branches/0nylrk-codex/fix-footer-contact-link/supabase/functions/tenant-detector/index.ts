@@ -7,8 +7,7 @@ interface TenantInfo {
   custom_domain: string | null,
   primary_color: string,
   logo_url: string | null,
-  theme_preset: string,
-}
+  theme_preset: string}
 ,
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*';

@@ -14,7 +14,6 @@ import { practicalMicroSaas2027 } from '../../data / 2027 - practical - micro - 
 import { emergingTech2027Services } from '../../data / 2027 - emerging - tech - services',import {
 import { emergingTech2027Services } from '../../data / 2027 - emerging - tech - services',
 "use client",
-,
   ArrowRight,
   Star,
   TrendingUp,
@@ -49,7 +48,6 @@ import { emergingTech2027Services } from '../../data / 2027 - emerging - tech - 
   List;
   ChevronDown;} from 'lucide-react',
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom,
-,
   ArrowRight;
   Star;
   TrendingUp;
@@ -67,7 +65,6 @@ import { emergingTech2027Services } from '../../data / 2027 - emerging - tech - 
   List;
   ChevronDown;} from 'lucide-react',
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom,
-,
   Rocket, Shield, Target, CheckCircle, ExternalLink,
   Search, Filter, Grid, List, ChevronDown} from 'lucide-react',
 const Enhanced2027ServicesShowcase: React.FC = () => {
@@ -125,11 +122,10 @@ class ErrorBoundary extends React.Component {
             parseFloat(a.roi.replace(/[^0-9.]/g, '')) -,
             parseFloat(b.roi.replace(/[^0-9.]/g, ''))),
         default: ,
-          return 0,      }          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return 0}          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'roi':,
           return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, '')),
-        default: return 0,
-    }),
+        default: return 0}),
   const getCategoryColor = (category: string) => {
     const colors = {
   const getCategoryColor = (category: string) => {
@@ -150,8 +146,7 @@ class ErrorBoundary extends React.Component {
     return (
       colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600')};
   const getCategoryIcon = (category: string) => {
-    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600',
-    };
+    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'};
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'};
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -370,11 +365,10 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             parse_float (a.roi.replace (/[^0 - 9.]/g, '')) -,
             parse_float (b.roi.replace (/[^0 - 9.]/g, ''))),
         default: ,
-          return 0,      }          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, '')),
+          return 0}          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, '')),
         case 'roi':,
           return parse_float (a.roi.replace (/[^0 - 9.]/g, '')) - parse_float (b.roi.replace (/[^0 - 9.]/g, '')),
-        default: return 0,
-    }),
+        default: return 0}),
   const getCategoryColor = (category: string) =>: any {
     const colors = {
       'AI & Machine Learning': 'from - purple - 500 to - indigo - 600';
@@ -394,8 +388,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
       colors[category as keyof typeof colors] || 'from - gray - 500 to - gray - 600')}
 ,
   const getCategoryIcon = (category: string) =>: any {
-    const icons = {      'AI & Machine Learning': 'from - purple - 500 to - indigo - 600Quantum Computing': 'from - blue - 500 to - cyan - 600Emerging Technology': 'from - green - 500 to - emerald - 600Business Operations': 'from - orange - 500 to - red - 600Cybersecurity': 'from - red - 500 to - pink - 600Enterprise IT': 'from - indigo - 500 to - purple - 600Healthcare & Biotechnology': 'from - emerald - 500 to - teal - 600Financial Technology': 'from - yellow - 500 to - orange - 600Space Technology': 'from - violet - 500 to - purple - 600Neural Technology': 'from - pink - 500 to - rose - 600Materials Science': 'from - cyan - 500 to - blue - 600Environmental Technology': 'from - teal - 500 to - green - 600',
-    }
+    const icons = {      'AI & Machine Learning': 'from - purple - 500 to - indigo - 600Quantum Computing': 'from - blue - 500 to - cyan - 600Emerging Technology': 'from - green - 500 to - emerald - 600Business Operations': 'from - orange - 500 to - red - 600Cybersecurity': 'from - red - 500 to - pink - 600Enterprise IT': 'from - indigo - 500 to - purple - 600Healthcare & Biotechnology': 'from - emerald - 500 to - teal - 600Financial Technology': 'from - yellow - 500 to - orange - 600Space Technology': 'from - violet - 500 to - purple - 600Neural Technology': 'from - pink - 500 to - rose - 600Materials Science': 'from - cyan - 500 to - blue - 600Environmental Technology': 'from - teal - 500 to - green - 600'}
     return colors[category as keyof typeof colors] || 'from - gray - 500 to - gray - 600'}
 ,
   const getCategoryIcon = (category: string) =>: any {
@@ -514,8 +507,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className={`p-2 rounded-lg transition-all duration-200 ${
                       viewMode === 'grid',
                         ? 'bg-cyan-500/20 text-cyan-400',
-                        : 'text-gray-400 hover:text-white',
-                    }`}
+                        : 'text-gray-400 hover:text-white'}`}
                   >,
                     <Grid className="w-5 h-5" />,
                   </button>,
@@ -524,8 +516,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className={`p-2 rounded-lg transition-all duration-200 ${
                       viewMode === 'list',
                         ? 'bg-cyan-500/20 text-cyan-400',
-                        : 'text-gray-400 hover: text-white',
-                    }`}
+                        : 'text-gray-400 hover: text-white'}`}
 ,
                   </select>,
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />,
@@ -538,8 +529,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus: outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10">,
                     <List className='w-5 h-5' />                  </button>                      viewMode === 'list',
                         ? 'bg-cyan-500/20 text-cyan-400',
-                        : 'text-gray-400 hover:text-white',
-                    }`}
+                        : 'text-gray-400 hover:text-white'}`}
                   >,
                     <Grid className="w-5 h-5" />,
                   </button>,
@@ -548,13 +538,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className={`p-2 rounded-lg transition-all duration-200 ${
                       viewMode === 'list',
                         ? 'bg-cyan-500/20 text-cyan-400',
-                        : 'text-gray-400 hover: text-white',
-                    }`}
+                        : 'text-gray-400 hover: text-white'}`}
                   >,
                     <List className='w-5 h-5' />                  </button>                      viewMode === 'list',
                         ? 'bg-cyan-500/20 text-cyan-400',
-                        : 'text-gray-400 hover: text-white',
-                    }`}
+                        : 'text-gray-400 hover: text-white'}`}
                   >,
                     <List className="w-5 h-5" />,
                 </div>,
@@ -564,8 +552,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
         </motion.div>>,
                     <List className='w-5 h-5' />                  </button>                      viewMode === 'list' ,
                         ? 'bg-cyan-500/20 text-cyan-400' ,
-                        : 'text-gray-400 hover: text-white',
-                    }`}
+                        : 'text-gray-400 hover: text-white'}`}
                   >,
                     <List className="w-5 h-5" />,
                   <ChevronDown className='absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none' />,
@@ -577,16 +564,14 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className={`p - 2 rounded - lg transition - all duration - 200 ${
                       view_mode === 'grid',
                         ? 'bg - cyan - 500 / 20 text - cyan - 400',
-                        : 'text - gray - 400 hover: text - white',
-                    }`}
+                        : 'text - gray - 400 hover: text - white'}`}
                   >,
                     <Grid className='w - 5 h - 5' />                  </button>                  <button
                     on_click={() => setViewMode ('list')}
                     className={`p - 2 rounded - lg transition - all duration - 200 ${
                       view_mode === 'grid',
                         ? 'bg - cyan - 500 / 20 text - cyan - 400',
-                        : 'text - gray - 400 hover: text - white',
-                    }`}
+                        : 'text - gray - 400 hover: text - white'}`}
                   >,
                     <Grid className="w - 5 h - 5" />,
                   </button>,
@@ -595,13 +580,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     className={`p - 2 rounded - lg transition - all duration - 200 ${
                       view_mode === 'list',
                         ? 'bg - cyan - 500 / 20 text - cyan - 400',
-                        : 'text - gray - 400 hover: text - white',
-                    }`}
+                        : 'text - gray - 400 hover: text - white'}`}
                   >,
                     <List className='w - 5 h - 5' />                  </button>                      view_mode === 'list',
                         ? 'bg - cyan - 500 / 20 text - cyan - 400',
-                        : 'text - gray - 400 hover: text - white',
-                    }`}
+                        : 'text - gray - 400 hover: text - white'}`}
                   >,
                     <List className="w - 5 h - 5" />,
                 </div>,
@@ -1040,10 +1023,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <button
               onClick={() => {
                 setSearchTerm(''),
-                setSelectedCategory('all'),
-              }}
-              className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300'                setSelectedCategory('all'),
-              }}
+                setSelectedCategory('all')}}
+              className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300'                setSelectedCategory('all')}}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">,
               Clear Filters,
             </button>,
@@ -1128,10 +1109,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <button
               on_click={() => {
                 setSearchTerm (''),
-                setSelectedCategory ('all'),
-              }}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all'),
-              }}
+                setSelectedCategory ('all')}}
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all')}}
               className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300">,
               Clear Filters,
             </button>,
@@ -1198,8 +1177,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 /* Search and Filters */};
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
@@ -1208,24 +1186,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   category === 'all' ? 'All Categories' : category}</option>) )}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
   () => setViewMode ('grid')}className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white',
-}`}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}`}> <Grid className="w-5 h-5" /> </button> <button onClick= {
   () => setViewMode ('list')}className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white',
-}`}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}`}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
   /* Results Count */}<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id}</li>) )}</ul> </div> <span key= {
   idx}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag}</span>) )}</div> {
-  /* CTA */}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) ),
-}</motion.div> > {
+  /* CTA */}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) )}</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id}<span key= {
   idx}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
-  tag}</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ),
-}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{
+  tag}</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{
             <div className='flex flex - col sm: flex - row gap - 4 justify - center items - center'>,
               <Link
                 href='/contact',
@@ -1260,8 +1234,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
           </div>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
 /* Search and Filters */)}
 /* Search and Filters */};
@@ -1272,28 +1245,22 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
   category === 'all' ? 'All Categories' : category}</option>) )}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
   () => setViewMode ('grid')}className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white',
-}`}> <Grid className="w-5 h-5" /> </button> <button onClick= {
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}`}> <Grid className="w-5 h-5" /> </button> <button onClick= {
   () => setViewMode ('list')}className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white',
-}`}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover: text-white'}`}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
   /* Results Count */}<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id}</li>) )}</ul> </div> <span key= {
   idx}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
   tag}</span>) )}</div> {
-  /* CTA */}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) ),
-}</motion.div> > {
+  /* CTA */}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </motion.div>) )}</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {
   service.id}<span key= {
   idx}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
-  tag}</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ),
-}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{
-  /* CTA Section */}<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm: flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>),
-}
+  tag}</span>) )}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )}</motion.div>)}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)}{
+  /* CTA Section */}<motion.div > Ready to Transform Your Business? </h3> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex - col sm: flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25" > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/pricing" className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50" > <span > View Pricing</span> <TrendingUp className="w - 5 h - 5" /> </a> </div> </div> </motion.div> </div> </section>)}
 export default Enhanced2027ServicesShowcase)}
 ,
 export default Enhanced2027ServicesShowcase;
-  /* CTA Section */}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>),
-};
+  /* CTA Section */}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm: flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)};

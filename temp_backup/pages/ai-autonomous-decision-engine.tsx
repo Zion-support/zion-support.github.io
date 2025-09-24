@@ -34,6 +34,5 @@ export default function AIAutonomousDecisionEnginePage() {
         industries={['Fintech', 'SaaS', 'Logistics', 'Support']}
         url='https: //ziontechgroup.com/ai-autonomous-decision-engine',
       />,
-    </>),
-}
+    </>)}
 ,

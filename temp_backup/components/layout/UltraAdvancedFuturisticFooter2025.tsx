@@ -11,13 +11,11 @@ interface FooterLink {
   label: string,
   href: string,
   description?: string,
-  external?: boolean,
-}
+  external?: boolean}
 ,
 interface FooterSection {
   title: string,
-  links: FooterLink[],
-}
+  links: FooterLink[]}
 ,
 const footerSections: FooterSection[] = [
   {
@@ -135,8 +133,7 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -145,8 +142,7 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -167,8 +163,7 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {
               duration: 15 + Math.random() * 10;
               repeat: -1;
               delay: Math.random() * 8;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             style={{
               left: `${Math.random() * 10o0}%`;
               top: `${Math.random() * 10o0}%`}}

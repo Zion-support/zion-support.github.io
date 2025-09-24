@@ -200,7 +200,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o29: ProductListing[] = [
     id: 'ai-powered-hr-recruitment-platform';
     title: 'AI-Powered HR Recruitment & Talent Management';
     description:,
-      'Comprehensive HR platform that automates candidate screening, conducts AI-powered interviews, and manages employee window.performance. Reduces hiring time by 60% and improves candidate quality by 40%.';
+      'Comprehensive HR platform that automates candidate screening, conducts AI-powered interviews, and manages employee window.window.performance. Reduces hiring time by 60% and improves candidate quality by 40%.';
     category: 'Human Resources';
     subcategory: 'Recruitment';
     price: 2199;

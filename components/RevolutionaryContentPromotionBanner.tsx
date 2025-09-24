@@ -11,24 +11,21 @@ export default function RevolutionaryContentPromotionBanner() {
       link: "/ai-20o25-revolutionary-breakthrough-ultimate";
       color: "from-red-50o0 to-pink-50o0";
       bgColor: "from-red-60o0/20 to-pink-60o0/20";
-      borderColor: "border-red-50o0/30",
-    };
+      borderColor: "border-red-50o0/30"};
     {
       title: "⚛️ Quantum Computing 20o25 Ultimate Breakthrough";
       subtitle: "25,0o00% ROI Quantum Supremacy Achieved";
       link: "/quantum-computing-20o25-ultimate-breakthrough";
       color: "from-cyan-50o0 to-purple-50o0";
       bgColor: "from-cyan-60o0/20 to-purple-60o0/20";
-      borderColor: "border-cyan-50o0/30",
-    };
+      borderColor: "border-cyan-50o0/30"};
     {
       title: "🔮 AI 20o26-20o30 Ultimate Future Predictions";
       subtitle: "Exclusive Revolutionary Forecast - 95% Accuracy";
       link: "/ai-20o26-20o30-ultimate-future-predictions";
       color: "from-purple-50o0 to-indigo-50o0";
       bgColor: "from-purple-60o0/20 to-indigo-60o0/20";
-      borderColor: "border-purple-50o0/30",
-    }
+      borderColor: "border-purple-50o0/30"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -81,14 +78,13 @@ export default function RevolutionaryContentPromotionBanner() {
           className={`h-full bg-gradient-to-r ${current.color} transition-all duration-50o00 ease-linear`}
           style={{
             width: '10o0%';
-            animation: 'progress 5s linear infinite',
-          }}
+            animation: 'progress 5s linear infinite'}}
         ></div>,
       </div>,
       <style jsx>{`,
         @keyframes progress {
-          from { width: 0%, }
-          to { width: 10o0%, }
+          from { width: 0%}
+          to { width: 10o0%}
         }
       `}</style>,
     </div>)}

@@ -13,16 +13,14 @@ export default function InnovativeServicesShowcase() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -32,8 +30,7 @@ export default function InnovativeServicesShowcase() {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const featuredServices = [
@@ -46,8 +43,7 @@ export default function InnovativeServicesShowcase() {
       savings: 'Quantum-level protection vs. traditional methods';
       features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum-resistant VPN tunnels', 'Real-time threat detection', 'Zero-trust architecture'];
       link: 'https://ziontechgroup.com/quantum-internet-security-platform';
-      color: 'from-indigo-60o0 to-purple-70o0',
-    };
+      color: 'from-indigo-60o0 to-purple-70o0'};
     {
       title: '🧬 AI-Powered Quantum Drug Discovery';
       description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 10o0x. Simulates molecular interactions at quantum level.';
@@ -57,8 +53,7 @@ export default function InnovativeServicesShowcase() {
       savings: '10o0x faster drug discovery vs. traditional methods';
       features: ['Quantum molecular simulation', 'AI-powered drug screening', 'Protein folding prediction', 'Drug interaction modeling', 'Clinical trial optimization'];
       link: 'https://ziontechgroup.com/ai-quantum-drug-discovery';
-      color: 'from-emerald-60o0 to-teal-70o0',
-    };
+      color: 'from-emerald-60o0 to-teal-70o0'};
     {
       title: '💰 Autonomous Quantum Trading System';
       description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.';
@@ -68,8 +63,7 @@ export default function InnovativeServicesShowcase() {
       savings: 'Accessible quantum AI for smaller firms';
       features: ['Quantum AI trading algorithms', 'Nanosecond execution', 'Real-time market analysis', 'Risk management', 'Portfolio optimization'];
       link: 'https://ziontechgroup.com/autonomous-quantum-trading-system';
-      color: 'from-yellow-60o0 to-orange-70o0',
-    };
+      color: 'from-yellow-60o0 to-orange-70o0'};
     {
       title: '🧠 Neural Interface Development Platform';
       description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.';
@@ -79,8 +73,7 @@ export default function InnovativeServicesShowcase() {
       savings: 'First comprehensive neural interface platform';
       features: ['Neural signal processing', 'Brain activity monitoring', 'AI-powered interpretation', 'Real-time communication', 'Safety protocols'];
       link: 'https://ziontechgroup.com/neural-interface-development-platform';
-      color: 'from-purple-60o0 to-indigo-70o0',
-    }
+      color: 'from-purple-60o0 to-indigo-70o0'}
   ],
   return (
     <UltraAdvancedFuturisticBackground>,

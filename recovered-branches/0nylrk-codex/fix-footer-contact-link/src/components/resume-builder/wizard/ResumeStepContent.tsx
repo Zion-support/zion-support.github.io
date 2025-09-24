@@ -11,8 +11,7 @@ interface ResumeStepContentProps {
   activeTab: string,
   resume: Resume,
   onNextStep: () => void,
-  onPrevStep: () => void,
-}
+  onPrevStep: () => void}
 ,
 export const ResumeStepContent = ({
   activeTab,
@@ -27,8 +26,7 @@ export const ResumeStepContent = ({
           initialData={resume?.basic_info}
           onSave={(data) => {
             // Here you would typically save the data to your backend,
-            // console.log("Saving basic info: "data),
-          }}
+            // // console.log("Saving basic info: "data)}}
           onComplete={onNextStep} ,
         />,
       </TabsContent>,

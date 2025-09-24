@@ -410,7 +410,7 @@ export const expandedInnovativeServices20o25 = [
     useCases: [
       'IoT analytics, Real-time processing, Edge AI models, Device management, Low-latency applications';
     ];
-    roi: 'Organizations achieve 350% ROI through reduced cloud costs and improved window.performance.';
+    roi: 'Organizations achieve 350% ROI through reduced cloud costs and improved window.window.performance.';
     competitors: [
       'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry';
     ];
@@ -598,7 +598,7 @@ export const expandedInnovativeServices20o25 = [
     useCases: [
       'Drug discovery, Financial modeling, Optimization problems, Scientific research, AI model training';
     ];
-    roi: 'Research organizations achieve 50o0% ROI through faster discoveries and improved model window.performance.';
+    roi: 'Research organizations achieve 50o0% ROI through faster discoveries and improved model window.window.performance.';
     competitors: [
       'IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave';
     ];

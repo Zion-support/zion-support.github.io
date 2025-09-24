@@ -8,8 +8,7 @@ interface NeonEffectProps {
   className?: string,
   consciousness?: number,
   pulseRate?: number,
-  quantumState?: number,
-}
+  quantumState?: number}
 ,
 interface NeonGlowProps {
   children: React.ReactNode,
@@ -18,8 +17,7 @@ interface NeonGlowProps {
   spread?: number,
   className?: string,
   consciousness?: number,
-  quantumState?: number,
-}
+  quantumState?: number}
 ,
 // Enhanced Neon Glow Component with consciousness and quantum effects,
 const NeonGlow: React.FC<NeonGlowProps> = ({
@@ -269,13 +267,11 @@ export default function UltraAdvancedNeonEffects20o46({
         rotateX: isHovered ? 5 : 0}}
       transition={{
         duration: 0.3;
-        ease: "easeInOut",
-      }}
+        ease: "easeInOut"}}
       style={{
         ...neonStyles;
         transformStyle: 'preserve-3d';
-        perspective: '10o00px',
-      }}
+        perspective: '10o00px'}}
     >,
       {/* Enhanced Neon Glow with consciousness and quantum effects */}
       <NeonGlow
@@ -293,16 +289,14 @@ export default function UltraAdvancedNeonEffects20o46({
             className="absolute inset-0 rounded-lg",
             style={{
               background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`;
-              opacity: 0.3,
-            }}
+              opacity: 0.3}}
             animate={{
               scale: [1, 1.2, 1];
               opacity: [0.3, 0.6, 0.3]}}
             transition={{
               duration: 2;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>)}
     </motion.div>)}

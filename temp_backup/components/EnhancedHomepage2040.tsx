@@ -195,8 +195,7 @@ const EnhancedHomepage20o40: React.FC = () => {
                       features: service.features.slice(0, 4);
                       popular: service.popular;
                       category: service.category;
-                      icon: service.icon,
-                    }}
+                      icon: service.icon}}
                     variant={service.variant as any}
                    />,
                 </motion.div>))}
@@ -234,26 +233,22 @@ const EnhancedHomepage20o40: React.FC = () => {
                   icon: <Brain className="w-10 h-10 text-white"  />;
                   title: "AI-First Approach";
                   description: "Leading-edge artificial intelligence solutions that adapt and evolve";
-                  color: "from-cyan-50o0 to-blue-60o0",
-                };
+                  color: "from-cyan-50o0 to-blue-60o0"};
                 {
                   icon: <Atom className="w-10 h-10 text-white"  />;
                   title: "Quantum Innovation";
                   description: "Next-generation quantum computing solutions for complex problems";
-                  color: "from-blue-50o0 to-cyan-60o0",
-                };
+                  color: "from-blue-50o0 to-cyan-60o0"};
                 {
                   icon: <Shield className="w-10 h-10 text-white"  />;
                   title: "Future-Proof Security";
                   description: "Advanced cybersecurity with quantum-resistant algorithms";
-                  color: "from-green-50o0 to-emerald-60o0",
-                };
+                  color: "from-green-50o0 to-emerald-60o0"};
                 {
                   icon: <Rocket className="w-10 h-10 text-white"  />;
                   title: "Space Technology";
                   description: "Revolutionary space resource optimization and management";
-                  color: "from-purple-50o0 to-pink-60o0",
-                }
+                  color: "from-purple-50o0 to-pink-60o0"}
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -328,6 +323,5 @@ const EnhancedHomepage20o40: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default EnhancedHomepage20o40;

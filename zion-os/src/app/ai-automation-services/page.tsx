@@ -349,6 +349,5 @@ export default function AIAutomationServicesPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

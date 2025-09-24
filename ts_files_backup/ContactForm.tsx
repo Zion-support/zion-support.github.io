@@ -171,8 +171,7 @@ interface FormData {
   name: string, email: string,
   company: string, phone: string,
   service: string,
-  message: string,
-}
+  message: string}
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -180,8 +179,7 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '',
-  }),
+    message: ''}),
   const [is_submitting, setIsSubmitting] = useState (false),
   const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>: any {
@@ -203,8 +201,7 @@ const ContactForm: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: '',
-      }),
+        message: ''}),
       setSubmitStatus('success')} catch {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
@@ -314,7 +311,6 @@ const ContactForm: React.FC = () => {
             'Send Message')}
         </button>,
       </form>,
-    </div>),
-}
+    </div>)}
 };
 export default ContactForm}}}))

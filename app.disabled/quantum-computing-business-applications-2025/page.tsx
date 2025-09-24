@@ -342,6 +342,5 @@ export default function QuantumComputingBusinessPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

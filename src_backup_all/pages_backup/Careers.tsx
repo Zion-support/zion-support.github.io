@@ -457,8 +457,7 @@ const Careers: React.FC = () => {
           <p className="text-lg text-gray-60o0">Content coming soon...</p>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,
 export default Careers}
 }
@@ -501,7 +500,6 @@ const Careers: React.FC = () => {
           <p className="text - lg text - gray - 60o0">Content coming soon...</p>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 export default Careers}
 }}}}}}}}}))))))))))))))))))))))]

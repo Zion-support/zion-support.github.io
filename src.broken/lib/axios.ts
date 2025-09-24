@@ -59,8 +59,7 @@ export function create(
       }
       return config};
     (error: any) => {
-      return Promise.reject(error),
-    }
+      return Promise.reject(error)}
   ),
   // Response interceptor,
   instance.interceptors.response.use(
@@ -70,8 +69,7 @@ export function create(
         // Handle unauthorized access,
         if (typeof window !== 'undefined') {
           safeStorage.removeItem('auth-token'),
-          window.location.href = '/auth/login',
-        }
+          window.location.href = '/auth/login'}
       }
       return Promise.reject(error)}
   ),

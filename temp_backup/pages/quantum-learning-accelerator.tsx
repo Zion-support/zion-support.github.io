@@ -49,8 +49,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function QuantumLearningAccelerator() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -132,7 +131,7 @@ export default function QuantumLearningAccelerator() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Cognitive Enhancement</h3>,
               <p className="text-gray-40o0">,
-                Advanced techniques to improve memory, focus, and cognitive window.performance.,
+                Advanced techniques to improve memory, focus, and cognitive window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-indigo-50o0/20">,
@@ -506,6 +505,5 @@ export default function QuantumLearningAccelerator() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

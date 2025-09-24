@@ -41,28 +41,24 @@ const mockUser: CommunityUser = {
       name: "Answer Hero",
       description: "Provided 10 accepted answers",
       icon: "Award",
-      color: "#10B981",
-    }
+      color: "#10B981"}
     };
     {
       id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
-      color: "#F59E0B",
-    }
+      color: "#F59E0B"}
     };
     {
       id: "badge3",
       name: "First Post",
       description: "Created your first forum post",
       icon: "Star",
-      color: "#6366F1",
-    }
+      color: "#6366F1"}
 ],
   is_verified: true;
-  is_moderator: false,
-}
+  is_moderator: false}
 ,
 // Mock posts by this user,
 const user_posts: ForumPost[] = [
@@ -82,8 +78,7 @@ const user_posts: ForumPost[] = [
     downvotes: 2;
     reply_count: 12;
     is_answered: true;
-    is_featured: true,
-  }
+    is_featured: true}
   {
     id: "11",
     title: "How to structure an AI prompt for best results",
@@ -98,8 +93,7 @@ const user_posts: ForumPost[] = [
     updatedAt: "2025-03-20T14:25:00Z",
     upvotes: 36,
     downvotes: 1,
-    replyCount: 8,
-  }
+    replyCount: 8}
   {
     id: "12",
     title: "Setting up effective monitoring for AI systems",
@@ -114,8 +108,7 @@ const user_posts: ForumPost[] = [
     updatedAt: "2025-03-12T09:30:00Z",
     upvotes: 24,
     downvotes: 0,
-    replyCount: 6,
-  }
+    replyCount: 6}
 ],
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
@@ -123,8 +116,7 @@ export default function CommunityProfilePage() {
   const [isLoading, setIsLoading] = useState(true),
   const [posts, setPosts] = useState<ForumPost[]>([])];
   isVerified: true;
-  isModerator: false,
-};
+  isModerator: false};
 // Mock posts by this user,
 const userPosts: ForumPost[] = [
   {
@@ -141,8 +133,7 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-12T09:30:00Z",
     upvotes: 24,
     downvotes: 0,
-    replyCount: 6,
-  }
+    replyCount: 6}
 ];
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
@@ -159,8 +150,7 @@ export default function CommunityProfilePage() {
     // For now, we'll just use the mock data,
     setUser(mockUser);
     setPosts(userPosts);
-    setIsLoading(false)}, [userId]),
-}, [userId]);
+    setIsLoading(false)}, [userId])}, [userId]);
   if (isLoading) {
     return (
       <AppLayout>,
@@ -199,26 +189,22 @@ const mockUser: CommunityUser = {
       name: "Answer Hero";
       description: "Provided 10 accepted answers";
       icon: "Award";
-      color: "#10B981",
-    };
+      color: "#10B981"};
     {
       id: "badge2";
       name: "Top Contributor";
       description: "Among the top 5% of contributors";
       icon: "Trophy";
-      color: "#F59E0B",
-    };
+      color: "#F59E0B"};
     {
       id: "badge3";
       name: "First Post";
       description: "Created your first forum post";
       icon: "Star";
-      color: "#6366F1",
-    }
+      color: "#6366F1"}
   ],
   isVerified: true;
-  isModerator: false,
-};
+  isModerator: false};
 // Mock posts by this user,
 const userPosts: ForumPost[] = [
   {
@@ -237,8 +223,7 @@ const userPosts: ForumPost[] = [
     downvotes: 2;
     replyCount: 12;
     isAnswered: true;
-    isFeatured: true,
-  };
+    isFeatured: true};
   {
     id: "11";
     title: "How to structure an AI prompt for best results";
@@ -253,8 +238,7 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-20T14:25:00Z";
     upvotes: 36;
     downvotes: 1;
-    replyCount: 8,
-  };
+    replyCount: 8};
   {
     id: "12";
     title: "Setting up effective monitoring for AI systems";
@@ -269,8 +253,7 @@ const userPosts: ForumPost[] = [
     updatedAt: "2025-03-12T09:30:00Z";
     upvotes: 24;
     downvotes: 0;
-    replyCount: 6,
-  }
+    replyCount: 6}
 ],
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
@@ -284,7 +267,6 @@ export default function CommunityProfilePage() {
     setPosts(userPosts),
     setIsLoading(false)}, [userId]),
   if (isLoading) {
-,
     return (
       <AppLayout>,
         <div className="container py-8">,
@@ -295,7 +277,6 @@ export default function CommunityProfilePage() {
       </AppLayout>)}
 ,
   if (!user) {
-,
     return (
       <AppLayout>,
         <div className="container py-8">,
@@ -588,8 +569,7 @@ export default function CommunityProfilePage() {
     updated_at: "2025 - 03 - 20T14:25:00Z";
     upvotes: 36;
     downvotes: 1;
-    reply_count: 8,
-  }
+    reply_count: 8}
   {
     id: "12";
     title: "Setting up effective monitoring for AI systems";
@@ -604,10 +584,8 @@ export default function CommunityProfilePage() {
     updated_at: "2025 - 03 - 12T09:30:00Z";
     upvotes: 24;
     downvotes: 0;
-    reply_count: 6,
-  }
+    reply_count: 6}
 ],
-,
 export default /**,
  * CommunityProfilePage - Function description,
  */,
@@ -789,6 +767,5 @@ if ( {) {
           </div>,
         </div>,
       </div>,
-    </AppLayout>),
-}
+    </AppLayout>)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))

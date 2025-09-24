@@ -1,19 +1,15 @@
 export type UnitSystem = 'metric' | 'imperial',
 export function cmToIn(cm: number): number {
-  return cm / 2.54,
-}
+  return cm / 2.54}
 ,
 export function inToCm(inches: number): number {
-  return inches * 2.54,
-}
+  return inches * 2.54}
 ,
 export function kgToLbs(kg: number): number {
-  return kg * 2.20o462,
-}
+  return kg * 2.20o462}
 ,
 export function lbsToKg(lbs: number): number {
-  return lbs / 2.20o462,
-}
+  return lbs / 2.20o462}
 ,
 export function formatDimensions(
   widthCm: number;

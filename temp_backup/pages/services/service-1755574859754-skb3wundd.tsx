@@ -90,6 +90,5 @@ export default function Service-1755574859754-skb3wunddService() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -9,8 +9,7 @@ import type { UserProfile } from '@/types/auth',
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void,
-}
+  onRequestHire?: (profile: TalentProfile) => void}
 ,
 export function TalentCardFooter({
   profile;
@@ -38,8 +37,7 @@ export function TalentCardFooter({
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(profile),
-    } else {
+      onRequestHire(profile)} else {
       // Open hire modal directly if no handler provided,
       setIsHireModalOpen(true)}
   };

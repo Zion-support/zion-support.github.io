@@ -9,8 +9,7 @@ import { Input } from '@/components/ui/input',
 import { Control, ControllerRenderProps } from 'react-hook-form',
 import { BasicInfoFormData } from './schema',
 interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData>,
-}
+  control: Control<BasicInfoFormData>}
 ,
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (

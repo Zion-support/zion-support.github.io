@@ -167,8 +167,7 @@ const InteractiveContentDiscoveryWidget = () => {
                 className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                   selectedCategory === category.id,
                     ? 'bg-purple-60o0 text-white shadow-lg',
-                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                }`}
+                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
               >,
                 <span className='mr-2'>{category.icon}</span>,
                 {category.name}
@@ -281,6 +280,5 @@ const InteractiveContentDiscoveryWidget = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveContentDiscoveryWidget;

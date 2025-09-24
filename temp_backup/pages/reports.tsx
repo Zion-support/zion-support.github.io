@@ -33,8 +33,7 @@ const ReportsPage: React.FC = () => {
       views: 5678;
       featured: true;
       icon: <Atom className="w-8 h-8" />;
-      color: 'from-purple-500 to-pink-500',
-    };
+      color: 'from-purple-500 to-pink-500'};
     {
       title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices';
       excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
@@ -47,8 +46,7 @@ const ReportsPage: React.FC = () => {
       views: 3456;
       featured: false;
       icon: <Brain className="w-8 h-8" />;
-      color: 'from-blue-500 to-cyan-500',
-    };
+      color: 'from-blue-500 to-cyan-500'};
     {
       title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape';
       excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.';
@@ -61,8 +59,7 @@ const ReportsPage: React.FC = () => {
       views: 6789;
       featured: false;
       icon: <Shield className="w-8 h-8" />;
-      color: 'from-red-500 to-orange-500',
-    };
+      color: 'from-red-500 to-orange-500'};
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding';
       excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
@@ -75,8 +72,7 @@ const ReportsPage: React.FC = () => {
       views: 2890;
       featured: false;
       icon: <TrendingUp className="w-8 h-8" />;
-      color: 'from-green-500 to-emerald-500',
-    };
+      color: 'from-green-500 to-emerald-500'};
     {
       title: 'Edge Computing & IoT: Transforming Industries in Real-Time';
       excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.';
@@ -89,8 +85,7 @@ const ReportsPage: React.FC = () => {
       views: 2345;
       featured: false;
       icon: <Zap className="w-8 h-8" />;
-      color: 'from-yellow-500 to-orange-500',
-    };
+      color: 'from-yellow-500 to-orange-500'};
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact';
       excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
@@ -103,8 +98,7 @@ const ReportsPage: React.FC = () => {
       views: 1789;
       featured: false;
       icon: <Globe className="w-8 h-8" />;
-      color: 'from-teal-500 to-green-500',
-    }
+      color: 'from-teal-500 to-green-500'}
   ],
 export default function ReportsPage() {
   return (
@@ -261,8 +255,7 @@ export default function ReportsPage() {
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     category.active,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
-                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50'}`}
                 >,
                   {category.name} ({category.count}),
                 </button>))}
@@ -349,6 +342,5 @@ export default function ReportsPage() {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 }}))

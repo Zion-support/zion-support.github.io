@@ -29,15 +29,13 @@ export interface SpecializedIndustrySolution {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const specializedIndustrySolutions20o25: SpecializedIndustrySolution[] =,
   [
     // MANUFACTURING & INDUSTRIAL SOLUTIONS,
@@ -570,12 +568,10 @@ export const industryCategories20o25: string[] = Array.from(
       .filter((v): v is string => Boolean(v)))).sort(),
 export const getSolutionsByIndustry = (industry: string) => {
   if (!industry || industry === 'All') return specializedIndustrySolutions20o25,
-  return specializedIndustrySolutions20o25.filter(s => s.industry === industry),
-};
+  return specializedIndustrySolutions20o25.filter(s => s.industry === industry)};
 export const getSolutionsByCategory = (category: string) => {
   if (!category || category === 'All') return specializedIndustrySolutions20o25,
-  return specializedIndustrySolutions20o25.filter(s => s.category === category),
-};
+  return specializedIndustrySolutions20o25.filter(s => s.category === category)};
 export const getPopularIndustrySolutions = () =>,
   specializedIndustrySolutions20o25,
     .filter(s => !!s.popular),

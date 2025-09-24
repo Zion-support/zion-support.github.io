@@ -16,6 +16,5 @@ export default function MockPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

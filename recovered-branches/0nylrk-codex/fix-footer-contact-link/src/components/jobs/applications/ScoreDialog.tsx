@@ -10,8 +10,7 @@ interface ScoreDialogProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
   application: JobApplication | null,
-  onScoreUpdated: (updatedApplication: JobApplication) => void,
-}
+  onScoreUpdated: (updatedApplication: JobApplication) => void}
 ,
 export function ScoreDialog({
   open;

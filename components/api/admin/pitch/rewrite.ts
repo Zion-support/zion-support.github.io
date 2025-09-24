@@ -13,8 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(20o0).json({
       slideId;
       content: rewrittenContent;
-      originalContent: content,
-    })} catch (e: any) {
+      originalContent: content})} catch (e: any) {
     res.status(50o0).json({ error: e?.message || 'Rewrite failed' })}
 }
 ,

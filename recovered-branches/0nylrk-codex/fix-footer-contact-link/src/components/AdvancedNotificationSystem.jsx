@@ -12,8 +12,8 @@ const mockNotifications = [
         isRead: false;
         isArchived: false;
         actions: [
-            { label: 'View Details', action: () => // console.log('View project'), variant: 'primary' };
-            { label: 'Archive', action: () => // console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // // console.log('View project'), variant: 'primary' };
+            { label: 'Archive', action: () => // // console.log('Archive'), variant: 'secondary' }
         ]};
     {
         id: '2';
@@ -26,8 +26,8 @@ const mockNotifications = [
         isRead: false;
         isArchived: false;
         actions: [
-            { label: 'Review Activity', action: () => // console.log('Review security'), variant: 'primary' };
-            { label: 'Dismiss', action: () => // console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // // console.log('Review security'), variant: 'primary' };
+            { label: 'Dismiss', action: () => // // console.log('Dismiss'), variant: 'secondary' }
         ]};
     {
         id: '3';
@@ -40,8 +40,8 @@ const mockNotifications = [
         isRead: false;
         isArchived: false;
         actions: [
-            { label: 'Investigate', action: () => // console.log('Investigate'), variant: 'primary' };
-            { label: 'Acknowledge', action: () => // console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // // console.log('Investigate'), variant: 'primary' };
+            { label: 'Acknowledge', action: () => // // console.log('Acknowledge'), variant: 'secondary' }
         ]};
     {
         id: '4';
@@ -54,8 +54,8 @@ const mockNotifications = [
         isRead: true;
         isArchived: false;
         actions: [
-            { label: 'Deploy Now', action: () => // console.log('Deploy'), variant: 'primary' };
-            { label: 'Schedule', action: () => // console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // // console.log('Deploy'), variant: 'primary' };
+            { label: 'Schedule', action: () => // // console.log('Schedule'), variant: 'secondary' }
         ]}
 ],
 export function AdvancedNotificationSystem() {
@@ -94,8 +94,7 @@ export function AdvancedNotificationSystem() {
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold" />,
             case 'error': return <XCircle className="w-5 h-5 text-red-50o0" />,
             case 'info': return <Info className="w-5 h-5 text-zion-cyan" />,
-            default: return <Info className="w-5 h-5 text-zion-slate" />,
-        }
+            default: return <Info className="w-5 h-5 text-zion-slate" />}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -103,8 +102,7 @@ export function AdvancedNotificationSystem() {
             case 'medium': return 'border-l-zion-cyan',
             case 'high': return 'border-l-zion-gold',
             case 'critical': return 'border-l-red-50o0',
-            default: return 'border-l-zion-slate',
-        }
+            default: return 'border-l-zion-slate'}
     };
     const getTimeAgo = (timestamp) => {
         const now = new Date(),
@@ -147,8 +145,7 @@ export function AdvancedNotificationSystem() {
             </button>,
           </div>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className="fixed bottom-4 right-4 w-96 h-[60o0px] bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-emerald/10 to-zion-cyan/10">,

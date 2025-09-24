@@ -27,8 +27,7 @@ export default function AdminDisputesDashboard() {
   const disputes = useMemo(() => {
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
-    return list.filter((d: any) => d.status === statusFilter),
-  }, [data, statusFilter]),
+    return list.filter((d: any) => d.status === statusFilter)}, [data, statusFilter]),
   return (
     <EnhancedLayout>,
       <div className='max-w-6xl mx-auto'>,

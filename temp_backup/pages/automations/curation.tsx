@@ -9,8 +9,7 @@ type Experiment ={
   impact?: number};
 type Props ={
   updatedAt: string | null;
-  items: Experiment[],
-};
+  items: Experiment[]};
 export default function CurationPage({ updatedAtitems }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">,

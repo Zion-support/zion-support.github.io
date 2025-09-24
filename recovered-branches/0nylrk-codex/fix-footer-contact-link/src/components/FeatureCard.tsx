@@ -5,8 +5,7 @@ interface FeatureCardProps {
   description: string,
   icon: React.ReactNode,
   className?: string,
-  key?: string | number, // Added key prop,
-}
+  key?: string | number, // Added key prop}
 ,
 export function FeatureCard({
   titledescriptioniconclassName;

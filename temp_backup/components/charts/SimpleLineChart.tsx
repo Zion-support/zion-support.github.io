@@ -10,8 +10,7 @@ export type SimpleLineChartProps = {
   yLabel?: string,
   xLabel?: string,
   onExportCsv?: (rows: Array<Record<string number>>) => void,
-  onExportPng?: (svgElement: SVGSVGElement) => void,
-};
+  onExportPng?: (svgElement: SVGSVGElement) => void};
 export default function SimpleLineChart({
   series;
   width = 640;

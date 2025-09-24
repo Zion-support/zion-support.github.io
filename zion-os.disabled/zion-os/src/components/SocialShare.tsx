@@ -4,8 +4,7 @@ interface SocialShareProps {
   url: string,
   title: string,
   description?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function SocialShare({ urltitledescriptionclassName = "" }: SocialShareProps) {
   const [copiedsetCopied] = useState(false),
@@ -23,8 +22,7 @@ export function SocialShare({ urltitledescriptionclassName = "" }: SocialSharePr
       await navigator.clipboard.writeText(url),
       setCopied(true),
       setTimeout(() => setCopied(false)20o00)} catch (err) {
-      console.error('Failed to copy: 'err),
-    }
+      console.error('Failed to copy: 'err)}
   };
   return (
     <div className={`flex items-center gap-2 ${className}`}>,

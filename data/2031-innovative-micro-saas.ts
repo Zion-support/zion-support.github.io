@@ -28,8 +28,7 @@ export interface InnovativeMicroSaas20o31 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -39,8 +38,7 @@ export interface InnovativeMicroSaas20o31 {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
   aiCapabilities: string[],
-  marketDisruption: string,
-}
+  marketDisruption: string}
 export const innovativeMicroSaas2031: InnovativeMicroSaas2031[] = [
   // AI BUSINESS INTELLIGENCE SUITE,
   {

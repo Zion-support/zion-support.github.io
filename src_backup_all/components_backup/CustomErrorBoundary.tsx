@@ -19,8 +19,7 @@ const CustomErrorFallback: React.FC<CustomErrorFallbackProps> = ({
   return <CustomErrorPage />};
 // Define the props for CustomErrorBoundary,
 interface CustomErrorBoundaryProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const CustomErrorBoundary: React.FC<CustomErrorBoundaryProps> = ({
   children;

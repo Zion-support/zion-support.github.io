@@ -31,15 +31,13 @@ export interface InnovativeNewAIService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovativeNewAIServices20o25: InnovativeNewAIService[] = [
   // AI-Powered Autonomous Research Assistant,

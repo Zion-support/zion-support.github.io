@@ -106,32 +106,28 @@ const PerformanceOptimization20o29 = () => {
       optimized: 0.3;
       unit: 's';
       improvement: 75;
-      icon: Clock,
-    };
+      icon: Clock};
     {
       name: 'Memory Usage';
       current: 45;
       optimized: 12;
       unit: 'MB';
       improvement: 73;
-      icon: Database,
-    };
+      icon: Database};
     {
       name: 'CPU Utilization';
       current: 78;
       optimized: 25;
       unit: '%';
       improvement: 68;
-      icon: Cpu,
-    };
+      icon: Cpu};
     {
       name: 'Network Requests';
       current: 156;
       optimized: 23;
       unit: '';
       improvement: 85;
-      icon: Network,
-    }
+      icon: Network}
   ],
   const optimizationFeatures = [
     {
@@ -139,29 +135,25 @@ const PerformanceOptimization20o29 = () => {
       description: 'Machine learning algorithms automatically optimize performance in real-time';
       icon: Brain;
       status: 'Active';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       title: 'Edge Computing';
       description: 'Process data closer to users for ultra-low latency';
       icon: Layers;
       status: 'Deployed';
-      impact: 'Critical',
-    };
+      impact: 'Critical'};
     {
       title: 'Predictive Caching';
       description: 'Anticipate user needs and pre-load content';
       icon: HardDrive;
       status: 'Beta';
-      impact: 'Medium',
-    };
+      impact: 'Medium'};
     {
       title: 'Quantum Compression';
       description: 'Revolutionary data compression using quantum algorithms';
       icon: Zap;
       status: 'Research';
-      impact: 'Breakthrough',
-    }
+      impact: 'Breakthrough'}
   ],
   const realTimeMetrics = [
     { label: 'Active Users'value: '2.3M'change: '+12%'trend: 'up' };
@@ -287,8 +279,7 @@ const PerformanceOptimization20o29 = () => {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeMetric === key,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
               >,
                 <metric.icon className="inline-block mr-2"  />,
                 {metric.title}
@@ -469,8 +460,7 @@ const PerformanceOptimization20o29 = () => {
                     feature.status === 'Active' ? 'bg-green-50o0/20 text-green-40o0' :,
                     feature.status === 'Deployed' ? 'bg-blue-50o0/20 text-blue-40o0' :,
                     feature.status === 'Beta' ? 'bg-yellow-50o0/20 text-yellow-40o0' :,
-                    'bg-gray-50o0/20 text-gray-40o0',
-                  }`}>,
+                    'bg-gray-50o0/20 text-gray-40o0'}`}>,
                     {feature.status}
                   </span>,
                 </div>,
@@ -508,6 +498,5 @@ const PerformanceOptimization20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default PerformanceOptimization20o29;

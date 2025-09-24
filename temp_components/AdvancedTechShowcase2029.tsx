@@ -45,24 +45,21 @@ const AdvancedTechShowcase20o29 = () => {
           features: ['Self-reflection'Emotional processing'Moral reasoning'Creative expression'];
           icon: Heart;
           status: 'In Development';
-          impact: 'Revolutionary',
-        };
+          impact: 'Revolutionary'};
         {
           name: 'Ethical AI Framework';
           description: 'Comprehensive ethical guidelines for AI development';
           features: ['Bias detection'Fairness algorithms'Transparency protocols'Accountability systems'];
           icon: Shield;
           status: 'Production Ready';
-          impact: 'Critical',
-        };
+          impact: 'Critical'};
         {
           name: 'Emotional Intelligence AI';
           description: 'AI that understands and responds to human emotions';
           features: ['Emotion recognition'Empathetic responses'Social awareness'Therapeutic applications'];
           icon: Eye;
           status: 'Beta Testing';
-          impact: 'High',
-        }
+          impact: 'High'}
       ]};
     'quantum-neural': {
       title: 'Quantum Neural Networks';
@@ -77,24 +74,21 @@ const AdvancedTechShowcase20o29 = () => {
           features: ['Quantum superposition'Entanglement learning'Exponential speedup'Parallel processing'];
           icon: Cpu;
           status: 'Research Phase';
-          impact: 'Breakthrough',
-        };
+          impact: 'Breakthrough'};
         {
           name: 'Hybrid Quantum-Classical AI';
           description: 'Seamless integration of quantum and classical computing';
           features: ['Hybrid algorithms'Quantum advantage'Classical fallback'Optimized performance'];
           icon: Network;
           status: 'Prototype';
-          impact: 'Transformative',
-        };
+          impact: 'Transformative'};
         {
           name: 'Quantum Machine Learning';
           description: 'Machine learning algorithms optimized for quantum computers';
           features: ['Quantum algorithms'Faster training'Better optimization'Novel applications'];
           icon: Brain;
           status: 'Early Stage';
-          impact: 'Revolutionary',
-        }
+          impact: 'Revolutionary'}
       ]};
     'omniversal-computing': {
       title: 'Omniversal Computing';
@@ -109,24 +103,21 @@ const AdvancedTechShowcase20o29 = () => {
           features: ['Dimensional analysis'Parallel realities'Temporal computing'Reality simulation'];
           icon: Globe;
           status: 'Theoretical';
-          impact: 'Paradigm Shift',
-        };
+          impact: 'Paradigm Shift'};
         {
           name: 'Consciousness Transfer';
           description: 'Transferring consciousness between digital and physical realms';
           features: ['Mind uploading'Digital immortality'Reality bridging'Consciousness backup'];
           icon: Brain;
           status: 'Research';
-          impact: 'Existential',
-        };
+          impact: 'Existential'};
         {
           name: 'Reality Manipulation';
           description: 'Direct manipulation of physical reality through computation';
           features: ['Matter programming'Energy control'Space-time manipulation'Reality creation'];
           icon: Zap;
           status: 'Conceptual';
-          impact: 'Unprecedented',
-        }
+          impact: 'Unprecedented'}
       ]}
   };
   const demos = [
@@ -135,22 +126,19 @@ const AdvancedTechShowcase20o29 = () => {
       description: 'Watch an AI system demonstrate self-awareness and ethical reasoning';
       duration: '5:30';
       views: '2.3M';
-      category: 'AI Consciousness',
-    };
+      category: 'AI Consciousness'};
     {
       title: 'Quantum Neural Processing';
       description: 'See quantum neural networks solve complex problems in real-time';
       duration: '8:15';
       views: '1.8M';
-      category: 'Quantum Computing',
-    };
+      category: 'Quantum Computing'};
     {
       title: 'Multi-Dimensional Computing';
       description: 'Experience computing across multiple dimensions and realities';
       duration: '12:45';
       views: '3.1M';
-      category: 'Omniversal Computing',
-    }
+      category: 'Omniversal Computing'}
   ],
   const stats = [
     { label: 'Conscious AI Systems'value: '50+'icon: Brain };
@@ -248,8 +236,7 @@ const AdvancedTechShowcase20o29 = () => {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeTab === key,
                     ? 'bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
               >,
                 <category.icon className="inline-block mr-2"  />,
                 {category.title}
@@ -400,6 +387,5 @@ const AdvancedTechShowcase20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedTechShowcase20o29;

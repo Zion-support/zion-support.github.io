@@ -25,8 +25,7 @@ interface UserPreference {
   type: 'boolean' | 'string' | 'number' | 'select',
   options?: string[],
   category: 'appearance' | 'accessibility' | 'performance' | 'language',
-  description: string,
-}
+  description: string}
 ,
 interface UserActivity {
   id: string,
@@ -34,16 +33,14 @@ interface UserActivity {
   timestamp: Date,
   duration?: number,
   success: boolean,
-  category: 'navigation' | 'interaction' | 'search' | 'purchase',
-}
+  category: 'navigation' | 'interaction' | 'search' | 'purchase'}
 ,
 interface AccessibilityFeature {
   id: string,
   name: string,
   enabled: boolean,
   description: string,
-  impact: 'high' | 'medium' | 'low',
-}
+  impact: 'high' | 'medium' | 'low'}
 ,
 const InteractiveUserExperience: React.FC = (): JSX.Element => {
   const [preferences, setPreferences] = useState<any>([]),
@@ -63,32 +60,28 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         type: 'select';
         options: ['light', 'dark', 'auto'];
         category: 'appearance';
-        description: 'Choose your preferred color theme',
-      };
+        description: 'Choose your preferred color theme'};
       {
         id: '2';
         name: 'Font Size';
         value: 16;
         type: 'number';
         category: 'accessibility';
-        description: 'Adjust text size for better readability',
-      };
+        description: 'Adjust text size for better readability'};
       {
         id: '3';
         name: 'High Contrast';
         value: false;
         type: 'boolean';
         category: 'accessibility';
-        description: 'Enable high contrast mode for better visibility',
-      };
+        description: 'Enable high contrast mode for better visibility'};
       {
         id: '4';
         name: 'Reduced Motion';
         value: false;
         type: 'boolean';
         category: 'accessibility';
-        description: 'Reduce animations for users with motion sensitivity',
-      };
+        description: 'Reduce animations for users with motion sensitivity'};
       {
         id: '5';
         name: 'Language';
@@ -96,16 +89,14 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         type: 'select';
         options: ['en', 'es', 'fr', 'de', 'zh'];
         category: 'language';
-        description: 'Select your preferred language',
-      };
+        description: 'Select your preferred language'};
       {
         id: '6';
         name: 'Auto-save';
         value: true;
         type: 'boolean';
         category: 'performance';
-        description: 'Automatically save your work',
-      }
+        description: 'Automatically save your work'}
     ],
     setPreferences(initialPreferences)}, []),
   // Initialize accessibility features,
@@ -116,36 +107,31 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         name: 'Screen Reader Support';
         enabled: true;
         description: 'Full compatibility with screen readers and assistive technologies';
-        impact: 'high',
-      };
+        impact: 'high'};
       {
         id: '2';
         name: 'Keyboard Navigation';
         enabled: true;
         description: 'Complete keyboard accessibility for all interactive elements';
-        impact: 'high',
-      };
+        impact: 'high'};
       {
         id: '3';
         name: 'Focus Indicators';
         enabled: true;
         description: 'Clear visual indicators for keyboard focus';
-        impact: 'medium',
-      };
+        impact: 'medium'};
       {
         id: '4';
         name: 'Color Blind Support';
         enabled: true;
         description: 'Alternative color schemes and patterns for color-blind users';
-        impact: 'medium',
-      };
+        impact: 'medium'};
       {
         id: '5';
         name: 'Voice Commands';
         enabled: false;
         description: 'Voice-activated navigation and controls';
-        impact: 'low',
-      }
+        impact: 'low'}
     ],
     setAccessibilityFeatures(features)}, []),
   // Simulate user activities,
@@ -157,32 +143,28 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         timestamp: new Date(Date.now() - 30o0000);
         duration: 45;
         success: true;
-        category: 'navigation',
-      };
+        category: 'navigation'};
       {
         id: '2';
         action: 'Searched for AI Services';
         timestamp: new Date(Date.now() - 60o0000);
         duration: 12;
         success: true;
-        category: 'search',
-      };
+        category: 'search'};
       {
         id: '3';
         action: 'Contacted Support';
         timestamp: new Date(Date.now() - 90o0000);
         duration: 180;
         success: true;
-        category: 'interaction',
-      };
+        category: 'interaction'};
       {
         id: '4';
         action: 'Downloaded Whitepaper';
         timestamp: new Date(Date.now() - 120o0000);
         duration: 8;
         success: true;
-        category: 'interaction',
-      }
+        category: 'interaction'}
     ],
     setUserActivities(activities)}, []),
   const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
@@ -219,16 +201,14 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
       case 'interaction': return <User className="h-4 w-4"  />,
       case 'search': return <Eye className="h-4 w-4"  />,
       case 'purchase': return <Heart className="h-4 w-4"  />,
-      default: return <User className="h-4 w-4"  />,
-    }
+      default: return <User className="h-4 w-4"  />}
   };
   const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {
     switch (impact) {
       case 'high': return 'bg-red-50o0',
       case 'medium': return 'bg-yellow-50o0',
       case 'low': return 'bg-blue-50o0',
-      default: return 'bg-gray-50o0',
-    }
+      default: return 'bg-gray-50o0'}
   };
   const getSuccessRate = () => {
     const total = userActivities.length,
@@ -499,8 +479,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
           </Card>,
         </TabsContent>,
       </Tabs>,
-    </div>),
-};
+    </div>)};
 // Add missing Tablet icon component,
 const Tablet: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,

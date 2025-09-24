@@ -5,8 +5,7 @@ export const performanceTestUtils = {
     const startTime = Date.now(),
     await page.goto('/'),
     const loadTime = Date.now() - startTime,
-    return loadTime,
-  };
+    return loadTime};
   // Measure Core Web Vitals,
   measureCoreWebVitals: async page => {
     const vitals = await page.evaluate(() => {
@@ -37,8 +36,7 @@ export const performanceTestUtils = {
     const startTime = Date.now(),
     await page.goto('/'),
     const loadTime = Date.now() - startTime,
-    return loadTime,
-  };
+    return loadTime};
   measureCoreWebVitals: async page => {
     const vitals = await page.evaluate(() => {
       return new Promise(resolve => {

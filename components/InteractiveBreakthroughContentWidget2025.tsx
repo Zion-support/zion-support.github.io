@@ -9,8 +9,7 @@ interface BreakthroughContent {
   category: string,
   icon: string,
   href: string,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const breakthroughContent: BreakthroughContent[] = [
   {
@@ -21,8 +20,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Revolutionary';
     icon: '🚀';
     href: '/ai-20o25-ultimate-breakthrough-revolution';
-    featured: true,
-  };
+    featured: true};
   {
     id: 'ai-20o26-quantum-neural-fusion';
     title: 'AI 20o26 Quantum-Neural Fusion';
@@ -31,8 +29,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Breakthrough';
     icon: '⚛️';
     href: '/ai-20o26-quantum-neural-fusion-breakthrough';
-    featured: true,
-  };
+    featured: true};
   {
     id: 'ai-20o30-transcendent-intelligence';
     title: 'AI 20o30 Transcendent Intelligence';
@@ -41,8 +38,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Transcendent';
     icon: '🌟';
     href: '/ai-20o30-transcendent-intelligence';
-    featured: true,
-  };
+    featured: true};
   {
     id: 'ai-20o26-20o30-predictions';
     title: 'AI 20o26-20o30 Future Predictions';
@@ -51,8 +47,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Predictions';
     icon: '🔮';
     href: '/ai-20o26-20o30-future-predictions-breakthrough';
-    featured: false,
-  };
+    featured: false};
   {
     id: 'quantum-computing-20o25';
     title: 'Quantum Computing Solutions 20o25';
@@ -61,8 +56,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Quantum';
     icon: '⚛️';
     href: '/quantum-computing-solutions-20o25';
-    featured: false,
-  };
+    featured: false};
   {
     id: 'neural-interface-20o26';
     title: 'Neural Interface Revolution 20o26';
@@ -71,8 +65,7 @@ const breakthroughContent: BreakthroughContent[] = [
     category: 'Neural';
     icon: '🧠';
     href: '/neural-interface-revolution-20o26';
-    featured: false,
-  }
+    featured: false}
 ],
 export default function InteractiveBreakthroughContentWidget20o25() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All'),
@@ -116,8 +109,7 @@ export default function InteractiveBreakthroughContentWidget20o25() {
                   className={`px-4 py-2 rounded-lg font-semibold transition-colors ${
                     selectedCategory === category,
                       ? 'bg-blue-60o0 text-white',
-                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0',
-                  }`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0'}`}
                 >,
                   {category}
                 </button>))}
@@ -207,5 +199,4 @@ export default function InteractiveBreakthroughContentWidget20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

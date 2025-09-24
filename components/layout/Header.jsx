@@ -25,8 +25,7 @@ const Header = () => {
                 className={`transition-colors ${
                   isActive(item.href),
                     ? 'text-purple-30o0 font-semibold',
-                    : 'text-white hover: text-purple-30o0',
-                }`}
+                    : 'text-white hover: text-purple-30o0'}`}
               >,
                 {item.label}
               </Link>))}

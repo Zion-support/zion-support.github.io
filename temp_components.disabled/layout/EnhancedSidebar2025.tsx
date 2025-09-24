@@ -13,33 +13,28 @@ import {
 const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709',
-};
+  address: '364 E Main St STE 10o08 Middletown DE 19709'};
 const mainNavigation = [
   {
     title: 'Home';
     href: '/';
     icon: <Home className="w-5 h-5"  />;
-    description: 'Main landing page',
-  };
+    description: 'Main landing page'};
   {
     title: 'All Services';
     href: '/comprehensive-services-showcase-20o25';
     icon: <Layers className="w-5 h-5"  />;
-    description: 'Complete service catalog',
-  };
+    description: 'Complete service catalog'};
   {
     title: 'Pricing';
     href: '/pricing';
     icon: <DollarSign className="w-5 h-5"  />;
-    description: 'Service pricing plans',
-  };
+    description: 'Service pricing plans'};
   {
     title: 'Contact';
     href: '/contact';
     icon: <Mail className="w-5 h-5"  />;
-    description: 'Get in touch with us',
-  }
+    description: 'Get in touch with us'}
 ],
 const serviceCategories = [
   {
@@ -183,8 +178,7 @@ const companyLinks = [
 ],
 interface EnhancedSidebar20o25Props {
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 export default function EnhancedSidebar20o25({ isOpen, onClose }: EnhancedSidebar20o25Props) {
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]),

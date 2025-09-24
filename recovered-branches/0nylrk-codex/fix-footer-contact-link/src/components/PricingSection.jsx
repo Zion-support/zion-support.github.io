@@ -21,8 +21,7 @@ const plans = [
             "Priority support";
             "Custom integrations"];
         popular: false;
-        cta: "Get Started",
-    };
+        cta: "Get Started"};
     {
         name: "Professional";
         price: 299;
@@ -43,8 +42,7 @@ const plans = [
             "Custom integrations";
             "Dedicated account manager"];
         popular: true;
-        cta: "Start Free Trial",
-    };
+        cta: "Start Free Trial"};
     {
         name: "Enterprise";
         price: 999;
@@ -66,8 +64,7 @@ const plans = [
             "On-premise options"];
         notIncluded: [];
         popular: false;
-        cta: "Contact Sales",
-    }
+        cta: "Contact Sales"}
 ],
 const addons = [
     {
@@ -103,8 +100,7 @@ export function PricingSection() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.2;
-                delayChildren: 0.1,
-            }
+                delayChildren: 0.1}
         }
     };
     const itemVariants ={
@@ -114,8 +110,7 @@ export function PricingSection() {
             opacity: 1;
             transition: {
                 duration: 0.6;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">,
@@ -256,6 +251,5 @@ export function PricingSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

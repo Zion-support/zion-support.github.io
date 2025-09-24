@@ -18,8 +18,7 @@ const ContentQualityAnalyzer = () => {
             severity: 'high';
             description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
             recommendation: 'Add proper page title, headings, and meta description for better SEO';
-            status: 'open',
-        };
+            status: 'open'};
         {
             id: '2';
             pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js';
@@ -28,8 +27,7 @@ const ContentQualityAnalyzer = () => {
             severity: 'high';
             description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
             recommendation: 'Add proper page title, headings, and meta description for better SEO';
-            status: 'open',
-        };
+            status: 'open'};
         {
             id: '3';
             pageUrl: 'https://ziontechgroup.com/about/';
@@ -38,8 +36,7 @@ const ContentQualityAnalyzer = () => {
             severity: 'medium';
             description: 'Suspiciously small HTML content';
             recommendation: 'Add more meaningful content, headings, and images to improve user experience';
-            status: 'open',
-        };
+            status: 'open'};
         {
             id: '4';
             pageUrl: 'https://ziontechgroup.com/services/';
@@ -48,8 +45,7 @@ const ContentQualityAnalyzer = () => {
             severity: 'medium';
             description: 'No headings found';
             recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO';
-            status: 'open',
-        }
+            status: 'open'}
     ],
     useEffect(() => {
         setContentIssues(sampleIssues),
@@ -69,8 +65,7 @@ const ContentQualityAnalyzer = () => {
             averageContentLength: 50o00, // Sample data,
             pagesWithImages: 45, // Sample data,
             pagesWithMetaDescriptions: 32, // Sample data,
-            lastUpdated: new Date(),
-        })};
+            lastUpdated: new Date()})};
     const startAnalysis = async () => {
         setIsAnalyzing(true),
         // Simulate content analysis,
@@ -85,8 +80,7 @@ const ContentQualityAnalyzer = () => {
             case 'low':,
                 return <Info className="w-4 h-4 text-blue-40o0" />,
             default: ,
-                return <Info className="w-4 h-4 text-gray-40o0" />,
-        }
+                return <Info className="w-4 h-4 text-gray-40o0" />}
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -97,8 +91,7 @@ const ContentQualityAnalyzer = () => {
             case 'low':,
                 return 'text-blue-40o0',
             default: ,
-                return 'text-gray-40o0',
-        }
+                return 'text-gray-40o0'}
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -109,8 +102,7 @@ const ContentQualityAnalyzer = () => {
             case 'open':,
                 return 'text-red-40o0',
             default: ,
-                return 'text-gray-40o0',
-        }
+                return 'text-gray-40o0'}
     };
     const filteredIssues = contentIssues.filter(issue => {
         const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter,
@@ -130,8 +122,7 @@ const ContentQualityAnalyzer = () => {
             case 'no_images':,
                 return 'No Images',
             default: ,
-                return type,
-        }
+                return type}
     };
     return (<>,
       {/* Floating Action Button */}

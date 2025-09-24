@@ -6,8 +6,7 @@ interface CodeBlockProps {
   code: string,
   language?: string,
   showLineNumbers?: boolean,
-  className?: string,
-}
+  className?: string}
 ,
 export function CodeBlock({
   code;

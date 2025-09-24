@@ -22,15 +22,13 @@ export interface Service {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   compliance?: string[]}
@@ -59,8 +57,7 @@ export function map20o26ServicesToExistingStructure(): Service[] {
     contactInfo: {
       phone: service.contactInfo.mobile;
       email: service.contactInfo.email;
-      website: service.contactInfo.website,
-    };
+      website: service.contactInfo.website};
     technicalSpecs: {
       technology: service.technology;
       integrations: service.integrations;

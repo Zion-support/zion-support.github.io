@@ -75,14 +75,12 @@ before_all (() => {
     // Check condition,
 if (
     ) {) {
-  $2,
-}
+  $2}
       return}
     original_error.call (console, ...args)}
   console.warn = (...args: any[]) => {
     if (|| args[0].includes ('Deprecated:'))) {
-  $2,
-}
+  $2}
     ) {
       return}
 ,
@@ -95,5 +93,4 @@ afterAll(() => {
 }),
 after_all (() => {
   console.error = original_error,
-  console.warn = original_warn,
-}),
+  console.warn = original_warn}),

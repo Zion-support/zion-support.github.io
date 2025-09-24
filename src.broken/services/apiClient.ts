@@ -65,8 +65,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
   ],
   // Check if URL should fail silently,
   const shouldFailSilently = (url: string): boolean => {
-    return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern)),
-  };
+    return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern))};
   // Check if error should be shown to user,
   const shouldShowErrorToUser = (
     status: number;
@@ -74,8 +73,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     url: string): boolean => {
     // Never show errors for silent URLs,
     if (shouldFailSilently(url)) {
-      return false,
-    }
+      return false}
 ,
     // Only show user-facing errors for specific cases,
     switch (status) {
@@ -101,8 +99,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
       case 504:,
         return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method),
       default: ,
-        return false,
-    }
+        return false}
   };
   // Only show error toast if it's a user-facing error,
   if (

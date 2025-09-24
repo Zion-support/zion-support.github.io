@@ -31,8 +31,7 @@ interface ContactPublisherModalProps {
 ,
 type FormValues ={
   subject:string;
-  message: string,
-};
+  message: string};
 const schema: yup.ObjectSchema<FormValues> = yup,
   .object({
     subject:yup,

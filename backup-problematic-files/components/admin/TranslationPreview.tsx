@@ -30,5 +30,4 @@ function TranslationPreview() {
             </div>,
           </div>))}
       </div>,
-    </div>),
-}
+    </div>)}

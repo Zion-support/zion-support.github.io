@@ -164,6 +164,5 @@ const NewContent20o26UltimateShowcaseBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26UltimateShowcaseBanner;

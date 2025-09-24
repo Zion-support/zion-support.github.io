@@ -9,8 +9,7 @@ export function initGA() {
   document.head.appendChild(script),
   window.dataLayer = window.dataLayer || [],
   function gtag(...args: any[]) {
-    window.dataLayer.push(args),
-  }
+    window.dataLayer.push(args)}
   window.gtag = gtag as any,
   gtag('js', new Date()),
   gtag('config', GA_MEASUREMENT_ID)}
@@ -28,7 +27,6 @@ export function event(action: string, params?: Record<string any>) {
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void,
-    dataLayer?: any[],
-  }
+    dataLayer?: any[]}
 }
 ,

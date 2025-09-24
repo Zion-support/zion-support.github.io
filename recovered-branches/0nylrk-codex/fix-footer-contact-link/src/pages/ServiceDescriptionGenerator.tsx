@@ -25,7 +25,6 @@ import { SEO } from '@/components / SEO',
 import { use_auth } from '@/hooks / use_auth',
 import { Navigate } from './react-router-dom',
 export default function ServiceDescriptionGenerator() {
-,
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
 export default function ServiceDescriptionGenerator() {
@@ -47,8 +46,7 @@ export default function ServiceDescriptionGenerator() {
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />}
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription),
-    // Here you could also save to database if needed,
-  }
+    // Here you could also save to database if needed}
   };
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">,

@@ -15,6 +15,5 @@ export default function IpfsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

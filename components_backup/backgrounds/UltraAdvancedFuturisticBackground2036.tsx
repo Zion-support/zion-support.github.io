@@ -24,8 +24,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
       color: string,
       opacity: number,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Create particles,
     const createParticle = () => {
       const colors = [
@@ -135,8 +134,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             linear-gradient(90deg, rgba(0,212,255,0.1) 1px, transparent 1px),
           `;
           backgroundSize: '50px 50px';
-          animation: 'gridMove 20s linear infinite',
-        }}  />,
+          animation: 'gridMove 20s linear infinite'}}  />,
       </div>,
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">,
@@ -155,8 +153,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             transition={{
               duration: Math.random() * 10 + 15;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
           >,
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 clip-path-hexagon"  />,
           </motion.div>))}
@@ -176,8 +173,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             transition={{
               duration: Math.random() * 12 + 18;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
           >,
             <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 clip-path-triangle"  />,
           </motion.div>))}
@@ -196,8 +192,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             transition={{
               duration: Math.random() * 8 + 12;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           >,
             <div className="w-8 h-8 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full"  />,
           </motion.div>))}
@@ -215,8 +210,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             transition={{
               duration: 30 + i * 10;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />))}
       </div>,
       {/* Neon Glow Effects */}

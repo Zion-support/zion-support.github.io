@@ -6,15 +6,13 @@ const UltimateROICalculator20o25 = () => {
     employees: 50;
     industry: 'technology';
     automationLevel: 'medium';
-    timeFrame: 12,
-  }),
+    timeFrame: 12}),
   const [results, setResults] = useState({
     costSavings: 0;
     revenueIncrease: 0;
     totalROI: 0;
     paybackPeriod: 0;
-    monthlySavings: 0,
-  }),
+    monthlySavings: 0}),
   const [isCalculating, setIsCalculating] = useState(false),
   const industryMultipliers ={
     technology: 1.5;
@@ -22,14 +20,12 @@ const UltimateROICalculator20o25 = () => {
     finance: 1.4;
     manufacturing: 1.6;
     retail: 1.2;
-    education: 1.1,
-  };
+    education: 1.1};
   const automationMultipliers ={
     low: 0.3;
     medium: 0.6;
     high: 1.0;
-    extreme: 1.5,
-  };
+    extreme: 1.5};
   useEffect(() => {
     calculateROI()}, [formData]),
   const calculateROI = () => {
@@ -52,8 +48,7 @@ const UltimateROICalculator20o25 = () => {
         revenueIncrease: Math.round(revenueIncrease);
         totalROI: Math.round(totalROI);
         paybackPeriod: Math.round(paybackPeriod * 10) / 10;
-        monthlySavings: Math.round(monthlySavings),
-      }),
+        monthlySavings: Math.round(monthlySavings)}),
       setIsCalculating(false)}, 10o00)};
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({

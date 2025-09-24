@@ -18,15 +18,13 @@ export default function PageShareButtons({
   url: string,
   description?: string,
   onShare?: (network: string) => void,
-  utm?: string,
-}) {
+  utm?: string}) {
   const withUtm = useMemo(() => {
     if (!utm) return url,
     return url.includes('?') ? `${url}&${utm}` : `${url}?${utm}`}, [url, utm]),
   const handle = (network: string) => () => {
     try {
-      onShare && onShare(network),
-    } catch {}
+      onShare && onShare(network)} catch {}
   };
   return (
     <div className='flex items-center gap-3'>,

@@ -10,8 +10,7 @@ export interface PricingTier {
   bestFor: string[],
   popular?: boolean,
   savings?: string,
-  marketComparison: string,
-}
+  marketComparison: string}
 ,
 export interface ServicePricing {
   id: string,
@@ -23,8 +22,7 @@ export interface ServicePricing {
     averageMarketPrice: string,
     ourPrice: string,
     savings: string,
-    valueProposition: string,
-  };
+    valueProposition: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -32,16 +30,14 @@ export interface ServicePricing {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   innovationLevel: string,
   marketSize: string,
   competitors: string[],
   roi: string,
   setupTime: string,
   freeTrial: boolean,
-  moneyBackGuarantee: boolean,
-}
+  moneyBackGuarantee: boolean}
 ,
 export const comprehensivePricingGuide20o32: ServicePricing[] = [
   {

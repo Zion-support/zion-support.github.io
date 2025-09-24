@@ -15,6 +15,5 @@ export default function SecurityPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

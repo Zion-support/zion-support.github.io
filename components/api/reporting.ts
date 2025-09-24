@@ -3,14 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next',
       funnel: { stage: string, count: number }[],
       timeToHireDays: number,
       costPerHireUsd?: number,
-      updated_at: string,
-    }
+      updated_at: string}
 ,
     funnel: { stage: string, count: number }[],
     timeToHireDays: number,
     costPerHireUsd?: number,
-    updatedAt: string,
-  }>}
+    updatedAt: string}>}
 ,
 const FILE = 'reporting.json',
 const FALLBACK: ReportingData = { byTenant: {} }
@@ -25,8 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const entry = data.byTenant[tenantId] |{
       funnel: [],
       timeToHireDays: 0,
-      updatedAt: new Date().toISOString(),
-    }
+      updatedAt: new Date().toISOString()}
     return res.status(200).json(entry)}
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
@@ -34,8 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     funnel: { stage: string, count: number }[],
     timeToHireDays: number,
     costPerHireUsd?: number;
-    updated_at: string,
-  }>}
+    updated_at: string}>}
 }
   if (method === 'POST') {
     const updated = updateJsonFile<ReportingData>(
@@ -52,8 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             typeof costPerHireUsd === 'number',
               ? costPerHireUsd,
               : next[tenantId]?.costPerHireUsd,
-          updatedAt: new Date().toISOString(),
-        }
+          updatedAt: new Date().toISOString()}
         return { byTenant: next }
       }
       FALLBACK),

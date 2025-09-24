@@ -9,15 +9,13 @@ export interface ToastProps {
   onClose?: (id: string) => void,
   action?: {
     label: string,
-    onClick: () => void,
-  };
+    onClick: () => void};
 }
 ,
 interface ToastContextType {
   showToast: (toast: Omit<ToastProps 'id'>) => void,
   hideToast: (id: string) => void,
-  clearToasts: () => void,
-}
+  clearToasts: () => void}
 ,
 const ToastContext = React.createContext<ToastContextType | undefined>(undefined),
 export const useToast = () => {
@@ -58,29 +56,25 @@ const ToastItem: React.FC<ToastProps> = ({
       bg: 'bg-green-50o0';
       border: 'border-green-40o0';
       text: 'text-green-80o0';
-      iconBg: 'bg-green-10o0',
-    };
+      iconBg: 'bg-green-10o0'};
     error: {
       icon: '✕';
       bg: 'bg-red-50o0';
       border: 'border-red-40o0';
       text: 'text-red-80o0';
-      iconBg: 'bg-red-10o0',
-    };
+      iconBg: 'bg-red-10o0'};
     warning: {
       icon: '⚠';
       bg: 'bg-yellow-50o0';
       border: 'border-yellow-40o0';
       text: 'text-yellow-80o0';
-      iconBg: 'bg-yellow-10o0',
-    };
+      iconBg: 'bg-yellow-10o0'};
     info: {
       icon: 'ℹ';
       bg: 'bg-blue-50o0';
       border: 'border-blue-40o0';
       text: 'text-blue-80o0';
-      iconBg: 'bg-blue-10o0',
-    }
+      iconBg: 'bg-blue-10o0'}
   };
   const styles = typeStyles[type],
   return (
@@ -143,8 +137,7 @@ const ToastItem: React.FC<ToastProps> = ({
           </svg>,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export const ToastContainer: React.FC = () => {
   const [toasts, setToasts] = useState<ToastProps[]>([]),
   const showToast = useCallback((toast: Omit<ToastProps 'id'>) => {
@@ -152,8 +145,7 @@ export const ToastContainer: React.FC = () => {
     const newToast ={ ...toast, id };
     setToasts(prev => [...prev, newToast])}, []),
   const hideToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id)),
-  }, []),
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []),
   const clearToasts = useCallback(() => {
     setToasts([])}, []),
   // Limit toasts to prevent memory issues,

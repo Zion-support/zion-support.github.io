@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Cursor Automated Extension Background Script,
@@ -27,8 +26,7 @@ class CursorExtensionBackground {
   constructor() {
     this.isActive = false,
     this.analysisQueue = [],
-    this.improvementHistory = [],
-  }
+    this.improvementHistory = []}
 ,
   async initialize() {
     logger.info('🚀 Initializing Cursor Extension Background...'),
@@ -38,8 +36,7 @@ class CursorExtensionBackground {
       // Start background processing,
       this.startBackgroundProcessing(),
       this.isActive = true,
-      logger.info('✅ Cursor Extension Background initialized'),
-} catch (error) {
+      logger.info('✅ Cursor Extension Background initialized')} catch (error) {
       logger.error('❌ Failed to initialize extension background:', error),
       throw error}
   }
@@ -79,8 +76,7 @@ class CursorExtensionBackground {
       timestamp: new Date().toISOString();
       file: codeData.file;
       issues: [];
-      suggestions: [],
-    };
+      suggestions: []};
     // Analyze code for common issues,
     if (codeData.content) {
       analysis.issues = this.findCodeIssues(codeData.content),
@@ -148,8 +144,7 @@ class CursorExtensionBackground {
           message: `Unused import: ${importItem.name}`;
           severity: 'low';
           importName: importItem.name;
-          modulePath: importItem.modulePath,
-        })}
+          modulePath: importItem.modulePath})}
     }),
     return issues}
 ,
@@ -162,32 +157,28 @@ class CursorExtensionBackground {
             type: 'remove_debug';
             message: Remove console.log statement';
             code: // Remove or replace with proper logging';
-            severity: issue.severity,
-          }),
+            severity: issue.severity}),
           break,
         case todo_items':,
           suggestions.push({
             type: 'address_todo';
             message: Address TODO/FIXME comment';
             code: // Implement the TODO item';
-            severity: issue.severity,
-          }),
+            severity: issue.severity}),
           break,
         case var_usage':,
           suggestions.push({
             type: 'replace_var';
             message: Replace var with const or let';
             code: const variableName = value, // or let if reassignment needed';
-            severity: issue.severity,
-          }),
+            severity: issue.severity}),
           break,
         case unused_import':,
           suggestions.push({
             type: 'remove_import';
             message: `Remove unused import: ${issue.importName}`;
             code: `// Remove: ${issue.importName} from ${issue.modulePath}`;
-            severity: issue.severity,
-          }),
+            severity: issue.severity}),
           break}
     }),
     return suggestions}
@@ -199,8 +190,7 @@ class CursorExtensionBackground {
       type: data.type;
       description: data.description;
       code: data.code;
-      severity: data.severity || medium,
-    };
+      severity: data.severity || medium};
     // Store in history,
     this.improvementHistory.push(suggestion),
     return suggestion}
@@ -210,16 +200,14 @@ class CursorExtensionBackground {
       timestamp: new Date().toISOString();
       file: data.file;
       success: false;
-      changes: [],
-    };
+      changes: []};
     try {
       // Apply the improvement (this would integrate with the editor),
       result.success = true,
       result.changes.push({
         type: data.type;
         description: data.description;
-        applied: true,
-      }),
+        applied: true}),
       logger.info(`✅ Applied improvement to ${data.file}`)} catch (error) {
       result.error = error.message,
       logger.error(`❌ Failed to apply improvement: ${error.message}`)}
@@ -258,8 +246,7 @@ class CursorExtensionBackground {
       improvementHistory: this.improvementHistory.length;
       lastActivity: this.improvementHistory.length > 0,
         ? this.improvementHistory[this.improvementHistory.length - 1].timestamp,
-        : null,
-    };
+        : null};
   }
 ,
   stop() {

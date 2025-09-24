@@ -12,12 +12,10 @@ const NewContent20o25UltimateTransformationBanner = () => {
         roi: "60o0%";
         timeline: "8 months";
         savings: "$2.8B";
-        success: "94%",
-      };
+        success: "94%"};
       description: "Transform your enterprise with cutting-edge AI solutions that deliver measurable results and sustainable competitive advantage.";
       cta: "Read Ultimate Guide";
-      href: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide",
-    };
+      href: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide"};
     {
       title: "Fortune 50o0 AI Transformation Success Story";
       subtitle: "$2.8B Annual Savings with 60o0% ROI";
@@ -25,12 +23,10 @@ const NewContent20o25UltimateTransformationBanner = () => {
         roi: "60o0%";
         savings: "$2.8B";
         efficiency: "156%";
-        quality: "99.7%",
-      };
+        quality: "99.7%"};
       description: "How a global manufacturing giant achieved unprecedented results through comprehensive AI transformation.";
       cta: "View Case Study";
-      href: "/case-studies/fortune-50o0-ai-transformation-60o0-roi-success",
-    };
+      href: "/case-studies/fortune-50o0-ai-transformation-60o0-roi-success"};
     {
       title: "AI Transformation Ultimate Implementation Guide 20o25";
       subtitle: "From Strategy to 60o0% ROI - Complete Roadmap";
@@ -38,12 +34,10 @@ const NewContent20o25UltimateTransformationBanner = () => {
         roi: "60o0%";
         payback: "3.2 months";
         success: "94%";
-        projects: "50o0+",
-      };
+        projects: "50o0+"};
       description: "The complete roadmap for enterprise AI transformation success with proven methodologies and actionable strategies.";
       cta: "Get Implementation Guide";
-      href: "/resources/ai-transformation-ultimate-implementation-guide-20o25",
-    }
+      href: "/resources/ai-transformation-ultimate-implementation-guide-20o25"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

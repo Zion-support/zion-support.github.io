@@ -18,8 +18,7 @@ export default function SignUpPage() {
     if (password !== confirmPassword) {
       setError('Passwords do not match'),
       setIsLoading(false),
-      return,
-    }
+      return}
     try {
       await register(name, email, password)} catch (error) {
       setError(error instanceof Error ? error.message : 'Registration failed')} finally {
@@ -172,6 +171,5 @@ export default function SignUpPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

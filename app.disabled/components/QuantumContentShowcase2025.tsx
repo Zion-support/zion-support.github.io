@@ -117,8 +117,7 @@ const QuantumContentShowcase20o25 = () => {
       case 'resource':,
         return <FileText className='w-5 h-5' />,
       default:,
-        return <BookOpen className='w-5 h-5' />,
-    }
+        return <BookOpen className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -129,8 +128,7 @@ const QuantumContentShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -184,8 +182,7 @@ const QuantumContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-medium transition-colors ${
                 activeFilter === filter.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -307,6 +304,5 @@ const QuantumContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumContentShowcase20o25;

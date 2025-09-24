@@ -345,6 +345,5 @@ export default function SustainableAIFuture() {
           </article>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

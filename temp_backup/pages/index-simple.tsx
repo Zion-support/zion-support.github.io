@@ -15,6 +15,5 @@ export default function IndexSimplePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

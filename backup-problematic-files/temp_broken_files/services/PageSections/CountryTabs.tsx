@@ -18,8 +18,7 @@ interface CountryTabsProps {
   handleCountrySelect:(country:CountryPricing) => void;
   onQuote?:(country:CountryPricing) => void;
   searchQuery:string;
-  setSearchQuery: (query:string) => void,
-}
+  setSearchQuery: (query:string) => void}
 ,
 export function CountryTabs({
   popularCountries;
@@ -145,6 +144,5 @@ export function CountryTabs({
   `?page=$ {
   currentPage - 1 }` } /> </PaginationItem> {
   Array.from ({
-  length: totalPages ,
-}, ( i) => i + 1) .map ( (page) => (<PaginationItem key={
+  length: totalPages }, ( i) => i + 1) .map ( (page) => (<PaginationItem key={
   page }> <PaginationButton  /> </PaginationItem>) ) }<PaginationItem> <PaginationNext  /> </PaginationItem> </PaginationContent> </Pagination> </div>) ,

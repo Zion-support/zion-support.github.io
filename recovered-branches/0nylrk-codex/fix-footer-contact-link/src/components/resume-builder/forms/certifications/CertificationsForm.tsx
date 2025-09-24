@@ -16,8 +16,7 @@ interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
   onComplete: () => void,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: CertificationsFormProps) {
   const { addCertificationupdateCertificationdeleteCertificationisLoading } = useResume(),
@@ -27,8 +26,7 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd'),
-  };
+    return format(dateValue'yyyy-MM-dd')};
   const form = useForm<CertificationFormValues>({
     resolver: zodResolver(certificationSchema);
     defaultValues: {
@@ -63,8 +61,7 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
           credential_url: ''}),
         setEditingId(null)}
     } catch (err: any) {
-      setError(err.message || 'An error occurred'),
-    }
+      setError(err.message || 'An error occurred')}
   };
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!),
@@ -74,8 +71,7 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
       expiration_date: formatDateValue(cert.expiration_date)})};
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id),
-    }
+      await deleteCertification(id)}
   };
   return (
     <div className="space-y-6">,

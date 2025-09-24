@@ -84,8 +84,7 @@ function Section({
   children;
 }: {
   title: string,
-  children: React.ReactNode,
-}) {
+  children: React.ReactNode}) {
   return (
     <div className='rounded-lg border border-gray-20o0 dark: border-gray-80o0 p-4'>,
       <div className='font-medium mb-2'>{title}</div>,
@@ -99,15 +98,13 @@ function Item({
 }: {
   label: string,
   value: string,
-  multiline?: boolean,
-}) {
+  multiline?: boolean}) {
   return (
     <div className='grid md: grid-cols-4 gap-2'>,
       <div className='text-gray-60o0 dark:text-gray-30o0'>{label}</div>,
       <div
         className={
-          multiline ? 'md: col-span-3 whitespace-pre-wrap' : 'md:col-span-3',
-        }
+          multiline ? 'md: col-span-3 whitespace-pre-wrap' : 'md:col-span-3'}
       >,
         {value}
       </div>,

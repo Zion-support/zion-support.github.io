@@ -15,5 +15,4 @@ export default function [orderId]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

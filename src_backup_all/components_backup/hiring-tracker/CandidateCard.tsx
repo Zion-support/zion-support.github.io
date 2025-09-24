@@ -21,8 +21,7 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
 import Image from 'next/image', // Import next/image,
 interface CandidateCardProps {
   application: JobApplication,
-  index: number,
-}
+  index: number}
 ,
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false),
@@ -38,15 +37,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // For now, we'll just show a toast,
     toast({
       title: "Notes saved";
-      description: "Your notes have been saved",
-    }),
+      description: "Your notes have been saved"}),
     setShowNotes(false)};
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal,
     toast({
       title: "Hiring process initiated";
-      description: "Offer has been sent to the talent.",
-    })};
+      description: "Offer has been sent to the talent."})};
   const candidateName = application.talent_profile?.full_name || "Candidate",
   return (
     <>,

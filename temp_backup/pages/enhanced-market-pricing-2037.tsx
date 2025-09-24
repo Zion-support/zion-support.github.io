@@ -666,6 +666,5 @@ export default function EnhancedMarketPricing20o37Page() {
           </motion.div>,
         </motion.div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

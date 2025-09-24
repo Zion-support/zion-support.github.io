@@ -242,8 +242,7 @@ export default function AIEthicsResponsibleDevelopment() {
       demographicParity;
       equalizedOdds;
       individualFairness;
-      recommendations: this.generateRecommendations(results),
-    };
+      recommendations: this.generateRecommendations(results)};
   }
 }`}
                     </pre>,
@@ -678,6 +677,5 @@ export default function AIEthicsResponsibleDevelopment() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

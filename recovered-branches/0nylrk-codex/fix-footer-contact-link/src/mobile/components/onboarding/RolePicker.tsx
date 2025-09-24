@@ -5,15 +5,13 @@ import { CardContent } from "@/components/ui/card",
 import { BriefcaseUsersCheck } from "lucide-react",
 type UserRole = "talent" | "client" | null,
 interface RolePickerProps {
-  onSelect: (role: UserRole) => void,
-}
+  onSelect: (role: UserRole) => void}
 ,
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRolesetSelectedRole] = useState<UserRole>(null),
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role),
-    onSelect(role),
-  };
+    onSelect(role)};
   return (
     <div className="space-y-4 px-4">,
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>,
@@ -23,8 +21,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent',
               ? "border-primary bg-primary/5",
-              : "border-border hover: border-primary/40",
-          }`}
+              : "border-border hover: border-primary/40"}`}
           onClick={() => handleSelect('talent')}
         >,
           <CardContent className="p-5">,
@@ -45,8 +42,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client',
               ? "border-primary bg-primary/5",
-              : "border-border hover: border-primary/40",
-          }`}
+              : "border-border hover: border-primary/40"}`}
           onClick={() => handleSelect('client')}
         >,
           <CardContent className="p-5">,

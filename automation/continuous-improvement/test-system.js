@@ -23,15 +23,14 @@ class TestSystem {
     this.testResults ={
       passed: 0;
       failed: 0;
-      total: 0,
-    };
+      total: 0};
   }
 ,
   /**,
    * Run all tests,
    */,
   async runAllTests() {
-    // console.log('🧪 Running Zion App Continuous Improvement System Tests'),    // console.log('========================================================'),    // console.log(''),
+    // // console.log('🧪 Running Zion App Continuous Improvement System Tests'),    // // console.log('========================================================'),    // // console.log(''),
     try {
       await this.testFileStructure(),
       await this.testDependencies(),
@@ -49,7 +48,7 @@ class TestSystem {
    * Test file structure,
    */,
   async testFileStructure() {
-    // console.log('📁 Testing file structure...'),
+    // // console.log('📁 Testing file structure...'),
 const requiredFiles = [
       index.js',monitor.js',improve.js',cursor-integration.js',start.js',package.json',README.md',.env''    ],
 const requiredDirs = [
@@ -71,7 +70,7 @@ const requiredDirs = [
    * Test dependencies,
    */,
   async testDependencies() {
-    // console.log('📦 Testing dependencies...'),
+    // // console.log('📦 Testing dependencies...'),
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
       // Check required dependencies,
@@ -97,7 +96,7 @@ const requiredDirs = [
    * Test configuration,
    */,
   async testConfiguration() {
-    // console.log('⚙️  Testing configuration...'),
+    // // console.log('⚙️  Testing configuration...'),
     try {
       const envContent = fs.readFileSync('.env', 'utf8'),
       // Check for required environment variables,
@@ -117,7 +116,7 @@ const requiredDirs = [
    * Test monitoring system,
    */,
   async testMonitoring() {
-    // console.log('🔍 Testing monitoring system...'),
+    // // console.log('🔍 Testing monitoring system...'),
     try {
       // Test monitor module loading,
       const Monitor = require('./monitor'),      const monitor = new Monitor(),
@@ -142,7 +141,7 @@ const requiredDirs = [
    * Test improvement engine,
    */,
   async testImprovementEngine() {
-    // console.log('🔧 Testing improvement engine...'),
+    // // console.log('🔧 Testing improvement engine...'),
     try {
       // Test improver module loading,
       const Improver = require('./improve'),      const improver = new Improver(),
@@ -158,7 +157,7 @@ const requiredDirs = [
       const testSuggestion ={
         type: 'code_change',        description: Test improvement',        changes: [
           {
-            action: 'add',            file: 'test-file.js',            content: // console.log("test"),          }
+            action: 'add',            file: 'test-file.js',            content: // // console.log("test")}
         ]};
       if (improver.validateSuggestion) {
         const isValid = improver.validateSuggestion(testSuggestion),
@@ -174,7 +173,7 @@ const requiredDirs = [
    * Test Cursor integration,
    */,
   async testCursorIntegration() {
-    // console.log('🤖 Testing Cursor integration...'),
+    // // console.log('🤖 Testing Cursor integration...'),
     try {
       // Test cursor integration module loading,
       const CursorIntegration = require('./cursor-integration'),      const cursor = new CursorIntegration(),
@@ -196,7 +195,7 @@ const prompt = cursor.buildPrompt(testData),
             content: JSON.stringify({
               improvements: [{
                 type: 'code_change',                description: Test improvement',                changes: [{
-                  action: 'add',                  file: 'test-file.js',                  content: // console.log("test"),                }]}]})}
+                  action: 'add',                  file: 'test-file.js',                  content: // // console.log("test")}]}]})}
         }]}
 const suggestions = cursor.parseResponse(mockResponse),
       if (Array.isArray(suggestions) && suggestions.length > 0) {
@@ -210,7 +209,7 @@ const suggestions = cursor.parseResponse(mockResponse),
    * Test safety features,
    */,
   async testSafetyFeatures() {
-    // console.log('🔒 Testing safety features...'),
+    // // console.log('🔒 Testing safety features...'),
     try {
       // Test backup creation,
       const testFile = test-backup-file.txt',      const testContent = test content',
@@ -237,7 +236,7 @@ const Improver = require('./improve'),      const improver = new Improver(),
    * Test logging,
    */,
   async testLogging() {
-    // console.log('📝 Testing logging system...'),
+    // // console.log('📝 Testing logging system...'),
     try {
       // Test log directory creation,
       if (!fs.existsSync('logs')) {'        fs.mkdirSync('logs', { recursive: true })}
@@ -260,7 +259,7 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
   pass(message) {
     this.testResults.passed++,
     this.testResults.total++,
-    // console.log(`  ✅ ${message}`)}
+    // // console.log(`  ✅ ${message}`)}
 ,
   /**,
    * Record a failing test,
@@ -268,26 +267,26 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
   fail(message) {
     this.testResults.failed++,
     this.testResults.total++,
-    // console.log(`  ❌ ${message}`)}
+    // // console.log(`  ❌ ${message}`)}
 ,
   /**,
    * Record a warning,
    */,
   warn(message) {
-    // console.log(`  ⚠️  ${message}`)}
+    // // console.log(`  ⚠️  ${message}`)}
 ,
   /**,
    * Display test results,
    */,
   displayResults() {
-    // console.log(''),    // console.log('📊 Test Results Summary'),    // console.log('======================='),    // console.log(`Total Tests: ${this.testResults.total}`),
-    // console.log(`Passed: ${this.testResults.passed}`),
-    // console.log(`Failed: ${this.testResults.failed}`),
-    // console.log(`Success Rate: ${((this.testResults.passed / this.testResults.total) * 10o0).toFixed(1)}%`),
-    // console.log(''),
+    // // console.log(''),    // // console.log('📊 Test Results Summary'),    // // console.log('======================='),    // // console.log(`Total Tests: ${this.testResults.total}`),
+    // // console.log(`Passed: ${this.testResults.passed}`),
+    // // console.log(`Failed: ${this.testResults.failed}`),
+    // // console.log(`Success Rate: ${((this.testResults.passed / this.testResults.total) * 10o0).toFixed(1)}%`),
+    // // console.log(''),
     if (this.testResults.failed === 0) {
-      // console.log('🎉 All tests passed! The system is ready to use.'),      // console.log(''),      // console.log('Next steps: '),      // console.log('1. Configure your Cursor AI API keys in .env'),      // console.log('2. Start the system: npm start'),      // console.log('3. Monitor status: npm run status'),    } else {
-      // console.log('⚠️  Some tests failed. Please fix the issues before using the system.'),      process.exit(1)}
+      // // console.log('🎉 All tests passed! The system is ready to use.'),      // // console.log(''),      // // console.log('Next steps: '),      // // console.log('1. Configure your Cursor AI API keys in .env'),      // // console.log('2. Start the system: npm start'),      // // console.log('3. Monitor status: npm run status')} else {
+      // // console.log('⚠️  Some tests failed. Please fix the issues before using the system.'),      process.exit(1)}
   }
 }
 ,
@@ -300,10 +299,10 @@ if (require.main === module) {
 module.exports = TestSystem,
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
-  // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0)}),

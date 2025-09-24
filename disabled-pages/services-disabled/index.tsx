@@ -25,8 +25,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
           Security Auditing,
         </Link>,
       </div>,
-    </EnhancedLayout>),
-};
+    </EnhancedLayout>)};
       <div className="min-h-screen bg-white">,
         {/* Header */}
         <header className="bg-white shadow-sm">,

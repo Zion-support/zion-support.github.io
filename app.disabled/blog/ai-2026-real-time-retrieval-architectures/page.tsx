@@ -107,6 +107,5 @@ const RealTimeRetrievalArchitectures20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default RealTimeRetrievalArchitectures20o26;

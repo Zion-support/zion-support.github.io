@@ -52,6 +52,5 @@ const UltimateAutonomousEnterpriseBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAutonomousEnterpriseBanner;

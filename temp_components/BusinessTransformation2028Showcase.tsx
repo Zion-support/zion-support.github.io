@@ -38,22 +38,19 @@ const BusinessTransformation20o28Showcase = () => {
           description: 'AI systems that independently manage complex business processes with minimal human intervention.';
           features: ['End-to-end automation'Self-optimizing workflows'Predictive maintenance'];
           metrics: { efficiency: '+30o0%'cost: '-60%'time: '-80%' };
-          category: 'Process Automation',
-        };
+          category: 'Process Automation'};
         {
           title: 'Intelligent Decision Engine';
           description: 'AI-powered decision support system that analyzes data and provides strategic recommendations.';
           features: ['Real-time analytics'Predictive insights'Risk assessment'];
           metrics: { accuracy: '95%'speed: '+50o0%'confidence: '98%' };
-          category: 'Decision Support',
-        };
+          category: 'Decision Support'};
         {
           title: 'Customer Experience AI';
           description: 'Advanced AI that personalizes customer interactions and anticipates needs.';
           features: ['Personalized experiences'Proactive support'Emotion recognition'];
           metrics: { satisfaction: '+85%'retention: '+70%'revenue: '+45%' };
-          category: 'Customer Experience',
-        }
+          category: 'Customer Experience'}
       ]};
     'quantum-optimization': {
       title: 'Quantum Business Optimization';
@@ -68,22 +65,19 @@ const BusinessTransformation20o28Showcase = () => {
           description: 'Quantum algorithms that solve complex supply chain problems in real-time.';
           features: ['Multi-variable optimization'Real-time adjustments'Cost minimization'];
           metrics: { efficiency: '+40o0%'cost: '-50%'delivery: '+90%' };
-          category: 'Supply Chain',
-        };
+          category: 'Supply Chain'};
         {
           title: 'Quantum Financial Modeling';
           description: 'Advanced financial models powered by quantum computing for risk analysis and portfolio optimization.';
           features: ['Risk assessment'Portfolio optimization'Market prediction'];
           metrics: { accuracy: '+20o0%'risk: '-75%'returns: '+150%' };
-          category: 'Finance',
-        };
+          category: 'Finance'};
         {
           title: 'Quantum Resource Allocation';
           description: 'Optimal allocation of resources across multiple projects and departments.';
           features: ['Multi-project optimization'Resource balancing'Priority management'];
           metrics: { utilization: '+80%'efficiency: '+250%'output: '+180%' };
-          category: 'Resource Management',
-        }
+          category: 'Resource Management'}
       ]};
     'neural-business': {
       title: 'Neural Business Intelligence';
@@ -98,22 +92,19 @@ const BusinessTransformation20o28Showcase = () => {
           description: 'Analyze complex data through direct neural interface for instant insights.';
           features: ['Thought-based queries'Instant visualization'Pattern recognition'];
           metrics: { speed: '+10o00%'accuracy: '+95%'insights: '+30o0%' };
-          category: 'Analytics',
-        };
+          category: 'Analytics'};
         {
           title: 'Neural Team Collaboration';
           description: 'Enhanced team collaboration through shared neural networks and thought synchronization.';
           features: ['Shared mental models'Instant communication'Collective intelligence'];
           metrics: { collaboration: '+40o0%'creativity: '+250%'productivity: '+180%' };
-          category: 'Collaboration',
-        };
+          category: 'Collaboration'};
         {
           title: 'Emotional Business Intelligence';
           description: 'AI that reads and responds to emotional cues in business interactions.';
           features: ['Emotion recognition'Mood analysis'Empathetic responses'];
           metrics: { engagement: '+120%'satisfaction: '+90%'retention: '+65%' };
-          category: 'Emotional Intelligence',
-        }
+          category: 'Emotional Intelligence'}
       ]};
     'future-operations': {
       title: 'Future-Ready Operations';
@@ -128,22 +119,19 @@ const BusinessTransformation20o28Showcase = () => {
           description: 'Self-managing business units that operate independently with minimal oversight.';
           features: ['Autonomous decision making'Self-optimization'Adaptive strategies'];
           metrics: { autonomy: '95%'efficiency: '+350%'innovation: '+20o0%' };
-          category: 'Autonomous Operations',
-        };
+          category: 'Autonomous Operations'};
         {
           title: 'Predictive Business Modeling';
           description: 'Advanced models that predict future business scenarios and market conditions.';
           features: ['Scenario planning'Market prediction'Risk forecasting'];
           metrics: { accuracy: '92%'preparation: '+40o0%'advantage: '+30o0%' };
-          category: 'Predictive Analytics',
-        };
+          category: 'Predictive Analytics'};
         {
           title: 'Interplanetary Business Networks';
           description: 'Business operations that span multiple planets and space environments.';
           features: ['Multi-planetary coordination'Space logistics'Universal commerce'];
           metrics: { reach: '∞'efficiency: '+50o0%'innovation: '+10o00%' };
-          category: 'Space Commerce',
-        }
+          category: 'Space Commerce'}
       ]}
   };
   const solutionTabs = [
@@ -216,8 +204,7 @@ const BusinessTransformation20o28Showcase = () => {
                 className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-30o0 ${
                   activeSolution === tab.id,
                     ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 <Icon className="w-4 h-4"  />,
                 <span className="font-medium">{tab.label}</span>,
@@ -354,6 +341,5 @@ const BusinessTransformation20o28Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessTransformation20o28Showcase;

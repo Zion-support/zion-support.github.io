@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface QuantumHolographicMatrixBackgroundProps {
   children: React.ReactNode,
   className?: string,
-  intensity?: 'low' | 'medium' | 'high',
-}
+  intensity?: 'low' | 'medium' | 'high'}
 ,
 const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackgroundProps> = ({
   children;
@@ -28,8 +27,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'matrix',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'matrix'}> = [],
     // Initialize particles,
     const initParticles = () => {
       const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 150 : 10o0,
@@ -53,8 +51,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           y: Math.random() * canvas.height;
           speed: Math.random() * 2 + 1;
           char: String.fromCharCode(0x30A0 + Math.random() * 96);
-          opacity: Math.random() * 0.8 + 0.2,
-        })}
+          opacity: Math.random() * 0.8 + 0.2})}
     };
     // Holographic grid,
     const drawHolographicGrid = () => {
@@ -183,8 +180,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/30 rounded-full",
@@ -195,8 +191,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-40 border border-purple-40o0/30 transform rotate-45",
@@ -207,8 +202,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Quantum energy waves */}
         <motion.div,
@@ -222,8 +216,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {/* Content */}

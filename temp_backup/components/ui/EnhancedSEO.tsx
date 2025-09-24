@@ -26,12 +26,10 @@ interface SEOProps {
     addressLocality: string,
     addressRegion: string,
     postalCode: string,
-    addressCountry: string,
-  };
+    addressCountry: string};
   companyContact?: {
     telephone: string,
-    email: string,
-  };
+    email: string};
 }
 ,
 const EnhancedSEO: React.FC<SEOProps> = ({

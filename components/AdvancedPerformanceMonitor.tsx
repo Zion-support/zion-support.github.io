@@ -9,8 +9,7 @@ const AdvancedPerformanceMonitor = () => {
     cumulativeLayoutShift: 0;
     firstInputDelay: 0;
     interactionToNextPaint: 0;
-    performanceScore: 0,
-  }),
+    performanceScore: 0}),
   const [optimizationsetOptimizations] = useState([
     {
       id: 'lazy-loading';
@@ -18,48 +17,43 @@ const AdvancedPerformanceMonitor = () => {
       description: 'Defer loading of non-critical resources';
       impact: 'High';
       status: 'active';
-      icon: Clock,
-    };
+      icon: Clock};
     {
       id: 'image-optimization';
       name: 'Image Optimization';
       description: 'Compress and optimize images for web';
       impact: 'High';
       status: 'active';
-      icon: Zap,
-    };
+      icon: Zap};
     {
       id: 'code-splitting';
       name: 'Code Splitting';
       description: 'Split JavaScript bundles for faster loading';
       impact: 'Medium';
       status: 'active';
-      icon: TrendingUp,
-    };
+      icon: TrendingUp};
     {
       id: 'caching';
       name: 'Browser Caching';
       description: 'Implement aggressive caching strategies';
       impact: 'High';
       status: 'active';
-      icon: Shield,
-    };
+      icon: Shield};
     {
       id: 'cdn';
       name: 'CDN Optimization';
       description: 'Serve content from edge locations';
       impact: 'Medium';
       status: 'active';
-      icon: Globe,
-    }
+      icon: Globe}
   ]),
   useEffect(() => {
     const collectMetrics = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-        const paintEntries = window.performance.getEntriesByType('paint'),
+        const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const paintEntries = window.window.performance.getEntriesByType('paint'),
         const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
-        const lcp = window.performance.getEntriesByType('largest-contentful-paint')[0],
+        const lcp = window.window.performance.getEntriesByType('largest-contentful-paint')[0],
         const loadTime = navigation ? Math.round(navigation.loadEventEnd - navigation.loadEventStart) : 0,
         const fcpTime = fcp ? Math.round(fcp.startTime) : 0,
         const lcpTime = lcp ? Math.round(lcp.startTime) : 0,
@@ -78,8 +72,7 @@ const AdvancedPerformanceMonitor = () => {
           cumulativeLayoutShift: 0;
           firstInputDelay: 0;
           interactionToNextPaint: 0;
-          performanceScore: Math.max(0score),
-        })}
+          performanceScore: Math.max(0score)})}
     };
     if (document.readyState === 'complete') {
       collectMetrics()} else {
@@ -91,8 +84,7 @@ const AdvancedPerformanceMonitor = () => {
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-50o0',
     if (score >= 70) return 'text-yellow-50o0',
-    return 'text-red-50o0',
-  };
+    return 'text-red-50o0'};
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -165,8 +157,7 @@ const AdvancedPerformanceMonitor = () => {
                   <span className={`px-3 py-1 rounded-full text-xs font-bold ${
                     optimization.impact === 'High' ? 'bg-red-50o0' :,
                     optimization.impact === 'Medium' ? 'bg-yellow-50o0' :,
-                    'bg-green-50o0',
-                  } text-white`}>,
+                    'bg-green-50o0'} text-white`}>,
                     {optimization.impact} Impact,
                   </span>,
                 </div>,
@@ -202,6 +193,5 @@ const AdvancedPerformanceMonitor = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedPerformanceMonitor;

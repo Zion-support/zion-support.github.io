@@ -11,7 +11,7 @@ if (!fs.existsSync(memoryDir)) {
 ,
 function log(message) {
   const line = `[${new Date().toISOString()}] ${message}\n`,
-  // console.log(message),
+  // // console.log(message),
   fs.appendFileSync(logFile, line)}
 ,
 function loadSummary() {

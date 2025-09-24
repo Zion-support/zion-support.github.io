@@ -8,6 +8,5 @@ export default function Page() {
       <p className='mt-4 text-gray-600'>,
         Temporarily simplified while we fix dependent components and content.,
       </p>,
-    </div>),
-}
+    </div>)}
 ,

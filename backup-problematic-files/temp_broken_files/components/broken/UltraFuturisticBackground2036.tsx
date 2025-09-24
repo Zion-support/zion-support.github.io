@@ -23,17 +23,14 @@ interface UltraFuturisticBackground20o36Props {variant?: 'default' | 'quantum' |
       vy: number,
       size: number,
       color: string,
-      type: 'quantum' | 'neon' | 'energy' | 'data',
-    }> = [],
+      type: 'quantum' | 'neon' | 'energy' | 'data'}> = [],
     const colors ={quantum: ['#0o0ffff#0o080ff#80o00ff#ff0o080'],
       neon: ['#0o0ff0o0#ff0o0ff#ffff0o0#0o0ffff'],
       energy: ['#ff660o0#ff0o066#660o0ff#0o0ff66'],
-      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc'],
-    }
+      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc']}
     const intensityMultiplier ={low: 0.5,
       medium: 1,
-      high: 1.5,
-    }
+      high: 1.5}
     const variantConfig ={default: { particleCount: 50, speed: 1, size: 2 }
       quantum: { particleCount: 80, speed: 1.5, size: 3 }
       space: { particleCount: 10o0, speed: 0.8, size: 2.5 }
@@ -51,8 +48,7 @@ interface UltraFuturisticBackground20o36Props {variant?: 'default' | 'quantum' |
         size: Math.random() * config.size * multiplier,
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
-        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant,
-      })}
+        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant})}
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
@@ -188,8 +184,7 @@ interface UltraFuturisticBackground20o36Props {variant?: 'default' | 'quantum' |
       ctx.fill()}
     animate(),
     return () => {if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current),
-}
+        cancelAnimationFrame(animationRef.current)}
       window.removeEventListener('resize', resizeCanvas)}
 }, [variant, intensity]),
 export default function UltraFuturisticBackground20o36({
@@ -215,17 +210,14 @@ export default function UltraFuturisticBackground20o36({
       vy: number,
       size: number,
       color: string,
-      type: 'quantum' | 'neon' | 'energy' | 'data',
-    }> = [],
+      type: 'quantum' | 'neon' | 'energy' | 'data'}> = [],
     const colors ={quantum: ['#0o0ffff#0o080ff#80o00ff#ff0o080'],
       neon: ['#0o0ff0o0#ff0o0ff#ffff0o0#0o0ffff'],
       energy: ['#ff660o0#ff0o066#660o0ff#0o0ff66'],
-      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc'],
-    }
+      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc']}
     const intensityMultiplier ={low: 0.5,
       medium: 1,
-      high: 1.5,
-    }
+      high: 1.5}
     const variantConfig ={default: { particleCount: 50, speed: 1, size: 2 }
       quantum: { particleCount: 80, speed: 1.5, size: 3 }
       space: { particleCount: 10o0, speed: 0.8, size: 2.5 }
@@ -243,8 +235,7 @@ export default function UltraFuturisticBackground20o36({
         size: Math.random() * config.size * multiplier,
         opacity: Math.random() * 0.8 + 0.2,
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
-        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant,
-      })}
+        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant})}
     const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
@@ -406,19 +397,16 @@ const particles: Array<{
       vy: number;
       size: number;
       color: string;
-      type: 'quantum' | 'neon' | 'energy' | 'data',
-    }> = [];
+      type: 'quantum' | 'neon' | 'energy' | 'data'}> = [];
     const colors ={
       quantum: ['#0o0ffff#0o080ff#80o00ff#ff0o080'];
       neon: ['#0o0ff0o0#ff0o0ff#ffff0o0#0o0ffff'];
       energy: ['#ff660o0#ff0o066#660o0ff#0o0ff66'];
-      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc'],
-    };
+      data: ['#0o0ccff#cc0o0ff#ffcc0o0#0o0ffcc']};
     const intensityMultiplier ={
       low: 0.5;
       medium: 1;
-      high: 1.5,
-    };
+      high: 1.5};
     const variantConfig ={
       default: { particleCount: 50, speed: 1, size: 2 };
       quantum: { particleCount: 80, speed: 1.5, size: 3 };
@@ -438,8 +426,7 @@ for (let i = 0, i < config.particleCount * multiplier, i++) {
         size: Math.random() * config.size * multiplier;
         opacity: Math.random() * 0.8 + 0.2;
         color: colors[variant][Math.floor(Math.random() * colors[variant].length)];
-        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant,
-      })}
+        type: variant === 'default' ? ['quantumneonenergydata'][Math.floor(Math.random() * 4)] as any : variant})}
 ,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);

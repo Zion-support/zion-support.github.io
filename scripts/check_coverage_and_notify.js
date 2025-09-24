@@ -56,11 +56,11 @@ function main() {
     // This error is logged to console, the payload will just have 0s for counts.}
 ,
   writeTestStatus(testStatusPayload),
-  // console.log(`Coverage: ${coveragePct}% (Threshold: ${COVERAGE_THRESHOLD}%)`),
+  // // console.log(`Coverage: ${coveragePct}% (Threshold: ${COVERAGE_THRESHOLD}%)`),
   if (coveragePct < COVERAGE_THRESHOLD) {
     console.error(`Error: Coverage (${coveragePct}%) is below threshold of ${COVERAGE_THRESHOLD}%.`),
     process.exit(1)} else {
-    // console.log('Coverage check passed.')}
+    // // console.log('Coverage check passed.')}
 }
 ,
 function writeTestStatus(statusData) {
@@ -77,11 +77,10 @@ function writeTestStatus(statusData) {
     if (statusData.error) {
         console.error(`Error context for test_status.json: ${statusData.error}`),
         // Optionally, could add the error to the payload if interface allowed: ,
-        // finalPayload.error = statusData.error,
-    }
+        // finalPayload.error = statusData.error}
 ,
     fs.writeFileSync(TEST_STATUS_FILE, JSON.stringify(finalPayload, null, 2)),
-    // console.log(`Test status written to ${TEST_STATUS_FILE}`)} catch (err) {
+    // // console.log(`Test status written to ${TEST_STATUS_FILE}`)} catch (err) {
     console.error(`Error writing test status to ${TEST_STATUS_FILE}:`, err),
     // If this write fails, the gather script won't find the file.}
 }
@@ -92,7 +91,6 @@ process.on('unhandledRejection', (reason, promise) => {
   // Attempt to write a status indicating this script itself failed.,
   writeTestStatus({
     passed: 0, failed: 0, total: 0, coverage: 0;
-    error: 'Unhandled rejection in check_coverage_and_notify.js',
-  }),
+    error: 'Unhandled rejection in check_coverage_and_notify.js'}),
   process.exit(1)}),
 main(),

@@ -334,6 +334,5 @@ export default function ComprehensivePricing20o25V2() {
           </div>,
         </div>,
       </UltraFuturisticBackground>,
-    </div>),
-}
+    </div>)}
 ,

@@ -25,7 +25,6 @@ import {ProtectedRoute} from '@/components/ProtectedRoute',
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs',
 import {useToast} from '@/hooks/use-toast',
 export default function TokenManager() {
-,
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
@@ -80,15 +79,13 @@ if ( {) {
   $2}
       toast ({
         title: 'Success';
-        description: 'Transaction processed',
-      }),
+        description: 'Transaction processed'}),
       fetch_transactions ()} else {
       const err = await res.json(),
       toast({
         title: 'Error',
         description: err.error |'Failed',
-        variant: 'destructive',
-      })}
+        variant: 'destructive'})}
 }
   };
 import { useEffect, useState } from 'react';
@@ -128,15 +125,13 @@ export default function TokenManager() {
     if (res && res.ok) {
       toast({
         title: 'Success';
-        description: 'Transaction processed',
-      }),
+        description: 'Transaction processed'}),
       fetchTransactions()} else {
       const err = await res && res.json(),
       toast({
         title: 'Error';
         description: err && err.error || 'Failed';
-        variant: 'destructive',
-      })}
+        variant: 'destructive'})}
 };
   return (
     <ProtectedRoute adminOnly>,
@@ -163,8 +158,7 @@ export default function TokenManager() {
       toast ({
         title: 'Error';
         description: err.error || 'Failed';
-        variant: 'destructive',
-      })}
+        variant: 'destructive'})}
 }
 ,
   return (
@@ -211,6 +205,5 @@ export default function TokenManager() {
         </div>,
         <Footer />,
       </div>,
-    </ProtectedRoute>),
-}
+    </ProtectedRoute>)}
 )

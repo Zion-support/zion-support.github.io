@@ -160,16 +160,14 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       case 'popular':,
         return b.likes - a.likes,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const getTypeIcon = (type) => {
     switch (type) {
       case 'video': return Play,
       case 'interactive': return Zap,
       case 'guide': return Bookmark,
-      default: return Eye,
-    }
+      default: return Eye}
   };
   const getCategoryIcon = (categoryId) => {
     const category = categories.find(cat => cat.id === categoryId),
@@ -237,16 +235,14 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white',
-              }`}
+                viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
             >,
               <Grid className="w-5 h-5"  />,
             </button>,
             <button
               onClick={() => setViewMode('list')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white',
-              }`}
+                viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
             >,
               <List className="w-5 h-5"  />,
             </button>,
@@ -261,8 +257,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
         className={`grid gap-6 ${
           viewMode === 'grid',
             ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-            : 'grid-cols-1',
-        }`}
+            : 'grid-cols-1'}`}
       >,
         <AnimatePresence>,
           {sortedContent.map((itemindex) => {
@@ -276,8 +271,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`bg-slate-80o0/50 backdrop-blur-sm rounded-2xl border border-white/20 hover: border-purple-40o0/50 transition-all duration-30o0 group cursor-pointer ${
-                  viewMode === 'list' ? 'flex' : '',
-                }`}
+                  viewMode === 'list' ? 'flex' : ''}`}
                 onClick={() => setSelectedContent(item)}
               >,
                 {viewMode === 'grid' ? (

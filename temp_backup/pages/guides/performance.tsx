@@ -32,6 +32,5 @@ export default function PerformanceGuide() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -7,8 +7,7 @@ export interface InnovativeITService20o24 {
   variant: string,
   features: string[],
   rating: number,
-  customers: string,
-}
+  customers: string}
 export const innovativeITServices20o24: InnovativeITService20o24[] = [
   {
     id: 'autonomous-devops-platform';
@@ -51,15 +50,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.';
     launchDate: '20o24-0o1-15';
     customers: 950;
     rating: 4.8;
-    reviews: 520,
-  };
+    reviews: 520};
   // Zero Trust Network Architecture,
   {
     id: 'zero-trust-network-architecture';
@@ -102,15 +99,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.';
     launchDate: '20o24-0o2-0o1';
     customers: 650;
     rating: 4.9;
-    reviews: 380,
-  };
+    reviews: 380};
   // Edge Computing Orchestration,
   {
     id: 'edge-computing-orchestration';
@@ -153,15 +148,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.';
     launchDate: '20o24-0o1-20';
     customers: 750;
     rating: 4.7;
-    reviews: 420,
-  };
+    reviews: 420};
   // AI-Powered IT Operations Center,
   {
     id: 'ai-powered-it-operations-center';
@@ -204,15 +197,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.';
     launchDate: '20o24-0o2-10';
     customers: 850;
     rating: 4.8;
-    reviews: 480,
-  };
+    reviews: 480};
   // Quantum-Secure Database Platform,
   {
     id: 'quantum-secure-database-platform';
@@ -237,7 +228,7 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
     color: 'from-indigo-50o0 to-blue-60o0';
     textColor: 'text-indigo-40o0';
     link: 'https://ziontechgroup.com/quantum-secure-database-platform';
-    marketPosition: 'Competitive with MongoDB Atlas ($57/month), AWS RDS ($20o0+/month), and Azure SQL Database ($150+/month). Our advantage: Quantum-resistant security, lower cost, and better window.performance.';
+    marketPosition: 'Competitive with MongoDB Atlas ($57/month), AWS RDS ($20o0+/month), and Azure SQL Database ($150+/month). Our advantage: Quantum-resistant security, lower cost, and better window.window.performance.';
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Enterprise businesses, Research institutions';
     trialDays: 30;
     setupTime: '2 hours';
@@ -255,15 +246,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready database platform with quantum-resistant encryption, distributed architecture, and comprehensive security features.';
     launchDate: '20o24-0o1-0o5';
     customers: 450;
     rating: 4.9;
-    reviews: 280,
-  };
+    reviews: 280};
   // AI-Powered API Management,
   {
     id: 'ai-powered-api-management';
@@ -306,15 +295,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready API management platform with AI-powered optimization, comprehensive security, and developer-friendly tools.';
     launchDate: '20o24-0o2-15';
     customers: 110o0;
     rating: 4.7;
-    reviews: 620,
-  };
+    reviews: 620};
   // Intelligent Cloud Cost Optimization,
   {
     id: 'intelligent-cloud-cost-optimization';
@@ -357,15 +344,13 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready cost optimization platform with AI-powered analysis, automated optimization, and comprehensive cost management tools.';
     launchDate: '20o24-0o1-25';
     customers: 180o0;
     rating: 4.8;
-    reviews: 950,
-  };
+    reviews: 950};
   // AI-Powered Network Security,
   {
     id: 'ai-powered-network-security';
@@ -408,13 +393,11 @@ export const innovativeITServices20o24: InnovativeITService20o24[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Production-ready network security platform with AI-powered threat detection, automated response, and comprehensive security features.';
     launchDate: '20o24-0o2-0o1';
     customers: 720;
     rating: 4.8;
-    reviews: 410,
-  }
+    reviews: 410}
 ],

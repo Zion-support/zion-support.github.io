@@ -19,6 +19,5 @@ export default function RetailTechnologySolutions() {
       industries={['Retail', 'CPG', 'E-commerce']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/retail-technology-solutions',
-    />),
-}
+    />)}
 ,

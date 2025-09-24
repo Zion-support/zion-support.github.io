@@ -23,8 +23,7 @@ export interface MicroSaasService20o34 {
   scalability: string,
   uptime: string,
   contact: string,
-  website: string,
-}
+  website: string}
 export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
   {
     id: 'ai-quantum-sales-automation';

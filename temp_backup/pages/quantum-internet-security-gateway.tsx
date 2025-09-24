@@ -50,8 +50,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function QuantumInternetSecurityGateway() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -364,7 +363,7 @@ export default function QuantumInternetSecurityGateway() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Secure Routing</h3>,
               <p className="text-gray-40o0">,
-                Clean traffic is securely routed while maintaining optimal network window.performance.,
+                Clean traffic is securely routed while maintaining optimal network window.window.performance.,
               </p>,
             </div>,
           </div>,
@@ -507,6 +506,5 @@ export default function QuantumInternetSecurityGateway() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

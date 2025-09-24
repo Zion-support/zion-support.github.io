@@ -20,8 +20,7 @@ it('safeFetch throws when fetch rejects', async () => {
     writable: true}),
   jest.spyOn(client, 'checkOnline').mockResolvedValue(true),
   jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),
-  await expect(client.safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase'),
-}),
+  await expect(client.safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase')}),
 // Test that safeFetch preserves headers passed as a Headers object,
 it('safeFetch preserves Headers object values', async () => {
   Object.defineProperty(window, 'navigator', {

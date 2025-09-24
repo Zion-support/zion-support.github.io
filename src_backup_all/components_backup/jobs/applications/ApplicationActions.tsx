@@ -14,8 +14,7 @@ interface ApplicationActionsProps {
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (
     applicationId: string;
-    newStatus: ApplicationStatus) => Promise<void>,
-}
+    newStatus: ApplicationStatus) => Promise<void>}
 ,
 export function ApplicationActions({
   application;

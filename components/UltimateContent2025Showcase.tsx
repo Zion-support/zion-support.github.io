@@ -15,8 +15,7 @@ const UltimateContent20o25Showcase = () => {
       stats: {
         roi: "50o00%";
         views: "50K+";
-        rating: "5.0",
-      }
+        rating: "5.0"}
     };
     {
       id: 2;
@@ -31,8 +30,7 @@ const UltimateContent20o25Showcase = () => {
       stats: {
         roi: "50o00%";
         revenue: "$2.5B";
-        timeline: "18 months",
-      }
+        timeline: "18 months"}
     };
     {
       id: 3;
@@ -47,8 +45,7 @@ const UltimateContent20o25Showcase = () => {
       stats: {
         roi: "10o00%+";
         pages: "50+";
-        rating: "5.0",
-      }
+        rating: "5.0"}
     }
   ],
   return (
@@ -201,6 +198,5 @@ const UltimateContent20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContent20o25Showcase;

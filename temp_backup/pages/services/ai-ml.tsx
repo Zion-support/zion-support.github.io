@@ -238,6 +238,5 @@ export default function AIMLServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

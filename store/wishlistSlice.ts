@@ -2,12 +2,10 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit',
 export interface WishlistItem {
   id: string,
   type: string,
-  data?: any,
-}
+  data?: any}
 ,
 export interface WishlistState {
-  items: WishlistItem[],
-}
+  items: WishlistItem[]}
 ,
 const initialState: WishlistState = {
   items: [];
@@ -30,8 +28,7 @@ const wishlistSlice = createSlice({
       const exists = state.items.some(
         item =>,
           item.id === action.payload.id && item.type === action.payload.type),
-      if (!exists) state.items.push(action.payload),
-    };
+      if (!exists) state.items.push(action.payload)};
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
       state.items = state.items.filter(item => item.id !== action.payload.id)};
   };

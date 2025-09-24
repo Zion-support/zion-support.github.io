@@ -30,8 +30,7 @@ class AutomationManager {
     this.systems = new Map(),
     this.testResults = new Map(),
     this.fixes = [],
-    this.startTime = Date.now(),
-  }
+    this.startTime = Date.now()}
 ,
   async runFullAutomationCycle() {
     logger.info('🚀 Starting Full Automation Cycle'),
@@ -45,8 +44,7 @@ class AutomationManager {
       await this.startWorkingSystems(),
       // Step 4: Monitor and report,
       await this.monitorAndReport(),
-      logger.info('✅ Full automation cycle completed successfully!'),
-    } catch (error) {
+      logger.info('✅ Full automation cycle completed successfully!')} catch (error) {
       logger.error('❌ Automation cycle failed:', error),
       throw error}
   }
@@ -88,13 +86,11 @@ class AutomationManager {
       {
         file: 'automation/cursor-automated-communication.js';
         pattern: /apiEndpoint: config\.apiEndpoint \|\| https:\/\/api\.cursor\.sh'/g;
-        replacement: "apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh'",
-      };
+        replacement: "apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh'"};
       {
         file: 'automation/core/AutomationTask.js';
         pattern: /this\.lastStatus = pending',/g;
-        replacement: "this.lastStatus = 'pending',",
-      }
+        replacement: "this.lastStatus = 'pending',"}
     ],
     for (const fix of syntaxFixes) {
       try {
@@ -174,16 +170,13 @@ class AutomationManager {
       uptime: Date.now() - this.startTime;
       systems: {
         total: this.systems.size;
-        running: Array.from(this.systems.values()).filter(s => s.isRunning).length,
-      };
+        running: Array.from(this.systems.values()).filter(s => s.isRunning).length};
       testResults: {
         total: this.testResults.size;
         passed: Array.from(this.testResults.values()).filter(r => r.passed).length;
-        failed: Array.from(this.testResults.values()).filter(r => !r.passed).length,
-      };
+        failed: Array.from(this.testResults.values()).filter(r => !r.passed).length};
       fixes: this.fixes;
-      health: await this.getSystemHealth(),
-    };
+      health: await this.getSystemHealth()};
     // Save report,
     const reportPath = path.join(__dirname, 'automation-health-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
@@ -196,8 +189,7 @@ class AutomationManager {
       const response = await fetch('http: //localhost:30o01/health'),
       if (response.ok) {
         const data = await response.json(),
-        health.mainSystem = data.status,
-      } else {
+        health.mainSystem = data.status} else {
         health.mainSystem = 'unhealthy'}
     } catch (error) {
       health.mainSystem = 'unreachable'}
@@ -219,29 +211,25 @@ class AutomationManager {
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js run,
-`,
-      };
+`};
       {
         name: 'test-automation.sh';
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation/test-all-automations.js,
-`,
-      };
+`};
       {
         name: 'fix-automation.sh';
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js fix,
-`,
-      };
+`};
       {
         name: 'monitor-automation.sh';
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js monitor,
-`,
-      }
+`}
     ],
     for (const script of scripts) {
       const scriptPath = path.join(process.cwd(), script.name),

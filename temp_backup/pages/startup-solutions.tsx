@@ -134,6 +134,5 @@ export default function StartupSolutions() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

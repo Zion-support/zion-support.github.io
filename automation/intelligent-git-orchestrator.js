@@ -125,8 +125,8 @@ class IntelligentGitOrchestrator {
     if (level === 'error') {
       console.error(`❌ ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ ${message}`)} else if (level === 'success') {
-      // console.log(`✅ ${message}`)} else {
-      // console.log(`ℹ️ ${message}`)}
+      // // console.log(`✅ ${message}`)} else {
+      // // console.log(`ℹ️ ${message}`)}
   }
 ,
   async executeCommand(command, options ={}) {
@@ -264,8 +264,7 @@ class IntelligentGitOrchestrator {
     const message = descriptions.join(', '),
     const prefix =,
       batchIndex > 0 ? `feat: batch ${batchIndex + 1} - ` : 'feat: ',
-    return prefix + message,
-  }
+    return prefix + message}
 ,
   findBestPattern(files) {
     if (!this.mlModel.commitMessagePatterns) return null,
@@ -484,7 +483,7 @@ switch (command) {
     break,
   case 'analytics':,
     const analytics = orchestrator.getAnalytics(),
-    // console.log(
+    // // console.log(
       'Intelligent Git Analytics:';
       JSON.stringify(analytics, null, 2)),
     break,
@@ -494,7 +493,7 @@ switch (command) {
       process.exit(1)}),
     break,
   default: ,
-    // console.log(`,
+    // // console.log(`,
 🚀 Intelligent Git Orchestrator,
 Usage:,
   node automation/intelligent-git-orchestrator.js [command],
@@ -514,7 +513,6 @@ Examples:,
   node automation/intelligent-git-orchestrator.js execute,
   node automation/intelligent-git-orchestrator.js watch,
         `),
-    break,
-}
+    break}
 ,
 module.exports = IntelligentGitOrchestrator,

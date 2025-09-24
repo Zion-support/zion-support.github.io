@@ -19,8 +19,7 @@ const UltraFuturisticBackground: React.FC = () => {
       size: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Create initial particles,
     for (let i = 0, i < 100, i++) {
       particles.push({
@@ -31,8 +30,7 @@ const UltraFuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1;
         color: `hsl(${Math.random() * 360}70%60%)`;
         life: Math.random() * 100;
-        maxLife: 100,
-      })}
+        maxLife: 100})}
 ,
     // Animation loop,
     const animate = () => {
@@ -64,8 +62,7 @@ const UltraFuturisticBackground: React.FC = () => {
             size: Math.random() * 3 + 1;
             color: `hsl(${Math.random() * 360}70%60%)`;
             life: 100;
-            maxLife: 100,
-          };
+            maxLife: 100};
         }
       }),
       // Draw quantum entanglement lines,
@@ -110,48 +107,40 @@ const UltraFuturisticBackground: React.FC = () => {
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30",
           style={{
-            clipPath: 'polygon(50% 0%100% 25%100% 75%50% 100% 75%0% 25%)',
-          }}
+            clipPath: 'polygon(50% 0%100% 25%100% 75%50% 100% 75%0% 25%)'}}
           animate={{
             rotate: [0360];
             scale: [1.21];
-            opacity: [0.30.60.3],
-          }}
+            opacity: [0.30.60.3]}}
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         {/* Triangle */}
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30",
           style={{
-            clipPath: 'polygon(50% 0% 100% 100%)',
-          }}
+            clipPath: 'polygon(50% 0% 100% 100%)'}}
           animate={{
             rotate: [360];
             scale: [1.31];
-            opacity: [0.30.70.3],
-          }}
+            opacity: [0.30.70.3]}}
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         {/* Circle */}
         <motion.div,
           className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full",
           animate={{
             scale: [1.51];
-            opacity: [0.20.80.2],
-          }}
+            opacity: [0.20.80.2]}}
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         {/* Square */}
         <motion.div,
@@ -159,13 +148,11 @@ const UltraFuturisticBackground: React.FC = () => {
           animate={{
             rotate: [0180360];
             scale: [1.1];
-            opacity: [0.30.60.3],
-          }}
+            opacity: [0.30.60.3]}}
           transition={{
             duration: 18;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
       </div>,
       {/* Energy Orbs */}
@@ -180,14 +167,12 @@ const UltraFuturisticBackground: React.FC = () => {
             animate={{
               scale: [0.520.5];
               opacity: [0.310.3];
-              y: [0-20],
-            }}
+              y: [0-20]}}
             transition={{
               duration: 3 + i * 0.5;
               repeat: Infinity;
               ease: "easeInOut";
-              delay: i * 0.3,
-            }}
+              delay: i * 0.3}}
           />))}
       </div>,
       {/* Quantum Wave Effects */}
@@ -200,14 +185,12 @@ const UltraFuturisticBackground: React.FC = () => {
               top: `${20 + (i * 15)}%`}}
             animate={{
               x: ['-100%'100%'];
-              opacity: [010],
-            }}
+              opacity: [010]}}
             transition={{
               duration: 8 + i * 2;
               repeat: Infinity;
               ease: "linear";
-              delay: i * 1.5,
-            }}
+              delay: i * 1.5}}
           />))}
       </div>,
       {/* Neon Glow Effects */}
@@ -224,18 +207,15 @@ const UltraFuturisticBackground: React.FC = () => {
             className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent",
             style={{
               left: `${Math.random() * 100}%`;
-              top: '-2rem',
-            }}
+              top: '-2rem'}}
             animate={{
               y: ['0vh'100vh'];
-              opacity: [010],
-            }}
+              opacity: [010]}}
             transition={{
               duration: 4 + Math.random() * 3;
               repeat: Infinity;
               ease: "linear";
-              delay: Math.random() * 5,
-            }}
+              delay: Math.random() * 5}}
           />))}
       </div>,
       {/* Quantum Entanglement Lines */}
@@ -260,13 +240,11 @@ const UltraFuturisticBackground: React.FC = () => {
               opacity="0.3",
               animate={{
                 opacity: [0.10.50.1];
-                strokeDasharray: [0100],
-              }}
+                strokeDasharray: [0100]}}
               transition={{
                 duration: 6 + i * 0.5;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />))}
         </svg>,
       </div>,

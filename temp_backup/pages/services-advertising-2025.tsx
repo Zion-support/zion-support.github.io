@@ -170,8 +170,7 @@ export default function ServicesAdvertising20o25() {
                 className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'grid',
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
@@ -180,8 +179,7 @@ export default function ServicesAdvertising20o25() {
                 className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'list',
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -199,8 +197,7 @@ export default function ServicesAdvertising20o25() {
                       ? 'bg-gradient-to-r ' +,
                         category.color +,
                         ' text-white shadow-lg',
-                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
@@ -560,8 +557,7 @@ export default function ServicesAdvertising20o25() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}
 ,
 // Missing icon components,
 const Phone = ({ className }: { className?: string }) => (

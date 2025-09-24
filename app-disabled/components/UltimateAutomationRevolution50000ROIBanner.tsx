@@ -9,8 +9,7 @@ interface ContentItem {
   roi: string,
   savings: string,
   readingTime: string,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0),
@@ -24,8 +23,7 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       roi: '50,0o00%';
       savings: '$2.5 Trillion';
       readingTime: '45 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-ultimate-automation-50o000-roi';
       title: 'Fortune 50o0 Ultimate Automation Success: $2.5 Trillion Annual Savings - 50,0o00% ROI Success Story';
@@ -34,8 +32,7 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       roi: '50,0o00%';
       savings: '$2.5 Trillion';
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ultimate-automation-implementation-guide-50o000-roi';
       title: 'Ultimate Automation Implementation Guide 20o25: Complete Roadmap to 50,0o00% ROI';
@@ -44,8 +41,7 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       roi: '50,0o00%';
       savings: '$2.5 Trillion';
       readingTime: '60 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -66,16 +62,14 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,

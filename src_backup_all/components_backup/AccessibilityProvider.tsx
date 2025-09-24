@@ -13,8 +13,7 @@ interface AccessibilityContextType {
   showSkipLinks: boolean,
   setShowSkipLinks: (show: boolean) => void,
   voiceNavigation: boolean,
-  toggleVoiceNavigation: () => void,
-}
+  toggleVoiceNavigation: () => void}
 ,
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined),
 export const useAccessibility = () => {
@@ -23,8 +22,7 @@ export const useAccessibility = () => {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')}
   return context};
 interface AccessibilityProviderProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false),
@@ -156,8 +154,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleHighContrast}
               className={`p-2 rounded-md transition-colors duration-30o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
-                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10',
-              }`}
+                highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'}`}
               aria-label="Toggle high contrast",
               title="Toggle high contrast (Alt + H)">,
               <Braille className="w-4 h-4"  />,
@@ -165,8 +162,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <button
               onClick={toggleReducedMotion}
               className={`p-2 rounded-md transition-colors duration-30o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan ${
-                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10',
-              }`}
+                reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'}`}
               aria-label="Toggle reduced motion",
               title="Toggle reduced motion">,
               {reducedMotion ? 'RM' : 'M'}
@@ -212,8 +208,7 @@ export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = 
       if (event.shiftKey) {
         if (document.activeElement === firstElement) {
           event.preventDefault(),
-          lastElement.focus(),
-        }
+          lastElement.focus()}
       } else {
         if (document.activeElement === lastElement) {
           event.preventDefault(),

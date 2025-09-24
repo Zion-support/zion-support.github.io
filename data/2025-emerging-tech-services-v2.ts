@@ -2,7 +2,6 @@ import React from 'react';
 
 export interface EmergingTechService {
 export interface EmergingTechService {
-,
   id: string,
   name: string,
   tagline: string,
@@ -349,8 +348,7 @@ export interface EmergingTechService {
     rating: 4.9,
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
-    growthRate: '75% annually',
-  }
+    growthRate: '75% annually'}
 ,
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';
     ];
@@ -390,8 +388,7 @@ export interface EmergingTechService {
     rating: 4.9,
     reviews: 45,
     marketSize: '$3.5B space mining market',
-    growthRate: '85% annually',
-  };
+    growthRate: '85% annually'};
   {
     id: 'quantum-bio-computing-platform',
     name: 'Quantum Bio-Computing Platform',
@@ -479,8 +476,7 @@ export interface EmergingTechService {
     monthly: number, yearly: number;
     currency: string, trialDays: number;
     setupTime: string;
-    enterprise: number,
-    };
+    enterprise: number};
     features: string[], benefits: string[];
   targetAudience: string[], marketPosition: string;
   competitors: string[], techStack: string[];
@@ -492,8 +488,7 @@ export interface EmergingTechService {
   popular: boolean, launchDate: string;
   customers: number, rating: number;
   reviews: number, marketSize: string;
-  growthRate: string,
-}
+  growthRate: string}
 ],      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'],
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
@@ -507,8 +502,7 @@ export interface EmergingTechService {
     reviews: 65,
     market_size: '$35B autonomous vehicle market';
     growth_rate: '75% annually',
-    growthRate: '75% annually',
-  }
+    growthRate: '75% annually'}
 ],
   id: string;
   name: string;
@@ -521,8 +515,7 @@ export interface EmergingTechService {
     currency: string;
     trialDays: number;
     setupTime: string;
-    enterprise: number,
-  };
+    enterprise: number};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -545,11 +538,9 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
   marketSize: string;
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export interface EmergingTechService {
-,
   id: string;
   name: string;
   tagline: string;
@@ -561,8 +552,7 @@ export interface EmergingTechService {
     currency: string;
     trialDays: number;
     setupTime: string;
-    enterprise: number,
-  };
+    enterprise: number};
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -585,9 +575,7 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
   marketSize: string;
-  growthRate: string,
-}
-,
+  growthRate: string}
 ,
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
@@ -602,8 +590,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       currency: 'USD';
       trialDays: 7;
       setupTime: '24 hours';
-      enterprise: 4999,
-    };
+      enterprise: 4999};
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'];
@@ -631,8 +618,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9;
     reviews: 45;
     marketSize: '$3.5B space mining market';
-    growthRate: '85% annually',
-  };
+    growthRate: '85% annually'};
   {
     id: 'quantum-bio-computing-platform';
     name: 'Quantum Bio-Computing Platform';
@@ -645,8 +631,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '8 hours';
-      enterprise: 2499,
-    };
+      enterprise: 2499};
     features: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';
       'Custom biological modelsAPI for research'];
@@ -674,8 +659,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8;
     reviews: 85;
     marketSize: '$12B quantum bio-computing market';
-    growthRate: '65% annually',
-  };
+    growthRate: '65% annually'};
   {
     id: 'brain-computer-interface-platform';
     name: 'Brain-Computer Interface Platform';
@@ -688,8 +672,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '6 hours';
-      enterprise: 1599,
-    };
+      enterprise: 1599};
     features: [
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';
       'Custom neural modelsAPI for developers'];
@@ -717,8 +700,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.7;
     reviews: 120;
     marketSize: '$18B BCI market';
-    growthRate: '55% annually',
-  };
+    growthRate: '55% annually'};
   {
     id: 'quantum-energy-platform';
     name: 'Quantum Energy Platform';
@@ -731,8 +713,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '6 hours';
-      enterprise: 1999,
-    };
+      enterprise: 1999};
     features: [
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';
       'Custom energy modelsAPI for energy systems'];
@@ -760,8 +741,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8;
     reviews: 95;
     marketSize: '$25B quantum energy market';
-    growthRate: '45% annually',
-  };
+    growthRate: '45% annually'};
   {
     id: 'autonomous-vehicle-ai-platform';
     name: 'Autonomous Vehicle AI Platform';
@@ -774,8 +754,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '12 hours';
-      enterprise: 2999,
-    };
+      enterprise: 2999};
     features: [
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';
       'Custom AI modelsAPI for vehicles'];
@@ -803,6 +782,5 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9;
     reviews: 65;
     marketSize: '$35B autonomous vehicle market';
-    growthRate: '75% annually',
-  }
+    growthRate: '75% annually'}
 ],

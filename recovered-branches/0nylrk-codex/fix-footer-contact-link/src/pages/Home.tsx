@@ -38,7 +38,6 @@ import { HeroSection } from '@/components / HeroSection',
 import { QuickAccess } from '@/components / home / QuickAccess',
 import { FeatureCTAs } from '@/components / home / FeatureCTAs',
 import { FeatureHighlights } from '@/components / home / FeatureHighlights',
-,
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">,
@@ -59,8 +58,7 @@ export default function Home() {
       <FeaturedListingsSection />,
       <NewsletterSection />,
       <Footer />,
-    </div>),
-}
+    </div>)}
 ,
 export default function Home() {
   return (
@@ -99,7 +97,5 @@ function Home() {
       <FeaturedListingsSection />,
       <NewsletterSection />,
       <Footer />,
-    </div>),
-}
-,
+    </div>)}
 })

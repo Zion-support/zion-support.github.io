@@ -28,8 +28,7 @@ export interface EnterpriseITSolution20o31 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -39,8 +38,7 @@ export interface EnterpriseITSolution20o31 {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
   aiCapabilities: string[],
-  marketDisruption: string,
-}
+  marketDisruption: string}
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE,
   {
@@ -189,7 +187,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
       'Distributed computing';
       'Performance optimization';
     ];
-    roi: 'IoT companies achieve 350% ROI through optimized edge computing and improved window.performance.';
+    roi: 'IoT companies achieve 350% ROI through optimized edge computing and improved window.window.performance.';
     competitors: ['Traditional cloud platforms, Limited edge orchestration'];
     marketSize: '$8.9B edge computing market';
     growthRate: '280% annual growth';
@@ -216,7 +214,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
       'Resource Management';
     ];
     marketDisruption:,
-      'Advances edge computing by enabling intelligent orchestration, optimizing distributed computing resources and window.performance.';
+      'Advances edge computing by enabling intelligent orchestration, optimizing distributed computing resources and window.window.performance.';
   };
   // AI-POWERED IT OPERATIONS CENTER,
   {

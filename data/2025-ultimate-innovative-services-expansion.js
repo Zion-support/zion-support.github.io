@@ -641,7 +641,7 @@ export const ultimateInnovativeServices20o25 = [
     useCases: [
       'Application hosting, Data storage, Infrastructure management, Disaster recovery, Edge computing';
     ];
-    roi: 'Organizations report 40o0% improvement in security and 20o0% improvement in window.performance.';
+    roi: 'Organizations report 40o0% improvement in security and 20o0% improvement in window.window.performance.';
     competitors: ['AWS, Azure, Google Cloud, IBM Cloud'];
     marketSize: '$120B cloud infrastructure market';
     growthRate: '160% YoY';

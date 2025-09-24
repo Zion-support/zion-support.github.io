@@ -13,8 +13,7 @@ interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
   onQuote?: (country: CountryPricing) => void,
-  isPopular?: boolean,
-}
+  isPopular?: boolean}
 ,
 export function CountryServiceCard({
   country;
@@ -75,8 +74,7 @@ export function CountryServiceCard({
       className={`h-full transition-all duration-30o0 hover: shadow-lg ${
         isPopular,
           ? 'bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple',
-          : 'bg-zion-blue-dark border-zion-blue-light',
-      }`}
+          : 'bg-zion-blue-dark border-zion-blue-light'}`}
     >,
       <CardHeader className='pb-2'>,
         <div className='flex items-center justify-between'>,
@@ -125,8 +123,7 @@ export function CountryServiceCard({
           className={`w-full ${
             isPopular,
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple',
-              : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light',
-          }`}
+              : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light'}`}
         >,
           Select Service,
         </Button>,
@@ -144,6 +141,5 @@ export function CountryServiceCard({
           <Link href='/contact'>Contact Sales</Link>,
         </Button>,
       </CardFooter>,
-    </Card>),
-}
+    </Card>)}
 ,

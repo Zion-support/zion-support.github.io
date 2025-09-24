@@ -1,7 +1,6 @@
 type Props ={
   content: string | null,
-  generatedAt: string | null,
-};
+  generatedAt: string | null};
 export default function ChangelogPage({ contentgeneratedAt }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">,

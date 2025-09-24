@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   firstContentfulPaint: number,
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
-  firstInputDelay: number,
-}
+  firstInputDelay: number}
 ,
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -16,18 +15,17 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const measurePerformance = () => {
       if ('performance' in window) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-        const paintEntries = window.performance.getEntriesByType('paint'),
-        const layoutShiftEntries = window.performance.getEntriesByType('layout-shift'),
-        const firstInputEntries = window.performance.getEntriesByType('first-input'),
+        const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const paintEntries = window.window.performance.getEntriesByType('paint'),
+        const layoutShiftEntries = window.window.performance.getEntriesByType('layout-shift'),
+        const firstInputEntries = window.window.performance.getEntriesByType('first-input'),
         const newMetrics: PerformanceMetrics ={
           loadTime: navigation.loadEventEnd - navigation.loadEventStart;
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
           largestContentfulPaint: 0, // Will be updated by LCP observer,
           cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + (entry as any).value, 0);
-          firstInputDelay: firstInputEntries[0]?.processingStart ? (firstInputEntries[0] as any).processingStart - (firstInputEntries[0] as any).startTime : 0,
-        };
+          firstInputDelay: firstInputEntries[0]?.processingStart ? (firstInputEntries[0] as any).processingStart - (firstInputEntries[0] as any).startTime : 0};
         setMetrics(newMetrics)}
     };
     // Measure after page load,
@@ -68,8 +66,7 @@ const PerformanceMonitor: React.FC = () => {
       default: ,
         score = 75,
         color = 'text-blue-40o0',
-        label = 'Good',
-    }
+        label = 'Good'}
 ,
     return { score, color, label };
   };

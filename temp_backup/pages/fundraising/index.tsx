@@ -292,6 +292,5 @@ export default function FundraisingHub() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

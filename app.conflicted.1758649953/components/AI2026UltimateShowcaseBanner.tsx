@@ -6,6 +6,5 @@ export default function AI20o26UltimateShowcaseBanner() {
         <h2 className='text-2xl font-bold'>AI 20o26: Ultimate Showcase</h2>,
         <p className='opacity-90'>Highlights of our most impactful AI work.</p>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -9,8 +9,7 @@ export default function UltraAdvancedHero20o26V2() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const featuredServices = [
     {
       name: 'AI Consciousness Platform';
@@ -18,32 +17,28 @@ export default function UltraAdvancedHero20o26V2() {
       icon: <BrainCircuit className="w-8 h-8"  />;
       category: 'AI Consciousness';
       price: '$4,999/mo';
-      color: 'from-indigo-50o0 to-purple-50o0',
-    };
+      color: 'from-indigo-50o0 to-purple-50o0'};
     {
       name: 'Quantum Financial Trading';
       description: 'Next-generation quantum AI for institutional trading';
       icon: <Atom className="w-8 h-8"  />;
       category: 'Quantum AI';
       price: '$2,499/mo';
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       name: 'AI Healthcare Diagnostics';
       description: 'Advanced AI-powered medical diagnostics platform';
       icon: <Heart className="w-8 h-8"  />;
       category: 'Healthcare AI';
       price: '$1,899/mo';
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       name: 'Autonomous Robotics';
       description: 'AI-powered autonomous robotics for industry 4.0';
       icon: <Bot className="w-8 h-8"  />;
       category: 'Robotics';
       price: '$3,799/mo';
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   const stats = [
     { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  /> };
@@ -266,6 +261,5 @@ export default function UltraAdvancedHero20o26V2() {
           <Star className="w-6 h-6 text-white"  />,
         </Link>,
       </motion.div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -10,8 +10,7 @@ interface PricingTier {
   popular?: boolean,
   icon: React.ComponentType<any>,
   ctaText: string,
-  ctaLink: string,
-}
+  ctaLink: string}
 ,
 const pricingTiers: PricingTier[] = [
   {
@@ -28,8 +27,7 @@ const pricingTiers: PricingTier[] = [
       "1TB Storage"];
     icon: Zap;
     ctaText: "Get Started";
-    ctaLink: "/contact",
-  };
+    ctaLink: "/contact"};
   {
     name: "Professional";
     price: "$149";
@@ -47,8 +45,7 @@ const pricingTiers: PricingTier[] = [
     popular: true;
     icon: Star;
     ctaText: "Start Free Trial";
-    ctaLink: "/contact",
-  };
+    ctaLink: "/contact"};
   {
     name: "Enterprise";
     price: "$499";
@@ -67,8 +64,7 @@ const pricingTiers: PricingTier[] = [
       "On-premise Options"];
     icon: Crown;
     ctaText: "Contact Sales";
-    ctaLink: "/contact",
-  }
+    ctaLink: "/contact"}
 ],
 export default function AdvancedPricing() {
   return (
@@ -134,8 +130,7 @@ export default function AdvancedPricing() {
                 className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-20o0 ${
                   tier.popular,
                     ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white hover: from-purple-60o0 hover:to-blue-60o0',
-                    : 'bg-white/10 text-white border border-white/30 hover:bg-white/20',
-                }`}
+                    : 'bg-white/10 text-white border border-white/30 hover:bg-white/20'}`}
                 whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >,
@@ -155,5 +150,4 @@ export default function AdvancedPricing() {
           </a>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

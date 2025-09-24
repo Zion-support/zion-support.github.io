@@ -26,8 +26,7 @@ const PersonalizedContentRecommendations = () => {
       new: true;
       readingTime: "12 min read";
       difficulty: "Intermediate";
-      popularity: 95,
-    };
+      popularity: 95};
     {
       id: 2;
       title: "Quantum AI Business Revolution 20o25";
@@ -39,8 +38,7 @@ const PersonalizedContentRecommendations = () => {
       new: true;
       readingTime: "15 min read";
       difficulty: "Advanced";
-      popularity: 92,
-    };
+      popularity: 92};
     {
       id: 3;
       title: "AI Autonomous Business Operations 20o25";
@@ -52,8 +50,7 @@ const PersonalizedContentRecommendations = () => {
       new: true;
       readingTime: "18 min read";
       difficulty: "Advanced";
-      popularity: 88,
-    };
+      popularity: 88};
     {
       id: 4;
       title: "AI Implementation Enterprise Guide 20o25";
@@ -65,8 +62,7 @@ const PersonalizedContentRecommendations = () => {
       new: true;
       readingTime: "25 min read";
       difficulty: "Beginner";
-      popularity: 90,
-    };
+      popularity: 90};
     {
       id: 5;
       title: "Manufacturing AI Success Story";
@@ -78,8 +74,7 @@ const PersonalizedContentRecommendations = () => {
       new: false;
       readingTime: "8 min read";
       difficulty: "Beginner";
-      popularity: 85,
-    };
+      popularity: 85};
     {
       id: 6;
       title: "Financial Services AI Transformation";
@@ -91,8 +86,7 @@ const PersonalizedContentRecommendations = () => {
       new: false;
       readingTime: "10 min read";
       difficulty: "Intermediate";
-      popularity: 87,
-    };
+      popularity: 87};
     {
       id: 7;
       title: "AI Security Best Practices 20o25";
@@ -104,8 +98,7 @@ const PersonalizedContentRecommendations = () => {
       new: false;
       readingTime: "14 min read";
       difficulty: "Intermediate";
-      popularity: 82,
-    };
+      popularity: 82};
     {
       id: 8;
       title: "Cloud Infrastructure for AI 20o25";
@@ -117,8 +110,7 @@ const PersonalizedContentRecommendations = () => {
       new: false;
       readingTime: "16 min read";
       difficulty: "Intermediate";
-      popularity: 80,
-    }
+      popularity: 80}
   ],
   const handleInterestToggle = (interestId: string) => {
     setUserInterests(prev =>,
@@ -189,8 +181,7 @@ const PersonalizedContentRecommendations = () => {
                 className={`p-4 rounded-xl border-2 transition-all duration-30o0 ${
                   userInterests.includes(option.id),
                     ? 'border-purple-50o0 bg-purple-10o0 text-purple-80o0',
-                    : 'border-gray-20o0 bg-white text-gray-70o0 hover: border-purple-30o0 hover:bg-purple-50',
-                }`}
+                    : 'border-gray-20o0 bg-white text-gray-70o0 hover: border-purple-30o0 hover:bg-purple-50'}`}
               >,
                 <div className="text-2xl mb-2">{option.icon}</div>,
                 <div className="text-sm font-medium">{option.label}</div>,

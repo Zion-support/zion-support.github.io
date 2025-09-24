@@ -15,6 +15,5 @@ export default function DocsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

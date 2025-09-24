@@ -30,15 +30,13 @@ export interface NextGenInnovation2025 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics,
   {

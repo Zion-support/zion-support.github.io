@@ -444,6 +444,5 @@ export default function BlogPost() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

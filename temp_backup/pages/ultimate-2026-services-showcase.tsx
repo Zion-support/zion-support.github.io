@@ -18,8 +18,7 @@ export default function Ultimate2026ServicesShowcase() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all services,
   const allServices = [
     ...ultimate2026Services;
@@ -82,8 +81,7 @@ export default function Ultimate2026ServicesShowcase() {
         filtered.sort((ab) => b.rating - a.rating),
         break,
       default: ,
-        break,
-    }
+        break}
 ,
     return filtered}[allServicesearchTermselectedCategoryselectedPriceRangesortBy]),
   const featuredServices = allServices.filter(service => service.popular).slice(06),

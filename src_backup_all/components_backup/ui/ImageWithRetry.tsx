@@ -7,8 +7,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {
   /** Source to use if the main src fails */,
   fallbackSrc?: string,
   /** CSS class for the retry button */,
-  retryClassName?: string,
-}
+  retryClassName?: string}
 ,
 /**,
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.,

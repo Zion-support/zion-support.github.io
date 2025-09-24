@@ -245,6 +245,5 @@ export default function ResourcesPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

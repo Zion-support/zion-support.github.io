@@ -34,6 +34,5 @@ export default function EvalReadyAIPipelinesPage() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

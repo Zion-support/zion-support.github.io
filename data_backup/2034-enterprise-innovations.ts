@@ -302,7 +302,7 @@ website: string,export const enterprise20o34Services: EnterpriseService20o34[] =
   quantum-blockchain-infrastructure';
     "name": 'Quantum Blockchain Infrastructure Platform;
     description:;
-  Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and window.performance.';
+  Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and window.window.performance.';
     "category": 'Blockchain & Quantum;
     price:;
   $39,999/month';

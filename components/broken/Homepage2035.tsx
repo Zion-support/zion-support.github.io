@@ -34,8 +34,7 @@ const Homepage2035: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
-    }800),
+      setIsVisible(true)}800),
     return () => clearTimeout(timer)}[]),
   const fadeInUp = {
     initial: { opacity: 0, y: 60 };
@@ -46,8 +45,7 @@ const Homepage2035: React.FC = () => {
     animate: {
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const backgroundVariants = {
@@ -179,8 +177,7 @@ const Homepage2035: React.FC = () => {
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                     activeCategory === category.id,
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400',
-                      : 'border-gray-600 text-gray-300 hover: border-cyan-400 hover:text-cyan-400',
-                  }`}
+                      : 'border-gray-600 text-gray-300 hover: border-cyan-400 hover:text-cyan-400'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
@@ -239,33 +236,27 @@ const Homepage2035: React.FC = () => {
                 {
                   icon: <Brain className="w-12 h-12" />;
                   title: 'AI-Powered Solutions';
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights',
-                };
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'};
                 {
                   icon: <Shield className="w-12 h-12" />;
                   title: 'Enterprise Security';
-                  description: 'Military-grade security protocols and compliance standards to protect your business',
-                };
+                  description: 'Military-grade security protocols and compliance standards to protect your business'};
                 {
                   icon: <Rocket className="w-12 h-12" />;
                   title: 'Space Technology';
-                  description: 'Pioneering space tech solutions for the next generation of innovation',
-                };
+                  description: 'Pioneering space tech solutions for the next generation of innovation'};
                 {
                   icon: <Atom className="w-12 h-12" />;
                   title: 'Quantum Computing';
-                  description: 'Access to quantum computing power for complex problem-solving',
-                };
+                  description: 'Access to quantum computing power for complex problem-solving'};
                 {
                   icon: <Cloud className="w-12 h-12" />;
                   title: 'Cloud-Native';
-                  description: 'Built for the cloud with scalabilityreliabilityand performance in mind',
-                };
+                  description: 'Built for the cloud with scalabilityreliabilityand performance in mind'};
                 {
                   icon: <Target className="w-12 h-12" />;
                   title: 'Results-Driven';
-                  description: 'Focused on delivering measurable business outcomes and ROI',
-                }
+                  description: 'Focused on delivering measurable business outcomes and ROI'}
               ].map((featureindex) => (
                 <motion.div,
                   key={index}
@@ -317,6 +308,5 @@ const Homepage2035: React.FC = () => {
           </div>,
         </section>,
       </UltraFuturisticBackground2035>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage2035;

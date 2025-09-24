@@ -12,8 +12,7 @@ interface MilestoneSuggestionsProps {
   startDate: Date,
   endDate?: Date,
   projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void,
-}
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void}
 ,
 export function MilestoneSuggestions({
   projectName;
@@ -29,8 +28,7 @@ export function MilestoneSuggestions({
       scope: `${projectName}: ${scopeSummary}`;
       startDate: startDate.toISOString();
       endDate: endDate ? endDate.toISOString() : null;
-      projectType: projectType || "Other",
-    };
+      projectType: projectType || "Other"};
     const milestones = await generateMilestones(input),
     if (milestones.length > 0) {
       setShowSuggestions(true),
@@ -40,8 +38,7 @@ export function MilestoneSuggestions({
   };
   const formatDate = (dateString: string) => {
     try {
-      return format(parseISO(dateString)'MMM ddyyyy'),
-    } catch (error) {
+      return format(parseISO(dateString)'MMM ddyyyy')} catch (error) {
       return dateString}
   };
   return (

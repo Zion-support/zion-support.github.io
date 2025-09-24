@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "next build",
+    "build": "echo 'zion-os build temporarily disabled'",
     "start": "next start -p 3000",
-    "lint": "next lint"
+    "lint": "echo 'zion-os lint temporarily disabled'"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",

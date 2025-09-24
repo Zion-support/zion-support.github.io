@@ -9,13 +9,11 @@ export default function AIHealthcareAnalyticsPlatform() {
     {
       icon: <Heart className="w-6 h-6"  />;
       title: 'Patient Health Analytics';
-      description: 'Comprehensive patient health monitoring and predictive analytics for early disease detection and prevention.',
-    };
+      description: 'Comprehensive patient health monitoring and predictive analytics for early disease detection and prevention.'};
     {
       icon: <Activity className="w-6 h-6"  />;
       title: 'Clinical Decision Support';
-      description: 'AI-powered clinical decision support systems that provide evidence-based recommendations for healthcare providers.',
-    };
+      description: 'AI-powered clinical decision support systems that provide evidence-based recommendations for healthcare providers.'};
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'Population Health Management';
@@ -23,18 +21,15 @@ export default function AIHealthcareAnalyticsPlatform() {
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Predictive Diagnostics';
-      description: 'Machine learning algorithms that predict disease progression and treatment outcomes with high accuracy.',
-    };
+      description: 'Machine learning algorithms that predict disease progression and treatment outcomes with high accuracy.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Healthcare Security & Compliance';
-      description: 'HIPAA-compliant data security with advanced encryption and privacy protection for patient information.',
-    };
+      description: 'HIPAA-compliant data security with advanced encryption and privacy protection for patient information.'};
     {
       icon: <BarChart3 className="w-6 h-6"  />;
       title: 'Real-Time Health Monitoring';
-      description: 'Continuous health monitoring with real-time alerts and automated intervention recommendations.',
-    }
+      description: 'Continuous health monitoring with real-time alerts and automated intervention recommendations.'}
   ],
   const benefits = [
     'Improve patient outcomes by 40%';
@@ -233,5 +228,4 @@ export default function AIHealthcareAnalyticsPlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

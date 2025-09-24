@@ -22,8 +22,7 @@ interface ApplicationsTableProps {
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: stringnewStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void,
-}
+  onViewScore: (application: JobApplication) => void}
 ,
 export function ApplicationsTable({
   applications,
@@ -35,14 +34,12 @@ export function ApplicationsTable({
   const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null),
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
-    setHireModalOpen(true),
-  };
+    setHireModalOpen(true)};
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed,
     toast({
       title: "Hiring process initiated";
-      description: "Offer has been sent to the talent.",
-    })};
+      description: "Offer has been sent to the talent."})};
   return (
     <>,
       <div className="rounded-md border">,

@@ -160,6 +160,5 @@ const AI20o26ContentShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o26ContentShowcaseBanner;

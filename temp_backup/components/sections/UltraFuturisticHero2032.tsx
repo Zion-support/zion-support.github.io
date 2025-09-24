@@ -8,8 +8,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { number: '10o00+'label: 'Innovative Services'icon: Sparklescolor: 'from-cyan-40o0 to-blue-40o0' };
   { number: '24/7'label: 'Expert Support'icon: Shieldcolor: 'from-purple-40o0 to-pink-40o0' };
@@ -23,24 +22,21 @@ const featuredServices = [
     price: '$19,999/month';
     icon: Brain;
     color: 'from-violet-60o0 to-purple-60o0';
-    href: '/ai-consciousness-evolution-platform',
-  };
+    href: '/ai-consciousness-evolution-platform'};
   {
     name: 'Space Mining Automation';
     description: 'Automated asteroid mining';
     price: '$45,999/month';
     icon: Rocket;
     color: 'from-teal-60o0 to-emerald-60o0';
-    href: '/space-mining-automation-platform',
-  };
+    href: '/space-mining-automation-platform'};
   {
     name: 'Quantum Internet Security';
     description: 'Unbreakable encryption';
     price: '$15,999/month';
     icon: Shield;
     color: 'from-indigo-60o0 to-blue-60o0';
-    href: '/quantum-internet-security-gateway',
-  }
+    href: '/quantum-internet-security-gateway'}
 ],
 export default function UltraFuturisticHero20o32() {
   return (
@@ -234,5 +230,4 @@ export default function UltraFuturisticHero20o32() {
           <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform"  />,
         </Link>,
       </motion.div>,
-    </section>),
-}
+    </section>)}

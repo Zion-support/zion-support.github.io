@@ -25,22 +25,19 @@ const NewContent20o25Banner: React.FC = () => {
       type: "Blog Post";
       metric: "340% ROI";
       icon: TrendingUp;
-      color: "from-blue-50o0 to-blue-60o0",
-    };
+      color: "from-blue-50o0 to-blue-60o0"};
     {
       title: "Healthcare AI: $20o0M System Success";
       type: "Case Study";
       metric: "30o0% ROI";
       icon: Users;
-      color: "from-green-50o0 to-green-60o0",
-    };
+      color: "from-green-50o0 to-green-60o0"};
     {
       title: "AI Implementation Guide 20o25";
       type: "Resource";
       metric: "50o0+ Success Stories";
       icon: Lightbulb;
-      color: "from-purple-50o0 to-purple-60o0",
-    }
+      color: "from-purple-50o0 to-purple-60o0"}
   ],
   const stats = [
     { value: "340%", label: "Average ROI", icon: TrendingUp };

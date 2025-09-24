@@ -28,7 +28,6 @@ import { SEO } from '@/components/SEO';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-,
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
@@ -54,8 +53,7 @@ function VideoCall() {
       id: 'user-1',
       name: 'You',
       isVideoEnabled: true,
-      isMuted: false,
-    }
+      isMuted: false}
   ]),
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type,
@@ -76,8 +74,7 @@ export default function VideoCall() {
       id: 'user-1';
       name: 'You';
       isVideoEnabled: true;
-      isMuted: false,
-    }
+      isMuted: false}
 ,
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -88,11 +85,9 @@ export default function VideoCall() {
       toast && toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`})}, 1500)};
   const handleLeaveCall = () => {
-,
     setHasJoined(false),
     toast && toast.info("Call ended", {
-      description: "You have left the meeting",
-    }),
+      description: "You have left the meeting"}),
   const handleJoinCall = () => {
     setIsJoining(true);
     // Simulate connection delay,
@@ -105,8 +100,7 @@ export default function VideoCall() {
   const handleLeaveCall = () => {
     setHasJoined(false);
     toast.info("Call ended", {
-      description: "You have left the meeting",
-    })});
+      description: "You have left the meeting"})});
     // Navigate back after a short delay,
     setTimeout(() => {
       navigate(-1)}, 1500)}
@@ -119,7 +113,6 @@ export default function VideoCall() {
     ],
     const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)],
     if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {
-,
       setParticipants(prev => [...prev, randomUser]),
       toast(`${randomUser && randomUser.name} joined the call`)}
   }
@@ -148,8 +141,7 @@ export default function VideoCall() {
   const handleLeaveCall = () => {
     setHasJoined(false);
     toast.info("Call ended", {
-      description: "You have left the meeting",
-    });
+      description: "You have left the meeting"});
     // Navigate back after a short delay,
     setTimeout(() => {
       navigate(-1)}, 1500)};
@@ -210,8 +202,7 @@ export default function VideoCall() {
   const handleLeaveCall = () =>: any {
     setHasJoined (false),
     toast.info ("Call ended", {
-      description: "You have left the meeting",
-    }),
+      description: "You have left the meeting"}),
     // Navigate back after a short delay,
     set_timeout (() => {
       navigate (-1)}, 1500)}
@@ -269,7 +260,5 @@ export default function VideoCall() {
       id: 'user - 1';
       name: 'You';
       isVideoEnabled: true;
-      is_muted: false,
-    }
-  ]),
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+      is_muted: false}
+  ])>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

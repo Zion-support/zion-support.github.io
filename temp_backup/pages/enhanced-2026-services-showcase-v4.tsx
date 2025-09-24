@@ -7,8 +7,7 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <>,
       <Head>,
@@ -58,8 +57,7 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {
                 "email": "kleber@ziontechgroup.com"};
               "sameAs": [
                 "https://ziontechgroup.com";
-                "https: //github.com/Zion-Holdings"],
-            })}}
+                "https: //github.com/Zion-Holdings"]})}}
          />,
       </Head>,
       <UltraQuantumHolographicBackground
@@ -151,5 +149,4 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {
         </footer>,
         </div>,
       </UltraQuantumHolographicBackground>,
-    </>),
-}
+    </>)}

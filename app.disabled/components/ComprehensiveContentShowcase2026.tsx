@@ -130,8 +130,7 @@ const ComprehensiveContentShowcase20o26 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -142,8 +141,7 @@ const ComprehensiveContentShowcase20o26 = () => {
       case 'resource':,
         return 'Resource Guide',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -158,8 +156,7 @@ const ComprehensiveContentShowcase20o26 = () => {
       case 'Global Success':,
         return Users,
       default:,
-        return FileText,
-    }
+        return FileText}
   };
   return (
     <div className='py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
@@ -188,8 +185,7 @@ const ComprehensiveContentShowcase20o26 = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-60o0 hover: bg-blue-50 hover:text-blue-60o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-blue-50 hover:text-blue-60o0 border border-gray-20o0'}`}
             >,
               {tab.label}
               <span className='ml-2 px-2 py-1 bg-white/20 text-xs rounded-full'>,
@@ -280,8 +276,7 @@ const ComprehensiveContentShowcase20o26 = () => {
                         <ArrowRight className='w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform' />,
                       </Link>,
                     </div>,
-                  </div>),
-              })}
+                  </div>)})}
           </div>,
         </div>,
         {/* Additional Content Grid */}
@@ -342,8 +337,7 @@ const ComprehensiveContentShowcase20o26 = () => {
                           : 'Read More'}
                       <ArrowRight className='w-3 h-3 ml-1 group-hover: translate-x-1 transition-transform' />,
                     </Link>,
-                  </div>),
-              })}
+                  </div>)})}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -393,6 +387,5 @@ const ComprehensiveContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveContentShowcase20o26;

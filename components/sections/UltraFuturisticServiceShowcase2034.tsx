@@ -83,19 +83,16 @@ class ErrorBoundary extends React.Component {
   Phone;
 } from 'lucide-react',
   Star, CheckCircle, ArrowRight, TrendingUp, Users,
-,
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone} from 'lucide-react',
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1,
-}
+  staggerChildren: 0.1}
 }
 > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )}</div> </motion.div> {
   /* Search and Filter */}<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
@@ -110,9 +107,7 @@ const serviceCategories = [
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
     services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20',
-  },  {    gradient: 'from-violet-500/20 to-indigo-500/20',
-  }
+    gradient: 'from-violet-500/20 to-indigo-500/20'},  {    gradient: 'from-violet-500/20 to-indigo-500/20'}
   {
     id: 'quantum-tech',
     title: ' Quantum & Emerging Tech',
@@ -121,10 +116,8 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-500',
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Quantum') |s.category.includes('Blockchain')),
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') |s.category.includes('Blockchain')),
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-  }
+    gradient: 'from-indigo-500/20 to-cyan-500/20'},  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') |s.category.includes('Blockchain')),
+    gradient: 'from-indigo-500/20 to-cyan-500/20'}
   {
     id: 'enterprise-it',
     title: ' Enterprise IT Solutions',
@@ -136,10 +129,8 @@ const serviceCategories = [
         s.category.includes('Security') |,
         s.category.includes('HR') |,
         s.category.includes('Project')),
-    gradient: 'from-blue-500/20 to-teal-500/20',
-  },  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project')),
-    gradient: 'from-blue-500/20 to-teal-500/20',
-  }
+    gradient: 'from-blue-500/20 to-teal-500/20'},  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project')),
+    gradient: 'from-blue-500/20 to-teal-500/20'}
   {
     id: 'business-automation',
     title: ' Business Automation',
@@ -151,10 +142,8 @@ const serviceCategories = [
         s.category.includes('E-commerce') |,
         s.category.includes('Marketing') |,
         s.category.includes('Finance')),
-    gradient: 'from-teal-500/20 to-green-500/20',
-  },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance')),
-    gradient: 'from-teal-500/20 to-green-500/20',
-  }
+    gradient: 'from-teal-500/20 to-green-500/20'},  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance')),
+    gradient: 'from-teal-500/20 to-green-500/20'}
   {
     id: 'robotics-automation',
     title: ' Robotics & Automation',
@@ -163,10 +152,8 @@ const serviceCategories = [
     color: 'from-green-500 to-yellow-500',
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Robotics') |s.category.includes('Edge')),
-    gradient: 'from-green-500/20 to-orange-500/20',
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') |s.category.includes('Edge')),
-    gradient: 'from-green-500/20 to-orange-500/20',
-  }
+    gradient: 'from-green-500/20 to-orange-500/20'},  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') |s.category.includes('Edge')),
+    gradient: 'from-green-500/20 to-orange-500/20'}
   {
     id: 'research-development',
     title: ' Research & Development',
@@ -175,10 +162,8 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500',
     services: aiEmergingTechServices.filter(
       s => s.category.includes('Drug') |s.category.includes('Climate')),
-    gradient: 'from-orange-500/20 to-pink-500/20',
-  }],    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate')),
-    gradient: 'from-orange-500/20 to-pink-500/20',
-  }
+    gradient: 'from-orange-500/20 to-pink-500/20'}],    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate')),
+    gradient: 'from-orange-500/20 to-pink-500/20'}
 ],
   Star;
   CheckCircle;
@@ -248,8 +233,7 @@ const serviceCategories = [
 }
 visible: {
   opacity: 1, transition: {
-  stagger_children: 0.1,
-}
+  stagger_children: 0.1}
 }
 > <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6" > Revolutionary Technology Services </h2> <p className="text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed" > Discover our comprehensive suite of cutting - edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )}</div> </motion.div> {
   /* Search and Filter */}<motion.div /> <Search className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 w - 5 h - 5 text - gray - 400" /> </div> {
@@ -358,8 +342,7 @@ const service_categories = [
             Discover our comprehensive suite of cutting - edge AI, quantum,
             computing, and emerging technology solutions. Each service is,
             designed to transform your business and propel you into the future.,
-          </p>,
-};
+          </p>};
   const itemVariants = {
     hidden: { opacity: 0, y: 20 };
         {/* Header */}
@@ -384,8 +367,7 @@ const service_categories = [
               {
                 label: 'Total Services',
                 value: allServices.length.toString(),
-                icon: Rocket,
-              }
+                icon: Rocket}
               { label: 'Happy Customers', value: '50K+', icon: Users }
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }].map((stat, index) => (        >,
@@ -633,8 +615,7 @@ const service_categories = [
                 className={`p - 6 rounded - xl border transition - all duration - 300 hover: scale - 105 cursor - pointer ${
                   selected_category === category.id,
                     ? 'border - cyan - 500 bg - cyan - 500 / 10',
-                    : 'border - white / 20 bg - white / 5 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5',
-                }`}
+                    : 'border - white / 20 bg - white / 5 hover:border - cyan - 500 / 50 hover:bg - cyan - 500 / 5'}`}
                 onClick={() =>,
                   setSelectedCategory(
                     category && category.id === selectedCategory ? 'all' : category && category.id)}
@@ -653,8 +634,7 @@ const service_categories = [
                     </p>,
                   </div>,
                 </div>,
-                <div className='text-sm text-gray-300'>                  {category && category.services.length} services available                    : 'border-white/20 bg-white/5 hover: border-cyan-500/50 hover:bg-cyan-500/5',
-                }`}
+                <div className='text-sm text-gray-300'>                  {category && category.services.length} services available                    : 'border-white/20 bg-white/5 hover: border-cyan-500/50 hover:bg-cyan-500/5'}`}
                 onClick={() => setSelectedCategory(category && category.id === selectedCategory ? 'all' : category && category.id)}
               >,
                 <div className="flex items-center space-x-3 mb-4">,

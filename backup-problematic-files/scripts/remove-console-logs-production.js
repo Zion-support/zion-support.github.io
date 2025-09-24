@@ -17,7 +17,7 @@ class ConsoleLogRemover {
   }
   log(message) {
     const timestamp = new Date().toISOString(),
-    console && // console.log(`[${timestamp}] ${message}`)}
+    console && // // console.log(`[${timestamp}] ${message}`)}
   async removeConsoleLogs() {
     this && this.log('🧹 Starting console && console.log removal from production code'),
     const files = glob && glob.sync('**/*.{js,jsx,ts,tsx}', {

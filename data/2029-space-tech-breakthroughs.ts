@@ -16,14 +16,12 @@ export interface SpaceTechBreakthroughService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   category: string,
   technology: string[],
   benefits: string[],
   useCases: string[],
-  spaceCapabilities: string[],
-}
+  spaceCapabilities: string[]}
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] =,
   [
     {

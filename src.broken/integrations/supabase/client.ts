@@ -41,8 +41,7 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
     isUsingUserProvided: isUsingUserProvidedSupabaseCredentials;
     envUrlActuallyProvided: !!envSupabaseUrl;
     envKeyActuallyProvided: !!envSupabaseAnonKey;
-    actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined',
-  }})}
+    actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'}})}
 ,
 // Enhanced helper function to check online status,
 async function checkOnline(): Promise<boolean> {

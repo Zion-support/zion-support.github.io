@@ -17,16 +17,14 @@ interface CartItem {
   id: string;
   name: string;
   price: number;
-  quantity: number,
-}
+  quantity: number}
 ,
 interface CheckoutForm {
   name: string;
   email: string;
   address: string;
   city: string;
-  country: string,
-}
+  country: string}
 ,
 export default function CheckoutV2() {
   const navigate = useNavigate();
@@ -68,8 +66,7 @@ export default function CheckoutV2() {
         if (payment.error) throw payment.error;
         safeStorage.removeItem('cart');
         navigate(`/orders/${result.id}`);
-        track('new-checkout-v2: conversion'),
-      }
+        track('new-checkout-v2: conversion')}
     } catch (err) {
       console.error('Payment failed', err);
     }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {Link} from "react-router-dom",
 import {Button} from "@/components/ui/button",
-,
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">,
@@ -16,8 +15,7 @@ export function EnterpriseCallToAction() {
       <p className="mt-4 text-zion-slate-light">,
         Need volume pricing or custom SLAs? Contact our enterprise sales team.,
       </p>,
-    </div>),
-}
+    </div>)}
   )),
 export function EnterpriseCallToAction() {
   return (
@@ -30,6 +28,5 @@ export function EnterpriseCallToAction() {
       <p className="mt-4 text-zion-slate-light">,
         Need volume pricing or custom SLAs? Contact our enterprise sales team.,
       </p>,
-    </div>),
-}
+    </div>)}
 >>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

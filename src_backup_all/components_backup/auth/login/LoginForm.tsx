@@ -246,6 +246,5 @@ export function LoginForm() {
           </Link>,
         </p>,
       </form>,
-    </Form>),
-}
+    </Form>)}
 ,

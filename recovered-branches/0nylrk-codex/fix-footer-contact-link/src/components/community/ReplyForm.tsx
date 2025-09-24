@@ -13,7 +13,6 @@ import { useState  } from './react',
 import { use_form  } from './react - hook - form',
 import { Button  } from '@/components / ui / button',
 import { Textarea  } from '@/components / ui / textarea',
-,
   Form,
   FormControl,
   FormField,
@@ -29,15 +28,13 @@ interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string}
 interface ReplyFormValues {
-  content: string,
-}
+  content: string}
 ,
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: "",
-    }
+      content: ""}
   }),
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true),
@@ -61,10 +58,8 @@ interface ReplyFormProps {
   FormMessage;
 } from "@/components/ui/form",
 interface ReplyFormProps {
-,
   onSubmit: (content: string) => Promise<void>,
-  parentId?: string,
-}
+  parentId?: string}
 ,
   Form,
   FormControl,
@@ -73,22 +68,18 @@ interface ReplyFormProps {
   FormMessage} from "@/components/ui/form",
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
-  parentId?: string,
-}
+  parentId?: string}
 interface ReplyFormValues {
 interface ReplyFormValues {
-  content: string,
-}
+  content: string}
 ,
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const form = useForm<ReplyFormValues>({
     defaultValues: {
-      content: "",
-    }
+      content: ""}
   }),
   const handleSubmit = async (values: ReplyFormValues) => {
-,
     setIsSubmitting(true),
     try {
       (await onSubmit(values && values.content), form && form.reset())} finally {

@@ -100,8 +100,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return <AcademicCapIcon className='h-5 w-5' />,
       default:,
-        return <DocumentTextIcon className='h-5 w-5' />,
-    }
+        return <DocumentTextIcon className='h-5 w-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -112,8 +111,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -165,8 +163,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}

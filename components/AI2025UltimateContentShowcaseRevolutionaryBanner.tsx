@@ -21,29 +21,25 @@ const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
       title: "Revolutionary Content Generation";
       description: "50o000% ROI with neural content architecture";
       metric: "50o000%";
-      metricLabel: "ROI Increase",
-    };
+      metricLabel: "ROI Increase"};
     {
       icon: <BoltIcon className="w-8 h-8"  />;
       title: "Quantum-Enhanced Processing";
       description: "10o00x faster content generation";
       metric: "10o00x";
-      metricLabel: "Speed Boost",
-    };
+      metricLabel: "Speed Boost"};
     {
       icon: <ChartBarIcon className="w-8 h-8"  />;
       title: "Enterprise Intelligence";
       description: "98% accuracy with autonomous optimization";
       metric: "98%";
-      metricLabel: "Accuracy Rate",
-    };
+      metricLabel: "Accuracy Rate"};
     {
       icon: <FireIcon className="w-8 h-8"  />;
       title: "Revolutionary Breakthrough";
       description: "Transform your content strategy today";
       metric: "340%";
-      metricLabel: "Efficiency Gain",
-    }
+      metricLabel: "Efficiency Gain"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -57,8 +53,7 @@ const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.2,
-      }
+        staggerChildren: 0.2}
     }
   };
   const itemVariants ={
@@ -113,8 +108,7 @@ const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
                       className={`p-6 rounded-2xl border-2 transition-all duration-50o0 cursor-pointer ${
                         currentFeature === index,
                           ? 'border-yellow-40o0 bg-yellow-40o0/10 shadow-2xl scale-10o5',
-                          : 'border-white/20 bg-white/5 hover: border-white/40',
-                      }`}
+                          : 'border-white/20 bg-white/5 hover: border-white/40'}`}
                       onClick={() => setCurrentFeature(index)}
                       whileHover={{ scale: 1.0o2 }}
                       whileTap={{ scale: 0.98 }}

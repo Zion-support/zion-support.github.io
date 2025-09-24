@@ -3,8 +3,7 @@ export interface Added20o26Q2Service {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 ,
 export const added20o26Q2Services: Added20o26Q2Service[] = [
   {

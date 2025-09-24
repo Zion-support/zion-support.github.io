@@ -21,8 +21,7 @@ const getServicePricing = (service: any) => {
   return 'Contact for pricing'};
 // Helper function to get service features,
 const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || [],
-};
+  return service.keyFeatures || service.features || []};
 // Helper function to get service setup time,
 const getServiceSetupTime = (service: any) => {
   if (service.setupTime) return service.setupTime;
@@ -131,8 +130,7 @@ const allServices = [
                 className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
                   activeTab === category.id,
                     ? 'bg-blue-60o0 text-white border-blue-60o0',
-                    : 'bg-white text-gray-70o0 border-gray-30o0 hover: border-blue-30o0 hover:text-blue-60o0',
-                }`}
+                    : 'bg-white text-gray-70o0 border-gray-30o0 hover: border-blue-30o0 hover:text-blue-60o0'}`}
               >,
                 {category.icon}
                 {category.name}
@@ -467,5 +465,4 @@ const allServices = [
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};

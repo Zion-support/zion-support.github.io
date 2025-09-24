@@ -494,6 +494,5 @@ export default function ManufacturingTransformationPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -75,8 +75,7 @@ export default function UltraFuturisticBackground20o37({
       waveAmplitude: number,
       quantumState: number,
       neonIntensity: number,
-      hologramOpacity: number,
-    }> = [],
+      hologramOpacity: number}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
@@ -106,8 +105,7 @@ export default function UltraFuturisticBackground20o37({
           waveAmplitude: Math.random() * 20 + 10;
           quantumState: Math.random() * Math.PI * 2;
           neonIntensity: Math.random() * 0.8 + 0.2;
-          hologramOpacity: Math.random() * 0.6 + 0.4,
-        })}
+          hologramOpacity: Math.random() * 0.6 + 0.4})}
     };
     // Enhanced rendering functions,
     const drawQuantumNeonParticle = (particle: any) => {
@@ -331,8 +329,7 @@ export default function UltraFuturisticBackground20o37({
         className="w-full h-full",
         style={{
           background: 'transparent';
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none',
-        }}
+          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'}}
        />,
       {children}
     </div>)};

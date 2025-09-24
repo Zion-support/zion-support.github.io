@@ -15,6 +15,5 @@ export default function CompanyPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -19,6 +19,5 @@ export default function AIContentPersonalizationEngine() {
       industries={['E-commerce', 'SaaS', 'Media', 'Fintech']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-content-personalization-engine',
-    />),
-}
+    />)}
 ,

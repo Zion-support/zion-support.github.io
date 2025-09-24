@@ -23,8 +23,8 @@ class Logger {
       const timestamp = new Date().toISOString(),
       const prefix = `[${timestamp}] [${level.toUpperCase()}]`,
       if (data) {
-        // console.log(`${prefix} ${message}`, JSON.stringify(data, null, 2))} else {
-        // console.log(`${prefix} ${message}`)}
+        // // console.log(`${prefix} ${message}`, JSON.stringify(data, null, 2))} else {
+        // // console.log(`${prefix} ${message}`)}
     }
   }
 ,
@@ -72,8 +72,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
     this.healthStatus ={
       systems: new Map();
       lastCheck: null;
-      overallHealth: 'unknown',
-    };
+      overallHealth: 'unknown'};
     // Intervals,
     this.analysisInterval = null,
     this.optimizationInterval = null,
@@ -249,8 +248,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
           this.errorHistory.push({
             error: error;
             fixed: true;
-            timestamp: new Date().toISOString(),
-          }),
+            timestamp: new Date().toISOString()}),
           this.logger.info(`✅ Auto-fixed error: ${error.type}`)} else {
           this.logger.warn(`⚠️ Could not auto-fix error: ${error.type}`)}
       }
@@ -260,7 +258,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
 ,
   async performPerformanceMonitoring() {
     try {
-      this.logger.debug('📊 Monitoring window.performance...'),
+      this.logger.debug('📊 Monitoring window.window.performance...'),
       const performanceData = await this.performanceMonitor.collectMetrics(),
       const analysis = await this.performanceMonitor.analyzePerformance(performanceData),
       if (analysis.needsOptimization) {
@@ -299,8 +297,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
       this.improvementHistory.push({
         ...improvement;
         appliedAt: new Date().toISOString();
-        iteration: this.currentIteration,
-      }),
+        iteration: this.currentIteration}),
       this.lastImprovement = improvement,
       await this.saveImprovementHistory(),
       this.logger.info(`✅ Improvement applied successfully: ${improvement.type}`)} catch (error) {
@@ -363,8 +360,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
     this.performanceBaseline ={
       timestamp: new Date().toISOString();
       metrics: metrics;
-      score: this.calculatePerformanceScore(metrics),
-    };
+      score: this.calculatePerformanceScore(metrics)};
     this.logger.info(`📊 Baseline established with score: ${this.performanceBaseline.score}`)}
 ,
   async updateBaseline() {
@@ -374,8 +370,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
       this.performanceBaseline ={
         timestamp: new Date().toISOString();
         metrics: currentMetrics;
-        score: currentScore,
-      };
+        score: currentScore};
       this.logger.info(`📊 Baseline updated with new score: ${currentScore}`)}
   }
 ,
@@ -416,8 +411,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
       lastImprovement: this.lastImprovement;
       performanceBaseline: this.performanceBaseline;
       errorHistory: this.errorHistory.length;
-      optimizationQueueLength: this.optimizationQueue.length,
-    };
+      optimizationQueueLength: this.optimizationQueue.length};
     return stats}
 ,
   async generateFinalReport() {
@@ -426,8 +420,7 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {
       stats: this.getImprovementStats();
       improvementHistory: this.improvementHistory.slice(-10), // Last 10 improvements,
       errorHistory: this.errorHistory.slice(-10), // Last 10 errors,
-      healthStatus: this.healthStatus,
-    };
+      healthStatus: this.healthStatus};
     const reportPath = path.join(__dirname, 'final-improvement-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
     this.logger.info(`📊 Final report generated: ${reportPath}`)}
@@ -442,21 +435,19 @@ class SystemAnalyzer {
       performance: this.analyzePerformance(metrics);
       bottlenecks: this.identifyBottlenecks(metrics);
       opportunities: this.findOpportunities(metrics);
-      errors: this.detectErrors(metrics),
-    };
+      errors: this.detectErrors(metrics)};
   }
 ,
   async identifyOpportunities(analysis) {
     const opportunities = [],
     // Performance opportunities,
-    if (analysis.window.performance.score < 70) {
+    if (analysis.window.window.performance.score < 70) {
       opportunities.push({
         type: 'performance_optimization';
         priority: 'high';
         description: 'System performance below optimal threshold';
         target: 'system_wide';
-        confidence: 0.9,
-      })}
+        confidence: 0.9})}
 ,
     // Bottleneck opportunities,
     for (const bottleneck of analysis.bottlenecks) {
@@ -465,8 +456,7 @@ class SystemAnalyzer {
         priority: 'high';
         description: `Resolve bottleneck: ${bottleneck.type}`;
         target: bottleneck.target;
-        confidence: 0.8,
-      })}
+        confidence: 0.8})}
 ,
     // Error opportunities,
     for (const error of analysis.errors) {
@@ -475,8 +465,7 @@ class SystemAnalyzer {
         priority: 'critical';
         description: `Fix error: ${error.type}`;
         target: error.target;
-        confidence: 0.95,
-      })}
+        confidence: 0.95})}
 ,
     return opportunities}
 ,
@@ -486,8 +475,7 @@ class SystemAnalyzer {
       cpuUsage: metrics.cpuUsage;
       memoryUsage: metrics.memoryUsage;
       responseTime: metrics.avgResponseTime;
-      throughput: metrics.requestsPerSecond,
-    };
+      throughput: metrics.requestsPerSecond};
   }
 ,
   identifyBottlenecks(metrics) {
@@ -539,27 +527,23 @@ class SystemOptimizer {
           target: opportunity.target;
           optimizations: ['memory_optimization', 'cpu_optimization'];
           priority: opportunity.priority;
-          confidence: opportunity.confidence,
-        };
+          confidence: opportunity.confidence};
       case 'bottleneck_resolution':,
         return {
           type: 'resource_optimization';
           target: opportunity.target;
           optimizations: ['resource_allocation', 'load_balancing'];
           priority: opportunity.priority;
-          confidence: opportunity.confidence,
-        };
+          confidence: opportunity.confidence};
       case 'error_fix':,
         return {
           type: 'error_fix';
           target: opportunity.target;
           fix: await this.generateErrorFix(opportunity);
           priority: opportunity.priority;
-          confidence: opportunity.confidence,
-        };
+          confidence: opportunity.confidence};
       default: ,
-        return null,
-    }
+        return null}
   }
 ,
   async generateErrorFix(opportunity) {
@@ -581,8 +565,7 @@ class SystemOptimizer {
           type: 'generic_fix';
           target: opportunity.target;
           fix: 'Apply generic error resolution';
-          code: '// Generic error handling',
-        };
+          code: '// Generic error handling'};
     }
   }
 ,
@@ -618,8 +601,7 @@ class AdaptiveLearner {
     return {
       performancePatterns: this.analyzePerformancePatterns(data);
       errorPatterns: this.analyzeErrorPatterns(data);
-      optimizationPatterns: this.analyzeOptimizationPatterns(data),
-    };
+      optimizationPatterns: this.analyzeOptimizationPatterns(data)};
   }
 ,
   analyzePerformancePatterns(data) {
@@ -670,8 +652,7 @@ class MetricsCollector {
       memoryUsage: this.getMemoryUsage();
       avgResponseTime: this.getAvgResponseTime();
       errorRate: this.getErrorRate();
-      requestsPerSecond: this.getRequestsPerSecond(),
-    };
+      requestsPerSecond: this.getRequestsPerSecond()};
   }
 ,
   getCpuUsage() {
@@ -726,16 +707,14 @@ class ErrorSelfHealer {
             type: 'array_method_error';
             target: 'netlify-monitor.js';
             line: line;
-            severity: 'high',
-          })}
+            severity: 'high'})}
 ,
         if (line.includes('Failed to get bundle metrics')) {
           errors.push({
             type: 'bundle_metrics_error';
             target: 'metrics-collector';
             line: line;
-            severity: 'medium',
-          })}
+            severity: 'medium'})}
       }
     }
 ,
@@ -748,8 +727,7 @@ class ErrorSelfHealer {
       case 'bundle_metrics_error':,
         return await this.fixBundleMetricsError(error),
       default: ,
-        return false,
-    }
+        return false}
   }
 ,
   async fixArrayMethodError(error) {
@@ -797,8 +775,7 @@ class PerformanceMonitor {
       cpu: this.getCpuUsage();
       memory: this.getMemoryUsage();
       disk: this.getDiskUsage();
-      network: this.getNetworkMetrics(),
-    };
+      network: this.getNetworkMetrics()};
   }
 ,
   getCpuUsage() {
@@ -813,8 +790,7 @@ class PerformanceMonitor {
   getNetworkMetrics() {
     return {
       latency: Math.random() * 10o00;
-      throughput: Math.random() * 10o0,
-    };
+      throughput: Math.random() * 10o0};
   }
 ,
   async analyzePerformance(metrics) {
@@ -825,8 +801,7 @@ class PerformanceMonitor {
     return {
       needsOptimization;
       bottlenecks: this.identifyBottlenecks(metrics);
-      recommendations: this.generateRecommendations(metrics),
-    };
+      recommendations: this.generateRecommendations(metrics)};
   }
 ,
   identifyBottlenecks(metrics) {
@@ -842,15 +817,13 @@ class PerformanceMonitor {
       recommendations.push({
         type: 'cpu_optimization';
         priority: 'high';
-        action: 'Reduce CPU usage through code optimization',
-      })}
+        action: 'Reduce CPU usage through code optimization'})}
 ,
     if (metrics.memory > 85) {
       recommendations.push({
         type: 'memory_optimization';
         priority: 'high';
-        action: 'Implement memory cleanup and optimization',
-      })}
+        action: 'Implement memory cleanup and optimization'})}
 ,
     return recommendations}
 ,
@@ -865,8 +838,7 @@ class PerformanceMonitor {
       tuning: {
         type: recommendation.type;
         action: recommendation.action;
-        priority: recommendation.priority,
-      }
+        priority: recommendation.priority}
     };
   }
 }
@@ -880,14 +852,13 @@ if (require.main === module) {
       await loop.start(),
       // Keep the process running,
       process.on('SIGINT', async () => {
-        // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+        // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
         await loop.stop(),
         process.exit(0)}),
       process.on('SIGTERM', async () => {
-        // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+        // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
         await loop.stop(),
-        process.exit(0)}),
-} catch (error) {
+        process.exit(0)})} catch (error) {
       console.error('❌ Failed to start infinite improvement loop:', error),
       process.exit(1)}
   }

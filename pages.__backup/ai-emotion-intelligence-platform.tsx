@@ -13,61 +13,50 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   {
     icon: Eye;
     title: 'Real-time Emotion Detection';
-    description: 'Analyze 27 different emotions across voicevideoand text interactions in real-time',
-  };
+    description: 'Analyze 27 different emotions across voicevideoand text interactions in real-time'};
   {
     icon: MessageCircle;
     title: 'Sentiment-Driven Responses';
-    description: 'Get intelligent response suggestions based on detected emotions and sentiment',
-  };
+    description: 'Get intelligent response suggestions based on detected emotions and sentiment'};
   {
     icon: BarChart3;
     title: 'Emotion Trend Analytics';
-    description: 'Track emotional patterns and trends over time with comprehensive reporting',
-  };
+    description: 'Track emotional patterns and trends over time with comprehensive reporting'};
   {
     icon: Globe;
     title: 'Multi-language Support';
-    description: 'Recognize emotions across multiple languages and cultural contexts',
-  };
+    description: 'Recognize emotions across multiple languages and cultural contexts'};
   {
     icon: Brain;
     title: 'Custom Training Models';
-    description: 'Train custom emotion recognition models for your specific use case',
-  };
+    description: 'Train custom emotion recognition models for your specific use case'};
   {
     icon: Shield;
     title: 'Real-time Alerts';
-    description: 'Get instant notifications for negative emotions requiring immediate attention',
-  }
+    description: 'Get instant notifications for negative emotions requiring immediate attention'}
 ],
 const useCases = [
   {
     title: 'Customer Service Optimization';
     description: 'Improve customer satisfaction by understanding emotional states and responding appropriately';
-    icon: Users,
-  };
+    icon: Users};
   {
     title: 'Sales Enhancement';
     description: 'Identify customer emotions during sales calls to optimize conversion rates';
-    icon: TrendingUp,
-  };
+    icon: TrendingUp};
   {
     title: 'Product Feedback Analysis';
     description: 'Analyze user emotions when interacting with products to improve user experience';
-    icon: MessageCircle,
-  };
+    icon: MessageCircle};
   {
     title: 'Employee Wellbeing';
     description: 'Monitor employee emotional states to support mental health and productivity';
-    icon: Heart,
-  }
+    icon: Heart}
 ],
 const pricing = [
   {
@@ -82,8 +71,7 @@ const pricing = [
       'Standard API access';
       'Basic analytics dashboard'];
     popular: false;
-    cta: 'Get Started',
-  };
+    cta: 'Get Started'};
   {
     name: 'Professional';
     price: '$1,299';
@@ -99,8 +87,7 @@ const pricing = [
       'Advanced analytics';
       'Multi-language support'];
     popular: true;
-    cta: 'Start Free Trial',
-  };
+    cta: 'Start Free Trial'};
   {
     name: 'Enterprise';
     price: 'Custom';
@@ -116,8 +103,7 @@ const pricing = [
       'SLA guarantees';
       'On-premise deployment'];
     popular: false;
-    cta: 'Contact Sales',
-  }
+    cta: 'Contact Sales'}
 ],
 export default function AIEmotionIntelligencePlatform() {
   return (
@@ -301,8 +287,7 @@ export default function AIEmotionIntelligencePlatform() {
                   className={`relative p-8 rounded-2xl border transition-all duration-30o0 transform hover: scale-10o5 ${
                     plan.popular,
                       ? 'bg-gradient-to-br from-pink-50o0/10 to-purple-50o0/10 border-pink-50o0/50 shadow-2xl shadow-pink-50o0/25',
-                      : 'bg-gradient-to-br from-white/5 to-white/10 border-white/10 hover:border-pink-50o0/30',
-                  }`}
+                      : 'bg-gradient-to-br from-white/5 to-white/10 border-white/10 hover:border-pink-50o0/30'}`}
                 >,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
@@ -331,8 +316,7 @@ export default function AIEmotionIntelligencePlatform() {
                     className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-30o0 ${
                       plan.popular,
                         ? 'bg-gradient-to-r from-pink-50o0 to-purple-50o0 text-white hover: from-pink-60o0 hover:to-purple-60o0',
-                        : 'border border-pink-50o0/30 text-pink-30o0 hover:bg-pink-50o0/10 hover:border-pink-50o0/50',
-                    }`}
+                        : 'border border-pink-50o0/30 text-pink-30o0 hover:bg-pink-50o0/10 hover:border-pink-50o0/50'}`}
                   >,
                     {plan.cta}
                   </Link>,

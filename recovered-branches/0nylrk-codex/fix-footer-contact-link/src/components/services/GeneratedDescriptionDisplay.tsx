@@ -24,11 +24,9 @@ import { Check, Pencil  } from './lucide-react',
   CardTitle;
   CardFooter;
 } from "@/components/ui/card",
-,
 interface GeneratedDescriptionDisplayProps {
   description: string,
-  onSave: (editedDescription: string) => void,
-}
+  onSave: (editedDescription: string) => void}
 ,
 export function GeneratedDescriptionDisplay({
   description,
@@ -48,8 +46,7 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false);
     toast({
       title: "Description Saved",
-      description: "Your edited description has been saved.",
-    })}
+      description: "Your edited description has been saved."})}
     })};
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">,
@@ -72,8 +69,7 @@ export function GeneratedDescriptionDisplay({
               </>,
 interface GeneratedDescriptionDisplayProps {
   description: string;
-  onSave: (editedDescription: string) => void,
-}
+  onSave: (editedDescription: string) => void}
 ,
 export function GeneratedDescriptionDisplay({
   description;
@@ -86,8 +82,7 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false);
     toast({
       title: "Description Saved";
-      description: "Your edited description has been saved.",
-    })};
+      description: "Your edited description has been saved."})};
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">,
       <CardHeader>,
@@ -115,8 +110,7 @@ export function GeneratedDescriptionDisplay({
 } from '@/components / ui / card',
 interface GeneratedDescriptionDisplayProps {
   description: string,
-  on_save: (edited_description: string) => void,
-}
+  on_save: (edited_description: string) => void}
 export /**,
  * GeneratedDescriptionDisplay - Function description,
  */,

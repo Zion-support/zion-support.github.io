@@ -18,20 +18,17 @@ const SolutionsPage: React.FC = () => {
           description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms';
           href: '/healthcare-solutions';
           featured: true;
-          icon: <Heart className="w-6 h-6" />,
-        };
+          icon: <Heart className="w-6 h-6" />};
         {
           name: 'AI Healthcare Diagnostics';
           description: 'Advanced diagnostic systems using machine learning and medical imaging';
           href: '/ai-healthcare-diagnostics';
-          icon: <Cpu className="w-6 h-6" />,
-        };
+          icon: <Cpu className="w-6 h-6" />};
         {
           name: 'Biotech AI Research Platform';
           description: 'AI-driven research tools for biotechnology and pharmaceutical development';
           href: '/biotech-ai-research-platform';
-          icon: <Database className="w-6 h-6" />,
-        }
+          icon: <Database className="w-6 h-6" />}
       ]};
     {
       category: 'Financial Services';
@@ -41,20 +38,17 @@ const SolutionsPage: React.FC = () => {
           description: 'Comprehensive financial technology solutions for modern enterprises';
           href: '/financial-solutions';
           featured: true;
-          icon: <DollarSign className="w-6 h-6" />,
-        };
+          icon: <DollarSign className="w-6 h-6" />};
         {
           name: 'AI Financial Intelligence';
           description: 'Intelligent financial analysis and decision-making platforms';
           href: '/ai-financial-intelligence';
-          icon: <Globe className="w-6 h-6" />,
-        };
+          icon: <Globe className="w-6 h-6" />};
         {
           name: 'Quantum Financial Trading';
           description: 'Quantum-powered trading algorithms and financial modeling';
           href: '/quantum-financial-trading';
-          icon: <Network className="w-6 h-6" />,
-        }
+          icon: <Network className="w-6 h-6" />}
       ]};
     {
       category: 'Manufacturing & Industry';
@@ -64,20 +58,17 @@ const SolutionsPage: React.FC = () => {
           description: 'AI-powered automation and optimization for manufacturing processes';
           href: '/manufacturing-ai-solutions';
           featured: true;
-          icon: <Factory className="w-6 h-6" />,
-        };
+          icon: <Factory className="w-6 h-6" />};
         {
           name: 'Industrial Automation AI';
           description: 'Intelligent automation systems for industrial operations';
           href: '/industrial-automation-ai';
-          icon: <Cpu className="w-6 h-6" />,
-        };
+          icon: <Cpu className="w-6 h-6" />};
         {
           name: 'Autonomous Manufacturing';
           description: 'Self-managing manufacturing systems with AI oversight';
           href: '/autonomous-manufacturing';
-          icon: <Database className="w-6 h-6" />,
-        }
+          icon: <Database className="w-6 h-6" />}
       ]};
     {
       category: 'Retail & E-commerce';
@@ -87,20 +78,17 @@ const SolutionsPage: React.FC = () => {
           description: 'Advanced technology solutions for modern retail operations';
           href: '/retail-technology-solutions';
           featured: true;
-          icon: <ShoppingCart className="w-6 h-6" />,
-        };
+          icon: <ShoppingCart className="w-6 h-6" />};
         {
           name: 'AI Customer Journey Analytics';
           description: 'Comprehensive customer behavior analysis and optimization';
           href: '/ai-customer-journey-analytics';
-          icon: <Users className="w-6 h-6" />,
-        };
+          icon: <Users className="w-6 h-6" />};
         {
           name: 'AI Content Personalization';
           description: 'Dynamic content adaptation based on customer preferences';
           href: '/ai-content-personalization-engine';
-          icon: <Globe className="w-6 h-6" />,
-        }
+          icon: <Globe className="w-6 h-6" />}
       ]};
     {
       category: 'Government & Public Sector';
@@ -110,20 +98,17 @@ const SolutionsPage: React.FC = () => {
           description: 'Innovative technology solutions for government agencies and public services';
           href: '/government-technology-solutions';
           featured: true;
-          icon: <Building2 className="w-6 h-6" />,
-        };
+          icon: <Building2 className="w-6 h-6" />};
         {
           name: 'AI Ethics & Governance Framework';
           description: 'Comprehensive frameworks for responsible AI deployment';
           href: '/ai-ethics-governance-framework';
-          icon: <Shield className="w-6 h-6" />,
-        };
+          icon: <Shield className="w-6 h-6" />};
         {
           name: 'Cybersecurity Solutions';
           description: 'Advanced security solutions for government and enterprise';
           href: '/cybersecurity';
-          icon: <Shield className="w-6 h-6" />,
-        }
+          icon: <Shield className="w-6 h-6" />}
       ]};
     {
       category: 'Education & Training';
@@ -133,20 +118,17 @@ const SolutionsPage: React.FC = () => {
           description: 'Innovative technology solutions for modern education and training';
           href: '/education-technology-solutions';
           featured: true;
-          icon: <GraduationCap className="w-6 h-6" />,
-        };
+          icon: <GraduationCap className="w-6 h-6" />};
         {
           name: 'AI Education Platform';
           description: 'Intelligent learning systems and educational content platforms';
           href: '/ai-education-platform';
-          icon: <Cpu className="w-6 h-6" />,
-        };
+          icon: <Cpu className="w-6 h-6" />};
         {
           name: 'Training Solutions';
           description: 'Comprehensive training and development platforms';
           href: '/training';
-          icon: <Users className="w-6 h-6" />,
-        }
+          icon: <Users className="w-6 h-6" />}
       ]};
     {
       category: 'Sustainability & Energy';
@@ -156,20 +138,17 @@ const SolutionsPage: React.FC = () => {
           description: 'Technology solutions for energy optimization and sustainability';
           href: '/energy-utilities-solutions';
           featured: true;
-          icon: <Leaf className="w-6 h-6" />,
-        };
+          icon: <Leaf className="w-6 h-6" />};
         {
           name: 'AI Sustainability Platform';
           description: 'AI-driven sustainability monitoring and optimization';
           href: '/ai-sustainability-platform';
-          icon: <Globe className="w-6 h-6" />,
-        };
+          icon: <Globe className="w-6 h-6" />};
         {
           name: 'Quantum Energy Platform';
           description: 'Quantum computing solutions for energy optimization';
           href: '/quantum-energy-platform';
-          icon: <Network className="w-6 h-6" />,
-        }
+          icon: <Network className="w-6 h-6" />}
       ]}
   ],
   return (
@@ -326,8 +305,7 @@ const SolutionsPage: React.FC = () => {
                       transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover: border-green-500/40 transition-all duration-300 ${
-                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50',
-                      }`}
+                        solution.featured ? 'border-green-500/30' : 'border-gray-700/50'}`}
                     >,
                       {solution.featured && (
                         <div className="flex items-center mb-4">,

@@ -5,8 +5,7 @@ interface UltraFuturisticBackground20o34Props {
   theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'}
 ,
 const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Props> = ({
-  intensity = 1,
-}) => {
+  intensity = 1}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
@@ -30,8 +29,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       size: number,
       life: number,
       maxLife: number,
-      type: ParticleType,
-    }> = [],
+      type: ParticleType}> = [],
     // Quantum entanglement lines,
     const entanglementLines: Array<{
       x1: number,
@@ -39,15 +37,13 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       x2: number,
       y2: number,
       strength: number,
-      life: number,
-    }> = [],
+      life: number}> = [],
     // Neural network nodes,
     const neuralNodes: Array<{
       x: number,
       y: number,
       connections: number[],
-      activation: number,
-    }> = [],
+      activation: number}> = [],
     // Initialize particles,
     const initParticles = () => {
       for (let i = 0, i < 10o0 * intensity, i++) {
@@ -68,8 +64,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           x: Math.random() * canvas.width;
           y: Math.random() * canvas.height;
           connections: [];
-          activation: Math.random(),
-        })}
+          activation: Math.random()})}
 ,
       // Create connections,
       neuralNodes.forEach((node, i) => {
@@ -93,8 +88,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           x2;
           y2;
           strength: Math.random();
-          life: Math.random() * 10o0,
-        })}
+          life: Math.random() * 10o0})}
     };
     initParticles(),
     initNeuralNetwork(),
@@ -205,8 +199,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           x2;
           y2;
           strength: Math.random();
-          life: 10o0,
-        })}
+          life: 10o0})}
 ,
       animationRef.current = requestAnimationFrame(animate)};
     animate(),
@@ -241,8 +234,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 8;
             repeat: -1;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -253,8 +245,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 6;
             repeat: -1;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-40o0/30",
@@ -265,8 +256,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 12;
             repeat: -1;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Energy waves */}
@@ -278,8 +268,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 15;
             repeat: -1;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50o0/10 to-transparent",
@@ -288,8 +277,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 20;
             repeat: -1;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Holographic matrix effect */}
@@ -306,8 +294,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
               duration: 3;
               delay: i * 0.1;
               repeat: -1;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Cyberpunk grid */}
@@ -315,15 +302,13 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
         <motion.div,
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]",
           style={{
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
           animate={{
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 4;
             repeat: -1;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
     </div>)};

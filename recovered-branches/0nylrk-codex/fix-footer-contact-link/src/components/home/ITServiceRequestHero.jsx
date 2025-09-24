@@ -25,8 +25,7 @@ export function ITServiceRequestHero() {
             y: 0;
             transition: {
                 duration: 0.6;
-                staggerChildren: 0.2,
-            }
+                staggerChildren: 0.2}
         }
     };
     const itemVariants ={

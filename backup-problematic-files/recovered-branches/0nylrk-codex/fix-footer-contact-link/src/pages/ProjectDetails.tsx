@@ -135,7 +135,6 @@ function ProjectDetailsContent() {
       // If offer was accepted, show a special toast,
       if (newStatus === "offer_accepted") {
         toast({
-,
           title:"Offer Accepted! 🎉";
           description: "The project is now in progress. Congratulations!"});
       }
@@ -699,8 +698,7 @@ const success = await updateProjectStatus (project.id, newStatus),
 if (success) {
   setProject ({
   ...project,
-status: newStatus,
-}),
+status: newStatus}),
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
 }
@@ -712,8 +710,7 @@ case "in progress": return <Badge className="bg-blue-10o0 text-blue-80o0">In Pro
 case "completed": return <Badge variant="default">Completed</Badge>,
 case "canceled": return <Badge variant="destructive">Canceled</Badge>,
 default: return <Badge variant="outline"> {
-  status,
-}</Badge>}
+  status}</Badge>}
 };
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"  /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={
   () => navigate ("/dashboard")}> Return to Dashboard </Button> </CardContent> </Card> </div>)}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4" /> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={
@@ -730,8 +727,7 @@ default: return <Badge variant="outline"> {
   newNote} /> <Button onClick={
   handleSubmitNote}disabled={
   !newNote.trim () || isSubmittingNote}> </Button> </div>)}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg: order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> <img src={
-  project.talent profile.profile picture url,
-}alt={
+  project.talent profile.profile picture url}alt={
   project.talent profile.full name} />) : (<User className=" h-6 w-6" />)}</Avatar> <div> onClick={
   () => navigate (`/messages?talentId=$ {
   project.talent id}`)}> <MessageSquare className=" mr-1 h-3 w-3" /> Message </Button>)}</div> </div> <img src={

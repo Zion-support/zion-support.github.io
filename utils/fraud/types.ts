@@ -11,7 +11,6 @@ export type AdminActionType =,
   id: string,
   case_id: string,
   type: AdminActionType,
-,
 export interface AdminAction {
   id: string,
   case_id: string,
@@ -52,8 +51,7 @@ export interface FraudDetectionConfig {
   }
   auto_actions: {
     enabled: boolean,
-    actions: AdminActionType[],
-  }
+    actions: AdminActionType[]}
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

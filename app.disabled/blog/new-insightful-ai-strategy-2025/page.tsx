@@ -217,6 +217,5 @@ export default function AIPracticalStrategy20o25() {
           </div>,
         </div>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

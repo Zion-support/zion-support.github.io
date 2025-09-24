@@ -40,8 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           .from('notifications'),
           .select('id', { count: 'exact' }),
           .eq('user_id', userId),
-          .eq('read_status', false),
-}
+          .eq('read_status', false)}
     // Build query based on filter,
     let query = supabase,
       .from('notifications'),
@@ -77,8 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
       return res.status (200).json ({ notifications: fallback })}
     return res.status (200).json ({ notifications: data as NotificationItem[] })} catch (e) {
-return res.status (500).json ({ error: 'Unexpected error' })}    return res.status (500).json ({ error: 'Unexpected error' }),
-}
+return res.status (500).json ({ error: 'Unexpected error' })}    return res.status (500).json ({ error: 'Unexpected error' })}
 }
   };
 }

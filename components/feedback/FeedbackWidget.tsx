@@ -29,8 +29,7 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
           aiModel})}),
       if (!res.ok) throw new Error('Failed to submit feedback'),
       setSubmitted(true)} catch (e: any) {
-      setError(e?.message || 'Something went wrong'),
-    } finally {
+      setError(e?.message || 'Something went wrong')} finally {
       setSubmitting(false)}
   };
   return (

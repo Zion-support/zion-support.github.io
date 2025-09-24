@@ -64,8 +64,7 @@ export default function UltimateServicesShowcase20o29() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -74,16 +73,14 @@ export default function UltimateServicesShowcase20o29() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <>,
       <Head>,
@@ -199,8 +196,7 @@ export default function UltimateServicesShowcase20o29() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id,
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50'}`}
                 >,
                   <div className="flex items-center space-x-2">,
                     <category.icon className="h-4 w-4"  />,
@@ -218,8 +214,7 @@ export default function UltimateServicesShowcase20o29() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     selectedPriceRange === range.id,
                       ? 'bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white shadow-lg',
-                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0/50'}`}
                 >,
                   {range.name}
                 </button>))}

@@ -11,11 +11,10 @@ const server = http.createServer((req, res) => {
         "timestamp": new Date().toISOString(),
         uptime: process.uptime(),
         memory: process.memoryUsage(),
-        pid: process.pid,
-      }))} else {
+        pid: process.pid}))} else {
     res.writeHead(40o4, {
   Content-Type': 'text/"plain":  })',
     res.end(
   '"Not": Found')}'}),
 server.listen(port, () => {
-  // console.log(`"Health": endpoint server running on port ${port}`)}),
+  // // console.log(`"Health": endpoint server running on port ${port}`)}),

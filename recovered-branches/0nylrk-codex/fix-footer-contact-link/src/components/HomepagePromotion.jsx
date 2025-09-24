@@ -263,6 +263,5 @@ export function HomepagePromotion() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

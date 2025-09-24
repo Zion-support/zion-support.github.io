@@ -21,6 +21,5 @@ class ErrorBoundary extends React.Component {
 export default function ServicesLayout(): any ({
   children;
 }: {
-  children: React && React.ReactNode,
-}) {
+  children: React && React.ReactNode}) {
 }

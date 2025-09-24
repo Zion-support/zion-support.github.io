@@ -21,15 +21,13 @@ export interface AdvancedMicroSaasService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Experian", "Equifax", "TransUnion", "Plaid", "Stripe", "Square"];
@@ -91,8 +88,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
       uptime: "99.95%";
       security: ["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption", "Multi-factor authentication"]};
     competitors: ["FICO", "VantageScore", "Credit Karma", "Experian Boost"];
-    marketSize: "$12.4 billion by 20o25",
-  };
+    marketSize: "$12.4 billion by 20o25"};
   // AI-Powered Healthcare Solutions,
   {
     id: "ai-medical-imaging-analysis";
@@ -141,8 +137,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"];
       integrations: ["DICOM", "PACS", "Epic", "Cerner", "Allscripts", "HL7 FHIR"];
@@ -150,8 +145,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
       uptime: "99.99%";
       security: ["HIPAA", "SOC 2", "HITECH", "End-to-end encryption", "Audit logging"]};
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Azure Health", "NVIDIA Clara"];
-    marketSize: "$45.8 billion by 20o25",
-  };
+    marketSize: "$45.8 billion by 20o25"};
   // AI-Powered Legal Services,
   {
     id: "ai-contract-analysis-platform";
@@ -200,8 +194,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "BERT", "React", "Node.js", "PostgreSQL", "Elasticsearch"];
       integrations: ["DocuSign", "Adobe Sign", "Salesforce", "Microsoft 365", "Google Workspace"];
@@ -209,8 +202,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"]};
     competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Icertis"];
-    marketSize: "$8.7 billion by 20o25",
-  };
+    marketSize: "$8.7 billion by 20o25"};
   // AI-Powered Supply Chain Optimization,
   {
     id: "ai-supply-chain-optimizer";
@@ -259,8 +251,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems", "TMS systems"];
@@ -268,8 +259,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "End-to-end encryption", "Multi-factor authentication"]};
     competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"];
-    marketSize: "$15.8 billion by 20o25",
-  };
+    marketSize: "$15.8 billion by 20o25"};
   // AI-Powered HR & Talent Management,
   {
     id: "ai-talent-acquisition-platform";
@@ -318,8 +308,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Jobvite", "LinkedIn"];
@@ -327,6 +316,5 @@ export const ADVANCED_MICRO_SAAS_SERVICES_20o25: AdvancedMicroSaasService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"]};
     competitors: ["Hired", "Pymetrics", "HireVue", "Mya Systems", "Paradox"];
-    marketSize: "$18.9 billion by 20o25",
-  }
+    marketSize: "$18.9 billion by 20o25"}
 ],

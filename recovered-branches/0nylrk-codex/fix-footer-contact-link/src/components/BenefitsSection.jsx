@@ -56,8 +56,7 @@ const BenefitsSection = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -76,8 +75,7 @@ const BenefitsSection = () => {
           className="absolute inset-0",
           style={{
             backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`;
-            backgroundSize: '60px 60px',
-          }}
+            backgroundSize: '60px 60px'}}
          />,
       </div>,
       {/* Floating decorative elements */}
@@ -212,6 +210,5 @@ const BenefitsSection = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default BenefitsSection;

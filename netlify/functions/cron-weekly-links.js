@@ -33,7 +33,6 @@ function extract_links() {
     .map (h =>,
       h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`),
   return Array.from (new Set (links)),
-,
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'',
@@ -77,8 +76,7 @@ exports && exports.handler = async function () {
         broken.push({
           url: `${base}${p}`,
           status: 0,
-          error: String(e.message |e),
-        })}
+          error: String(e.message |e)})}
     }
     const report ={ updatedAt: Date.now(), checked: checked.length, broken }
     const owner = process.env.GITHUB_OWNER,

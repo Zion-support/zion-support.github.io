@@ -20,8 +20,7 @@ export function EnhancedNewsletterForm() {
     const trimmed = email.trim(),
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email"),
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
     try {

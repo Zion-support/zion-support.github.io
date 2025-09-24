@@ -36,8 +36,7 @@ export interface ResearchDevelopmentService20o29 {
     mobile: string,
     email: string,
     website: string,
-    address: string,
-  };
+    address: string};
 }
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =,
   [

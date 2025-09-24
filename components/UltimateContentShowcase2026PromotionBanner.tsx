@@ -117,6 +117,5 @@ export default function UltimateContentShowcase20o26PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

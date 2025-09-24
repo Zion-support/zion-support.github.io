@@ -8,8 +8,7 @@ interface BannerItem {
   icon?: string,
   readTime?: string,
   isNew?: boolean,
-  category?: string,
-}
+  category?: string}
 ,
 interface EnhancedContentBannerProps {
   title: string,
@@ -19,8 +18,7 @@ interface EnhancedContentBannerProps {
   ctaHref: string,
   variant?: 'gradient' | 'solid' | 'outline',
   colorScheme?: 'blue' | 'green' | 'purple' | 'orange' | 'red',
-  className?: string,
-}
+  className?: string}
 ,
 const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
   title;
@@ -166,8 +164,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
               className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all duration-30o0 shadow-lg hover: shadow-xl ${
                 variant === 'outline',
                   ? 'bg-white text-gray-90o0 hover:bg-gray-10o0',
-                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30',
-              }`}
+                  : 'bg-white/20 backdrop-blur-sm text-white hover:bg-white/30'}`}
             >,
               {ctaText}
               <ArrowRight className='w-5 h-5' />,

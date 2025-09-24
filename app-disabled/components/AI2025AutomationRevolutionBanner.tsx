@@ -14,11 +14,9 @@ const AI20o25AutomationRevolutionBanner = () => {
         roi: '2,50o0%';
         savings: '$15.8B+';
         efficiency: '1,20o0%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       readingTime: '25 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-ai-automation-transformation-250o0-roi-success-story';
       title: 'Fortune 50o0 AI Automation Transformation: $15.8B Annual Savings - 2,50o0% ROI Success Story';
@@ -28,11 +26,9 @@ const AI20o25AutomationRevolutionBanner = () => {
         roi: '2,50o0%';
         savings: '$15.8B';
         timeline: '18 months';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '18 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'ai-automation-implementation-ultimate-guide-20o25';
       title: 'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 2,50o0% ROI';
@@ -42,11 +38,9 @@ const AI20o25AutomationRevolutionBanner = () => {
         roi: '2,50o0%';
         success: '1,0o00+';
         timeline: '18 months';
-        projects: 'Fortune 50o0',
-      };
+        projects: 'Fortune 50o0'};
       readingTime: '25 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -160,8 +154,7 @@ const AI20o25AutomationRevolutionBanner = () => {
             <div
               key={content.id}
               className={`bg-white/5 backdrop-blur-sm rounded-xl p-4 cursor-pointer transition-all duration-30o0 ${
-                index === currentSlide ? 'ring-2 ring-white/50' : 'hover: bg-white/10',
-              }`}
+                index === currentSlide ? 'ring-2 ring-white/50' : 'hover: bg-white/10'}`}
               onClick={() => setCurrentSlide(index)}
             >,
               <div className="flex items-center justify-between mb-2">,

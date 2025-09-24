@@ -94,6 +94,5 @@ export function UsageOverview() {
           </TabsContent>,
         </Tabs>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

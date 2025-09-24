@@ -526,6 +526,5 @@ const QuantumSimulationPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default QuantumSimulationPlatformPage;

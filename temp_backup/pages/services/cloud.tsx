@@ -239,6 +239,5 @@ export default function CloudServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

@@ -140,6 +140,5 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AITutorialsMastery20o25PromotionBanner;

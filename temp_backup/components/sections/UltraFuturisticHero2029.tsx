@@ -10,8 +10,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'Total Services', value: '50o0+', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' };
   { label: 'AI Services', value: '150+', icon: Brain, color: 'from-blue-50o0 to-cyan-50o0' };
@@ -28,8 +27,7 @@ const featuredServices = [
     category: 'AI Consciousness';
     icon: Brain;
     color: 'from-violet-60o0 to-purple-60o0';
-    href: '/ai-consciousness-evolution-20o29',
-  };
+    href: '/ai-consciousness-evolution-20o29'};
   {
     name: 'Quantum Internet Protocol';
     description: 'Faster-than-light quantum communication networks';
@@ -37,8 +35,7 @@ const featuredServices = [
     category: 'Quantum Internet';
     icon: Atom;
     color: 'from-indigo-60o0 to-blue-60o0';
-    href: '/quantum-internet-protocol-20o29',
-  };
+    href: '/quantum-internet-protocol-20o29'};
   {
     name: 'Space Mining Autonomous Platform';
     description: 'Autonomous asteroid and space resource extraction';
@@ -46,8 +43,7 @@ const featuredServices = [
     category: 'Space Technology';
     icon: Rocket;
     color: 'from-blue-60o0 to-cyan-60o0';
-    href: '/space-mining-autonomous-platform-20o29',
-  }
+    href: '/space-mining-autonomous-platform-20o29'}
 ],
 export default function UltraFuturisticHero20o29() {
   return (

@@ -25,8 +25,7 @@ contactInfo: {
     phone: string,
     email: string,
     website: string,
-    address: string,
-};
+    address: string};
 }
 ,
 // Zion Tech Group Contact Information,
@@ -34,8 +33,7 @@ const zionContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 export const specializedHealthcareAIServices20o25: HealthcareAIService[] = [
   {
     id: 1;

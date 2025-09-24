@@ -25,13 +25,11 @@ export default function AIContentCreationSuite() {
     {
       icon: <Globe className="w-6 h-6"  />;
       title: 'Multi-Language Support';
-      description: 'Generate content in multiple languages with accurate translations and cultural adaptations.',
-    };
+      description: 'Generate content in multiple languages with accurate translations and cultural adaptations.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Smart Content Optimization';
-      description: 'AI-powered SEO optimization and content performance analysis to maximize engagement.',
-    }
+      description: 'AI-powered SEO optimization and content performance analysis to maximize engagement.'}
   ],
   const benefits = [
     'Create content 10x faster than traditional methods';
@@ -230,6 +228,5 @@ export default function AIContentCreationSuite() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

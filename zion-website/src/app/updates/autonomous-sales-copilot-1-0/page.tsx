@@ -52,6 +52,5 @@ export default function AutonomousSalesCopilotPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

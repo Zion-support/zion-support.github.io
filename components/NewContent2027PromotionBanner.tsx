@@ -138,6 +138,5 @@ const NewContent20o27PromotionBanner = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o27PromotionBanner;

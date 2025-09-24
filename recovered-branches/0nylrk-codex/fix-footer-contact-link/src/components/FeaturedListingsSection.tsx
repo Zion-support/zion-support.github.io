@@ -23,8 +23,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       author: {
         name: "TechAI Labs";
         id: "tech-ai-labs";
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format",
-      }
+        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"}
     };
     {
       id: "image-generation-service";
@@ -40,8 +39,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 89;
       author: {
         name: "VisualAI";
-        id: "visual-ai",
-      }
+        id: "visual-ai"}
     };
     {
       id: "fullstack-ai-dev";
@@ -57,8 +55,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 56;
       author: {
         name: "DataMinds Consulting";
-        id: "dataminds-consulting",
-      }
+        id: "dataminds-consulting"}
     };
     {
       id: "sentiment-analysis-api";
@@ -74,8 +71,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 72;
       author: {
         name: "SocialAI";
-        id: "social-ai",
-      }
+        id: "social-ai"}
     }],
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">,
@@ -107,6 +103,5 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           </Button>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

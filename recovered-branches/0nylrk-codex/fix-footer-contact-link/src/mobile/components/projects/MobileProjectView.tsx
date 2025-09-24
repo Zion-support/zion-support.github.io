@@ -15,8 +15,7 @@ interface Milestone {
   dueDate: string,
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
-  amount: string,
-}
+  amount: string}
 ,
 interface ProjectViewProps {
   project: {
@@ -24,25 +23,21 @@ interface ProjectViewProps {
     title: string,
     client: {
       name: string,
-      avatar?: string,
-    };
+      avatar?: string};
     startDate: string,
     endDate?: string,
     status: string,
     totalAmount: string,
     progress: number,
-    description: string,
-  };
-  milestones: Milestone[],
-}
+    description: string};
+  milestones: Milestone[]}
 ,
 export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
   const navigate = useNavigate(),
   const startProjectCall = () => {
     const roomId = `project-${project.id}`,
     toast.success("Starting project call"{
-      description: "Initializing video connection...",
-    }),
+      description: "Initializing video connection..."}),
     navigate(`/call/${roomId}`)};
   const messageClient = () => {
     toast.info("Opening message thread with client"{

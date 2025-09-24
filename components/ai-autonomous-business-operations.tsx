@@ -18,5 +18,4 @@ export default function AIAutonomousBusinessOperations() {
 				"Integrations: Slack/TeamsJiraZendeskQuickBooksStripe"]}
 			industries={["SaaS"Healthcare"Finance"Retail"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations",
-		 />),
-}
+		 />)}

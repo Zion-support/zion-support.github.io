@@ -31,8 +31,7 @@ interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
-  tags: string,
-}
+  tags: string}
 // Mock post data,
 const mockPost: ForumPost = {
   id: "1";
@@ -50,8 +49,7 @@ const mockPost: ForumPost = {
   downvotes: 2;
   replyCount: 12;
   isAnswered: true;
-  isFeatured: true,
-};
+  isFeatured: true};
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -68,8 +66,7 @@ const mockPost: ForumPost = {
   downvotes: 2,
   replyCount: 12,
   isAnswered: true,
-  isFeatured: true,
-}
+  isFeatured: true}
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate(),
@@ -100,7 +97,6 @@ export default function EditPostPage() {
     // For now, we'll just use the mock data,
     setIsLoading(false)}, [postId]),
   if (isLoading) {
-,
     return (
       <AppLayout>,
         <div className="container py-8">,
@@ -111,7 +107,6 @@ export default function EditPostPage() {
       </AppLayout>)}
 ,
   if (!post) {
-,
     return (
       <AppLayout>,
         <div className="container py-8">,
@@ -160,15 +155,13 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update,
       toast({
         title: "Post updated",
-        description: "Your post has been updated successfully",
-      })});
+        description: "Your post has been updated successfully"})});
       // Redirect back to the post,
       navigate(`/community/post/${postId}`)} catch (error) {
       toast({
         title: "Error",
         description: "There was a problem updating your post",
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
   const initialValues: Partial<PostFormValues> = {
     title: post && post.title;
     content: post && post.content;
@@ -180,16 +173,13 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update,
       toast({
         title: "Post updated";
-        description: "Your post has been updated successfully",
-      }),
+        description: "Your post has been updated successfully"}),
       // Redirect back to the post,
       navigate(`/community/post/${postId}`)} catch (error) {
       toast({
         title: "Error";
         description: "There was a problem updating your post";
-        variant: "destructive",
-      }),
-}
+        variant: "destructive"})}
 }
   };
   return (
@@ -227,8 +217,7 @@ interface PostFormValues {
   title: string;
   content: string;
   categoryId: ForumCategory;
-  tags: string,
-}
+  tags: string}
 ,
 // Mock post data,
 const mockPost: ForumPost = {
@@ -247,8 +236,7 @@ const mockPost: ForumPost = {
   downvotes: 2;
   replyCount: 12;
   isAnswered: true;
-  isFeatured: true,
-};
+  isFeatured: true};
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
@@ -307,15 +295,13 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update,
       toast({
         title: "Post updated";
-        description: "Your post has been updated successfully",
-      });
+        description: "Your post has been updated successfully"});
       // Redirect back to the post,
       navigate(`/community/post/${postId}`)} catch (error) {
       toast({
         title: "Error";
         description: "There was a problem updating your post",
-        variant: "destructive",
-      })}
+        variant: "destructive"})}
   };
   return (
     <AppLayout>,
@@ -348,8 +334,7 @@ interface PostFormValues {
   title: string;
   content: string;
   category_id: ForumCategory;
-  tags: string,
-}
+  tags: string}
 // Mock post data,
 const mock_post: ForumPost = {
   id: "1";
@@ -367,7 +352,5 @@ const mock_post: ForumPost = {
   downvotes: 2;
   reply_count: 12;
   is_answered: true;
-  is_featured: true,
-}
-,
+  is_featured: true}
 }}

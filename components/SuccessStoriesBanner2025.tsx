@@ -11,8 +11,7 @@ interface SuccessStory {
   timeframe: string,
   keyResults: string[],
   url: string,
-  logo: string,
-}
+  logo: string}
 ,
 const SuccessStoriesBanner20o25: React.FC = () => {
   const [currentStory, setCurrentStory] = useState(0),
@@ -31,8 +30,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
         '20% productivity increase';
         '15% reduction in energy costs'];
       url: '/case-studies/manufacturing-ai-transformation';
-      logo: '🏭',
-    };
+      logo: '🏭'};
     {
       id: 'healthcare-optimization';
       title: 'Healthcare AI Optimization';
@@ -46,8 +44,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
         '25% cost reduction in operations';
         '50% faster treatment planning'];
       url: '/case-studies/healthcare-ai-optimization';
-      logo: '🏥',
-    };
+      logo: '🏥'};
     {
       id: 'retail-personalization';
       title: 'Retail AI Personalization';
@@ -61,8 +58,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
         '40% reduction in cart abandonment';
         '22% increase in average order value'];
       url: '/case-studies/retail-ai-personalization';
-      logo: '🛒',
-    };
+      logo: '🛒'};
     {
       id: 'financial-services';
       title: 'Financial Services AI';
@@ -76,8 +72,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
         '30% faster loan processing';
         '25% increase in customer retention'];
       url: '/case-studies/financial-services-ai';
-      logo: '🏦',
-    }
+      logo: '🏦'}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -89,8 +84,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
   const prevStory = () => {
     setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length)};
   const goToStory = (index: number) => {
-    setCurrentStory(index),
-  };
+    setCurrentStory(index)};
   return (
     <section className="py-20 bg-gradient-to-r from-green-50 via-blue-50 to-purple-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -236,8 +230,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                 index === currentStory,
                   ? 'bg-green-60o0 w-8',
-                  : 'bg-gray-30o0 hover: bg-gray-40o0',
-              }`}
+                  : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
             />))}
         </div>,
         {/* Statistics Summary */}
@@ -295,6 +288,5 @@ const SuccessStoriesBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SuccessStoriesBanner20o25;

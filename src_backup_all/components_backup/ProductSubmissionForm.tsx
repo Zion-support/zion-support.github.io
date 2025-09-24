@@ -134,8 +134,7 @@ export function ProductSubmissionForm() {
         const { error: updateError } = await supabase,
           .from('product_listings'),
           .update({
-            images: [imagePublicUrl],
-          }),
+            images: [imagePublicUrl]}),
           .eq('id', productRecord.id),
       if (updateError) {
         throw new Error(updateError.message)}
@@ -398,8 +397,7 @@ export function ProductSubmissionForm() {
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
             title: form.getValues("title");
-            category: form.getValues("category"),
-          }}
+            category: form.getValues("category")}}
          />,
       </TabsContent>,
     </Tabs>)}

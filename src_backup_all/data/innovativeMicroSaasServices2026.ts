@@ -21,15 +21,13 @@ export interface InnovativeMicroSaasService20o26 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -95,8 +93,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"];
@@ -170,8 +167,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["IBM Q", "Google Sycamore", "Rigetti", "IonQ", "D-Wave", "Quantum Error Correction", "Quantum-Classical Hybrid"];
       integrations: ["AWS Braket", "Azure Quantum", "Google Cloud Quantum", "IBM Quantum Experience", "Custom APIs"];
@@ -244,8 +240,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "Elasticsearch", "Kafka", "Kubernetes", "Docker", "React"];
       integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Identity providers", "Ticketing systems"];
@@ -319,8 +314,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "CoAP", "OPC UA", "5G", "Wi-Fi 6"];
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols", "Enterprise systems"];
@@ -380,8 +374,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"];
@@ -389,8 +382,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]};
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
-    marketSize: "$29.9 billion by 20o26",
-  };
+    marketSize: "$29.9 billion by 20o26"};
   // AI-Powered Cybersecurity Suite,
   {
     id: "ai-cybersecurity-suite-20o26";
@@ -432,8 +424,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "Machine Learning", "React", "Node.js", "MongoDB"];
       integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability Scanners"];
@@ -441,8 +432,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust"]};
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"];
-    marketSize: "$45.2 billion by 20o26",
-  };
+    marketSize: "$45.2 billion by 20o26"};
   // AI Content Marketing Suite,
   {
     id: "ai-content-marketing-suite-20o26";
@@ -484,8 +474,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["GPT-4", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["WordPress", "HubSpot", "Mailchimp", "Hootsuite", "Google Analytics"];
@@ -493,8 +482,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.8%";
       security: ["GDPR", "CCPA", "Data encryption", "Access control"]};
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"];
-    marketSize: "$15.8 billion by 20o26",
-  };
+    marketSize: "$15.8 billion by 20o26"};
   // AI Sales Copilot,
   {
     id: "ai-sales-copilot-20o26";
@@ -536,8 +524,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Microsoft Dynamics"];
@@ -545,8 +532,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "Data encryption", "Role-based access"]};
     competitors: ["Gong", "Chorus", "SalesLoft", "Outreach"];
-    marketSize: "$12.3 billion by 20o26",
-  };
+    marketSize: "$12.3 billion by 20o26"};
   // AI Customer Support Platform,
   {
     id: "ai-customer-support-platform-20o26";
@@ -588,8 +574,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "NLP", "React", "Node.js", "MongoDB"];
       integrations: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Slack"];
@@ -597,8 +582,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.8%";
       security: ["GDPR", "CCPA", "Data encryption", "Access control"]};
     competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"];
-    marketSize: "$18.7 billion by 20o26",
-  };
+    marketSize: "$18.7 billion by 20o26"};
   // AI Data Analytics & BI,
   {
     id: "ai-data-analytics-bi-20o26";
@@ -640,8 +624,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Google Analytics", "Salesforce", "HubSpot", "QuickBooks", "Shopify"];
@@ -649,8 +632,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "Data encryption", "Access control"]};
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
-    marketSize: "$29.9 billion by 20o26",
-  };
+    marketSize: "$29.9 billion by 20o26"};
   // Cloud Infrastructure & DevOps,
   {
     id: "cloud-infrastructure-devops-20o26";
@@ -692,8 +674,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"];
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"];
@@ -701,8 +682,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero Trust"]};
     competitors: ["AWS", "Azure", "GCP", "DigitalOcean"];
-    marketSize: "$67.4 billion by 20o26",
-  };
+    marketSize: "$67.4 billion by 20o26"};
   // IT Helpdesk & Support,
   {
     id: "it-helpdesk-support-20o26";
@@ -744,8 +724,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Remote Desktop", "Ticketing System", "Monitoring Tools", "Asset Management"];
       integrations: ["Active Directory", "Office 365", "Google Workspace", "Slack"];
@@ -818,8 +797,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum-resistant algorithms", "AI/ML", "Blockchain", "Zero-trust architecture", "Cloud-native"];
       integrations: ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"];
@@ -891,8 +869,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"];
       integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"];
@@ -965,8 +942,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"];
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"];
@@ -1039,8 +1015,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"];
       integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"];
@@ -1112,8 +1087,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "AI/ML", "IoT", "Cloud computing", "Mobile apps", "APIs"];
       integrations: ["WMS systems", "TMS systems", "ERP systems", "GPS tracking", "Weather APIs"];
@@ -1185,8 +1159,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["AI/ML", "IoT", "Cloud computing", "Mobile apps", "APIs", "Blockchain"];
       integrations: ["Building management systems", "SCADA systems", "Smart meters", "Weather APIs", "Energy markets"];
@@ -1259,8 +1232,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o26: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum computing", "AI/ML", "Computer Vision", "Natural Language Processing", "Cloud computing"];
       integrations: ["Adobe Creative Suite", "Canva", "Figma", "Shopify", "WordPress", "Social media platforms"];
@@ -1288,8 +1260,7 @@ export const SPECIALIZED_SERVICES_20o26 = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "interview-assessment-ai-20o26";
@@ -1304,8 +1275,7 @@ export const SPECIALIZED_SERVICES_20o26 = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "helpdesk-platform-20o26";
@@ -1320,8 +1290,7 @@ export const SPECIALIZED_SERVICES_20o26 = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "dsr-privacy-portal-20o26";
@@ -1336,8 +1305,7 @@ export const SPECIALIZED_SERVICES_20o26 = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "security-headers-csp-20o26";
@@ -1352,7 +1320,6 @@ export const SPECIALIZED_SERVICES_20o26 = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   }
 ],

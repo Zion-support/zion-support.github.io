@@ -14,6 +14,5 @@ export function TalentPlaceholder() {
       <Button className='bg-zion-purple hover: bg-zion-purple-dark text-white'>,
         Join as Talent,
       </Button>,
-    </div>),
-}
+    </div>)}
 ,

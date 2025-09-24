@@ -168,6 +168,5 @@ export function MicroSaasServicesSection() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

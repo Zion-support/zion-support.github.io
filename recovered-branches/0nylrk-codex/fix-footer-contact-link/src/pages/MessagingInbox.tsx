@@ -30,7 +30,6 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile(),
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
-,
 export default function MessagingInbox() {
   const {
     conversations,
@@ -64,8 +63,7 @@ export default function MessagingInbox() {
     setActiveCall(roomId),
     // Show toast notification,
     toast.success("Starting video call", {
-      description: "Initializing video call connection...",
-    }),
+      description: "Initializing video call connection..."}),
     // Navigate to video call page,
     navigate(`/call/${roomId}`)}
 ,
@@ -73,8 +71,7 @@ export default function MessagingInbox() {
     setActiveCall(roomId);
     // Show toast notification,
     toast.success("Starting video call", {
-      description: "Initializing video call connection...",
-    }),
+      description: "Initializing video call connection..."}),
     // Navigate to video call page,
     navigate(`/call/${roomId}`)};
   return (
@@ -131,8 +128,7 @@ export default function MessagingInbox() {
     setActiveCall(roomId),
     // Show toast notification,
     toast && toast.success("Starting video call", {
-      description: "Initializing video call connection...",
-    }),
+      description: "Initializing video call connection..."}),
     // Navigate to video call page,
     navigate(`/call/${roomId}`)};
   return (
@@ -174,8 +170,7 @@ if ( {) {
     setActiveCall (room_id),
     // Show toast notification,
     toast.success ("Starting video call", {
-      description: "Initializing video call connection...",
-    }),
+      description: "Initializing video call connection..."}),
     // Navigate to video call page,
     navigate (`/call/${room_id}`)}
 ,
@@ -219,5 +214,4 @@ if ( {) {
       </div>,
     </ProtectedRoute>)}
 }
-,
 }})))

@@ -9,8 +9,7 @@ interface DataSource {
   lastSync: Date,
   recordCount: number,
   size: string,
-  health: 'excellent' | 'good' | 'warning' | 'critical',
-}
+  health: 'excellent' | 'good' | 'warning' | 'critical'}
 ,
 interface DataPipeline {
   id: string,
@@ -22,8 +21,7 @@ interface DataPipeline {
   recordsFailed: number,
   startTime: Date,
   endTime?: Date,
-  progress: number,
-}
+  progress: number}
 ,
 interface DataQualityMetric {
   id: string,
@@ -32,8 +30,7 @@ interface DataQualityMetric {
   threshold: number,
   status: 'pass' | 'warning' | 'fail',
   trend: 'up' | 'down' | 'stable',
-  lastChecked: Date,
-}
+  lastChecked: Date}
 ,
 const EnterpriseDataManagement: React.FC = () => {
   const [dataSourcesetDataSources] = useState<DataSource[]>([]),
@@ -45,8 +42,7 @@ const EnterpriseDataManagement: React.FC = () => {
     generateMockData(),
     // Simulate real-time updates,
     const interval = setInterval(() => {
-      updateRealTimeData(),
-    }5000),
+      updateRealTimeData()}5000),
     return () => clearInterval(interval)}[]),
   const generateMockData = async () => {
     setIsLoading(true),
@@ -60,8 +56,7 @@ const EnterpriseDataManagement: React.FC = () => {
         lastSync: new Date(Date.now() - 5 * 60 * 1000);
         recordCount: 2847592;
         size: '2.4 TB';
-        health: 'excellent',
-      };
+        health: 'excellent'};
       {
         id: '2';
         name: 'Customer API';
@@ -70,8 +65,7 @@ const EnterpriseDataManagement: React.FC = () => {
         lastSync: new Date(Date.now() - 2 * 60 * 1000);
         recordCount: 892456;
         size: '156 MB';
-        health: 'good',
-      };
+        health: 'good'};
       {
         id: '3';
         name: 'Analytics Warehouse';
@@ -80,8 +74,7 @@ const EnterpriseDataManagement: React.FC = () => {
         lastSync: new Date(Date.now() - 15 * 60 * 1000);
         recordCount: 5678901;
         size: '8.7 TB';
-        health: 'warning',
-      };
+        health: 'warning'};
       {
         id: '4';
         name: 'File Storage';
@@ -90,8 +83,7 @@ const EnterpriseDataManagement: React.FC = () => {
         lastSync: new Date(Date.now() - 30 * 60 * 1000);
         recordCount: 234567;
         size: '45 GB';
-        health: 'good',
-      };
+        health: 'good'};
       {
         id: '5';
         name: 'Real-time Stream';
@@ -100,8 +92,7 @@ const EnterpriseDataManagement: React.FC = () => {
         lastSync: new Date(Date.now() - 2 * 60 * 60 * 1000);
         recordCount: 0;
         size: '0 B';
-        health: 'critical',
-      }
+        health: 'critical'}
     ],
     const mockPipelines: DataPipeline[] = [
       {
@@ -113,8 +104,7 @@ const EnterpriseDataManagement: React.FC = () => {
         recordsProcessed: 15420;
         recordsFailed: 23;
         startTime: new Date(Date.now() - 45 * 60 * 1000);
-        progress: 78,
-      };
+        progress: 78};
       {
         id: '2';
         name: 'Analytics Processing';
@@ -125,8 +115,7 @@ const EnterpriseDataManagement: React.FC = () => {
         recordsFailed: 156;
         startTime: new Date(Date.now() - 2 * 60 * 60 * 1000);
         endTime: new Date(Date.now() - 30 * 60 * 1000);
-        progress: 100,
-      };
+        progress: 100};
       {
         id: '3';
         name: 'Backup Pipeline';
@@ -137,8 +126,7 @@ const EnterpriseDataManagement: React.FC = () => {
         recordsFailed: 892456;
         startTime: new Date(Date.now() - 4 * 60 * 60 * 1000);
         endTime: new Date(Date.now() - 3 * 60 * 60 * 1000);
-        progress: 0,
-      };
+        progress: 0};
       {
         id: '4';
         name: 'Real-time Events';
@@ -148,8 +136,7 @@ const EnterpriseDataManagement: React.FC = () => {
         recordsProcessed: 456789;
         recordsFailed: 12;
         startTime: new Date(Date.now() - 6 * 60 * 60 * 1000);
-        progress: 45,
-      }
+        progress: 45}
     ],
     const mockQualityMetrics: DataQualityMetric[] = [
       {
@@ -159,8 +146,7 @@ const EnterpriseDataManagement: React.FC = () => {
         threshold: 95.0;
         status: 'pass';
         trend: 'up';
-        lastChecked: new Date(Date.now() - 10 * 60 * 1000),
-      };
+        lastChecked: new Date(Date.now() - 10 * 60 * 1000)};
       {
         id: '2';
         name: 'Data Accuracy';
@@ -168,8 +154,7 @@ const EnterpriseDataManagement: React.FC = () => {
         threshold: 95.0;
         status: 'warning';
         trend: 'down';
-        lastChecked: new Date(Date.now() - 15 * 60 * 1000),
-      };
+        lastChecked: new Date(Date.now() - 15 * 60 * 1000)};
       {
         id: '3';
         name: 'Data Consistency';
@@ -177,8 +162,7 @@ const EnterpriseDataManagement: React.FC = () => {
         threshold: 98.0;
         status: 'pass';
         trend: 'stable';
-        lastChecked: new Date(Date.now() - 5 * 60 * 1000),
-      };
+        lastChecked: new Date(Date.now() - 5 * 60 * 1000)};
       {
         id: '4';
         name: 'Data Freshness';
@@ -186,8 +170,7 @@ const EnterpriseDataManagement: React.FC = () => {
         threshold: 90.0;
         status: 'warning';
         trend: 'down';
-        lastChecked: new Date(Date.now() - 20 * 60 * 1000),
-      };
+        lastChecked: new Date(Date.now() - 20 * 60 * 1000)};
       {
         id: '5';
         name: 'Schema Compliance';
@@ -195,8 +178,7 @@ const EnterpriseDataManagement: React.FC = () => {
         threshold: 95.0;
         status: 'pass';
         trend: 'up';
-        lastChecked: new Date(Date.now() - 8 * 60 * 1000),
-      }
+        lastChecked: new Date(Date.now() - 8 * 60 * 1000)}
     ],
     setDataSources(mockDataSources),
     setPipelines(mockPipelines),
@@ -210,8 +192,7 @@ const EnterpriseDataManagement: React.FC = () => {
         return {
           ...pipeline;
           progress: newProgress;
-          recordsProcessed: pipeline.recordsProcessed + Math.floor(Math.random() * 100),
-        };
+          recordsProcessed: pipeline.recordsProcessed + Math.floor(Math.random() * 100)};
       }
       return pipeline})),
     // Update data source sync times,
@@ -220,8 +201,7 @@ const EnterpriseDataManagement: React.FC = () => {
         return {
           ...source;
           lastSync: new Date();
-          recordCount: source.recordCount + Math.floor(Math.random() * 1000),
-        };
+          recordCount: source.recordCount + Math.floor(Math.random() * 1000)};
       }
       return source}))};
   const getStatusColor = (status: string) => {
@@ -237,8 +217,7 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'pass': return 'text-green-600 bg-green-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'fail': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getHealthColor = (health: string) => {
     switch (health) {
@@ -246,8 +225,7 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'good': return 'text-blue-600 bg-blue-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -256,8 +234,7 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'file': return '📁',
       case 'stream': return '🌊',
       case 'cloud': return '☁️',
-      default: return '📊',
-    }
+      default: return '📊'}
   };
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
@@ -323,8 +300,7 @@ const EnterpriseDataManagement: React.FC = () => {
             className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-md font-medium transition-colors duration-200 ${
               selectedView === tab.id,
                 ? 'bg-white text-blue-600 shadow-sm',
-                : 'text-gray-600 hover: text-gray-900',
-            }`}
+                : 'text-gray-600 hover: text-gray-900'}`}
           >,
             <span>{tab.icon}</span>,
             <span>{tab.label}</span>,

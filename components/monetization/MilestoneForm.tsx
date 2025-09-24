@@ -18,10 +18,8 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React, { useState } from 'react',
-}) => Promise<void> | void};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void};
+import React, { useState } from 'react'}) => Promise<void> | void};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void};
 export default function MilestoneForm({ onSubmit }: Props) {
-,
   const [title, setTitle] = useState(''),
   const [description, setDescription] = useState(''),
   const [dueDate, setDueDate] = useState(''),
@@ -33,7 +31,6 @@ export default function MilestoneForm({ onSubmit }: Props) {
     setError(null),
     const parsedAmount = Number(amountUsd);
     if (!title || !dueDate || !amountUsd || Number && Number.isNaN(parsedAmount)) {
-,
       setError('Please provide Title, Due Date and a valid Amount.'),
     setLoading(true),
     try {
@@ -42,8 +39,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setDescription(''),
       setDueDate(''),
       setAmountUsd('')} catch (err: any) {
-      setError(err?.message |'Failed to create milestone'),
-    } finally {
+      setError(err?.message |'Failed to create milestone')} finally {
       setLoading(false)}
 }
   return (
@@ -56,8 +52,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setDescription(''),
       setDueDate(''),
       setAmountUsd('')} catch (err: any) {
-      setError(err?.message |'Failed to create milestone'),
-    } finally {
+      setError(err?.message |'Failed to create milestone')} finally {
       setLoading(false)}
   }
   };
@@ -169,8 +164,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       >,
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>,
-    </form>)),
-}
+    </form>))}
 }
   )}
 ,

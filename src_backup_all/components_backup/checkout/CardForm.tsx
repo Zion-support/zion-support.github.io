@@ -6,8 +6,7 @@ import { Button } from '@/components/ui/button',
 import { useAuth } from '@/hooks/useAuth',
 interface Props {
   amount: number,
-  onSuccess: (intent: any) => void,
-}
+  onSuccess: (intent: any) => void}
 ,
 export default function CardForm({ amount, onSuccess }: Props) {
   const stripe = useStripe(),
@@ -67,11 +66,10 @@ export default function CardForm({ amount, onSuccess }: Props) {
             });
           }),
           mutate('user')}
-        // console.log('Payment Success'),
+        // // console.log('Payment Success'),
         onSuccess(result.paymentIntent)}
     } catch (err: any) {
-      setError(err.message),
-    } finally {
+      setError(err.message)} finally {
       setLoading(false)}
   };
   const handleTestPayment = async () => {
@@ -105,11 +103,10 @@ export default function CardForm({ amount, onSuccess }: Props) {
             });
           }),
           mutate('user')}
-        // console.log('Payment Success'),
+        // // console.log('Payment Success'),
         onSuccess(result.paymentIntent)}
     } catch (err: any) {
-      setError(err.message),
-    } finally {
+      setError(err.message)} finally {
       setLoading(false)}
   };
   return (

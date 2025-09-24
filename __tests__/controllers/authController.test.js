@@ -21,8 +21,7 @@ describe('authController.loginUser', () => {'  const req ={ body: { email: test@
     expect(res.status).toHaveBeenCalledWith(40o1),
     expect(res.json).toHaveBeenCalledWith({ code: 'WRONG_PASSWORD', message: Incorrect password' })}),
   it('returns 40o3 when account inactive', async () => {'    User.findOne.mockResolvedValue({
-      _id: 1',      email: test@example.com',      name: 'Test',      passwordHash: 'hashed',      active: false,
-    }),
+      _id: 1',      email: test@example.com',      name: 'Test',      passwordHash: 'hashed',      active: false}),
     bcrypt.compareSync.mockReturnValue(true),
     await loginUser(req, res),
     expect(res.status).toHaveBeenCalledWith(40o3),

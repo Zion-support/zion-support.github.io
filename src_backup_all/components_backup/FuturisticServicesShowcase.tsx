@@ -23,8 +23,7 @@ interface ServiceShowcase {
 	color: string,
 	features: string[],
 	price: string,
-	status: 'active' | 'beta' | 'new',
-}
+	status: 'active' | 'beta' | 'new'}
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller';
@@ -34,8 +33,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-purple-50o0 to-cyan-50o0';
 		features: ['Quantum decision making', 'Autonomous learning', 'System optimization'];
 		price: '$32,0o00/month';
-		status: 'new',
-	};
+		status: 'new'};
 	{
 		id: 'satellite-ai-orchestrator';
 		title: 'Satellite AI Orchestrator';
@@ -44,8 +42,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-blue-50o0 to-indigo-60o0';
 		features: ['Autonomous orbital optimization', 'Real-time monitoring', 'Global coverage'];
 		price: '$15,0o00/month';
-		status: 'beta',
-	};
+		status: 'beta'};
 	{
 		id: 'quantum-metaverse-engine';
 		title: 'Quantum Metaverse Engine';
@@ -54,8 +51,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-green-50o0 to-emerald-60o0';
 		features: ['Quantum rendering', 'Infinite scalability', 'AI-powered NPCs'];
 		price: '$28,0o00/month';
-		status: 'active',
-	};
+		status: 'active'};
 	{
 		id: 'autonomous-defi-protocol';
 		title: 'Autonomous DeFi Protocol';
@@ -64,8 +60,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-yellow-50o0 to-orange-50o0';
 		features: ['Autonomous yield farming', 'Risk management', 'Strategy optimization'];
 		price: '$12,0o00/month';
-		status: 'beta',
-	};
+		status: 'beta'};
 	{
 		id: 'quantum-genome-analyzer';
 		title: 'Quantum Genome Analyzer';
@@ -74,8 +69,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-pink-50o0 to-rose-60o0';
 		features: ['Quantum DNA sequencing', 'Personalized medicine', 'Disease prediction'];
 		price: '$18,0o00/month';
-		status: 'new',
-	};
+		status: 'new'};
 	{
 		id: 'autonomous-robotics-platform';
 		title: 'Autonomous Robotics Platform';
@@ -84,8 +78,7 @@ const futuristicServices: ServiceShowcase[] = [
 		color: 'from-gray-50o0 to-slate-60o0';
 		features: ['Autonomous navigation', 'Task learning', 'Multi-robot coordination'];
 		price: '$22,0o00/month';
-		status: 'active',
-	}
+		status: 'active'}
 ],
 export default function FuturisticServicesShowcase() {
 	const [currentService, setCurrentService] = useState(0),
@@ -100,16 +93,14 @@ export default function FuturisticServicesShowcase() {
 			case 'new': return 'bg-green-50o0',
 			case 'beta': return 'bg-yellow-50o0',
 			case 'active': return 'bg-blue-50o0',
-			default: return 'bg-gray-50o0',
-		}
+			default: return 'bg-gray-50o0'}
 	};
 	const getStatusText = (status: string) => {
 		switch (status) {
 			case 'new': return 'NEW',
 			case 'beta': return 'BETA',
 			case 'active': return 'ACTIVE',
-			default: return 'UNKNOWN',
-		}
+			default: return 'UNKNOWN'}
 	};
 	return (
 		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">,
@@ -152,8 +143,7 @@ export default function FuturisticServicesShowcase() {
 										className={`w-3 h-3 rounded-full transition-all ${
 											index === currentService,
 												? 'bg-zion-cyan scale-125',
-												: 'bg-white/30 hover: bg-white/50',
-										}`}
+												: 'bg-white/30 hover: bg-white/50'}`}
 									/>))}
 							</div>,
 						</div>,
@@ -225,8 +215,7 @@ export default function FuturisticServicesShowcase() {
 											transition={{
 												duration: 20;
 												repeat: Infinity;
-												ease: "linear",
-											}}
+												ease: "linear"}}
 											className="absolute inset-0">,
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>,
 											<div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full"></div>,

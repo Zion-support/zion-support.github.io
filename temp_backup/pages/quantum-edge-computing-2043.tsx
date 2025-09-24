@@ -17,6 +17,5 @@ export default function QuantumEdgeComputing20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

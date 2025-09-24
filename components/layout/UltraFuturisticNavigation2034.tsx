@@ -216,7 +216,6 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase,
-,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
@@ -226,7 +225,6 @@ import {
   Network, Server, HardDrive, Monitor,
   Laptop, Watch, Headphones, Speaker, Mic,
   Keyboard, Mouse, CpuIcon, DatabaseIcon,
-,
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
@@ -285,14 +283,12 @@ import {
         name: 'Blockchain AI Platform',
         href: '/blockchain-ai-platform',
         description: 'Decentralized AI for the future',
-        price: '$899/month',
-      }
+        price: '$899/month'}
       {
         name: 'Edge AI Computing',
         href: '/edge-ai-computing-platform',
         description: 'AI at the edge for real-time processing',
-        price: '$599/month',
-      }
+        price: '$599/month'}
       {
         name: 'AI Climate Modeling',
         href: '/ai-climate-modeling-platform',
@@ -312,26 +308,22 @@ import {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
         description: 'Protect and monitor your APIs',
-        price: '$399/month',
-      }
+        price: '$399/month'}
       {
         name: 'Customer Success Automation',
         href: '/customer-success-automation',
         description: 'Automate customer success workflows',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'HR Automation Suite',
         href: '/hr-automation-suite',
         description: 'Streamline HR processes with AI',
-        price: '$179/month',
-      }
+        price: '$179/month'}
       {
         name: 'Project Management AI',
         href: '/project-management-ai-platform',
         description: 'AI-powered project management',
-        price: '$199/month',
-      }
+        price: '$199/month'}
     ]},  {      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' }
       { name: 'Customer Success Automation', href: '/customer-success-automation', description: 'Automate customer success workflows', price: '$199/month' }
       { name: 'HR Automation Suite', href: '/hr-automation-suite', description: 'Streamline HR processes with AI', price: '$179/month' }
@@ -346,26 +338,22 @@ import {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
         description: 'Automate your entire e-commerce operation',
-        price: '$249/month',
-      }
+        price: '$249/month'}
       {
         name: 'Marketing Automation Suite',
         href: '/marketing-automation-suite',
         description: 'Automate your entire marketing operation',
-        price: '$279/month',
-      }
+        price: '$279/month'}
       {
         name: 'Financial Analytics Platform',
         href: '/financial-analytics-platform',
         description: 'Real-time financial insights',
-        price: '$349/month',
-      }
+        price: '$349/month'}
       {
         name: 'Legal Document Automation',
         href: '/legal-document-automation',
         description: 'Automate legal document creation',
-        price: '$399/month',
-      }
+        price: '$399/month'}
     ]},  {      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' }
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', description: 'Automate your entire marketing operation', price: '$279/month' }
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Real-time financial insights', price: '$349/month' }
@@ -385,20 +373,17 @@ import {
         name: 'AI Content Generator Elite',
         href: '/ai-content-generator-elite',
         description: 'Professional AI content creation',
-        price: '$49/month',
-      }
+        price: '$49/month'}
       {
         name: 'AI Guardrails Suite',
         href: '/ai-guardrails-suite',
         description: 'Policy and safety for LLM apps',
-        price: '$199/month',
-      }
+        price: '$199/month'}
       {
         name: 'AI Business Intelligence',
         href: '/ai-business-intelligence-suite',
         description: 'Intelligent business insights',
-        price: '$299/month',
-      }
+        price: '$299/month'}
     ]},  {      { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' }
       { name: 'AI Content Generator Elite', href: '/ai-content-generator-elite', description: 'Professional AI content creation', price: '$49/month' }
       { name: 'AI Guardrails Suite', href: '/ai-guardrails-suite', description: 'Policy and safety for LLM apps', price: '$199/month' }
@@ -622,19 +607,16 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-  }
+    icon: Linkedin}
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
   {
     name: 'Instagram',
     href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-  }
+    icon: Instagram}
   {
     name: 'YouTube',
     href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-  }
+    icon: Youtube}
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
 ],
 const certifications = [
@@ -657,7 +639,6 @@ const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'],
 export default function UltraFuturisticNavigation2034() {
 export default function UltraFuturisticNavigation2034() {
-,
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
@@ -667,8 +648,7 @@ export default function UltraFuturisticNavigation2034() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  }
+    setActiveDropdown(activeDropdown === category ? null : category)}
   const closeDropdown = () => {
     setActiveDropdown(null),
 const quickLinks = [
@@ -736,15 +716,13 @@ export default function UltraFuturisticNavigation2034() {
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeDropdown = () => {
     setActiveDropdown(null)};    };
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category),
-  };
+    setActiveDropdown(activeDropdown === category ? null : category)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   return (
@@ -977,16 +955,14 @@ function UltraFuturisticNavigation2034() {
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),
   const toggle_dropdown = (category: string) =>: any {
-    setActiveDropdown (active_dropdown === category ? null : category),
-  }
+    setActiveDropdown (active_dropdown === category ? null : category)}
 ,
   const close_dropdown = () =>: any {
     setActiveDropdown (null)}    }
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),
   const toggle_dropdown = (category: string) =>: any {
-    setActiveDropdown (active_dropdown === category ? null : category),
-  }
+    setActiveDropdown (active_dropdown === category ? null : category)}
 ,
   const close_dropdown = () =>: any {
     setActiveDropdown (null)}

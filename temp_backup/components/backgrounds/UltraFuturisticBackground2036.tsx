@@ -53,8 +53,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
       constructor(p1: Particle, p2: Particle) {
         this.particle1 = p1,
         this.particle2 = p2,
-        this.opacity = Math.random() * 0.3 + 0.1,
-      }
+        this.opacity = Math.random() * 0.3 + 0.1}
 ,
       draw() {
         const distance = Math.sqrt(
@@ -132,8 +131,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-blue-40o0/30 transform rotate-45",
@@ -144,8 +142,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-20 h-20 border border-purple-40o0/30 transform rotate-12",
@@ -156,8 +153,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Neon Glow Effects */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-radial from-cyan-50o0/10 via-transparent to-transparent rounded-full blur-3xl"  />,
@@ -181,8 +177,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
               duration: Math.random() * 3 + 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Scanning Line Effect */}
@@ -194,8 +189,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Corner Accents */}
       <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none" style={{ zIndex: -1 }}>,
@@ -230,8 +224,7 @@ const UltraFuturisticBackground20o36: React.FC = () => {
               duration: Math.random() * 4 + 3;
               repeat: Infinity;
               delay: Math.random() * 3;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           >,
             {Math.random().toString(16).substring(2, 8).toUpperCase()}
           </motion.div>))}

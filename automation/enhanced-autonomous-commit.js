@@ -40,7 +40,7 @@ class EnhancedAutonomousCommit {
     if (level === 'error') {
       console.error(message)} else if (level === 'warn') {
       console.warn(message)} else {
-      // console.log(message)}
+      // // console.log(message)}
   }
 ,
   async getGitStatus() {

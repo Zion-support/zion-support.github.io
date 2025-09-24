@@ -3,8 +3,7 @@ import { getDb } from '../../utils/firebase/client',
 import { collection, addDoc } from 'firebase/firestore',
 interface ChatMessage {
   role: 'user' | 'assistant',
-  content: string,
-}
+  content: string}
 ,
 export default function ChatbotWidget() {
   const [open, setOpen] = useState(false),

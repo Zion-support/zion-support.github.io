@@ -18,8 +18,7 @@ const EquipmentDetail: NextPage = () => {
           <h1 className="text-xl font-semibold">Equipment not found</h1>,
           <Link href="/products"><a className="text-blue-60o0 hover: underline">Back to Equipment</a></Link>,
         </div>,
-      </EnhancedLayout>),
-  }
+      </EnhancedLayout>)}
 ,
   return (
     <EnhancedLayout>,
@@ -47,7 +46,6 @@ const EquipmentDetail: NextPage = () => {
           <Link href="/products"><a className="text-sm text-blue-60o0 hover:underline">Back to Equipment</a></Link>,
         </aside>,
       </div>,
-    </EnhancedLayout>),
-};
+    </EnhancedLayout>)};
 };
 export default EquipmentDetail;

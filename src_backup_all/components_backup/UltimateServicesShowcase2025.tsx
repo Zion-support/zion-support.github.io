@@ -34,40 +34,35 @@ const UltimateServicesShowcase20o25: React.FC = () => {
       icon: Brain;
       color: 'from-purple-50o0 to-pink-50o0';
       bgColor: 'bg-purple-50';
-      borderColor: 'border-purple-20o0',
-    };
+      borderColor: 'border-purple-20o0'};
     {
       id: 'security';
       name: 'Cybersecurity';
       icon: Shield;
       color: 'from-red-50o0 to-orange-50o0';
       bgColor: 'bg-red-50';
-      borderColor: 'border-red-20o0',
-    };
+      borderColor: 'border-red-20o0'};
     {
       id: 'cloud';
       name: 'Cloud Solutions';
       icon: Cloud;
       color: 'from-blue-50o0 to-cyan-50o0';
       bgColor: 'bg-blue-50';
-      borderColor: 'border-blue-20o0',
-    };
+      borderColor: 'border-blue-20o0'};
     {
       id: 'blockchain';
       name: 'Blockchain & Web3';
       icon: Lock;
       color: 'from-green-50o0 to-emerald-50o0';
       bgColor: 'bg-green-50';
-      borderColor: 'border-green-20o0',
-    };
+      borderColor: 'border-green-20o0'};
     {
       id: 'analytics';
       name: 'Data Analytics';
       icon: BarChart3;
       color: 'from-indigo-50o0 to-purple-50o0';
       bgColor: 'bg-indigo-50';
-      borderColor: 'border-indigo-20o0',
-    }
+      borderColor: 'border-indigo-20o0'}
   ],
   const services ={
     ai: [
@@ -81,8 +76,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         clients: '50o0+';
         icon: Brain;
         featured: true;
-        new: true,
-      };
+        new: true};
       {
         id: 'ai-legal-research';
         title: 'AI Legal Research Assistant';
@@ -92,8 +86,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         rating: 4.8;
         clients: '30o0+';
         icon: FileText;
-        featured: true,
-      };
+        featured: true};
       {
         id: 'ai-healthcare-analytics';
         title: 'AI Healthcare Analytics Platform';
@@ -102,8 +95,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         price: 'Starting at $3,499/month';
         rating: 4.9;
         clients: '20o0+';
-        icon: TrendingUp,
-      }
+        icon: TrendingUp}
     ];
     security: [
       {
@@ -115,8 +107,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         rating: 4.9;
         clients: '40o0+';
         icon: Shield;
-        featured: true,
-      };
+        featured: true};
       {
         id: 'quantum-encryption';
         title: 'Quantum Encryption Services';
@@ -126,8 +117,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         rating: 4.8;
         clients: '150+';
         icon: Lock;
-        new: true,
-      }
+        new: true}
     ];
     cloud: [
       {
@@ -139,8 +129,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         rating: 4.8;
         clients: '350+';
         icon: Cloud;
-        featured: true,
-      };
+        featured: true};
       {
         id: 'edge-computing';
         title: 'Edge Computing Solutions';
@@ -149,8 +138,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         price: 'Starting at $2,599/month';
         rating: 4.7;
         clients: '250+';
-        icon: Network,
-      }
+        icon: Network}
     ];
     blockchain: [
       {
@@ -163,8 +151,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         clients: '10o0+';
         icon: Lock;
         featured: true;
-        new: true,
-      };
+        new: true};
       {
         id: 'nft-marketplace';
         title: 'NFT Marketplace Solutions';
@@ -173,8 +160,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         price: 'Starting at $3,999/month';
         rating: 4.8;
         clients: '20o0+';
-        icon: Palette,
-      }
+        icon: Palette}
     ];
     analytics: [
       {
@@ -186,8 +172,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         rating: 4.8;
         clients: '30o0+';
         icon: BarChart3;
-        featured: true,
-      };
+        featured: true};
       {
         id: 'real-time-dashboard';
         title: 'Real-Time Analytics Dashboard';
@@ -196,16 +181,14 @@ const UltimateServicesShowcase20o25: React.FC = () => {
         price: 'Starting at $1,599/month';
         rating: 4.7;
         clients: '40o0+';
-        icon: Cpu,
-      }
+        icon: Cpu}
     ]};
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -214,8 +197,7 @@ const UltimateServicesShowcase20o25: React.FC = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   const currentServices = services[activeCategory as keyof typeof services] || [],
@@ -401,6 +383,5 @@ const UltimateServicesShowcase20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateServicesShowcase20o25;

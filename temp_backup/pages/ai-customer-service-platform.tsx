@@ -20,5 +20,4 @@ export default function AiCustomerServicePlatform() {
 			]}
 			industries={["E-commerce", "SaaS", "Telecom", "Financial Services"]}
 			url="https: //ziontechgroup.com/ai-customer-service-platform",
-		 />),
-}
+		 />)}

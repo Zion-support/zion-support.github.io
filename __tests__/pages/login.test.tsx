@@ -8,8 +8,7 @@ jest.mock('next/router', () => ({'  useRouter: jest.fn(() => ({
     isReady: true, // Common property to mock,
     events: {
       on: jest.fn();
-      off: jest.fn(),
-    }
+      off: jest.fn()}
   }))})),
 // Mock useAuth hook,
 const mockLogin = jest.fn(),
@@ -31,36 +30,29 @@ const mockUseAuth = jest.fn(() => ({
   onboardingStep: null;
   tokens: null;
   avatarUrl: null;
-  setAvatarUrl: jest.fn(),
-})),
-jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => mockUseAuth(),
-})),
+  setAvatarUrl: jest.fn()})),
+jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => mockUseAuth()})),
 // Mock safeStorage,
 jest.mock('@/utils/safeStorage', () => ({'  safeStorage: {
     getItem: jest.fn();
     setItem: jest.fn();
-    removeItem: jest.fn(),
-  };
+    removeItem: jest.fn()};
   safeSessionStorage: {
     getItem: jest.fn();
     setItem: jest.fn();
-    removeItem: jest.fn(),
-  }
+    removeItem: jest.fn()}
 })),
 // Mock Sentry (already present in spirit, but ensure path is correct if it moved),
-jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),
-})),
+jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn()})),
 // Mock analytics,
-jest.mock('@/lib/analytics', () => ({'  fireEvent: jest.fn(),
-})),
+jest.mock('@/lib/analytics', () => ({'  fireEvent: jest.fn()})),
 // Mock child components that might be problematic or irrelevant to the logic being tested,
 // LoginContent is the core of what src/pages/Login.jsx renders.,
 // If pages/auth/login.tsx directly renders LoginForm or similar, adjust mocks accordingly.,
 // For now, assuming Login.jsx/LoginContent/LoginCard/LoginForm structure.,
 // If LoginErrorFallback is used by an ErrorBoundary within Login.jsx:,
 jest.mock('@/components/auth/login/LoginErrorFallback', () => {'  const MockLoginErrorFallback = () => <div data-testid="login-error-fallback">Fallback</div>,"  MockLoginErrorFallback.displayName = MockLoginErrorFallback',  return MockLoginErrorFallback}),
-// Mock toast if it's called directly in Login.jsx or children and causes issues'jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn(),
-})),
+// Mock toast if it's called directly in Login.jsx or children and causes issues'jest.mock('@/hooks/use-toast', () => ({'  toast: jest.fn()})),
 describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock,
   let mockRouterPush: jest.Mock,
   beforeEach(() => {
@@ -75,8 +67,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock,
       isReady: true;
       events: {
         on: jest.fn();
-        off: jest.fn(),
-      }
+        off: jest.fn()}
     })),
     mockUseAuth.mockImplementation(() => ({
       isLoading: false;
@@ -95,8 +86,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock,
       onboardingStep: null;
       tokens: null;
       avatarUrl: null;
-      setAvatarUrl: jest.fn(),
-    })),
+      setAvatarUrl: jest.fn()})),
     (safeStorage.getItem as jest.Mock).mockReset(),
     (safeStorage.setItem as jest.Mock).mockReset(),
     (safeStorage.removeItem as jest.Mock).mockReset(),
@@ -125,8 +115,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock,
       onboardingStep: null;
       tokens: null;
       avatarUrl: null;
-      setAvatarUrl: jest.fn(),
-    }),
+      setAvatarUrl: jest.fn()}),
     const { _rerender } = render(<Login  />),
     await userEvent.type(screen.getByLabelText(/email address/i), user@example.com'),    await userEvent.type(screen.getByLabelText(/password/i), password'),    await userEvent.click(screen.getByRole('button', { name: /login/i })),
     await waitFor(() => {
@@ -151,8 +140,7 @@ describe('Login Page', () => {'  let _mockRouterReplace: jest.Mock,
       onboardingStep: null;
       tokens: null;
       avatarUrl: null;
-      setAvatarUrl: jest.fn(),
-    }),
+      setAvatarUrl: jest.fn()}),
     rerender(<Login  />), // Re-render with the new state from useAuth(),
     // Login.jsx's useEffect (if it has one for redirection based on isAuthenticated) should now trigger.'    // Or, if Login page itself doesn't redirect but expects parent layout to handle it,    // this test would verify that isAuthenticated is true and the form is perhaps gone.,
     // The original task implies Login.jsx handles redirection.,

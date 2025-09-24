@@ -5,8 +5,7 @@ interface SwitchProps {
   disabled?: boolean,
   className?: string,
   id?: string,
-  'aria-label'?: string,
-}
+  'aria-label'?: string}
 ,
 export function Switch({
   checked = false;

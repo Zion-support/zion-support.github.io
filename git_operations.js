@@ -1,24 +1,24 @@
 const { execSync } = require('child_process'),
 const fs = require('fs'),
-// console.log('🔄 Starting git operations...'),
+// // console.log('🔄 Starting git operations...'),
 try {
     // Check current status,
-    // console.log('📊 Checking git status...'),
+    // // console.log('📊 Checking git status...'),
     const status = execSync('git status --porcelain', { encoding: 'utf8' }),
-    // console.log('Status:', status),
+    // // console.log('Status:', status),
     // Fetch latest changes,
-    // console.log('📥 Fetching latest changes...'),
+    // // console.log('📥 Fetching latest changes...'),
     execSync('git fetch origin', { stdio: 'inherit' }),
     // Try to pull,
-    // console.log('🔄 Attempting to pull...'),
+    // // console.log('🔄 Attempting to pull...'),
     try {
         execSync('git pull origin main', { stdio: 'inherit' }),
-        // console.log('✅ Successfully pulled changes')} catch (error) {
-        // console.log('⚠️ Pull failed, checking for conflicts...'),
+        // // console.log('✅ Successfully pulled changes')} catch (error) {
+        // // console.log('⚠️ Pull failed, checking for conflicts...'),
         // Check for merge conflicts,
         const statusAfterPull = execSync('git status --porcelain', { encoding: 'utf8' }),
         if (statusAfterPull.includes('UU') || statusAfterPull.includes('AA')) {
-            // console.log('🔧 Found merge conflicts, resolving...'),
+            // // console.log('🔧 Found merge conflicts, resolving...'),
             // Use merge conflict resolver if available,
             if (fs.existsSync('merge_conflicts_resolver.js')) {
                 execSync('node merge_conflicts_resolver.js', { stdio: 'inherit' })}
@@ -30,14 +30,13 @@ try {
     }
 ,
     // Push changes,
-    // console.log('📤 Pushing changes...'),
+    // // console.log('📤 Pushing changes...'),
     try {
         execSync('git push origin main', { stdio: 'inherit' }),
-        // console.log('✅ Successfully pushed to main branch')} catch (error) {
-        // console.log('❌ Push failed, trying force push...'),
+        // // console.log('✅ Successfully pushed to main branch')} catch (error) {
+        // // console.log('❌ Push failed, trying force push...'),
         execSync('git push --force-with-lease origin main', { stdio: 'inherit' })}
 ,
-    // console.log('🎉 Git operations completed successfully!'),
-} catch (error) {
+    // // console.log('🎉 Git operations completed successfully!')} catch (error) {
     console.error('❌ Error during git operations:', error.message),
     process.exit(1)}

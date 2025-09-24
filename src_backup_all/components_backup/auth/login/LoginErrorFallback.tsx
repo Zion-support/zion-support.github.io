@@ -1,8 +1,7 @@
 import { AlertTriangle, RefreshCw } from 'lucide-react',
 interface LoginErrorFallbackProps {
   error: any,
-  resetErrorBoundary: () => void,
-}
+  resetErrorBoundary: () => void}
 ,
 export default function LoginErrorFallback({
   error;
@@ -36,6 +35,5 @@ export default function LoginErrorFallback({
           Try Again,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

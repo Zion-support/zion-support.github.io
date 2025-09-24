@@ -93,8 +93,7 @@ describe('TalentDirectory Page', () => {
     // 1. Create a promise that we can control,
     let resolveFetchPromise: (value: any) => void,
     const mockFetchPromise = new Promise(resolve => {
-      resolveFetchPromise = resolve,
-    }),
+      resolveFetchPromise = resolve}),
     (global.fetch as jest.Mock).mockImplementationOnce(() => mockFetchPromise),
     render(
       <MemoryRouter>,

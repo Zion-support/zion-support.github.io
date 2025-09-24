@@ -704,6 +704,5 @@ export default function QuantumAI20o26BusinessTransformation() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

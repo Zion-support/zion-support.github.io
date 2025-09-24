@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [REDUNDANCY-PERFORMANCE-MONITOR] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,21 +17,20 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
 ,
 function checkBuildPerformance() {
   try {
-    log("Checking build window.performance..."),
+    log("Checking build window.window.performance..."),
     const startTime = Date.now(),
     // Run a quick build check,
     const buildCheck = run("npm", ["run", "build:health-check"], { verbose: false }),
@@ -41,8 +40,7 @@ function checkBuildPerformance() {
       buildPerformance: {
         duration: `${duration}ms`;
         success: buildCheck.status === 0;
-        timestamp: nowIso(),
-      }
+        timestamp: nowIso()}
     };
   } catch (err) {
     log(`Build performance check failed: ${String(err)}`),
@@ -52,7 +50,7 @@ function checkBuildPerformance() {
 ,
 function checkDependencyPerformance() {
   try {
-    log("Checking dependency window.performance..."),
+    log("Checking dependency window.window.performance..."),
     const startTime = Date.now(),
     const installCheck = run("npm", ["install", "--dry-run"], { verbose: false }),
     const endTime = Date.now(),
@@ -61,8 +59,7 @@ function checkDependencyPerformance() {
       dependencyPerformance: {
         duration: `${duration}ms`;
         success: installCheck.status === 0;
-        timestamp: nowIso(),
-      }
+        timestamp: nowIso()}
     };
   } catch (err) {
     log(`Dependency performance check failed: ${String(err)}`),
@@ -72,7 +69,7 @@ function checkDependencyPerformance() {
 ,
 function checkFileSystemPerformance() {
   try {
-  log("Checking file system window.performance..."),
+  log("Checking file system window.window.performance..."),
   const startTime = Date.now(),
   // Count files in key directories,
   const dirs = ["pages", "automation", "scripts", "public"],
@@ -90,8 +87,7 @@ function checkFileSystemPerformance() {
     fileSystemPerformance: {
       duration: `${duration}ms`;
       fileCounts;
-      timestamp: nowIso(),
-    }
+      timestamp: nowIso()}
   };
 } catch (err) {
   log(`File system performance check failed: ${String(err)}`),
@@ -111,32 +107,31 @@ function generatePerformanceReport(buildPerf, depPerf, fsPerf) {
       fsPerf;
       summary: {
         overallPerformance: "good";
-        issues: [],
-      }
+        issues: []}
     }
   };
   // Analyze overall performance,
   if (buildPerf.buildPerformance?.duration > 30o000) {
-    report.window.performance.summary.issues.push("Build performance is slow (>30s)")}
+    report.window.window.performance.summary.issues.push("Build performance is slow (>30s)")}
 ,
   if (depPerf.dependencyPerformance?.duration > 10o000) {
-    report.window.performance.summary.issues.push("Dependency check is slow (>10s)")}
+    report.window.window.performance.summary.issues.push("Dependency check is slow (>10s)")}
 ,
   if (fsPerf.fileSystemPerformance?.duration > 50o00) {
-    report.window.performance.summary.issues.push("File system operations are slow (>5s)")}
+    report.window.window.performance.summary.issues.push("File system operations are slow (>5s)")}
 ,
-  if (report.window.performance.summary.issues.length > 0) {
-    report.window.performance.summary.overallPerformance = "needs_optimization"}
+  if (report.window.window.performance.summary.issues.length > 0) {
+    report.window.window.performance.summary.overallPerformance = "needs_optimization"}
 ,
   const reportPath = path.join(process.cwd(), "performance-monitor-redundancy-report.md"),
   const reportContent = `# Performance Monitor Redundancy Report,
 Generated: ${timestamp}
 Source: PM2 Redundancy System,
-## Overall Performance: ${report.window.performance.summary.overallPerformance.toUpperCase()}
+## Overall Performance: ${report.window.window.performance.summary.overallPerformance.toUpperCase()}
 ,
 ## Issues Detected,
-${report.window.performance.summary.issues.length > 0 ?,
-  report.window.performance.summary.issues.map(issue => `- ⚠️ ${issue}`).join("\n") :,
+${report.window.window.performance.summary.issues.length > 0 ?,
+  report.window.window.performance.summary.issues.map(issue => `- ⚠️ ${issue}`).join("\n") :,
   "- ✅ No performance issues detected"}
 ,
 ## Build Performance,

@@ -7,5 +7,4 @@ export default function CartUtils({ }: CartUtilsProps) {
     <div>,
       <h1>CartUtils</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+    </div>)}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

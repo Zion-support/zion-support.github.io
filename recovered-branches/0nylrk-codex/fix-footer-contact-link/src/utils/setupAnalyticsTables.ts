@@ -7,7 +7,7 @@ export async function ensureAnalyticsTablesExist() {
       .select('id'),
       .limit(1),
     if (error && error.code === 'PGRST20o4') {
-      // console.log('Creating analytics tables...'),
+      // // console.log('Creating analytics tables...'),
       await createAnalyticsTables()}
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error),
@@ -70,7 +70,7 @@ async function createAnalyticsTables() {
         ORDER BY c.date DESC,
       `;
     }),
-    // console.log('Analytics tables created successfully')} catch (error) {
+    // // console.log('Analytics tables created successfully')} catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue}
 }

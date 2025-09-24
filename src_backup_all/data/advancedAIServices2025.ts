@@ -22,22 +22,19 @@ contactInfo: {
     phone: string,
     email: string,
     website: string,
-    address: string,
-};
+    address: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
   marketSize: string,
   growthRate: string,
   rating: number,
   reviews: number,
-  customers: number,
-}
+  customers: number}
 ,
 export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
   // AI-Powered Autonomous Business Operations,
@@ -89,8 +86,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["GPT-4", "BERT", "Reinforcement Learning", "React", "Python"];
       integrations: ["ERP systems", "CRM platforms", "Cloud services", "IoT devices", "Analytics tools"];
@@ -102,8 +98,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "30o0% annual growth";
     rating: 4.9;
     reviews: 234;
-    customers: 456,
-  };
+    customers: 456};
   // Quantum AI Neural Networks,
   {
     id: "quantum-ai-neural-networks";
@@ -153,8 +148,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Quantum algorithms", "Qiskit", "TensorFlow", "React", "Python"];
       integrations: ["Quantum simulators", "AI platforms", "Research databases", "Cloud services"];
@@ -166,8 +160,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "40o0% annual growth";
     rating: 4.9;
     reviews: 178;
-    customers: 234,
-  };
+    customers: 234};
   // AI-Powered Emotional Intelligence Platform,
   {
     id: "ai-emotional-intelligence-platform";
@@ -217,8 +210,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["NLP", "Computer Vision", "Machine Learning", "React", "Python"];
       integrations: ["CRM systems", "Chat platforms", "Social media", "Analytics tools"];
@@ -230,8 +222,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "180% annual growth";
     rating: 4.7;
     reviews: 156;
-    customers: 289,
-  };
+    customers: 289};
   // AI-Powered Predictive Healthcare,
   {
     id: "ai-predictive-healthcare";
@@ -281,8 +272,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Deep Learning", "NLP", "Computer Vision", "React", "Python"];
       integrations: ["EHR systems", "Medical devices", "Lab systems", "Imaging platforms"];
@@ -294,8 +284,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "250% annual growth";
     rating: 4.8;
     reviews: 234;
-    customers: 456,
-  };
+    customers: 456};
   // AI-Powered Creative Content Generation,
   {
     id: "ai-creative-content-generation";
@@ -345,8 +334,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["GANs", "Transformers", "Computer Vision", "React", "Python"];
       integrations: ["Design tools", "Music software", "Video editors", "Social media"];
@@ -358,8 +346,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "220% annual growth";
     rating: 4.6;
     reviews: 189;
-    customers: 345,
-  };
+    customers: 345};
   // AI-Powered Financial Trading,
   {
     id: "ai-financial-trading";
@@ -409,8 +396,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Deep Learning", "Reinforcement Learning", "React", "Python", "PostgreSQL"];
       integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"];
@@ -422,8 +408,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "280% annual growth";
     rating: 4.8;
     reviews: 267;
-    customers: 489,
-  };
+    customers: 489};
   // AI-Powered Autonomous Vehicles,
   {
     id: "ai-autonomous-vehicles";
@@ -473,8 +458,7 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Computer Vision", "LIDAR", "Machine Learning", "React", "Python"];
       integrations: ["Vehicle systems", "GPS", "Traffic systems", "Fleet management", "Safety systems"];
@@ -486,7 +470,6 @@ export const ADVANCED_AI_SERVICES_20o25: AdvancedAIService[] = [
     growthRate: "350% annual growth";
     rating: 4.9;
     reviews: 345;
-    customers: 567,
-  }
+    customers: 567}
 ],
 export default ADVANCED_AI_SERVICES_20o25;

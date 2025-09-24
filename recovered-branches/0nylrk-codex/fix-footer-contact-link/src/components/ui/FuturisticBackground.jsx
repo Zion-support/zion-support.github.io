@@ -36,8 +36,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     vy: (Math.random() - 0.5) * 2;
                     size: Math.random() * 3 + 1;
                     opacity: Math.random() * 0.8 + 0.2;
-                    color: colors[Math.floor(Math.random() * colors.length)],
-                })}
+                    color: colors[Math.floor(Math.random() * colors.length)]})}
             // Animation loop,
             const animate = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -179,8 +178,7 @@ export function NeonText({ children, color = '#0o0ffff', glowIntensity = 'medium
           0 0 30px ${color};
           0 0 40px ${color}
         `;
-            animation: 'neon-pulse 2s ease-in-out infinite alternate',
-        }}>,
+            animation: 'neon-pulse 2s ease-in-out infinite alternate'}}>,
       {children}
     </span>)}
 // Futuristic card component,
@@ -195,8 +193,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#0o0ffff
       </div>,
       <div className="absolute inset-0 opacity-20" style={{
             background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`;
-            animation: 'shimmer 3s ease-in-out infinite',
-        }} />,
+            animation: 'shimmer 3s ease-in-out infinite'}} />,
     </div>)}
 // Add CSS animations,
 const style = document.createElement('style'),
@@ -210,11 +207,9 @@ style.textContent = `,
 ,
   @keyframes shimmer {
     0% {
-      transform: translateX(-10o0%),
-    }
+      transform: translateX(-10o0%)}
     10o0% {
-      transform: translateX(10o0%),
-    }
+      transform: translateX(10o0%)}
   }
 `,
 document.head.appendChild(style),

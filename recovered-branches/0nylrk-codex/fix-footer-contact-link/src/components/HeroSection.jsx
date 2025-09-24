@@ -24,8 +24,7 @@ const HeroSection = () => {
       opacity: 1;
       transition: {
         staggerChildren: 0.2;
-        delayChildren: 0.1,
-      }
+        delayChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -35,8 +34,7 @@ const HeroSection = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const floatingVariants ={
@@ -46,8 +44,7 @@ const HeroSection = () => {
       transition: {
         duration: 4;
         repeat: Infinity;
-        ease: "easeInOut",
-      }
+        ease: "easeInOut"}
     }
   };
   const pulseVariants ={
@@ -57,8 +54,7 @@ const HeroSection = () => {
       transition: {
         duration: 2;
         repeat: Infinity;
-        ease: "easeInOut",
-      }
+        ease: "easeInOut"}
     }
   };
   const trustMetrics = [

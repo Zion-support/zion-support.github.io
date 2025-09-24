@@ -12,8 +12,7 @@ import { Textarea } from '@/components/ui/textarea',
 import { Check, Pencil } from 'lucide-react',
 interface GeneratedDescriptionDisplayProps {
   description: string,
-  onSave: (editedDescription: string) => void,
-}
+  onSave: (editedDescription: string) => void}
 ,
 export function GeneratedDescriptionDisplay({
   description;

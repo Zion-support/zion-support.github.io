@@ -153,8 +153,7 @@ const SEO: React.FC<SEOProps> = ({
         <script
           type="application/ld+json",
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
+            __html: JSON.stringify(structuredData)}}
         />)}
     </Head>)};
 export default SEO;

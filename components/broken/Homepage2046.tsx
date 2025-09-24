@@ -30,8 +30,7 @@ const QuantumLoadingFallback = () => (
           transition={{
             duration: Math.random() * 4 + 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
           style={{
             left: Math.random() * 100 + '%';
             top: Math.random() * 100 + '%'}}
@@ -93,8 +92,7 @@ const Homepage2046: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
-    }2000),
+      setIsVisible(true)}2000),
     return () => clearTimeout(timer)}[]),
   // Intersection Observer for better performance,
   useEffect(() => {
@@ -103,8 +101,7 @@ const Homepage2046: React.FC = () => {
         (entries: any[]) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id),
-            }
+              setActiveSection(entry.target.id)}
           })};
         { threshold: 0.3 }
       ),
@@ -144,8 +141,7 @@ const Homepage2046: React.FC = () => {
               transition={{
                 duration: Math.random() * 10 + 10;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
               style={{
                 left: Math.random() * 100 + '%';
                 top: Math.random() * 100 + '%'}}
@@ -274,8 +270,7 @@ const Homepage2046: React.FC = () => {
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                         selectedCategory === category,
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white',
-                          : 'bg-black/30 border border-cyan-400/30 text-gray-300 hover: border-cyan-400 hover:text-cyan-400',
-                      }`}
+                          : 'bg-black/30 border border-cyan-400/30 text-gray-300 hover: border-cyan-400 hover:text-cyan-400'}`}
                     >,
                       {category === 'all' ? 'All Categories' : category}
                     </button>))}
@@ -402,6 +397,5 @@ const Homepage2046: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage2046;

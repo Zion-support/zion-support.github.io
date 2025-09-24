@@ -5,8 +5,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-  linkedin?: string,
-}
+  linkedin?: string}
 ,
 const speakers: Speaker[] = [
   {

@@ -97,8 +97,7 @@ export default function EnhancedServicesShowcase20o25() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -107,8 +106,7 @@ export default function EnhancedServicesShowcase20o25() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -387,6 +385,5 @@ export default function EnhancedServicesShowcase20o25() {
           </div>,
         </section>,
       </div>,
-    </EnhancedFuturisticBackground>),
-}
+    </EnhancedFuturisticBackground>)}
 ,

@@ -7,8 +7,7 @@ import { AppPlatformAppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner",
 interface ExportPanelProps {
   platform: AppPlatform,
-  metadata: AppMetadataValues,
-}
+  metadata: AppMetadataValues}
 ,
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => {
   const handleExport = (format: 'json' | 'csv') => {
@@ -46,7 +45,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
       toast.error(`Failed to export ${format.toUpperCase()} file`)}
   };
   const trackAnalytics = () => {
-    // console.log("Tracking app installation analytics..."),
+    // // console.log("Tracking app installation analytics..."),
     toast.success("Analytics tracking enabled")};
   return (
     <Card className="bg-zion-blue border-zion-purple/30">,

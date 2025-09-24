@@ -45,8 +45,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 export function MarketplaceErrorBoundary({ children }) {
   const handleError = (error, errorInfo) => {
     // Log boundary errors to Sentry,

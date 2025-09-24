@@ -44,23 +44,19 @@ const NewsletterSignup20o26 = () => {
     {
       icon: Brain;
       title: 'AI Breakthrough Alerts';
-      description: 'Get notified about the latest AI breakthroughs and research',
-    };
+      description: 'Get notified about the latest AI breakthroughs and research'};
     {
       icon: TrendingUp;
       title: 'Trending Content';
-      description: 'Weekly digest of the most popular and trending articles',
-    };
+      description: 'Weekly digest of the most popular and trending articles'};
     {
       icon: Target;
       title: 'Personalized Recommendations';
-      description: 'AI-powered content recommendations based on your interests',
-    };
+      description: 'AI-powered content recommendations based on your interests'};
     {
       icon: Zap;
       title: 'Exclusive Early Access';
-      description: 'Be the first to access new content and features',
-    }
+      description: 'Be the first to access new content and features'}
   ],
   const stats = [
     { number: '50K+'label: 'Subscribers' };

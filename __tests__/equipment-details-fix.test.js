@@ -3,8 +3,7 @@ describe('Equipment Details Page - Issue #6 Fix', () => {'  test('data conversio
     const productListing ={
       id: 'datacenter-eq-1',      title: NVIDIA A10o0 GPU Server', // ProductListing uses title''      description: High-performance AI training server',      category: AI Hardware',      price: 850o00;
       availability: In Stock',      brand: 'NVIDIA',      rating: 4.9;
-      reviewCount: 27,
-    };
+      reviewCount: 27};
     // Simulate the conversion (key part of the fix),
     const converted ={
       id: productListing.id;
@@ -20,7 +19,6 @@ describe('Equipment Details Page - Issue #6 Fix', () => {'  test('data conversio
   test('handles out of stock items correctly', () => {'    const productListing ={
       id: 'test-item',      title: Test Equipment',      availability: 2-4 Weeks''    };
     const converted ={
-      inStock: productListing.availability === In Stock',      expectedShipping: productListing.availability,
-    };
+      inStock: productListing.availability === In Stock',      expectedShipping: productListing.availability};
     expect(converted.inStock).toBe(false),
     expect(converted.expectedShipping).toBe('2-4 Weeks')})}),

@@ -20,6 +20,5 @@ export default function AiAutonomousBusinessOrchestratorPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

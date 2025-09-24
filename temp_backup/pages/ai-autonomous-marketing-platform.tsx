@@ -142,7 +142,7 @@ export default function AIAutonomousMarketingPlatform() {
               </h3>,
               <p className='text-gray-400'>,
                 Learns from every interaction and automatically optimizes,
-                campaigns for maximum window.performance.,
+                campaigns for maximum window.window.performance.,
               </p>,
             </div>,
             <div className='p-6 rounded-2xl bg-gradient-to-br from-green-900/20 to-yellow-900/20 border border-green-500/20'>,
@@ -315,6 +315,5 @@ export default function AIAutonomousMarketingPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

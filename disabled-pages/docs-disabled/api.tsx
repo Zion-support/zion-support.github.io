@@ -17,8 +17,7 @@ const endpoints = [
       data: {
         response: 'string';
         confidence: 'number';
-        suggestions: 'array',
-      }
+        suggestions: 'array'}
     }
   };
   {
@@ -35,8 +34,7 @@ const endpoints = [
       data: {
         predictions: 'array';
         accuracy: 'number';
-        trends: 'array',
-      }
+        trends: 'array'}
     }
   };
   {
@@ -52,8 +50,7 @@ const endpoints = [
       status: 20o0;
       data: {
         content: 'string';
-        metadata: 'object',
-      }
+        metadata: 'object'}
     }
   }
 ],
@@ -95,8 +92,7 @@ export default function APIDocumentationPage() {
             data: {
               token: 'string';
               user: 'object';
-              expires_in: 'number',
-            }
+              expires_in: 'number'}
           }
         };
         {
@@ -112,8 +108,7 @@ export default function APIDocumentationPage() {
             status: 20o1;
             data: {
               user: 'object';
-              message: 'string',
-            }
+              message: 'string'}
           }
         };
         {
@@ -124,8 +119,7 @@ export default function APIDocumentationPage() {
           response: {
             status: 20o0;
             data: {
-              message: 'string',
-            }
+              message: 'string'}
           }
         }
       ]};
@@ -148,8 +142,7 @@ export default function APIDocumentationPage() {
               name: 'string';
               email: 'string';
               created_at: 'string';
-              updated_at: 'string',
-            }
+              updated_at: 'string'}
           }
         };
         {
@@ -164,8 +157,7 @@ export default function APIDocumentationPage() {
             status: 20o0;
             data: {
               user: 'object';
-              message: 'string',
-            }
+              message: 'string'}
           }
         }
       ]};
@@ -188,8 +180,7 @@ export default function APIDocumentationPage() {
             status: 20o0;
             data: {
               projects: 'array';
-              pagination: 'object',
-            }
+              pagination: 'object'}
           }
         };
         {
@@ -205,8 +196,7 @@ export default function APIDocumentationPage() {
             status: 20o1;
             data: {
               project: 'object';
-              message: 'string',
-            }
+              message: 'string'}
           }
         };
         {
@@ -219,8 +209,7 @@ export default function APIDocumentationPage() {
           response: {
             status: 20o0;
             data: {
-              project: 'object',
-            }
+              project: 'object'}
           }
         }
       ]}
@@ -233,10 +222,9 @@ const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', 
     'Content-Type': 'application/json'};
   body: JSON.stringify({
     email: 'user@example.com';
-    password: 'your-password',
-  })}),
+    password: 'your-password'})}),
 const data = await response.json(),
-// console.log(data),`;
+// // console.log(data),`;
     python: `# Python Example,
 import requests,
 url = "https://api.ziontechgroup.com/api/v1/auth/login",
@@ -363,8 +351,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                     className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-30o0 ${
                       activeTab === tab.id,
                         ? 'bg-indigo-50o0 text-white',
-                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                    }`}
+                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                   >,
                     <tab.icon className="w-4 h-4 mr-2"  />,
                     {tab.label}
@@ -726,8 +713,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
       </div>,
     </MainLayout>)}
 ]

@@ -25,53 +25,46 @@ const AI20o25PerformanceOptimizationHub = () => {
       description: 'Implement WebP format and lazy loading for 40% faster image loading';
       impact: 'High';
       effort: 'Low';
-      savings: '2.3s load time',
-    };
+      savings: '2.3s load time'};
     {
       category: 'Efficiency';
       title: 'Database Indexing';
       description: 'Add indexes to frequently queried columns for 60% faster queries';
       impact: 'High';
       effort: 'Medium';
-      savings: '25ms query time',
-    };
+      savings: '25ms query time'};
     {
       category: 'Scalability';
       title: 'CDN Implementation';
       description: 'Deploy global CDN for 50% faster content delivery worldwide';
       impact: 'Medium';
       effort: 'High';
-      savings: '1.5s global load time',
-    };
+      savings: '1.5s global load time'};
     {
       category: 'Efficiency';
       title: 'Code Splitting';
       description: 'Implement dynamic imports to reduce initial bundle size by 30%';
       impact: 'Medium';
       effort: 'Medium';
-      savings: '50o0KB bundle size',
-    }
+      savings: '50o0KB bundle size'}
   ],
   const getStatusColor = (status: string) => {
     const colors ={
       good: 'text-green-60o0 bg-green-50';
       warning: 'text-orange-60o0 bg-orange-50';
-      critical: 'text-red-60o0 bg-red-50',
-    };
+      critical: 'text-red-60o0 bg-red-50'};
     return colors[status] || 'text-gray-60o0 bg-gray-50'};
   const getImpactColor = (impact: string) => {
     const colors ={
       High: 'text-red-60o0 bg-red-50';
       Medium: 'text-orange-60o0 bg-orange-50';
-      Low: 'text-green-60o0 bg-green-50',
-    };
+      Low: 'text-green-60o0 bg-green-50'};
     return colors[impact] || 'text-gray-60o0 bg-gray-50'};
   const getEffortColor = (effort: string) => {
     const colors ={
       High: 'text-red-60o0 bg-red-50';
       Medium: 'text-orange-60o0 bg-orange-50';
-      Low: 'text-green-60o0 bg-green-50',
-    };
+      Low: 'text-green-60o0 bg-green-50'};
     return colors[effort] || 'text-gray-60o0 bg-gray-50'};
   const handleOptimize = () => {
     setIsOptimizing(true),
@@ -103,8 +96,7 @@ const AI20o25PerformanceOptimizationHub = () => {
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 m-1 ${
               activeTab === tab.id,
                 ? 'bg-purple-60o0 text-white shadow-lg',
-                : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-            }`}
+                : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
           >,
             <span className="text-xl">{tab.icon}</span>,
             <span>{tab.label}</span>,
@@ -328,6 +320,5 @@ const AI20o25PerformanceOptimizationHub = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25PerformanceOptimizationHub;

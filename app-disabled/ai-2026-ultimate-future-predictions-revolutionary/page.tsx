@@ -437,6 +437,5 @@ export default function AI20o26UltimateFuturePredictionsRevolutionary() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

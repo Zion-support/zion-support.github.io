@@ -28,32 +28,27 @@ export default function UltraFuturisticBackground20o37({
             primary: ['#ff0o080#0o0ffff#ffff0o0#ff0o0ff'],
             secondary: ['#80o00ff#0o0ff80#ff80o00#0o080ff'],
             accent: ['#ff4080#40ffff#ffff40#ff40ff'],
-            glow: ['#ff0o066#0o0ffff#ffff0o0#ff0o0ff'],
-          }
+            glow: ['#ff0o066#0o0ffff#ffff0o0#ff0o0ff']}
         case 'holographic':,
           return {primary: ['#ff6b6b#4ecdc4#45b7d1#96ceb4'],
             secondary: ['#feca57#ff9ff3#54a0ff#5f27cd'],
             accent: ['#ff9ff3#54a0ff#5f27cd#ff6b6b'],
-            glow: ['#ff5252#26d0ce#42a5f5#66bb6a'],
-          }
+            glow: ['#ff5252#26d0ce#42a5f5#66bb6a']}
         case 'cyberpunk':,
           return {primary: ['#ff0o055#0o0ffff#ffff0o0#ff0o0ff'],
             secondary: ['#80o00ff#0o0ff80#ff80o00#0o080ff'],
             accent: ['#ff4080#40ffff#ffff40#ff40ff'],
-            glow: ['#ff0o033#0o0ffff#ffff0o0#ff0o0ff'],
-          }
+            glow: ['#ff0o033#0o0ffff#ffff0o0#ff0o0ff']}
         case 'quantum':,
           return {primary: ['#8b5cf6#0o6b6d4#ec4899#10b981'],
             secondary: ['#f59e0b#ef4444#8b5cf6#0o6b6d4'],
             accent: ['#ec4899#10b981#f59e0b#ef4444'],
-            glow: ['#7c3aed#0891b2#db2777#0o59669'],
-          }
+            glow: ['#7c3aed#0891b2#db2777#0o59669']}
         default: // quantum-neon,
           return {primary: ['#8b5cf6#0o6b6d4#ec4899#10b981'],
             secondary: ['#ff0o080#0o0ffff#ffff0o0#ff0o0ff'],
             accent: ['#f59e0b#ef4444#80o00ff#0o0ff80'],
-            glow: ['#7c3aed#0891b2#ff0o066#0o0ffff'],
-          }
+            glow: ['#7c3aed#0891b2#ff0o066#0o0ffff']}
       }
     }
     const colors = getThemeColors(),
@@ -73,8 +68,7 @@ export default function UltraFuturisticBackground20o37({
       waveAmplitude: number,
       quantumState: number,
       neonIntensity: number,
-      hologramOpacity: number,
-    }> = [],
+      hologramOpacity: number}> = [],
     // Initialize particles,
     const initParticles = () => {particles = [],
       const isSmallScreen = window.innerWidth < 768,
@@ -103,8 +97,7 @@ export default function UltraFuturisticBackground20o37({
           waveAmplitude: Math.random() * 20 + 10,
           quantumState: Math.random() * Math.PI * 2,
           neonIntensity: Math.random() * 0.8 + 0.2,
-          hologramOpacity: Math.random() * 0.6 + 0.4,
-        })}
+          hologramOpacity: Math.random() * 0.6 + 0.4})}
     }
     // Enhanced rendering functions,
     const drawQuantumNeonParticle = (particle: any) => {const { x, y, size, color, quantumState, neonIntensity, rotation } = particle,
@@ -284,7 +277,6 @@ export default function UltraFuturisticBackground20o37({
               ctx.moveTo(particle1.x, particle1.y),
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke(),
-,
 export default function UltraFuturisticBackground20o37({
   intensity = 'medium';
   theme = 'quantum-neon';

@@ -3,8 +3,7 @@ import { PortfolioProject } from '../../utils/types/resume',
 export type PortfolioCardProps = {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
-  onDelete: (id: string) => void,
-};
+  onDelete: (id: string) => void};
 export default function PortfolioCard({
   project;
   onEdit;

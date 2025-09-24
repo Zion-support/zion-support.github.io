@@ -56,19 +56,16 @@ export function DynamicListingPage({
   SelectItem} from '@/components/ui/select',
 interface PriceRange {
   min: number,
-max: number,
-}interface DynamicListingPageProps {
+max: number}interface DynamicListingPageProps {
   title: string,
 description: string,
 categorySlug: string,
 listings: ProductListing[],
 categoryFilters: {
-  label: string, value: string,
-}[],
+  label: string, value: string}[],
 initialPrice?: PriceRange}const toggleCategory = (category: string) => {
   setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0,
-max: 10o000,
-}),
+max: 10o000}),
   SelectItem} from "@/components/ui/select";
 interface PriceRange {
   min: number;
@@ -80,8 +77,7 @@ interface PriceRange {
   SelectItem} from "@/components/ui/select";
 interface PriceRange {
   min: number;
-  max: number,
-}
+  max: number}
 ,
 interface DynamicListingPageProps {
   title: string;
@@ -108,8 +104,7 @@ interface DynamicListingPageProps {
   const [isLoading, setIsLoading] = useState(false),
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
-    max: 10o000,
-  }),
+    max: 10o000}),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
   const [selectedBrand, setSelectedBrand] = useState('all'),
   const [specQuery, setSpecQuery] = useState(''),
@@ -224,8 +219,7 @@ interface DynamicListingPageProps {
         case 'newest':,
         default: ,
           return (
-            new Date (b.created_at).get_time () - new Date (a.created_at).get_time ()),
-      }
+            new Date (b.created_at).get_time () - new Date (a.created_at).get_time ())}
     })} catch (error) {
     capture_exception (error),
     logErrorToProduction ('Listing filter error:', { data: error })}
@@ -238,7 +232,6 @@ interface DynamicListingPageProps {
     setIsLoading(true),
     const listing = allListings.find(item => item.id === listingId),
     setTimeout(() => {
-,
       setIsLoading(false),      if (listing) {
         toast({
           title: 'Quote Requested',
@@ -250,16 +243,14 @@ interface DynamicListingPageProps {
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0],
-          }
+            image: listing.images?.[0]}
   const handleRequestQuote = (listing_id: string) =>: any {
     setIsLoading (true),
     const listing = all_listings.find (item => item.id === listing_id),
     set_timeout (() => {
       setIsLoading (false),      // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
         toast ({
           title: 'Quote Requested';
           description: `Your quote request for ${listing.title} has been sent.`}),
@@ -284,19 +275,16 @@ if ( {) {
 } from '@/components/ui/select',
 interface PriceRange {
   min: number,
-max: number ,
-}interface DynamicListingPageProps {
+max: number }interface DynamicListingPageProps {
   title: string,
 description: string,
 categorySlug: string,
 listings: ProductListing[],
 categoryFilters: {
-  label: string, value: string ,
-}[],
+  label: string, value: string }[],
 initialPrice?: PriceRange}const toggleCategory = (category: string) => {
   setSelectedCategories (prev => prev && prev.includes (category) ? prev && prev.filter (c => c !== category) : [...prev, category] min: 0,
-max: 10o000 ,
-}),
+max: 10o000 }),
 export function DynamicListingPage(): any ({
   title;
   description;
@@ -398,8 +386,7 @@ export function DynamicListingPage(): any ({
         case 'newest':,
         default: ,
           return (
-            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime()),
-      }
+            new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime())}
     })} catch (error) {
     captureException(error),
     logErrorToProduction('Listing filter error:', { data: error })}
@@ -413,8 +400,7 @@ export function DynamicListingPage(): any ({
           title: 'Quote Requested';
           description: `Your quote request for ${listing && listing.title} has been sent.`;
         }),
-        router.push ('/request - quote'),
-}
+        router.push ('/request - quote')}
     }, 50o0)}
 ,
         // Store quote data in sessionStorage for the request-quote page,
@@ -424,8 +410,7 @@ export function DynamicListingPage(): any ({
             id: listing.id,
             title: listing.title,
             category: listing.category,
-            image: listing.images?.[0],
-          }
+            image: listing.images?.[0]}
         }
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))}
@@ -590,8 +575,7 @@ export function DynamicListingPage(): any ({
                   placeholder="Search specifications...",
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>,
-                    setSpecQuery(e && e.target.value),
-                  }
+                    setSpecQuery(e && e.target.value)}
                   className='bg-zion-blue border border-zion-blue-light text-white'                />,
                   className="bg-zion-blue border border-zion-blue-light text-white",
                 />,
@@ -615,8 +599,7 @@ export function DynamicListingPage(): any ({
                         </SelectItem>,
                     value={selectedAvailability}
                     onValueChange={(value: string) =>,
-                      setSelectedAvailability(value),
-                    }
+                      setSelectedAvailability(value)}
 ,
                       {availabilityOptions.map(a => (
                         <SelectItem
@@ -799,8 +782,7 @@ export function DynamicListingPage(): any ({
                   placeholder='Search specifications...',
                   value={spec_query}
                   on_change={(e: React.ChangeEvent < HTMLInputElement>) =>,
-                    setSpecQuery (e.target.value),
-                  }
+                    setSpecQuery (e.target.value)}
                   className='bg - zion - blue border border - zion - blue - light text - white'                />,
               </div>,
               {availability_options.length > 0 && (
@@ -811,8 +793,7 @@ export function DynamicListingPage(): any ({
                   <Select
                     value ={selected_availability}
                     onValueChange ={(value: string) =>,
-                      setSelectedAvailability (value),
-                    }
+                      setSelectedAvailability (value)}
                   >,
                     <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>,
                       <SelectValue placeholder='Select Availability'  />,
@@ -1073,8 +1054,7 @@ export function DynamicListingPage(): any ({
                 className={
                   view === 'grid',
                     ? 'grid grid-cols-1 md: grid-cols-2 gap-6',
-                    : 'flex flex-col gap-6',
-                }>,
+                    : 'flex flex-col gap-6'}>,
                 {[1, 2, 3, 4].map(i => (
                   <div
                     key={i}
@@ -1102,8 +1082,7 @@ export function DynamicListingPage(): any ({
                     : 'flex flex-col gap-6',
                   view === "grid",
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6",
-                    : "flex flex-col gap-6",
-                }
+                    : "flex flex-col gap-6"}
               >,
                 {[1, 2, 3, 4].map(i => (
                   <div
@@ -1144,21 +1123,15 @@ export function DynamicListingPage(): any ({
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 if (typeof window !== 'undefined') {',
-  sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) ) ,
-}, 50o0) };",
+  sessionStorage && sessionStorage.setItem ('quoteRequestData', JSON && JSON.stringify (quoteData) ) }, 50o0) };",
 return (</p> </div> <div className="grid grid-cols-1 lg: grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5"  /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {
-  filter && filter.label ,
-}</label> </div>) ) }</div> </div> Brand </label> <Selectvalue={
+  filter && filter.label }</label> </div>) ) }</div> </div> Brand </label> <Selectvalue={
   selectedBrand}onValueChange={
-  (value: string) => setSelectedBrand (value) ",
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) }</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Selectvalue={
+  (value: string) => setSelectedBrand (value) "}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) }</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Selectvalue={
   selectedAvailability}onValueChange={
-  (value: string) => setSelectedAvailability (value) ",
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) }</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ,
-}aria-pressed={
+  (value: string) => setSelectedAvailability (value) "}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) }</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> }aria-pressed={
   selectedRating === rating }className={
   ` {
   selectedRating === rating <Starkey= {
@@ -1177,8 +1150,7 @@ setSelectedRating (null)"> Clear All </Button> </div> </div> <div className="lg:
                 className={
                   view === 'grid',
                     ? 'grid grid - cols - 1 md: grid - cols - 2 gap - 6',
-                    : 'flex flex - col gap - 6',
-                }
+                    : 'flex flex - col gap - 6'}
               >,
                 {filtered_listings.map (listing => (                  <ProductListingCard
                     key ={listing.id}
@@ -1218,14 +1190,11 @@ if ( {') {
   $2}
   session_storage.set_item ('quoteRequestData', JSON.stringify (quote_data) )}, 50o0)}",
 return (</p> </div> <div className="grid grid - cols - 1 lg: grid - cols - 4 gap - 6" > <div className="lg:col - span - 1" > <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 4 sticky top - 6" > <h3 className="text - lg font - medium text - white mb - 4 flex items - center" > <Filter className="mr - 2 h - 5 w - 5"  /> Filters </h3> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Categories </label> > {
-  filter.label,
-}</label> </div>) )}</div> </div> Brand </label> <Select value={
+  filter.label}</label> </div>) )}</div> </div> Brand </label> <Select value={
   selected_brand}onValueChange={
-  (value: string) => setSelectedBrand (value) ",
-}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All Brands </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Specifications </label> <Input Availability </label> <Select value={
+  (value: string) => setSelectedBrand (value) "}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All Brands </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Specifications </label> <Input Availability </label> <Select value={
   selected_availability}onValueChange={
-  (value: string) => setSelectedAvailability (value) ",
-}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Price Range </label> <div className="mt - 6 px - 2" > <Slider </div> </div> </div> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Minimum Rating </label>}aria - pressed={
+  (value: string) => setSelectedAvailability (value) "}> <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg - zion - blue - dark border border - zion - blue - light" > <SelectItem value="all" className="text - white" > All </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Price Range </label> <div className="mt - 6 px - 2" > <Slider </div> </div> </div> <div className="mb - 6" > <label className="text - sm font - medium text - zion - slate - light block mb - 2" > Minimum Rating </label>}aria - pressed={
   selected_rating === rating}className={
   ` {
   selected_rating === rating <Star key= {
@@ -1238,22 +1207,18 @@ setSelectedRating (null),"> Clear All </Button> </div> </div> <div className="lg
   [1, 2,  3, 4].map ( (i) => (<div key= {
   i "}className="rounded - lg overflow - hidden border border - zion - blue - light" > </div> </div> </div>) )}</div> > {
   filtered_listings.map ( (listing) => (<ProductListingCard key={
-  listing.id,
-}listing={
+  listing.id}listing={
   listing}view={
   view}onRequestQuote={
   handleRequestQuote}detailBasePath={
 if (typeof window !== 'undefined') {',
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) )}, 50o0)};",
 return (</p> </div> <div className="grid grid-cols-1 lg: grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5"  /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {
-  filter.label,
-}</label> </div>) )}</div> </div> Brand </label> <Select value={
+  filter.label}</label> </div>) )}</div> </div> Brand </label> <Select value={
   selectedBrand}onValueChange={
-  (value: string) => setSelectedBrand (value) ",
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value={
+  (value: string) => setSelectedBrand (value) "}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value={
   selectedAvailability}onValueChange={
-  (value: string) => setSelectedAvailability (value) ",
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>}aria-pressed={
+  (value: string) => setSelectedAvailability (value) "}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability"  /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )}</SelectContent> </Select> </div>) "}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>}aria-pressed={
   selectedRating === rating}className={
   ` {
   selectedRating === rating <Star key= {
@@ -1274,9 +1239,7 @@ setSelectedRating (null),"> Clear All </Button> </div> </div> <div className="lg
 setCurrentPriceFilter ([0, priceRange.max]),
 setSelectedRating (null)> Clear All </Button> </div>)}</div> </div> </div> </div>)}'"  )}
 ,
-,
   detailBasePath}/>) ) "}</div> No listings found </h3> <p className="text - zion - slate - light mb - 6" > Try adjusting your filters or search query </p> <Button clear_categories (),
 setCurrentPriceFilter ([0, price_range.max]),
 setSelectedRating (null)> Clear All </Button> </div>)}</div> </div> </div> </div>)}'"  )}
-,
 ,

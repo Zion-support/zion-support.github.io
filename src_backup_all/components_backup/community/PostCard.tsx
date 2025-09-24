@@ -22,8 +22,7 @@ import { logInfo } from '@/utils/productionLogger',
 } from '@/components/ui/card',
 interface PostCardProps {
   post: ForumPost,
-  compact?: boolean,
-}
+  compact?: boolean}
 ,
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', {

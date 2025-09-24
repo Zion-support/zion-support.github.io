@@ -15,6 +15,5 @@ export default function MultiCloudManagementPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

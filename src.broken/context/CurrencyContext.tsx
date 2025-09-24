@@ -3,13 +3,11 @@ export type SupportedCurrency = 'USD' | 'EUR' | 'GBP',
 interface CurrencyInfo {
   code: SupportedCurrency,
   symbol: string,
-  fx_rate: number,
-}
+  fx_rate: number}
 ,
 interface CurrencyContextType {
   currency: CurrencyInfo,
-  setCurrency: (code: SupportedCurrency) => void,
-}
+  setCurrency: (code: SupportedCurrency) => void}
 ,
 const DEFAULT_CURRENCY: CurrencyInfo = {
   code: 'USD';
@@ -21,8 +19,7 @@ const CurrencyContext = createContext<CurrencyContextType>({
 const CURRENCY_COOKIE = 'zion_currency',
 function readCookie(name: string): string | null {
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)')),
-  return match ? decodeURIComponent(match[2]) : null,
-}
+  return match ? decodeURIComponent(match[2]) : null}
 ,
 function writeCookie(name: stringvalue: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; path=/, max-age=${60 * 60 * 24 * 30}`}

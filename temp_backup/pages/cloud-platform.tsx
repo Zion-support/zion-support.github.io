@@ -8,38 +8,32 @@ export default function CloudPlatform() {
       icon: <Cloud className="w-12 h-12 text-cyan-400" />;
       title: "Multi-Cloud Solutions";
       description: "Comprehensive multi-cloud infrastructure and disaster recovery";
-      href: "/multi-cloud-disaster-recovery",
-    };
+      href: "/multi-cloud-disaster-recovery"};
     {
       icon: <Server className="w-12 h-12 text-blue-400" />;
       title: "Kubernetes Management";
       description: "Advanced Kubernetes RBAC auditing and cluster management";
-      href: "/kubernetes-rbac-auditor",
-    };
+      href: "/kubernetes-rbac-auditor"};
     {
       icon: <Database className="w-12 h-12 text-purple-400" />;
       title: "Database Solutions";
       description: "High-availability PostgreSQL and database performance optimization";
-      href: "/managed-postgres-ha",
-    };
+      href: "/managed-postgres-ha"};
     {
       icon: <Zap className="w-12 h-12 text-green-400" />;
       title: "Serverless Platform";
       description: "Serverless cron management and cloud automation";
-      href: "/serverless-cron-manager",
-    };
+      href: "/serverless-cron-manager"};
     {
       icon: <Shield className="w-12 h-12 text-yellow-400" />;
       title: "Cloud Security";
       description: "Zero trust network architecture and cloud security";
-      href: "/zero-trust-network-architecture",
-    };
+      href: "/zero-trust-network-architecture"};
     {
       icon: <BarChart3 className="w-12 h-12 text-pink-400" />;
       title: "Cloud Monitoring";
       description: "Comprehensive cloud infrastructure monitoring and SLO tracking";
-      href: "/status-pages-slo",
-    }
+      href: "/status-pages-slo"}
   ],
   return (
     <Layout>,
@@ -279,6 +273,5 @@ export default function CloudPlatform() {
           </div>,
         </motion.div>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default CloudPlatformPage;

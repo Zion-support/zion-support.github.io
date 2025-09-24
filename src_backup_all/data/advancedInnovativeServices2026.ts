@@ -21,15 +21,13 @@ export interface AdvancedInnovativeService20o26 {
 contactInfo: {
     phone: string,
     email: string,
-    website: string,
-};
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   caseStudies?: string[]}
 ,
@@ -77,8 +75,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Quantum Computing', 'AI/ML', 'Neural Networks', 'Quantum Encryption'];
       integrations: ['AWS', 'Azure', 'Google Cloud', 'Custom APIs'];
@@ -130,8 +127,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Neural Monitoring', 'Signal Processing', 'Machine Learning', 'Biometrics'];
       integrations: ['Medical Systems', 'Gaming Platforms', 'Research Tools', 'Custom APIs'];
@@ -183,8 +179,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['AI/ML', 'Robotics', 'Space Systems', 'Resource Processing'];
       integrations: ['NASA Systems', 'SpaceX APIs', 'Satellite Networks', 'Ground Control'];
@@ -236,8 +231,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['CRISPR', 'DNA Synthesis', 'Bioinformatics', 'Automation'];
       integrations: ['Lab Equipment', 'Research Databases', 'Regulatory Systems', 'Collaboration Tools'];
@@ -289,8 +283,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Fusion Physics', 'Plasma Control', 'Magnetic Confinement', 'Energy Conversion'];
       integrations: ['Power Grids', 'Industrial Systems', 'Monitoring Networks', 'Control Systems'];
@@ -342,8 +335,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Holographic Display', 'Computer Vision', '3D Rendering', 'Gesture Recognition'];
       integrations: ['VR/AR Platforms', 'Content Management', 'Collaboration Tools', 'Mobile Apps'];
@@ -395,8 +387,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Time Crystals', 'Quantum Computing', 'Cryogenics', 'Quantum Memory'];
       integrations: ['Research Tools', 'Quantum Networks', 'Classical Systems', 'Cloud Platforms'];
@@ -448,8 +439,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Particle Detection', 'Cryogenics', 'Data Analysis', 'Machine Learning'];
       integrations: ['Research Networks', 'Data Repositories', 'Collaboration Tools', 'Publication Systems'];
@@ -501,8 +491,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Brain Mapping', 'AI/ML', 'Quantum Computing', 'Ethical AI'];
       integrations: ['Research Platforms', 'Ethics Frameworks', 'Collaboration Tools', 'Security Systems'];
@@ -554,8 +543,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_20o26: AdvancedInnovativeService20o26[
     contactInfo: {
       phone: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     technicalSpecs: {
       technology: ['Theoretical Physics', 'Quantum Mechanics', 'Simulation', 'AI/ML'];
       integrations: ['Research Networks', 'Simulation Platforms', 'Collaboration Tools', 'Publication Systems'];

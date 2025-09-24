@@ -70,7 +70,6 @@ interface UltraFuturisticNavigationProps {
   className?: string}
 ,
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
-,
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
@@ -91,32 +90,27 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           name: 'AI & Machine Learning',
           href: '/services/ai-ml',
           icon: Brain,
-          color: 'from-purple-500 to-pink-600',
-        }
+          color: 'from-purple-500 to-pink-600'}
         {
           name: 'Quantum Computing',
           href: '/services/quantum',
           icon: Atom,
-          color: 'from-cyan-500 to-blue-600',
-        }
+          color: 'from-cyan-500 to-blue-600'}
         {
           name: 'Cybersecurity',
           href: '/services/cybersecurity',
           icon: Shield,
-          color: 'from-red-500 to-pink-600',
-        }
+          color: 'from-red-500 to-pink-600'}
         {
           name: 'IT Solutions',
           href: '/services/it-solutions',
           icon: Rocket,
-          color: 'from-green-500 to-emerald-600',
-        }
+          color: 'from-green-500 to-emerald-600'}
         {
           name: 'View All Services',
           href: '/services',
           icon: Rocket,
-          color: 'from-gray-500 to-gray-600',
-        }
+          color: 'from-gray-500 to-gray-600'}
       ]}
     { name: 'Solutions', href: '/solutions' }
     { name: 'About', href: '/about' }
@@ -144,8 +138,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
     >,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
@@ -153,7 +146,6 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       isScrolled,
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl',
 export default function UltraFuturisticNavigation(): any ({ className = '' }: UltraFuturisticNavigationProps) {
-,
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),

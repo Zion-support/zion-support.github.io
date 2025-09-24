@@ -290,6 +290,5 @@ export default function AI20o25EnterpriseAITransformationUltimateBreakthrough() 
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

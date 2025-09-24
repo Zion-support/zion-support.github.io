@@ -18,22 +18,19 @@ const NewContentShowcase20o25 = () => {
           description: 'Complete autonomous transformation of production lines';
           roi: '2,50o0%';
           industry: 'Manufacturing';
-          link: '/case-studies/fortune-50o0-manufacturing-250o0-roi',
-        };
+          link: '/case-studies/fortune-50o0-manufacturing-250o0-roi'};
         {
           title: 'Healthcare Revolution: 1,20o0% ROI';
           description: 'AI-powered diagnostic platform implementation';
           roi: '1,20o0%';
           industry: 'Healthcare';
-          link: '/case-studies/healthcare-revolution-120o0-roi',
-        };
+          link: '/case-studies/healthcare-revolution-120o0-roi'};
         {
           title: 'Financial Services: 1,50o0% ROI';
           description: 'Advanced analytics and fraud detection systems';
           roi: '1,50o0%';
           industry: 'Finance';
-          link: '/case-studies/financial-services-150o0-roi',
-        }
+          link: '/case-studies/financial-services-150o0-roi'}
       ]};
     'blog': {
       title: 'Latest AI Insights & Trends';
@@ -44,22 +41,19 @@ const NewContentShowcase20o25 = () => {
           description: 'Comprehensive guide to next-generation AI automation';
           readTime: '8 min read';
           category: 'Automation';
-          link: '/blog/ai-20o25-ultimate-automation-revolution',
-        };
+          link: '/blog/ai-20o25-ultimate-automation-revolution'};
         {
           title: 'Quantum Computing Business Applications';
           description: 'How quantum computing is transforming enterprise operations';
           readTime: '12 min read';
           category: 'Quantum Computing';
-          link: '/blog/quantum-computing-business-applications',
-        };
+          link: '/blog/quantum-computing-business-applications'};
         {
           title: 'Neural Interface Revolution 20o25';
           description: 'The future of human-AI interaction in business';
           readTime: '10 min read';
           category: 'Neural Interfaces';
-          link: '/blog/neural-interface-revolution-20o25',
-        }
+          link: '/blog/neural-interface-revolution-20o25'}
       ]};
     'tools': {
       title: 'Interactive AI Tools & Calculators';
@@ -69,20 +63,17 @@ const NewContentShowcase20o25 = () => {
           title: 'ROI Calculator';
           description: 'Calculate potential returns from AI implementation';
           type: 'Calculator';
-          link: '/tools/roi-calculator',
-        };
+          link: '/tools/roi-calculator'};
         {
           title: 'AI Readiness Assessment';
           description: 'Evaluate your organization\'s AI readiness';
           type: 'Assessment';
-          link: '/tools/ai-readiness-assessment',
-        };
+          link: '/tools/ai-readiness-assessment'};
         {
           title: 'Automation Opportunity Scanner';
           description: 'Identify automation opportunities in your processes';
           type: 'Scanner';
-          link: '/tools/automation-scanner',
-        }
+          link: '/tools/automation-scanner'}
       ]}
   };
   return (
@@ -109,8 +100,7 @@ const NewContentShowcase20o25 = () => {
               className={`px-6 py-3 m-2 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeTab === key,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 shadow-md'}`}
             >,
               {section.title}
             </button>))}
@@ -196,6 +186,5 @@ const NewContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContentShowcase20o25;

@@ -25,7 +25,6 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
-,
 export default function QuoteManager() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
@@ -62,13 +61,11 @@ export default function QuoteManager() {
     in_review: quotes.filter(q => q.status === 'in_review').length,
     accepted: quotes.filter(q => q.status === 'accepted').length,
     responded: quotes.filter(q => q.status === 'responded').length,
-    closed: quotes.filter(q => q.status === 'closed').length,
-  }
+    closed: quotes.filter(q => q.status === 'closed').length}
   };
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
-    setShowDetails(true),
-  }
+    setShowDetails(true)}
   };
   const handleResetFilters = () => {
     setStatusFilter('all'),
@@ -84,8 +81,7 @@ export default function QuoteManager() {
     in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length;
     accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length;
     responded: quotes && quotes.filter(q => q && q.status === 'responded').length;
-    closed: quotes && quotes.filter(q => q && q.status === 'closed').length,
-  };
+    closed: quotes && quotes.filter(q => q && q.status === 'closed').length};
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true)};
@@ -95,8 +91,7 @@ export default function QuoteManager() {
     setSearchQuery(''),
     setDateRange({ from: undefined, to: undefined })};
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />,
-}
+    return <Navigate to="/unauthorized" replace />}
   return (
     <ProtectedRoute adminOnly>,
       <div>,
@@ -141,8 +136,7 @@ export default function QuoteManager() {
     in_review: quotes.filter(q => q.status === 'in_review').length;
     accepted: quotes.filter(q => q.status === 'accepted').length;
     responded: quotes.filter(q => q.status === 'responded').length;
-    closed: quotes.filter(q => q.status === 'closed').length,
-  };
+    closed: quotes.filter(q => q.status === 'closed').length};
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true)};
@@ -229,8 +223,7 @@ export default function QuoteManager() {
             setSelectedQuote(null),
           onClose={() => {
             setShowDetails(false),
-            setSelectedQuote(null),
-}}
+            setSelectedQuote(null)}}
         />,
         <Footer />,
       </div>,
@@ -250,8 +243,7 @@ export default function QuoteManager() {
     in_review: quotes.filter (q => q.status === 'in_review').length;
     accepted: quotes.filter (q => q.status === 'accepted').length;
     responded: quotes.filter (q => q.status === 'responded').length;
-    closed: quotes.filter (q => q.status === 'closed').length,
-  }
+    closed: quotes.filter (q => q.status === 'closed').length}
 ,
   const handleViewDetails = (quote: QuoteRequest) =>: any {
     setSelectedQuote (quote);

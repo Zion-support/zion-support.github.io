@@ -9,16 +9,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             scale: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         };
         hover: {
             y: -12;
             scale: 1.0o2;
             transition: {
                 duration: 0.3;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const iconVariants ={
@@ -28,16 +26,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             opacity: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         };
         hover: {
             scale: 1.2;
             rotate: [0, -10, 10, 0];
             transition: {
                 duration: 0.6;
-                ease: "easeInOut",
-            }
+                ease: "easeInOut"}
         }
     };
     const featureVariants ={
@@ -45,8 +41,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             x: 5;
             transition: {
                 duration: 0.3;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     const badgeVariants ={
@@ -56,8 +51,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             opacity: 1;
             transition: {
                 duration: 0.3;
-                ease: "backOut",
-            }
+                ease: "backOut"}
         }
     };
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">,
@@ -138,6 +132,5 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-10o0 group-hover:animate-float transition-all duration-50o0 delay-20o0" />,
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-10o0 group-hover:animate-float transition-all duration-50o0 delay-40o0" />,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default ServiceCard;

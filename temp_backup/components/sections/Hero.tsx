@@ -7,17 +7,14 @@ interface HeroProps {
   subtitle: string,
   primaryAction?: {
     text: string,
-    href: string,
-  };
+    href: string};
   secondaryAction?: {
     text: string,
-    href: string,
-  };
+    href: string};
   stats?: Array<{
     value: string,
     label: string,
-    color: string,
-  }>}
+    color: string}>}
 ,
 const Hero: React.FC<HeroProps> = ({
   title;

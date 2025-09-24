@@ -183,6 +183,5 @@ const AI20o25BreakthroughShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25BreakthroughShowcase;

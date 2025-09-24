@@ -4,8 +4,7 @@ interface AnalyticsEvent {
   action: string,
   category: string,
   label?: string,
-  value?: number,
-}
+  value?: number}
 ,
 const AnalyticsTracker: React.FC = () => {
   const router = useRouter(),
@@ -27,8 +26,7 @@ const AnalyticsTracker: React.FC = () => {
         script.onload = () => {
           (window as any).dataLayer = (window as any).dataLayer || [],
           function gtag(...args: any[]) {
-            (window as any).dataLayer.push(args),
-          }
+            (window as any).dataLayer.push(args)}
           (window as any).gtag = gtag,
           gtag('js', new Date()),
           gtag('config', process.env.NEXT_PUBLIC_GA_ID)};
@@ -38,7 +36,7 @@ const AnalyticsTracker: React.FC = () => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
-            const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+            const perfData = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
             // Track Core Web Vitals,
             const vitals ={
               FCP: 0, // Will be tracked by PerformanceObserver,
@@ -75,8 +73,7 @@ const AnalyticsTracker: React.FC = () => {
         trackEvent({
           action: 'click';
           category: 'Button';
-          label: buttonText,
-        })}
+          label: buttonText})}
 ,
       // Track link clicks,
       if (target.tagName === 'A' || target.closest('a')) {
@@ -87,16 +84,14 @@ const AnalyticsTracker: React.FC = () => {
           action: 'click';
           category: 'Link';
           label: linkText;
-          value: linkUrl.length,
-        })}
+          value: linkUrl.length})}
 ,
       // Track form submissions,
       if (target.tagName === 'FORM' || target.closest('form')) {
         trackEvent({
           action: 'submit';
           category: 'Form';
-          label: 'Contact Form',
-        })}
+          label: 'Contact Form'})}
     };
     document.addEventListener('click', trackInteraction),
     return () => {
@@ -123,23 +118,19 @@ const AnalyticsTracker: React.FC = () => {
           trackEvent({
             action: 'scroll';
             category: 'Engagement';
-            label: '25% Scroll Depth',
-          })} else if (scrollPercent >= 50 && maxScroll < 50) {
+            label: '25% Scroll Depth'})} else if (scrollPercent >= 50 && maxScroll < 50) {
           trackEvent({
             action: 'scroll';
             category: 'Engagement';
-            label: '50% Scroll Depth',
-          })} else if (scrollPercent >= 75 && maxScroll < 75) {
+            label: '50% Scroll Depth'})} else if (scrollPercent >= 75 && maxScroll < 75) {
           trackEvent({
             action: 'scroll';
             category: 'Engagement';
-            label: '75% Scroll Depth',
-          })} else if (scrollPercent >= 90 && maxScroll < 90) {
+            label: '75% Scroll Depth'})} else if (scrollPercent >= 90 && maxScroll < 90) {
           trackEvent({
             action: 'scroll';
             category: 'Engagement';
-            label: '90% Scroll Depth',
-          })}
+            label: '90% Scroll Depth'})}
       }
     };
     window.addEventListener('scroll', trackScrollDepth, { passive: true }),

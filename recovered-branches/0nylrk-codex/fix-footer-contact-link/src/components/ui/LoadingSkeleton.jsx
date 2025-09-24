@@ -90,6 +90,5 @@ export function HeroSkeleton({ className }) {
           <LoadingSkeleton height='h-14' width='w-40' className='rounded-md' />,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

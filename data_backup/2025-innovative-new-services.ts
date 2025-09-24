@@ -90,8 +90,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack AI content intelligence platform with real-time analytics, predictive modeling, and automated optimization.';
@@ -151,8 +150,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum-secure communication infrastructure with QKD, quantum networks, and post-quantum cryptography.';
@@ -212,8 +210,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous AI operations center with self-managing infrastructure, predictive analytics, and automated optimization.';
@@ -272,8 +269,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete blockchain supply chain platform with AI intelligence, IoT integration, and comprehensive tracking capabilities.';
@@ -333,8 +329,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete metaverse development platform with 3D tools, AI content generation, and VR/AR integration.';
@@ -394,8 +389,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum financial trading platform with quantum computing integration, AI algorithms, and comprehensive trading tools.';
@@ -455,8 +449,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI healthcare diagnostics platform with medical imaging analysis, diagnosis generation, and treatment recommendations.';
@@ -516,8 +509,7 @@ reviews: number,export const innovativeNewServices20o25: InnovativeNewService20o
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete edge computing orchestration platform with distributed management, IoT integration, and AI-powered optimization.';

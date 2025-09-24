@@ -94,5 +94,4 @@ export const QuickAccess = () => {
           </a>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};

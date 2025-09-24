@@ -15,11 +15,9 @@ const EdgeAI20o25RevolutionBanner = () => {
         roi: '450%';
         savings: '$180M';
         uptime: '99.7%';
-        speed: '94% faster',
-      };
+        speed: '94% faster'};
       image: '🚀';
-      gradient: 'from-blue-60o0 to-purple-60o0',
-    };
+      gradient: 'from-blue-60o0 to-purple-60o0'};
     {
       id: 'fortune-50o0-edge-ai';
       title: 'Fortune 50o0 Edge AI Transformation: 450% ROI';
@@ -30,11 +28,9 @@ const EdgeAI20o25RevolutionBanner = () => {
         roi: '450%';
         savings: '$2.1B';
         efficiency: '78%';
-        quality: '92%',
-      };
+        quality: '92%'};
       image: '🏭';
-      gradient: 'from-green-60o0 to-blue-60o0',
-    };
+      gradient: 'from-green-60o0 to-blue-60o0'};
     {
       id: 'edge-ai-implementation-guide';
       title: 'Edge AI Implementation Guide: From Strategy to 450% ROI';
@@ -45,11 +41,9 @@ const EdgeAI20o25RevolutionBanner = () => {
         roi: '450%';
         timeline: '24 months';
         success: '98%';
-        savings: '$180M',
-      };
+        savings: '$180M'};
       image: '📋';
-      gradient: 'from-purple-60o0 to-pink-60o0',
-    }
+      gradient: 'from-purple-60o0 to-pink-60o0'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -155,8 +149,7 @@ const EdgeAI20o25RevolutionBanner = () => {
                     className={`p-4 rounded-lg cursor-pointer transition-all duration-30o0 ${
                       index === currentSlide,
                         ? 'bg-white/20 border-2 border-blue-40o0',
-                        : 'bg-white/5 hover: bg-white/10',
-                    }`}
+                        : 'bg-white/5 hover: bg-white/10'}`}
                     onClick={() => setCurrentSlide(index)}
                   >,
                     <div className="flex items-center gap-3">,

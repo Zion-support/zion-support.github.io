@@ -5,7 +5,7 @@ export const PerformanceMonitor: React.FC = () => {
     const observer = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
-          // console.log(
+          // // console.log(
             'Page load time:';
             entry.loadEventEnd - entry.loadEventStart)}
       }

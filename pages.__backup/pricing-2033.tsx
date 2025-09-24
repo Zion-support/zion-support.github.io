@@ -9,8 +9,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function Pricing20o33Page() {
   const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlansetSelectedPlan] = useState<string | null>(null),
@@ -23,8 +22,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$11,499/month';
       savings: 'Save 60-80% vs. competitors';
       icon: Brain;
-      color: 'from-violet-50o0 to-purple-50o0',
-    };
+      color: 'from-violet-50o0 to-purple-50o0'};
     {
       name: 'Quantum & Emerging Tech';
       description: 'Quantum computing and DNA-based solutions';
@@ -32,8 +30,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$19,999/month';
       savings: 'Save 70-85% vs. competitors';
       icon: Atom;
-      color: 'from-indigo-50o0 to-blue-50o0',
-    };
+      color: 'from-indigo-50o0 to-blue-50o0'};
     {
       name: 'Enterprise IT Solutions';
       description: 'Autonomous operations and zero-trust security';
@@ -41,8 +38,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$649/month';
       savings: 'Save 50-70% vs. competitors';
       icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       name: 'Space & Metaverse Tech';
       description: 'Space mining and metaverse development';
@@ -50,8 +46,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$14,999/month';
       savings: 'Save 65-80% vs. competitors';
       icon: Rocket;
-      color: 'from-teal-50o0 to-emerald-50o0',
-    };
+      color: 'from-teal-50o0 to-emerald-50o0'};
     {
       name: 'Innovative Micro SAAS';
       description: 'Cutting-edge solutions for every business';
@@ -59,8 +54,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$374/month';
       savings: 'Save 40-60% vs. competitors';
       icon: Target;
-      color: 'from-green-50o0 to-yellow-50o0',
-    };
+      color: 'from-green-50o0 to-yellow-50o0'};
     {
       name: 'Research & Development';
       description: 'Breakthrough technologies and innovations';
@@ -68,8 +62,7 @@ export default function Pricing20o33Page() {
       avgPrice: '$1,099/month';
       savings: 'Save 55-75% vs. competitors';
       icon: Microscope;
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings,
   const pricingTiers = [
@@ -91,8 +84,7 @@ export default function Pricing20o33Page() {
         'API Access (10o00 calls/month)';
         'Community Support'];
       popular: false;
-      color: 'from-gray-50o0 to-gray-60o0',
-    };
+      color: 'from-gray-50o0 to-gray-60o0'};
     {
       name: 'Professional';
       description: 'Ideal for growing businesses and teams';
@@ -113,8 +105,7 @@ export default function Pricing20o33Page() {
         'Custom Integrations';
         'Advanced Reporting'];
       popular: true;
-      color: 'from-purple-50o0 to-cyan-50o0',
-    };
+      color: 'from-purple-50o0 to-cyan-50o0'};
     {
       name: 'Enterprise';
       description: 'For large organizations and enterprises';
@@ -137,8 +128,7 @@ export default function Pricing20o33Page() {
         'White-label Solutions';
         'SLA Guarantees'];
       popular: false;
-      color: 'from-blue-50o0 to-indigo-50o0',
-    }
+      color: 'from-blue-50o0 to-indigo-50o0'}
   ],
   // Popular services with pricing,
   const popularServices = [
@@ -148,32 +138,28 @@ export default function Pricing20o33Page() {
       description: 'Develop genuine AI consciousness through advanced neural architecture';
       category: 'AI & Consciousness';
       features: ['Multi-dimensional consciousness mapping'Emotional intelligence evolution'Self-awareness development'];
-      savings: 'Save 70% vs. competitors',
-    };
+      savings: 'Save 70% vs. competitors'};
     {
       name: 'Quantum DNA Computing Platform';
       price: '$35,999/month';
       description: 'Breakthrough platform combining quantum computing with DNA-based computation';
       category: 'Quantum & Biotech';
       features: ['DNA-based quantum algorithms'Biological quantum entanglement'DNA memory systems'];
-      savings: 'Save 75% vs. competitors',
-    };
+      savings: 'Save 75% vs. competitors'};
     {
       name: 'Space Mining Automation Platform';
       price: '$45,999/month';
       description: 'Revolutionary platform for automated asteroid mining and resource extraction';
       category: 'Space Technology';
       features: ['Asteroid identification and mapping'Automated mining operations'Resource extraction algorithms'];
-      savings: 'Save 80% vs. competitors',
-    };
+      savings: 'Save 80% vs. competitors'};
     {
       name: 'AI Business Intelligence Suite';
       price: '$299/month';
       description: 'Comprehensive business intelligence platform powered by artificial intelligence';
       category: 'Micro SAAS';
       features: ['AI-powered analytics'Predictive insights'Automated reporting'];
-      savings: 'Save 50% vs. competitors',
-    }
+      savings: 'Save 50% vs. competitors'}
   ],
   return (
     <>,
@@ -294,8 +280,7 @@ export default function Pricing20o33Page() {
                       className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-20o0 ${
                         tier.popular,
                           ? 'bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white hover: from-purple-70o0 hover:to-cyan-70o0 shadow-lg',
-                          : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-70o0/50 border border-purple-50o0/30',
-                      }`}
+                          : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-70o0/50 border border-purple-50o0/30'}`}
                     >,
                       Get Started,
                     </button>,

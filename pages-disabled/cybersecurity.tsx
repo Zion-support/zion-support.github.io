@@ -31,8 +31,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $2,50o0";
       delivery: "1-3 weeks";
       category: "Assessment";
-      icon: <Shield className="w-8 h-8"   />,
-    };
+      icon: <Shield className="w-8 h-8"   />};
     {
       id: 2;
       title: "Data Protection";
@@ -46,8 +45,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $3,0o00";
       delivery: "2-4 weeks";
       category: "Protection";
-      icon: <Lock className="w-8 h-8"   />,
-    };
+      icon: <Lock className="w-8 h-8"   />};
     {
       id: 3;
       title: "Threat Monitoring";
@@ -61,8 +59,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $1,50o0/month";
       delivery: "Ongoing";
       category: "Monitoring";
-      icon: <Eye className="w-8 h-8"   />,
-    };
+      icon: <Eye className="w-8 h-8"   />};
     {
       id: 4;
       title: "Incident Response";
@@ -76,8 +73,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $5,0o00";
       delivery: "Immediate";
       category: "Response";
-      icon: <AlertTriangle className="w-8 h-8"   />,
-    };
+      icon: <AlertTriangle className="w-8 h-8"   />};
     {
       id: 5;
       title: "Compliance Management";
@@ -91,8 +87,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $4,0o00";
       delivery: "2-6 weeks";
       category: "Compliance";
-      icon: <Settings className="w-8 h-8"   />,
-    };
+      icon: <Settings className="w-8 h-8"   />};
     {
       id: 6;
       title: "Security Training";
@@ -106,8 +101,7 @@ const CybersecurityPage: React.FC = () => {
       pricing: "Starting at $1,0o00";
       delivery: "1-2 weeks";
       category: "Training";
-      icon: <Users className="w-8 h-8"   />,
-    }
+      icon: <Users className="w-8 h-8"   />}
   ],
   const complianceStandards = [
     { name: "SOC 2", description: "Service Organization Control 2" };
@@ -295,7 +289,6 @@ const CybersecurityPage: React.FC = () => {
           </section>,
         </main>,
       </PageTransition>,
-    </>),
-}
+    </>)}
 ,
 export default CybersecurityPage;

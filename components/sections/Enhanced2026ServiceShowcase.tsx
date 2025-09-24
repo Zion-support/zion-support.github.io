@@ -33,8 +33,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.1,
-      }
+        delayChildren: 0.1}
     }}
         staggerChildren: 0.2;
         delayChildren: 0.1;
@@ -44,28 +43,23 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.9,
-    }
-    visible: {      opacity: 1,        delayChildren: 0.1,
-      }
+      scale: 0.9}
+    visible: {      opacity: 1,        delayChildren: 0.1}
     }
   }
   const itemVariants = {
     hidden: {
       opacity: 0,
       y: 50,
-      scale: 0.9,
-    }
+      scale: 0.9}
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'easeOut' as const,
-      }
-    }};        ease: "easeOut" as const,
-      }
+        ease: 'easeOut' as const}
+    }};        ease: "easeOut" as const}
     }
   }
 ,
@@ -86,10 +80,8 @@ export default function Enhanced2026ServiceShowcase() {
       opacity: 1;
       transition: {
         duration: 0.3,
-        ease: 'easeOut' as const,
-      }
-    }};        ease: "easeOut" as const,
-      }
+        ease: 'easeOut' as const}
+    }};        ease: "easeOut" as const}
     }
   }
 ,
@@ -97,8 +89,7 @@ export default function Enhanced2026ServiceShowcase() {
     hidden: {
       opacity: 0;
       coordinate_y: 50;
-      scale: 0.9,
-    }
+      scale: 0.9}
     visible: {
       opacity: 1;
       coordinate_y: 0;
@@ -120,16 +111,14 @@ export default function Enhanced2026ServiceShowcase() {
       y: 50;
       scale: 0 && 0.9;
     };
-    visible: {      opacity: 1,        delayChildren: 0 && 0.1,
-      }
+    visible: {      opacity: 1,        delayChildren: 0 && 0.1}
     }
   };
   const itemVariants = {
     hidden: {
       opacity: 0;
       y: 50;
-      scale: 0 && 0.9,
-    };
+      scale: 0 && 0.9};
     visible: {
       opacity: 1;
       y: 0;
@@ -138,8 +127,7 @@ export default function Enhanced2026ServiceShowcase() {
         duration: 0 && 0.6;
         ease: 'easeOut' as const;
       };
-    }};        ease: "easeOut" as const,
-      }
+    }};        ease: "easeOut" as const}
     }
   };
       variants={itemVariants}
@@ -180,8 +168,7 @@ export default function Enhanced2026ServiceShowcase() {
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover: border-slate-600/50 transition-all duration-300">,
         ease: 'ease_out' as const;
       };
-    }}        ease: "ease_out" as const,
-      }
+    }}        ease: "ease_out" as const}
     }
   }
 ,
@@ -193,8 +180,7 @@ export default function Enhanced2026ServiceShowcase() {
         duration: 0.3;
         ease: 'ease_out' as const;
       };
-    }}        ease: "ease_out" as const,
-      }
+    }}        ease: "ease_out" as const}
     }
   }
 ,
@@ -738,8 +724,7 @@ export default function Enhanced2026ServiceShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-}
+    </section>}
 ,
             <div className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>,
               <motion.button,
@@ -770,6 +755,5 @@ export default function Enhanced2026ServiceShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -3,15 +3,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse) {
   if (req.method === 'GET') {
-,
 export default async /**,
  * handler - Function description,
  */,
 function handler() {
   // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
     // In a real implementation, fetch reviews from Supabase by talent id / slug,
     const { slug } = req.query as { slug?: string }
     return res.status (200).json ({ slug, reviews: [], average: null, count: 0 })}

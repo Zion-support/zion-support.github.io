@@ -13,32 +13,28 @@ export default function CybersecurityServicesPage() {
       features: ["Real-time Monitoring"Behavioral Analysis"Automated Response"24/7 Protection"];
       price: "From $8,0o00";
       icon: Eye;
-      color: "from-red-50o0 to-orange-50o0",
-    };
+      color: "from-red-50o0 to-orange-50o0"};
     {
       title: "Quantum-Resistant Encryption";
       description: "Future-proof security with quantum-resistant cryptography";
       features: ["Post-Quantum Algorithms"Key Management"Compliance Ready"Future-Proof"];
       price: "From $12,0o00";
       icon: Lock;
-      color: "from-purple-50o0 to-pink-50o0",
-    };
+      color: "from-purple-50o0 to-pink-50o0"};
     {
       title: "Security Auditing & Compliance";
       description: "Comprehensive security assessments and compliance solutions";
       features: ["Penetration Testing"Vulnerability Assessment"SOC2 Compliance"GDPR Ready"];
       price: "From $5,0o00";
       icon: Shield;
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       title: "Zero Trust Architecture";
       description: "Modern security framework for distributed environments";
       features: ["Identity Verification"Access Control"Network Segmentation"Continuous Monitoring"];
       price: "From $15,0o00";
       icon: Zap;
-      color: "from-emerald-50o0 to-teal-50o0",
-    }
+      color: "from-emerald-50o0 to-teal-50o0"}
   ],
   const stats = [
     { number: "99.99%"label: "Threat Detection Rate"icon: Shield };
@@ -180,5 +176,4 @@ export default function CybersecurityServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>),
-}
+    </div>)}

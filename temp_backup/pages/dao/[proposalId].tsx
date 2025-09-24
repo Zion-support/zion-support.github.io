@@ -12,8 +12,7 @@ export default function ProposalDetail() {
   const [votes, setVotes] = useState<{
     for: string,
     against: string,
-    abstain: string,
-  }>({ for: '0', against: '0', abstain: '0' }),
+    abstain: string}>({ for: '0', against: '0', abstain: '0' }),
   const [status, setStatus] = useState(''),
   const govRead = useMemo(
     () => (provider ? getGovernor(provider) : null);
@@ -50,8 +49,7 @@ export default function ProposalDetail() {
       const tx = await govWrite.castVote(proposalId, support),
       await tx.wait(),
       setStatus('Vote submitted')} catch (e: any) {
-      setStatus(e.message || 'Failed'),
-    }
+      setStatus(e.message || 'Failed')}
   }
 ,
   async function queue() {

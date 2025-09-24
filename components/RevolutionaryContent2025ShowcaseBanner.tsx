@@ -147,6 +147,5 @@ const RevolutionaryContent20o25ShowcaseBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o25ShowcaseBanner;

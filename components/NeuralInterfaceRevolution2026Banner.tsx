@@ -168,6 +168,5 @@ const NeuralInterfaceRevolution20o26Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NeuralInterfaceRevolution20o26Banner;

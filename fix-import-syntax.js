@@ -129,14 +129,14 @@ if (
     }
   }
 ,
-console && // console.log(`Found ${files && files.length} files to check for syntax errors...`),
+console && // // console.log(`Found ${files && files.length} files to check for syntax errors...`),
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++,
-    console && // console.log(`Fixed syntax in: ${file}`)}
+    console && // // console.log(`Fixed syntax in: ${file}`)}
 }
 ,
-console && // console.log(`\nFixed syntax errors in ${fixedCount} files.`),
+console && // // console.log(`\nFixed syntax errors in ${fixedCount} files.`),
   traverse (dir),
   return files}
 // Main execution,
@@ -149,5 +149,4 @@ for (const file of files) {
     fixed_count++,
     console.log (`Fixed syntax in: ${file}`)}
 }
-console.log (`\n_fixed syntax errors in ${fixed_count} files.`),
-}}
+console.log (`\n_fixed syntax errors in ${fixed_count} files.`)}}

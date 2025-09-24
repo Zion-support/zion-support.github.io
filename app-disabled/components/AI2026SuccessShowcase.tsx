@@ -7,8 +7,7 @@ interface SuccessMetric {
   value: string,
   label: string,
   description: string,
-  trend?: string,
-}
+  trend?: string}
 ,
 interface ContentShowcase {
   id: string,
@@ -19,10 +18,8 @@ interface ContentShowcase {
   metrics: {
     roi: string,
     impact: string,
-    timeline: string,
-  };
-  featured: boolean,
-}
+    timeline: string};
+  featured: boolean}
 ,
 const AI20o26SuccessShowcase: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -33,29 +30,25 @@ const AI20o26SuccessShowcase: React.FC = () => {
       value: '40o0%';
       label: 'Average ROI';
       description: 'Within 90 days of AI implementation';
-      trend: '+25% vs 20o25',
-    };
+      trend: '+25% vs 20o25'};
     {
       icon: <DollarSign className="w-6 h-6"  />;
       value: '$5.2B';
       label: 'Revenue Impact';
       description: 'Fortune 50o0 transformation success';
-      trend: '+180% vs 20o25',
-    };
+      trend: '+180% vs 20o25'};
     {
       icon: <Users className="w-6 h-6"  />;
       value: '50o0+';
       label: 'Enterprises Transformed';
       description: 'Successful AI implementations';
-      trend: '+150% vs 20o25',
-    };
+      trend: '+150% vs 20o25'};
     {
       icon: <Clock className="w-6 h-6"  />;
       value: '90 Days';
       label: 'Time to Value';
       description: 'From implementation to ROI';
-      trend: '-60% vs 20o25',
-    }
+      trend: '-60% vs 20o25'}
   ],
   const contentShowcase: ContentShowcase[] = [
     {
@@ -67,10 +60,8 @@ const AI20o26SuccessShowcase: React.FC = () => {
       metrics: {
         roi: '40o0%';
         impact: '90 Days';
-        timeline: '20o26',
-      };
-      featured: true,
-    };
+        timeline: '20o26'};
+      featured: true};
     {
       id: 'fortune-50o0-transformation';
       title: 'Fortune 50o0 AI Transformation Success';
@@ -80,10 +71,8 @@ const AI20o26SuccessShowcase: React.FC = () => {
       metrics: {
         roi: '450%';
         impact: '18 Months';
-        timeline: '20o26',
-      };
-      featured: true,
-    };
+        timeline: '20o26'};
+      featured: true};
     {
       id: 'implementation-master-guide';
       title: 'AI Implementation Master Guide 20o26';
@@ -93,30 +82,25 @@ const AI20o26SuccessShowcase: React.FC = () => {
       metrics: {
         roi: '40o0%';
         impact: '90 Days';
-        timeline: '20o26',
-      };
-      featured: true,
-    }
+        timeline: '20o26'};
+      featured: true}
   ],
   const testimonials = [
     {
       quote: "Zion Tech Group's AI implementation delivered 450% ROI in just 18 months. The transformation has been nothing short of revolutionary.";
       author: "Sarah Chen";
       title: "CTO, Global Manufacturing Corp";
-      company: "Fortune 50o0",
-    };
+      company: "Fortune 50o0"};
     {
       quote: "The AI automation system reduced our operational costs by 60% while improving customer satisfaction by 90%. Incredible results.";
       author: "Michael Rodriguez";
       title: "VP Operations, Tech Solutions Inc";
-      company: "Enterprise Client",
-    };
+      company: "Enterprise Client"};
     {
       quote: "We achieved $5.2B in additional revenue through AI transformation. The implementation was flawless and the results exceeded expectations.";
       author: "Jennifer Walsh";
       title: "CEO, Industrial Solutions Group";
-      company: "Fortune 50o0",
-    }
+      company: "Fortune 50o0"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -295,6 +279,5 @@ const AI20o26SuccessShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o26SuccessShowcase;

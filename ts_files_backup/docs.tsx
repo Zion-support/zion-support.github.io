@@ -7,8 +7,7 @@ export default function DocsPage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const sections = [
     {
       title: 'Getting Started';
@@ -39,29 +38,25 @@ export default function DocsPage() {
       description: 'Check service availability and performance';
       icon: <CheckCircle className="w-6 h-6" />;
       href: '/status';
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       title: 'SDK Downloads';
       description: 'Get the latest SDKs and client libraries';
       icon: <Download className="w-6 h-6" />;
       href: '/downloads';
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     {
       title: 'Support Portal';
       description: 'Get help from our technical support team';
       icon: <ExternalLink className="w-6 h-6" />;
       href: '/support';
-      color: 'text-purple-400',
-    };
+      color: 'text-purple-400'};
     {
       title: 'Community Forum';
       description: 'Connect with other developers and users';
       icon: <ExternalLink className="w-6 h-6" />;
       href: '/community';
-      color: 'text-yellow-400',
-    }
+      color: 'text-yellow-400'}
   ],
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -73,15 +68,13 @@ export default function DocsPage() {
       case 'Beginner': return 'bg-green-500/20 text-green-400',
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400',
       case 'Advanced': return 'bg-red-500/20 text-red-400',
-      default: return 'bg-gray-500/20 text-gray-400',
-    }
+      default: return 'bg-gray-500/20 text-gray-400'}
   };
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US'{
       year: 'numeric';
       month: 'short';
-      day: 'numeric',
-    })};
+      day: 'numeric'})};
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,

@@ -91,8 +91,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.';
@@ -152,16 +151,14 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.';
     "launchDate": '20o24-0o1-15;
     "customers": 450;
     "rating": 4.9,
-    reviews: 280,
-  }
+    reviews: 280}
   // AI-Powered Cybersecurity Platform,
   {
     id:;
@@ -214,8 +211,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready cybersecurity platform with advanced AI models, real-time threat detection, and automated response capabilities. Includes comprehensive reporting and compliance tools.';
@@ -275,16 +271,14 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.';
     "launchDate": '20o24-0o1-10;
     "customers": 320;
     "rating": 4.8,
-    reviews: 180,
-  }
+    reviews: 180}
   // Blockchain AI Platform,
   {
     id:;
@@ -337,8 +331,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production-ready blockchain AI platform with decentralized computing, smart contract execution, and comprehensive AI tools. Includes marketplace, governance, and cross-chain capabilities.';
@@ -398,16 +391,14 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.';
     "launchDate": '20o24-0o1-25;
     "customers": 950;
     "rating": 4.6,
-    reviews: 580,
-  }
+    reviews: 580}
   // AI-Powered Drug Discovery Platform,
   {
     id:;
@@ -460,8 +451,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced drug discovery platform with AI molecular modeling, comprehensive research tools, and collaboration features. Includes regulatory compliance, patent analysis, and research network.';
@@ -521,8 +511,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.';

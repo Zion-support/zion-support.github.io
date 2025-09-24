@@ -20,6 +20,5 @@ export default function AutonomousCustomerSuccess20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

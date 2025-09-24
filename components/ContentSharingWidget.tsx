@@ -1,8 +1,7 @@
 interface ContentSharingWidgetProps {
   title: string,
   url: string,
-  description: string,
-}
+  description: string}
 ,
 export default function ContentSharingWidget({
   titleurldescription;
@@ -91,6 +90,5 @@ export default function ContentSharingWidget({
           </button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

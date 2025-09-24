@@ -9,8 +9,7 @@ export default async function handler(
   res: NextApiResponse) {
   const user = parseUserFromRequest(req),
   try {
-    ensureAdmin(user),
-  } catch (e: any) {
+    ensureAdmin(user)} catch (e: any) {
     return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
 ,
   const { id } = req.query,

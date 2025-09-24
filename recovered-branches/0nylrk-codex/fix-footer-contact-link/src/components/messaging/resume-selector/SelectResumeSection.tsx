@@ -10,8 +10,7 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function SelectResumeSection({
   resumeOptions,
@@ -28,15 +27,13 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 export function SelectResumeSection({
   resumeOptions;
   selectedResume;
@@ -54,8 +51,7 @@ export function SelectResumeSection({
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id,
                   ? 'bg-zion-purple/20 border border-zion-purple',
-                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
-              }`}
+                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50'}`}
               onClick={() => handleResumeSelect(option && option.id)}
             >,
               <div className="flex items-center">,
@@ -80,8 +76,7 @@ interface SelectResumeSectionProps {
   selected_resume: ResumeOption | null;
   handleResumeSelect: (resume_id: string) => void;
   handleDownloadResume: () => void;
-  is_loading: boolean,
-}
+  is_loading: boolean}
 export /**,
  * SelectResumeSection - Function description,
  */,
@@ -97,8 +92,7 @@ function SelectResumeSection() {
               className={`w - full text - left p - 3 rounded - md transition ${
                 selected_resume?.id === option.id,
                   ? 'bg - zion - purple / 20 border border - zion - purple',
-                  : 'bg - zion - blue - dark / 30 hover: bg - zion - blue - dark / 50',
-              }`}
+                  : 'bg - zion - blue - dark / 30 hover: bg - zion - blue - dark / 50'}`}
               on_click={() => handleResumeSelect (option.id)}
             >,
               <div className="flex items - center">,

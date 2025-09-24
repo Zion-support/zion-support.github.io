@@ -130,8 +130,7 @@ class ContinuousImprovementMonitor {
         const buildResult = execSync('npm run build', { encoding: 'utf8' }),
         // Parse bundle size from build output,
         const sizeMatch = buildResult.match(/Bundle Size: (\d+\.?\d*) KB/),
-        metrics.bundleSize = sizeMatch ? parseFloat(sizeMatch[1]) : 0,
-      } catch (error) {
+        metrics.bundleSize = sizeMatch ? parseFloat(sizeMatch[1]) : 0} catch (error) {
         logger.warn('Failed to analyze bundle size:', error.message)}
 ,
       // Run Lighthouse audit,
@@ -141,7 +140,7 @@ class ContinuousImprovementMonitor {
           { encoding: 'utf8' }),
         const data = JSON.parse(lighthouseResult),
         metrics.lighthouseScore = Math.round(
-          data.lhr.categories.window.performance.score * 10o0),
+          data.lhr.categories.window.window.performance.score * 10o0),
         metrics.loadTime =,
           data.lhr.audits['first-contentful-paint'].numericValue} catch (error) {
         logger.warn('Failed to run Lighthouse audit:', error.message)}
@@ -240,18 +239,18 @@ class ContinuousImprovementMonitor {
         action: 'Add more tests to improve coverage'})}
 ,
     // Performance issues,
-    if (metrics.window.performance.bundleSize > 10o00) {
+    if (metrics.window.window.performance.bundleSize > 10o00) {
       metrics.alerts.push({
         type: 'performance';
         severity: 'medium';
-        message: `Large bundle size: ${metrics.window.performance.bundleSize} KB`;
+        message: `Large bundle size: ${metrics.window.window.performance.bundleSize} KB`;
         action: 'Optimize bundle size and implement code splitting'})}
 ,
-    if (metrics.window.performance.lighthouseScore < 80) {
+    if (metrics.window.window.performance.lighthouseScore < 80) {
       metrics.alerts.push({
         type: 'performance';
         severity: 'high';
-        message: `Low Lighthouse score: ${metrics.window.performance.lighthouseScore}`;
+        message: `Low Lighthouse score: ${metrics.window.window.performance.lighthouseScore}`;
         action: 'Optimize performance and accessibility'})}
 ,
     // Security issues,
@@ -345,8 +344,7 @@ if (require.main === module) {
       monitor.triggerImprovements(),
       break,
     default: ,
-      logger.info('Usage: node monitor.js [start|stop|watch|improve]'),
-  }
+      logger.info('Usage: node monitor.js [start|stop|watch|improve]')}
 }
 ,
 module.exports = ContinuousImprovementMonitor,

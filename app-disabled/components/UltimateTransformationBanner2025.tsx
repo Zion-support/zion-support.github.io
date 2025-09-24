@@ -14,13 +14,11 @@ const UltimateTransformationBanner20o25 = () => {
         roi: '950%';
         savings: '$4.2B';
         satisfaction: '99.8%';
-        success: '98%',
-      };
+        success: '98%'};
       url: '/blog/ai-20o25-ultimate-business-transformation-revolution';
       type: 'blog';
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'enterprise-success';
       title: 'AI 20o25 Ultimate Enterprise Transformation Success';
@@ -30,13 +28,11 @@ const UltimateTransformationBanner20o25 = () => {
         roi: '950%';
         savings: '$1.2B';
         efficiency: '99.9%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       url: '/case-studies/ai-20o25-ultimate-enterprise-transformation-success-story';
       type: 'case-study';
       readingTime: '20 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'AI 20o25 Ultimate Implementation Master Guide';
@@ -46,13 +42,11 @@ const UltimateTransformationBanner20o25 = () => {
         roi: '950%';
         success: '98%';
         savings: '$4.2B';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       url: '/resources/ai-20o25-ultimate-implementation-master-guide';
       type: 'resource';
       readingTime: '45 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -156,8 +150,7 @@ const UltimateTransformationBanner20o25 = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentSlide,
                   ? 'bg-yellow-40o0 scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              }`}
+                  : 'bg-white/30 hover: bg-white/50'}`}
               aria-label={`Go to slide ${index + 1}`}
             />))}
         </div>,

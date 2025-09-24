@@ -33,19 +33,16 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 interface UltraFuturisticServiceCardProps {
-  service: Service,
-}
+  service: Service}
 ,
 const categoryIcons: { [key: string]: React.ReactNode } ={
   'AI & Machine Learning': <Brain className="w-4 h-4"  />;
@@ -98,13 +95,11 @@ export default function UltraFuturisticServiceCard({ service }: UltraFuturisticS
       case 'neural-quantum-cyberpunk':,
         return 'from-green-60o0 via-cyan-60o0 via-purple-60o0 to-pink-60o0',
       default:,
-        return 'from-cyan-60o0 to-blue-60o0',
-    }
+        return 'from-cyan-60o0 to-blue-60o0'}
   };
   const getRoiValue = (roi: string) => {
     const match = roi.match(/(\d+)/),
-    return match ? match[1] : '0',
-  };
+    return match ? match[1] : '0'};
   return (
     <motion.div,
       initial={{ opacity: 0, y: 20 }}

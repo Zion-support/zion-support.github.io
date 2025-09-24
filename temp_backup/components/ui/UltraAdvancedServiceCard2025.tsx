@@ -23,8 +23,7 @@ interface UltraAdvancedServiceCard20o25Props {
     technology?: string[],
     realImplementation?: string,
     launchDate?: string,
-    customers?: string,
-  };
+    customers?: string};
   variant?: 'default' | 'premium' | 'quantum' | 'space' | 'ai'}
 ,
 const UltraAdvancedServiceCard20o25: React.FC<UltraAdvancedServiceCard20o25Props> = ({
@@ -36,32 +35,27 @@ const UltraAdvancedServiceCard20o25: React.FC<UltraAdvancedServiceCard20o25Props
         return {
           border: 'border-yellow-40o0/40';
           glow: 'shadow-yellow-40o0/20';
-          accent: 'from-yellow-40o0 to-orange-50o0',
-        };
+          accent: 'from-yellow-40o0 to-orange-50o0'};
       case 'quantum':,
         return {
           border: 'border-purple-40o0/40';
           glow: 'shadow-purple-40o0/20';
-          accent: 'from-purple-40o0 to-pink-50o0',
-        };
+          accent: 'from-purple-40o0 to-pink-50o0'};
       case 'space':,
         return {
           border: 'border-blue-40o0/40';
           glow: 'shadow-blue-40o0/20';
-          accent: 'from-blue-40o0 to-cyan-50o0',
-        };
+          accent: 'from-blue-40o0 to-cyan-50o0'};
       case 'ai':,
         return {
           border: 'border-green-40o0/40';
           glow: 'shadow-green-40o0/20';
-          accent: 'from-green-40o0 to-emerald-50o0',
-        };
+          accent: 'from-green-40o0 to-emerald-50o0'};
       default: ,
         return {
           border: 'border-cyan-40o0/40';
           glow: 'shadow-cyan-40o0/20';
-          accent: 'from-cyan-40o0 to-blue-50o0',
-        };
+          accent: 'from-cyan-40o0 to-blue-50o0'};
     }
   };
   const styles = getVariantStyles(),

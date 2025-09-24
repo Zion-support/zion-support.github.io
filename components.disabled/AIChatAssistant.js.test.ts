@@ -10,5 +10,4 @@ describe('Page', () => {
     render(<Page  />),
     // Add specific content checks based on component functionality}),
   it('handles user interactions', () => {
-    render(<Page  />),
-}}))
+    render(<Page  />)}}))

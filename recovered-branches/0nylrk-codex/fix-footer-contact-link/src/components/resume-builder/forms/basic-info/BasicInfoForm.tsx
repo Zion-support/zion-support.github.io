@@ -15,8 +15,7 @@ export interface BasicInfoFormProps {
   onSave: (data: BasicInfoFormData) => void,
   skills?: string[],
   yearsExperience?: number,
-  onComplete?: () => void,
-}
+  onComplete?: () => void}
 ,
 export function BasicInfoForm({
   resumeId;
@@ -48,8 +47,7 @@ export function BasicInfoForm({
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data),
     if (onComplete) {
-      onComplete(),
-    }
+      onComplete()}
   };
   return (
     <Form {...form}>,

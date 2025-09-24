@@ -15,6 +15,5 @@ export default function LogsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

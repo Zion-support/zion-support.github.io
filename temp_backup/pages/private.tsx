@@ -16,6 +16,5 @@ export default function PrivatePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -517,6 +517,5 @@ export default function QuantumSecureCommunicationNetwork() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

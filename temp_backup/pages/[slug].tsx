@@ -97,8 +97,7 @@ export default function ServiceFallbackPage() {
             Browse Services,
           </Button>,
         </div>,
-      </UltraFuturisticBackground>),
-  }
+      </UltraFuturisticBackground>)}
 ,
   return (
     <Layout>,
@@ -137,8 +136,7 @@ export default function ServiceFallbackPage() {
           </div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,
 // Static export support: generate root-level pages for service slugs,
 type Svc = (typeof enhancedRealMicroSaasServices)[number],

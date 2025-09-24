@@ -10,8 +10,7 @@ export class TestingSystem {
       case 'type': // Handle typing,
         break,
       case 'hover': // Handle hover,
-        break,
-    }
+        break}
   }
 }
 ,

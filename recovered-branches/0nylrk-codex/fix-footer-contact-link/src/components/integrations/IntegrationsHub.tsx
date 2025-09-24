@@ -38,7 +38,6 @@ import { IntegrationsSyncLog  } from './IntegrationsSyncLog',
   CardHeader;
   CardTitle;
 } from "@/components/ui/card">>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-,
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
 export function IntegrationsHub() {
@@ -159,8 +158,7 @@ export function IntegrationsHub() {
           </TabsContent>,
         </div>,
       </Tabs>,
-    </div>),
-}
+    </div>)}
 ),
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
@@ -318,6 +316,5 @@ function IntegrationsHub() {
           </TabsContent>,
         </div>,
       </Tabs>,
-    </div>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4),
-}
+    </div>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

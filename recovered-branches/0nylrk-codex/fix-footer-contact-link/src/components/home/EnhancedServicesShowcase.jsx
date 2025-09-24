@@ -122,8 +122,7 @@ export function EnhancedServicesShowcase() {
                     </Button>,
                   </div>,
                 </CardContent>,
-              </Card>),
-          })}
+              </Card>)})}
         </div>,
         {/* Service Categories Overview */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>,
@@ -247,6 +246,5 @@ export function EnhancedServicesShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

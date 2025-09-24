@@ -181,19 +181,17 @@ const AI20o26_20o30FuturePredictionsPromotionBanner: React.FC = () => {
       {/* CSS animations */}
       <style jsx>{`,
         @keyframes float-slow {
-          0%10o0% { transform: translateY(0px) rotate(0deg), opacity: 0.3, }
-          50% { transform: translateY(-30px) rotate(180deg), opacity: 0.8, }
+          0%10o0% { transform: translateY(0px) rotate(0deg), opacity: 0.3}
+          50% { transform: translateY(-30px) rotate(180deg), opacity: 0.8}
         }
         @keyframes pulse-slow {
-          0%10o0% { opacity: 0.3, }
-          50% { opacity: 0.6, }
+          0%10o0% { opacity: 0.3}
+          50% { opacity: 0.6}
         }
         .animate-float-slow {
-          animation: float-slow 10s ease-in-out infinite,
-        }
+          animation: float-slow 10s ease-in-out infinite}
         .animate-pulse-slow {
-          animation: pulse-slow 4s ease-in-out infinite,
-        }
+          animation: pulse-slow 4s ease-in-out infinite}
       `}</style>,
     </div>)};
 export default AI20o26_20o30FuturePredictionsPromotionBanner;

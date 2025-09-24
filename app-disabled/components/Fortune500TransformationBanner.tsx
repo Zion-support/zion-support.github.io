@@ -49,6 +49,5 @@ export default function Fortune50o0TransformationBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

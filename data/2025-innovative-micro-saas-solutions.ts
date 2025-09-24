@@ -29,8 +29,7 @@ export interface InnovativeMicroSaasSolution {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -40,15 +39,13 @@ export interface InnovativeMicroSaasSolution {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
   aiCapabilities: string[],
-  marketDisruption: string,
-}
+  marketDisruption: string}
 ,
 const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const innovativeMicroSaasSolutions20o25: InnovativeMicroSaasSolution[] = [
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   // Minimal seed items kept for build correctness,
@@ -135,8 +132,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     innovationLevel: 'Breakthrough';
     patentStatus: 'Trade Secret';
     aiCapabilities: ['AI Personalization', 'Send Time Optimization', 'Subject Line Optimization', 'Behavioral Targeting'];
-    marketDisruption: 'Revolutionizes email marketing with AI personalization',
-  };
+    marketDisruption: 'Revolutionizes email marketing with AI personalization'};
   // SMART INVENTORY MANAGEMENT,
   {
     id: 'ai-inventory-manager';
@@ -187,7 +183,6 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     marketDisruption: 'Revolutionizes inventory management with AI prediction',
 =======,
     aiCapabilities: ['Content Creation', 'Optimization'];
-    marketDisruption: 'Automation at scale',
-  }
+    marketDisruption: 'Automation at scale'}
 ],
 export default innovativeMicroSaasSolutions2025]

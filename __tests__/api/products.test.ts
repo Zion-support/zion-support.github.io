@@ -17,14 +17,11 @@ jest.mock('@prisma/client', () => {
   const mPrismaClient ={
     product: {
       findMany: jest.fn();
-      aggregate: jest.fn(),
-    };
+      aggregate: jest.fn()};
     productReview: {
-      aggregate: jest.fn(),
-    };
+      aggregate: jest.fn()};
     $queryRawUnsafe: jest.fn();
-    $disconnect: jest.fn(),
-  };
+    $disconnect: jest.fn()};
   return { PrismaClient: jest.fn(() => mPrismaClient) };
 }),
 let prisma: PrismaClient,
@@ -35,8 +32,7 @@ interface ProductLike {
   images?: unknown[],
   price?: number | null,
   currency?: string,
-  tags?: string[],
-}
+  tags?: string[]}
 ,
 describe('/api/products API Endpoint', () => {
   let req: ReturnType<typeof createRequest>,
@@ -141,8 +137,7 @@ describe('/api/products API Endpoint', () => {
       expect(prisma.product.findMany).toHaveBeenCalledWith({
         where: {
           id: {
-            in: expectedProductIds,
-          }
+            in: expectedProductIds}
         }
       })})})})}),
           "id"})}),

@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/button',
 import { SparklesRefreshCcw } from 'lucide-react',
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
-  isProcessing: boolean,
-}
+  isProcessing: boolean}
 ,
 export function EmptyMatchesCard({
   onRefreshisProcessing;

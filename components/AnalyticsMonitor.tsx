@@ -14,8 +14,7 @@ interface AnalyticsConfig {
   ga4MeasurementId?: string,
   enablePerformanceMonitoring?: boolean,
   enableErrorTracking?: boolean,
-  enableUserBehaviorTracking?: boolean,
-}
+  enableUserBehaviorTracking?: boolean}
 ,
 interface PerformanceMetrics {
   pageLoadTime: number,
@@ -23,16 +22,14 @@ interface PerformanceMetrics {
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
   firstInputDelay: number,
-  timeToInteractive: number,
-}
+  timeToInteractive: number}
 ,
 interface UserBehavior {
   sessionId: string,
   pageViews: number,
   timeOnSite: number,
   bounceRate: number,
-  conversionEvents: number,
-}
+  conversionEvents: number}
 ,
 export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
@@ -88,7 +85,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           trackEvent(', 'web_vitals', 'ttfb'metric.value)})}),
       // Page load time,
       window.addEventListener('load'() => {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
         setMetrics(prev => ({ ...prevpageLoadTime: loadTime } as PerformanceMetrics)),
         trackEvent(', 'performance', 'page_load_time'loadTime)})}
@@ -103,16 +100,14 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           lineno: event.lineno;
           colno: event.colno;
           error: event.error;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
         setErrors(prev => [...preverror]),
         trackEvent(', 'error', 'javascript_error'error.message)}),
       // Unhandled promise rejections,
       window.addEventListener('unhandledrejection'(event) => {
         const error ={
           reason: event.reason;
-          timestamp: new Date().toISOString(),
-        };
+          timestamp: new Date().toISOString()};
         setErrors(prev => [...preverror]),
         trackEvent(', 'error', 'unhandled_promise_rejection'event.reason)})}
   };
@@ -132,8 +127,7 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           pageViews;
           timeOnSite;
           bounceRate: calculateBounceRate();
-          conversionEvents: 0,
-        }),
+          conversionEvents: 0}),
         trackEvent(', 'user_behavior', 'page_view'pageViews)};
 import React{ useEffect } from 'react',
 interface AnalyticsEvent {
@@ -142,8 +136,7 @@ interface AnalyticsEvent {
   action: string,
   label?: string,
   value?: number,
-  timestamp: number,
-}
+  timestamp: number}
 ,
 export default function AnalyticsMonitor() {
   useEffect(() => {
@@ -164,8 +157,7 @@ export default function AnalyticsMonitor() {
         body: JSON.stringify(event)}).catch(console.error),
       // Log to console in development,
       if (process.env.NODE_ENV === 'development') {
-        // console.log('Analytics Event: 'event),
-      }
+        // // console.log('Analytics Event: 'event)}
     };
     // Track page views,
     const trackPageView = () => {
@@ -227,8 +219,7 @@ export default function AnalyticsMonitor() {
           tagName;
           className;
           id;
-          text: target.textContent?.slice(0o50),
-        })};
+          text: target.textContent?.slice(0o50)})};
       // Initialize tracking,
       trackPageView(),
       window.addEventListener(', 'scroll', 'trackScrollDepth),
@@ -249,8 +240,7 @@ export default function AnalyticsMonitor() {
       (window as any).gtag(', 'event', 'action{
         event_category: category;
         event_label: value?.toString() || ', ';
-        value: typeof value === 'number' ? value : undefined,
-      })}
+        value: typeof value === 'number' ? value : undefined})}
   };
   // Custom hooks for analytics,
   const usePageView = (pageName: string) => {
@@ -261,8 +251,7 @@ export default function AnalyticsMonitor() {
       trackEvent(', 'conversion', 'conversionNamevalue),
       setUserBehavior(prev => prev ? {
         ...prev;
-        conversionEvents: prev.conversionEvents + 1,
-      } : null)};
+        conversionEvents: prev.conversionEvents + 1} : null)};
     return trackConversion};
   return {
     metrics;
@@ -285,8 +274,7 @@ export const AnalyticsDashboard: React.FC = () => {
         className="fixed bottom-4 right-4 bg-blue-60o0 text-white p-3 rounded-full shadow-lg hover: bg-blue-70o0 transition-colors",
         title="View Analytics">,
         📊,
-      </button>),
-  }
+      </button>)}
 ,
   return (
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm">,

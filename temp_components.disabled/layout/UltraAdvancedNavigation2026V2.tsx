@@ -26,8 +26,7 @@ const UltraAdvancedNavigation20o26V2: React.FC = () => {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const navigationItems = [
     {
       name: 'Services';
@@ -53,8 +52,7 @@ const UltraAdvancedNavigation20o26V2: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ],
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   return (
     <motion.nav,
       initial={{ y: -10o0 }}

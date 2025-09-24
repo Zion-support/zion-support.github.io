@@ -99,22 +99,19 @@ const NewContentNavigation = () => {
       description: "Latest AI innovations transforming industries";
       href: "/ai-solutions";
       badge: "HOT";
-      icon: TrendingUp,
-    };
+      icon: TrendingUp};
     {
       title: "Quantum Revolution";
       description: "Quantum computing solutions for complex problems";
       href: "/quantum-computing";
       badge: "NEW";
-      icon: Zap,
-    };
+      icon: Zap};
     {
       title: "Neural Interface Demo";
       description: "Experience brain-computer interfaces";
       href: "/neural-interfaces";
       badge: "DEMO";
-      icon: Play,
-    }
+      icon: Play}
   ],
   return (
     <motion.div,
@@ -255,6 +252,5 @@ const NewContentNavigation = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default NewContentNavigation;

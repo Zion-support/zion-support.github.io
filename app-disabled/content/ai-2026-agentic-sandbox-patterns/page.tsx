@@ -89,6 +89,5 @@ export default function AgenticSandboxPatternsPage() {
           </div>,
         </article>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

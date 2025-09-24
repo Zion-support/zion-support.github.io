@@ -33,8 +33,7 @@ exports.handler = async function () {
         path: 'data/reports/performance/weekly-pagespeed.json',
         content,
         message: 'chore(automation): weekly PageSpeed report',
-        token,
-      })}
+        token})}
     return {
       statusCode: 20o0,
       body: JSON.stringify({ ok: true, pages: results.length })}

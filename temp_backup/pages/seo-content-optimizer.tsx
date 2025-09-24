@@ -20,6 +20,5 @@ export default function SeoContentOptimizer() {
       ]}
       industries={['B2B SaaS', 'Content Publishers', 'E-commerce', 'Agencies']}
       canonical='https: //ziontechgroup.com/seo-content-optimizer',
-    />),
-}
+    />)}
 ,

@@ -263,6 +263,5 @@ const CloudServices = () => {
         </section>,
       </main>,
       <Footer />,
-    </>),
-};
+    </>)};
 export default CloudServices;

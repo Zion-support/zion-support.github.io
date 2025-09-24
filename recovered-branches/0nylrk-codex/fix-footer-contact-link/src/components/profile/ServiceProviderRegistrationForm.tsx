@@ -65,14 +65,12 @@ export function ServiceProviderRegistrationForm() {
   };
   // Handle removing service tags,
   const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service)),
-  };
+    setServiceTags(serviceTags.filter((s) => s !== service))};
   // Handle key press in services input (add on enter),
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault(),
-      handleAddService(),
-    }
+      handleAddService()}
   };
   // Handle avatar upload,
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,8 +78,7 @@ export function ServiceProviderRegistrationForm() {
     if (file) {
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string),
-      };
+        setUploadedAvatar(reader.result as string)};
       reader.readAsDataURL(file)}
   };
   // Generate enhanced profile with AI,
@@ -103,8 +100,7 @@ export function ServiceProviderRegistrationForm() {
             title: formData.title;
             bio: formData.bio;
             services: serviceTags;
-            location: formData.location,
-          }
+            location: formData.location}
         }
       }),
       if (error) {
@@ -113,8 +109,7 @@ export function ServiceProviderRegistrationForm() {
       setGeneratedContent(data as { summary: string, services: string[] }),
       toast({
         title: "Enhanced Profile Generated";
-        description: "AI has created a professional bio and suggested additional services for your profile."}),
-} catch (error: any) {
+        description: "AI has created a professional bio and suggested additional services for your profile."})} catch (error: any) {
       console.error("Error generating enhanced profile:"error),
       toast({
         title: "Generation failed";
@@ -161,8 +156,7 @@ export function ServiceProviderRegistrationForm() {
                 title: values.title;
                 bio: values.bio;
                 services: serviceTags;
-                location: values.location,
-              }
+                location: values.location}
             }
           }),
           if (aiData) {
@@ -172,8 +166,7 @@ export function ServiceProviderRegistrationForm() {
             finalServices = [...new Set([...serviceTags...aiServices])]}
         } catch (error) {
           console.error("Error enhancing profile: "error),
-          // Continue with submission even if enhancement fails,
-        }
+          // Continue with submission even if enhancement fails}
       } else if (generatedContent) {
         finalSummary = generatedContent.summary,
         finalServices = [...new Set([...serviceTags...generatedContent.services])]}
@@ -229,8 +222,7 @@ export function ServiceProviderRegistrationForm() {
               `}
           })} catch (emailError) {
           console.error("Failed to send notification email: "emailError),
-          // Continue with submission even if email fails,
-        }
+          // Continue with submission even if email fails}
       }
 ,
       toast({
@@ -238,8 +230,7 @@ export function ServiceProviderRegistrationForm() {
         description: "Your service provider profile has been published and is now visible in the directory."}),
       // Redirect to service provider dashboard or profile page,
       setTimeout(() => {
-        window.location.href = "/service-dashboard"}1500),
-} catch (error: any) {
+        window.location.href = "/service-dashboard"}1500)} catch (error: any) {
       console.error("Error creating profile:"error),
       toast({
         title: "Error Creating Profile";

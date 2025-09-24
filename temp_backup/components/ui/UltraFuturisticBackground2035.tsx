@@ -29,8 +29,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
       size: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Create particles,
     const createParticle = (x: number, y: number) => {
       const colors = [
@@ -50,8 +49,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         size: Math.random() * 3 + 1;
         color: colors[Math.floor(Math.random() * colors.length)];
         life: 1;
-        maxLife: Math.random() * 10o0 + 50,
-      })};
+        maxLife: Math.random() * 10o0 + 50})};
     // Animation loop,
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)',
@@ -125,8 +123,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 8;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 opacity-60 rounded-full",
@@ -137,8 +134,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 10;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-40o0/30 opacity-60 transform rotate-45",
@@ -149,8 +145,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 12;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Neon Lines */}
       <motion.div,
@@ -160,8 +155,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-purple-40o0 to-transparent opacity-60",
@@ -170,8 +164,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 4;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       {/* Energy Orbs */}
       <motion.div,
@@ -186,8 +179,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-40o0 rounded-full shadow-lg shadow-purple-40o0/50",
@@ -201,8 +193,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 2.5;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       {/* Holographic Rings */}
       <motion.div,
@@ -214,8 +205,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 20;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-96 h-96 border border-purple-30o0/15 rounded-full -translate-x-1/2 -translate-y-1/2",
@@ -226,8 +216,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
         transition={{
           duration: 30;
           repeat: Infinity;
-          ease: "linear",
-        }}
+          ease: "linear"}}
        />,
       {/* Quantum Particles */}
       <div className="absolute inset-0">,
@@ -246,8 +235,7 @@ const UltraFuturisticBackground20o35: React.FC<UltraFuturisticBackground20o35Pro
               duration: Math.random() * 3 + 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Content */}

@@ -19,8 +19,7 @@ export const a11yTestUtils = {
         const backgroundColor = styles.backgroundColor,
         // Simple contrast check (would need more sophisticated implementation),
         if (color && backgroundColor) {
-          // Add contrast calculation logic here,
-        }
+          // Add contrast calculation logic here}
       }),
       return issues}),
     return contrastIssues};

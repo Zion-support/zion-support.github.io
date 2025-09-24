@@ -65,8 +65,7 @@ export default function APITestingSuitePage() {
         'Basic reporting';
         '5 API endpoints';
         'Community support'];
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Professional';
       price: '$99';
@@ -81,8 +80,7 @@ export default function APITestingSuitePage() {
         'Performance testing';
         'API access';
         'Priority support'];
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: '$299';
@@ -97,8 +95,7 @@ export default function APITestingSuitePage() {
         'Advanced security testing';
         'White-label options';
         'Custom integrations'];
-      popular: false,
-    }
+      popular: false}
   ],
   const handleTestAPI = async () => {
     if (!apiEndpoint.trim()) return,
@@ -435,5 +432,4 @@ export default function APITestingSuitePage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

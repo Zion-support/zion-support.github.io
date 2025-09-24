@@ -15,6 +15,5 @@ export default function WhitepapersPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

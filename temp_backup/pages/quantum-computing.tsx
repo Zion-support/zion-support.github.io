@@ -132,6 +132,5 @@ export default function QuantumComputing() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

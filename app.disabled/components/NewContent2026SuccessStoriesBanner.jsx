@@ -44,6 +44,5 @@ const NewContent20o26SuccessStoriesBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26SuccessStoriesBanner;

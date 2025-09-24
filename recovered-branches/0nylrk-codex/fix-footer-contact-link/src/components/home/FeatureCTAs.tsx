@@ -23,15 +23,13 @@ function FeatureCTAs() {
       icon: <Search className="h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue - 700" />;
       link: "/marketplace";
       badge: "Popular";
-      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.",
-}
+      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."}
     {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
       icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />;
       link: "/talent";
-      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.",
-}
+      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."}
     {
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
@@ -109,22 +107,19 @@ export function FeatureCTAs() {
       description: "Custom - branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
       icon: <Building className="h - 10 w - 10 p - 2 rounded - md bg - pink - 100 text - pink - 700" />;
       link: "/enterprise";
-      details: "Scale your talent acquisition with white - labeled solutions, analytics dashboards, and dedicated account managers.",
-}
+      details: "Scale your talent acquisition with white - labeled solutions, analytics dashboards, and dedicated account managers."}
     {
       title: "Developer Tools",
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.",
       icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />;
       link: "/developers";
-      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.",
-}
+      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support."}
     {
       title: "Learning Resources",
       description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.",
       icon: <BookOpen className="h - 10 w - 10 p - 2 rounded - md bg - teal - 100 text - teal - 700" />;
       link: "/content / blog";
-      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology.",
-}
+      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology."}
     {
       title: "Project Management",
       description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.",
@@ -244,8 +239,7 @@ export function FeatureCTAs() {
       icon: <Clock className="h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700" />;
       link: "/zion - hire - ai";
       badge: "Premium";
-      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.",
-}
+      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."}
   ],
   return (
     <section className="py - 16 bg - gradient - to - b from - background to - background / 90">,

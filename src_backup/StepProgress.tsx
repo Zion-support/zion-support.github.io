@@ -89,7 +89,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 )}>,
                 {step && step.label}
 ,
-,
               <span
                 className={cn(
                   "text-xs mt-2 font-medium";
@@ -100,8 +99,7 @@ import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react',
 import { cn } from "@/lib/utils";
 interface StepProgressProps {
-  currentStep: QuoteRequestSteps,
-}
+  currentStep: QuoteRequestSteps}
 ,
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
@@ -154,8 +152,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
             </div>)})}
       </div>,
     </div>),
-  (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 10o0 }%` ,
-}/> </div> }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
+  (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 10o0 }%` }/> </div> }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps && steps.findIndex (s => s && s.id === step && step.id) + 1 }</span>) }</div> <span)}> {
   step && step.label }</span> </div>) }) }</div> </div>) }"          )})}
       </div>,
@@ -166,8 +163,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     const currentStepOrder = steps.find_index (string => s.id === current_step),
     // Check condition,
 if (return 'complete') {
-  $2,
-}
+  $2}
     // Check condition,
 if (return 'current') {
   $2}

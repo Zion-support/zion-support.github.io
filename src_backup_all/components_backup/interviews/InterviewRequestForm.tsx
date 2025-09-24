@@ -35,8 +35,7 @@ import { logErrorToProduction } from '@/utils/productionLogger',
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
-  userDetails?: UserProfile,
-}
+  userDetails?: UserProfile}
 ,
 const formSchema = z.object({
   date: z,

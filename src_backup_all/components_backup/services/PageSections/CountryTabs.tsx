@@ -19,8 +19,7 @@ interface CountryTabsProps {
   handleCountrySelect: (country: CountryPricing) => void,
   onQuote?: (country: CountryPricing) => void,
   searchQuery: string,
-  setSearchQuery: (query: string) => void,
-}
+  setSearchQuery: (query: string) => void}
 ,
 export function CountryTabs({
   popularCountries;

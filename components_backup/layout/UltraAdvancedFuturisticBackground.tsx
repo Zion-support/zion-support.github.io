@@ -30,8 +30,7 @@ export default function UltraAdvancedFuturisticBackground() {
       life: number,
       maxLife: number,
       connections: number[],
-      glow: number,
-    }> = [],
+      glow: number}> = [],
     // Initialize particles with enhanced effects,
     const initParticles = () => {
       particles.length = 0,
@@ -49,8 +48,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.5 + 0.5,
-        })}
+          glow: Math.random() * 0.5 + 0.5})}
 ,
       // Neural particles (purple/pink with consciousness),
       for (let i = 0, i < 50, i++) {
@@ -66,8 +64,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.6 + 0.4,
-        })}
+          glow: Math.random() * 0.6 + 0.4})}
 ,
       // Energy particles (green/emerald with power),
       for (let i = 0, i < 40, i++) {
@@ -83,8 +80,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.7 + 0.3,
-        })}
+          glow: Math.random() * 0.7 + 0.3})}
 ,
       // Data particles (white/blue with information),
       for (let i = 0, i < 80, i++) {
@@ -100,8 +96,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.4 + 0.2,
-        })}
+          glow: Math.random() * 0.4 + 0.2})}
 ,
       // Consciousness particles (golden with awareness),
       for (let i = 0, i < 25, i++) {
@@ -117,8 +112,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.8 + 0.2,
-        })}
+          glow: Math.random() * 0.8 + 0.2})}
 ,
       // Neon particles (bright with glow effects),
       for (let i = 0, i < 35, i++) {
@@ -134,8 +128,7 @@ export default function UltraAdvancedFuturisticBackground() {
           life: Math.random() * 10o0;
           maxLife: 10o0;
           connections: [];
-          glow: Math.random() * 0.9 + 0.1,
-        })}
+          glow: Math.random() * 0.9 + 0.1})}
     };
     // Initialize particles,
     initParticles(),
@@ -323,8 +316,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Corner accent lines */}
         <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-40o0 opacity-40"  />,
@@ -340,8 +332,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           0o1: 0o1:0o1:0o1,
         </motion.div>,
@@ -353,11 +344,9 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         >,
           QUANTUM: ACTIVE,
         </motion.div>,
       </div>,
-    </div>),
-}
+    </div>)}

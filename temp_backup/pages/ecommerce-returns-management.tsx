@@ -20,6 +20,5 @@ export default function EcommerceReturnsManagement() {
       ]}
       industries={['E-commerce', 'Retail', 'Marketplaces']}
       canonical='https: //ziontechgroup.com/ecommerce-returns-management',
-    />),
-}
+    />)}
 ,

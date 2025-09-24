@@ -48,6 +48,5 @@ export default function AI20o25FuturePredictionsBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

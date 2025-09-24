@@ -27,29 +27,25 @@ const NewContentShowcase20o26 = () => {
       icon: Brain;
       color: 'from-purple-50o0 to-pink-50o0';
       bgColor: 'bg-purple-50';
-      borderColor: 'border-purple-20o0',
-    };
+      borderColor: 'border-purple-20o0'};
     'quantum-computing': {
       title: 'Quantum Computing Revolution';
       icon: Zap;
       color: 'from-blue-50o0 to-cyan-50o0';
       bgColor: 'bg-blue-50';
-      borderColor: 'border-blue-20o0',
-    };
+      borderColor: 'border-blue-20o0'};
     'sustainability': {
       title: 'Green Tech & Sustainability';
       icon: Globe;
       color: 'from-green-50o0 to-emerald-50o0';
       bgColor: 'bg-green-50';
-      borderColor: 'border-green-20o0',
-    };
+      borderColor: 'border-green-20o0'};
     'automation': {
       title: 'Advanced Automation';
       icon: Rocket;
       color: 'from-orange-50o0 to-red-50o0';
       bgColor: 'bg-orange-50';
-      borderColor: 'border-orange-20o0',
-    }
+      borderColor: 'border-orange-20o0'}
   };
   const featuredContent ={
     'ai-breakthroughs': [
@@ -148,8 +144,7 @@ const NewContentShowcase20o26 = () => {
       y: 0;
       transition: {
         duration: 0.6;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -250,8 +245,7 @@ const NewContentShowcase20o26 = () => {
                   Read More,
                   <ChevronRight className="w-4 h-4 ml-1"  />,
                 </Link>,
-              </motion.div>),
-          })}
+              </motion.div>)})}
         </motion.div>,
         {/* Call to Action */}
         <motion.div className="text-center mt-16" variants={itemVariants}>,
@@ -278,6 +272,5 @@ const NewContentShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>),
-};
+    </motion.section>)};
 export default NewContentShowcase20o26;

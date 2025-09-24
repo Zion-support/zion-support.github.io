@@ -10,8 +10,7 @@ interface BadgeProps {
     | 'warning',
   size?: 'sm' | 'md' | 'lg',
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const Badge = React.forwardRef<HTMLDivElement BadgeProps>(
   (

@@ -20,8 +20,7 @@ export default function Comprehensive20o26Pricing() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all services,
   const allServices = [
     ...nextGenAIServices20o26;
@@ -57,8 +56,7 @@ export default function Comprehensive20o26Pricing() {
           case 'mid': return price >= 30o0 && price <= 999,
           case 'premium': return price >= 10o00 && price <= 2999,
           case 'enterprise': return price >= 30o00,
-          default: return true,
-        }
+          default: return true}
       })(),
       const matchesPopular = !showPopularOnly || service.popular,
       return matchesCategory && matchesPriceRange && matchesPopular}),
@@ -73,8 +71,7 @@ export default function Comprehensive20o26Pricing() {
         case 'customers':,
           return b.customers - a.customers,
         default: ,
-          return a.popular ? -1 : 1,
-      }
+          return a.popular ? -1 : 1}
     }),
   // Calculate pricing statistics,
   const pricingStats ={
@@ -82,15 +79,13 @@ export default function Comprehensive20o26Pricing() {
     averagePrice: Math.round(allServices.reduce((sum, s) => sum + parseFloat(s.price.replace('$', '').replace(',', '')), 0) / allServices.length);
     lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', ''))));
     highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', ''))));
-    popularServices: allServices.filter(s => s.popular).length,
-  };
+    popularServices: allServices.filter(s => s.popular).length};
   const containerVariants ={
     hidden: { opacity: 0 };
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -99,8 +94,7 @@ export default function Comprehensive20o26Pricing() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (

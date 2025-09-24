@@ -3,15 +3,13 @@ interface Notification {
   id: string,
   message: string,
   type: 'success' | 'error' | 'warning' | 'info',
-  duration?: number,
-}
+  duration?: number}
 ,
 interface NotificationContextType {
   notifications: Notification[],
   addNotification: (notification: Omit<Notification 'id'>) => void,
   removeNotification: (id: string) => void,
-  clearNotifications: () => void,
-}
+  clearNotifications: () => void}
 ,
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined),
 export const useNotifications = () => {
@@ -20,8 +18,7 @@ export const useNotifications = () => {
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 interface NotificationProviderProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]),
@@ -34,8 +31,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
         removeNotification(id)}, notification.duration || 50o00)}
   };
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id)),
-  };
+    setNotifications(prev => prev.filter(n => n.id !== id))};
   const clearNotifications = () => {
     setNotifications([])};
   const value: NotificationContextType ={

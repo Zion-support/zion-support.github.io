@@ -31,8 +31,7 @@ type Message = {
   id: string,
   content: string,
   sender: "user" | "bot",
-  timestamp: Date,
-}
+  timestamp: Date}
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -85,8 +84,7 @@ type Message = {
   id: string;
   content: string;
   sender: "user" | "bot";
-  timestamp: Date,
-};
+  timestamp: Date};
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -182,8 +180,7 @@ export function ChatBotPanel() {
         setFailedAttempts((prev) => prev + 1);
         // After 3 failed attempts, suggest escalation,
         if (failedAttempts >= 2) {
-          suggestEscalation(),
-}
+          suggestEscalation()}
       } else {
         // Reset failed attempts if successful,
         setFailedAttempts (0)}
@@ -198,8 +195,7 @@ export function ChatBotPanel() {
         description: "We're having trouble connecting to our support service."});
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
-        suggestEscalation(),
-} catch (error) {
+        suggestEscalation()} catch (error) {
       console.error("Error in AI chat:", error);
       toast({
         variant: "destructive",
@@ -221,8 +217,7 @@ export function ChatBotPanel() {
         description: "We're having trouble connecting to our support service."});
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {
-        suggestEscalation(),
-}
+        suggestEscalation()}
     } finally {
       setIsLoading(false)}
 };
@@ -241,8 +236,7 @@ export function ChatBotPanel() {
       if (!response.ok) {
         return {
           success: false,
-          message: "I'm having trouble connecting to my knowledge base right now.",
-        }
+          message: "I'm having trouble connecting to my knowledge base right now."}
       }
 ,
       const data = await response.json(),
@@ -262,25 +256,21 @@ if ( {) {
   $2}
         return {
           success: false;
-          message: "I'm having trouble connecting to my knowledge base right now.",
-        }
+          message: "I'm having trouble connecting to my knowledge base right now."}
       }
       const data = await response.json (),
       return {
         success: true;
-        message: data.message>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-      }
+        message: data.message>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
     } catch (error) {
       console.error ("Error in AI chat:", error),
       return {
         success: false;
-        message: "I'm experiencing technical difficulties. Please try again later.",
-      }
+        message: "I'm experiencing technical difficulties. Please try again later."}
       console.error("Error in AI chat:", error),
       return {
         success: false,
-        message: "I'm experiencing technical difficulties. Please try again later.",
-      };
+        message: "I'm experiencing technical difficulties. Please try again later."};
     }
   };
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -298,16 +288,14 @@ if ( {) {
     try {
       // Send the conversation to the backend for logging,
       // This would be implemented in a real system,
-      // console.log("Support escalation triggered", {
-      // // // // console.log("Support escalation triggered", {
+      // // console.log("Support escalation triggered", {
+      // // // // // console.log("Support escalation triggered", {
         conversationHistory: messages.map(m => ({
           content: m.content,
           sender: m.sender,
-          timestamp: m.timestamp,
-        }))}),
+          timestamp: m.timestamp}))}),
         success: false;
-        message: "I'm experiencing technical difficulties. Please try again later.",
-      }
+        message: "I'm experiencing technical difficulties. Please try again later."}
     }
   }
 ,
@@ -329,21 +317,17 @@ if ( {) {
         conversation_history: messages.map (m => ({
           content: m.content;
           sender: m.sender;
-          timestamp: m.timestamp,
-        }))}),
-} catch (error) {
+          timestamp: m.timestamp}))})} catch (error) {
       console.error ("Failed to log support escalation:", error)}
   }
 } catch (error) {
       console.error("Failed to log support escalation:", error)}
 }
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text),
-  }
+    handleSendMessage(text)}
   };
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text),
-  };
+    handleSendMessage(text)};
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
       ...prev,
@@ -351,21 +335,18 @@ if ( {) {
         id: `user-${Date.now()}`,
         content: "I'd like to speak with a human agent",
         sender: "user",
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
       {
         id: `bot-${Date.now()}`,
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
         sender: "bot",
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ])};
       {
         id: `bot-${Date.now()}`,
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
         sender: "bot",
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ]);
     // In a real implementation, this would trigger a live chat request,
     toast({
@@ -379,15 +360,13 @@ if ( {) {
         id: `user-${Date.now()}`,
         content: "I'd like to email support",
         sender: "user",
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
       };
       {
         id: `bot-${Date.now()}`,
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
         sender: "bot",
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ])}
   };
   return (
@@ -409,17 +388,15 @@ if ( {) {
     try {
       // Send the conversation to the backend for logging,
       // This would be implemented in a real system,
-      console && // console.log("Support escalation triggered", {
+      console && // // console.log("Support escalation triggered", {
         conversationHistory: messages && messages.map(m => ({
           content: m && m.content;
           sender: m && m.sender;
-          timestamp: m && m.timestamp,
-        }))})} catch (error) {
+          timestamp: m && m.timestamp}))})} catch (error) {
       console && console.error("Failed to log support escalation:", error)}
   };
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text),
-  };
+    handleSendMessage(text)};
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
       ...prev,
@@ -427,14 +404,12 @@ if ( {) {
         id: `user-${Date && Date.now()}`;
         content: "I'd like to speak with a human agent";
         sender: "user";
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: `bot-${Date && Date.now()}`;
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
         sender: "bot";
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ]),
     // In a real implementation, this would trigger a live chat request,
     toast({
@@ -447,14 +422,12 @@ if ( {) {
         id: `user-${Date && Date.now()}`;
         content: "I'd like to email support";
         sender: "user";
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: `bot-${Date && Date.now()}`;
         content: "Please send your question to support@ziontechgroup && ziontechgroup.com. Our team will get back to you within 24 hours.";
         sender: "bot";
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ])};
   return (
     <div className="flex flex-col h-full">,
@@ -531,8 +504,7 @@ if ( {) {
         <form
           onSubmit={(e) => {
             e && e.preventDefault(),
-            handleSendMessage(),
-}}
+            handleSendMessage()}}
           className="flex items-center gap-2">,
           <Input
             ref={inputRef}
@@ -595,6 +567,5 @@ if ( {) {
           </Button>,
         </form>,
       </div>,
-    </div>),
-}
+    </div>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

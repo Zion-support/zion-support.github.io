@@ -35,7 +35,6 @@ import { useNavigate } from "react-router-dom",
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 export default function ContentGenerator() {
-,
   const { user, isLoading } = useAuth(),
   const navigate = useNavigate(),
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),
@@ -84,8 +83,7 @@ export default function ContentGenerator() {
           prompt: customPrompt |undefined,
           topic: topic |undefined,
           autoPublish,
-          includeImage: contentType === 'blog' ? includeImage : false,
-        }
+          includeImage: contentType === 'blog' ? includeImage : false}
       }),
       if (error) throw error,
       setPreviewContent(data),
@@ -116,8 +114,7 @@ export default function ContentGenerator() {
           prompt: customPrompt |undefined,
           topic: topic |undefined,
           autoPublish,
-          includeImage: contentType === 'blog' ? includeImage : false,
-        }
+          includeImage: contentType === 'blog' ? includeImage : false}
       }),
       if (error) throw error,
       setPreviewContent(data),
@@ -148,11 +145,9 @@ export default function ContentGenerator() {
           previewText: previewContent.previewText,
           body: previewContent.body,
           testMode: true,
-          testEmail,
-        }
+          testEmail}
       }),
-      if (error) throw error,
-});
+      if (error) throw error});
       if (error) throw error;
       setPreviewContent(data);
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)} catch (error) {

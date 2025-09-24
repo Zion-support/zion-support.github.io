@@ -19,8 +19,7 @@ export default function AdminLearn() {
     }),
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
-    else setMessage('Error: ' + (data.error || 'unknown')),
-  }
+    else setMessage('Error: ' + (data.error || 'unknown'))}
 ,
   return (
     <div className='space-y-4'>,

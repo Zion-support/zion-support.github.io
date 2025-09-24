@@ -17,8 +17,7 @@ export interface AdditionalService {
   link: string, // internal route,
   icon?: string, // emoji or simple text icon,
   popular?: boolean,
-  launchDate?: string,
-}
+  launchDate?: string}
 ,
 export const additionalEnhancedServices: AdditionalService[] = [
   // AI Services,

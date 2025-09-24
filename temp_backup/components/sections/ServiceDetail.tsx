@@ -19,8 +19,7 @@ import {
   Link;
 } from 'lucide-react',
 interface ServiceDetailProps {
-  service: MicroSaasService,
-}
+  service: MicroSaasService}
 ,
 const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const getCategoryIcon = (category: string) => {
@@ -346,6 +345,5 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
           </Card>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ServiceDetail;

@@ -10,8 +10,7 @@ import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
   project:PortfolioProject;
   onEdit:(project:PortfolioProject) => void;
-  onDelete: (projectId:string) => void,
-}
+  onDelete: (projectId:string) => void}
 ,
 export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);

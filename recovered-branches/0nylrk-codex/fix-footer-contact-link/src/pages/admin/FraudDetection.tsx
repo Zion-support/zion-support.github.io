@@ -184,8 +184,7 @@ export default function FraudDetection() {
           action_taken: actionTaken,
           reviewed_at: new Date().toISOString()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
           // In a real app, you'd get the current user's ID,
-          reviewed_by: 'admin',
-        }),
+          reviewed_by: 'admin'}),
         .eq("id", flagId),
       if (error) throw error,
 class ErrorBoundary extends React.Component {
@@ -266,8 +265,7 @@ export default function FraudDetection() {
             <Button
               onClick={fetchFraudFlags} ,
               className="bg-zion-purple hover: bg-zion-purple-light",
-    setFilteredFlags(result),
-  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
+    setFilteredFlags(result)}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
     try {
       const status = action === 'ignore' ? 'ignored' : 'actioned';
@@ -279,8 +277,7 @@ export default function FraudDetection() {
           action_taken: actionTaken;
           reviewed_at: new Date().toISOString();
           // In a real app, you'd get the current user's ID,
-          reviewed_by: 'admin',
-        }),
+          reviewed_by: 'admin'}),
         .eq("id", flagId);
       if (error) throw error;
       toast({
@@ -340,8 +337,7 @@ export default function FraudDetection() {
         title: "Flag updated";
         description: `Action '${action}' was applied successfully.`});
       // Refresh the data,
-      fetchFraudFlags(),
-} catch (error) {
+      fetchFraudFlags()} catch (error) {
       console && console.error("Error updating fraud flag:", error),
       toast({
         title: "Error";
@@ -473,8 +469,7 @@ if ( {) {
           action_taken: action_taken;
           reviewed_at: new Date ().toISOString ();
           // In a real app, you'd get the current user's ID,
-          reviewed_by: 'admin',
-        }),
+          reviewed_by: 'admin'}),
         .eq ("id", flag_id),
       // Check condition,
 if (throw error) {

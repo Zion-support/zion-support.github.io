@@ -11,8 +11,7 @@ const LatestContent20o25PromotionBanner = () => {
       views: '15.2k';
       rating: 4.9;
       published: '2 hours ago';
-      featured: true,
-    };
+      featured: true};
     {
       id: 2;
       title: "Quantum Computing Breakthroughs";
@@ -21,8 +20,7 @@ const LatestContent20o25PromotionBanner = () => {
       views: '8.7k';
       rating: 4.8;
       published: '5 hours ago';
-      featured: false,
-    };
+      featured: false};
     {
       id: 3;
       title: "Automation Best Practices Guide";
@@ -31,8 +29,7 @@ const LatestContent20o25PromotionBanner = () => {
       views: '12.1k';
       rating: 4.9;
       published: '1 day ago';
-      featured: true,
-    };
+      featured: true};
     {
       id: 4;
       title: "Future of Work: AI Integration";
@@ -41,8 +38,7 @@ const LatestContent20o25PromotionBanner = () => {
       views: '6.3k';
       rating: 4.7;
       published: '2 days ago';
-      featured: false,
-    }
+      featured: false}
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -50,8 +46,7 @@ const LatestContent20o25PromotionBanner = () => {
       case 'article': return <FileText className="w-4 h-4"  />,
       case 'guide': return <BookOpen className="w-4 h-4"  />,
       case 'whitepaper': return <FileText className="w-4 h-4"  />,
-      default: return <BookOpen className="w-4 h-4"  />,
-    }
+      default: return <BookOpen className="w-4 h-4"  />}
   };
   return (
     <section className="py-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white">,
@@ -139,6 +134,5 @@ const LatestContent20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default LatestContent20o25PromotionBanner;

@@ -288,8 +288,7 @@ const AdvancedAIContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 activeFilter === filter.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -383,6 +382,5 @@ const AdvancedAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAIContentShowcase20o25;

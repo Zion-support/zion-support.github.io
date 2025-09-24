@@ -14,8 +14,7 @@ export function AIChatAssistant() {
             id: '1';
             type: 'assistant';
             content: "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?";
-            timestamp: new Date(),
-        }
+            timestamp: new Date()}
     ]),
     const [inputValue, setInputValue] = useState(''),
     const [isListening, setIsListening] = useState(false),
@@ -33,8 +32,7 @@ export function AIChatAssistant() {
             id: Date.now().toString();
             type: 'user';
             content: inputValue;
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
         setMessages(prev => [...prev, userMessage]),
         setInputValue(''),
         setIsTyping(true),
@@ -45,8 +43,7 @@ export function AIChatAssistant() {
                 id: (Date.now() + 1).toString();
                 type: 'assistant';
                 content: randomResponse;
-                timestamp: new Date(),
-            };
+                timestamp: new Date()};
             setMessages(prev => [...prev, aiMessage]),
             setIsTyping(false)}, 150o0 + Math.random() * 10o00)};
     const handleVoiceInput = () => {
@@ -76,8 +73,7 @@ export function AIChatAssistant() {
         return (<button onClick={toggleChat} className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 z-50 group" title="Chat with Zion AI">,
         <MessageCircle className="w-6 h-6" />,
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 z-50">,
         <div className="bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">,
@@ -89,8 +85,7 @@ export function AIChatAssistant() {
             </button>,
           </div>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className="fixed bottom-4 right-4 w-96 h-[50o0px] bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">,
@@ -169,6 +164,5 @@ export function AIChatAssistant() {
           <span>Powered by Zion AI • Always learning</span>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

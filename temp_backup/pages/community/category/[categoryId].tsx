@@ -15,5 +15,4 @@ export default function [categoryId]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

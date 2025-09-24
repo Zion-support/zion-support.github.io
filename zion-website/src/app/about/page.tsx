@@ -7,8 +7,7 @@ import {
 interface ValueItem {
   name: string,
   description: string,
-  icon: React.ElementType,
-}
+  icon: React.ElementType}
 ,
 const values: ValueItem[] = [
   {

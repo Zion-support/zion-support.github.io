@@ -39,7 +39,6 @@ import { Input } from '@/components / ui / input',
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
-,
   Form,
   FormControl,
   FormField,
@@ -75,8 +74,7 @@ export default function ForgotPassword() {
   // Form submission handler,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
-    setSubmitted(true),
-  }
+    setSubmitted(true)}
   };
   return (
     <>,
@@ -168,8 +166,7 @@ export default function ForgotPassword() {
   // Form submission handler,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
-    setSubmitted(true),
-  };
+    setSubmitted(true)};
   return (
     <>,
       <Header />,
@@ -340,8 +337,7 @@ function ForgotPassword() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,
                   We'll help you get back into your account so you can continue your journey in the Zion marketplace.,
                 </p>,
@@ -377,8 +373,7 @@ function ForgotPassword() {
         </div>,
       </div>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,
   Form;
   FormControl;
@@ -401,8 +396,7 @@ export default function ForgotPassword() {
   // Form submission handler,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
-    setSubmitted(true),
-  };
+    setSubmitted(true)};
   return (
     <>,
       <Header />,

@@ -22,7 +22,7 @@ function fixFile(filePath) {
     fixed = fixed.replace(/}\s*{/g, "}, {"),
     if (content !== fixed) {
   fs.writeFileSync(filePath, fixed, "utf8"),
-      // console.log("""Fixed": ${filePath}""),
+      // // console.log("""Fixed": ${filePath}""),
       return true}
     return false} catch (error) {
   console.error(`"Error": ${filePath}`, error.message),
@@ -45,6 +45,6 @@ function processDirectory(dirPath) {
   return fixedCount}
 ,
 const srcDir = path.join(__dirname, "src"),
-// console.log("Final fix..."),
+// // console.log("Final fix..."),
 const totalFixed = processDirectory(srcDir),
-// console.log(""Fixed ${totalFixed} files""),
+// // console.log(""Fixed ${totalFixed} files""),

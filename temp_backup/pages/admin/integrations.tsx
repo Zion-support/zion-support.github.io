@@ -140,8 +140,7 @@ export default function AdminIntegrationsPage() {
         </section>,
       </main>,
       <RulesModal  />,
-    </>),
-}
+    </>)}
 ,
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState(''),

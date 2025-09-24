@@ -116,6 +116,5 @@ export default function RevolutionaryContentShowcase20o25PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

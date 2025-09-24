@@ -504,6 +504,5 @@ export default function IntelligentDocumentProcessingSuite() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -438,5 +438,4 @@ export default function AdvancedAutomationSolutions20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

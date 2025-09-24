@@ -370,6 +370,5 @@ export default function Fortune50o0UltimateBreakthroughPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

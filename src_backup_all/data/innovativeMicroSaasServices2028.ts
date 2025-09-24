@@ -20,15 +20,13 @@ export interface InnovativeMicroSaasService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   aiCapabilities?: string[],
@@ -83,8 +81,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Qiskit", "TensorFlow", "Python", "Quantum Hardware", "Cloud Computing"];
       integrations: ["AWS Braket", "IBM Quantum", "Google Quantum", "Azure Quantum"];
@@ -143,8 +140,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Computer Vision", "Machine Learning", "IoT Sensors", "Edge Computing", "Cloud Platform"];
       integrations: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "MES Systems"];
@@ -203,8 +199,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Cloud Computing", "Edge AI"];
       integrations: ["Epic", "Cerner", "Allscripts", "PACS Systems", "DICOM"];
@@ -263,8 +258,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "Natural Language Processing", "Big Data Analytics", "Real-time Processing"];
       integrations: ["Core Banking Systems", "Payment Gateways", "CRM Systems", "Compliance Tools"];
@@ -323,8 +317,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["IoT Sensors", "Machine Learning", "Big Data Analytics", "Cloud Computing", "Edge Computing"];
       integrations: ["Traffic Systems", "Energy Grids", "Public Safety Systems", "Transportation Networks"];
@@ -383,8 +376,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["IoT Sensors", "Machine Learning", "Computer Vision", "Satellite Imagery", "Cloud Computing"];
       integrations: ["Weather APIs", "Soil Sensors", "Irrigation Systems", "Equipment Manufacturers"];
@@ -443,8 +435,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Natural Language Processing", "Machine Learning", "Document Analysis", "Cloud Computing", "API Integration"];
       integrations: ["Document Management Systems", "CRM Platforms", "E-discovery Tools", "Legal Research Databases"];
@@ -503,8 +494,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Cloud Computing", "Mobile Development"];
       integrations: ["LMS Platforms", "Student Information Systems", "Assessment Tools", "Content Management Systems"];
@@ -563,8 +553,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_20o28: InnovativeMicroSaasService20o
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Big Data Analytics", "Predictive Modeling", "Cloud Computing", "Mobile Development"];
       integrations: ["MLS Systems", "Property Databases", "Financial Data", "Market Data APIs"];

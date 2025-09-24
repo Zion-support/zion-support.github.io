@@ -20,6 +20,5 @@ export default function QuantumStorageSolutions20o44Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

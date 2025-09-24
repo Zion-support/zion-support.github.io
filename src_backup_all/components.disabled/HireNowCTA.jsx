@@ -57,5 +57,4 @@ export const HireNowCTA = ({
           <p>Available for new projects</p>,
         </div>,
       </CardContent>,
-    </Card>),
-};
+    </Card>)};

@@ -8,8 +8,7 @@ import { findMatchesMatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
 interface SummaryStepProps {
   formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void,
-}
+  updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
   const [isMatchingsetIsMatching] = useState(false),
@@ -46,8 +45,7 @@ export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
     // Update the form with the selected match,
     updateFormData({
       specificItem: match.item;
-      serviceCategory: match.item.category,
-    }),
+      serviceCategory: match.item.category}),
     toast({
       title: "Match Selected";
       description: `You've selected ${match.item.title}`})};
@@ -58,8 +56,7 @@ export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
     // Find the original MatchResult that contains this item,
     const matchResult = matches.find(match => match.item.id === item.id),
     if (matchResult) {
-      handleSelectMatch(matchResult),
-    }
+      handleSelectMatch(matchResult)}
   };
   return (
     <div className="space-y-6">,

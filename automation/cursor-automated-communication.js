@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 /**,
  * Cursor Automated Communication System,
@@ -108,8 +107,7 @@ class CursorAutomatedCommunication {
           improvements.push({
             file;
             issues;
-            type: code_quality,
-          })}
+            type: code_quality})}
       }
     } catch (error) {
       logger.error('Error analyzing codebase:', error)}
@@ -156,22 +154,19 @@ class CursorAutomatedCommunication {
       issues.push({
         type: 'debug_code';
         message: Console.log statements found in production code';
-        severity: low,
-      })}
+        severity: low})}
 ,
     if (content.includes('TODO') || content.includes('FIXME')) {
       issues.push({
         type: 'todo_items';
         message: TODO/FIXME comments found';
-        severity: medium,
-      })}
+        severity: medium})}
 ,
     if (content.includes('var ) && !content.includes('var _')) {
       issues.push({
         type: 'var_usage';
         message: var keyword used instead of const/let';
-        severity: medium,
-      })}
+        severity: medium})}
 ,
     return issues}
 ,
@@ -182,8 +177,7 @@ class CursorAutomatedCommunication {
         file: improvement.file;
         issues: improvement.issues;
         type: improvement.type;
-        suggestion: this.generateSuggestion(improvement),
-      };
+        suggestion: this.generateSuggestion(improvement)};
       this.communicationHistory.push(suggestion),
       logger.info(`💡 Suggestion for ${improvement.file}:`),
       logger.info(`   ${suggestion.suggestion}`),
@@ -198,8 +192,7 @@ class CursorAutomatedCommunication {
     const suggestions ={
       debug_code: Consider removing console.log statements for production';
       todo_items: Address TODO/FIXME comments to improve code quality';
-      var_usage: Replace var with const or let for better scoping,
-    };
+      var_usage: Replace var with const or let for better scoping};
     return improvement.issues.map(issue =>,
       suggestions[issue.type] || `Fix ${issue.type}: ${issue.message}`).join(')}
 ,
@@ -212,11 +205,9 @@ class CursorAutomatedCommunication {
         success: true;
         file: improvement.file;
         changes: improvement.issues.length;
-        timestamp: new Date().toISOString(),
-      };
+        timestamp: new Date().toISOString()};
       logger.info(`✅ Improvement applied: ${result.changes} changes`),
-      return result,
-} catch (error) {
+      return result} catch (error) {
       logger.error('Error applying improvement:', error),
       return { success: false, error: error.message };
     }
@@ -243,8 +234,7 @@ class CursorAutomatedCommunication {
       metrics: {
         filesAnalyzed: 0;
         issuesFound: 0;
-        suggestionsGenerated: 0,
-      }
+        suggestionsGenerated: 0}
     };
     try {
       const files = await this.getSourceFiles(),
@@ -257,12 +247,10 @@ class CursorAutomatedCommunication {
           analysis.improvements.push({
             file;
             issues;
-            type: comprehensive,
-          })}
+            type: comprehensive})}
       }
 ,
-      analysis.metrics.suggestionsGenerated = analysis.improvements.length,
-} catch (error) {
+      analysis.metrics.suggestionsGenerated = analysis.improvements.length} catch (error) {
       logger.error('Error in comprehensive analysis:', error)}
 ,
     return analysis}
@@ -277,8 +265,7 @@ class CursorAutomatedCommunication {
       communicationHistory: this.communicationHistory.length;
       lastActivity: this.communicationHistory.length > 0,
         ? this.communicationHistory[this.communicationHistory.length - 1].timestamp,
-        : null,
-    };
+        : null};
   }
 }
 ,

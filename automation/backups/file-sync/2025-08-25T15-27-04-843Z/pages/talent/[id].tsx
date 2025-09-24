@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom',
 interface TalentProfile {
   full_name: string,
   skills?: string[],
-  availability_type?: string,
-}
+  availability_type?: string}
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string string>}
 // Simple error component to replace Next.js ErrorPage,
@@ -45,8 +44,7 @@ const TalentProfilePage: React.FC = () => {
             availability_type: 'Full-time';
             social: {
               linkedin: 'https://linkedin.com/in/talent';
-              github: 'https://github.com/talent',
-            }
+              github: 'https://github.com/talent'}
           };
           setProfile(mockProfile),
           setLoading(false)}, 10o00)} catch (err) {

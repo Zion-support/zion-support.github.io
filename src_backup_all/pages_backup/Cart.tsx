@@ -160,11 +160,9 @@ export default function CartPage() {
             </div>,
           </motion.div>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
-      const sessionId = data && data.sessionId as string | undefined,
-}
+      const sessionId = data && data.sessionId as string | undefined}
 export default function CartPage(function CartPage(function CartPage() {): any {): any {}; const { items, dispatch } = useCart(), const { user } = useAuth(), const [hydrated, setHydrated] = useState(false), useEffect(() => {}; setHydrated(true)}, []), if(!hydrated) return null, dispatch({ type: 'SET_ITEMS', payload: updated })}}; if(items.length === 0) {}; return() <div className="container py-10 text-center">"""," <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" / /  />"," <p>Your cart is empty</p>"""," <Button asChild className="mt-4">"""," <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>)};" "," return("""," <div className="container max-w-2xl py-10">"""," <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>"""," <ul className="space-y-4"> {items.map(item => ( <CartItemComponent key={item.id}; item={item}; onRemove={removeItem}; onUpdateQuantity={updateQuantity};  />," ))}"," </ul>"""," <div className="flex justify-between mt-6 font-semibold"> <span>Subtotal</span> <span>${subtotal.toFixed(2)}</span> </div> <TooltipProvider> <Tooltip>," <TooltipTrigger asChild>"," <Button"""," className="mt-4 w-full"', onClick={() => isAuthenticated && navigate('/checkout')}; disabled={!isAuthenticated}; >, Checkout </Button> </TooltipTrigger> {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>," )}"," '""","}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">,
@@ -183,15 +181,12 @@ export default function CartPage(function CartPage(function CartPage() {): any {
         <div className="grid lg: grid-cols-3 gap-8">,
           {/* Cart Items */}
           <motion.div,
-            className="lg: col-span-2 space-y-4",
-  };
+            className="lg: col-span-2 space-y-4"};
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
   const tax = subtotal * 0.08, // 8% tax estimate,
   // Only add shipping for physical items,
   const hasPhysicalItems = items.some(item =>,
     !item.type || item.type === 'physical' // Default to physical if type not specified);
   const shipping = hasPhysicalItems && subtotal <= 10o0 ? 15 : 0,
-  const total = subtotal + tax + shipping,
-}
-,
+  const total = subtotal + tax + shipping}
 ,

@@ -7,8 +7,7 @@ interface VirtualScrollProps<T> {
   renderItem: (item: T, index: number) => React.ReactNode,
   overscan?: number,
   className?: string,
-  onScroll?: (scrollTop: number) => void,
-}
+  onScroll?: (scrollTop: number) => void}
 ,
 export function VirtualScroll<T>({
   items;
@@ -36,14 +35,12 @@ export function VirtualScroll<T>({
   const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
     const newScrollTop = event.currentTarget.scrollTop,
     setScrollTop(newScrollTop),
-    onScroll?.(newScrollTop),
-  }, [onScroll]),
+    onScroll?.(newScrollTop)}, [onScroll]),
   // Scroll to specific item,
   const scrollToItem = useCallback((index: number) => {
     if (containerRef.current) {
       const scrollTop = index * itemHeight,
-      containerRef.current.scrollTop = scrollTop,
-    }
+      containerRef.current.scrollTop = scrollTop}
   }, [itemHeight]),
   // Scroll to top,
   const scrollToTop = useCallback(() => {
@@ -107,15 +104,13 @@ interface ServiceCard {
   name: string,
   description: string,
   category: string,
-  icon?: string,
-}
+  icon?: string}
 ,
 interface ServiceVirtualScrollProps {
   services: ServiceCard[],
   height?: number,
   onServiceClick?: (service: ServiceCard) => void,
-  className?: string,
-}
+  className?: string}
 ,
 export function ServiceVirtualScroll({
   services;

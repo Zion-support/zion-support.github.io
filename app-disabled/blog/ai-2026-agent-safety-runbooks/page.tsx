@@ -76,6 +76,5 @@ export default function AgentSafetyRunbooksPage() {
           Observability Blueprint,
         </Link>,
       </nav>,
-    </main>),
-}
+    </main>)}
 ,

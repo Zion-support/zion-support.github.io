@@ -86,6 +86,5 @@ export default function LatestContentShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

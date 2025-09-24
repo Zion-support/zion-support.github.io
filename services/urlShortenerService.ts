@@ -1,7 +1,6 @@
 
 export interface ShortUrl {
 export interface ShortUrl {
-,
   id: string,
   originalUrl: string,
   shortCode: string,
@@ -14,8 +13,7 @@ export interface ShortUrl {
   created_at: Date,
   expires_at?: Date,
   is_active: boolean;
-  user_id?: string,
-}
+  user_id?: string}
 ,
   totalClicks: number,
   uniqueVisitors: number,
@@ -24,8 +22,7 @@ export interface ShortUrl {
   devices: string[],
   browsers: string[],
   last_clicked: Date;
-  click_history: ClickEvent[],
-}
+  click_history: ClickEvent[]}
 ,
   id: string,
   timestamp: Date,
@@ -37,16 +34,13 @@ export interface ShortUrl {
   device: string,
     const shortCode = request && request.customCode || this && this.generateShortCode();
     if (this && this.urls.has(shortCode)) {
-  os: string,
-}
+  os: string}
 ,
 export interface CreateShortUrlRequest {
 export interface CreateShortUrlRequest {
-,
   originalUrl: string,
   customCode?: string,
-      throw new Error('Short code already exists'),
-    }
+      throw new Error('Short code already exists')}
     const shortUrl: ShortUrl = {
       id: this && this.generateId(),
       originalUrl: request && request.originalUrl,
@@ -55,15 +49,13 @@ export interface CreateShortUrlRequest {
       createdAt: new Date(),
       expiresAt: request && request.expiresAt,
       isActive: true;
-      userId: request && request.userId,
-    };
+      userId: request && request.userId};
     this && this.urls.set(shortCode, shortUrl),
     this && this.analytics.set(shortCode, {
       totalClicks: 0,
       uniqueVisitors: 0,
   browser: string;
-  os: string,
-}
+  os: string}
 export interface CreateShortUrlRequest {
   original_url: string,
   custom_code?: string,
@@ -86,8 +78,7 @@ class UrlShortenerService {
       created_at: new Date (),
       expires_at: request.expires_at,
       is_active: true;
-      user_id: request.user_id,
-    }
+      user_id: request.user_id}
 ,
     this.urls.set (short_code, short_url),
     this.analytics.set (short_code, {
@@ -122,8 +113,7 @@ export interface UrlAnalytics {
   devices: string[];
   browsers: string[];
   lastClicked: Date;
-  clickHistory: ClickEvent[],
-}
+  clickHistory: ClickEvent[]}
 ,
 export interface ClickEvent {
   id: string;
@@ -135,8 +125,7 @@ export interface ClickEvent {
   city: string;
   device: string;
   browser: string;
-  os: string,
-}
+  os: string}
 ,
 export interface CreateShortUrlRequest {
   originalUrl: string;
@@ -161,8 +150,7 @@ class UrlShortenerService {
       createdAt: new Date();
       expiresAt: request.expiresAt;
       isActive: true;
-      userId: request.userId,
-    };
+      userId: request.userId};
     this.urls.set(shortCode, shortUrl);
     this.analytics.set(shortCode, {
       totalClicks: 0;
@@ -172,8 +160,7 @@ class UrlShortenerService {
       devices: [];
       browsers: [];
       lastClicked: new Date();
-      clickHistory: [],
-    });
+      clickHistory: []});
     this.clicks.set(shortCode, []);
     return shortUrl}
 ,
@@ -182,8 +169,7 @@ class UrlShortenerService {
     if (!url || !url.isActive) return null;
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = false;
-      return null,
-}
+      return null}
     return url}
 }
     return url}
@@ -193,8 +179,7 @@ class UrlShortenerService {
     if (!url) return,
     const clickEvent: ClickEvent = {
       id: this.generateId(),
-      ...clickData,
-    }
+      ...clickData}
     const urlClicks = this.clicks.get(shortCode) |[],
     urlClicks.push(clickEvent),
     this.clicks.set(shortCode, urlClicks),
@@ -218,8 +203,7 @@ class UrlShortenerService {
       analytics.totalClicks++;
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
-        analytics.referrers.push(clickData.referrer),
-}
+        analytics.referrers.push(clickData.referrer)}
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)}
       if (!analytics && analytics.devices.includes(clickData && clickData.device)) {
@@ -229,11 +213,9 @@ class UrlShortenerService {
     }
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
-    return this && this.analytics.get(shortCode) || null,
-  }
+    return this && this.analytics.get(shortCode) || null}
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
-    return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId),
-  }
+    return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)}
 ,
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     const url = this && this.urls.get(shortCode),
@@ -262,8 +244,7 @@ class UrlShortenerService {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0, i < 6, i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length)),
-}
+      result += chars.charAt(Math.floor(Math.random() * chars.length))}
     return result}
   private generateId(): string {
     return Math.random().toString(36).substr(2, 9)}
@@ -302,11 +283,9 @@ if ( {) {
     }
   }
   async get_analytics (short_code: string): Promise < UrlAnalytics | null> {
-    return this.analytics.get (short_code) || null,
-  }
+    return this.analytics.get (short_code) || null}
   async getUserUrls (user_id: string): Promise < ShortUrl[]> {
-    return Array.from (this.urls.values ()).filter (url => url.user_id === user_id),
-  }
+    return Array.from (this.urls.values ()).filter (url => url.user_id === user_id)}
   async deactivate_url (short_code: string, user_id?: string): Promise < boolean> {
     const url = this.urls.get (short_code),
     if () return false) {
@@ -331,8 +310,7 @@ if ( {) {
     return {
       urls: Array && Array.from(this && this.urls.entries()),
       analytics: Array && Array.from(this && this.analytics.entries());
-      clicks: Array && Array.from(this && this.clicks.entries()),
-    }
+      clicks: Array && Array.from(this && this.clicks.entries())}
   }
   async importData(data: any): Promise<void> {
     this && this.urls = new Map(data && data.urls),
@@ -340,14 +318,12 @@ if ( {) {
     this && this.clicks = new Map(data && data.clicks)}
 }
 export const urlShortenerService = new UrlShortenerService(),
-,
   // Utility methods for data persistence (in a real app, this would use a database),
   async export_data (): Promise < any> {
     return {
       urls: Array.from (this.urls.entries ()),
       analytics: Array.from (this.analytics.entries ());
-      clicks: Array.from (this.clicks.entries ()),
-    }
+      clicks: Array.from (this.clicks.entries ())}
   }
   async import_data (data: any): Promise < void> {
     this.urls = new Map (data.urls),
@@ -355,5 +331,4 @@ export const urlShortenerService = new UrlShortenerService(),
     this.clicks = new Map (data.clicks)}
 }
 export const urlShortenerService = new UrlShortenerService (),
-,
 export const urlShortenerService = new UrlShortenerService()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

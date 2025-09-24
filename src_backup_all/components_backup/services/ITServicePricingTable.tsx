@@ -17,8 +17,7 @@ export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing,
-    direction: 'ascending' | 'descending',
-  }>({
+    direction: 'ascending' | 'descending'}>({
     key: 'country';
     direction: 'ascending';
   }),

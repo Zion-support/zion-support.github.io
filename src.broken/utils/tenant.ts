@@ -4,8 +4,7 @@ export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer',
 export interface TenantMember {
   userId: string,
   email: string,
-  role: TenantRole,
-}
+  role: TenantRole}
 ,
 export interface TenantBranding {
   name: string,
@@ -13,8 +12,7 @@ export interface TenantBranding {
   primaryColor?: string,
   secondaryColor?: string,
   coBranding?: boolean,
-  tagline?: string,
-}
+  tagline?: string}
 ,
 export interface Tenant {
   id: string,
@@ -22,12 +20,10 @@ export interface Tenant {
   branding: TenantBranding,
   members: TenantMember[],
   createdAt: string,
-  updatedAt: string,
-}
+  updatedAt: string}
 ,
 export interface TenantsFile {
-  tenants: Tenant[],
-}
+  tenants: Tenant[]}
 ,
 const FILE = 'tenants.json',
 const FALLBACK: TenantsFile = { tenants: [] };
@@ -36,12 +32,10 @@ export function getTenants(): Tenant[] {
   return data.tenants}
 ,
 export function getTenantById(tenantId: string): Tenant | undefined {
-  return getTenants().find(t => t.id === tenantId),
-}
+  return getTenants().find(t => t.id === tenantId)}
 ,
 export function getTenantByApiKey(apiKey: string): Tenant | undefined {
-  return getTenants().find(t => t.apiKey === apiKey),
-}
+  return getTenants().find(t => t.apiKey === apiKey)}
 ,
 export function createTenant(branding: TenantBranding): Tenant {
   const now = new Date().toISOString(),

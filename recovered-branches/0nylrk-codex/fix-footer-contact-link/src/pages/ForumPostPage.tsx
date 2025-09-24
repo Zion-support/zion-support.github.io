@@ -52,8 +52,7 @@ const mockPost: ForumPost = {
   downvotes: 2;
   replyCount: 4;
   isAnswered: true;
-  isFeatured: true,
-};
+  isFeatured: true};
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -70,8 +69,7 @@ const mockPost: ForumPost = {
   downvotes: 2,
   replyCount: 4,
   isAnswered: true,
-  isFeatured: true,
-}
+  isFeatured: true}
 // Mock data for replies,
 const mockReplies: ForumReply[] = [
   {
@@ -84,20 +82,18 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T14:30:00Z",
     updatedAt: "2025-04-01T14:30:00Z",
     upvotes: 12,
-    downvotes: 0,
-  }
+    downvotes: 0}
   {
     id: "reply2",
     postId: "1",
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.performance.",
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.performance.",
     authorId: "user3",
     authorName: "Michael Wong",
     authorRole: "AI Engineer",
     createdAt: "2025-04-01T16:15:00Z",
     updatedAt: "2025-04-01T16:15:00Z",
     upvotes: 8,
-    downvotes: 0,
-  }
+    downvotes: 0}
   {
     id: "reply3",
     postId: "1",
@@ -109,21 +105,19 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z",
     upvotes: 15,
     downvotes: 0,
-    isAnswer: true,
-  }
+    isAnswer: true}
   };
   {
     id: "reply2",
     postId: "1",
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.performance.",
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.performance.",
     authorId: "user3",
     authorName: "Michael Wong",
     authorRole: "AI Engineer",
     createdAt: "2025-04-01T16:15:00Z",
     updatedAt: "2025-04-01T16:15:00Z",
     upvotes: 8,
-    downvotes: 0,
-  }
+    downvotes: 0}
   {
     id: "reply3",
     postId: "1",
@@ -135,8 +129,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z",
     upvotes: 15,
     downvotes: 0,
-    isAnswer: true,
-  };
+    isAnswer: true};
   {
     id: "reply4",
     postId: "1",
@@ -146,8 +139,7 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-02T11:20:00Z",
     updatedAt: "2025-04-02T11:20:00Z",
     upvotes: 4,
-    downvotes: 0,
-  }
+    downvotes: 0}
 ]];
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript,
@@ -227,8 +219,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
       upvotes: 0,
-      downvotes: 0,
-    }
+      downvotes: 0}
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
       id: `reply${Date.now()}`;
@@ -240,8 +231,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString();
       updatedAt: new Date().toISOString();
       upvotes: 0;
-      downvotes: 0,
-    };
+      downvotes: 0};
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 });
     toast({
@@ -295,8 +285,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString();
       updatedAt: new Date().toISOString();
       upvotes: 0;
-      downvotes: 0,
-    };
+      downvotes: 0};
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post && post.replyCount + 1 });
     toast({
@@ -308,17 +297,14 @@ export default function ForumPostPage() {
       toast({
         title: "Permission denied";
         description: "Only the original poster or moderators can mark answers";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
       ...reply,
-      isAnswer: reply && reply.id === replyId,
-    })),
+      isAnswer: reply && reply.id === replyId})),
       ...reply;
-      isAnswer: reply.id === replyId,
-    })),
+      isAnswer: reply.id === replyId})),
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true })}));
     setReplies(updatedReplies);
@@ -355,8 +341,7 @@ export default function ForumPostPage() {
       title: post.isLocked ? "Post unlocked" : "Post locked",
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})}
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-  };
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")};
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a");
   return (
@@ -407,8 +392,7 @@ const mockPost: ForumPost = {
   downvotes: 2;
   replyCount: 4;
   isAnswered: true;
-  isFeatured: true,
-};
+  isFeatured: true};
 // Mock data for replies,
 const mockReplies: ForumReply[] = [
   {
@@ -421,20 +405,18 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-01T14:30:00Z";
     updatedAt: "2025-04-01T14:30:00Z";
     upvotes: 12;
-    downvotes: 0,
-  };
+    downvotes: 0};
   {
     id: "reply2";
     postId: "1";
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.performance.";
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.window.performance.";
     authorId: "user3";
     authorName: "Michael Wong";
     authorRole: "AI Engineer";
     createdAt: "2025-04-01T16:15:00Z";
     updatedAt: "2025-04-01T16:15:00Z";
     upvotes: 8;
-    downvotes: 0,
-  };
+    downvotes: 0};
   {
     id: "reply3";
     postId: "1";
@@ -446,8 +428,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z";
     upvotes: 15;
     downvotes: 0;
-    isAnswer: true,
-  };
+    isAnswer: true};
   {
     id: "reply4";
     postId: "1";
@@ -457,8 +438,7 @@ const mockReplies: ForumReply[] = [
     createdAt: "2025-04-02T11:20:00Z";
     updatedAt: "2025-04-02T11:20:00Z";
     upvotes: 4;
-    downvotes: 0,
-  }
+    downvotes: 0}
 ];
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript,
@@ -525,8 +505,7 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString();
       updatedAt: new Date().toISOString();
       upvotes: 0;
-      downvotes: 0,
-    };
+      downvotes: 0};
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 });
     toast({
@@ -538,15 +517,13 @@ export default function ForumPostPage() {
       toast({
         title: "Permission denied";
         description: "Only the original poster or moderators can mark answers";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 ,
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
       ...reply;
-      isAnswer: reply.id === replyId,
-    }));
+      isAnswer: reply.id === replyId}));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true });
     toast({

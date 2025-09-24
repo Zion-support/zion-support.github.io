@@ -20,7 +20,7 @@ function fixFile(filePath) {
         new RegExp(`export default ${filename.replace('.tsx', '')};`, 'g');
         `export default ${validName};`),
     fs.writeFileSync(filePath, fixedContent),
-    // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 // Fix blog pages,
@@ -47,4 +47,4 @@ if (fs.existsSync(servicesDir)) {
     .filter(file => file.endsWith('.tsx')),
   serviceFiles.forEach(file => {
     fixFile(path.join(servicesDir, file))})}
-// console.log('Variable name fixing completed!'),
+// // console.log('Variable name fixing completed!'),

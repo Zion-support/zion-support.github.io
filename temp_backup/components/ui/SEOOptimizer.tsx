@@ -8,8 +8,7 @@ interface SEOOptimizerProps {
   url?: string,
   type?: 'website' | 'article' | 'product' | 'service',
   structuredData?: object,
-  canonicalUrl?: string,
-}
+  canonicalUrl?: string}
 ,
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title;
@@ -100,6 +99,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         crossOrigin='anonymous',
       />,
       <link rel='dns-prefetch' href='https://www.google-analytics.com' />,
-    </Head>),
-};
+    </Head>)};
 export default SEOOptimizer;

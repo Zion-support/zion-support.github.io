@@ -463,6 +463,5 @@ export default function ServicesShowcase20o28() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o28 />,
-    </>),
-}
+    </>)}
 ,

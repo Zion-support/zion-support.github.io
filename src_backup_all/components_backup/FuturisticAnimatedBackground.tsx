@@ -7,8 +7,7 @@ interface Particle {
   vy: number,
   size: number,
   opacity: number,
-  color: string,
-}
+  color: string}
 ,
 interface FuturisticAnimatedBackgroundProps {
   variant?: 'default' | 'minimal' | 'intense',
@@ -188,8 +187,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             transition={{
               duration: 8;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl",
@@ -199,8 +197,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
             transition={{
               duration: 10;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>)}
     </div>)};

@@ -12,8 +12,7 @@ interface NavigationItem {
   featured?: boolean,
   metrics?: {
     count?: number,
-    roi?: string,
-  };
+    roi?: string};
 }
 ,
 const EnhancedNavigation: React.FC = () => {
@@ -107,12 +106,10 @@ const EnhancedNavigation: React.FC = () => {
   ],
   const isActive = (href: string) => {
     if (href === '/') {
-      return pathname === '/',
-    }
+      return pathname === '/'}
     return pathname.startsWith(href)};
   const handleDropdownToggle = (itemId: string) => {
-    setActiveDropdown(activeDropdown === itemId ? null : itemId),
-  };
+    setActiveDropdown(activeDropdown === itemId ? null : itemId)};
   const handleLinkClick = () => {
     setIsOpen(false),
     setActiveDropdown(null)};
@@ -122,8 +119,7 @@ const EnhancedNavigation: React.FC = () => {
         isOpen &&,
         !(event.target as Element).closest('.navigation-container')) {
         setIsOpen(false),
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [isOpen]),
@@ -155,8 +151,7 @@ const EnhancedNavigation: React.FC = () => {
                       className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         isActive(item.href) || activeDropdown === item.id,
                           ? 'text-blue-60o0 bg-blue-50',
-                          : 'text-gray-70o0 hover: text-blue-60o0 hover:bg-gray-50',
-                      }`}
+                          : 'text-gray-70o0 hover: text-blue-60o0 hover:bg-gray-50'}`}
                     >,
                       <span>{item.icon}</span>,
                       <span>{item.label}</span>,
@@ -224,8 +219,7 @@ const EnhancedNavigation: React.FC = () => {
                     className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       isActive(item.href),
                         ? 'text-blue-60o0 bg-blue-50',
-                        : 'text-gray-70o0 hover: text-blue-60o0 hover:bg-gray-50',
-                    }`}
+                        : 'text-gray-70o0 hover: text-blue-60o0 hover:bg-gray-50'}`}
                   >,
                     <span>{item.icon}</span>,
                     <span>{item.label}</span>,

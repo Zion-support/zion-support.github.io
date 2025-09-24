@@ -15,5 +15,4 @@ export default function [roomId]Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

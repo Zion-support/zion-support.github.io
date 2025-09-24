@@ -385,8 +385,7 @@ export default function Futuristic20o29ServicesShowcase() {
         </section>,
         <UltraFuturisticFooter20o28 />,
       </div>,
-    </>),
-}
+    </>)}
 ,
 // Add missing icon component,
 const CheckCircle = ({ className }: { className?: string }) => (

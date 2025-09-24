@@ -91,8 +91,7 @@ class ErrorBoundary extends Component {
               </a>,
             </div>,
           </div>,
-        </div>),
-    }
+        </div>)}
 ,
     return this.props.children}
 }

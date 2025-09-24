@@ -109,6 +109,5 @@ const AutonomousCustomerSupportBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AutonomousCustomerSupportBlueprint20o26;

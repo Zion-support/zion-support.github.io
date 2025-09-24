@@ -11,8 +11,7 @@ interface AIService {
   contactLink: string,
   icon: string,
   features: string[],
-  integration: string[],
-}
+  integration: string[]}
 ,
 export default function AISolutionsPage() {
   const [services] = useState<AIService[]>([]),

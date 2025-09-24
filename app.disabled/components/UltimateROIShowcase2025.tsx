@@ -15,8 +15,7 @@ const UltimateROIShowcase20o25 = () => {
       description: 'Direct brain-computer integration delivering unprecedented business results';
       url: '/blog/ai-20o25-neural-interface-revolution-ultimate-breakthrough';
       gradient: 'from-purple-60o0 via-blue-60o0 to-indigo-60o0';
-      icon: '🧠',
-    };
+      icon: '🧠'};
     {
       id: 'autonomous-enterprise-roi';
       title: 'Autonomous Enterprise Transformation';
@@ -27,8 +26,7 @@ const UltimateROIShowcase20o25 = () => {
       description: 'Self-managing AI systems achieving extraordinary operational excellence';
       url: '/case-studies/ai-20o25-autonomous-enterprise-transformation-ultimate-success';
       gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0';
-      icon: '🤖',
-    };
+      icon: '🤖'};
     {
       id: 'quantum-computing-roi';
       title: 'Quantum Computing Revolution';
@@ -39,8 +37,7 @@ const UltimateROIShowcase20o25 = () => {
       description: 'Quantum-enhanced AI delivering breakthrough computational capabilities';
       url: '/blog/ai-20o25-quantum-computing-business-revolution';
       gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0';
-      icon: '⚛️',
-    };
+      icon: '⚛️'};
     {
       id: 'enterprise-automation-roi';
       title: 'Enterprise Automation Success';
@@ -51,8 +48,7 @@ const UltimateROIShowcase20o25 = () => {
       description: 'Autonomous AI systems revolutionizing enterprise operations';
       url: '/case-studies/ai-20o25-enterprise-automation-ultimate-success-story';
       gradient: 'from-indigo-60o0 via-purple-60o0 to-pink-60o0';
-      icon: '🚀',
-    }
+      icon: '🚀'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -200,8 +196,7 @@ const UltimateROIShowcase20o25 = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentIndex,
                     ? 'bg-blue-60o0 scale-125',
-                    : 'bg-gray-30o0 hover: bg-gray-40o0',
-                }`}
+                    : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
               />))}
           </div>,
           <div className="text-sm text-gray-50o0">,
@@ -223,8 +218,7 @@ const UltimateROIShowcase20o25 = () => {
             <div
               key={showcase.id}
               className={`bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-all duration-30o0 cursor-pointer transform hover:scale-10o5 border-2 ${
-                index === currentIndex ? 'border-blue-50o0' : 'border-gray-10o0',
-              }`}
+                index === currentIndex ? 'border-blue-50o0' : 'border-gray-10o0'}`}
               onClick={() => setCurrentIndex(index)}
             >,
               <div className="text-center">,

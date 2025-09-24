@@ -1,7 +1,6 @@
 // comment,
 export class jobServiceService {
   constructor() {
-,
     this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"}
   async get() {
     try {

@@ -33,8 +33,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     element: element;
                     fixable: true;
                     suggestion: 'Add relevant content or remove empty element';
-                    impact: 'seo',
-                }),
+                    impact: 'seo'}),
                 seoScore -= 10,
                 engagementScore -= 10}
             // Check for very short content,
@@ -48,8 +47,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     element: element;
                     fixable: true;
                     suggestion: 'Expand content to provide more value to users';
-                    impact: 'engagement',
-                }),
+                    impact: 'engagement'}),
                 engagementScore -= 5,
                 seoScore -= 3}
             // Check for very long paragraphs (hard to read),
@@ -63,8 +61,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     element: element;
                     fixable: true;
                     suggestion: 'Break into smaller paragraphs for better readability';
-                    impact: 'readability',
-                }),
+                    impact: 'readability'}),
                 readabilityScore -= 5,
                 engagementScore -= 3}
             // Check for proper heading structure,
@@ -83,8 +80,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             element: element;
                             fixable: true;
                             suggestion: 'Ensure heading levels follow logical sequence';
-                            impact: 'accessibility',
-                        }),
+                            impact: 'accessibility'}),
                         seoScore -= 3}
                 }
             }
@@ -106,8 +102,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             element: element;
                             fixable: true;
                             suggestion: 'Reduce keyword density for more natural content';
-                            impact: 'seo',
-                        }),
+                            impact: 'seo'}),
                         seoScore -= 5}
                 }
             }),
@@ -124,8 +119,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         element: element;
                         fixable: true;
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display';
-                        impact: 'seo',
-                    }),
+                        impact: 'seo'}),
                     seoScore -= 5}
                 else if (content.length > 160) {
                     issues.push({
@@ -137,8 +131,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         element: element;
                         fixable: true;
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display';
-                        impact: 'seo',
-                    }),
+                        impact: 'seo'}),
                     seoScore -= 2}
             }
             // Check for broken links,
@@ -154,8 +147,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         element: element;
                         fixable: true;
                         suggestion: 'Ensure link points to valid URL or page section';
-                        impact: 'engagement',
-                    }),
+                        impact: 'engagement'}),
                     engagementScore -= 3}
             }
             // Check for images without alt text,
@@ -171,8 +163,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         element: element;
                         fixable: true;
                         suggestion: 'Add descriptive alt text for better accessibility and SEO';
-                        impact: 'accessibility',
-                    }),
+                        impact: 'accessibility'}),
                     seoScore -= 8,
                     engagementScore -= 5}
             }
@@ -186,8 +177,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 description: 'Consider adding more content to improve SEO and user engagement';
                 priority: 'high';
                 implementation: 'Add relevant sections, expand existing content, include more examples';
-                expectedImpact: 15,
-            })}
+                expectedImpact: 15})}
         if (readabilityScore < 80) {
             suggestions.push({
                 id: 'improve-readability';
@@ -196,8 +186,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 description: 'Content could be more readable for better user experience';
                 priority: 'medium';
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language';
-                expectedImpact: 12,
-            })}
+                expectedImpact: 12})}
         if (seoScore < 80) {
             suggestions.push({
                 id: 'seo-optimization';
@@ -206,8 +195,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 description: 'Several SEO improvements could boost search visibility';
                 priority: 'high';
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure';
-                expectedImpact: 20,
-            })}
+                expectedImpact: 20})}
         if (engagementScore < 80) {
             suggestions.push({
                 id: 'engagement-improvement';
@@ -216,8 +204,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 description: 'Content could be more engaging for visitors';
                 priority: 'medium';
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action';
-                expectedImpact: 10,
-            })}
+                expectedImpact: 10})}
         // Calculate overall score,
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3),
         const analysisResult ={
@@ -298,16 +285,14 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             return 'bg-green-10o0 dark: bg-green-90o0/20',
         if (score >= 60),
             return 'bg-yellow-10o0 dark:bg-yellow-90o0/20',
-        return 'bg-red-10o0 dark:bg-red-90o0/20',
-    };
+        return 'bg-red-10o0 dark:bg-red-90o0/20'};
     // Get severity color,
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'high': return 'text-red-60o0 bg-red-10o0 dark: bg-red-90o0/30',
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/30',
             case 'low': return 'text-blue-60o0 bg-blue-10o0 dark:bg-blue-90o0/30',
-            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30',
-        }
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30'}
     };
     // Get priority color,
     const getPriorityColor = (priority) => {
@@ -315,8 +300,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             case 'high': return 'text-red-60o0 bg-red-10o0 dark: bg-red-90o0/30',
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/30',
             case 'low': return 'text-blue-60o0 bg-blue-10o0 dark:bg-blue-90o0/30',
-            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30',
-        }
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/30'}
     };
     return (<>,
       {/* Content Quality Toggle Button */}
@@ -538,8 +522,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           outline: 3px solid #8b5cf6 !important,
           outline-offset: 2px !important,
           background-color: rgba(139, 92, 246, 0.1) !important,
-          transition: all 0.3s ease !important,
-        }
+          transition: all 0.3s ease !important}
       `}</style>,
     </>)};
 export default ContentQualityEnhancer;

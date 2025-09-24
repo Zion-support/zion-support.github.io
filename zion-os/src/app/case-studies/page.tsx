@@ -467,6 +467,5 @@ export default function CaseStudiesPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

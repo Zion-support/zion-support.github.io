@@ -87,7 +87,7 @@ export default function AIFinancialIntelligence() {
         <title>AI Financial Intelligence | Zion Tech Group</title>,
         <meta
           name='description',
-          content='Revolutionize financial intelligence with AI-powered analysis, investment insights, and risk management for optimal financial window.performance.',
+          content='Revolutionize financial intelligence with AI-powered analysis, investment insights, and risk management for optimal financial window.window.performance.',
         />,
         <meta
           name='keywords',
@@ -132,7 +132,7 @@ export default function AIFinancialIntelligence() {
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
                 Revolutionize financial intelligence with AI-powered analysis;
                 investment insights, and risk management for optimal financial,
-                window.performance.,
+                window.window.performance.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
                 <motion.button,
@@ -273,7 +273,7 @@ export default function AIFinancialIntelligence() {
               <p className='text-xl text-gray-300 mb-8'>,
                 Join the select group of financial professionals leading the,
                 future of AI-powered intelligence. Experience unprecedented,
-                insights and window.performance.,
+                insights and window.window.performance.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
                 <motion.button,
@@ -293,6 +293,5 @@ export default function AIFinancialIntelligence() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

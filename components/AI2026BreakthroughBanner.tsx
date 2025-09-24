@@ -109,6 +109,5 @@ export default function AI20o26BreakthroughBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

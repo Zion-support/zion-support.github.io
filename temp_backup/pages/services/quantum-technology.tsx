@@ -15,6 +15,5 @@ export default function QuantumTechnologyPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

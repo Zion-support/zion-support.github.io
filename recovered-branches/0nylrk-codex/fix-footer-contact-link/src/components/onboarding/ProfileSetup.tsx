@@ -21,8 +21,7 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>,
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void,
-  userType: string,
-}
+  userType: string}
 ,
 export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
@@ -40,8 +39,7 @@ export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
       case "client":,
         return "Client",
       default: ,
-        return "User",
-    }
+        return "User"}
   };
   return (
     <div className="space-y-6">,
@@ -121,6 +119,5 @@ export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
           </Button>,
         </form>,
       </Form>,
-    </div>),
-}
+    </div>)}
 ,

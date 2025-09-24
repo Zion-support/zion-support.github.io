@@ -224,33 +224,29 @@ export const accessibilityStyles = `,
     --accent: 0 0% 10o0%,
     --border: 0 0% 10o0%,
     --input: 0 0% 10o0%,
-    --ring: 0 0% 10o0%,
-  }
+    --ring: 0 0% 10o0%}
 ,
   /* Large Text Mode */,
   .large-text {
     font-size: 1.2em,
-    line-height: 1.6,
-  }
+    line-height: 1.6}
 ,
-  .large-text h1 { font-size: 2.5em, }
-  .large-text h2 { font-size: 2em, }
-  .large-text h3 { font-size: 1.75em, }
-  .large-text p { font-size: 1.2em, }
+  .large-text h1 { font-size: 2.5em}
+  .large-text h2 { font-size: 2em}
+  .large-text h3 { font-size: 1.75em}
+  .large-text p { font-size: 1.2em}
 ,
   /* Reduced Motion */,
   .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
     animation-duration: 0.0o1ms !important,
     animation-iteration-count: 1 !important,
     transition-duration: 0.0o1ms !important,
-    scroll-behavior: auto !important,
-  }
+    scroll-behavior: auto !important}
 ,
   /* Focus Indicator */,
   .focus-visible: focus {
     outline: 3px solid hsl(var(--ring)),
-    outline-offset: 2px,
-  }
+    outline-offset: 2px}
 ,
   /* Screen Reader Only */,
   .sr-only {
@@ -262,12 +258,10 @@ export const accessibilityStyles = `,
     overflow: hidden,
     clip: rect(0, 0, 0, 0),
     white-space: nowrap,
-    border: 0,
-  }
+    border: 0}
 ,
   /* Focus visible utility */,
   .focus-visible: focus-visible {
     outline: 2px solid hsl(var(--ring)),
-    outline-offset: 2px,
-  }
+    outline-offset: 2px}
 `,

@@ -31,6 +31,5 @@ export default function QuantumAI20o26RevolutionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

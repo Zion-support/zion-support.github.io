@@ -396,43 +396,37 @@ export default function Support() {
       name: 'AI Services';
       icon: <Brain className="w-8 h-8 text-cyan-400" />;
       description: 'Support for AI consciousness and autonomous systems';
-      articles: 25,
-    };
+      articles: 25};
     {
       id: 'quantum-solutions';
       name: 'Quantum Solutions';
       icon: <Atom className="w-8 h-8 text-purple-400" />;
       description: 'Help with quantum computing and cryptography';
-      articles: 18,
-    };
+      articles: 18};
     {
       id: 'autonomous-systems';
       name: 'Autonomous Systems';
       icon: <Rocket className="w-8 h-8 text-green-400" />;
       description: 'Support for self-managing business operations';
-      articles: 32,
-    };
+      articles: 32};
     {
       id: 'enterprise-it';
       name: 'Enterprise IT';
       icon: <Shield className="w-8 h-8 text-blue-400" />;
       description: 'Infrastructure and security support';
-      articles: 28,
-    };
+      articles: 28};
     {
       id: 'billing';
       name: 'Billing & Account';
       icon: <Zap className="w-8 h-8 text-yellow-400" />;
       description: 'Payment, invoices, and account management';
-      articles: 15,
-    };
+      articles: 15};
     {
       id: 'technical';
       name: 'Technical Issues';
       icon: <Code className="w-8 h-8 text-orange-400" />;
       description: 'Bug reports and technical troubleshooting';
-      articles: 42,
-    }
+      articles: 42}
   ],
   const quickActions = [
     {
@@ -441,32 +435,28 @@ export default function Support() {
       icon: <MessageCircle className="w-8 h-8 text-cyan-400" />;
       action: 'Start Chat';
       color: 'from-cyan-500 to-blue-600';
-      available: true,
-    };
+      available: true};
     {
       title: 'Phone Support';
       description: 'Speak directly with our experts';
       icon: <Phone className="w-8 h-8 text-green-400" />;
       action: 'Call Now';
       color: 'from-green-500 to-emerald-600';
-      available: true,
-    };
+      available: true};
     {
       title: 'Email Support';
       description: 'Send us a detailed message';
       icon: <Mail className="w-8 h-8 text-purple-400" />;
       action: 'Send Email';
       color: 'from-purple-500 to-pink-600';
-      available: true,
-    };
+      available: true};
     {
       title: 'Video Call';
       description: 'Screen share and visual assistance';
       icon: <Video className="w-8 h-8 text-orange-400" />;
       action: 'Schedule Call';
       color: 'from-orange-500 to-red-600';
-      available: true,
-    }
+      available: true}
   ],
   const popularArticles = [
     {
@@ -474,53 +464,45 @@ export default function Support() {
       category: 'AI Services';
       readTime: '5 min read';
       views: '2.4k';
-      helpful: '98%',
-    };
+      helpful: '98%'};
     {
       title: 'Setting Up Quantum-Secure Infrastructure';
       category: 'Quantum Solutions';
       readTime: '8 min read';
       views: '1.8k';
-      helpful: '95%',
-    };
+      helpful: '95%'};
     {
       title: 'Troubleshooting Autonomous System Errors';
       category: 'Autonomous Systems';
       readTime: '6 min read';
       views: '3.1k';
-      helpful: '92%',
-    };
+      helpful: '92%'};
     {
       title: 'API Integration Best Practices';
       category: 'Technical Issues';
       readTime: '7 min read';
       views: '4.2k';
-      helpful: '96%',
-    };
+      helpful: '96%'};
     {
       title: 'Understanding Your Invoice and Billing';
       category: 'Billing & Account';
       readTime: '3 min read';
       views: '1.5k';
-      helpful: '89%',
-    }
+      helpful: '89%'}
   ],
   const supportHours = [
     {
       day: 'Monday - Friday';
       hours: '9:00 AM - 8:00 PM EST';
-      status: 'Available',
-    };
+      status: 'Available'};
     {
       day: 'Saturday';
       hours: '10:00 AM - 6:00 PM EST';
-      status: 'Available',
-    };
+      status: 'Available'};
     {
       day: 'Sunday';
       hours: '12:00 PM - 6:00 PM EST';
-      status: 'Limited',
-    }
+      status: 'Limited'}
   ],
   const filteredCategories = selectedCategory === 'all',
     ? supportCategories,
@@ -608,8 +590,7 @@ const supportCategories = [
       'Security configuration';
       'Deployment assistance'];
     color: 'from-cyan-500/20 to-blue-500/20';
-    borderColor: 'border-cyan-400/30',
-  };
+    borderColor: 'border-cyan-400/30'};
   {
     title: 'Documentation';
     icon: <BookOpen className="w-8 h-8 text-purple-400" />;
@@ -621,8 +602,7 @@ const supportCategories = [
       'Troubleshooting guides';
       'Video tutorials'];
     color: 'from-purple-500/20 to-pink-500/20';
-    borderColor: 'border-purple-400/30',
-  };
+    borderColor: 'border-purple-400/30'};
   {
     title: 'Training & Onboarding';
     icon: <Video className="w-8 h-8 text-emerald-400" />;
@@ -634,8 +614,7 @@ const supportCategories = [
       'Custom workshops';
       'Team onboarding'];
     color: 'from-emerald-500/20 to-teal-500/20';
-    borderColor: 'border-emerald-400/30',
-  };
+    borderColor: 'border-emerald-400/30'};
   {
     title: 'Community Support';
     icon: <Users className="w-8 h-8 text-orange-400" />;
@@ -647,8 +626,7 @@ const supportCategories = [
       'Expert Q&A';
       'Success stories'];
     color: 'from-orange-500/20 to-red-500/20';
-    borderColor: 'border-orange-400/30',
-  }
+    borderColor: 'border-orange-400/30'}
 ],
 const supportChannels = [
   {
@@ -659,8 +637,7 @@ const supportChannels = [
     responseTime: '< 5 minutes';
     color: 'text-green-400';
     bgColor: 'bg-green-500/20';
-    borderColor: 'border-green-400/30',
-  };
+    borderColor: 'border-green-400/30'};
   {
     name: 'Email Support';
     icon: <Mail className="w-6 h-6" />;
@@ -669,8 +646,7 @@ const supportChannels = [
     responseTime: '< 4 hours';
     color: 'text-blue-400';
     bgColor: 'bg-blue-500/20';
-    borderColor: 'border-blue-400/30',
-  };
+    borderColor: 'border-blue-400/30'};
   {
     name: 'Phone Support';
     icon: <Phone className="w-6 h-6" />;
@@ -679,8 +655,7 @@ const supportChannels = [
     responseTime: 'Immediate';
     color: 'text-purple-400';
     bgColor: 'bg-purple-500/20';
-    borderColor: 'border-purple-400/30',
-  };
+    borderColor: 'border-purple-400/30'};
   {
     name: 'Ticket System';
     icon: <FileText className="w-6 h-6" />;
@@ -689,8 +664,7 @@ const supportChannels = [
     responseTime: '< 2 hours';
     color: 'text-orange-400';
     bgColor: 'bg-orange-500/20';
-    borderColor: 'border-orange-400/30',
-  }
+    borderColor: 'border-orange-400/30'}
 ],
 const faqItems = [
   {
@@ -772,8 +746,7 @@ export default function Support() {
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                   selectedCategory === 'all',
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
-                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',
-                }`}
+                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50'}`}
               >,
                 All Categories,
               </button>,
@@ -784,8 +757,7 @@ export default function Support() {
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
-                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',
-                  }`}
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50'}`}
                 >,
                   {category.name}
                 </button>))}
@@ -892,8 +864,7 @@ export default function Support() {
                     className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
                       selectedCategory === category.id,
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400',
-                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover: bg-cyan-500/20 hover:border-cyan-500/50',
-                    }`}
+                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover: bg-cyan-500/20 hover:border-cyan-500/50'}`}
                   >,
                     {category.icon}
                     {category.name}
@@ -952,8 +923,7 @@ export default function Support() {
                 answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."};
               {
                 question: "How secure is your Quantum Cybersecurity platform?";
-                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations.",
-              };
+                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."};
               {
                 question: "Can I integrate your AI with my existing systems?";
                 answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."};
@@ -1151,8 +1121,7 @@ export default function Support() {
         </div>,
       </section>,
     </div>,
-=======),
-};
+=======)};
 export default Support;
           </div>,
         </section>,
@@ -1196,7 +1165,6 @@ export default Support;
           </div>,
         </section>,
       </main>,
-    </Layout>),
-};
+    </Layout>)};
 export default SupportPage;
 =======}}))))

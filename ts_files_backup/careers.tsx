@@ -89,23 +89,19 @@ export default function Careers() {
     {
       icon: <Brain className="w-8 h-8" />;
       title: 'Innovation First';
-      description: 'We push boundaries and explore new technologies to solve complex problems.',
-    };
+      description: 'We push boundaries and explore new technologies to solve complex problems.'};
     {
       icon: <Heart className="w-8 h-8" />;
       title: 'People Matter';
-      description: 'Our team is our greatest assetand we invest in their growth and well-being.',
-    };
+      description: 'Our team is our greatest assetand we invest in their growth and well-being.'};
     {
       icon: <Globe className="w-8 h-8" />;
       title: 'Global Impact';
-      description: 'We create solutions that make a difference in the world.',
-    };
+      description: 'We create solutions that make a difference in the world.'};
     {
       icon: <Star className="w-8 h-8" />;
       title: 'Excellence';
-      description: 'We strive for the highest quality in everything we do.',
-    }
+      description: 'We strive for the highest quality in everything we do.'}
   ],
   const benefits = [
     'Competitive salary and equity packages';
@@ -192,8 +188,7 @@ export default function Careers() {
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   selectedDepartment === dept.id,
                     ? 'bg-blue-500 text-white',
-                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',
-                }`}
+                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50'}`}
               >,
                 {dept.name}
               </button>))}
@@ -282,6 +277,5 @@ export default function Careers() {
           </div>,
         </motion.div>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default CareersPage;

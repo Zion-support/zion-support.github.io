@@ -72,6 +72,5 @@ export default function EnterpriseAIGovernance20o26Page() {
           Talk to an expert,
         </Link>,
       </footer>,
-    </main>),
-}
+    </main>)}
 ,

@@ -9,8 +9,7 @@ interface Particle {
   size: number,
   color: string,
   opacity: number,
-  life: number,
-}
+  life: number}
 ,
 interface QuantumField {
   id: number,
@@ -19,8 +18,7 @@ interface QuantumField {
   radius: number,
   intensity: number,
   color: string,
-  phase: number,
-}
+  phase: number}
 ,
 const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -32,8 +30,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
     const updateDimensions = () => {
       setDimensions({
         width: window.innerWidth;
-        height: window.innerHeight,
-      })};
+        height: window.innerHeight})};
     updateDimensions(),
     window.addEventListener('resize', updateDimensions),
     const handleMouseMove = (e: MouseEvent) => {
@@ -64,8 +61,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
         size: Math.random() * 3 + 1;
         color: `hsl(${Math.random() * 360}, 70%, 60%)`;
         opacity: Math.random() * 0.8 + 0.2;
-        life: Math.random() * 10o0,
-      })}
+        life: Math.random() * 10o0})}
 ,
     // Initialize quantum fields,
     for (let i = 0, i < 8, i++) {
@@ -76,8 +72,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
         radius: Math.random() * 20o0 + 10o0;
         intensity: Math.random() * 0.5 + 0.5;
         color: `hsl(${i * 45}, 80%, 60%)`;
-        phase: Math.random() * Math.PI * 2,
-      })}
+        phase: Math.random() * Math.PI * 2})}
 ,
     let animationId: number,
     let time = 0,
@@ -248,8 +243,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute top-3/4 right-1/4 w-3 h-3 rounded-full bg-purple-40o0 shadow-lg shadow-purple-40o0/50",
@@ -260,8 +254,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
           duration: 4;
           repeat: Infinity;
           ease: "easeInOut";
-          delay: 1,
-        }}
+          delay: 1}}
        />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-pink-40o0 shadow-lg shadow-pink-40o0/50",
@@ -272,8 +265,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
           duration: 2.5;
           repeat: Infinity;
           ease: "easeInOut";
-          delay: 2,
-        }}
+          delay: 2}}
        />,
     </motion.div>)};
 export default UltraAdvancedFuturisticBackground20o45;

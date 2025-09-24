@@ -27,8 +27,7 @@ const NewContent20o25RPARevolutionBanner = () => {
       metrics: "80o0% ROI • $4.2M Savings • 340% Efficiency";
       cta: "Explore RPA Guide";
       link: "/blog/ai-20o25-robotic-process-automation-revolution-ultimate-guide";
-      color: "from-blue-60o0 to-purple-60o0",
-    };
+      color: "from-blue-60o0 to-purple-60o0"};
     {
       title: "Fortune 10o0 Success Story";
       subtitle: "$4.2B Annual Savings Achieved";
@@ -36,8 +35,7 @@ const NewContent20o25RPARevolutionBanner = () => {
       metrics: "80o0% ROI • 127 Processes • 12 Months";
       cta: "Read Case Study";
       link: "/case-studies/fortune-10o0-rpa-transformation-80o0-roi-success";
-      color: "from-green-60o0 to-blue-60o0",
-    };
+      color: "from-green-60o0 to-blue-60o0"};
     {
       title: "Implementation Master Guide";
       subtitle: "Complete Blueprint for RPA Success";
@@ -45,8 +43,7 @@ const NewContent20o25RPARevolutionBanner = () => {
       metrics: "35 Min Read • Complete Framework • Proven Results";
       cta: "Get Implementation Guide";
       link: "/resources/rpa-implementation-master-guide-20o25";
-      color: "from-purple-60o0 to-pink-60o0",
-    }
+      color: "from-purple-60o0 to-pink-60o0"}
   ],
   if (!isVisible || isDismissed) return null,
   return (
@@ -155,6 +152,5 @@ const NewContent20o25RPARevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25RPARevolutionBanner;

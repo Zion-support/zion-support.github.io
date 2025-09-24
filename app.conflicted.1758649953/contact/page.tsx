@@ -213,6 +213,5 @@ export default function ContactPage() {
           </div>,
         </div>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

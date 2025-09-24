@@ -604,6 +604,5 @@ export default function AITrendsInsights() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

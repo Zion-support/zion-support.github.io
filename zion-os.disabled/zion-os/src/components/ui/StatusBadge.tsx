@@ -2,8 +2,7 @@ interface StatusBadgeProps {
   status: string,
   variant?: 'default' | 'success' | 'warning' | 'error' | 'info',
   size?: 'sm' | 'md' | 'lg',
-  className?: string,
-}
+  className?: string}
 ,
 export default function StatusBadge({
   status;

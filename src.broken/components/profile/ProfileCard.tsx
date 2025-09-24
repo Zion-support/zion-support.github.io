@@ -1,8 +1,7 @@
 import { CardHeaderCardContentCardTitle } from '@/components/ui/card',
 import { TalentProfile } from '@/types/talent',
 interface ProfileCardProps {
-  profile: TalentProfile,
-}
+  profile: TalentProfile}
 ,
 export function ProfileCard({ profile }: ProfileCardProps) {
   return (

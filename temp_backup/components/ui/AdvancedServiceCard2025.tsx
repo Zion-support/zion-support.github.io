@@ -13,8 +13,7 @@ interface AdvancedService {
     starter: string,
     professional: string,
     enterprise: string,
-    custom?: string,
-  };
+    custom?: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -25,16 +24,14 @@ interface AdvancedService {
   mobile: string,
   address: string,
   website: string,
-  slug: string,
-}
+  slug: string}
 ,
 interface AdvancedServiceCard20o25Props {
   service: AdvancedService,
   variant?: 'default' | 'quantum' | 'ai' | 'automation' | 'it' | 'emerging' | 'enterprise' | 'premium',
   theme?: 'quantum' | 'cyber' | 'neon',
   className?: string,
-  onClick?: () => void,
-}
+  onClick?: () => void}
 ,
 const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
   service;
@@ -52,8 +49,7 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
         badge: 'bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black';
         button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0';
         text: 'text-cyan-50';
-        accent: 'bg-cyan-40o0',
-      };
+        accent: 'bg-cyan-40o0'};
     }
 ,
     if (variant === 'enterprise') {
@@ -63,8 +59,7 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
         badge: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0';
         button: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0';
         text: 'text-purple-50';
-        accent: 'bg-purple-40o0',
-      };
+        accent: 'bg-purple-40o0'};
     }
 ,
     if (variant === 'ai') {
@@ -74,8 +69,7 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
         badge: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0';
         button: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0 hover:from-blue-60o0 hover:to-indigo-70o0';
         text: 'text-blue-50';
-        accent: 'bg-blue-40o0',
-      };
+        accent: 'bg-blue-40o0'};
     }
 ,
     // Default variant,
@@ -85,8 +79,7 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
       badge: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0';
       button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0';
       text: 'text-gray-50';
-      accent: 'bg-cyan-40o0',
-    };
+      accent: 'bg-cyan-40o0'};
   }, [variant]),
   const handleCardClick = useCallback(() => {
     if (onClick) {
@@ -94,15 +87,13 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
   }, [onClick]),
   const toggleExpanded = useCallback((e: React.MouseEvent) => {
     e.stopPropagation(),
-    setIsExpanded(!isExpanded),
-  }, [isExpanded]),
+    setIsExpanded(!isExpanded)}, [isExpanded]),
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') || category.includes('Data')) return <Zap className="w-5 h-5 text-blue-40o0"  />,
     if (category.includes('Security') || category.includes('Compliance')) return <Shield className="w-5 h-5 text-green-40o0"  />,
     if (category.includes('Infrastructure') || category.includes('Cloud')) return <Building className="w-5 h-5 text-purple-40o0"  />,
     if (category.includes('Quantum')) return <Star className="w-5 h-5 text-cyan-40o0"  />,
-    return <Rocket className="w-5 h-5 text-cyan-40o0"  />,
-  };
+    return <Rocket className="w-5 h-5 text-cyan-40o0"  />};
   return (
     <motion.div,
       className={`group relative overflow-hidden rounded-2xl transition-all duration-50o0 transform hover: scale-10o5 cursor-pointer ${className}`}

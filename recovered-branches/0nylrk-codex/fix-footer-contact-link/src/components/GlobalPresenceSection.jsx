@@ -313,8 +313,7 @@ export function GlobalPresenceSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedOffice(
-                      selectedOffice === office.id ? null : office.id),
-                  }
+                      selectedOffice === office.id ? null : office.id)}
                 >,
                   {/* Header */}
                   <div className='flex items-center justify-between mb-4'>,
@@ -438,8 +437,7 @@ export function GlobalPresenceSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedPartnership(
-                      selectedPartnership === index ? null : index),
-                  }
+                      selectedPartnership === index ? null : index)}
                 >,
                   {/* Header */}
                   <div className='text-center mb-4'>,
@@ -586,6 +584,5 @@ export function GlobalPresenceSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -4,8 +4,7 @@ interface Address {
   name: string,
   address: string,
   city: string,
-  country: string,
-}
+  country: string}
 ,
 interface ShippingRate {
   id: string,
@@ -14,13 +13,11 @@ interface ShippingRate {
   rate: string,
   currency: string,
   delivery_days?: number | null,
-  tax?: string,
-}
+  tax?: string}
 ,
 interface Props {
   toAddress: Address | null,
-  onSelect?: (rate: ShippingRate) => void,
-}
+  onSelect?: (rate: ShippingRate) => void}
 ,
 const fromAddress = {
   name: 'Store';
@@ -60,8 +57,7 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
   const handleChange = (value: string) => {
     setSelected(value),
     const rate = rates.find(r => r.id === value),
-    if (rate && onSelect) onSelect(rate),
-  };
+    if (rate && onSelect) onSelect(rate)};
   if (!toAddress) return null,
   return (
     <div className="my-4">,

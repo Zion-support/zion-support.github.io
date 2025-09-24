@@ -26,8 +26,7 @@ export default function UltraAdvancedFuturisticBackground() {
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'neural' | 'energy' | 'data',
-    }> = [],
+      type: 'quantum' | 'neural' | 'energy' | 'data'}> = [],
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
@@ -41,8 +40,7 @@ export default function UltraAdvancedFuturisticBackground() {
           size: Math.random() * 2 + 1;
           opacity: Math.random() * 0.8 + 0.2;
           color: `hsl(${180 + Math.random() * 40}, 70%, 60%)`;
-          type: 'quantum',
-        })}
+          type: 'quantum'})}
 ,
       // Neural particles (purple/pink),
       for (let i = 0, i < 40, i++) {
@@ -54,8 +52,7 @@ export default function UltraAdvancedFuturisticBackground() {
           size: Math.random() * 1.5 + 0.5;
           opacity: Math.random() * 0.6 + 0.2;
           color: `hsl(${280 + Math.random() * 40}, 70%, 60%)`;
-          type: 'neural',
-        })}
+          type: 'neural'})}
 ,
       // Energy particles (green/emerald),
       for (let i = 0, i < 30, i++) {
@@ -67,8 +64,7 @@ export default function UltraAdvancedFuturisticBackground() {
           size: Math.random() * 3 + 2;
           opacity: Math.random() * 0.7 + 0.3;
           color: `hsl(${140 + Math.random() * 40}, 70%, 60%)`;
-          type: 'energy',
-        })}
+          type: 'energy'})}
 ,
       // Data particles (white/blue),
       for (let i = 0, i < 60, i++) {
@@ -80,8 +76,7 @@ export default function UltraAdvancedFuturisticBackground() {
           size: Math.random() * 1 + 0.5;
           opacity: Math.random() * 0.5 + 0.1;
           color: `hsl(${20o0 + Math.random() * 40}, 70%, 80%)`;
-          type: 'data',
-        })}
+          type: 'data'})}
     };
     // Update and draw particles,
     const animate = () => {
@@ -183,15 +178,13 @@ export default function UltraAdvancedFuturisticBackground() {
               linear-gradient(rgba(6, 182, 212, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(6, 182, 212, 0.3) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']}}
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: 'linear',
-          }}
+            ease: 'linear'}}
          />,
       </div>,
       {/* Floating Geometric Shapes */}
@@ -202,13 +195,11 @@ export default function UltraAdvancedFuturisticBackground() {
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3];
-            rotate: 360,
-          }}
+            rotate: 360}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Triangle */}
         <motion.div,
@@ -223,8 +214,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Diamond */}
         <motion.div,
@@ -238,8 +228,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Square */}
         <motion.div,
@@ -251,8 +240,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
       {/* Energy Waves */}
@@ -268,8 +256,7 @@ export default function UltraAdvancedFuturisticBackground() {
             transition={{
               duration: 20 + i * 5;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />))}
       </div>,
       {/* Quantum Particles */}
@@ -290,8 +277,7 @@ export default function UltraAdvancedFuturisticBackground() {
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Neural Network Nodes */}
@@ -310,8 +296,7 @@ export default function UltraAdvancedFuturisticBackground() {
               duration: 4;
               repeat: Infinity;
               delay: i * 0.2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Data Streams */}
@@ -322,16 +307,14 @@ export default function UltraAdvancedFuturisticBackground() {
             className="absolute w-0.5 h-20 bg-gradient-to-b from-blue-40o0 to-transparent",
             style={{
               left: `${10 + i * 10}%`;
-              top: '-5rem',
-            }}
+              top: '-5rem'}}
             animate={{
               y: [0, (typeof window !== 'undefined' ? window.innerHeight : 80o0) + 10o0]}}
             transition={{
               duration: 8 + Math.random() * 4;
               repeat: Infinity;
               delay: i * 0.5;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />))}
       </div>,
       {/* Glow Effects */}
@@ -349,8 +332,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-0 w-px h-full bg-gradient-to-b from-transparent via-blue-40o0 to-transparent",
@@ -359,8 +341,7 @@ export default function UltraAdvancedFuturisticBackground() {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
       </div>,
     </div>)}

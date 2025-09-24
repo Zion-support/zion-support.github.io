@@ -2,20 +2,17 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 export type Visibility = 'public' | 'partner' | 'internal',
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python',
-  code: string,
-}
+  code: string}
 ,
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal',
   limitPerMinute: number,
-  burst?: number,
-}
+  burst?: number}
 ,
 export interface ErrorCode {
   code: string,
   httpStatus: number,
-  message: string,
-}
+  message: string}
 ,
 export interface EndpointSpec {
   id: string,
@@ -39,14 +36,12 @@ export interface SectionSpec {
   id: string,
   title: string,
   description?: string,
-  endpoints: EndpointSpec[],
-}
+  endpoints: EndpointSpec[]}
 ,
 export interface ApiDocsSpec {
   product: 'Zion OS',
   versions: string[], // available versions,
   defaultVersion: string,
   sections: SectionSpec[],
-  lastUpdatedIso: string,
-}
+  lastUpdatedIso: string}
 ,

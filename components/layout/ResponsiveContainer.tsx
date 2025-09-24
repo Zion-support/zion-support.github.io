@@ -5,8 +5,7 @@ interface ResponsiveContainerProps {
   variant?: 'default' | 'wide' | 'narrow' | 'full',
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl',
   className?: string,
-  animated?: boolean,
-}
+  animated?: boolean}
 ,
 export default function ResponsiveContainer({
   children;

@@ -18,8 +18,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const Comprehensive20o29ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -45,8 +44,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
         case 'customers':,
           return b.customers - a.customers,
         default: ,
-          return b.popular ? 1 : -1,
-      }
+          return b.popular ? 1 : -1}
     }),
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-60o0 to-cyan-60o0' };
@@ -69,8 +67,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -79,8 +76,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   const cardVariants ={
@@ -90,16 +86,14 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
       opacity: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     };
     hover: {
       scale: 1.0o5;
       y: -10;
       transition: {
         duration: 0.3;
-        ease: "easeInOut",
-      }
+        ease: "easeInOut"}
     }
   };
   return (
@@ -120,8 +114,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-2xl",
@@ -131,8 +124,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
           transition={{
             duration: 25;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       <div className="relative z-10 container mx-auto px-4 py-20">,
@@ -200,8 +192,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
                   className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-lg`,
-                      : 'bg-gray-80o0/50 text-gray-30o0 border-gray-60o0 hover: border-gray-50o0 hover:bg-gray-70o0/50',
-                  }`}
+                      : 'bg-gray-80o0/50 text-gray-30o0 border-gray-60o0 hover: border-gray-50o0 hover:bg-gray-70o0/50'}`}
                   whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                 >,

@@ -41,8 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag,
     const sameIpCount = Object.values(db).filter((p) =>,
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)).length,
-    if (sameIpCount >= 2) flags.add('duplicate_ip'),
-  }
+    if (sameIpCount >= 2) flags.add('duplicate_ip')}
 ,
   // Compute simple risk score,
   let riskScore = 10, // base low risk,

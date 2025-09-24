@@ -131,8 +131,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
       case 'rating':,
         return b.rating - a.rating,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   // Pagination,
   const totalPages = Math.ceil(sortedServices.length / pageSize),
@@ -288,8 +287,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
                         ? 'bg-gradient-to-r ' +,
                           category.color +,
                           ' text-white shadow-lg',
-                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                    }`}
+                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30'}`}
                   >,
                     {category.icon}
                     {category.name}
@@ -315,8 +313,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
                     className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-cyan-40o0 text-white',
-                        : 'text-gray-30o0 hover: text-white',
-                    }`}
+                        : 'text-gray-30o0 hover: text-white'}`}
                   >,
                     <Grid className='w-5 h-5' />,
                   </button>,
@@ -325,8 +322,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
                     className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-cyan-40o0 text-white',
-                        : 'text-gray-30o0 hover: text-white',
-                    }`}
+                        : 'text-gray-30o0 hover: text-white'}`}
                   >,
                     <List className='w-5 h-5' />,
                   </button>,
@@ -339,8 +335,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
             className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-                : 'space-y-4',
-            }
+                : 'space-y-4'}
           >,
             {paginatedServices.map((service, index) => (
               <motion.div,
@@ -349,8 +344,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover: transform hover:scale-10o5 transition-all duration-30o0 ${
-                  viewMode === 'list' ? 'flex' : '',
-                }`}
+                  viewMode === 'list' ? 'flex' : ''}`}
               >,
                 {viewMode === 'grid' ? (
                   // Grid View,
@@ -480,8 +474,7 @@ export default function CuttingEdge20o38ServicesShowcase() {
                     className={`px-4 py-2 rounded-lg transition-all duration-20o0 ${
                       currentPage === index + 1,
                         ? 'bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white',
-                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                    }`}
+                        : 'bg-white/20 text-gray-30o0 hover: bg-white/30'}`}
                   >,
                     {index + 1}
                   </button>))}
@@ -534,6 +527,5 @@ export default function CuttingEdge20o38ServicesShowcase() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

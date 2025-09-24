@@ -9,8 +9,7 @@ export default function AIMarketingAutomationSuite() {
     {
       icon: <Target className="w-6 h-6"  />;
       title: 'AI-Powered Audience Targeting';
-      description: 'Intelligent audience segmentation and targeting using machine learning to identify your most valuable prospects.',
-    };
+      description: 'Intelligent audience segmentation and targeting using machine learning to identify your most valuable prospects.'};
     {
       icon: <Megaphone className="w-6 h-6"  />;
       title: 'Automated Campaign Management';
@@ -18,13 +17,11 @@ export default function AIMarketingAutomationSuite() {
     {
       icon: <Users className="w-6 h-6"  />;
       title: 'Personalized Content Delivery';
-      description: 'Deliver personalized content and messaging to each customer based on their behavior and preferences.',
-    };
+      description: 'Deliver personalized content and messaging to each customer based on their behavior and preferences.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Smart Lead Nurturing';
-      description: 'Automated lead nurturing workflows that adapt to customer behavior and engagement patterns.',
-    };
+      description: 'Automated lead nurturing workflows that adapt to customer behavior and engagement patterns.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Multi-Channel Orchestration';
@@ -32,8 +29,7 @@ export default function AIMarketingAutomationSuite() {
     {
       icon: <BarChart3 className="w-6 h-6"  />;
       title: 'Advanced Analytics & ROI';
-      description: 'Comprehensive marketing analytics with AI-powered insights to optimize campaigns and maximize ROI.',
-    }
+      description: 'Comprehensive marketing analytics with AI-powered insights to optimize campaigns and maximize ROI.'}
   ],
   const benefits = [
     'Increase marketing ROI by 30o0%';
@@ -232,5 +228,4 @@ export default function AIMarketingAutomationSuite() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

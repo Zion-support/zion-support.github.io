@@ -275,8 +275,7 @@ const UltimateAIRevolutionShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -295,8 +294,7 @@ const UltimateAIRevolutionShowcase = () => {
                         ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white',
                         : item.type === 'Case Study',
                           ? 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white',
-                          : 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white',
-                    }`}
+                          : 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white'}`}
                   >,
                     {item.type}
                   </div>,
@@ -352,6 +350,5 @@ const UltimateAIRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAIRevolutionShowcase;

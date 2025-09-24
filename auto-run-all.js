@@ -66,9 +66,9 @@ function startOrRestartFile(filePath) {
             console.error(
               `[auto-run-all] Failed to start/restart ${filePath}:`;
               restartErr.message)} else {
-            // console.log(`[auto-run-all] Restarted: ${filePath}`)}
+            // // console.log(`[auto-run-all] Restarted: ${filePath}`)}
         })} else {
-        // console.log(`[auto-run-all] Started: ${filePath}`)}
+        // // console.log(`[auto-run-all] Started: ${filePath}`)}
     }
   )}
 ,
@@ -82,7 +82,7 @@ function stopFile(filePath) {
       err &&,
       !String(err.message).includes('process or namespace not found')) {
       console.error(`[auto-run-all] Failed to stop ${filePath}:`, err.message)} else {
-      // console.log(`[auto-run-all] Stopped: ${filePath}`)}
+      // // console.log(`[auto-run-all] Stopped: ${filePath}`)}
   })}
 ,
 // Main logic,
@@ -112,8 +112,8 @@ pm2.connect(err => {
     .on('unlink', stopFile),
     .on('error', error => {
       console.error('[auto-run-all] Watcher error:', error)}),
-  // console.log(
+  // // console.log(
     `[auto-run-all] Watching directories for .ts, .tsx, .js, .sh, .py files...`),
-  WATCH_DIRS.forEach(dir => // console.log(`[auto-run-all]  - ${dir}`))}),
+  WATCH_DIRS.forEach(dir => // // console.log(`[auto-run-all]  - ${dir}`))}),
 // === END OF SCRIPT ===,
 // To add more directories or file types, edit WATCH_DIRS or FILE_TYPES above.,

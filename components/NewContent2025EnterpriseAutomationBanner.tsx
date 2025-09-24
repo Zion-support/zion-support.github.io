@@ -52,6 +52,5 @@ const NewContent20o25EnterpriseAutomationBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o25EnterpriseAutomationBanner;

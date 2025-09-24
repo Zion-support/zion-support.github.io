@@ -20,8 +20,7 @@ export default function EnhancedServicesOverview() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const serviceCategories = [
     {
       id: 'ai-services';
@@ -41,8 +40,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$1,499', range: '$1,499 - $9,999' };
       benefits: ['30o0% ROI improvement', '80% time savings', 'Enhanced decision making'];
       href: '/ai-services';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'quantum-services';
       name: 'Quantum Computing';
@@ -61,8 +59,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$2,999', range: '$2,999 - $19,999' };
       benefits: ['Unbreakable security', 'Exponential performance', 'Future-proof technology'];
       href: '/quantum-services';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'space-technology';
       name: 'Space Technology';
@@ -81,8 +78,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$4,999', range: '$4,999 - $49,999' };
       benefits: ['Access to space resources', 'Global connectivity', 'Innovation leadership'];
       href: '/space-technology';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'enterprise-it';
       name: 'Enterprise IT Solutions';
@@ -101,8 +97,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$1,999', range: '$1,999 - $29,999' };
       benefits: ['Operational efficiency', 'Cost reduction', 'Security enhancement'];
       href: '/enterprise-it';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'micro-saas';
       name: 'Micro SAAS Solutions';
@@ -121,8 +116,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$19', range: '$19 - $499' };
       benefits: ['Quick implementation', 'Affordable pricing', 'Immediate ROI'];
       href: '/enhanced-micro-saas-showcase';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'cybersecurity';
       name: 'Cybersecurity';
@@ -141,8 +135,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$79', range: '$79 - $999' };
       benefits: ['Threat prevention', 'Compliance assurance', 'Risk mitigation'];
       href: '/security';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'data-analytics';
       name: 'Data Analytics';
@@ -161,8 +154,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$49', range: '$49 - $799' };
       benefits: ['Data-driven decisions', 'Operational insights', 'Performance optimization'];
       href: '/ai-data-analytics';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'content-creation';
       name: 'Content Creation';
@@ -181,8 +173,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$29', range: '$29 - $399' };
       benefits: ['Content quality improvement', 'Time savings', 'Engagement increase'];
       href: '/ai-content-generator';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'automation';
       name: 'Business Automation';
@@ -201,8 +192,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$99', range: '$99 - $1,999' };
       benefits: ['Process efficiency', 'Cost reduction', 'Error elimination'];
       href: '/automation';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'research-development';
       name: 'Research & Development';
@@ -221,8 +211,7 @@ export default function EnhancedServicesOverview() {
       pricing: { starting: '$199', range: '$199 - $2,999' };
       benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'];
       href: '/emerging-tech';
-      featured: false,
-    }
+      featured: false}
   ],
   const filteredCategories = serviceCategories.filter(category =>,
     selectedCategory === 'all' || category.id === selectedCategory),
@@ -231,8 +220,7 @@ export default function EnhancedServicesOverview() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -241,8 +229,7 @@ export default function EnhancedServicesOverview() {
       opacity: 1;
       y: 0;
       transition: {
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   };
   return (
@@ -383,8 +370,7 @@ export default function EnhancedServicesOverview() {
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                     selectedCategory === 'all',
                       ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white shadow-lg',
-                      : 'bg-black/30 border border-cyan-50o0/30 text-gray-30o0 hover: border-cyan-40o0',
-                  }`}
+                      : 'bg-black/30 border border-cyan-50o0/30 text-gray-30o0 hover: border-cyan-40o0'}`}
                 >,
                   All Categories,
                 </button>,
@@ -395,8 +381,7 @@ export default function EnhancedServicesOverview() {
                     className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white shadow-lg',
-                        : 'bg-black/30 border border-cyan-50o0/30 text-gray-30o0 hover: border-cyan-40o0',
-                    }`}
+                        : 'bg-black/30 border border-cyan-50o0/30 text-gray-30o0 hover: border-cyan-40o0'}`}
                   >,
                     {category.name}
                   </button>))}
@@ -413,8 +398,7 @@ export default function EnhancedServicesOverview() {
                   key={category.id}
                   variants={itemVariants}
                   className={`group relative bg-gradient-to-br from-black/40 to-purple-90o0/20 border border-cyan-50o0/30 rounded-2xl p-6 hover: border-cyan-40o0/60 transition-all duration-30o0 hover:shadow-2xl hover:shadow-cyan-50o0/20 backdrop-blur-sm ${
-                    category.featured ? 'ring-2 ring-cyan-40o0/30' : '',
-                  }`}
+                    category.featured ? 'ring-2 ring-cyan-40o0/30' : ''}`}
                 >,
                   {/* Featured Badge */}
                   {category.featured && (
@@ -555,5 +539,4 @@ export default function EnhancedServicesOverview() {
         </section>,
         <UltraFuturisticFooter20o34  />,
       </UltraFuturisticBackground20o35>,
-    </>),
-}
+    </>)}

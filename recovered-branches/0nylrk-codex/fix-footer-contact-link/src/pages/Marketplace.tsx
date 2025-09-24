@@ -46,7 +46,6 @@ import { use_navigate } from './react-router-dom',
 import { SearchSuggestion } from '@/types / search',
 import { AppLayout } from '@/layout / AppLayout',
 export default function Marketplace() {
-,
   const navigate = useNavigate(),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
@@ -108,10 +107,10 @@ export default function Marketplace() {
 ,
     return true}),
   const handleFilterChange = (filterType: string, value: string) => {
-    // console.log(`Filter changed: ${filterType} = ${value}`),
+    // // console.log(`Filter changed: ${filterType} = ${value}`),
     return true}),
   const handleFilterChange = (filterType: string, value: string) => {
-    // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+    // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
     switch (filterType) {
       case 'productType':,
         setSelectedProductTypes(prev =>>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -150,10 +149,9 @@ export default function Marketplace() {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0],
-    return true,
-  });
+    return true});
   const handleFilterChange = (filterType: string, value: string) => {
-    // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+    // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
     switch (filterType) {
       case 'productType':,
         setSelectedProductTypes(prev =>,
@@ -186,7 +184,6 @@ export default function Marketplace() {
         state: {
           serviceType: listing && listing.category;
           specificItem: {
-,
 export default /**,
  * Marketplace - Function description,
  */,
@@ -269,8 +266,7 @@ if ( {) {
             id: listing.id;
             title: listing.title;
             category: listing.category;
-            image: listing.images?.[0],
-          }
+            image: listing.images?.[0]}
         }
       })}
 }
@@ -336,8 +332,7 @@ if ( {) {
                 selectedRating,
                 selected_locations,
                 selected_availability;
-                selected_rating,
-}}
+                selected_rating}}
               filter_options={filter_options}
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}

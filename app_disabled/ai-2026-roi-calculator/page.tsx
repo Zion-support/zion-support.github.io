@@ -11,15 +11,13 @@ export default function AIROICalculator() {
     expectedEfficiency: '';
     implementationCost: '';
     maintenanceCost: '';
-    trainingCost: '',
-  }),
+    trainingCost: ''}),
   const [results, setResults] = useState({
     annualSavings: 0;
     totalCosts: 0;
     netBenefit: 0;
     roi: 0;
-    paybackPeriod: 0,
-  }),
+    paybackPeriod: 0}),
   const handleInputChange = (field: string, value: string) => {
     setInputs(prev => ({
       ...prev;
@@ -55,8 +53,7 @@ export default function AIROICalculator() {
       style: 'currency';
       currency: 'USD';
       minimumFractionDigits: 0;
-      maximumFractionDigits: 0,
-    }).format(amount)};
+      maximumFractionDigits: 0}).format(amount)};
   const formatPercentage = (value: number) => {
     return `${value.toFixed(1)}%`};
   return (
@@ -277,8 +274,7 @@ export default function Page() {
 		<div className="max-w-3xl mx-auto py-16 px-4">,
 			<h1 className="text-3xl font-bold">AI 2026 ROI Calculator</h1>,
 			<p className="mt-4 text-gray-600">Temporarily disabled due to unresolved merge markers. Coming back soon.</p>,
-		</div>),
-}
+		</div>)}
 =======}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295,
 =======}

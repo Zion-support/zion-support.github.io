@@ -241,6 +241,5 @@ export default function QuantumServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>),
-}
+    </div>)}
 ,

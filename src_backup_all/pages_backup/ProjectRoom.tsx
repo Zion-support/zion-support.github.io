@@ -1,7 +1,6 @@
 }
 }
 ,
-,
 import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams,
 import { Header } from '@/components/Header';
@@ -31,14 +30,12 @@ export default function ProjectRoom() {
       name: 'You';
       isHost: true;
       isVideoEnabled: true;
-      isMuted: false,
-    }
+      isMuted: false}
   ]);
   const startVideoCall = () => {
     setIsInCall(true);
     toast.success("Video call started", {
-      description: "Others can join with the project room link",
-    });
+      description: "Others can join with the project room link"});
     // Switch to video tab if not already there,
     if (activeTab !== 'video') {
       setActiveTab('video')}
@@ -46,8 +43,7 @@ export default function ProjectRoom() {
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
-      description: "Call duration and participants will be logged",
-    })};
+      description: "Call duration and participants will be logged"})};
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
     const mockUsers = [
@@ -57,8 +53,7 @@ export default function ProjectRoom() {
   const startVideoCall = () => {
     setIsInCall(true);
     toast.success("Video call started", {
-      description: "Others can join with the project room link",
-    });
+      description: "Others can join with the project room link"});
     // Switch to video tab if not already there,
     if (activeTab !== 'video') {
       setActiveTab('video')}
@@ -66,8 +61,7 @@ export default function ProjectRoom() {
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
-      description: "Call duration and participants will be logged",
-    })};
+      description: "Call duration and participants will be logged"})};
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
     const mockUsers = [
@@ -95,9 +89,7 @@ export default function ProjectRoom() {
     </>}
 }
 }
-,
 }
 }
   )}
-,
 ,

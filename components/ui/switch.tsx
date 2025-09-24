@@ -2,8 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils',
 interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>'type'> {
   checked?: boolean,
-  onCheckedChange?: (checked: boolean) => void,
-}
+  onCheckedChange?: (checked: boolean) => void}
 ,
 const Switch = React.forwardRef<HTMLInputElementSwitchProps>(
   ({ classNamecheckedonCheckedChange...props }ref) => {

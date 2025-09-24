@@ -214,6 +214,5 @@ export default function QuantumComputingAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

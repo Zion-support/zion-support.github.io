@@ -7,8 +7,7 @@ import { CopyFacebookLinkShareTwitter } from "lucide-react",
 interface ReferralLinkProps {
   referralLink: string,
   onCopy: () => void,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
-}
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void}
 ,
 export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
   const [copiedsetCopied] = useState(false),

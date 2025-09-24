@@ -11,8 +11,7 @@ export interface Innovative20o26AiServiceV3 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {

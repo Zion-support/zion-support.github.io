@@ -7,29 +7,25 @@ export default function ExplorePage() {
       description: "Discover how artificial intelligence is revolutionizing automation across industries";
       icon: "🤖";
       features: ["Machine Learning"Neural Networks"Predictive Analytics"];
-      link: "/explore/ai-automation",
-    };
+      link: "/explore/ai-automation"};
     {
       title: "Cloud Computing";
       description: "Explore the latest in cloud infrastructure and autonomous management";
       icon: "☁️";
       features: ["Auto-scaling"Load Balancing"Cost Optimization"];
-      link: "/explore/cloud-computing",
-    };
+      link: "/explore/cloud-computing"};
     {
       title: "DevOps & CI/CD";
       description: "Learn about autonomous development and deployment pipelines";
       icon: "🔄";
       features: ["Auto-deployment"Testing"Monitoring"];
-      link: "/explore/devops",
-    };
+      link: "/explore/devops"};
     {
       title: "Content Generation";
       description: "See how AI creates and optimizes content automatically";
       icon: "✍️";
       features: ["SEO Optimization"Brand Consistency"Multi-language"];
-      link: "/explore/content-generation",
-    }
+      link: "/explore/content-generation"}
   ],
   const trendingTopics = [
     "Autonomous Systems";
@@ -158,5 +154,4 @@ export default function ExplorePage() {
           </div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

@@ -31,15 +31,13 @@ export interface Revolutionary20o28FintechDigitalBankingService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28FintechDigitalBankingService[] = [
   // AI-Powered Digital Banking Platform,
   {
@@ -83,15 +81,13 @@ export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'AI-powered digital banking platform with personalized services, automated investment, and comprehensive financial management.';
     launchDate: '20o28-0o1-25';
     customers: 320;
     rating: 4.9;
-    reviews: 240,
-  };
+    reviews: 240};
   // AI-Powered Investment Management Platform,
   {
     id: 'ai-investment-management-platform-20o28';
@@ -134,15 +130,13 @@ export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'AI-powered investment management platform with automated trading, portfolio optimization, and comprehensive risk management.';
     launchDate: '20o28-0o3-10';
     customers: 680;
     rating: 4.8;
-    reviews: 520,
-  };
+    reviews: 520};
   // Blockchain-Based Payment Platform,
   {
     id: 'blockchain-payment-platform-20o28';
@@ -185,15 +179,13 @@ export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Blockchain-based payment platform with smart contracts, AI fraud detection, and comprehensive payment solutions.';
     launchDate: '20o28-0o2-20';
     customers: 120o0;
     rating: 4.9;
-    reviews: 890,
-  };
+    reviews: 890};
   // AI-Powered Insurance Platform,
   {
     id: 'ai-insurance-platform-20o28';
@@ -236,15 +228,13 @@ export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'AI-powered insurance platform with automated underwriting, claims processing, and comprehensive risk management.';
     launchDate: '20o28-0o4-15';
     customers: 450;
     rating: 4.7;
-    reviews: 320,
-  };
+    reviews: 320};
   // DeFi Lending and Borrowing Platform,
   {
     id: 'defi-lending-borrowing-platform-20o28';
@@ -287,13 +277,11 @@ export const revolutionary20o28FintechDigitalBankingServices: Revolutionary20o28
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'DeFi lending and borrowing platform with AI risk management, smart contracts, and comprehensive DeFi solutions.';
     launchDate: '20o28-0o6-20';
     customers: 850;
     rating: 4.8;
-    reviews: 620,
-  }
+    reviews: 620}
 ],

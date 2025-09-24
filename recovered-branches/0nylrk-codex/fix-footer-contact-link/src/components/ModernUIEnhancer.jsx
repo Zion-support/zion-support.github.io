@@ -81,8 +81,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 ,
       .fade-in-visible {
         opacity: 1,
-        transform: translateY(0),
-      }
+        transform: translateY(0)}
 ,
       .slide-in-left {
         opacity: 0,
@@ -91,8 +90,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 ,
       .slide-in-left-visible {
         opacity: 1,
-        transform: translateX(0),
-      }
+        transform: translateX(0)}
 ,
       .slide-in-right {
         opacity: 0,
@@ -101,8 +99,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 ,
       .slide-in-right-visible {
         opacity: 1,
-        transform: translateX(0),
-      }
+        transform: translateX(0)}
 ,
       .scale-in {
         opacity: 0,
@@ -111,47 +108,37 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 ,
       .scale-in-visible {
         opacity: 1,
-        transform: scale(1),
-      }
+        transform: scale(1)}
 ,
       .bounce-in {
-        animation: bounceIn 0.8s ease-out,
-      }
+        animation: bounceIn 0.8s ease-out}
 ,
       @keyframes bounceIn {
         0% {
           opacity: 0,
-          transform: scale(0.3),
-        }
+          transform: scale(0.3)}
         50% {
           opacity: 1,
-          transform: scale(1.0o5),
-        }
+          transform: scale(1.0o5)}
         70% {
-          transform: scale(0.9),
-        }
+          transform: scale(0.9)}
         10o0% {
           opacity: 1,
-          transform: scale(1),
-        }
+          transform: scale(1)}
       }
 ,
       .floating {
-        animation: floating 3s ease-in-out infinite,
-      }
+        animation: floating 3s ease-in-out infinite}
 ,
       @keyframes floating {
         0%, 10o0% {
-          transform: translateY(0px),
-        }
+          transform: translateY(0px)}
         50% {
-          transform: translateY(-10px),
-        }
+          transform: translateY(-10px)}
       }
 ,
       .glow {
-        animation: glow 2s ease-in-out infinite alternate,
-      }
+        animation: glow 2s ease-in-out infinite alternate}
 ,
       @keyframes glow {
         from {
@@ -164,8 +151,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         background: linear-gradient(135deg, #667eea 0%, #764ba2 10o0%),
         -webkit-background-clip: text,
         -webkit-text-fill-color: transparent,
-        background-clip: text,
-      }
+        background-clip: text}
 ,
       .glass-effect {
         background: rgba(255, 255, 255, 0.1),

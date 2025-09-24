@@ -8,11 +8,9 @@ interface BundleMetrics {
   chunkCount: number,
   largestChunk: {
     name: string,
-    size: number,
-  };
+    size: number};
   averageChunkSize: number,
-  gzipSavings: number,
-}
+  gzipSavings: number}
 ,
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   enabled = true;
@@ -22,14 +20,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     chunkCount: 0;
     largestChunk: { name: '', size: 0 };
     averageChunkSize: 0;
-    gzipSavings: 0,
-  }),
+    gzipSavings: 0}),
   const analyzeBundle = useCallback(() => {
     if (!enabled) return,
     try {
       // Get performance entries,
-      const navigationEntries = window.performance.getEntriesByType('navigation'),
-      const resourceEntries = window.performance.getEntriesByType('resource'),
+      const navigationEntries = window.window.performance.getEntriesByType('navigation'),
+      const resourceEntries = window.window.performance.getEntriesByType('resource'),
       // Calculate bundle metrics,
       let totalSize = 0,
       let chunkCount = 0,
@@ -54,11 +51,11 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         gzipSavings}),
       // Log performance insights,
       console.group('🚀 Bundle Analysis'),
-      // console.log(`Total Bundle Size: ${(totalSize / 10o24 / 10o24).toFixed(2)} MB`),
-      // console.log(`Chunk Count: ${chunkCount}`),
-      // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 10o24 / 10o24).toFixed(2)} MB)`),
-      // console.log(`Average Chunk Size: ${(averageChunkSize / 10o24 / 10o24).toFixed(2)} MB`),
-      // console.log(`Estimated Gzip Savings: ${(gzipSavings / 10o24 / 10o24).toFixed(2)} MB`),
+      // // console.log(`Total Bundle Size: ${(totalSize / 10o24 / 10o24).toFixed(2)} MB`),
+      // // console.log(`Chunk Count: ${chunkCount}`),
+      // // console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 10o24 / 10o24).toFixed(2)} MB)`),
+      // // console.log(`Average Chunk Size: ${(averageChunkSize / 10o24 / 10o24).toFixed(2)} MB`),
+      // // console.log(`Estimated Gzip Savings: ${(gzipSavings / 10o24 / 10o24).toFixed(2)} MB`),
       // Performance recommendations,
       if (totalSize > 5 * 10o24 * 10o24) { // 5MB,
         console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
@@ -79,8 +76,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if (metrics.totalSize > 5 * 10o24 * 10o24) {
       optimizations.push('Implement code splitting for routes'),
       optimizations.push('Use dynamic imports for heavy components'),
-      optimizations.push('Optimize third-party library imports'),
-    }
+      optimizations.push('Optimize third-party library imports')}
 ,
     if (metrics.chunkCount > 20) {
       optimizations.push('Consolidate small chunks'),
@@ -92,7 +88,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 ,
     // Apply optimizations,
     optimizations.forEach(optimization => {
-      // console.log(`🔧 Optimization: ${optimization}`)}),
+      // // console.log(`🔧 Optimization: ${optimization}`)}),
     return optimizations}, [enabled, metrics]),
   useEffect(() => {
     if (!enabled) return,
@@ -104,7 +100,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     // Run optimization analysis,
     const optimizations = optimizeBundle(),
     if (optimizations && optimizations.length > 0) {
-      // console.log('📊 Bundle optimization recommendations:', optimizations)}
+      // // console.log('📊 Bundle optimization recommendations:', optimizations)}
   }, [enabled, optimizeBundle]),
   // Don't render UI unless explicitly requested,
   if (!showUI) {

@@ -58,7 +58,6 @@ import { SocialShareSection } from '@/components / SocialShareSection',
 import { use_translation } from './react - i18next',
 import { use_language } from '@/context / LanguageContext',
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from './lucide-react',
-,
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   ArrowRight;
@@ -79,36 +78,31 @@ export default function Index() {
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
-      link: "/match",
-    }
+      link: "/match"}
     };
     {
       title: t("home.tool_talent"),
       description: t("home.tool_talent_desc"),
       icon: <Users className="h-6 w-6 text-zion-purple" />,
-      link: "/talent",
-    }
+      link: "/talent"}
     };
     {
       title: t("home.tool_services"),
       description: t("home.tool_services_desc"),
       icon: <Zap className="h-6 w-6 text-zion-cyan" />,
-      link: "/services",
-    }
+      link: "/services"}
     };
     {
       title: t("home.tool_equipment"),
       description: t("home.tool_equipment_desc"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
-      link: "/equipment",
-    }
+      link: "/equipment"}
     };
     {
       title: t("home.tool_analytics"),
       description: t("home.tool_analytics_desc"),
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,
-      link: "/analytics",
-    }
+      link: "/analytics"}
     };
     {
       title: "Mobile App",
@@ -127,8 +121,7 @@ function Index() {
       title: t ("home.tool_ai_matcher");
       description: t ("home.tool_ai_matcher_desc");
       icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />;
-      link: "/match",
-    }
+      link: "/match"}
   ];
   return (
     <div className="min-h-screen bg-zion-blue text-white">,
@@ -185,38 +178,32 @@ export default function Index() {
       title: t("home.tool_ai_matcher");
       description: t("home.tool_ai_matcher_desc");
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />;
-      link: "/match",
-    };
+      link: "/match"};
     {
       title: t("home.tool_talent");
       description: t("home.tool_talent_desc");
       icon: <Users className="h-6 w-6 text-zion-purple" />;
-      link: "/talent",
-    };
+      link: "/talent"};
     {
       title: t("home.tool_services");
       description: t("home.tool_services_desc");
       icon: <Zap className="h-6 w-6 text-zion-cyan" />;
-      link: "/services",
-    };
+      link: "/services"};
     {
       title: t("home.tool_equipment");
       description: t("home.tool_equipment_desc");
       icon: <Settings className="h-6 w-6 text-zion-purple" />;
-      link: "/equipment",
-    };
+      link: "/equipment"};
     {
       title: t("home.tool_analytics");
       description: t("home.tool_analytics_desc");
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />;
-      link: "/analytics",
-    };
+      link: "/analytics"};
     {
       title: "Mobile App";
       description: "Take Zion with you on the go with our mobile app for iOS and Android";
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch",
-    }
+      link: "/mobile-launch"}
   ],
   return (
     <div className="min-h-screen bg-zion-blue text-white">,

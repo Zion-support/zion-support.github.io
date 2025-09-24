@@ -2,8 +2,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
-  selectedCountry: CountryPricing | null,
-}
+  selectedCountry: CountryPricing | null}
 ,
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
@@ -23,8 +22,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   // Handle country selection,
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null,
-    onCountryChange(country),
-  }
+    onCountryChange(country)}
   };
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   return (
@@ -53,8 +51,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
-  selectedCountry: CountryPricing | null,
-}
+  selectedCountry: CountryPricing | null}
 ,
 export function CountrySelector(): any ({ onCountryChange, selectedCountry }: CountrySelectorProps) {
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
@@ -111,8 +108,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { CountryPricing, onsiteServicePricing } from '@/data / onsiteServicePricing',
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
-  selected_country: CountryPricing | null,
-}
+  selected_country: CountryPricing | null}
 export /**,
  * CountrySelector - Function description,
  */,

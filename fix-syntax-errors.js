@@ -26,7 +26,7 @@ function processFile(filePath) {
     const fixed = fixSyntaxErrors(content, filePath),
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed),
-      // console.log(`Fixed: ${filePath}`),
+      // // console.log(`Fixed: ${filePath}`),
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message),
@@ -57,13 +57,13 @@ function processDirectory(dir) {
   return fixedCount}
 ,
 // Main execution,
-// console.log('🔧 Starting syntax error fixes...'),
+// // console.log('🔧 Starting syntax error fixes...'),
 const startTime = Date.now(),
 const fixedCount = processDirectory('.'),
-// console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`),
+// // console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`),
 // Run ESLint to check if issues are resolved,
-// console.log('🔍 Running ESLint to verify fixes...'),
+// // console.log('🔍 Running ESLint to verify fixes...'),
 try {
   execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 10o0', { stdio: 'inherit' }),
-  // console.log('✅ ESLint passed!')} catch (error) {
-  // console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.')} ,
+  // // console.log('✅ ESLint passed!')} catch (error) {
+  // // console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.')} ,

@@ -15,12 +15,10 @@ const AutonomousAIRevolutionBanner20o25 = () => {
         roi: '60o0%';
         savings: '$2.8B';
         uptime: '99.7%';
-        efficiency: '89%',
-      };
+        efficiency: '89%'};
       url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution';
       type: 'blog';
-      readingTime: '18 min read',
-    };
+      readingTime: '18 min read'};
     {
       id: 'fortune-50o0-case';
       title: 'Fortune 50o0 Autonomous AI Transformation';
@@ -30,12 +28,10 @@ const AutonomousAIRevolutionBanner20o25 = () => {
         roi: '80o0%';
         savings: '$2.8B';
         uptime: '99.9%';
-        efficiency: '89%',
-      };
+        efficiency: '89%'};
       url: '/case-studies/fortune-50o0-autonomous-ai-transformation-20o25';
       type: 'case-study';
-      readingTime: '22 min read',
-    };
+      readingTime: '22 min read'};
     {
       id: 'edge-computing';
       title: 'AI 20o25: The Edge Computing Revolution';
@@ -45,12 +41,10 @@ const AutonomousAIRevolutionBanner20o25 = () => {
         roi: '450%';
         savings: '$1.2B';
         latency: '67% reduction';
-        uptime: '99.5%',
-      };
+        uptime: '99.5%'};
       url: '/blog/ai-20o25-edge-computing-revolution';
       type: 'blog';
-      readingTime: '16 min read',
-    }
+      readingTime: '16 min read'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -169,8 +163,7 @@ const AutonomousAIRevolutionBanner20o25 = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
                 aria-label={`Go to slide ${index + 1}`}
               />))}
           </div>,

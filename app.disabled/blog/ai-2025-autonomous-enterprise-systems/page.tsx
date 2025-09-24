@@ -411,6 +411,5 @@ export default function AutonomousEnterpriseSystemsPage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

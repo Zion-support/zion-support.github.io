@@ -13,8 +13,7 @@ export function CartDrawer() {
   const handleClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
       e.preventDefault(),
-      setLoginOpen(true),
-    }
+      setLoginOpen(true)}
   };
   return (
     <>,

@@ -14,26 +14,20 @@ const seedCompany: CompanyRecord = {
     seatsUsed: 3,
     usageLimits: {
       monthlyJobPosts: 50,
-      budgetCapUsd: 10000,
-    },
-  },
+      budgetCapUsd: 10000}},
   members: [
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' },
-  ],
+    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],
   activity: [
     { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } },
-  ],
+    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }],
   invoices: [
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },
-  ],
-};
+    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]};
 
-const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
-const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
+const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany };
+const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany };
 
 export const store = {
   getCompanyBySlug(slug: string): CompanyRecord | null {
@@ -55,12 +49,10 @@ export const store = {
         tier: 'teams',
         seatsPurchased: 10,
         seatsUsed: 0,
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 },
-      },
+        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }},
       members: [],
       activity: [],
-      invoices: [],
-    };
+      invoices: []};
     companiesById[id] = record;
     companiesBySlug[slug] = record;
     return record;
@@ -105,5 +97,4 @@ export const store = {
   listInvoices(companyId: string): InvoiceRecord[] {
     const company = companiesById[companyId];
     return company ? company.invoices : [];
-  },
-};
+  }};

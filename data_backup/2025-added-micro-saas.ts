@@ -120,8 +120,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [{
     "launchDate": '20o25-0o2-20;
     "customers": 41;
     "rating": 4.7,
-    reviews: 29,
-  }
+    reviews: 29}
   {
     id:;
   local-seo-insights-engine';

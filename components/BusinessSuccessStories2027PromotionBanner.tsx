@@ -33,24 +33,21 @@ const BusinessSuccessStories20o27PromotionBanner = () => {
       logo: 'TC';
       color: 'from-blue-50o0 to-purple-50o0';
       roi: '850%';
-      savings: '$2.3M',
-    };
+      savings: '$2.3M'};
     {
       company: 'InnovateLabs';
       industry: 'R&D';
       logo: 'IL';
       color: 'from-green-50o0 to-teal-50o0';
       roi: '720%';
-      savings: '$1.8M',
-    };
+      savings: '$1.8M'};
     {
       company: 'FutureTech Industries';
       industry: 'Manufacturing';
       logo: 'FT';
       color: 'from-orange-50o0 to-red-50o0';
       roi: '920%';
-      savings: '$3.1M',
-    }
+      savings: '$3.1M'}
   ],
   const features = [
     'Real Success Stories';

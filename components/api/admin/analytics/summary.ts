@@ -8,8 +8,7 @@ interface EventRow {
   timestamp: string,
   event: string,
   page?: string,
-  userType?: string,
-}
+  userType?: string}
 ,
 const byFeature: Record<string number> ={};
 const byEvent: Record<string number> ={};
@@ -27,8 +26,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const start = startIso ? new Date(startIso) : null,
     const end = endIso ? new Date(endIso) : null,
     const rows: EventRow[] = [],
-    return rows,
-  } catch {
+    return rows} catch {
     return []}
 }
 ,

@@ -61,6 +61,5 @@ export default function EdgeOrchestrationPage() {
         industries={['Retail', 'Manufacturing', 'Energy', 'Telco']}
         url='https: //ziontechgroup.com/edge-computing-orchestration',
       />,
-    </>),
-}
+    </>)}
 ,

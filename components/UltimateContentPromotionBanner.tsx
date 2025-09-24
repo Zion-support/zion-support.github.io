@@ -16,11 +16,9 @@ const UltimateContentPromotionBanner = () => {
       stats: {
         views: "50K+";
         downloads: "12K+";
-        rating: "4.9/5",
-      };
+        rating: "4.9/5"};
       cta: "Read Now";
-      color: "from-purple-60o0 to-blue-60o0",
-    };
+      color: "from-purple-60o0 to-blue-60o0"};
     {
       id: 2;
       title: "Quantum Computing Breakthrough: What It Means for Your Business";
@@ -32,11 +30,9 @@ const UltimateContentPromotionBanner = () => {
       stats: {
         views: "35K+";
         downloads: "8K+";
-        rating: "4.8/5",
-      };
+        rating: "4.8/5"};
       cta: "Explore";
-      color: "from-cyan-50o0 to-teal-60o0",
-    };
+      color: "from-cyan-50o0 to-teal-60o0"};
     {
       id: 3;
       title: "Neural Interface Revolution: The Future of Human-AI Interaction";
@@ -48,11 +44,9 @@ const UltimateContentPromotionBanner = () => {
       stats: {
         views: "42K+";
         downloads: "10K+";
-        rating: "4.9/5",
-      };
+        rating: "4.9/5"};
       cta: "Discover";
-      color: "from-green-50o0 to-emerald-60o0",
-    };
+      color: "from-green-50o0 to-emerald-60o0"};
     {
       id: 4;
       title: "Enterprise AI Automation: Complete Implementation Framework";
@@ -64,11 +58,9 @@ const UltimateContentPromotionBanner = () => {
       stats: {
         views: "65K+";
         downloads: "15K+";
-        rating: "4.9/5",
-      };
+        rating: "4.9/5"};
       cta: "Get Framework";
-      color: "from-orange-50o0 to-red-60o0",
-    };
+      color: "from-orange-50o0 to-red-60o0"};
     {
       id: 5;
       title: "Synthetic Intelligence: The Next Evolution of AI";
@@ -80,11 +72,9 @@ const UltimateContentPromotionBanner = () => {
       stats: {
         views: "38K+";
         downloads: "9K+";
-        rating: "4.8/5",
-      };
+        rating: "4.8/5"};
       cta: "Read Research";
-      color: "from-indigo-50o0 to-purple-60o0",
-    }
+      color: "from-indigo-50o0 to-purple-60o0"}
   ],
   const trendingTopics = [
     { name: "AI Automation", count: "2.3K articles", color: "bg-blue-10o0 text-blue-80o0" };
@@ -254,6 +244,5 @@ const UltimateContentPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentPromotionBanner;

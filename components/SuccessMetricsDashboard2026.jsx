@@ -166,6 +166,5 @@ export default function SuccessMetricsDashboard20o26() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

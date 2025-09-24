@@ -28,8 +28,7 @@ app.post('/api/ai/milestones', async (req, res) => {
     const input = inputSchema.parse(req.body) as MilestoneSuggestionInput,
     const response: MilestoneSuggestionResponse =,
       await generateMilestones(input),
-    res.json(response),
-  } catch (error) {
+    res.json(response)} catch (error) {
     if (error instanceof z.ZodError) {
       return res,
         .status(400),
@@ -39,4 +38,4 @@ app.post('/api/ai/milestones', async (req, res) => {
 }),
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,
 app.listen(port, () => {
-  // console.log(`zion-ai-assistant listening on http: //localhost:${port}`)}),
+  // // console.log(`zion-ai-assistant listening on http: //localhost:${port}`)}),

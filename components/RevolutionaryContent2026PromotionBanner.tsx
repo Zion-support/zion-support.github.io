@@ -162,6 +162,5 @@ const RevolutionaryContent20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o26PromotionBanner;

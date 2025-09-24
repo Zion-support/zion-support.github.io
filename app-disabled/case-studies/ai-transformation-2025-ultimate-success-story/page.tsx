@@ -576,6 +576,5 @@ export default function AITransformationSuccessPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

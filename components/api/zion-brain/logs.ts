@@ -11,8 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(401).json({ error: 'Unauthorized' }),function isAuthorized(req: NextApiRequest): boolean {
   const token = req && req.headers['x-admin-token'] || req && req.query.token,
   const superToken = process && process.env.SUPERADMIN_TOKEN,
-  return !superToken || token === superToken,
-}
+  return !superToken || token === superToken}
 })}
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') })}

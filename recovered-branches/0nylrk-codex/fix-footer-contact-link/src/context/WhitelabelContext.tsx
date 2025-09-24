@@ -10,10 +10,8 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string,
     subtitle: string,
-    cta: string,
-  };
-  tenant: WhitelabelTenant | null,
-}
+    cta: string};
+  tenant: WhitelabelTenant | null}
 ,
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false;
@@ -38,8 +36,7 @@ export const useWhitelabel = (): WhitelabelContextType => {
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.,
   return context as WhitelabelContextType};
 interface WhitelabelProviderProps {
-  children: ReactNode,
-}
+  children: ReactNode}
 ,
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   const [contextValuesetContextValue] = useState<WhitelabelContextType>(defaultContext),

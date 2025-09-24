@@ -6,8 +6,7 @@ export type WhatsNewItem = {
   href: string,
   emoji?: string,
   highlight?: boolean,
-  date?: string,
-};
+  date?: string};
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
     id: 'agent-platform-slos-20o26-guide';

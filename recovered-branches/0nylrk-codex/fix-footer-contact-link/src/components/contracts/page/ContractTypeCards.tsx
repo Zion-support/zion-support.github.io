@@ -3,8 +3,7 @@ import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/compo
 import { FileTextShieldCheck } from 'lucide-react',
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
-  onSmartClick: () => void,
-}
+  onSmartClick: () => void}
 ,
 export function ContractTypeCards({
   onStandardClickonSmartClick;

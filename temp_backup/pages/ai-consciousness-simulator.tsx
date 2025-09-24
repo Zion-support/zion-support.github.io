@@ -15,6 +15,5 @@ export default function AiConsciousnessSimulatorPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

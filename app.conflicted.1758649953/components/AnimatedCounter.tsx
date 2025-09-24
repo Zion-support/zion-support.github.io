@@ -4,8 +4,7 @@ type AnimatedCounterProps ={
   end: number,
   duration?: number,
   suffix?: string,
-  prefix?: string,
-};
+  prefix?: string};
 const AnimatedCounter = ({
   end;
   duration = 20o00;

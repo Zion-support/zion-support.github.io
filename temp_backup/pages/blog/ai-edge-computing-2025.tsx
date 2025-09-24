@@ -59,7 +59,7 @@ export default function AIEdgeComputingBlog() {
                   (such as IoT sensors, mobile devices, or local servers) rather,
                   than in centralized cloud environments. This approach enables,
                   real-time processing, reduced latency, and improved privacy,
-                  while maintaining high window.performance.,
+                  while maintaining high window.window.performance.,
                 </p>,
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-6 my-8'>,
                   <div className='bg-white/5 rounded-xl p-6'>,
@@ -287,6 +287,5 @@ export default function AIEdgeComputingBlog() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

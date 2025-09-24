@@ -13,8 +13,7 @@ pricing: {
     starter: string,
     professional: string,
     enterprise: string,
-    custom: string,
-};
+    custom: string};
   "estimatedTime": string,
   technologies: string[],
   image?: string,

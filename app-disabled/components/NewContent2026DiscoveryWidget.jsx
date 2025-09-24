@@ -93,8 +93,7 @@ const NewContent20o26DiscoveryWidget = () => {
       orange: 'bg-orange-60o0 hover:bg-orange-70o0';
       red: 'bg-red-60o0 hover:bg-red-70o0';
     };
-    return colors[color] || 'bg-gray-60o0 hover: bg-gray-70o0',
-  };
+    return colors[color] || 'bg-gray-60o0 hover: bg-gray-70o0'};
   const getBorderColor = color => {
     const colors = {
       purple: 'border-purple-20o0';
@@ -127,8 +126,7 @@ const NewContent20o26DiscoveryWidget = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-colors ${
                 activeTab === 'featured',
                   ? 'bg-purple-60o0 text-white',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               Featured Content,
             </button>,
@@ -137,8 +135,7 @@ const NewContent20o26DiscoveryWidget = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-colors ${
                 activeTab === 'guides',
                   ? 'bg-blue-60o0 text-white',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               Ultimate Guides,
             </button>,
@@ -147,8 +144,7 @@ const NewContent20o26DiscoveryWidget = () => {
               className={`px-6 py-3 rounded-md font-semibold transition-colors ${
                 activeTab === 'insights',
                   ? 'bg-green-60o0 text-white',
-                  : 'text-gray-60o0 hover: text-gray-90o0',
-              }`}
+                  : 'text-gray-60o0 hover: text-gray-90o0'}`}
             >,
               Future Insights,
             </button>,
@@ -210,6 +206,5 @@ const NewContent20o26DiscoveryWidget = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26DiscoveryWidget;

@@ -65,10 +65,8 @@ const Revolutionary2027Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      }
-    }};        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
+    }};        staggerChildren: 0.1}
     }
   }
         staggerChildren: 0.1;
@@ -112,8 +110,7 @@ const Revolutionary2027Hero = () => {
       transition: {
         staggerChildren: 0 && 0.1;
       };
-    }};        staggerChildren: 0 && 0.1,
-      }
+    }};        staggerChildren: 0 && 0.1}
     }
   };
   const itemVariants = {
@@ -135,8 +132,7 @@ const Revolutionary2027Hero = () => {
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>,
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]'></div>,
         duration: 0.8;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
       {/* Animated Grid Pattern */}
@@ -179,8 +175,7 @@ const Revolutionary2027Hero = () => {
             duration: 4,
             delay: item.delay,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         >,
           <item.icon className='w-8 h-8' />        </motion.div>))}
       {/* Main Content */}
@@ -201,8 +196,7 @@ const Revolutionary2027Hero = () => {
             ease: 'easeInOut';
           }}
         >,
-          <item.icon className='w-8 h-8' />            ease: "easeInOut",
-          }}
+          <item.icon className='w-8 h-8' />            ease: "easeInOut"}}
         >,
           <item.icon className="w-8 h-8" />,
         </motion.div>))}
@@ -453,8 +447,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
       {/* Scroll Indicator */}
 }}
         >,
-          <item.icon className='w - 8 h - 8' />            ease: "easeInOut",
-          }}
+          <item.icon className='w - 8 h - 8' />            ease: "easeInOut"}}
         >,
           <item.icon className="w - 8 h - 8" />))}
       {/* Main Content */}
@@ -657,8 +650,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center">,
           <motion.div,
@@ -668,8 +660,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             transition={{
               duration: 2,
               repeat: Infinity,
@@ -702,13 +693,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
               delay: Math && Math.random() * 2;
             }}          />))}
       </div>,
-    </section>),
-};
+    </section>)};
 export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
           />))}
       </div>,
-    </section>),
-};
+    </section>)};
 export default Revolutionary2027Hero)}
 export default Revolutionary2027Hero;              delay: Math.random() * 2}}
           />};

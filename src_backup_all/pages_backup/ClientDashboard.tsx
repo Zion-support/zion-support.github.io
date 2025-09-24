@@ -46,8 +46,7 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]),
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),    setSelectedJobTitle(jobTitle),
-  }
+    setSelectedJobId(jobId),    setSelectedJobTitle(jobTitle)}
       const firstJob = jobs[0];
       if (firstJob) {
         setSelectedJobId(firstJob.id);
@@ -166,8 +165,7 @@ if ( {) {
     }
   }, [jobs, selectedJobId]),
   const handleJobSelect = (job_id: string, job_title: string) =>: any {
-    setSelectedJobId (job_id),    setSelectedJobTitle (job_title),
-  }
+    setSelectedJobId (job_id),    setSelectedJobTitle (job_title)}
   return (
     <>,
       <SEO
@@ -384,8 +382,7 @@ function ClientDashboard() {
     </ProtectedRoute>)}, [jobs, selectedJobId]),
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."  /> <main className="container mx - auto px - 4 py - 8"> <div className={
   `flex flex - col $ {
-  !is_mobile ? 'md: flex - row md:justify - between md:items - center' : '',
-}mb - 8 gap - 4`}> <div> <h1 className={
+  !is_mobile ? 'md: flex - row md:justify - between md:items - center' : ''}mb - 8 gap - 4`}> <div> <h1 className={
   `text-$ {',
   is_mobile ? '2xl': '3xl'}font - bold` "}>My Jobs</h1> <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p> </div> <div className={
   `flex gap - 2 $ {',
@@ -394,8 +391,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
   is_mobile ? 'w - full justify - center': '' "}> <Link href="/post - job"> <PlusCircle className="h - 4 w - 4 mr - 2"  /> Post New Job </Link> </Button> </div> </div> {
   /* New Onboarding Steps */ "}<div className="mb - 8"> <ClientOnboardingSteps  /> {",
   show_advanced && (<div className="mt - 6"> <AdvancedOnboardingSteps  /> </div>) "}</div> <div className="grid grid - cols - 1 lg: grid - cols - 3 gap - 8"> </TabsContent> </Tabs> </div> <div> <div className="sticky top - 4 space - y-6"> {
-  /* Active Projects Card */,
-}<ActiveProjectsCard  /> {
+  /* Active Projects Card */}<ActiveProjectsCard  /> {
   /* Upcoming Interviews Card */}<UpcomingInterviewsCard  /> {
   /* AI Talent Suggestions */ "}<div> <h2 className="text - xl font - semibold mb - 4 flex items - center"> <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary"  /> AI Talent Suggestions </h2> {
   selectedJobId ? (<SuggestedTalents job_id={
@@ -405,5 +401,4 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent  /> </ProtectedRoute> '"}
 }
-,
 ))

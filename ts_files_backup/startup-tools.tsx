@@ -43,8 +43,7 @@ export default function StartupToolsPage() {
       useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.';
       pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'];
       cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'];
-      bestFor: 'B2B startupsSaaS companiesmarketing teams',
-    };
+      bestFor: 'B2B startupsSaaS companiesmarketing teams'};
     {
       name: 'Mailchimp';
       description: 'Email marketing platform that helps businesses createsendand track email campaigns with ease.';
@@ -65,8 +64,7 @@ export default function StartupToolsPage() {
       useCase: 'Ideal for startups that need to build email listsnurture leadsand communicate with customers.';
       pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'];
       cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'];
-      bestFor: 'E-commercecontent creatorsmall businesses',
-    };
+      bestFor: 'E-commercecontent creatorsmall businesses'};
     {
       name: 'Calendly';
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.';
@@ -87,8 +85,7 @@ export default function StartupToolsPage() {
       useCase: 'Essential for startups that need to schedule sales callsinvestor meetingsand team collaborations efficiently.';
       pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'];
       cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'];
-      bestFor: 'Sales teamsconsultantsremote teams',
-    };
+      bestFor: 'Sales teamsconsultantsremote teams'};
     {
       name: 'Canva';
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.';
@@ -109,8 +106,7 @@ export default function StartupToolsPage() {
       useCase: 'Perfect for startups that need to create marketing materialsocial media contentand presentations.';
       pros: ['Free 'tier', 'Easy to 'use', 'Great 'templates', 'Affordable'];
       cons: ['Limited 'customization', 'Watermark on 'free', 'Basic features'];
-      bestFor: 'Marketing teamscontent creatorsmall businesses',
-    };
+      bestFor: 'Marketing teamscontent creatorsmall businesses'};
     {
       name: 'Buffer';
       description: 'Social media management platform that helps businesses schedule postsanalyze performanceand manage multiple accounts.';
@@ -131,8 +127,7 @@ export default function StartupToolsPage() {
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.';
       pros: ['Free 'tier', 'Easy to 'use', 'Good 'analytics', 'Affordable'];
       cons: ['Limited free 'features', 'Basic 'scheduling', 'Limited platforms'];
-      bestFor: 'Social media managersmall businessescontent creators',
-    };
+      bestFor: 'Social media managersmall businessescontent creators'};
     {
       name: 'Notion';
       description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.';
@@ -153,8 +148,7 @@ export default function StartupToolsPage() {
       useCase: 'Perfect for startup teams that need a flexible workspace for documentationproject managementand knowledge sharing.';
       pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'];
       cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'];
-      bestFor: 'Remote teamsproject managersknowledge workers',
-    };
+      bestFor: 'Remote teamsproject managersknowledge workers'};
     {
       name: 'Stripe';
       description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.';
@@ -175,8 +169,7 @@ export default function StartupToolsPage() {
       useCase: 'Essential for any startup that needs to accept paymentsespecially SaaS companies and e-commerce businesses.';
       pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'];
       cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'];
-      bestFor: 'SaaS companiese-commerceonline businesses',
-    };
+      bestFor: 'SaaS companiese-commerceonline businesses'};
     {
       name: 'Intercom';
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.';
@@ -197,8 +190,7 @@ export default function StartupToolsPage() {
       useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.';
       pros: ['Great 'UX', 'Powerful 'features', 'Good 'integrations', 'Mobile apps'];
       cons: [', 'Expensive', 'Complex 'pricing', 'Can be overwhelming'];
-      bestFor: 'SaaS companiesonline businessescustomer support teams',
-    };
+      bestFor: 'SaaS companiesonline businessescustomer support teams'};
     {
       name: 'Mixpanel';
       description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.';
@@ -219,8 +211,7 @@ export default function StartupToolsPage() {
       useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.';
       pros: ['Powerful 'analytics', 'Real-time 'data', 'Good 'documentation', 'Flexible'];
       cons: ['Complex 'setup', 'Expensive at 'scale', 'Steep learning curve'];
-      bestFor: 'Product teamsgrowth hackersdata analysts',
-    };
+      bestFor: 'Product teamsgrowth hackersdata analysts'};
     {
       name: 'Vercel';
       description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.';
@@ -238,11 +229,10 @@ export default function StartupToolsPage() {
         'Preview deployments';
         'Edge functions'];
       website: 'https://vercel.com';
-      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.performance.';
+      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.window.performance.';
       pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'];
       cons: ['Limited backend 'features', 'Can be expensive for high 'traffic', 'Vendor lock-in'];
-      bestFor: 'Frontend developerstartup teamsmodern web apps',
-    }
+      bestFor: 'Frontend developerstartup teamsmodern web apps'}
   ],
   const categories = [', 'All', 'Marketing & 'Sales', 'Email 'Marketing', 'Productivity', 'Design', 'Social 'Media', 'Payments'Customer 'Support', 'Analytics'Development'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
@@ -342,8 +332,7 @@ export default function StartupToolsPage() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category,
                     ? 'bg-orange-600 text-white shadow-lg',
-                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
-                }`}
+                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -508,6 +497,5 @@ export default function StartupToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

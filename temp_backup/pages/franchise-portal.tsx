@@ -35,8 +35,7 @@ export default function FranchisePortalPage() {
                 className='grid grid-cols-1 md:grid-cols-2 gap-4',
                 onSubmit={e => {
                   e.preventDefault(),
-                  setSubmitted(true),
-                }}
+                  setSubmitted(true)}}
               >,
                 <div>,
                   <label className='block text-sm mb-1'>Name</label>,
@@ -158,6 +157,5 @@ export default function FranchisePortalPage() {
           </div>,
         </section>,
       </div>,
-    </DashboardLayout>),
-}
+    </DashboardLayout>)}
 ,

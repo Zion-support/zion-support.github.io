@@ -83,8 +83,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'system':,
       return <Badge className="bg-yellow-500">System</Badge>,
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-  }
+      return <Badge variant="outline">Notification</Badge>}
 }
 ,
 const getNotificationTypeBadge = (type: NotificationType) =>: any {
@@ -102,8 +101,7 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
     case 'system':,
       return <Badge className="bg - yellow - 500">System</Badge>;
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-  }
+      return <Badge variant="outline">Notification</Badge>}
 }
 ,
 const NotificationCard: React.FC<{
@@ -115,11 +113,9 @@ const NotificationCard: React.FC<{
     read: boolean,
     created_at: string,
     action_url?: string,
-    action_text?: string,
-  }
+    action_text?: string}
   onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  onDismiss: (id: string) => Promise<void>}> = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate(),
   const handleAction = () => {
     if (!notification.read) {
@@ -143,20 +139,16 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     case 'system':,
       return <AlertCircle className={cn(className, "text-yellow-500")} />;
     default:,
-      return <Bell className={cn(className, "text-gray-500")} />,
-}
+      return <Bell className={cn(className, "text-gray-500")} />}
 ,
     case 'system':,
       return <Badge className="bg-yellow-500">System</Badge>;
     default: ,
-      return <Badge variant="outline">Notification</Badge>,
-  }
+      return <Badge variant="outline">Notification</Badge>}
 };
   const handleAction = () => {
-,
     if (!notification.read) {
-      onMarkAsRead(notification.id),
-}
+      onMarkAsRead(notification.id)}
     if (notification.action_url) {
       navigate(notification.action_url)}
 };
@@ -224,13 +216,11 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 };
 export default function NotificationsPage() {
   const {
-,
     filteredNotifications,
     unreadCount,
     action_text?: string}
   onMarkAsRead: (id: string) => Promise < void>;
-  on_dismiss: (id: string) => Promise < void>,
-}> = ({ notification, onMarkAsRead, on_dismiss }) => {
+  on_dismiss: (id: string) => Promise < void>}> = ({ notification, onMarkAsRead, on_dismiss }) => {
   const navigate = use_navigate (),
   const handle_action = () =>: any {
     // Check condition,
@@ -321,8 +311,7 @@ function NotificationsPage() {
     dismissNotification;
     loading;
     filter;
-    setFilter} = useNotifications() as NotificationContextType,
-} = useNotifications() as NotificationContextType;
+    setFilter} = useNotifications() as NotificationContextType} = useNotifications() as NotificationContextType;
   return (
     <>,
       <SEO

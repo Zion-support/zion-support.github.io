@@ -12,24 +12,21 @@ const NewContent20o25UltimateContentRevolutionBanner = () => {
       url: "/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough";
       type: "Blog Post";
       metrics: "25,0o00% ROI";
-      savings: "$50o0B+",
-    };
+      savings: "$50o0B+"};
     {
       title: "Fortune 50o0 AI Content Revolution Success";
       description: "$50o0B Annual Savings - 25,0o00% ROI Success Story";
       url: "/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story";
       type: "Case Study";
       metrics: "25,0o00% ROI";
-      savings: "$50o0B",
-    };
+      savings: "$50o0B"};
     {
       title: "AI Content Revolution Implementation Guide";
       description: "Complete Roadmap to 25,0o00% ROI - Revolutionary Content Strategy";
       url: "/resources/ai-content-revolution-implementation-guide-20o25";
       type: "Implementation Guide";
       metrics: "25,0o00% ROI";
-      savings: "$50o0B+",
-    }
+      savings: "$50o0B+"}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

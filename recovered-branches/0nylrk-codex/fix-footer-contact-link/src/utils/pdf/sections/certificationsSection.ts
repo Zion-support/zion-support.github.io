@@ -12,8 +12,7 @@ export function addCertificationsSection(
   // Check if we need to add a new page,
   if (yPos > 250) {
     doc.addPage(),
-    yPos = 20,
-  }
+    yPos = 20}
 ,
   doc.setFontSize(16),
   doc.setTextColor(colors.heading),

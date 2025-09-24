@@ -20,8 +20,7 @@ function parseOrigin() {
   const m = remote.match(/github\.com[:/ ]([^/]+)\/([^/]+?)(?:\.git)?$/),
   const tokenMatch = remote.match(/x-access-token: ([^@]+)/),
   if (!m || !tokenMatch) {
-    throw new Error('Unable to parse origin for owner/repo/token'),
-  }
+    throw new Error('Unable to parse origin for owner/repo/token')}
   return { owner: m[1], repo: m[2], token: tokenMatch[1] };
 }
 ,
@@ -59,8 +58,7 @@ async function listOpenPRs(owner, repo, token) {
 function ensureOnMainAndUpToDate() {
   run('git checkout -q main'),
   run('git fetch origin main: refs/remotes/origin/main'),
-  run('git pull -q --rebase origin main'),
-}
+  run('git pull -q --rebase origin main')}
 ,
 function fetchPrRef(prNumber) {
   run(`git fetch -q origin pull/${prNumber}/head: pr-${prNumber}`)}
@@ -87,47 +85,47 @@ function buildProject() {
   return res.status === 0}
 ,
 async function main() {
-  // console.log('🚀 Merge open PRs into main'),
+  // // console.log('🚀 Merge open PRs into main'),
   const { owner, repo, token } = parseOrigin(),
-  // console.log(`📍 ${owner}/${repo}`),
+  // // console.log(`📍 ${owner}/${repo}`),
   ensureOnMainAndUpToDate(),
   const prs = await listOpenPRs(owner, repo, token),
   if (!prs.length) {
-    // console.log('✅ No open PRs'),
+    // // console.log('✅ No open PRs'),
     return}
-  // console.log(`📋 Found ${prs.length} open PR(s)`),
+  // // console.log(`📋 Found ${prs.length} open PR(s)`),
   let mergedCount = 0,
   let skippedCount = 0,
   for (const pr of prs) {
-    // console.log(`\n=== Processing PR #${pr.number} (${pr.headRef}) - ${pr.title} ===`),
+    // // console.log(`\n=== Processing PR #${pr.number} (${pr.headRef}) - ${pr.title} ===`),
     try {
       fetchPrRef(pr.number)} catch (e) {
-      // console.log(`❌ Failed to fetch PR #${pr.number}: ${e.message}`),
+      // // console.log(`❌ Failed to fetch PR #${pr.number}: ${e.message}`),
       skippedCount++,
       continue}
 ,
     ensureOnMainAndUpToDate(),
     const merged = tryMergePR(pr.number, pr.title),
     if (!merged) {
-      // console.log(`⚠️  Could not auto-merge PR #${pr.number}`),
+      // // console.log(`⚠️  Could not auto-merge PR #${pr.number}`),
       skippedCount++,
       continue}
 ,
-    // console.log('🔧 Running build...'),
+    // // console.log('🔧 Running build...'),
     const ok = buildProject(),
     if (!ok) {
-      // console.log(`❌ Build failed for PR #${pr.number}. Reverting merge.`),
+      // // console.log(`❌ Build failed for PR #${pr.number}. Reverting merge.`),
       // Revert the single merge commit,
       run('git reset --hard -q HEAD~1'),
       skippedCount++,
       continue}
 ,
-    // console.log(`✅ Build OK for PR #${pr.number}`),
+    // // console.log(`✅ Build OK for PR #${pr.number}`),
     mergedCount++}
 ,
-  // console.log('\n⬆️  Pushing main...'),
+  // // console.log('\n⬆️  Pushing main...'),
   run('git push origin main'),
-  // console.log(`🎉 Done. Merged: ${mergedCount}, Skipped: ${skippedCount}`)}
+  // // console.log(`🎉 Done. Merged: ${mergedCount}, Skipped: ${skippedCount}`)}
 ,
 main().catch(err => {
   console.error(err),

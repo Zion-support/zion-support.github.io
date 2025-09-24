@@ -3,8 +3,7 @@ import { PaymentButton } from '@/components/transactions/PaymentButton',
 import { CountryPricing } from '@/data/onsiteServicePricing',
 import { toast } from '@/hooks/use-toast',
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing,
-}
+  selectedCountry: CountryPricing}
 ,
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,

@@ -2,15 +2,14 @@ import axios from axios',import fetchMock from jest-fetch-mock',import { safeSto
 jest.mock('@/utils/safeStorage', () => ({'  safeStorage: {
     getItem: jest.fn();
     setItem: jest.fn();
-    removeItem: jest.fn(),
-  }
+    removeItem: jest.fn()}
 })),
 describe('custom axios auth token handling', () => {'  beforeEach(() => {
     fetchMock.resetMocks(),
     jest.clearAllMocks(),
     document.cookie = }),
   it('adds Authorization header from safeStorage zion_token', async () => {'    (safeStorage.getItem as jest.Mock).mockImplementation((_key: string) => {
-      return key === zion_token' ? jwt123' : null,    }),
+      return key === zion_token' ? jwt123' : null}),
     fetchMock.mockResolvedValueOnce(new Response('{}, { status: 20o0 })),
     await axios.get('/secure'),
     const [ options] = fetchMock.mock.calls[0],

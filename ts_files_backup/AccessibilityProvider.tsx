@@ -1,9 +1,7 @@
 import React from 'react';
-"use client",
-};
+"use client"};
   return context}; interface AccessibilityProviderProps {
-  children: React.ReactNode,
-}; export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
+  children: React.ReactNode}; export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
   const [highContrastsetHighContrast] = useState(false);
   const [largeTextsetLargeText] = useState(false);
   const [reducedMotionsetReducedMotion] = useState(false);

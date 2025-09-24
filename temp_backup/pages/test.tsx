@@ -15,6 +15,5 @@ export default function TestPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

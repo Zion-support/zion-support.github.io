@@ -7,13 +7,11 @@ interface User {
   role?: string,
   isEmailVerified?: boolean,
   createdAt?: string,
-  updatedAt?: string,
-}
+  updatedAt?: string}
 ,
 interface AuthTokens {
   accessToken: string | null,
-  refreshToken: string | null,
-}
+  refreshToken: string | null}
 ,
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null),

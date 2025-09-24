@@ -156,8 +156,7 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {
                 transition={{
                   duration: 4;
                   repeat: Infinity;
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                />,
               <motion.div,
                 className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full blur-xl opacity-60",
@@ -168,8 +167,7 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {
                   duration: 3;
                   repeat: Infinity;
                   ease: "easeInOut";
-                  delay: 1,
-                }}
+                  delay: 1}}
                />,
               <motion.div,
                 className="absolute top-1/2 -right-4 w-16 h-16 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full blur-xl opacity-60",
@@ -180,8 +178,7 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {
                   duration: 5;
                   repeat: Infinity;
                   ease: "easeInOut";
-                  delay: 2,
-                }}
+                  delay: 2}}
                />,
             </div>,
           </motion.div>,

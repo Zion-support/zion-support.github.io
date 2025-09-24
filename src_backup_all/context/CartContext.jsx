@@ -23,8 +23,7 @@ function cartReducer(state, action) {
     case 'SET_ITEMS':,
       return { items: action.payload };
     default: ,
-      return state,
-  }
+      return state}
 }
 ,
 const CartContext = createContext(undefined),

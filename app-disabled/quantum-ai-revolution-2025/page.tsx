@@ -260,6 +260,5 @@ export default function QuantumAIRevolution20o25() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

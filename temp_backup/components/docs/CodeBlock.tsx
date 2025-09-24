@@ -1,8 +1,7 @@
 export type CodeBlockProps = {
   language?: string,
   children: string,
-  className?: string,
-};
+  className?: string};
 export default function CodeBlock({
   language;
   children;

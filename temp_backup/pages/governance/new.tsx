@@ -36,8 +36,7 @@ export default function NewProposal() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
       router.push(`/governance/${data.proposal.id}`)} catch (e: any) {
-      setError(e.message),
-    } finally {
+      setError(e.message)} finally {
       setLoading(false)}
   }
 ,

@@ -15,6 +15,5 @@ export default function TestAxiosPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

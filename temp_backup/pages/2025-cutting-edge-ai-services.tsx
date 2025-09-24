@@ -284,6 +284,5 @@ export default function CuttingEdgeAIServices20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

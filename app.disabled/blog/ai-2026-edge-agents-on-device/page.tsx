@@ -64,6 +64,5 @@ export default function EdgeAgentsOnDevicePage() {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

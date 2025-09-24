@@ -34,7 +34,7 @@ export default function UltraGuidePage() {
           <h2 className='text-2xl font-bold mb-4'>📚 Overview</h2>,
           <p className='text-xl text-white/90'>,
             This guide will walk you through implementing Instant deployment,
-            systems to enhance system window.performance.,
+            systems to enhance system window.window.performance.,
           </p>,
         </section>,
         <section className='mb-8'>,
@@ -57,6 +57,5 @@ export default function UltraGuidePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

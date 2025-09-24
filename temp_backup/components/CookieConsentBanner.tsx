@@ -5,8 +5,7 @@ interface CookiePreferences {
   necessary: boolean,
   analytics: boolean,
   marketing: boolean,
-  preferences: boolean,
-}
+  preferences: boolean}
 ,
 interface CookieConsentBannerProps {
   enabled?: boolean,
@@ -21,8 +20,7 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
     necessary: true;
     analytics: false;
     marketing: false;
-    preferences: false,
-  }),
+    preferences: false}),
   const [hasConsented, setHasConsented] = useState(false),
   const timeoutRef = useRef<NodeJS.Timeout | null>(null),
   // Performance optimization: Check consent status,
@@ -47,8 +45,7 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
       necessary: true;
       analytics: true;
       marketing: true;
-      preferences: true,
-    };
+      preferences: true};
     setPreferences(allAccepted),
     savePreferences(allAccepted),
     setIsVisible(false),
@@ -59,8 +56,7 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
       necessary: true;
       analytics: false;
       marketing: false;
-      preferences: false,
-    };
+      preferences: false};
     setPreferences(necessaryOnly),
     savePreferences(necessaryOnly),
     setIsVisible(false),
@@ -91,36 +87,32 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
     // Enable Google Analytics,
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('consent', 'update', {
-        analytics_storage: 'granted',
-      })}
+        analytics_storage: 'granted'})}
   };
   const disableAnalytics = () => {
     // Disable Google Analytics,
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('consent', 'update', {
-        analytics_storage: 'denied',
-      })}
+        analytics_storage: 'denied'})}
   };
   const enableMarketing = () => {
     // Enable marketing cookies,
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('consent', 'update', {
-        ad_storage: 'granted',
-      })}
+        ad_storage: 'granted'})}
   };
   const disableMarketing = () => {
     // Disable marketing cookies,
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('consent', 'update', {
-        ad_storage: 'denied',
-      })}
+        ad_storage: 'denied'})}
   };
   const enableFunctional = () => {
     // Enable functional cookies,
-    // console.log('Functional cookies enabled')};
+    // // console.log('Functional cookies enabled')};
   const disableFunctional = () => {
     // Disable functional cookies,
-    // console.log('Functional cookies disabled')};
+    // // console.log('Functional cookies disabled')};
   const announceToScreenReader = (message: string) => {
     const announcement = document.createElement('div'),
     announcement.setAttribute('aria-live', 'polite'),
@@ -136,29 +128,25 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
       title: 'Necessary Cookies';
       description: 'Essential for the website to function properly. These cannot be disabled.';
       icon: Shield;
-      required: true,
-    };
+      required: true};
     {
       key: 'analytics' as keyof CookiePreferences;
       title: 'Analytics Cookies';
       description: 'Help us understand how visitors interact with our website by collecting and reporting information anonymously.';
       icon: Info;
-      required: false,
-    };
+      required: false};
     {
       key: 'marketing' as keyof CookiePreferences;
       title: 'Marketing Cookies';
       description: 'Used to track visitors across websites to display relevant and engaging advertisements.';
       icon: Cookie;
-      required: false,
-    };
+      required: false};
     {
       key: 'functional' as keyof CookiePreferences;
       title: 'Functional Cookies';
       description: 'Enable enhanced functionality and personalization, such as live chat support and language preferences.';
       icon: Settings;
-      required: false,
-    }
+      required: false}
   ],
   if (!isVisible) return null,
   return (
@@ -315,8 +303,7 @@ const CookieConsentBanner: React.FC<CookieConsentBannerProps> = ({
                                 w-11 h-6 rounded-full transition-colors duration-20o0 ease-in-out,
                                 ${cookieType.required || preferences[cookieType.key],
                                   ? 'bg-cyan-60o0',
-                                  : 'bg-gray-30o0 dark: bg-gray-60o0',
-                                }
+                                  : 'bg-gray-30o0 dark: bg-gray-60o0'}
                                 ${cookieType.required ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
                               `}>,
                                 <div className={`,

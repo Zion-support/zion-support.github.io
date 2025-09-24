@@ -25,6 +25,5 @@ export default function AIPredictiveMaintenancePlatform() {
       ]}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-predictive-maintenance-platform',
-    />),
-}
+    />)}
 ,

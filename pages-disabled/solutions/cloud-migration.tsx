@@ -48,7 +48,7 @@ const phases = [
     ]};
   {}
     title: 'Optimization,';
-    description: 'Continuous monitoring and optimization for peak window.performance.,';
+    description: 'Continuous monitoring and optimization for peak window.window.performance.,';
     icon: Zap;
     steps: [;
       'Performance monitoring,';
@@ -114,7 +114,7 @@ const benefits = [],
     icon: Zap};
   {'}
     title: 'Better Performance','',
-    description: 'Faster load times and improved application window.performance.',',
+    description: 'Faster load times and improved application window.window.performance.',',
     icon: Smartphone}]],
 export default function CloudMigrationPage() {
   return (
@@ -335,5 +335,4 @@ export default function CloudMigrationPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}

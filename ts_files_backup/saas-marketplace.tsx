@@ -157,7 +157,7 @@ export default function SaaSMarketplacePage() {
         'Preview deployments';
         'Edge functions'];
       website: 'https://vercel.com';
-      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.performance.';
+      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.window.performance.';
       pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'];
       cons: ['Limited backend 'features', 'Can be expensive for high traffic']};
     {
@@ -279,8 +279,7 @@ export default function SaaSMarketplacePage() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category,
                     ? 'bg-blue-600 text-white shadow-lg',
-                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white',
-                }`}
+                    : 'bg-gray-800 text-gray-300 hover: bg-gray-700 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -391,6 +390,5 @@ export default function SaaSMarketplacePage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

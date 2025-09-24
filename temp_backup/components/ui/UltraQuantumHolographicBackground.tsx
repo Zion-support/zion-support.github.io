@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraQuantumHolographicBackgroundProps {
   children: React.ReactNode,
-  intensity?: number,
-}
+  intensity?: number}
 ,
 const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgroundProps> = ({
   children;
@@ -23,8 +22,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'energy',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'energy'}> = [],
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight};
@@ -197,8 +195,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-xl",
@@ -211,8 +208,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             duration: 6;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-xl",
@@ -225,8 +221,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 4,
-          }}
+            delay: 4}}
          />,
       </div>,
       {/* Content */}
@@ -243,8 +238,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/3 right-0 w-1 h-full bg-gradient-to-b from-transparent via-purple-40o0/30 to-transparent",
@@ -255,8 +249,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             duration: 6;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
       </div>,
     </div>)};

@@ -20,22 +20,19 @@ const NewFeaturesShowcase: React.FC = () => {
       title: "AI-Powered Analytics";
       description: "Advanced machine learning algorithms that provide deep insights into your business performance and predict future trends.";
       color: "from-purple-50o0 to-pink-50o0";
-      stats: "95% accuracy rate",
-    };
+      stats: "95% accuracy rate"};
     {
       icon: Shield;
       title: "Enterprise Security";
       description: "Military-grade encryption and security protocols to protect your most sensitive data and operations.";
       color: "from-blue-50o0 to-cyan-50o0";
-      stats: "99.9% uptime guarantee",
-    };
+      stats: "99.9% uptime guarantee"};
     {
       icon: Rocket;
       title: "Lightning Performance";
       description: "Optimized infrastructure that delivers blazing-fast response times and seamless user experiences.";
       color: "from-green-50o0 to-emerald-50o0";
-      stats: "50% faster loading",
-    };
+      stats: "50% faster loading"};
     {
       icon: Users;
       title: "Collaborative Workspace";
@@ -48,20 +45,17 @@ const NewFeaturesShowcase: React.FC = () => {
       name: "Sarah Johnson";
       role: "CEO, TechCorp";
       content: "Zion Tech Group transformed our digital infrastructure completely. The ROI was evident within the first month.";
-      avatar: "👩‍💼",
-    };
+      avatar: "👩‍💼"};
     {
       name: "Michael Chen";
       role: "CTO, InnovateLab";
       content: "Their AI solutions helped us automate 80% of our processes. The team's expertise is unmatched.";
-      avatar: "👨‍💻",
-    };
+      avatar: "👨‍💻"};
     {
       name: "Emily Rodriguez";
       role: "Director, FutureSystems";
       content: "The security and performance improvements have been game-changing for our business operations.";
-      avatar: "👩‍🔬",
-    }
+      avatar: "👩‍🔬"}
   ],
   const pricingTiers = [
     {
@@ -73,8 +67,7 @@ const NewFeaturesShowcase: React.FC = () => {
         "Standard Security";
         "Email Support";
         "Up to 5 users"];
-      popular: false,
-    };
+      popular: false};
     {
       name: "Professional";
       price: "$299";
@@ -85,8 +78,7 @@ const NewFeaturesShowcase: React.FC = () => {
         "Priority Support";
         "Up to 25 users";
         "Custom Integrations"];
-      popular: true,
-    };
+      popular: true};
     {
       name: "Enterprise";
       price: "Custom";
@@ -97,8 +89,7 @@ const NewFeaturesShowcase: React.FC = () => {
         "Dedicated Support";
         "Unlimited Users";
         "Custom Development"];
-      popular: false,
-    }
+      popular: false}
   ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,
@@ -253,8 +244,7 @@ const NewFeaturesShowcase: React.FC = () => {
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                     tier.popular,
                       ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-                      : 'border-2 border-gray-30o0 text-gray-70o0 hover:border-blue-60o0 hover:text-blue-60o0',
-                  }`}
+                      : 'border-2 border-gray-30o0 text-gray-70o0 hover:border-blue-60o0 hover:text-blue-60o0'}`}
                 >,
                   Get Started,
                 </motion.button>,
@@ -293,6 +283,5 @@ const NewFeaturesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default NewFeaturesShowcase;

@@ -85,8 +85,7 @@ const AI20o25TrendsShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -97,8 +96,7 @@ const AI20o25TrendsShowcase = () => {
       case 'resource':,
         return 'from-purple-50o0 to-violet-50o0',
       default:,
-        return 'from-gray-50o0 to-slate-50o0',
-    }
+        return 'from-gray-50o0 to-slate-50o0'}
   };
   return (
     <div className='py-16 bg-gray-50'>,
@@ -155,8 +153,7 @@ const AI20o25TrendsShowcase = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -300,6 +297,5 @@ const AI20o25TrendsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25TrendsShowcase;

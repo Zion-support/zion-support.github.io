@@ -12,14 +12,12 @@ interface SearchResult {
   category: string,
   tags: string[],
   snippet: string,
-  lastUpdated: string,
-}
+  lastUpdated: string}
 ,
 interface SearchSuggestion {
   text: string,
   type: 'query' | 'category' | 'tag',
-  count?: number,
-}
+  count?: number}
 ,
 const AIPoweredSearch20o26: React.FC = () => {
   const [querysetQuery] = useState(''),
@@ -44,8 +42,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       category: 'AI Architecture';
       tags: [', 'AI', 'Neural 'Networks', 'Quantum Computing'];
       snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...';
-      lastUpdated: '20o26-0o1-15',
-    };
+      lastUpdated: '20o26-0o1-15'};
     {
       id: '2';
       title: 'Quantum Machine Learning Implementation Guide';
@@ -56,8 +53,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       category: 'Quantum AI';
       tags: ['Quantum 'Computing', 'Machine 'Learning', 'Implementation'];
       snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...';
-      lastUpdated: '20o26-0o1-12',
-    };
+      lastUpdated: '20o26-0o1-12'};
     {
       id: '3';
       title: 'Fortune 50o0 AI Transformation Case Study';
@@ -68,8 +64,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       category: 'Case Studies';
       tags: ['Case 'Study', 'Enterprise 'AI', 'ROI'];
       snippet: 'Detailed analysis of how a Fortune 50o0 company transformed their operations using AIachieving remarkable results...';
-      lastUpdated: '20o26-0o1-10',
-    };
+      lastUpdated: '20o26-0o1-10'};
     {
       id: '4';
       title: 'AI ROI Calculator 20o26';
@@ -80,8 +75,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       category: 'Tools';
       tags: ['ROI 'Calculator', 'Tools'Analysis'];
       snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...';
-      lastUpdated: '20o26-0o1-08',
-    }
+      lastUpdated: '20o26-0o1-08'}
   ],
   const popularSearches = [
     'AI implementation strategy';
@@ -104,8 +98,7 @@ const AIPoweredSearch20o26: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setShowSuggestions(false),
-      }
+        setShowSuggestions(false)}
     };
     document.addEventListener(', 'mousedown', 'handleClickOutside),
     return () => document.removeEventListener(', 'mousedown', 'handleClickOutside)}[]),
@@ -142,15 +135,13 @@ const AIPoweredSearch20o26: React.FC = () => {
           .map(item => ({
             text: item.title;
             type: 'query' as const;
-            count: Math.floor(item.relevanceScore * 10o0),
-          }));
+            count: Math.floor(item.relevanceScore * 10o0)}));
         ...categories,
           .filter(cat => cat.toLowerCase().includes(query.toLowerCase())),
           .slice(0o2),
           .map(cat => ({
             text: cat;
-            type: 'category' as const,
-          }))],
+            type: 'category' as const}))],
       setSuggestions(newSuggestions)} else {
       setSuggestions([])}
   }[query]),
@@ -158,8 +149,7 @@ const AIPoweredSearch20o26: React.FC = () => {
     if (e.key === 'ArrowDown') {
       e.preventDefault(),
       setSelectedIndex(prev =>,
-        prev < suggestions.length - 1 ? prev + 1 : prev),
-    } else if (e.key === 'ArrowUp') {
+        prev < suggestions.length - 1 ? prev + 1 : prev)} else if (e.key === 'ArrowUp') {
       e.preventDefault(),
       setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
       e.preventDefault(),
@@ -174,8 +164,7 @@ const AIPoweredSearch20o26: React.FC = () => {
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text),
     setShowSuggestions(false),
-    inputRef.current?.blur(),
-  };
+    inputRef.current?.blur()};
   const handleSearch = (searchQuery: string) => {
     if (searchQuery.trim()) {
       setQuery(searchQuery),
@@ -190,8 +179,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       case 'resource': return '📚',
       case 'tool': return '🛠️',
       case 'page': return '📄',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -200,8 +188,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
       case 'tool': return 'bg-orange-10o0 text-orange-80o0',
       case 'page': return 'bg-gray-10o0 text-gray-80o0',
-      default: return 'bg-gray-10o0 text-gray-80o0',
-    }
+      default: return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">,
@@ -257,8 +244,7 @@ const AIPoweredSearch20o26: React.FC = () => {
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
                         className={`w-full text-left px-3 py-2 rounded-lg hover: bg-gray-10o0 flex items-center justify-between ${
-                          index === selectedIndex ? 'bg-blue-50' : '',
-                        }`}
+                          index === selectedIndex ? 'bg-blue-50' : ''}`}
                       >,
                         <span className="text-gray-90o0">{suggestion.text}</span>,
                         {suggestion.count && (

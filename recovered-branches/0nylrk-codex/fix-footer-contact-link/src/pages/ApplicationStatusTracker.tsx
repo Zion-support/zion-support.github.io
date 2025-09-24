@@ -19,7 +19,6 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / ca
 import { Briefcase, Inbox } from './lucide-react',
 import { ProtectedRoute } from '@/components / ProtectedRoute',
 import { useIsMobile } from '@/hooks / use - mobile',
-,
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
   return (
@@ -91,7 +90,6 @@ function ApplicationStatusTrackerContent() {
  */,
 function ApplicationStatusTrackerContent() {
   const is_mobile = useIsMobile (),
-,
   return (
     <>,
       <SEO
@@ -129,7 +127,6 @@ function ApplicationStatusTracker() {
         <ApplicationStatusTrackerContent />,
       </AppLayout>,
     </ProtectedRoute>)}
-,
 }
 ,
     </ProtectedRoute>)>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

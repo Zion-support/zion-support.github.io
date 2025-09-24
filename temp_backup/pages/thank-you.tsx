@@ -15,6 +15,5 @@ export default function ThankYouPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

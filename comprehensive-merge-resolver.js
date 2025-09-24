@@ -3,13 +3,13 @@
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
-// console.log('🚀 Starting Comprehensive Merge Resolution Process...'),
-// console.log('📋 This script "will": '),
-// console.log('   1. Check for merge conflicts'),
-// console.log('   2. Resolve conflicts automatically'),
-// console.log('   3. Merge open PRs'),
-// console.log('   4. Push changes to main branch'),
-// console.log(''),
+// // console.log('🚀 Starting Comprehensive Merge Resolution Process...'),
+// // console.log('📋 This script "will": '),
+// // console.log('   1. Check for merge conflicts'),
+// // console.log('   2. Resolve conflicts automatically'),
+// // console.log('   3. Merge open PRs'),
+// // console.log('   4. Push changes to main branch'),
+// // console.log(''),
 class ComprehensiveMergeResolver {
   constructor() {
     this.conflictsResolved = 0,
@@ -23,7 +23,7 @@ class ComprehensiveMergeResolver {
       "success": []}}
   log(message) {
     const timestamp = new Date().toISOString(),
-    // console.log(`[${timestamp}] ${message}`)}
+    // // console.log(`[${timestamp}] ${message}`)}
   async executeCommand(command, options ={}) {
     try {
       this.log(`🔧 "Executing": ${command}`),

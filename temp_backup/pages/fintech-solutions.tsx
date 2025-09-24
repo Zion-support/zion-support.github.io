@@ -19,6 +19,5 @@ export default function FintechSolutions() {
       industries={['Banking', 'Payments', 'Wealth', 'Insurance']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/fintech-solutions',
-    />),
-}
+    />)}
 ,

@@ -50,6 +50,5 @@ export default function FoundationModelOpsPage() {
           </Link>,
         </div>,
       </article>,
-    </main>),
-}
+    </main>)}
 ,

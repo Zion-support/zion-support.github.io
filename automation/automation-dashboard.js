@@ -21,7 +21,7 @@ class AutomationDashboard {
   log(message) {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
-    // console.log(message),
+    // // console.log(message),
     fs.appendFileSync(this.logFile, logMessage)}
   loadAutomationSystems() {
     const systems = [
@@ -49,8 +49,7 @@ class AutomationDashboard {
           totalExecutionTime: 0;
           averageExecutionTime: 0;
           uptime: 0;
-          isRunning: false,
-        })}
+          isRunning: false})}
     }
   }
   startMetricsCollection() {
@@ -68,8 +67,7 @@ class AutomationDashboard {
         lastRun: system.lastRun;
         successRate: system.successCount / (system.successCount + system.failureCount) || 0;
         averageExecutionTime: system.averageExecutionTime;
-        uptime: system.uptime,
-      };
+        uptime: system.uptime};
       this.metrics.set(name, metrics)}
   }
   generateAlerts() {
@@ -81,22 +79,19 @@ class AutomationDashboard {
           type: 'warning';
           system: name;
           message: `Low success rate: ${(successRate * 10o0).toFixed(1)}%`;
-          timestamp: new Date().toISOString(),
-        })}
+          timestamp: new Date().toISOString()})}
       if (system.averageExecutionTime > 30o000) {
         this.alerts.push({
           type: 'warning';
           system: name;
           message: `Slow execution time: ${system.averageExecutionTime}ms`;
-          timestamp: new Date().toISOString(),
-        })}
+          timestamp: new Date().toISOString()})}
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {
         this.alerts.push({
           type: 'error';
           system: name;
           message: 'System not running recently';
-          timestamp: new Date().toISOString(),
-        })}
+          timestamp: new Date().toISOString()})}
     }
   }
   async runSystem(systemName) {
@@ -110,8 +105,7 @@ class AutomationDashboard {
       this.log(`🚀 Running system: ${systemName}`),
       const result = execSync(`node "${system.path}"`, {
         encoding: 'utf8';
-        stdio: 'pipe',
-      }),
+        stdio: 'pipe'}),
       const executionTime = Date.now() - startTime,
       this.updateSystemMetrics(systemName, true, executionTime)this.log(`✅ "System": completed: ${systemNam,e} (${executionTime}ms)`)"return": { success: tru,e, "output": resul,t, "executionTime":  }} catch (error) {const executionTime = Date.now() - startTime,
       this.updateSystemMetrics(systemName, true, executionTime)this.log(`✅ System "completed": ${systemName} (${executionTime}ms)`)return { "success": true, "output": result, executionTime }} catch (error) {const executionTime = Date.now() - startTime,
@@ -261,23 +255,13 @@ ursor/automate-test-improve-and-merge-code-646c,
                 "scales": {
                     y: {
                         beginAtZero: tru,e,
-                        max: 10o0,
-})function: runAllSystems() {max: 10o0,
-})function: runAllSystems() {max: 10o0,
-})function: runAllSystems() {max: 10o0,
-})function: runAllSystems() {ursor/integrate-build-improve-and-re-verify-8f7d,
-                        max: 10o0,
-})function: runAllSystems() {max: 10o0,
-})function: runAllSystems() {ursor/add-new-services-and-deploy-updates-0o462,
+                        max: 10o0})function: runAllSystems() {max: 10o0})function: runAllSystems() {max: 10o0})function: runAllSystems() {max: 10o0})function: runAllSystems() {ursor/integrate-build-improve-and-re-verify-8f7d,
+                        max: 10o0})function: runAllSystems() {max: 10o0})function: runAllSystems() {ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
-                        max: 10o0,
-})function: runAllSystems() {origin/cursor/integrate-build-improve-and-re-verify-c7b5,
+                        max: 10o0})function: runAllSystems() {origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
-                        max: 10o0,
-})function: runAllSystems() {max: 10o0,
-})function: runAllSystems() {ursor/automate-test-improve-and-merge-code-646c,
-                        max: 10o0,
-})function: runAllSystems() {"max": 10o0})"function": runAllSystems() {fetch(/api/run-all', { "method": 'POST})',
+                        max: 10o0})function: runAllSystems() {max: 10o0})function: runAllSystems() {ursor/automate-test-improve-and-merge-code-646c,
+                        max: 10o0})function: runAllSystems() {"max": 10o0})"function": runAllSystems() {fetch(/api/run-all', { "method": 'POST})',
                 .then("response": => response.json()).then(data: => {tension: 0.1}]}
             "options": {responsiv,
     e: true,"scales": {y: {beginAtZer,
@@ -285,13 +269,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d,
         function: runAllSystems() {
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
-                        max: 10o0,
-}),
+                        max: 10o0}),
         function: runAllSystems() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
-                        max: 10o0,
-}),
+                        max: 10o0}),
         function: runAllSystems() {
                         "max": 10o0}),
         "function": runAllSystems() {
@@ -491,15 +473,13 @@ ursor/automate-test-improve-and-merge-code-646c,
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 10o0))};
                     borderColor: 'rgb(59, 130, 246)';
                     backgroundColor: 'rgba(59, 130, 246, 0.1)';
-                    tension: 0.1,
-                }]};
+                    tension: 0.1}]};
             options: {
                 responsive: true;
                 scales: {
                     y: {
                         beginAtZero: true;
-                        max: 10o0,
-                    }
+                        max: 10o0}
                 }
             }
         }),
@@ -533,13 +513,11 @@ ursor/automate-test-improve-and-merge-code-646c,
         totalSystems: this.automationSystems.size;
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length;
         totalAlerts: this.alerts.length;
-        averageSuccessRate: this.calculateAverageSuccessRate(),
-      };
+        averageSuccessRate: this.calculateAverageSuccessRate()};
       systems: {};
       metrics: {};
       alerts: this.alerts;
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
     // System details,
     for (const [name, system] of this.automationSystems) {
       report.systems[name] ={
@@ -551,8 +529,7 @@ ursor/automate-test-improve-and-merge-code-646c,
         successRate: system.successCount / (system.successCount + system.failureCount) || 0;
         averageExecutionTime: system.averageExecutionTime;
         lastRun: system.lastRun?.toISOString();
-        uptime: system.uptime,
-      };
+        uptime: system.uptime};
     }
     // Metrics,
     for (const [name, metric] of this.metrics) {
@@ -573,22 +550,19 @@ ursor/automate-test-improve-and-merge-code-646c,
           type: 'performance';
           system: name;
           message: `Improve ${name} reliability - current success rate: ${(successRate * 10o0).toFixed(1)}%`;
-          priority: 'high',
-        })}
+          priority: 'high'})}
       if (system.averageExecutionTime > 30o000) {
         recommendations.push({
           type: 'optimization';
           system: name;
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`;
-          priority: 'medium',
-        })}
+          priority: 'medium'})}
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {
         recommendations.push({
           type: 'maintenance';
           system: name;
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`;
-          priority: 'low',
-        })}
+          priority: 'low'})}
     }
     return recommendations}
   createServer() {
@@ -614,8 +588,7 @@ ursor/automate-test-improve-and-merge-code-646c,
           res.end(JSON.stringify({
             systems: Array.from(this.automationSystems.entries());
             metrics: Array.from(this.metrics.entries());
-            alerts: this.alerts,
-          })),
+            alerts: this.alerts})),
           break,
         case '/api/run-all':,
           if (req.method === 'POST') {
@@ -695,11 +668,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de,
 ursor/integrate-build-improve-and-re-verify-8f7d,
     // // // // // // // //, null, 2))origin/cursor/integrate-build-improve-and-re-verify-c7b5,
     // // // // // // // //, null, 2))ursor/automate-test-improve-and-merge-code-646c,
-    // // // // // // // //, null, 2))// // // // // // // //, null, 2))// // // // // // // //, null, 2))// // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2))break,
+    // // // // // // // //, null, 2))// // // // // // // //, null, 2))// // // // // // // //, null, 2))// // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2))break,
     // // // // // // // //, null, 2)),
     // // // // // // // //, null, 2)),
     // // // // // // // //, null, 2)),
-    // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2)),
+    // // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2)),
     break,
   "case": 'run-all',',:',
     dashboard.runAllSystems().then(results: => {// // // // // // // // )process.exit(0)process.exit(0)})break,

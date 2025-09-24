@@ -43,7 +43,7 @@ export default function AutomationInsightsPage() {
       id: 'performance-monitor';
       title: 'Performance Monitoring Suite';
       description:,
-        'Comprehensive tools for monitoring and optimizing automation window.performance.';
+        'Comprehensive tools for monitoring and optimizing automation window.window.performance.';
       type: 'Tool';
       complexity: 'Intermediate';
     };
@@ -210,6 +210,5 @@ export default function AutomationInsightsPage() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

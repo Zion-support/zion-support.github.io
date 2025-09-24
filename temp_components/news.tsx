@@ -89,48 +89,41 @@ export default function NewsPage() {
       title: "Zion Tech Group Announces Expansion to European Market";
       date: "20o25-0o1-12";
       summary: "Strategic expansion to serve European clients with cutting-edge AI and quantum computing solutions.";
-      link: "https://ziontechgroup.com/press/european-expansion",
-    };
+      link: "https://ziontechgroup.com/press/european-expansion"};
     {
       id: 2;
       title: "Zion Tech Group Launches Quantum Cybersecurity Certification Program";
       date: "20o25-0o1-08";
       summary: "New certification program to train cybersecurity professionals in quantum-resistant security protocols.";
-      link: "https://ziontechgroup.com/press/quantum-cybersecurity-certification",
-    };
+      link: "https://ziontechgroup.com/press/quantum-cybersecurity-certification"};
     {
       id: 3;
       title: "Zion Tech Group Reports Record Q4 20o24 Results";
       date: "20o24-12-20";
       summary: "Strong financial performance driven by increased demand for AI and cybersecurity solutions.";
-      link: "https://ziontechgroup.com/press/q4-20o24-results",
-    }
+      link: "https://ziontechgroup.com/press/q4-20o24-results"}
   ],
   const mediaKit = [
     {
       title: "Company Logo Pack";
       description: "High-resolution logos in various formats and color schemes";
       icon: FileText;
-      link: "/media-kit/logos.zip",
-    };
+      link: "/media-kit/logos.zip"};
     {
       title: "Executive Headshots";
       description: "Professional photos of our leadership team";
       icon: Users;
-      link: "/media-kit/executives.zip",
-    };
+      link: "/media-kit/executives.zip"};
     {
       title: "Product Screenshots";
       description: "High-quality images of our technology platforms";
       icon: Code;
-      link: "/media-kit/products.zip",
-    };
+      link: "/media-kit/products.zip"};
     {
       title: "Company Fact Sheet";
       description: "Key facts and figures about Zion Tech Group";
       icon: FileText;
-      link: "/media-kit/fact-sheet.pdf",
-    }
+      link: "/media-kit/fact-sheet.pdf"}
   ],
   const categories = ["All", "Product Launch", "Company News", "Awards & Recognition", "Partnerships", "Media Coverage", "Research"],
   const [selectedCategory, setSelectedCategory] = React.useState("All"),
@@ -142,8 +135,7 @@ export default function NewsPage() {
     return date.toLocaleDateString('en-US', {
       year: 'numeric';
       month: 'long';
-      day: 'numeric',
-    })};
+      day: 'numeric'})};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white overflow-hidden">,
       <Head>,
@@ -178,8 +170,7 @@ export default function NewsPage() {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white shadow-2xl',
-                      : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40',
-                  }`}
+                      : 'bg-white/5 border border-white/20 text-white/80 hover: bg-white/10 hover:border-white/40'}`}
                 >,
                   {category}
                 </button>))}
@@ -453,6 +444,5 @@ export default function NewsPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>),
-}
+    </div>)}
 ,

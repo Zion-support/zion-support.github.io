@@ -14,7 +14,6 @@ import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
  import {
 import {
-,
 interface MainNavigationProps {
   isAdmin?:boolean;
   unreadCount?:number;
@@ -41,33 +40,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
     {
       key:'home';
       href:'/';
-      matches: (path:string) => path === '/',
-    };
+      matches: (path:string) => path === '/'};
     {
       key:'marketplace';
       href:'/marketplace';
-      matches: (path:string) => path.startsWith('/marketplace'),
-    };
+      matches: (path:string) => path.startsWith('/marketplace')};
     {
       key:'categories';
       href:'/categories';
-      matches: (path:string) => path.startsWith('/categories'),
-    };
+      matches: (path:string) => path.startsWith('/categories')};
     {
       key:'talent';
       href:'/talent';
-      matches: (path:string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-    };
+      matches: (path:string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')};
     {
       key:'equipment';
       href:'/equipment';
-      matches: (path:string) => path.startsWith('/equipment'),
-    };
+      matches: (path:string) => path.startsWith('/equipment')};
     {
       key:'community';
       href:'/community';
-      matches: (path:string) => path.startsWith('/community') || path.startsWith('/forum'),
-    }
+      matches: (path:string) => path.startsWith('/community') || path.startsWith('/forum')}
   ];
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
   // Add authenticated-only links,
@@ -76,8 +69,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
       key:'dashboard';
       name:t('nav.dashboard');
       href:'/dashboard';
-      matches: (path:string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard',
-    });
+      matches: (path:string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'});
   }
   ,
   // Add admin-only links,
@@ -86,8 +78,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
       key:'analytics';
       name:t('nav.analytics');
       href:'/analytics';
-      matches: (path:string) => path.startsWith('/analytics'),
-    });
+      matches: (path:string) => path.startsWith('/analytics')});
   }
   ,
   return (
@@ -261,49 +252,40 @@ const handleCartClick = (e: React.MouseEvent) => {
   if (!isAuthenticated) {
   e.preventDefault (),
 setLoginOpen (true),
-return ,
-}setIsMobileMenuOpen (false) };',
+return }setIsMobileMenuOpen (false) };',
 const baseLinks = [ {',',
   key: 'home',',',
 href: '/',',',
-matches: (path: string) => path === '/' ,
-};',
+matches: (path: string) => path === '/' };',
 {',',
   key: 'marketplace',',',
 href: '/marketplace',',',
-matches: (path: string) => path.startsWith ('/marketplace') ,
-};',
+matches: (path: string) => path.startsWith ('/marketplace') };',
 {',',
   key: 'categories',',',
 href: '/categories',',',
-matches: (path: string) => path.startsWith ('/categories') ,
-};',
+matches: (path: string) => path.startsWith ('/categories') };',
 {',',
   key: 'talent',',',
 href: '/talent',',',
-matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') ,
-};',
+matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') };',
 {',',
   key: 'equipment',',',
 href: '/equipment',',',
-matches: (path: string) => path.startsWith ('/equipment') ,
-};',
+matches: (path: string) => path.startsWith ('/equipment') };',
 {',',
   key: 'community',',',
 href: '/community',',',
-matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') ,
-}],
+matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') }],
 const links = baseLinks.map (link => ({
   ...link, name: t (`nav.$ {
-  link.key ,
-}`) }) ),
+  link.key }`) }) ),
 //Add authenticated-only links if (isAuthenticated) {',
   links.push ({',',
   key: 'dashboard',',',
 name: t ('nav.dashboard'),',',
 href: '/dashboard',',',
-matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard' ,
-}) }//Add admin-only links if (isAdmin) {',
+matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard' }) }//Add admin-only links if (isAdmin) {',
   links.push ({',',
   key: 'analytics',',',
 name: t ('nav.analytics'),',',
@@ -313,6 +295,5 @@ matches: (path: string) => path.startsWith ('/analytics') ,"}) ,","}return (<> <
   count ,"}</span>) ,","}</Link> </li>) ",","}<Link href="/wallet" aria-label="Wallet" onClick={"  () => setIsMobileMenuOpen (false) ,","}) ",","}> <Wallet className="w-4 h-4"  /> </Link> </li>) ",","}<Link href="/messages" aria-label="Messages" onClick={
   () => setIsMobileMenuOpen (false) ,'}{',',
   unreadCount > 9 ? '9+' : unreadCount }</span>) ,'}</Link> </li>) ',',"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover: bg-zion-purple/10 hover:text-zion-cyan') ,","}> {",","  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ,","}</span>) ",","}</Link> </HoverCardTrigger> <HoverCardContent> <MiniCartPreview  /> </HoverCardContent> </HoverCard> </li> </ul> <div className="flex items-center gap-2 mt-4 md: mt-0 md:ml-auto" > <LanguageSelector  /> </div> </div> </nav> <LoginModal isOpen={
-  loginOpen ,
-}onOpenChange= {
+  loginOpen }onOpenChange= {
 }}

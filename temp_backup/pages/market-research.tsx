@@ -17,8 +17,7 @@ export default function MarketResearchPage() {
         'AI content generation toolsPredictive analytics platforms';
         'Automated customer serviceIntelligent process automation'];
       color: 'from-fuchsia-50o0 to-purple-60o0';
-      icon: <Zap className="w-8 h-8 text-white"  />,
-    };
+      icon: <Zap className="w-8 h-8 text-white"  />};
     {
       name: 'Database & Analytics';
       marketSize: '$8.9B';
@@ -31,8 +30,7 @@ export default function MarketResearchPage() {
         'Database performance monitoringReal-time analytics dashboards';
         'Data visualization toolsQuery optimization platforms'];
       color: 'from-cyan-50o0 to-blue-60o0';
-      icon: <BarChart3 className="w-8 h-8 text-white"  />,
-    };
+      icon: <BarChart3 className="w-8 h-8 text-white"  />};
     {
       name: 'Security & Identity';
       marketSize: '$12.3B';
@@ -45,8 +43,7 @@ export default function MarketResearchPage() {
         'Identity verification platformsAPI security gateways';
         'Compliance monitoring toolsThreat detection systems'];
       color: 'from-green-50o0 to-emerald-60o0';
-      icon: <Target className="w-8 h-8 text-white"  />,
-    };
+      icon: <Target className="w-8 h-8 text-white"  />};
     {
       name: 'Business Intelligence';
       marketSize: '$22.1B';
@@ -59,8 +56,7 @@ export default function MarketResearchPage() {
         'Custom dashboard buildersData integration platforms';
         'Mobile analytics solutionsPredictive modeling tools'];
       color: 'from-orange-50o0 to-red-60o0';
-      icon: <Activity className="w-8 h-8 text-white"  />,
-    };
+      icon: <Activity className="w-8 h-8 text-white"  />};
     {
       name: 'API Management';
       marketSize: '$6.8B';
@@ -73,8 +69,7 @@ export default function MarketResearchPage() {
         'API rate limiting servicesDeveloper portal platforms';
         'API analytics toolsWebhook management systems'];
       color: 'from-indigo-50o0 to-purple-60o0';
-      icon: <Globe className="w-8 h-8 text-white"  />,
-    };
+      icon: <Globe className="w-8 h-8 text-white"  />};
     {
       name: 'User Experience Analytics';
       marketSize: '$9.4B';
@@ -87,8 +82,7 @@ export default function MarketResearchPage() {
         'Heatmap and session recordingA/B testing platforms';
         'User journey mapping toolsConversion funnel analytics'];
       color: 'from-teal-50o0 to-cyan-60o0';
-      icon: <Users className="w-8 h-8 text-white"  />,
-    }
+      icon: <Users className="w-8 h-8 text-white"  />}
   ];
   const competitiveAnalysis = [
     {
@@ -101,8 +95,7 @@ export default function MarketResearchPage() {
         'High pricing and complexitySlow innovation cycles';
         'Difficult customizationLong implementation times'];
       marketShare: '45-60%';
-      pricing: 'High ($10o00+/month)',
-    };
+      pricing: 'High ($10o00+/month)'};
     {
       company: 'Mid-Market Leaders';
       examples: ['HubSpotAtlassian', 'SlackZoom'];
@@ -113,8 +106,7 @@ export default function MarketResearchPage() {
         'Limited customization optionsGrowing complexity over time';
         'Dependency on integrationsScalability challenges'];
       marketShare: '25-35%';
-      pricing: 'Medium ($10o0-50o0/month)',
-    };
+      pricing: 'Medium ($10o0-50o0/month)'};
     {
       company: 'Micro SaaS Innovators';
       examples: ['ZapierNotion', 'AirtableLinear'];
@@ -125,8 +117,7 @@ export default function MarketResearchPage() {
         'Limited feature scopeSmaller support teams';
         'Integration dependenciesMarket volatility risk'];
       marketShare: '15-25%';
-      pricing: 'Low ($10-10o0/month)',
-    }
+      pricing: 'Low ($10-10o0/month)'}
   ];
   const marketTrends = [
     {
@@ -203,26 +194,22 @@ export default function MarketResearchPage() {
       metric: 'Total VC Investment';
       value: '$45.2B';
       change: '+18.7% YoY';
-      description: 'Venture capital investment in SaaS companies in 20o24',
-    };
+      description: 'Venture capital investment in SaaS companies in 20o24'};
     {
       metric: 'Average Series A';
       value: '$12.8M';
       change: '+22.3% YoY';
-      description: 'Average Series A funding round for SaaS startups',
-    };
+      description: 'Average Series A funding round for SaaS startups'};
     {
       metric: 'Exit Valuations';
       value: '8.2x ARR';
       change: '+15.4% YoY';
-      description: 'Average exit valuation multiple based on annual recurring revenue',
-    };
+      description: 'Average exit valuation multiple based on annual recurring revenue'};
     {
       metric: 'Time to Profitability';
       value: '3.2 years';
       change: '-0.8 years YoY';
-      description: 'Average time for SaaS companies to reach profitability',
-    }
+      description: 'Average time for SaaS companies to reach profitability'}
   ];
   return (
     <>,
@@ -573,5 +560,4 @@ export default function MarketResearchPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

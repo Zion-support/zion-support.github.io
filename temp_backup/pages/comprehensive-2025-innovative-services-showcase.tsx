@@ -73,12 +73,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   ],
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.icon : Star,
-  };
+    return cat ? cat.icon : Star};
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.color : 'from-gray-500 to-gray-600',
-  };
+    return cat ? cat.color : 'from-gray-500 to-gray-600'};
   return (
     <Layout>,
       <SEO
@@ -403,6 +401,5 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-};
+    </Layout>)};
 export default Comprehensive2025InnovativeServicesShowcase;

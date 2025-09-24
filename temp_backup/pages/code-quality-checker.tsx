@@ -54,8 +54,7 @@ export default function CodeQualityCheckerPage() {
         'Email support';
         'Basic reporting';
         'Community rules'];
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Team';
       price: '$79';
@@ -70,8 +69,7 @@ export default function CodeQualityCheckerPage() {
         'Custom rules';
         'Team collaboration';
         'API access'];
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: '$199';
@@ -86,8 +84,7 @@ export default function CodeQualityCheckerPage() {
         'White-label options';
         'On-premise deployment';
         'Custom integrations'];
-      popular: false,
-    }
+      popular: false}
   ],
   const handleAnalyzeCode = async () => {
     if (!codeInput.trim()) return,
@@ -106,8 +103,7 @@ export default function CodeQualityCheckerPage() {
           complexity: 'Medium';
           maintainability: 'Good';
           testCoverage: '85%';
-          securityScore: '92%',
-        };
+          securityScore: '92%'};
         recommendations: [
           'Use const for immutable variables to improve code clarity';
           'Break down large functions into smaller, more focused functions';
@@ -421,5 +417,4 @@ export default function CodeQualityCheckerPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

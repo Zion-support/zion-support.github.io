@@ -16,6 +16,5 @@ export default function OfflinePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

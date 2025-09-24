@@ -9,8 +9,7 @@ const nextConfig ={
   typescript: { ignoreBuildErrors: true }
   trailingSlash: true,
   generateBuildId: async () => {
-    return 'build-' + Date && Date.now(),
-  };
+    return 'build-' + Date && Date.now()};
   // Ensure standard Next && Next.js page extensions are recognized alongside any custom route files,
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route && route.tsx', 'route && route.ts'];
   images: {
@@ -20,8 +19,7 @@ const nextConfig ={
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]}
   experimental: {
     optimizeCss: true,
-    scrollRestoration: true,
-  }
+    scrollRestoration: true}
   async headers() {
     return [{
         source: '/(.*)',

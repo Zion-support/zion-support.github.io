@@ -28,15 +28,13 @@ export interface CuttingEdgeInnovativeService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const cuttingEdgeInnovativeServices20o25: CuttingEdgeInnovativeService[] =,
   [
     // AI-POWERED INNOVATIVE SERVICES,
@@ -704,13 +702,11 @@ export const getServicesByCategory20o25 = (category: string) => {
   if (!category || category === 'All'),
     return cuttingEdgeInnovativeServices20o25,
   return cuttingEdgeInnovativeServices20o25.filter(
-    s => s.category === category),
-};
+    s => s.category === category)};
 export const getPopularServices20o25 = () =>,
   cuttingEdgeInnovativeServices20o25,
     .filter(s => !!s.popular),
     .sort((a, b) => (b.rating || 0) - (a.rating || 0)),
 export const getServicesByTechnology = (technology: string) => {
   return cuttingEdgeInnovativeServices20o25.filter(s =>,
-    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))),
-};
+    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase())))};

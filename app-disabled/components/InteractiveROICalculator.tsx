@@ -5,15 +5,13 @@ const InteractiveROICalculator = () => {
     annualRevenue: 10o000000;
     employees: 10o00;
     currentEfficiency: 70;
-    industry: 'manufacturing',
-  }),
+    industry: 'manufacturing'}),
   const [results, setResults] = useState({
     costSavings: 0;
     revenueIncrease: 0;
     totalROI: 0;
     paybackPeriod: 0;
-    efficiencyGain: 0,
-  }),
+    efficiencyGain: 0}),
   const industryMultipliers ={
     manufacturing: { costSavings: 0.15, revenueIncrease: 0.12, efficiencyGain: 0.25 };
     healthcare: { costSavings: 0.18, revenueIncrease: 0.15, efficiencyGain: 0.30 };
@@ -248,6 +246,5 @@ const InteractiveROICalculator = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default InteractiveROICalculator;

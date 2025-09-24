@@ -253,6 +253,5 @@ export default function FutureOfWork() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

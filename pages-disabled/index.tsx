@@ -101,8 +101,7 @@ export default function HomePage() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all services for comprehensive showcase,
   const allServices = [
     ...enhancedRealMicroSaasServices;
@@ -370,32 +369,27 @@ export default function HomePage() {
                 icon: Rocket;
                 title: 'Cutting-Edge Innovation';
                 description: 'We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.';
-                color: 'from-purple-50o0 to-pink-50o0',
-              };
+                color: 'from-purple-50o0 to-pink-50o0'};
               {
                 icon: Brain;
                 title: 'AI-First Approach';
                 description: 'Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.';
-                color: 'from-blue-50o0 to-cyan-50o0',
-              };
+                color: 'from-blue-50o0 to-cyan-50o0'};
               {
                 icon: Atom;
                 title: 'Quantum-Ready Solutions';
                 description: 'Our services are designed to leverage quantum computing capabilities as they become commercially available.';
-                color: 'from-green-50o0 to-emerald-50o0',
-              };
+                color: 'from-green-50o0 to-emerald-50o0'};
               {
                 icon: Shield;
                 title: 'Unbreakable Security';
                 description: 'Quantum internet protocol suite with unbreakable encryption and quantum network security.';
-                color: 'from-indigo-50o0 to-blue-50o0',
-              };
+                color: 'from-indigo-50o0 to-blue-50o0'};
               {
                 icon: Zap;
                 title: 'Future-Ready Solutions';
                 description: 'Cutting-edge technology services designed for the challenges and opportunities of 20o29 and beyond.';
-                color: 'from-yellow-50o0 to-orange-50o0',
-              }
+                color: 'from-yellow-50o0 to-orange-50o0'}
             ].map((feature, index) => (
               <motion.div,
                 key={index}

@@ -12,8 +12,7 @@ import { toast } from '@/components/ui/use-toast',
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void,
-  isSubmitting?: boolean,
-}
+  isSubmitting?: boolean}
 ,
 export function TranslatableJobForm({
   onSubmit;
@@ -73,8 +72,7 @@ export function TranslatableJobForm({
   const handleTabChange = async (tab: string) => {
     const selectedLanguage = tab as SupportedLanguage,
     if (selectedLanguage !== activeTab) {
-      setActiveTab(selectedLanguage),
-    }
+      setActiveTab(selectedLanguage)}
   };
   // Auto translate function,
   const autoTranslate = async (
@@ -86,8 +84,7 @@ export function TranslatableJobForm({
       if (field === 'title' && title[lang]) {
         content = title[lang],
         sourceLanguage = lang,
-        break,
-      } else if (field === 'description' && description[lang]) {
+        break} else if (field === 'description' && description[lang]) {
         content = description[lang],
         sourceLanguage = lang,
         break} else if (field === 'requirements' && requirements[lang]) {

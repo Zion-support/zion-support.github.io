@@ -6,15 +6,13 @@ interface ContentOptimizationMetric {
   current: number,
   target: number,
   improvement: string,
-  impact: 'high' | 'medium' | 'low',
-}
+  impact: 'high' | 'medium' | 'low'}
 ,
 interface OptimizationResult {
   category: string,
   metrics: ContentOptimizationMetric[],
   totalImprovement: number,
-  roi: number,
-}
+  roi: number}
 ,
 const AdvancedContentOptimization20o26: React.FC = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false),
@@ -25,26 +23,22 @@ const AdvancedContentOptimization20o26: React.FC = () => {
       name: 'SEO Performance';
       icon: '🔍';
       description: 'Advanced search engine optimization metrics';
-      color: 'from-blue-50o0 to-blue-70o0',
-    };
+      color: 'from-blue-50o0 to-blue-70o0'};
     {
       name: 'Content Engagement';
       icon: '📊';
       description: 'User interaction and engagement analytics';
-      color: 'from-green-50o0 to-green-70o0',
-    };
+      color: 'from-green-50o0 to-green-70o0'};
     {
       name: 'Conversion Optimization';
       icon: '💰';
       description: 'Revenue and conversion rate improvements';
-      color: 'from-purple-50o0 to-purple-70o0',
-    };
+      color: 'from-purple-50o0 to-purple-70o0'};
     {
       name: 'Technical Performance';
       icon: '⚡';
       description: 'Site speed and technical optimization';
-      color: 'from-orange-50o0 to-orange-70o0',
-    }
+      color: 'from-orange-50o0 to-orange-70o0'}
   ],
   const analyzeContent = async () => {
     setIsAnalyzing(true),
@@ -59,8 +53,7 @@ const AdvancedContentOptimization20o26: React.FC = () => {
           { metric: 'Search Rankings', current: 12, target: 3, improvement: '75% better positioning', impact: 'high' }
         ];
         totalImprovement: 50;
-        roi: 340,
-      };
+        roi: 340};
       {
         category: 'Content Engagement';
         metrics: [
@@ -69,8 +62,7 @@ const AdvancedContentOptimization20o26: React.FC = () => {
           { metric: 'Social Shares', current: 45, target: 180, improvement: '30o0% increase', impact: 'high' }
         ];
         totalImprovement: 189;
-        roi: 420,
-      };
+        roi: 420};
       {
         category: 'Conversion Optimization';
         metrics: [
@@ -79,8 +71,7 @@ const AdvancedContentOptimization20o26: React.FC = () => {
           { metric: 'Customer Lifetime Value', current: 1250, target: 380o0, improvement: '20o4% increase', impact: 'high' }
         ];
         totalImprovement: 251;
-        roi: 890,
-      };
+        roi: 890};
       {
         category: 'Technical Performance';
         metrics: [
@@ -89,8 +80,7 @@ const AdvancedContentOptimization20o26: React.FC = () => {
           { metric: 'Accessibility Score', current: 78, target: 98, improvement: '26% improvement', impact: 'medium' }
         ];
         totalImprovement: 47;
-        roi: 180,
-      }
+        roi: 180}
     ],
     setResults(mockResults),
     setIsAnalyzing(false)};
@@ -99,8 +89,7 @@ const AdvancedContentOptimization20o26: React.FC = () => {
       case 'high': return 'text-green-60o0 bg-green-10o0',
       case 'medium': return 'text-yellow-60o0 bg-yellow-10o0',
       case 'low': return 'text-blue-60o0 bg-blue-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    }
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,

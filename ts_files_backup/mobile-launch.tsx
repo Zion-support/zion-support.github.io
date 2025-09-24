@@ -21,8 +21,7 @@ function AppleBadge({ href }: { href: string }) {
         <div className="text-[10px] uppercase opacity-80">Download on the</div>,
         <div className="text-sm font-semibold">App Store</div>,
       </div>,
-    </a>),
-}
+    </a>)}
 ,
 function GoogleBadge({ href }: { href: string }) {
   return (
@@ -55,8 +54,7 @@ function GoogleBadge({ href }: { href: string }) {
         <div className="text-[10px] uppercase opacity-80">Get it on</div>,
         <div className="text-sm font-semibold">Google Play</div>,
       </div>,
-    </a>),
-}
+    </a>)}
 ,
 function SmartBanner({ iosUrlandroidUrldeepLink }: { iosUrl: string, androidUrl: string, deepLink: string }) {
   const [visiblesetVisible] = useState(false),
@@ -84,15 +82,14 @@ function SmartBanner({ iosUrlandroidUrldeepLink }: { iosUrl: string, androidUrl:
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark: border-gray-700">Install</a>,
             <button
               aria-label="Dismiss",
-              onClick={() => { localStorage.setItem('smartBannerDismissed'1'), setVisible(false), }}
+              onClick={() => { localStorage.setItem('smartBannerDismissed'1'), setVisible(false)}}
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800">,
               ✕,
             </button>,
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app',
@@ -125,8 +122,7 @@ export default function MobileLaunchPage() {
       setStatus('success'),
       setEmail(', ')} catch (err: any) {
       setStatus('error'),
-      setError(err?.message || 'Something went wrong.'),
-    }
+      setError(err?.message || 'Something went wrong.')}
   }
 ,
   return (
@@ -251,6 +247,5 @@ export default function MobileLaunchPage() {
           <Link href="/download"><a className="underline">Shareable link: /download</a></Link>,
         </div>,
       </section>,
-    </EnhancedLayout>),
-}
+    </EnhancedLayout>)}
 ,

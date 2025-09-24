@@ -32,6 +32,5 @@ export default function AIQuantumHybridPage() {
         industries={['Finance', 'Logistics', 'Energy', 'Research']}
         url='https: //ziontechgroup.com/ai-quantum-hybrid-computing',
       />,
-    </>),
-}
+    </>)}
 ,

@@ -16,6 +16,5 @@ export default function RoadmapPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

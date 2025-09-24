@@ -18,8 +18,7 @@ import { exportResumeToPDFExportOptions } from '@/utils/pdfExport',
 import { toast } from '@/hooks/use-toast',
 import { FontFamily } from '@/utils/pdf/fontConfig',
 interface PdfExportButtonProps {
-  resume: Resume,
-}
+  resume: Resume}
 ,
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExportingsetIsExporting] = useState(false),
@@ -53,8 +52,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       toast({
         title: "Export failed";
         description: "There was an error exporting your resume to PDF.";
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsExporting(false)}
   };
   return (

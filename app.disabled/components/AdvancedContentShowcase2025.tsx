@@ -158,8 +158,7 @@ const AdvancedContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name}
               <span className='ml-2 text-sm opacity-75'>,
@@ -231,8 +230,7 @@ const AdvancedContentShowcase20o25 = () => {
                     <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform' />,
                   </Link>,
                 </div>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* Success Metrics Summary */}
         <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
@@ -276,6 +274,5 @@ const AdvancedContentShowcase20o25 = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AdvancedContentShowcase20o25;

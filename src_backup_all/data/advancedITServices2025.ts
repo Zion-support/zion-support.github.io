@@ -22,22 +22,19 @@ contactInfo: {
     phone: string,
     email: string,
     website: string,
-    address: string,
-};
+    address: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
   marketSize: string,
   growthRate: string,
   rating: number,
   reviews: number,
-  customers: number,
-}
+  customers: number}
 ,
 export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management,
@@ -89,8 +86,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"];
@@ -102,8 +98,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "180% annual growth";
     rating: 4.8;
     reviews: 234;
-    customers: 456,
-  };
+    customers: 456};
   // Quantum-Enhanced Cloud Computing,
   {
     id: "quantum-cloud-computing";
@@ -153,8 +148,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"];
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"];
@@ -166,8 +160,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "30o0% annual growth";
     rating: 4.9;
     reviews: 156;
-    customers: 234,
-  };
+    customers: 234};
   // Edge Computing & IoT Platform,
   {
     id: "edge-computing-iot-platform";
@@ -217,8 +210,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"];
       integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"];
@@ -230,8 +222,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "20o0% annual growth";
     rating: 4.7;
     reviews: 189;
-    customers: 345,
-  };
+    customers: 345};
   // Zero-Trust Security Architecture,
   {
     id: "zero-trust-security-architecture";
@@ -281,8 +272,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"];
       integrations: ["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"];
@@ -294,8 +284,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "250% annual growth";
     rating: 4.8;
     reviews: 267;
-    customers: 489,
-  };
+    customers: 489};
   // AI-Powered DevOps Automation,
   {
     id: "ai-devops-automation";
@@ -345,8 +334,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Machine Learning", "Docker", "Kubernetes", "React", "Python"];
       integrations: ["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"];
@@ -358,8 +346,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "180% annual growth";
     rating: 4.7;
     reviews: 198;
-    customers: 367,
-  };
+    customers: 367};
   // Blockchain-Based Identity Management,
   {
     id: "blockchain-identity-management";
@@ -409,8 +396,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"];
       integrations: ["SSO systems", "CRM platforms", "Banking systems", "Government databases"];
@@ -422,8 +408,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "220% annual growth";
     rating: 4.6;
     reviews: 145;
-    customers: 278,
-  };
+    customers: 278};
   // Quantum-Enhanced Data Analytics,
   {
     id: "quantum-data-analytics";
@@ -473,8 +458,7 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
       website: "https://ziontechgroup.com";
-      address: "364 E Main St STE 10o08 Middletown DE 19709",
-    };
+      address: "364 E Main St STE 10o08 Middletown DE 19709"};
     technicalSpecs: {
       technology: ["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"];
       integrations: ["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"];
@@ -486,7 +470,6 @@ export const ADVANCED_IT_SERVICES_20o25: AdvancedITService[] = [
     growthRate: "250% annual growth";
     rating: 4.9;
     reviews: 178;
-    customers: 289,
-  }
+    customers: 289}
 ],
 export default ADVANCED_IT_SERVICES_20o25;

@@ -575,6 +575,5 @@ export default function AIAugmentedReality20o41() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

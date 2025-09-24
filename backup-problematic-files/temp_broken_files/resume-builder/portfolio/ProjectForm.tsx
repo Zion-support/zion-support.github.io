@@ -35,8 +35,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>;
 interface ProjectFormProps {
   project?:PortfolioProject;
   onSuccess:() => void;
-  onCancel: () => void,
-}
+  onCancel: () => void}
 ,
 export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
   const { user } = useAuth();
@@ -192,7 +191,5 @@ export function ProjectForm({ project, onSuccess, onCancel } ProjectFormProps) {
 setIsLoading (true),
 try {
   const projectData: PortfolioProject ={
-  </FormControl> <FormMessage  /> </FormItem>) ,
-}/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea  /> </FormControl> <FormMessage  /> </FormItem>) }/> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> <div className="grid grid-cols-1 md: grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage  /> </FormItem>) ,
-}/> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> </div> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> {
+  </FormControl> <FormMessage  /> </FormItem>) }/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea  /> </FormControl> <FormMessage  /> </FormItem>) }/> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> <div className="grid grid-cols-1 md: grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage  /> </FormItem>) }/> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> </div> <FormField </FormControl> <FormMessage  /> </FormItem>) }/> {
   /* Future file upload field would go here */ ,

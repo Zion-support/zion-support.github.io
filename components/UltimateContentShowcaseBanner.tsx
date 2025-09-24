@@ -42,6 +42,5 @@ export default function UltimateContentShowcaseBanner() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

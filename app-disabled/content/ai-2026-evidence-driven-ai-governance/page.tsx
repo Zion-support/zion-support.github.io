@@ -43,6 +43,5 @@ export default function EvidenceDrivenGovernancePage() {
           Related: Autonomous Compliance,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

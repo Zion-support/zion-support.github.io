@@ -31,8 +31,7 @@ const formSchema = z.object({
 }),
 type FormData = z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void,
-}
+  onDescriptionGenerated: (description: string) => void}
 ,
 export function ServiceDescriptionForm({
   onDescriptionGenerated;

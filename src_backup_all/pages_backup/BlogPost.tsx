@@ -34,7 +34,6 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
-,
 export default function BlogPost() {
   ArrowLeft;
   Calendar;
@@ -186,8 +185,7 @@ export default function BlogPost() {
   const getShareUrl = (platform: string) =>: any {
     // Check condition,
 if (return '') {
-  $2,
-}
+  $2}
     const url = encodeURIComponent (window.location.href),
     const title = encodeURIComponent (post.title),
     switch (platform) {
@@ -200,13 +198,11 @@ if (return '') {
       case 'linkedin':,
         return `https: //www.linkedin.com / share_article?mini = true & url=${url}&title=${title}`,
       default: ,
-        return '#',
-  }
+        return '#'}
 ,
     author: {
       '@type': 'Person',
-      name: post.author.name,
-    }
+      name: post.author.name}
   }
   const router = useRouter();
   const { slug } = router && router.query as { slug: string };

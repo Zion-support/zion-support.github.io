@@ -29,15 +29,13 @@ export interface AdvancedITService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const advancedITServices: AdvancedITService[] = [
   {
     id: 'quantum-cloud-platform';
@@ -656,7 +654,7 @@ export const advancedITServices: AdvancedITService[] = [
     price: '$5,999';
     period: '/month';
     description:,
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and window.performance.';
+      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and window.window.performance.';
     features: [
       'AI migration planning';
       'Cost optimization';

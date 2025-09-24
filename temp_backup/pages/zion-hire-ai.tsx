@@ -15,6 +15,5 @@ export default function ZionHireAiPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

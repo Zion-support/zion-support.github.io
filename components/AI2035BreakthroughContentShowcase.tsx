@@ -10,8 +10,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       status: "BREAKTHROUGH";
       link: "/blog/ai-20o35-matter-creation";
       image: "⚛️";
-      gradient: "from-purple-50o0 to-pink-50o0",
-    };
+      gradient: "from-purple-50o0 to-pink-50o0"};
     {
       id: 2;
       title: "AI 20o35 Quantum Consciousness";
@@ -21,8 +20,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       status: "REVOLUTIONARY";
       link: "/blog/ai-20o35-quantum-consciousness";
       image: "🧠";
-      gradient: "from-indigo-50o0 to-purple-50o0",
-    };
+      gradient: "from-indigo-50o0 to-purple-50o0"};
     {
       id: 3;
       title: "Enterprise Transformation 20o35";
@@ -32,8 +30,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       status: "SUCCESS";
       link: "/case-studies/ai-20o35-enterprise-transformation";
       image: "🏢";
-      gradient: "from-green-50o0 to-emerald-50o0",
-    };
+      gradient: "from-green-50o0 to-emerald-50o0"};
     {
       id: 5;
       title: "Space Exploration AI 20o35";
@@ -43,8 +40,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       status: "BREAKTHROUGH";
       link: "/case-studies/ai-20o35-space-exploration-breakthrough";
       image: "🚀";
-      gradient: "from-orange-50o0 to-red-50o0",
-    };
+      gradient: "from-orange-50o0 to-red-50o0"};
     {
       id: 6;
       title: "Healthcare Revolution 20o35";
@@ -64,8 +60,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: ['Quantum 'AI', 'Consciousness'Revolutionary'20o35'];
       readTime: '15 min read';
-      publishDate: '20o25-0o1-17',
-    };
+      publishDate: '20o25-0o1-17'};
     {
       id: 'ai-20o35-matter-creation';
       title: 'AI 20o35: Matter Creation Technology';
@@ -76,8 +71,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: ['Matter 'Creation', 'Manufacturing'Space Tech'20o35'];
       readTime: '12 min read';
-      publishDate: '20o25-0o1-17',
-    };
+      publishDate: '20o25-0o1-17'};
     {
       id: 'ai-20o35-dimension-transcendence';
       title: 'AI 20o35: Dimension Transcendence Protocol';
@@ -88,8 +82,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: ['Dimensions', 'Consciousness', 'Parallel Universes', '20o35'];
       readTime: '18 min read';
-      publishDate: '20o25-0o1-17',
-    };
+      publishDate: '20o25-0o1-17'};
     {
       id: 'ai-20o35-universal-peace';
       title: 'AI 20o35: Universal Peace Algorithm';
@@ -100,8 +93,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: [', 'Peace', 'Conflict 'Resolution', 'Universal'20o35'];
       readTime: '20 min read';
-      publishDate: '20o25-0o1-17',
-    };
+      publishDate: '20o25-0o1-17'};
     {
       id: 'ai-20o35-galactic-expansion';
       title: 'AI 20o35: Galactic Expansion Success';
@@ -112,8 +104,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: [', 'Galaxy', 'Space 'Exploration', 'Expansion'20o35'];
       readTime: '16 min read';
-      publishDate: '20o25-0o1-17',
-    };
+      publishDate: '20o25-0o1-17'};
     {
       id: 'ai-20o35-immortality-protocol';
       title: 'AI 20o35: Immortality Protocol Achievement';
@@ -124,8 +115,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       image: '/api/placeholder/40o0/30o0';
       tags: ['Immortality', 'Consciousness', 'Life Extension', '20o35'];
       readTime: '14 min read';
-      publishDate: '20o25-0o1-17',
-    }
+      publishDate: '20o25-0o1-17'}
   ],
   const caseStudies = [
     {
@@ -135,8 +125,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       company: 'Global Tech Corp';
       roi: '50,0o00%';
       industry: 'Technology';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o35-manufacturing-revolution';
       title: 'AI 20o35 Manufacturing Revolution: Matter Creation Success';
@@ -144,8 +133,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       company: 'Quantum Manufacturing Inc';
       roi: 'INFINITE';
       industry: 'Manufacturing';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o35-space-exploration';
       title: 'AI 20o35 Space Exploration: Galactic Expansion';
@@ -153,8 +141,7 @@ const AI20o35BreakthroughContentShowcase = () => {
       company: 'Galactic Exploration Corp';
       roi: 'INFINITE';
       industry: 'Space Exploration';
-      featured: true,
-    }
+      featured: true}
   ],
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">,
@@ -386,6 +373,5 @@ const AI20o35BreakthroughContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o35BreakthroughContentShowcase;

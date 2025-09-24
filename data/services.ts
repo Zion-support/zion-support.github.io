@@ -22,13 +22,11 @@ export interface Service {
     professional: number,
     enterprise: number,
     currency: string,
-    period: string,
-  };
+    period: string};
   link: string,
   icon: string,
   isPopular?: boolean,
-  isNew?: boolean,
-}
+  isNew?: boolean}
 ,
 // Import enhanced services,
 import { enhancedServices20o25 } from './enhanced-20o25-services',
@@ -445,17 +443,14 @@ export const allServices = [
   ...specializedIndustryServices;
 ],
 export const getServicesByCategory = (category: Service['category']) => {
-  return allServices.filter(service => service.category === category),
-};
+  return allServices.filter(service => service.category === category)};
 export const getPopularServices = () => {
   return allServices.filter(service => service.isPopular)};
 export const getNewServices = () => {
   return allServices.filter(service => service.isNew)};
 export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(
-    service => service.industry === industry),
-};
+    service => service.industry === industry)};
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices20o25.filter(service =>,
-    service.targetAudience.includes(audience)),
-};
+    service.targetAudience.includes(audience))};

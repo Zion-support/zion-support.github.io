@@ -21,21 +21,18 @@ import {
 interface ServiceFeature {
   name: string,
   description?: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 interface ServiceBenefit {
   name: string,
   impact: string,
-  icon?: React.ReactNode,
-}
+  icon?: React.ReactNode}
 ,
 interface ServicePricing {
   starter: string,
   professional: string,
   enterprise: string,
-  custom: string,
-}
+  custom: string}
 ,
 interface ServiceCardProps {
   id: string,
@@ -56,8 +53,7 @@ interface ServiceCardProps {
   priority?: 'high' | 'medium' | 'low',
   technology?: string[],
   compliance?: string[],
-  onCardClick?: (service: any) => void,
-}
+  onCardClick?: (service: any) => void}
 ,
 const getCategoryIcon = (category: string) => {
   const categoryLower = category.toLowerCase(),
@@ -74,8 +70,7 @@ const getCategoryIcon = (category: string) => {
     return Cpu,
   if (categoryLower.includes('global') || categoryLower.includes('worldwide')),
     return Globe,
-  return Star,
-};
+  return Star};
 const getPriorityColor = (priority: string) => {
   switch (priority) {
     case 'high':,
@@ -85,8 +80,7 @@ const getPriorityColor = (priority: string) => {
     case 'low':,
       return 'from-green-50o0 to-teal-50o0',
     default:,
-      return 'from-cyan-50o0 to-purple-50o0',
-  }
+      return 'from-cyan-50o0 to-purple-50o0'}
 };
 const getPriorityLabel = (priority: string) => {
   switch (priority) {
@@ -97,8 +91,7 @@ const getPriorityLabel = (priority: string) => {
     case 'low':,
       return 'Low Priority',
     default:,
-      return 'Standard',
-  }
+      return 'Standard'}
 };
 const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
   id;
@@ -132,8 +125,7 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
   };
   const handleLearnMore = (e: React.MouseEvent) => {
     e.stopPropagation(),
-    window.location.href = slug,
-  };
+    window.location.href = slug};
   return (
     <motion.div,
       layout,

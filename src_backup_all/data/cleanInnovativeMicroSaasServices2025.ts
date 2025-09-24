@@ -21,15 +21,13 @@ export interface InnovativeMicroSaasService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"];
@@ -91,8 +88,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]};
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"];
-    marketSize: "$29.9 billion by 20o25",
-  };
+    marketSize: "$29.9 billion by 20o25"};
   // AI-Powered Legal Document Analysis,
   {
     id: "ai-legal-document-analyzer";
@@ -141,8 +137,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["NLP", "Machine Learning", "Python", "React", "AWS"];
       integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases"];
@@ -150,8 +145,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
       uptime: "99.95%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption", "Audit trails"]};
     competitors: ["Kira Systems", "Luminance", "ContractPodAi"];
-    marketSize: "$15.2 billion by 20o27",
-  };
+    marketSize: "$15.2 billion by 20o27"};
   // AI-Powered Real Estate Investment Platform,
   {
     id: "ai-real-estate-investment-platform";
@@ -200,8 +194,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Data Analytics", "React", "Node.js", "PostgreSQL"];
       integrations: ["Zillow API", "Redfin", "MLS databases", "Financial APIs"];
@@ -209,8 +202,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "Financial data encryption"]};
     competitors: ["RealtyMogul", "Fundrise", "RealtyShares"];
-    marketSize: "$8.9 billion by 20o26",
-  };
+    marketSize: "$8.9 billion by 20o26"};
   // AI-Powered Healthcare Diagnostics Platform,
   {
     id: "ai-healthcare-diagnostics-platform";
@@ -259,8 +251,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Deep Learning", "Computer Vision", "Python", "TensorFlow", "HIPAA-compliant cloud"];
       integrations: ["Epic", "Cerner", "PACS systems", "Lab information systems"];
@@ -268,8 +259,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
       uptime: "99.99%";
       security: ["HIPAA", "SOC 2", "End-to-end encryption", "Audit logging"]};
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"];
-    marketSize: "$45.8 billion by 20o27",
-  };
+    marketSize: "$45.8 billion by 20o27"};
   // AI-Powered Supply Chain Optimization Platform,
   {
     id: "ai-supply-chain-optimization";
@@ -318,8 +308,7 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"];
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"];
@@ -327,7 +316,6 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25: InnovativeMicroSaasServ
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "End-to-end encryption", "Data privacy"]};
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"];
-    marketSize: "$67.8 billion by 20o25",
-  }
+    marketSize: "$67.8 billion by 20o25"}
 ],
 export default CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_20o25;

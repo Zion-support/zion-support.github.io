@@ -112,8 +112,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full AI climate prediction system with real-time data processing, machine learning models, and comprehensive reporting tools. Includes mobile apps and API access.';
@@ -194,8 +193,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum cybersecurity platform with quantum key distribution, post-quantum cryptography, and AI-powered threat detection. Includes enterprise integration and compliance tools.';
@@ -277,8 +275,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous drone delivery system with AI navigation, computer vision, and fleet management. Includes customer apps and business analytics.';
@@ -359,8 +356,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI healthcare diagnosis platform with medical image analysis, symptom assessment, and treatment recommendations. Includes compliance tools and analytics.';
@@ -442,8 +438,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete smart city platform with IoT sensors, AI analytics, and real-time monitoring. Includes citizen engagement tools and predictive maintenance.';
@@ -524,8 +519,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum trading platform with quantum market analysis, real-time predictions, and high-frequency trading capabilities. Includes risk management and compliance tools.';
@@ -607,8 +601,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete AI education platform with personalized learning, AI tutoring, and adaptive assessments. Includes analytics and mobile apps.';
@@ -689,8 +682,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous manufacturing platform with AI optimization, predictive maintenance, and quality control. Includes analytics and mobile management.';
@@ -771,8 +763,7 @@ reviews: number,export const futuristic20o28Services: Futuristic20o28Service[] =
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum internet security platform with quantum encryption, threat detection, and secure communications. Includes compliance tools and analytics.';

@@ -444,6 +444,5 @@ export default function UltimateBreakthroughImplementationGuidePage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -4,7 +4,6 @@ export default function useAuthGuard(isAuthenticated: boolean = true) {
   const navigate = useNavigate?.(),
   useEffect(() => {
     if (!isAuthenticated && navigate) {
-      navigate('/login'),
-    }
+      navigate('/login')}
   }, [isAuthenticated, navigate])}
 ,

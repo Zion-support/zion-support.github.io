@@ -13,11 +13,9 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState(''),
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
-    setSelectedArticle(null),
-  };
+    setSelectedArticle(null)};
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId),
-  };
+    setSelectedArticle(articleId)};
   const handleBackToCategories = () => {
     setSelectedCategory(null),
     setSelectedArticle(null)};
@@ -215,6 +213,5 @@ export default function HelpCenter() {
           </Tabs>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

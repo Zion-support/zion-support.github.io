@@ -53,12 +53,10 @@ function MarketplaceErrorFallback({
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,
 interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export function MarketplaceErrorBoundary({
   children;

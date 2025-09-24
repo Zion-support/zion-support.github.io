@@ -25,6 +25,5 @@ const ComprehensiveContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensiveContentShowcase20o26;

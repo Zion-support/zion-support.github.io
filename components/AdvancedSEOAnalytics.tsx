@@ -8,16 +8,14 @@ const AdvancedSEOAnalytics = () => {
         window.gtag(', 'event', 'page_view'{
           page_title: document.title;
           page_location: window.location.href;
-          page_path: window.location.pathname,
-        })}
+          page_path: window.location.pathname})}
     };
     // Track user engagement,
     const trackEngagement = () => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag(', 'event', 'engagement'{
           engagement_time_msec: Date.now();
-          page_title: document.title,
-        })}
+          page_title: document.title})}
     };
     // Track scroll depth,
     const trackScrollDepth = () => {
@@ -28,8 +26,7 @@ const AdvancedSEOAnalytics = () => {
           maxScroll = scrollPercent,
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag(', 'event', 'scroll'{
-              scroll_depth: maxScroll,
-            })}
+              scroll_depth: maxScroll})}
         }
       };
       window.addEventListener(', 'scroll', 'trackScroll),
@@ -41,8 +38,7 @@ const AdvancedSEOAnalytics = () => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag(', 'event', 'timing_complete'{
           name: 'time_on_page';
-          value: timeOnPage,
-        })}
+          value: timeOnPage})}
     };
     // Initialize tracking,
     trackPageView(),
@@ -94,12 +90,11 @@ const AdvancedSEOAnalytics = () => {
             // Enhanced performance monitoring,
             if (typeof window !== 'undefined') {
               window.addEventListener(', 'load', 'function() {
-                const perfData = window.performance.getEntriesByType('navigation')[0],
+                const perfData = window.window.performance.getEntriesByType('navigation')[0],
                 if (perfData && window.gtag) {
                   window.gtag(', 'event', 'timing_complete'{
                     name: 'page_load_time';
-                    value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
-                  })}
+                    value: Math.round(perfData.loadEventEnd - perfData.loadEventStart)})}
               })}
           `}}
        />,

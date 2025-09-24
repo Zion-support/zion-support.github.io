@@ -11,6 +11,5 @@ const NewContent2025UltimateBanner: React.FC = () => {
           Experience our latest AI innovations and insights.,
         </p>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent2025UltimateBanner;

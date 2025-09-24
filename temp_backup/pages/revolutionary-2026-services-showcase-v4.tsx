@@ -22,8 +22,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all new services,
   const allServices = [
     ...innovative20o26MicroSaasServicesV4;
@@ -103,8 +102,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
           case 'emerging':,
             return service.category?.includes('Holographic') || service.category?.includes('Autonomous') || service.category?.includes('Brain-Computer'),
           default: ,
-            return true,
-        }
+            return true}
       })}
 ,
     // Price filter,
@@ -121,8 +119,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
           case 'custom':,
             return price.includes('Custom') || price.includes('custom'),
           default: ,
-            return true,
-        }
+            return true}
       })}
 ,
     // Search filter,
@@ -158,8 +155,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -168,8 +164,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -279,8 +274,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category.id,
                         ? 'bg-purple-60o0 text-white',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                   >,
                     <span className="mr-2">{category.icon}</span>,
                     {category.name} ({category.count}),
@@ -311,8 +305,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded transition-all duration-20o0 ${
-                      viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white',
-                    }`}
+                      viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path d="M5 3a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2V5a2 2 0 0o0-2-2H5zM5 11a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2v-2a2 2 0 0o0-2-2H5zM11 5a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2V5zM11 13a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2v-2z"  />,
@@ -321,8 +314,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded transition-all duration-20o0 ${
-                      viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white',
-                    }`}
+                      viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path fillRule="evenodd" d="M3 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1z" clipRule="evenodd"  />,
@@ -363,8 +355,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
                   animate="visible",
                   className={viewMode === 'grid',
                     ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                    : 'space-y-6',
-                  }
+                    : 'space-y-6'}
                 >,
                   {filteredServices.map((service) => (
                     <motion.div,
@@ -373,8 +364,7 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
                       className={`group relative ${
                         viewMode === 'grid',
                           ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover: border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                          : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-50o0/50 transition-all duration-30o0',
-                      }`}
+                          : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-50o0/50 transition-all duration-30o0'}`}
                     >,
                       {/* Popular Badge */}
                       {service.popular && (

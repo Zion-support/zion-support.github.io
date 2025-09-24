@@ -16,6 +16,5 @@ export default function Download.pagePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

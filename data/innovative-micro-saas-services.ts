@@ -11,8 +11,7 @@ export interface InnovativeMicroSaasService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {

@@ -11,8 +11,7 @@ export interface TestStatusInfo {
   passed: number,
   failed: number,
   total: number,
-  coverage: number, // Percentage,
-}
+  coverage: number, // Percentage}
 ,
 export interface NotificationPayload {
   slowEndpoints?: EndpointTestResult[], // Reuse existing EndpointTestResult,
@@ -53,13 +52,11 @@ async function restartService(serviceName: string): Promise<void> {
 async function sendWebhookNotification(payload: NotificationPayload): Promise<void> {
   if (!ALERT_WEBHOOK_URL) {
     logger.warn('ALERT_WEBHOOK_URL is not set. Skipping notification.'),
-    return,
-  }
+    return}
 ,
   let messageParts: string[] = [],
   if (payload.customMessage) {
-    messageParts.push(payload.customMessage),
-  }
+    messageParts.push(payload.customMessage)}
 ,
   if (payload.slowEndpoints && payload.slowEndpoints.length > 0) {
     payload.slowEndpoints.forEach(result => {
@@ -106,8 +103,7 @@ Coverage: ${payload.testStatus.coverage}%`)}
       errorMessage = error.message,
       if (error.response) {
         logger.error('Notification failed with response:', {
-            status: error.response.status, data: error.response.data,
-        })}
+            status: error.response.status, data: error.response.data})}
     } else if (error instanceof Error) {
       errorMessage = error.message}
     logger.error(`Failed to send notification. Error: ${errorMessage}`)}

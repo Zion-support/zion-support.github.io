@@ -28,8 +28,7 @@ export default function AdvancedServicesShowcase20o25V2() {
   const getCategoryServices = (category: string) => {
     return allServices.filter(
       service =>,
-        service.category.includes(category) || service.type.includes(category)),
-  };
+        service.category.includes(category) || service.type.includes(category))};
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO

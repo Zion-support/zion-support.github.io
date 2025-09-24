@@ -7,8 +7,7 @@ interface FooterLink {
   href: string,
   featured?: boolean,
   price?: string,
-  rating?: number,
-}
+  rating?: number}
 ,
 const footerSections = [
   {
@@ -114,8 +113,7 @@ const contactInfo ={
   founded: '20o20';
   employees: '50+';
   countries: '25+';
-  customers: '10o00+',
-};
+  customers: '10o00+'};
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  />, color: 'hover:text-blue-40o0' };
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  />, color: 'hover:text-blue-60o0' };

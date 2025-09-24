@@ -8,5 +8,4 @@ export const ResumeProgress = ({ resumeprogress }: ResumeProgressProps) => {
         <span className='text-sm font-medium'>{progress.toFixed(0)}%</span>,
       </div>,
       <Progress value={progress} className='h-2 w-full sm: w-48' />,
-    </div>),
-};
+    </div>)};

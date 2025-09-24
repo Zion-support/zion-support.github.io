@@ -357,6 +357,5 @@ export default function SustainableAutomationFuture() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

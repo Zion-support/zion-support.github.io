@@ -77,8 +77,7 @@ export const InnovativeServicesShowcase20o27: React.FC = () => {
       ? innovativeServices20o27,
       : getServicesByCategory(selectedCategory),
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId),
-  };
+    setExpandedService(expandedService === serviceId ? null : serviceId)};
   const contactInfo = {
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
@@ -132,8 +131,7 @@ export const InnovativeServicesShowcase20o27: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 selectedCategory === 'All',
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25',
-                  : 'bg-zion-slate-light/50 text-gray-30o0 hover: bg-zion-slate-light/70 hover:text-white',
-              }`}
+                  : 'bg-zion-slate-light/50 text-gray-30o0 hover: bg-zion-slate-light/70 hover:text-white'}`}
             >,
               All Categories,
             </button>,
@@ -146,8 +144,7 @@ export const InnovativeServicesShowcase20o27: React.FC = () => {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 flex items-center gap-2 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25',
-                      : 'bg-zion-slate-light/50 text-gray-30o0 hover: bg-zion-slate-light/70 hover:text-white',
-                  }`}
+                      : 'bg-zion-slate-light/50 text-gray-30o0 hover: bg-zion-slate-light/70 hover:text-white'}`}
                 >,
                   {Icon && <Icon className='w-4 h-4' />}
                   {category}
@@ -349,5 +346,4 @@ export const InnovativeServicesShowcase20o27: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};

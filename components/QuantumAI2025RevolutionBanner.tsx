@@ -102,6 +102,5 @@ const QuantumAI20o25RevolutionBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumAI20o25RevolutionBanner;

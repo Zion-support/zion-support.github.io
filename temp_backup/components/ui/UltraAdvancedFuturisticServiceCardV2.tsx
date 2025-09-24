@@ -33,17 +33,14 @@ interface UltraAdvancedFuturisticServiceCardV2Props {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    };
+      website: string};
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
-  index: number,
-}
+    reviews: number};
+  index: number}
 ,
 export default function UltraAdvancedFuturisticServiceCardV2({
   service;
@@ -55,8 +52,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       opacity: 0;
       y: 50;
       scale: 0.9;
-      rotateX: -15,
-    };
+      rotateX: -15};
     visible: {
       opacity: 1;
       y: 0;
@@ -73,8 +69,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       rotateX: 5;
       transition: {
         duration: 0.3;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const contentVariants ={
@@ -84,8 +79,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       opacity: 1;
       transition: {
         duration: 0.4;
-        ease: "easeInOut",
-      }
+        ease: "easeInOut"}
     }
   };
   const featureVariants ={
@@ -95,8 +89,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       x: 0;
       transition: {
         delay: i * 0.1;
-        duration: 0.3,
-      }
+        duration: 0.3}
     })};
   const getGradientClass = (color: string) => {
     const gradients: { [key: string]: string } ={
@@ -127,8 +120,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
         className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${getGradientClass(service.color)} opacity-0 group-hover: opacity-20 blur-xl transition-all duration-50o0 group-hover:blur-2xl`}
         style={{
           transform: isHovered ? 'scale(1.1)' : 'scale(1)';
-          filter: isHovered ? 'blur(20px)' : 'blur(40px)',
-        }}
+          filter: isHovered ? 'blur(20px)' : 'blur(40px)'}}
        />,
       {/* Main Card */}
       <motion.div,
@@ -347,8 +339,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
                 className="absolute top-4 left-4 w-2 h-2 bg-blue-40o0 rounded-full",
                 style={{
                   boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)';
-                  animation: 'float 3s ease-in-out infinite',
-                }}
+                  animation: 'float 3s ease-in-out infinite'}}
                />,
               <motion.div,
                 initial={{ opacity: 0, scale: 0 }}
@@ -358,8 +349,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
                 className="absolute bottom-4 right-4 w-3 h-3 bg-purple-40o0 rounded-full",
                 style={{
                   boxShadow: '0 0 25px rgba(139, 92, 246, 0.8)';
-                  animation: 'float 3s ease-in-out infinite 1s',
-                }}
+                  animation: 'float 3s ease-in-out infinite 1s'}}
                />,
             </>)}
         </AnimatePresence>,
@@ -367,15 +357,14 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       {/* Enhanced CSS Animations */}
       <style jsx>{`,
         @keyframes float {
-          0%, 10o0% { transform: translateY(0px), }
-          50% { transform: translateY(-10px), }
+          0%, 10o0% { transform: translateY(0px)}
+          50% { transform: translateY(-10px)}
         }
 ,
         .group: hover .group-hover\:text-transparent {
           background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 10o0%),
           -webkit-background-clip: text,
           -webkit-text-fill-color: transparent,
-          background-clip: text,
-        }
+          background-clip: text}
       `}</style>,
     </motion.div>)}

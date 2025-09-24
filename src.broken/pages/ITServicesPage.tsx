@@ -49,8 +49,7 @@ export default function ITServicesPage() {
         "Enhanced security posture";
         "Better performance";
         "Operational efficiency"];
-      website: "https://ziontechgroup.com/cloud-migration",
-    };
+      website: "https://ziontechgroup.com/cloud-migration"};
     {
       name: "DevOps Automation Platform";
       description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.";
@@ -76,8 +75,7 @@ export default function ITServicesPage() {
         "Improved collaboration";
         "Better resource utilization";
         "Enhanced security"];
-      website: "https://ziontechgroup.com/devops-automation",
-    };
+      website: "https://ziontechgroup.com/devops-automation"};
     {
       name: "Cybersecurity Assessment & Implementation";
       description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.";
@@ -103,8 +101,7 @@ export default function ITServicesPage() {
         "Improved incident response";
         "Enhanced customer trust";
         "Cost-effective security"];
-      website: "https://ziontechgroup.com/cybersecurity",
-    };
+      website: "https://ziontechgroup.com/cybersecurity"};
     {
       name: "Network Infrastructure Design";
       description: "Scalable network architecture design with high availability, security, and performance optimization.";
@@ -130,8 +127,7 @@ export default function ITServicesPage() {
         "Better scalability";
         "Reduced downtime";
         "Operational efficiency"];
-      website: "https://ziontechgroup.com/network-infrastructure",
-    };
+      website: "https://ziontechgroup.com/network-infrastructure"};
     {
       name: "Database Design & Optimization";
       description: "Database architecture design, performance tuning, and migration services for optimal data management.";
@@ -157,8 +153,7 @@ export default function ITServicesPage() {
         "Better scalability";
         "Reduced maintenance costs";
         "Improved reliability"];
-      website: "https://ziontechgroup.com/database-services",
-    };
+      website: "https://ziontechgroup.com/database-services"};
     {
       name: "IT Infrastructure Management";
       description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.";
@@ -184,34 +179,29 @@ export default function ITServicesPage() {
         "Improved performance";
         "Enhanced security";
         "Peace of mind"];
-      website: "https://ziontechgroup.com/infrastructure-management",
-    }
+      website: "https://ziontechgroup.com/infrastructure-management"}
   ];
   const additionalServices = [
     {
       name: "API Development & Integration";
       description: "Custom API development and third-party system integration services.";
       pricing: "From $2,500";
-      icon: <Code className="w-8 h-8 text-blue-400" />,
-    };
+      icon: <Code className="w-8 h-8 text-blue-400" />};
     {
       name: "Data Backup & Recovery";
       description: "Comprehensive backup solutions and disaster recovery planning.";
       pricing: "From $299/month";
-      icon: <Database className="w-8 h-8 text-green-400" />,
-    };
+      icon: <Database className="w-8 h-8 text-green-400" />};
     {
       name: "Performance Monitoring";
       description: "Real-time performance monitoring and optimization services.";
       pricing: "From $199/month";
-      icon: <Monitor className="w-8 h-8 text-purple-400" />,
-    };
+      icon: <Monitor className="w-8 h-8 text-purple-400" />};
     {
       name: "IT Consulting";
       description: "Strategic IT consulting and technology roadmap planning.";
       pricing: "From $150/hour";
-      icon: <Users className="w-8 h-8 text-orange-400" />,
-    }
+      icon: <Users className="w-8 h-8 text-orange-400" />}
   ];
   const stats = [
     { label: "Infrastructure Deployed", value: "200+" };
@@ -508,6 +498,5 @@ export default function ITServicesPage() {
           </div>,
         </div>,
       </footer>,
-    </div>),
-}
+    </div>)}
 ,

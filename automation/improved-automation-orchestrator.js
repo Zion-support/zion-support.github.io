@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const { spawn } = require('child_process'),
 const express = require('express'),
@@ -35,29 +34,25 @@ class ImprovedAutomationOrchestrator {
         name: Continuous Improvement System';
         description: Monitors and improves code quality, performance, and security';
         autoRestart: true;
-        maxRestarts: 5,
-      };
+        maxRestarts: 5};
       enhanced-infinite-improvement': {
         script: 'enhanced-infinite-improvement.js';
         name: Enhanced Infinite Improvement Loop';
         description: AI-powered continuous improvement with learning capabilities';
         autoRestart: true;
-        maxRestarts: 3,
-      };
+        maxRestarts: 3};
       autonomous-system': {
         script: 'autonomous-system.js';
         name: Autonomous Automation System';
         description: Multi-module autonomous system for various tasks';
         autoRestart: true;
-        maxRestarts: 5,
-      };
+        maxRestarts: 5};
       intelligent-orchestrator': {
         script: 'intelligent-automation-orchestrator.js';
         name: Intelligent Automation Orchestrator';
         description: Coordinates and manages all automation systems';
         autoRestart: false;
-        maxRestarts: 1,
-      }
+        maxRestarts: 1}
     };
   }
 ,
@@ -105,8 +100,7 @@ class ImprovedAutomationOrchestrator {
         orchestrator: {
           port: this.port;
           uptime: process.uptime();
-          memory: process.memoryUsage(),
-        }
+          memory: process.memoryUsage()}
       })}),
     this.app.get('/api/systems', (req, res) => {
       res.json(this.getSystemStatus())}),
@@ -135,8 +129,7 @@ class ImprovedAutomationOrchestrator {
         restarts: 0;
         lastStart: null;
         lastError: null;
-        logs: [],
-      };
+        logs: []};
       this.automationSystems.set(systemName, system)}
 ,
     logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`)}
@@ -308,8 +301,7 @@ const timeoutId = setTimeout(checkStatus,                                       
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}
+// Store timeoutId for cleanup if needed}
       };
       checkStatus()})}
 ,
@@ -421,8 +413,7 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed,
-}
+// Store timeoutId for cleanup if needed}
 ,
   getSystemStatus() {
     const status ={};
@@ -434,8 +425,7 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
         restarts: system.restarts;
         lastStart: system.lastStart;
         lastError: system.lastError;
-        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0,
-      };
+        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0};
     }
     return status}
 ,

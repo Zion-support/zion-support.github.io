@@ -235,6 +235,5 @@ const AI20o25AutomationRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25AutomationRevolutionShowcase;

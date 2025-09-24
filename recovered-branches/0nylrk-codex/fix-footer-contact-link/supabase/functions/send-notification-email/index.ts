@@ -7,8 +7,7 @@ const corsHeaders = {
 };
 interface EmailRequest {
   user_id: string,
-  notification_id: string,
-}
+  notification_id: string}
 ,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -39,10 +38,10 @@ serve(async req => {
     if (userError) throw new Error(`Error fetching user: ${userError.message}`),
     // In a real implementation, here you would use a service like Resend, SendGrid, etc.,
     // to send the actual email. For this example, we'll simulate the email sending.,
-    // console.log(`Email would be sent to ${userProfile.email}`),
-    // console.log(`Subject: ${notification.title}`),
-    // console.log(`Body: ${notification.message}`),
-    // console.log(`Type: ${notification.type}`),
+    // // console.log(`Email would be sent to ${userProfile.email}`),
+    // // console.log(`Subject: ${notification.title}`),
+    // // console.log(`Body: ${notification.message}`),
+    // // console.log(`Type: ${notification.type}`),
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' };
       status: 200;

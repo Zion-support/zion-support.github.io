@@ -3,8 +3,7 @@ export type ServiceSelectionStepProps = {
   value: QuoteFormData,
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
-  onNext: () => void,
-};
+  onNext: () => void};
 const SERVICE_OPTIONS = [
   'Web Development';
   'Mobile Apps';
@@ -125,6 +124,5 @@ export default function ServiceSelectionStep({
           Continue,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

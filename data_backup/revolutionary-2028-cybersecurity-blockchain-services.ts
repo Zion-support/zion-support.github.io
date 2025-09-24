@@ -112,8 +112,7 @@ reviews: number,export const revolutionary20o28CybersecurityBlockchainServices: 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered threat intelligence platform with behavioral analysis, automated response, and comprehensive security orchestration.';
@@ -196,8 +195,7 @@ reviews: number,export const revolutionary20o28CybersecurityBlockchainServices: 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Quantum-resistant blockchain platform with AI optimization, cross-chain interoperability, and comprehensive DeFi support.';
@@ -280,8 +278,7 @@ reviews: number,export const revolutionary20o28CybersecurityBlockchainServices: 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered identity verification platform with biometric authentication, fraud detection, and comprehensive compliance management.';
@@ -363,8 +360,7 @@ reviews: number,export const revolutionary20o28CybersecurityBlockchainServices: 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Blockchain-based supply chain security platform with product tracking, counterfeit detection, and comprehensive transparency.';
@@ -446,8 +442,7 @@ reviews: number,export const revolutionary20o28CybersecurityBlockchainServices: 
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   AI-powered privacy-preserving analytics platform with federated learning, homomorphic encryption, and comprehensive privacy protection.';

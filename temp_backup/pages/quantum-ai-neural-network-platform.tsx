@@ -20,6 +20,5 @@ export default function QuantumAiNeuralNetworkPlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -73,6 +73,5 @@ export default function ProductionReadinessChecklist20o26() {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-}
+    </div>)}
 ,

@@ -3,23 +3,19 @@ import { cn } from "../../lib/utils",
 interface CardProps {
   children: React.ReactNode,
   className?: string,
-  style?: React.CSSProperties,
-}
+  style?: React.CSSProperties}
 ,
 interface CardHeaderProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 interface CardContentProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 interface CardFooterProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const Card: React.FC<CardProps> = ({ children, className, style }) => {
   return (

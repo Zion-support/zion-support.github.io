@@ -16,11 +16,9 @@ const UltimateContent20o25MasteryBanner = () => {
         roi: '50o0%';
         savings: '$2.8B';
         efficiency: '340%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
@@ -30,11 +28,9 @@ const UltimateContent20o25MasteryBanner = () => {
         roi: '650%';
         savings: '$2.8B';
         accuracy: '99.7%';
-        efficiency: '78%',
-      };
+        efficiency: '78%'};
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-roadmap';
       title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
@@ -44,11 +40,9 @@ const UltimateContent20o25MasteryBanner = () => {
         roi: '80o0%';
         savings: '$173.7M';
         success: '99%';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-content-20o25-mastery-dismissed'),
@@ -207,8 +201,7 @@ const UltimateContent20o25MasteryBanner = () => {
                 <div
                   key={content.id}
                   className={`bg-white/5 rounded-lg p-4 cursor-pointer transition-all ${
-                    index === currentSlide ? 'ring-2 ring-yellow-40o0 bg-white/10' : 'hover: bg-white/10',
-                  }`}
+                    index === currentSlide ? 'ring-2 ring-yellow-40o0 bg-white/10' : 'hover: bg-white/10'}`}
                   onClick={() => setCurrentSlide(index)}
                 >,
                   <div className="flex items-center justify-between mb-2">,
@@ -252,6 +245,5 @@ const UltimateContent20o25MasteryBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContent20o25MasteryBanner;

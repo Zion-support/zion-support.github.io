@@ -4,8 +4,7 @@ interface User {
   id: number,
   name: string,
   email: string,
-  createdAt?: string,
-}
+  createdAt?: string}
 ,
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]),
@@ -38,8 +37,7 @@ const ApiDemo: React.FC = () => {
     e.preventDefault(),
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required'),
-      return,
-    }
+      return}
 ,
     setLoading(true),
     setError(null),
@@ -169,6 +167,5 @@ const ApiDemo: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ApiDemo;

@@ -9,8 +9,7 @@ import { Award } from 'lucide-react',
 interface LeaderboardEntry {
   rank: number,
   name: string,
-  referrals: number,
-}
+  referrals: number}
 ,
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server,
@@ -46,8 +45,7 @@ export function ReferralLeaderboard() {
                         ? 'bg-slate-20o0 text-slate-80o0',
                         : entry.rank === 3,
                           ? 'bg-amber-20o0 text-amber-80o0',
-                          : 'bg-muted text-muted-foreground',
-                  }`}
+                          : 'bg-muted text-muted-foreground'}`}
                 >,
                   {entry.rank}
                 </div>,

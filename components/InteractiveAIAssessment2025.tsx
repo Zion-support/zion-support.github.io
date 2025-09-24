@@ -178,8 +178,7 @@ const InteractiveAIAssessment20o25 = () => {
             Get Expert Consultation,
           </Link>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">,
@@ -218,8 +217,7 @@ const InteractiveAIAssessment20o25 = () => {
               className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-20o0 ${
                 answers[questions[currentQuestion].id] === questions[currentQuestion].scores[index],
                   ? 'border-purple-60o0 bg-purple-50 text-purple-90o0',
-                  : 'border-gray-20o0 hover: border-purple-30o0 hover:bg-purple-25',
-              }`}
+                  : 'border-gray-20o0 hover: border-purple-30o0 hover:bg-purple-25'}`}
             >,
               <div className="flex items-center space-x-3">,
                 <div className={`w-4 h-4 rounded-full border-2 ${
@@ -241,8 +239,7 @@ const InteractiveAIAssessment20o25 = () => {
           className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
             currentQuestion === 0,
               ? 'bg-gray-10o0 text-gray-40o0 cursor-not-allowed',
-              : 'bg-gray-60o0 text-white hover: bg-gray-70o0',
-          }`}
+              : 'bg-gray-60o0 text-white hover: bg-gray-70o0'}`}
         >,
           Previous,
         </button>,
@@ -252,8 +249,7 @@ const InteractiveAIAssessment20o25 = () => {
           className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
             answers[questions[currentQuestion].id] === undefined,
               ? 'bg-gray-10o0 text-gray-40o0 cursor-not-allowed',
-              : 'bg-purple-60o0 text-white hover: bg-purple-70o0',
-          }`}
+              : 'bg-purple-60o0 text-white hover: bg-purple-70o0'}`}
         >,
           {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
         </button>,

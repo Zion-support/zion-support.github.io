@@ -29,5 +29,4 @@ describe('Top-Level Navigation Routes', () => {'  it('should render the Home pag
   // to ensure the COMMUNITY_FORUM_TEST_ID is valid.,
   it('should render the Community Forum for the /community path', async () => {'    // Conceptual check: ,
     // Navigate to /community,
-    // Expect element with data-testid="community-forum-page" TO BE VISIBLE"    // Expect some text unique to non-forum pages NOT TO BE VISIBLE""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-  })}),
+    // Expect element with data-testid="community-forum-page" TO BE VISIBLE"    // Expect some text unique to non-forum pages NOT TO BE VISIBLE"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""})}),

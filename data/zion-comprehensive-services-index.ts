@@ -40,8 +40,7 @@ export const serviceCategories = [
 // Utility functions,
 export const getServicesByCategory = (category: string) => {
   return allZionServices.filter(
-    service => service.category.toLowerCase() === category.toLowerCase()),
-};
+    service => service.category.toLowerCase() === category.toLowerCase())};
 export const getPopularServices = () => {
   return allZionServices.filter(service => service.isPopular)};
 export const getNewServices = () => {
@@ -51,8 +50,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
     const price = parseFloat(service.price.replace('$', '').replace(',', '')),
     return price >= minPrice && price <= maxPrice})};
 export const getServicesByRating = (minRating: number) => {
-  return allZionServices.filter(service => service.rating >= minRating),
-};
+  return allZionServices.filter(service => service.rating >= minRating)};
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase(),
   return allZionServices.filter(
@@ -64,8 +62,7 @@ export const searchServices = (query: string) => {
       service.features.some(feature =>,
         feature.toLowerCase().includes(searchTerm)) ||,
       service.benefits.some(benefit =>,
-        benefit.toLowerCase().includes(searchTerm))),
-};
+        benefit.toLowerCase().includes(searchTerm)))};
 // Service statistics,
 export const getServiceStats = () => {
   const totalServices = allZionServices.length,

@@ -43,6 +43,5 @@ const NewResource20o25ImplementationRoadmapBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NewResource20o25ImplementationRoadmapBanner;

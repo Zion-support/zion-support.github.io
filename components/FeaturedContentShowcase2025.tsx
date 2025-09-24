@@ -56,7 +56,7 @@ const FeaturedContentShowcase20o25 = () => {
       id: 4;
       title: 'Quantum-Neural Hybrid Systems 20o25';
       description:,
-        'Revolutionary quantum-neural architecture that combines quantum computing with advanced neural networks for unprecedented window.performance.';
+        'Revolutionary quantum-neural architecture that combines quantum computing with advanced neural networks for unprecedented window.window.performance.';
       category: 'Technology';
       type: 'Technical Guide';
       url: '/blog/quantum-neural-hybrid-systems-20o25';
@@ -204,6 +204,5 @@ const FeaturedContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeaturedContentShowcase20o25;

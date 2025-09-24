@@ -22,8 +22,7 @@ export default {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
-        NODE_ENV: 'production',
-      };
+        NODE_ENV: 'production'};
       "log_file": 'logs/pm2/auto-fix.log';
       "error_file": 'logs/pm2/auto-fix-error.log';
       "out_file": 'logs/pm2/auto-fix-out.log'};
@@ -36,8 +35,7 @@ export default {
       "watch": false;
       "max_memory_restart": '128M';
       "env": {
-        NODE_ENV: 'production',
-      };
+        NODE_ENV: 'production'};
       "log_file": 'logs/pm2/health.log';
       "error_file": 'logs/pm2/health-error.log';
       "out_file": 'logs/pm2/health-out.log'};

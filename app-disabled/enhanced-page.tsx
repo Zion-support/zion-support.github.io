@@ -33,8 +33,7 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack')),
 // Component wrapper for lazy loading with error boundary,
 const LazyComponentWrapper: React.FC<{
   children: React.ReactNode,
-  fallback?: React.ReactNode,
-}> = ({
+  fallback?: React.ReactNode}> = ({
   children;
   fallback = (
     <EnhancedLoadingSpinner variant='skeleton' message='Loading component...' />);
@@ -83,8 +82,7 @@ export default function EnhancedHomePage() {
                 variant='dots',
                 message='Loading AI Calculator...',
                 size='lg',
-              />,
-            }
+              />}
           >,
             <InteractiveAICalculator />,
           </LazyComponentWrapper>,
@@ -121,8 +119,7 @@ export default function EnhancedHomePage() {
                   <EnhancedLoadingSpinner
                     variant='pulse',
                     message='Loading ROI Calculator...',
-                  />,
-                }
+                  />}
               >,
                 <ROICalculator />,
               </LazyComponentWrapper>,

@@ -15,6 +15,5 @@ export default function QuantumAiNeural20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

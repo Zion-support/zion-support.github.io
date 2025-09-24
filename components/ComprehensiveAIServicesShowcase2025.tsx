@@ -50,8 +50,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Automation';
       rating: 4.9;
       clients: 250o0;
-      link: '/services/ai-automation',
-    };
+      link: '/services/ai-automation'};
     {
       id: 'predictive-analytics';
       title: 'Advanced Predictive Analytics';
@@ -72,8 +71,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Analytics';
       rating: 4.8;
       clients: 180o0;
-      link: '/services/predictive-analytics',
-    };
+      link: '/services/predictive-analytics'};
     {
       id: 'ai-content-generation';
       title: 'Intelligent Content Generation';
@@ -94,8 +92,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Content';
       rating: 4.7;
       clients: 320o0;
-      link: '/services/ai-content-generation',
-    };
+      link: '/services/ai-content-generation'};
     {
       id: 'ai-security';
       title: 'AI-Powered Cybersecurity';
@@ -116,8 +113,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Security';
       rating: 4.9;
       clients: 120o0;
-      link: '/services/ai-security',
-    };
+      link: '/services/ai-security'};
     {
       id: 'ai-customer-service';
       title: 'Intelligent Customer Service';
@@ -138,8 +134,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Customer Service';
       rating: 4.6;
       clients: 410o0;
-      link: '/services/ai-customer-service',
-    };
+      link: '/services/ai-customer-service'};
     {
       id: 'ai-data-analysis';
       title: 'Advanced Data Analysis';
@@ -160,8 +155,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       category: 'Data Analysis';
       rating: 4.8;
       clients: 220o0;
-      link: '/services/ai-data-analysis',
-    }
+      link: '/services/ai-data-analysis'}
   ],
   const containerVariants ={
     hidden: { opacity: 0, y: 50 };
@@ -170,8 +164,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
       y: 0;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -218,8 +211,7 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeService === index,
                   ? 'bg-white text-indigo-90o0 shadow-lg',
-                  : 'bg-white/10 text-white hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 text-white hover: bg-white/20'}`}
             >,
               {service.icon}
               <span className="ml-2">{service.title}</span>,
@@ -401,6 +393,5 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>),
-};
+    </motion.section>)};
 export default ComprehensiveAIServicesShowcase20o25;

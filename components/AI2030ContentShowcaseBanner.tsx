@@ -203,5 +203,4 @@ export default function AI20o30ContentShowcaseBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

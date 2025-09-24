@@ -24,11 +24,9 @@ interface BreakthroughContent {
     roi: string,
     savings: string,
     accuracy: string,
-    efficiency?: string,
-  };
+    efficiency?: string};
   tags: string[],
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const BreakthroughTechnologies20o25Showcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<,
@@ -118,8 +116,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
       case 'resource':,
         return <FileText className='h-4 w-4' />,
       default:,
-        return <BookOpen className='h-4 w-4' />,
-    }
+        return <BookOpen className='h-4 w-4' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -130,8 +127,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -249,8 +245,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 flex items-center space-x-2 ${
                 activeFilter === filter.key,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               <span>{filter.label}</span>,
               <span
@@ -271,8 +266,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
               className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden hover: shadow-xl transition-all duration-30o0 ${
                 content.featured,
                   ? 'ring-2 ring-purple-50o0 ring-opacity-50',
-                  : '',
-              }`}
+                  : ''}`}
             >,
               {/* Featured Badge */}
               {content.featured && (
@@ -389,6 +383,5 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default BreakthroughTechnologies20o25Showcase;

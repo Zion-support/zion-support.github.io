@@ -20,6 +20,5 @@ export default function QuantumReadyCybersecuritySuitePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

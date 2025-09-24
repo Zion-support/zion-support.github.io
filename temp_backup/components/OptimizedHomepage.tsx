@@ -29,8 +29,7 @@ const optimizedAnimations ={
     initial: {};
     animate: {
       transition: {
-        staggerChildren: 0.0o5,
-      }
+        staggerChildren: 0.0o5}
     }
   }
 };
@@ -45,8 +44,7 @@ const animationVariants ={
     initial: {};
     animate: {
       transition: {
-        staggerChildren: 0.0o5,
-      }
+        staggerChildren: 0.0o5}
     }
   }
 };
@@ -56,8 +54,7 @@ const OptimizedHomepage: React.FC = () => {
   useEffect(() => {
     // Check for reduced motion preference,
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
-    setIsReducedMotion(mediaQuery.matches),
-  }, []),
+    setIsReducedMotion(mediaQuery.matches)}, []),
   // Memoized service data for better performance,
   const allRevolutionaryServices = useMemo(() => [
     ...revolutionary20o44AdvancedMicroSaas;
@@ -86,48 +83,42 @@ const OptimizedHomepage: React.FC = () => {
       description: "Next-generation AI consciousness with emotional intelligence and self-awareness capabilities";
       href: "/ai-consciousness-evolution-20o44";
       color: "from-purple-50o0 to-pink-50o0";
-      badge: "Featured",
-    };
+      badge: "Featured"};
     {
       icon: Atom;
       title: "Quantum Neural Networks 20o44";
       description: "Quantum-powered AI with consciousness integration and advanced cognitive processing";
       href: "/quantum-neural-network-platform-20o44";
       color: "from-blue-50o0 to-cyan-50o0";
-      badge: "New",
-    };
+      badge: "New"};
     {
       icon: Shield;
       title: "Quantum Cybersecurity 20o44";
       description: "Quantum-resistant security with AI consciousness and advanced threat detection";
       href: "/quantum-cybersecurity-platform-20o44";
       color: "from-red-50o0 to-orange-50o0";
-      badge: "Popular",
-    };
+      badge: "Popular"};
     {
       icon: Rocket;
       title: "Space Resource Intelligence 20o44";
       description: "AI-powered space exploration with consciousness and resource optimization";
       href: "/space-resource-intelligence-20o44";
       color: "from-indigo-50o0 to-purple-50o0";
-      badge: "Cutting Edge",
-    };
+      badge: "Cutting Edge"};
     {
       icon: Cpu;
       title: "Autonomous Business Intelligence 20o44";
       description: "Fully autonomous AI business intelligence with predictive analytics";
       href: "/ai-autonomous-business-intelligence-20o44";
       color: "from-emerald-50o0 to-teal-50o0";
-      badge: "Enterprise",
-    };
+      badge: "Enterprise"};
     {
       icon: Database;
       title: "Quantum Cloud Infrastructure 20o44";
       description: "Quantum-powered cloud with consciousness and quantum advantage";
       href: "/quantum-cloud-infrastructure-20o44";
       color: "from-yellow-50o0 to-orange-50o0";
-      badge: "Advanced",
-    }
+      badge: "Advanced"}
   ],
   // Optimized stats with better accessibility,
   const stats = [
@@ -144,8 +135,7 @@ const OptimizedHomepage: React.FC = () => {
   const handleServiceClick = useCallback((service: { slug: string }) => {
     window.location.href = service.slug}, []),
   const handleCategoryChange = useCallback((category: string) => {
-    setSelectedCategory(category),
-  }, []),
+    setSelectedCategory(category)}, []),
   // Optimized animations based on user preference,
   const getAnimationProps = (animationType: keyof typeof optimizedAnimations) => {
     if (isReducedMotion) {
@@ -328,8 +318,7 @@ const OptimizedHomepage: React.FC = () => {
                     className={`group px-6 py-3 rounded-full font-medium transition-all duration-30o0 flex items-center gap-2 ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white shadow-lg',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
                     role="tab",
                     aria-selected={selectedCategory === category.id}
                     aria-controls={`services-${category.id}`}
@@ -442,6 +431,5 @@ const OptimizedHomepage: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>),
-};
+    </>)};
 export default OptimizedHomepage;

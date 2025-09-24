@@ -207,6 +207,5 @@ const RevolutionaryAIAutomationShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryAIAutomationShowcase20o25;

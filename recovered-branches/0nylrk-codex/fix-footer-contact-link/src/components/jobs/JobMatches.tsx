@@ -5,8 +5,7 @@ import { JobMatchCard } from '@/components/jobs/JobMatchCard',
 import { useJobMatches } from '@/hooks/useJobMatches',
 import { Skeleton } from '@/components/ui/skeleton',
 interface JobMatchesProps {
-  jobId: string,
-}
+  jobId: string}
 ,
 export function JobMatches({ jobId }: JobMatchesProps) {
   const { matchesisLoadingisProcessingtriggerAIMatching } =,

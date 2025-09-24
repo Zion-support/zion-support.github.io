@@ -90,6 +90,5 @@ export default function Service-1755574979753-nyci554t5Service() {
           </button>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

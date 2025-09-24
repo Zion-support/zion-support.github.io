@@ -12,8 +12,7 @@ interface APIEndpoint {
   requestsPerMinute: number,
   lastUpdated: Date,
   documentation: string,
-  rateLimit: number,
-}
+  rateLimit: number}
 ,
 interface APIKey {
   id: string,
@@ -25,8 +24,7 @@ interface APIKey {
   limit: number,
   createdAt: Date,
   expiresAt?: Date,
-  lastUsed: Date,
-}
+  lastUsed: Date}
 ,
 interface APIMetric {
   id: string,
@@ -35,8 +33,7 @@ interface APIMetric {
   unit: string,
   trend: 'up' | 'down' | 'stable',
   change: number,
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 const APIManagementSystem: React.FC = () => {
   const [endpointsetEndpoints] = useState<APIEndpoint[]>([]),
@@ -48,8 +45,7 @@ const APIManagementSystem: React.FC = () => {
     generateMockData(),
     // Simulate real-time updates,
     const interval = setInterval(() => {
-      updateRealTimeData(),
-    }3000),
+      updateRealTimeData()}3000),
     return () => clearInterval(interval)}[]),
   const generateMockData = async () => {
     setIsLoading(true),
@@ -67,8 +63,7 @@ const APIManagementSystem: React.FC = () => {
         requestsPerMinute: 1250;
         lastUpdated: new Date(Date.now() - 2 * 60 * 60 * 1000);
         documentation: 'Retrieve user profile information by ID';
-        rateLimit: 1000,
-      };
+        rateLimit: 1000};
       {
         id: '2';
         name: 'Create User';
@@ -81,8 +76,7 @@ const APIManagementSystem: React.FC = () => {
         requestsPerMinute: 89;
         lastUpdated: new Date(Date.now() - 1 * 60 * 60 * 1000);
         documentation: 'Create a new user account';
-        rateLimit: 100,
-      };
+        rateLimit: 100};
       {
         id: '3';
         name: 'Update Product';
@@ -95,8 +89,7 @@ const APIManagementSystem: React.FC = () => {
         requestsPerMinute: 45;
         lastUpdated: new Date(Date.now() - 30 * 60 * 1000);
         documentation: 'Update product information';
-        rateLimit: 500,
-      };
+        rateLimit: 500};
       {
         id: '4';
         name: 'Delete Order';
@@ -109,8 +102,7 @@ const APIManagementSystem: React.FC = () => {
         requestsPerMinute: 12;
         lastUpdated: new Date(Date.now() - 24 * 60 * 60 * 1000);
         documentation: 'Delete an order (deprecated - use cancel instead)';
-        rateLimit: 50,
-      };
+        rateLimit: 50};
       {
         id: '5';
         name: 'Search Products';
@@ -123,8 +115,7 @@ const APIManagementSystem: React.FC = () => {
         requestsPerMinute: 3450;
         lastUpdated: new Date(Date.now() - 15 * 60 * 1000);
         documentation: 'Search products with filters and pagination';
-        rateLimit: 2000,
-      }
+        rateLimit: 2000}
     ],
     const mockApiKeys: APIKey[] = [
       {
@@ -137,8 +128,7 @@ const APIManagementSystem: React.FC = () => {
         limit: 100000;
         createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
         expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 5 * 60 * 1000),
-      };
+        lastUsed: new Date(Date.now() - 5 * 60 * 1000)};
       {
         id: '2';
         name: 'Web Dashboard Key';
@@ -148,8 +138,7 @@ const APIManagementSystem: React.FC = () => {
         usage: 123456;
         limit: 500000;
         createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 2 * 60 * 1000),
-      };
+        lastUsed: new Date(Date.now() - 2 * 60 * 1000)};
       {
         id: '3';
         name: 'Partner Integration';
@@ -160,8 +149,7 @@ const APIManagementSystem: React.FC = () => {
         limit: 50000;
         createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
         expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 30 * 60 * 1000),
-      };
+        lastUsed: new Date(Date.now() - 30 * 60 * 1000)};
       {
         id: '4';
         name: 'Test Environment';
@@ -171,8 +159,7 @@ const APIManagementSystem: React.FC = () => {
         usage: 1234;
         limit: 10000;
         createdAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
-      }
+        lastUsed: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)}
     ],
     const mockMetrics: APIMetric[] = [
       {
@@ -182,8 +169,7 @@ const APIManagementSystem: React.FC = () => {
         unit: '';
         trend: 'up';
         change: 12.3;
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: '2';
         name: 'Average Response Time';
@@ -191,8 +177,7 @@ const APIManagementSystem: React.FC = () => {
         unit: 'ms';
         trend: 'down';
         change: -8.7;
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: '3';
         name: 'Error Rate';
@@ -200,8 +185,7 @@ const APIManagementSystem: React.FC = () => {
         unit: '%';
         trend: 'down';
         change: -0.3;
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: '4';
         name: 'Active API Keys';
@@ -209,8 +193,7 @@ const APIManagementSystem: React.FC = () => {
         unit: '';
         trend: 'up';
         change: 5.2;
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: '5';
         name: 'Rate Limit Hits';
@@ -218,8 +201,7 @@ const APIManagementSystem: React.FC = () => {
         unit: '';
         trend: 'up';
         change: 15.6;
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       {
         id: '6';
         name: 'Uptime';
@@ -227,8 +209,7 @@ const APIManagementSystem: React.FC = () => {
         unit: '%';
         trend: 'stable';
         change: 0.1;
-        timestamp: new Date(),
-      }
+        timestamp: new Date()}
     ],
     setEndpoints(mockEndpoints),
     setApiKeys(mockApiKeys),
@@ -239,14 +220,12 @@ const APIManagementSystem: React.FC = () => {
     setMetrics(prev => prev.map(metric => ({
       ...metric;
       value: metric.value + Math.floor(Math.random() * 100 - 50);
-      timestamp: new Date(),
-    }))),
+      timestamp: new Date()}))),
     // Update endpoint metrics,
     setEndpoints(prev => prev.map(endpoint => ({
       ...endpoint;
       responseTime: Math.max(50endpoint.responseTime + Math.floor(Math.random() * 20 - 10));
-      requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50)),
-    })))};
+      requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))})))};
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100',
@@ -255,8 +234,7 @@ const APIManagementSystem: React.FC = () => {
       case 'disabled': return 'text-red-600 bg-red-100',
       case 'revoked': return 'text-red-600 bg-red-100',
       case 'expired': return 'text-gray-600 bg-gray-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getMethodColor = (method: string) => {
     switch (method) {
@@ -265,16 +243,14 @@ const APIManagementSystem: React.FC = () => {
       case 'PUT': return 'text-yellow-600 bg-yellow-100',
       case 'DELETE': return 'text-red-600 bg-red-100',
       case 'PATCH': return 'text-purple-600 bg-purple-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
-      default: return '➡️',
-    }
+      default: return '➡️'}
   };
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
@@ -339,8 +315,7 @@ const APIManagementSystem: React.FC = () => {
             className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-md font-medium transition-colors duration-200 ${
               selectedView === tab.id,
                 ? 'bg-white text-blue-600 shadow-sm',
-                : 'text-gray-600 hover: text-gray-900',
-            }`}
+                : 'text-gray-600 hover: text-gray-900'}`}
           >,
             <span>{tab.icon}</span>,
             <span>{tab.label}</span>,

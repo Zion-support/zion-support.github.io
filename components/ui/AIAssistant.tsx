@@ -6,8 +6,7 @@ export type AIAssistantProps = {
   defaultPrompt: string,
   systemPrompt?: string,
   onAccept: (markdown: string) => void,
-  authorizationToken?: string,
-};
+  authorizationToken?: string};
 export default function AIAssistant({
   buttonLabel = 'Generate with AI';
   title = 'AI Writing Assistant';
@@ -42,8 +41,7 @@ export default function AIAssistant({
         throw new Error(data?.error || 'Failed to generate')}
       setOutput(String(data.text || ', ')),
       setIsEditing(false)} catch (e: any) {
-      setError(e.message || 'Request failed'),
-    } finally {
+      setError(e.message || 'Request failed')} finally {
       setLoading(false)}
   }[authorizationTokenpromptsystemPrompt]),
   const onCopy = useCallback(async () => {
@@ -93,7 +91,7 @@ export default function AIAssistant({
                 <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>,
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>,
                 <button
-                  onClick={() => { onAccept(output), onClose(), }}
+                  onClick={() => { onAccept(output), onClose()}}
                   disabled={!canAccept}
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled: opacity-60">,
                   Accept,

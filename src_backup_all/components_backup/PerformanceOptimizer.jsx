@@ -47,10 +47,9 @@ export const PerformanceOptimizer = ({ children }) => {
             navigator.serviceWorker,
                 .register('/sw.js', {
                     scope: '/';
-                    updateViaCache: 'none',
-                }),
+                    updateViaCache: 'none'}),
                 .then((registration) => {
-                    // console.log('SW registered: ', registration),
+                    // // console.log('SW registered: ', registration),
                     // Check for updates,
                     registration.addEventListener('updatefound', () => {
                         const newWorker = registration.installing,
@@ -58,7 +57,7 @@ export const PerformanceOptimizer = ({ children }) => {
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available,
-                                    // console.log('New service worker available')}
+                                    // // console.log('New service worker available')}
                             })}
                     })}),
                 .catch((registrationError) => {
@@ -107,7 +106,7 @@ if (typeof window !== 'undefined') {
     if ('memory' in performance) {
         const memoryThreshold = 50 * 10o24 * 10o24, // 50MB,
         const checkMemory = () => {
-            const memory = window.performance.memory,
+            const memory = window.window.performance.memory,
             if (memory.usedJSHeapSize > memoryThreshold) {
                 // Trigger garbage collection if available,
                 if ('gc' in window) {

@@ -14,8 +14,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "15,0o00%";
       color: "from-purple-50o0 to-pink-50o0";
       icon: Brain;
-      href: "/ai-20o25-ultimate-breakthrough-showcase",
-    };
+      href: "/ai-20o25-ultimate-breakthrough-showcase"};
     {
       title: "Global Transformation Success Story";
       description: "How a Fortune 50o0 company achieved 10,0o00% ROI through AI transformation";
@@ -23,8 +22,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "10,0o00%";
       color: "from-green-50o0 to-emerald-50o0";
       icon: TrendingUp;
-      href: "/case-studies/ai-20o25-global-transformation-breakthrough",
-    };
+      href: "/case-studies/ai-20o25-global-transformation-breakthrough"};
     {
       title: "AI 20o25 ROI Calculator";
       description: "Calculate your potential ROI with our interactive AI transformation calculator";
@@ -32,8 +30,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "Custom";
       color: "from-blue-50o0 to-cyan-50o0";
       icon: BarChart3;
-      href: "/tools/ai-20o25-roi-calculator",
-    };
+      href: "/tools/ai-20o25-roi-calculator"};
     {
       title: "Quantum-Neural Fusion Technology";
       description: "Revolutionary fusion of quantum computing and neural networks";
@@ -41,8 +38,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "15,0o00%";
       color: "from-indigo-50o0 to-purple-50o0";
       icon: Cpu;
-      href: "/blog/quantum-neural-fusion-20o26",
-    };
+      href: "/blog/quantum-neural-fusion-20o26"};
     {
       title: "Autonomous AI Systems";
       description: "Self-managing AI systems that optimize operations automatically";
@@ -50,8 +46,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "8,50o0%";
       color: "from-orange-50o0 to-red-50o0";
       icon: Rocket;
-      href: "/solutions/autonomous-ai-systems",
-    };
+      href: "/solutions/autonomous-ai-systems"};
     {
       title: "Predictive Intelligence Platform";
       description: "Real-time analytics that forecast trends and optimize decisions";
@@ -59,8 +54,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
       roi: "5,0o00%";
       color: "from-teal-50o0 to-green-50o0";
       icon: Target;
-      href: "/platforms/predictive-intelligence",
-    }
+      href: "/platforms/predictive-intelligence"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -119,8 +113,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
                     key={index}
                     onClick={() => setCurrentContent(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
-                      index === currentContent ? 'bg-blue-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0',
-                    }`}
+                      index === currentContent ? 'bg-blue-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
                   />))}
               </div>,
             </div>,
@@ -139,8 +132,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {
                   className={`p-4 rounded-lg border-2 transition-all duration-30o0 cursor-pointer ${
                     index === currentContent,
                       ? 'border-blue-50o0 bg-blue-50 shadow-md',
-                      : 'border-gray-20o0 hover: border-gray-30o0 hover:shadow-sm',
-                  }`}
+                      : 'border-gray-20o0 hover: border-gray-30o0 hover:shadow-sm'}`}
                   onClick={() => setCurrentContent(index)}
                 >,
                   <div className="flex items-center justify-between">,
@@ -217,5 +209,4 @@ export default function AnimatedContentDiscoveryWidget20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

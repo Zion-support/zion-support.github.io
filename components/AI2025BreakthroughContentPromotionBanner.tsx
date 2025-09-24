@@ -92,6 +92,5 @@ export default function AI20o25BreakthroughContentPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

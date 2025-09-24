@@ -91,8 +91,7 @@ reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade marketing automation platform with AI-powered predictive analytics and campaign optimization.';
@@ -153,8 +152,7 @@ reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Intelligent sales platform with AI-powered lead scoring and sales process optimization.';
@@ -215,8 +213,7 @@ reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive HR management platform with AI-powered automation and people analytics capabilities.';
@@ -277,8 +274,7 @@ reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade financial analytics platform with AI-powered forecasting and risk management.';
@@ -339,8 +335,7 @@ reviews: number,export const innovativeBusinessSolutionsEnhanced20o25: Innovativ
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.';

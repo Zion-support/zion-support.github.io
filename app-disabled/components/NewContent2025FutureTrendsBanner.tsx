@@ -14,8 +14,7 @@ const NewContent20o25FutureTrendsBanner = () => {
         roi: '1,20o0%';
         savings: '$15.8B+';
         efficiency: '89%';
-        accuracy: '99.7%',
-      };
+        accuracy: '99.7%'};
       readingTime: '25 min read';
       description: 'Complete guide to revolutionary AI trends delivering 1,20o0% ROI'};
     {
@@ -27,11 +26,9 @@ const NewContent20o25FutureTrendsBanner = () => {
         roi: '1,20o0%';
         savings: '$15.8B';
         timeline: '18 months';
-        efficiency: '89%',
-      };
+        efficiency: '89%'};
       readingTime: '18 min read';
-      description: 'Ultimate success story of Fortune 50o0 AI transformation',
-    };
+      description: 'Ultimate success story of Fortune 50o0 AI transformation'};
     {
       id: 'ai-20o25-implementation-ultimate-framework-120o0-roi';
       title: 'AI 20o25 Implementation Ultimate Framework';
@@ -41,8 +38,7 @@ const NewContent20o25FutureTrendsBanner = () => {
         roi: '1,20o0%';
         success: '94%';
         timeline: '18 months';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       readingTime: '35 min read';
       description: 'Complete roadmap to achieving 1,20o0% ROI with AI'}
   ],

@@ -20,6 +20,5 @@ export default function QuantumCybersecurityPlatform20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

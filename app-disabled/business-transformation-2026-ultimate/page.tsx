@@ -326,6 +326,5 @@ export default function BusinessTransformation20o26Ultimate() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

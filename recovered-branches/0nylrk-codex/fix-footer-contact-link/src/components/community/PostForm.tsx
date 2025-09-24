@@ -25,7 +25,6 @@ import { Input } from '@/components / ui / input',
 import { Button } from '@/components / ui / button',
 import { Textarea } from '@/components / ui / textarea',
 import { ForumCategory } from '@/types / community',
-,
   Card,
   CardContent,
   CardFooter,
@@ -42,8 +41,7 @@ interface PostFormValues {
   content: string;
   categoryId: ForumCategory;
   tags: string,
-  tags: string,
-}
+  tags: string}
 interface PostFormProps {
   initialValues?: Partial<PostFormValues>,
   onSubmit: (values: PostFormValues) => void;
@@ -67,8 +65,7 @@ interface PostFormValues {
   title: string;
   content: string;
   categoryId: ForumCategory;
-  tags: string,
-}
+  tags: string}
 ,
 interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
@@ -77,8 +74,7 @@ interface PostFormProps {
 ,
   initialValues?: Partial<PostFormValues>,
   onSubmit: (values: PostFormValues) => void,
-  isEditing?: boolean,
-}
+  isEditing?: boolean}
 export const PostForm = ({
   initialValues;
   onSubmit;
@@ -88,16 +84,14 @@ export const PostForm = ({
       title: initialValues?.title |"",
       content: initialValues?.content |"",
       categoryId: initialValues?.categoryId |"project-help",
-      tags: initialValues?.tags |"",
-    }
+      tags: initialValues?.tags |""}
 }),
   const [isSubmitting, setIsSubmitting] = useState(false),
 interface PostFormValues {
   title: string;
   content: string;
   category_id: ForumCategory;
-  tags: string,
-}
+  tags: string}
 interface PostFormProps {
   initial_values?: Partial < PostFormValues>,
   on_submit: (values: PostFormValues) => void;
@@ -111,8 +105,7 @@ export const PostForm = ({
       title: initial_values?.title || "";
       content: initial_values?.content || "";
       category_id: initial_values?.category_id || "project - help";
-      tags: initial_values?.tags || "",
-    }
+      tags: initial_values?.tags || ""}
   }),
   const [is_submitting, setIsSubmitting] = useState (false),
   const handle_submit = async (values: PostFormValues) => {
@@ -126,8 +119,7 @@ export const PostForm = ({
     setIsSubmitting(true);
     try {
       await onSubmit(values)} finally {
-      setIsSubmitting(false),
-}
+      setIsSubmitting(false)}
 }
 ,
   return (

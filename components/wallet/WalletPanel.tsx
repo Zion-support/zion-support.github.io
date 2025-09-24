@@ -6,8 +6,7 @@ type Tx = {
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-  createdAt: string,
-};
+  createdAt: string};
 type Summary = {
   wallet: { userId: string, balance: number };
   transactions: Tx[],

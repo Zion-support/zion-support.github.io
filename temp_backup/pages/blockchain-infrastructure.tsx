@@ -15,6 +15,5 @@ export default function BlockchainInfrastructurePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

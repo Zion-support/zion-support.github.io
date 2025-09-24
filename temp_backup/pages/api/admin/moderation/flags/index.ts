@@ -3,7 +3,7 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
-  try { ensureAdmin(user), } catch (e: any) { return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
+  try { ensureAdmin(user)} catch (e: any) { return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
 ,
   if (req.method === 'GET') {
     const { status, reason, userEmail, contentType } = req.query as Record<string string | undefined>,

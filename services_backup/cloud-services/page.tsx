@@ -204,8 +204,7 @@ function CloudServiceCard({
   description: string,
   features: string[],
   price: string,
-  icon: string,
-}) {
+  icon: string}) {
   return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-6 hover: shadow-lg transition-shadow'>,
       <div className='text-4xl mb-4'>{icon}</div>,
@@ -292,8 +291,7 @@ function Plan({
   name: string,
   price: string,
   duration: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-8 hover: shadow-lg transition-shadow'>,
       <h4 className='text-2xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
@@ -311,8 +309,7 @@ function Plan({
         className='w-full bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors text-center block'>,
         Get Started,
       </a>,
-    </div>),
-}
+    </div>)}
 ,
 function ContactSection() {
   return (

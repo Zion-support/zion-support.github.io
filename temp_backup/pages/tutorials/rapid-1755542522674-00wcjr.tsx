@@ -49,8 +49,7 @@ export default function TutorialPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/reports/tutorials" className="internal-link">Related Content</Link>,
 <Link href="/reports/tutorials/microservices-nextjs" className="internal-link">Related Content</Link>,

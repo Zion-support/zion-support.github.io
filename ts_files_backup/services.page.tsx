@@ -36,6 +36,5 @@ export default function ServicesPage() {
           </p>,
         </section>,
       </div>,
-    </EnhancedLayout>),
-}
+    </EnhancedLayout>)}
 ,

@@ -46,13 +46,11 @@ export default function Comprehensive20o25ServicesShowcase() {
         case 'popularity':,
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀',
-  };
+    return categoryData?.icon || '🚀'};
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual,
@@ -150,8 +148,7 @@ export default function Comprehensive20o25ServicesShowcase() {
                 className={`group relative ${
                   viewMode === 'grid',
                     ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl',
-                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0',
-                }`}
+                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0'}`}
               >,
                 <span>{category.icon}</span>,
                 {category.name}
@@ -299,5 +296,4 @@ export default function Comprehensive20o25ServicesShowcase() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>),
-}
+    </div>)}

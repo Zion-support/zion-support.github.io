@@ -435,6 +435,5 @@ const CulturePage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default CulturePage;

@@ -10,8 +10,7 @@ export function useSkills() {
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -33,8 +32,7 @@ export function useSkills() {
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete skills'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

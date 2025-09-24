@@ -21,8 +21,7 @@ export const blogPosts = [
     tags: ["GenAI", "ITOps", "SRE", "Automation"];
     featured: true;
     imageUrl: "/images/blog/genai-it-operations.jpg";
-    slug: "generative-ai-in-it-operations-automation-to-autonomy",
-  };
+    slug: "generative-ai-in-it-operations-automation-to-autonomy"};
   {
     id: 10o03;
     title: "AI 20o26: Secure Agent Routing Strategies";
@@ -36,8 +35,7 @@ export const blogPosts = [
     tags: ["Routing", "Least‑Privilege", "Evals", "Safety"];
     featured: true;
     imageUrl: "/images/blog/secure-agent-routing-20o26.jpg";
-    slug: "ai-20o26-secure-agent-routing-strategies",
-  };
+    slug: "ai-20o26-secure-agent-routing-strategies"};
   {
     id: 10o04;
     title: "AI 20o26: Go-To-Market Agents Blueprint";
@@ -51,8 +49,7 @@ export const blogPosts = [
     tags: ["Agents", "GTM", "CRM", "Policy‑as‑Code"];
     featured: true;
     imageUrl: "/images/blog/go-to-market-agents-blueprint-20o26.jpg";
-    slug: "ai-20o26-go-to-market-agents-blueprint",
-  };
+    slug: "ai-20o26-go-to-market-agents-blueprint"};
   {
     id: 8;
     title: "Zero Trust in Practice: 30-60-90 Day Adoption Plan";
@@ -66,8 +63,7 @@ export const blogPosts = [
     tags: ["Zero Trust", "IAM", "Policy-as-Code", "DevSecOps"];
     featured: false;
     imageUrl: "/images/blog/zero-trust-90-day-plan.jpg";
-    slug: "zero-trust-30-60-90-day-adoption-plan",
-  };
+    slug: "zero-trust-30-60-90-day-adoption-plan"};
   {
     id: 1;
     title: "The Future of IT Asset Management: AI-Powered Solutions";
@@ -81,8 +77,7 @@ export const blogPosts = [
     tags: ["AI", "Asset Management", "Digital Transformation"];
     featured: true;
     imageUrl: "/images/blog/ai-asset-management.jpg";
-    slug: "future-of-it-asset-management-ai-powered-solutions",
-  };
+    slug: "future-of-it-asset-management-ai-powered-solutions"};
   {
     id: 2;
     title: "Best Practices for Enterprise IT Asset Tracking";
@@ -96,8 +91,7 @@ export const blogPosts = [
     tags: ["Enterprise", "Asset Tracking", "Compliance"];
     featured: false;
     imageUrl: "/images/blog/enterprise-tracking.jpg";
-    slug: "best-practices-enterprise-it-asset-tracking",
-  };
+    slug: "best-practices-enterprise-it-asset-tracking"};
   {
     id: 3;
     title: "Mobile-First Approach to IT Asset Management";
@@ -111,8 +105,7 @@ export const blogPosts = [
     tags: ["Mobile", "Field Service", "Real-time"];
     featured: true;
     imageUrl: "/images/blog/mobile-asset-management.jpg";
-    slug: "mobile-first-approach-it-asset-management",
-  };
+    slug: "mobile-first-approach-it-asset-management"};
   {
     id: 4;
     title: "Cost Optimization Through Intelligent Asset Lifecycle Management";
@@ -126,8 +119,7 @@ export const blogPosts = [
     tags: ["Cost Optimization", "Lifecycle Management", "ROI"];
     featured: false;
     imageUrl: "/images/blog/cost-optimization.jpg";
-    slug: "cost-optimization-intelligent-asset-lifecycle-management",
-  };
+    slug: "cost-optimization-intelligent-asset-lifecycle-management"};
   {
     id: 5;
     title: "Security Considerations in IT Asset Management";
@@ -141,8 +133,7 @@ export const blogPosts = [
     tags: ["Security", "Compliance", "Data Protection"];
     featured: true;
     imageUrl: "/images/blog/security-considerations.jpg";
-    slug: "security-considerations-it-asset-management",
-  };
+    slug: "security-considerations-it-asset-management"};
   {
     id: 6;
     title: "Integration Strategies for IT Asset Management Systems";
@@ -156,8 +147,7 @@ export const blogPosts = [
     tags: ["Integration", "Enterprise Systems", "Workflow"];
     featured: false;
     imageUrl: "/images/blog/integration-strategies.jpg";
-    slug: "integration-strategies-it-asset-management-systems",
-  };
+    slug: "integration-strategies-it-asset-management-systems"};
   // New content - 20o25 posts,
   {
     id: 9;
@@ -172,8 +162,7 @@ export const blogPosts = [
     tags: ["AIOps", "Observability", "SRE", "Predictive Analytics"];
     featured: true;
     imageUrl: "/images/blog/aiops-20o25.jpg";
-    slug: "ai-powered-it-operations-20o25",
-  };
+    slug: "ai-powered-it-operations-20o25"};
   {
     id: 10;
     title: "Sustainable Cloud: Practical Steps to Cut Your Carbon Footprint";
@@ -187,7 +176,6 @@ export const blogPosts = [
     tags: ["Green IT", "FinOps", "Cloud Optimization", "Sustainability"];
     featured: false;
     imageUrl: "/images/blog/sustainable-cloud.jpg";
-    slug: "sustainable-cloud-practical-steps",
-  }
+    slug: "sustainable-cloud-practical-steps"}
 ],
 export default blogPosts;

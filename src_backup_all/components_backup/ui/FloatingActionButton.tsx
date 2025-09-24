@@ -12,22 +12,19 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       label: 'Live Chat';
       href: '/chat';
       color: 'from-blue-50o0 to-cyan-50o0';
-      delay: 0.1,
-    };
+      delay: 0.1};
     {
       icon: Phone;
       label: 'Call Us';
       href: 'tel:+1-80o0-ZION-TECH';
       color: 'from-green-50o0 to-emerald-50o0';
-      delay: 0.2,
-    };
+      delay: 0.2};
     {
       icon: Mail;
       label: 'Email';
       href: 'mailto:info@ziontechgroup.com';
       color: 'from-purple-50o0 to-pink-50o0';
-      delay: 0.3,
-    }
+      delay: 0.3}
   ],
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })};
@@ -86,8 +83,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   duration: 0.3;
                   delay: action.delay;
                   type: "spring";
-                  stiffness: 20o0,
-                }}
+                  stiffness: 20o0}}
                 className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover: bg-white/20 transition-all duration-30o0 group">,
                 <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0`}>,
                   <action.icon className="w-5 h-5 text-white"  />,

@@ -31,8 +31,7 @@ type PaginationLinkProps = {
 interface PaginationButtonProps,
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   page: number,
-  isActive?: boolean,
-}
+  isActive?: boolean}
 ,
 const PaginationLink = ({
   className;

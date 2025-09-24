@@ -205,6 +205,5 @@ export function AboutSection() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -8,8 +8,7 @@ interface Feature {
   icon: any,
   color: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo',
   details: string[],
-  demo?: string,
-}
+  demo?: string}
 ,
 const features: Feature[] = [
   {
@@ -130,8 +129,7 @@ export function FeatureShowcase() {
                 className={`card cursor-pointer transform transition-all duration-300 hover: scale-105 ${
                   activeFeature === feature.id,
                     ? `ring-2 bg-white/10`,
-                    : 'hover:bg-white/10',
-                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                    : 'hover:bg-white/10'} ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() =>,
                   setActiveFeature(

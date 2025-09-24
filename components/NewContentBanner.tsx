@@ -9,8 +9,7 @@ interface ContentItem {
   isNew?: boolean,
   isHot?: boolean,
   icon: string,
-  stats?: string,
-}
+  stats?: string}
 ,
 const hotContent: ContentItem[] = [
   {
@@ -80,8 +79,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
       case 'minimal':,
         return 'bg-white border-2 border-blue-20o0 text-gray-90o0',
       default: ,
-        return 'bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden',
-    }
+        return 'bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden'}
   };
   const getCardClasses = () => {
     switch (variant) {
@@ -90,8 +88,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
       case 'minimal':,
         return 'bg-gray-50 hover:bg-gray-10o0 border border-gray-20o0',
       default:,
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20',
-    }
+        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20'}
   };
   const getTextClasses = () => {
     switch (variant) {
@@ -100,8 +97,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
       case 'minimal':,
         return 'text-gray-90o0',
       default: ,
-        return 'text-white',
-    }
+        return 'text-white'}
   };
   return (
     <section className={`py-20 ${getVariantClasses()}`}>,

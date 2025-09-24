@@ -38,8 +38,7 @@ interface NavigationItem {
   description?: string,
   children?: NavigationItem[],
   badge?: string,
-  color?: string,
-}
+  color?: string}
 ,
 const navigationItems: NavigationItem[] = [
   {
@@ -368,8 +367,7 @@ export default function UltraFuturisticNavigation20o35() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${

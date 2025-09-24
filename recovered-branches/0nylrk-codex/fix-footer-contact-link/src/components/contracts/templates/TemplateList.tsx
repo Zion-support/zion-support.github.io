@@ -19,8 +19,7 @@ interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void,
-}
+  onEdit: (template: ContractTemplate) => void}
 ,
 export function TemplateList({
   templates;
@@ -31,16 +30,14 @@ export function TemplateList({
   const [templateToDeletesetTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplatesetDefaultTemplate } = useContractTemplates(),
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId),
-  };
+    setTemplateToDelete(templateId)};
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete),
       setTemplateToDelete(null)}
   };
   const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId),
-  };
+    await setDefaultTemplate.mutateAsync(templateId)};
   if (isLoading) {
     return (
       <div className='flex justify-center items-center py-8'>,

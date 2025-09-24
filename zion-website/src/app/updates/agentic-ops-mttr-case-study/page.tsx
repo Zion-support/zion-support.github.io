@@ -42,6 +42,5 @@ export default function AgenticOpsCaseStudyPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

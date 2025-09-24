@@ -52,27 +52,27 @@ function fixFile(filePath) {
     // If content changed, write it back,
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, utf8'),
-      // console.log(`✅ Fixed: ${filePath}`),
+      // // console.log(`✅ Fixed: ${filePath}`),
       return true}
     return false} catch (error) {
     console.error(`❌ Error fixing ${filePath}: ${error.message}`),
     return false}
 }
 ,
-// console.log('🚀 Starting corruption fix script...'),
+// // console.log('🚀 Starting corruption fix script...'),
 // Find all TypeScript and JavaScript files,
 const files = findFiles('.', ['.ts', .tsx', .js', .jsx']),
-// console.log(`📁 Found ${files.length} files to check`),
+// // console.log(`📁 Found ${files.length} files to check`),
 let fixedCount = 0,
 files.forEach(file => {
   if (fixFile(file)) {
     fixedCount++}
 }),
-// console.log(`\n✨ Fixed ${fixedCount} files.`),
-// console.log('\n🔍 Running syntax check...'),
+// // console.log(`\n✨ Fixed ${fixedCount} files.`),
+// // console.log('\n🔍 Running syntax check...'),
 try {
   execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' }),
-  // console.log('✅ TypeScript syntax check passed')} catch (error) {
+  // // console.log('✅ TypeScript syntax check passed')} catch (error) {
   console.error('⚠️ TypeScript syntax check failed - some files may still need manual fixing')}
 ,
-// console.log('\n🚀 Ready to commit and push changes!'),
+// // console.log('\n🚀 Ready to commit and push changes!'),

@@ -15,6 +15,5 @@ export function Header() {
           <MainNavigation />,
         </div>,
       </div>,
-    </header>),
-}
+    </header>)}
 ,

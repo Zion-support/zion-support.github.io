@@ -17,9 +17,7 @@ import { Check, Copy, ExternalLink } from "lucide-react";
   CardFooter;
   CardHeader;
 } from "@/components/ui/card",
-,
 export function ZapierIntegration() {
-,
   const [copied, setCopied] = useState(false),
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
   const handleCopyApiKey = () => {
@@ -155,8 +153,7 @@ export function ZapierIntegration() {
           </div>,
         </CardContent>,
       </Card>,
-    </div>),
-}
+    </div>)}
 ),
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
@@ -281,6 +278,5 @@ export function ZapierIntegration() {
           </div>,
         </CardContent>,
       </Card>,
-    </div>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4),
-}
+    </div>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

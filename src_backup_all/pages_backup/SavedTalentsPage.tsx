@@ -38,8 +38,7 @@ if ( {) {
         toast ({
           title: 'Error';
           description: 'Failed to load saved talents. Please try again later.';
-          variant: 'destructive'}),
-} finally {
+          variant: 'destructive'})} finally {
         setIsLoading (false)}
     }
 ,
@@ -150,8 +149,7 @@ export default function SavedTalentsPage() {
     isCurrentlySaved: boolean) => {    try {
       if (!user) {
         logWarn('User not authenticated.'),
-        return,
-      }
+        return}
 ,
         setSavedTalents(prevTalents =>,
           prevTalents.filter(talent => talent.id !== talentId)),
@@ -159,7 +157,6 @@ export default function SavedTalentsPage() {
           title: 'Talent Removed';
           description: 'Talent removed from saved list.'}),
       if (isCurrentlySaved) {
-,
         // Remove from saved talents,
         const { error } = await supabase,
           .from ('saved_talents'),
@@ -205,8 +202,7 @@ if ( {) {
             title: 'Error',
             description:,
               'Failed to update saved talents. Please try again later.',
-            variant: 'destructive',
-          }),
+            variant: 'destructive'}),
           return}
         if (talentData) {
           setSavedTalents(prevTalents => [
@@ -214,8 +210,7 @@ if ( {) {
             talentData as unknown as TalentProfile]),
           toast({
             title: 'Talent Saved',
-            description: 'Talent saved to your list.',
-          })}
+            description: 'Talent saved to your list.'})}
       }
     } catch (error) {
       logErrorToProduction(
@@ -226,8 +221,7 @@ if ( {) {
       toast({
         title: 'Error',
         description: 'Failed to update saved talents. Please try again later.',
-        variant: 'destructive',
-      })}
+        variant: 'destructive'})}
   }
           return,
           .single();
@@ -402,8 +396,7 @@ skills,
 location,
 availability,
 is verified) `)}finally {
-  setIsLoading (false),
-}
+  setIsLoading (false)}
 }, [user])}
   try {
   // Check condition,
@@ -414,8 +407,7 @@ if ( {) {
   //Add to saved talents const {
   error '}= await supabase .from ('saved talents') .insert ([ {
       </div>,
-    </>),
-}, [user, router])}const {
+    </>)}, [user, router])}const {
   data, error }= await supabase .from ("saved talents") user id,
 full name,
 professional title,
@@ -428,8 +420,7 @@ skills,
 location,
 availability,
 is verified) `) }finally {
-  setIsLoading (false) ,
-};
+  setIsLoading (false) };
 }, [user])};
   try {
   if (!user) {
@@ -437,36 +428,28 @@ is verified) `) }finally {
   error '}= await supabase .from ('saved talents') .delete () .eq ('user id', user && user.id) .eq ('talent id', talentId)}else {
   //Add to saved talents const {
   error '}= await supabase .from ('saved talents') .insert ([ {
-  user id: user && user.id, talent id: talentId ,
-}]),
+  user id: user && user.id, talent id: talentId }]),
 if (error) {
-  throw error }data: talentData, error: talentError ',
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single (),
-return,
-}catch (error) {
+  throw error }data: talentData, error: talentError '}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single (),
+return}catch (error) {
   logErrorToProduction (error instanceof Error ? error && error.message : String (error),  error instanceof Error ? error : undefined, {',
-  message: 'Error toggling saved talent' ,
-}),
+  message: 'Error toggling saved talent' }),
 toast ({
 };'",
 return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"  /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key={
   talent && talent.id,
-  user id: user.id, talent id: talent_id,
-}]),
+  user id: user.id, talent id: talent_id}]),
 // Check condition,
 if ( {) {
   $2}
-  throw error}data: talent_data, error: talent_error ',
-}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talent_id) .single (),
+  throw error}data: talent_data, error: talent_error '}= await supabase .from ('talent profiles') .select ('*') .eq ('id', talent_id) .single (),
 return}catch (error) {
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {',
-  message: 'Error toggling saved talent',
-}),
+  message: 'Error toggling saved talent'}),
 toast ({
 }'",
 return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"  /> <div className="container mx - auto px - 4 py - 8" > <h1 className="text - 3xl font - bold mb - 4" >Saved Talents</h1> <p className="text - muted - foreground" > Here are the talents you've saved for future reference. </p>) : saved_talents.length === 0 ? (<div className="py - 8" > <EmptyState <TalentCard key={
-  talent.id,
-}talent={
+  talent.id}talent={
   talent}onViewProfile={
   handleViewProfile}onRequestHire={
   handleRequestHire}isAuthenticated={
@@ -477,5 +460,4 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 ,
       </div>,
     </>)}
-,
 ,

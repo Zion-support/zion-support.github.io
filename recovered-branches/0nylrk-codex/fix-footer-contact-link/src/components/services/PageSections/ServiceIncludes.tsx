@@ -87,8 +87,7 @@ export function ServiceIncludes() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
   )),
 export function ServiceIncludes() {
   return (
@@ -234,7 +233,5 @@ function ServiceIncludes() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
-,
+    </div>)}
 }}

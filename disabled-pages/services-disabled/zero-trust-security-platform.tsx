@@ -70,15 +70,13 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {
       company: "Global Finance Corp";
       role: "CISO";
       content: "The zero-trust platform has transformed our security posture. We've seen a 90% reduction in security incidents since implementation.";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Jennifer Liu";
       company: "HealthTech Solutions";
       role: "Security Director";
       content: "Compliance has never been easier. The automated reporting and monitoring features save us countless hours.";
-      rating: 5,
-    }
+      rating: 5}
   ],
   return (
     <>,
@@ -218,8 +216,7 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1,
                         ? 'bg-red-60o0 hover: bg-red-70o0 text-white',
-                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
-                    }`}>,
+                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0'}`}>,
                       Get Started,
                     </span>,
                   </Link>,

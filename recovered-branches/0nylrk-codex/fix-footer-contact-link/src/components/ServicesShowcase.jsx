@@ -39,23 +39,19 @@ const benefits = [
     {
         icon: <Zap className="h-6 w-6" />;
         title: "Immediate Deployment";
-        description: "All services are ready for immediate deployment with no setup delays",
-    };
+        description: "All services are ready for immediate deployment with no setup delays"};
     {
         icon: <Shield className="h-6 w-6" />;
         title: "Enterprise Security";
-        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring",
-    };
+        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"};
     {
         icon: <TrendingUp className="h-6 w-6" />;
         title: "Proven ROI";
-        description: "Average 30o0% ROI within 6 months of implementation",
-    };
+        description: "Average 30o0% ROI within 6 months of implementation"};
     {
         icon: <CheckCircle className="h-6 w-6" />;
         title: "Quality Guaranteed";
-        description: "30-day money-back guarantee with free migration support",
-    }
+        description: "30-day money-back guarantee with free migration support"}
 ],
 export function ServicesShowcase() {
     const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0, 6),
@@ -268,6 +264,5 @@ export function ServicesShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

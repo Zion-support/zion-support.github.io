@@ -249,6 +249,5 @@ export default function Newsroom() {
         </ul>,
         <RelatedContent currentPage='newsroom' />,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

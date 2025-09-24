@@ -29,8 +29,7 @@ export interface EnterpriseITInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -40,8 +39,7 @@ export interface EnterpriseITInfrastructureService {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
   aiCapabilities: string[],
-  marketDisruption: string,
-}
+  marketDisruption: string}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';
@@ -710,7 +708,7 @@ export const enterpriseITInfrastructureServices20o25: EnterpriseITInfrastructure
       price: '$9,999';
       period: '/month';
       description:,
-        'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak window.performance.';
+        'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak window.window.performance.';
       features: [
         'Autonomous optimization';
         'Performance prediction';

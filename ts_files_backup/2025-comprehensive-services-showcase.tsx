@@ -19,6 +19,5 @@ const ComprehensiveServicesShowcase2025 = () => {
           </p>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default ComprehensiveServicesShowcase2025;

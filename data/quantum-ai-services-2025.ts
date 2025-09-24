@@ -11,8 +11,7 @@ export interface QuantumAiService20o25 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {

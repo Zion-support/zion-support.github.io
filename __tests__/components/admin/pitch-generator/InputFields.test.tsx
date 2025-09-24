@@ -1,7 +1,6 @@
 import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',import InputFields from @/components/admin/pitch-generator/InputFields',
 // Mock the next/router,
-jest.mock('next/router', () => ({'  useRouter: jest.fn(),
-})),
+jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 describe('InputFields Component', () => {'  const mockOnSubmit = jest.fn(),
   beforeEach(() => {
     mockOnSubmit.mockClear(),
@@ -29,8 +28,7 @@ describe('InputFields Component', () => {'  const mockOnSubmit = jest.fn(),
     await waitFor(() => {
       expect(mockOnSubmit).toHaveBeenCalledWith({
         companyMission: Test Mission',        currentFundingStage: Seed',        visionGoals: Test Vision',        roundType: Seed', // Default'        targetRaiseAmount: 10o0000',        logos: null;
-        photos: null,
-      })})}),
+        photos: null})})}),
   test('handles file input and shows preview', async () => {'    render(<InputFields onSubmit={mockOnSubmit}  />),
     const logoInput = screen.getByLabelText(/Company Logo/i) as HTMLInputElement,
     const mockFile = new File(['dummy content'], logo.png', { type: image/png' }),

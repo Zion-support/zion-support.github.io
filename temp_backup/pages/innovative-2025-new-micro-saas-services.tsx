@@ -22,6 +22,5 @@ export default function Innovative20o25NewMicroSaasServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

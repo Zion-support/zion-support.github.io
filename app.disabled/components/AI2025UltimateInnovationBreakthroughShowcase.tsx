@@ -90,8 +90,7 @@ const AI20o25UltimateInnovationBreakthroughShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -102,8 +101,7 @@ const AI20o25UltimateInnovationBreakthroughShowcase = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gray-50'>,
@@ -154,8 +152,7 @@ const AI20o25UltimateInnovationBreakthroughShowcase = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeFilter === filter.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -166,8 +163,7 @@ const AI20o25UltimateInnovationBreakthroughShowcase = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Content Header */}
               <div className='p-6'>,
@@ -283,6 +279,5 @@ const AI20o25UltimateInnovationBreakthroughShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25UltimateInnovationBreakthroughShowcase;

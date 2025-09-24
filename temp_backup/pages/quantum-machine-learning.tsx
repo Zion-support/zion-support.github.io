@@ -15,6 +15,5 @@ export default function QuantumMachineLearningPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

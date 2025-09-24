@@ -29,8 +29,7 @@ export interface RevolutionaryITInfrastructureService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -38,8 +37,7 @@ export interface RevolutionaryITInfrastructureService20o29 {
   rating: number,
   reviews: number,
   isPopular?: boolean,
-  isNew?: boolean,
-}
+  isNew?: boolean}
 ,
 export const revolutionaryITInfrastructureServices20o29: RevolutionaryITInfrastructureService20o29[] =,
   [
@@ -644,8 +642,7 @@ export const revolutionaryITInfrastructureServices20o29: RevolutionaryITInfrastr
   ],
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices20o29.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices20o29.filter(
     service => service.isPopular)};

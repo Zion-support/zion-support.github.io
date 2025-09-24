@@ -6,8 +6,7 @@ const AI20o25TransformationDashboard = () => {
     roi: 0;
     efficiency: 0;
     automation: 0;
-    satisfaction: 0,
-  }),
+    satisfaction: 0}),
   useEffect(() => {
     // Animate metrics on load,
     const animateMetrics = () => {
@@ -15,8 +14,7 @@ const AI20o25TransformationDashboard = () => {
         roi: 50o000;
         efficiency: 95;
         automation: 87;
-        satisfaction: 98,
-      })};
+        satisfaction: 98})};
     const timer = setTimeout(animateMetrics, 50o0),
     return () => clearTimeout(timer)}, []),
   const tabs = [
@@ -60,8 +58,7 @@ const AI20o25TransformationDashboard = () => {
             className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 m-1 ${
               activeTab === tab.id,
                 ? 'bg-purple-60o0 text-white shadow-lg',
-                : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-            }`}
+                : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
           >,
             <span className="text-xl">{tab.icon}</span>,
             <span>{tab.label}</span>,
@@ -245,6 +242,5 @@ const AI20o25TransformationDashboard = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25TransformationDashboard;

@@ -121,7 +121,7 @@ async function processResumeScoring(supabase, applicationId) {
       const errorData = await response.json(),
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)}
 ,
-    // console.log(`Successfully scored application ${applicationId}`),
+    // // console.log(`Successfully scored application ${applicationId}`),
     // Notify the client that their application has been scored,
     const { data: application } = await supabase,
       .from('job_applications'),
@@ -151,7 +151,7 @@ async function processResumeScoring(supabase, applicationId) {
 ,
 async function processContentGeneration(supabase, contentType) {
   try {
-    // console.log(`Starting scheduled content generation for ${contentType}`),
+    // // console.log(`Starting scheduled content generation for ${contentType}`),
     // Call the content generation function,
     const response = await fetch(
       `${Deno.env.get('SUPABASE_URL')}/functions/v1/generate-content`;
@@ -174,7 +174,7 @@ async function processContentGeneration(supabase, contentType) {
         `Content generation failed: ${JSON.stringify(errorData)}`)}
 ,
     const contentData = await response.json(),
-    // console.log(`Successfully generated ${contentType} content`),
+    // // console.log(`Successfully generated ${contentType} content`),
     // If it's a newsletter, send a test email to the admin,
     if (contentType === 'newsletter') {
       // Get admin email from profiles,

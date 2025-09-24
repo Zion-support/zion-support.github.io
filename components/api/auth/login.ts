@@ -5,8 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ,
   const { email, password, code } = req && req.body || {};
   if (!email || !password || !code) {
-    return res && res.status(400).json({ error: 'Missing credentials' }),
-}
+    return res && res.status(400).json({ error: 'Missing credentials' })}
 ,
   const result = validateCredentials(email, password, code),
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true }),
@@ -32,6 +31,5 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie),
   return res.status (200).json ({ ok: true }),  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true }),
   res.set_header ('Set - Cookie', cookie),
-  return res.status (200).json ({ ok: true }),
-}
+  return res.status (200).json ({ ok: true })}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -79,26 +79,22 @@ const UltraFuturisticFooter20o48: React.FC = () => {
       icon: Phone;
       label: 'Phone';
       value: '+1 30o2 464 0950';
-      href: 'tel:+130o24640950',
-    };
+      href: 'tel:+130o24640950'};
     {
       icon: Mail;
       label: 'Email';
       value: 'kleber@ziontechgroup.com';
-      href: 'mailto:kleber@ziontechgroup.com',
-    };
+      href: 'mailto:kleber@ziontechgroup.com'};
     {
       icon: MapPin;
       label: 'Address';
       value: '364 E Main St STE 10o08 Middletown DE 19709';
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709',
-    };
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709'};
     {
       icon: Globe;
       label: 'Website';
       value: 'https://ziontechgroup.com';
-      href: 'https://ziontechgroup.com',
-    }
+      href: 'https://ziontechgroup.com'}
   ],
   const socialLinks = [
     { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' };

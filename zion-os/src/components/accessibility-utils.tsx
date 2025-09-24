@@ -6,8 +6,7 @@ export function SkipLink({
   children;
 }: {
   targetId: string,
-  children: React.ReactNode,
-}) {
+  children: React.ReactNode}) {
   return (
     <a
       href={`#${targetId}`}
@@ -22,8 +21,7 @@ export function LiveRegion({
 }: {
   message: string,
   role?: 'status' | 'alert' | 'log',
-  'aria-live'?: 'polite' | 'assertive' | 'off',
-}) {
+  'aria-live'?: 'polite' | 'assertive' | 'off'}) {
   return (
     <div
       role={role}
@@ -47,8 +45,7 @@ export function useFocusTrap(enabled: boolean = true) {
       if (e.shiftKey) {
         if (document.activeElement === first) {
           e.preventDefault(),
-          last.focus(),
-        }
+          last.focus()}
       } else if (document.activeElement === last) {
         e.preventDefault(),
         first.focus()}
@@ -78,8 +75,7 @@ export function useKeyboardNavigation(
         break,
       case 'Escape':,
         setSelectedIndex(-1),
-        break,
-    }
+        break}
   };
   useEffect(() => {
     const listener = (e: KeyboardEvent) => handleKeyDown(e),
@@ -93,8 +89,7 @@ export function Announcement({
   priority = 'polite';
 }: {
   message: string,
-  priority?: 'polite' | 'assertive',
-}) {
+  priority?: 'polite' | 'assertive'}) {
   const [announcements, setAnnouncements] = useState<string[]>([]),
   useEffect(() => {
     if (!message) return,
@@ -116,8 +111,7 @@ export function ProgressIndicator({
 }: {
   value: number,
   max: number,
-  label: string,
-}) {
+  label: string}) {
   const percentage = Math.round((value / max) * 100),
   return (
     <div className='space-y-2'>,
@@ -145,8 +139,7 @@ export function CollapsibleSection({
 }: {
   title: string,
   children: React.ReactNode,
-  defaultExpanded?: boolean,
-}) {
+  defaultExpanded?: boolean}) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),
   const contentRef = useRef<HTMLDivElement>(null),
   return (

@@ -49,8 +49,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function QuantumTalentAcquisitionPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -132,7 +131,7 @@ export default function QuantumTalentAcquisitionPlatform() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Predictive Analytics</h3>,
               <p className="text-gray-40o0">,
-                Advanced forecasting for hiring success, retention, and candidate window.performance.,
+                Advanced forecasting for hiring success, retention, and candidate window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20 border border-blue-50o0/20">,
@@ -506,5 +505,4 @@ export default function QuantumTalentAcquisitionPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

@@ -20,6 +20,5 @@ export default function AutonomousDevopsIntelligencePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

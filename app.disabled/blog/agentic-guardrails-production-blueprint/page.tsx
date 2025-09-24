@@ -114,6 +114,5 @@ const ArticlePage = () => {
           </div>,
         </section>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default ArticlePage;

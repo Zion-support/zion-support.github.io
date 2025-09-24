@@ -48,6 +48,5 @@ function ContractBuilderPage() {
     </ProtectedRoute>)}
 ,
 export default ContractBuilderPage;
-,
 export default ContractBuilderPage;
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

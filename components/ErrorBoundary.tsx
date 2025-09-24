@@ -3,13 +3,11 @@ import React, { Component, ErrorInfo, ReactNode } from 'react',
 interface Props {
   children: ReactNode,
   fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void,
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 ,
 interface State {
   hasError: boolean,
-  error?: Error,
-}
+  error?: Error}
 ,
 export class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -91,8 +89,7 @@ export function useErrorHandler() {
   const resetError = React.useCallback(() => {
     setError(null)}, []),
   const captureError = React.useCallback((error: Error) => {
-    setError(error),
-  }, []),
+    setError(error)}, []),
   React.useEffect(() => {
     if (error) {
       throw error}

@@ -39,7 +39,6 @@ import {
   BarChart3;
   ArrowRight;
   Zap;} from 'lucide-react',import {
-,
   Brain,
   Cloud,
   RefreshCw,
@@ -78,24 +77,21 @@ const ServicesSection: React.FC = () => {
         'Predictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500',
-      href: '/services/ai-development',
-    }
+      href: '/services/ai-development'}
     {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Scalable cloud solutions and infrastructure design for modern applications.',
       features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],
       color: 'from-purple-500 to-pink-500',
-      href: '/services/cloud-architecture',
-    }
+      href: '/services/cloud-architecture'}
     {
       icon: RefreshCw,
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation services to modernize your business.',
       features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation',
-    }
+      href: '/services/digital-transformation'}
     {
       icon: Cloud,
       title: 'Cloud Architecture',
@@ -107,8 +103,7 @@ const ServicesSection: React.FC = () => {
         'Serverless Architecture',
         'DevOps Automation'],
       color: 'from-purple-500 to-pink-500',
-      href: '/services/cloud-architecture',
-    }
+      href: '/services/cloud-architecture'}
     {
       icon: RefreshCw,
       title: 'Digital Transformation',
@@ -120,12 +115,10 @@ const ServicesSection: React.FC = () => {
         'Change Management',
         'Digital Strategy'],
       color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation',
-    },    {
+      href: '/services/digital-transformation'},    {
       icon: Wifi;
       title: 'IoT Platforms';
-      description: 'Connected device solutions and IoT platform development.',      href: '/services / digital - transformation',
-    }
+      description: 'Connected device solutions and IoT platform development.',      href: '/services / digital - transformation'}
 ,
     {
       icon: Wifi;
@@ -140,8 +133,7 @@ const ServicesSection: React.FC = () => {
       ];
       color: 'from - orange - 500 to - red - 500';
       href: '/services / iot - platforms',      color: 'from - orange - 500 to - red - 500';
-      href: '/services / iot - platforms',
-    }
+      href: '/services / iot - platforms'}
     {
       icon: Wifi,
       title: 'IoT Platforms',
@@ -153,16 +145,14 @@ const ServicesSection: React.FC = () => {
         'Edge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500',
-      href: '/services/iot-platforms',
-    }
+      href: '/services/iot-platforms'}
     {
       icon: Shield,
       title: 'Blockchain Solutions',
       description: 'Decentralized technology platforms and smart contract development.',
       features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
-      href: '/services/blockchain-solutions',
-    }
+      href: '/services/blockchain-solutions'}
     {
       icon: Shield,
       title: 'Blockchain Solutions',
@@ -174,12 +164,10 @@ const ServicesSection: React.FC = () => {
         'NFT Platforms',
         'Supply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
-      href: '/services/blockchain-solutions',
-    },    {
+      href: '/services/blockchain-solutions'},    {
       icon: BarChart3,
       title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions',
-    }
+      description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions'}
     {
       icon: BarChart3,
       title: 'Data Analytics',
@@ -190,11 +178,9 @@ const ServicesSection: React.FC = () => {
         'Predictive Modeling',
         'Data Visualization'],
       color: 'from-teal-500 to-blue-500',
-      href: '/services/data-analytics',
-    }],      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
+      href: '/services/data-analytics'}],      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
-      href: '/services/data-analytics',
-    }
+      href: '/services/data-analytics'}
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -207,8 +193,7 @@ const ServicesSection: React.FC = () => {
     visible: { opacity: 1, y: 0 }
   }
     hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1,
-      }
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1}
     }
     visible: { opacity: 1, y: 0 };
   };
@@ -468,8 +453,7 @@ const ServicesSection: React.FC = () => {
           </div>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 };
 export default ServicesSection)};
 )

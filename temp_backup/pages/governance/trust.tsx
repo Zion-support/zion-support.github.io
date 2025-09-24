@@ -15,6 +15,5 @@ export default function TrustPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

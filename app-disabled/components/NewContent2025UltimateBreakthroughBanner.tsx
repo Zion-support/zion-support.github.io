@@ -14,13 +14,11 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
         roi: '10o00%';
         savings: '$50o0M+';
         efficiency: '95%';
-        success: '99.7%',
-      };
+        success: '99.7%'};
       url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
       type: 'Blog Post';
       readingTime: '18 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 AI Transformation Success: $2.8B Annual Savings';
@@ -29,13 +27,11 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
         roi: '10o00%';
         savings: '$2.8B';
         efficiency: '156%';
-        quality: '99.2%',
-      };
+        quality: '99.2%'};
       url: '/case-studies/fortune-50o0-ai-transformation-10o00-roi-success';
       type: 'Case Study';
       readingTime: '15 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'AI Transformation Ultimate Implementation Guide 20o25';
@@ -44,13 +40,11 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
         roi: '10o00%';
         timeline: '6 months';
         success: '99.7%';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       url: '/resources/ai-transformation-ultimate-implementation-guide-20o25';
       type: 'Resource';
       readingTime: '25 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

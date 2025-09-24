@@ -89,33 +89,27 @@ const AICodeReviewSecurityScanner = () => {
                 {
                   icon: <Code className="w-8 h-8" />;
                   title: "Multi-Language Support";
-                  description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices.",
-                };
+                  description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices."};
                 {
                   icon: <Shield className="w-8 h-8" />;
                   title: "AI-Powered Vulnerability Detection";
-                  description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks.",
-                };
+                  description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks."};
                 {
                   icon: <Eye className="w-8 h-8" />;
                   title: "Automated Code Review";
-                  description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks.",
-                };
+                  description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks."};
                 {
                   icon: <Lock className="w-8 h-8" />;
                   title: "Security Best Practices";
-                  description: "Enforce security standardscompliance requirementsand industry best practices automatically.",
-                };
+                  description: "Enforce security standardscompliance requirementsand industry best practices automatically."};
                 {
                   icon: <BarChart3 className="w-8 h-8" />;
                   title: "Performance Analytics";
-                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time.",
-                };
+                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."};
                 {
                   icon: <Globe className="w-8 h-8" />;
                   title: "Integration & APIs";
-                  description: "Seamless integration with GitHubGitLabBitbucketand CI/CD pipelines with custom API access.",
-                }
+                  description: "Seamless integration with GitHubGitLabBitbucketand CI/CD pipelines with custom API access."}
               ].map((featureindex) => (
                 <motion.div,
                   key={index}
@@ -162,8 +156,7 @@ const AICodeReviewSecurityScanner = () => {
                     "Email support";
                     "Standard security rules";
                     "Basic reporting"];
-                  popular: false,
-                };
+                  popular: false};
                 {
                   name: "Professional";
                   price: "$799";
@@ -178,8 +171,7 @@ const AICodeReviewSecurityScanner = () => {
                     "Advanced analytics";
                     "CI/CD integration";
                     "Team collaboration tools"];
-                  popular: true,
-                };
+                  popular: true};
                 {
                   name: "Enterprise";
                   price: "$1,999";
@@ -195,8 +187,7 @@ const AICodeReviewSecurityScanner = () => {
                     "API access";
                     "Custom integrations";
                     "SLA guarantees"];
-                  popular: false,
-                }
+                  popular: false}
               ].map((planindex) => (
                 <motion.div,
                   key={index}
@@ -236,8 +227,7 @@ const AICodeReviewSecurityScanner = () => {
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular,
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover: from-purple-600 hover:to-blue-700',
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'}`}
                   >,
                     Get Started,
                   </motion.button>,
@@ -267,18 +257,15 @@ const AICodeReviewSecurityScanner = () => {
                   {
                     icon: <Shield className="w-8 h-8" />;
                     title: "Reduce Security Vulnerabilities by 85%";
-                    description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface.",
-                  };
+                    description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface."};
                   {
                     icon: <Zap className="w-8 h-8" />;
                     title: "Speed Up Code Review Process by 70%";
-                    description: "Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review.",
-                  };
+                    description: "Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review."};
                   {
                     icon: <TrendingUp className="w-8 h-8" />;
                     title: "Improve Code Quality & Maintainability";
-                    description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.",
-                  }
+                    description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."}
                 ].map((benefitindex) => (
                   <motion.div,
                     key={index}
@@ -300,18 +287,15 @@ const AICodeReviewSecurityScanner = () => {
                   {
                     icon: <CheckCircle className="w-8 h-8" />;
                     title: "Ensure Compliance with Security Standards";
-                    description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting.",
-                  };
+                    description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting."};
                   {
                     icon: <Users className="w-8 h-8" />;
                     title: "Reduce Technical Debt & Bugs";
-                    description: "Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.",
-                  };
+                    description: "Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs."};
                   {
                     icon: <Star className="w-8 h-8" />;
                     title: "Enable Faster Development Cycles";
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes.",
-                  }
+                    description: "Confident code deployment with automated security validation accelerates your development and release processes."}
                 ].map((benefitindex) => (
                   <motion.div,
                     key={index}
@@ -445,6 +429,5 @@ const AICodeReviewSecurityScanner = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default AICodeReviewSecurityScanner;

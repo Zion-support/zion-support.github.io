@@ -21,15 +21,13 @@ export interface NewInnovativeService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -83,8 +81,7 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "Natural Language Processing", "Machine Learning", "React", "Node.js", "PostgreSQL"];
       integrations: ["Clio", "LexisNexis", "Westlaw", "DocuSign", "ContractPodAi", "Practice Management Systems"];
@@ -92,8 +89,7 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption", "Audit trails"]};
     competitors: ["ContractPodAi", "Evisort", "Ironclad", "PandaDoc", "DocuSign"];
-    marketSize: "$15.8 billion by 20o25",
-  };
+    marketSize: "$15.8 billion by 20o25"};
   // AI Healthcare Analytics Platform,
   {
     id: "ai-healthcare-analytics";
@@ -143,8 +139,7 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Apache Spark"];
       integrations: ["Epic", "Cerner", "Allscripts", "Meditech", "Athenahealth", "HL7 FHIR"];
@@ -152,8 +147,7 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
       uptime: "99.99%";
       security: ["HIPAA", "HITECH", "SOC 2", "ISO 270o01", "FDA 21 CFR Part 11", "End-to-end encryption"]};
     competitors: ["IBM Watson Health", "Cerner HealtheIntent", "Epic Cogito", "SAS Healthcare Analytics", "Tableau Healthcare"];
-    marketSize: "$84.2 billion by 20o25",
-  };
+    marketSize: "$84.2 billion by 20o25"};
   // AI Financial Trading Platform,
   {
     id: "ai-financial-trading";
@@ -203,8 +197,7 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "Apache Kafka"];
       integrations: ["MetaTrader", "TradingView", "Interactive Brokers", "Bloomberg Terminal", "Reuters Eikon"];
@@ -212,7 +205,6 @@ export const NEW_INNOVATIVE_SERVICES_20o25: NewInnovativeService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "PCI DSS", "End-to-end encryption", "Multi-factor authentication"]};
     competitors: ["Alpaca", "QuantConnect", "Zerodha", "Robinhood", "Interactive Brokers"];
-    marketSize: "$12.5 billion by 20o25",
-  }
+    marketSize: "$12.5 billion by 20o25"}
 ],
 export default NEW_INNOVATIVE_SERVICES_20o25;

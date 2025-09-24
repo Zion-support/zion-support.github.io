@@ -143,6 +143,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>,
         </footer>,
       </body>,
-    </html>),
-}
+    </html>)}
 ,

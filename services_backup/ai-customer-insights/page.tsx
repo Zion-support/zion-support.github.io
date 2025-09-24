@@ -261,8 +261,7 @@ function FeatureItem({
 }: {
   icon: string,
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
@@ -285,8 +284,7 @@ function PricingCard({
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div
       className={`border rounded-xl p-6 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0'}`}
@@ -317,8 +315,7 @@ function StepCard({
 }: {
   step: string,
   title: string,
-  description: string,
-}) {
+  description: string}) {
   return (
     <div className='text-center'>,
       <div className='w-12 h-12 bg-blue-60o0 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>,

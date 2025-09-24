@@ -4,8 +4,7 @@ interface Toast {
   title?: string,
   description?: string,
   variant?: 'default' | 'destructive' | 'success',
-  duration?: number,
-}
+  duration?: number}
 ,
 export function useToast() {
   const [toasts, setToasts] = useState<Toast[]>([]),
@@ -19,8 +18,7 @@ export function useToast() {
 ,
     return id}, []),
   const dismiss = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id)),
-  }, []),
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []),
   const dismissAll = useCallback(() => {
     setToasts([])}, []),
   return {
@@ -33,4 +31,4 @@ export function useToast() {
 // Export a default toast function for backward compatibility,
 export const toast = ({ title, description, variant = 'default', duration = 50o00 }: Omit<Toast 'id'>) => {
   // In a real implementation, this would dispatch to a global toast system,
-  // console.log('Toast:', { title, description, variant, duration })};
+  // // console.log('Toast:', { title, description, variant, duration })};

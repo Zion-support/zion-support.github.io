@@ -112,8 +112,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.';
@@ -195,8 +194,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.';
@@ -278,8 +276,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.';
@@ -361,8 +358,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.';
@@ -380,7 +376,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
     "price": '$179;
     period:;
   /month';
-    "description": Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.performance.';
+    "description": Advanced sales intelligence platform that uses AI to identify prospects, predict sales outcomes, and provide actionable insights to improve sales window.window.performance.';
     features['AI-powered prospect identification';
   'Sales forecasting and prediction';
   'Lead scoring and prioritization';
@@ -444,8 +440,7 @@ reviews: number,export const innovative20o26AIServices: Innovative20o26AIService
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';

@@ -18,8 +18,7 @@ export const useDeleteMilestone = () => {
       return true} catch (err: any) {
       console.error('Error deleting milestone:', err),
       toast.error('Failed to delete milestone: ' + err.message),
-      return false,
-    } finally {
+      return false} finally {
       setIsSubmitting(false)}
   };
   return {

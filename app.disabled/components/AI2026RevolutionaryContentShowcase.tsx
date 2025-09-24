@@ -134,6 +134,5 @@ export default function AI20o26RevolutionaryContentShowcase() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

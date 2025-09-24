@@ -337,6 +337,5 @@ export default function FuturisticServicesShowcase20o32() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o32 />,
-    </>),
-}
+    </>)}
 ,

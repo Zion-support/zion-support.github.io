@@ -129,8 +129,7 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
         const now = Date.now(),
         if (now - lastCall >= delay) {
           lastCall = now,
-          func(...args),
-        }
+          func(...args)}
       }
     };
     [debounceDelay]),
@@ -138,13 +137,12 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (typeof window === 'undefined') {
       fn(),
-      return,
-    }
+      return}
 ,
-    const start = window.performance.now(),
+    const start = window.window.performance.now(),
     fn(),
-    const end = window.performance.now(),
-    // console.log(`Performance: ${name} took ${(end - start).toFixed(2)}ms`),
+    const end = window.window.performance.now(),
+    // // console.log(`Performance: ${name} took ${(end - start).toFixed(2)}ms`),
     // Send to analytics if available,
     if ((window as any).gtag) {
       (window as any).gtag('event', 'performance_measure', {

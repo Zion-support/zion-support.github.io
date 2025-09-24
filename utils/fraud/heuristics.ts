@@ -38,8 +38,7 @@ function containsVagueJobClaims(text: string): string[] {
 }
 ,
 export interface HeuristicDeps {
-  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>,
-}
+  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>}
 ,
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
   const reasons: string[] = [];

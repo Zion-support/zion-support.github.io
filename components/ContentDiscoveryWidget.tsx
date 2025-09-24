@@ -10,8 +10,7 @@ interface ContentItem {
   category: string,
   roi?: string,
   badge?: string,
-  icon: string,
-}
+  icon: string}
 ,
 export default function ContentDiscoveryWidget() {
   const [isVisiblesetIsVisible] = useState(false),
@@ -25,8 +24,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Revolutionary Technology';
       roi: '10,0o00% ROI';
       badge: 'BREAKTHROUGH';
-      icon: '🚀',
-    };
+      icon: '🚀'};
     {
       id: 'global-transformation';
       title: 'Global Transformation Success Story';
@@ -35,8 +33,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Success Story';
       roi: '10,0o00% ROI';
       badge: 'VERIFIED';
-      icon: '🏆',
-    };
+      icon: '🏆'};
     {
       id: 'roi-calculator';
       title: 'Interactive ROI Calculator';
@@ -45,8 +42,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Interactive Tool';
       roi: 'Free Tool';
       badge: 'NEW';
-      icon: '🧮',
-    };
+      icon: '🧮'};
     {
       id: 'quantum-neural-fusion';
       title: 'Quantum-Neural Fusion Technology';
@@ -55,8 +51,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Technology';
       roi: '15,0o00x Faster';
       badge: 'REVOLUTIONARY';
-      icon: '⚛️',
-    };
+      icon: '⚛️'};
     {
       id: 'autonomous-operations';
       title: 'Autonomous Operations System';
@@ -65,8 +60,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Automation';
       roi: '24/7 Operations';
       badge: 'BREAKTHROUGH';
-      icon: '🤖',
-    };
+      icon: '🤖'};
     {
       id: 'transcendent-intelligence';
       title: 'Transcendent Intelligence';
@@ -75,8 +69,7 @@ export default function ContentDiscoveryWidget() {
       category: 'Intelligence';
       roi: '99.9% Accuracy';
       badge: 'TRANSCENDENT';
-      icon: '🧠',
-    }
+      icon: '🧠'}
   ],
   useEffect(() => {
     const timer = setTimeout(() => {

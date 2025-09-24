@@ -42,6 +42,5 @@ export default function SecurityPostureGuardian(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

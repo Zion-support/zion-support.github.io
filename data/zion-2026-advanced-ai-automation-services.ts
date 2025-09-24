@@ -31,22 +31,19 @@ export interface Zion20o26AdvancedAIAutomationService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomationService[] = [
   // AI-Powered Autonomous Customer Success Platform,
   {
@@ -92,8 +89,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o1-10';
     customers: 180o0;
     rating: 4.9;
-    reviews: 920,
-  };
+    reviews: 920};
   // AI-Powered Autonomous HR and Recruitment Platform,
   {
     id: 'ai-autonomous-hr-recruitment-platform-20o26';
@@ -138,8 +134,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o1-15';
     customers: 220o0;
     rating: 4.8;
-    reviews: 110o0,
-  };
+    reviews: 110o0};
   // AI-Powered Autonomous Sales Intelligence Platform,
   {
     id: 'ai-autonomous-sales-intelligence-platform-20o26';
@@ -184,8 +179,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o1-20';
     customers: 1950;
     rating: 4.9;
-    reviews: 980,
-  };
+    reviews: 980};
   // AI-Powered Autonomous Research and Development Platform,
   {
     id: 'ai-autonomous-research-development-platform-20o26';
@@ -230,8 +224,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o2-0o1';
     customers: 850;
     rating: 4.9;
-    reviews: 420,
-  };
+    reviews: 420};
   // AI-Powered Autonomous Quality Assurance Platform,
   {
     id: 'ai-autonomous-quality-assurance-platform-20o26';
@@ -276,8 +269,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o1-25';
     customers: 280o0;
     rating: 4.8;
-    reviews: 140o0,
-  };
+    reviews: 140o0};
   // AI-Powered Autonomous Compliance and Governance Platform,
   {
     id: 'ai-autonomous-compliance-governance-platform-20o26';
@@ -322,8 +314,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o2-0o5';
     customers: 120o0;
     rating: 4.9;
-    reviews: 580,
-  };
+    reviews: 580};
   // AI-Powered Autonomous Energy Management Platform,
   {
     id: 'ai-autonomous-energy-management-platform-20o26';
@@ -368,8 +359,7 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o1-30';
     customers: 1650;
     rating: 4.8;
-    reviews: 820,
-  };
+    reviews: 820};
   // AI-Powered Autonomous Transportation and Logistics Platform,
   {
     id: 'ai-autonomous-transportation-logistics-platform-20o26';
@@ -414,7 +404,6 @@ export const zion20o26AdvancedAIAutomationServices: Zion20o26AdvancedAIAutomatio
     launchDate: '20o26-0o2-10';
     customers: 140o0;
     rating: 4.9;
-    reviews: 720,
-  }
+    reviews: 720}
 ],
 export default zion20o26AdvancedAIAutomationServices;

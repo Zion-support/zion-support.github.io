@@ -10,8 +10,7 @@ export default function AISolutionsPage() {
       features: ['Predictive AnalyticsPattern Recognition', 'Anomaly DetectionRecommendation Systems'];
       icon: '🧠';
       category: 'Core AI';
-      complexity: 'Advanced',
-    };
+      complexity: 'Advanced'};
     {
       id: 'natural-language-processing';
       title: 'Natural Language Processing';
@@ -19,8 +18,7 @@ export default function AISolutionsPage() {
       features: ['Text AnalysisSentiment Analysis', 'Language TranslationChatbot Development'];
       icon: '💬';
       category: 'Language AI';
-      complexity: 'Advanced',
-    };
+      complexity: 'Advanced'};
     {
       id: 'computer-vision';
       title: 'Computer Vision';
@@ -28,8 +26,7 @@ export default function AISolutionsPage() {
       features: ['Image RecognitionObject Detection', 'Facial RecognitionQuality Control'];
       icon: '👁️';
       category: 'Visual AI';
-      complexity: 'Advanced',
-    };
+      complexity: 'Advanced'};
     {
       id: 'autonomous-systems';
       title: 'Autonomous Systems';
@@ -37,8 +34,7 @@ export default function AISolutionsPage() {
       features: ['Decision MakingSelf-Learning', 'Adaptive BehaviorContinuous Improvement'];
       icon: '🤖';
       category: 'Autonomy';
-      complexity: 'Expert',
-    };
+      complexity: 'Expert'};
     {
       id: 'predictive-analytics';
       title: 'Predictive Analytics';
@@ -46,8 +42,7 @@ export default function AISolutionsPage() {
       features: ['Trend AnalysisRisk Assessment', 'ForecastingBehavioral Prediction'];
       icon: '📊';
       category: 'Analytics';
-      complexity: 'Intermediate',
-    };
+      complexity: 'Intermediate'};
     {
       id: 'ai-automation';
       title: 'AI-Powered Automation';
@@ -55,30 +50,25 @@ export default function AISolutionsPage() {
       features: ['Process AutomationWorkflow Optimization', 'Intelligent RoutingAdaptive Workflows'];
       icon: '⚡';
       category: 'Automation';
-      complexity: 'Intermediate',
-    }
+      complexity: 'Intermediate'}
   ];
   const useCases = [
     {
       industry: 'Manufacturing';
       solutions: ['Quality ControlPredictive Maintenance', 'Supply Chain Optimization'];
-      icon: '🏭',
-    };
+      icon: '🏭'};
     {
       industry: 'Healthcare';
       solutions: ['Diagnostic SupportPatient Care Optimization', 'Drug Discovery'];
-      icon: '🏥',
-    };
+      icon: '🏥'};
     {
       industry: 'Finance';
       solutions: ['Fraud DetectionRisk Assessment', 'Algorithmic Trading'];
-      icon: '💳',
-    };
+      icon: '💳'};
     {
       industry: 'Retail';
       solutions: ['Customer SegmentationInventory Management', 'Personalized Marketing'];
-      icon: '🛍️',
-    }
+      icon: '🛍️'}
   ];
   const technologies = [
     'TensorFlowPyTorch', 'Scikit-learnOpenAI GPT', 'BERTYOLO', 'KerasPandas'];
@@ -211,5 +201,4 @@ export default function AISolutionsPage() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}

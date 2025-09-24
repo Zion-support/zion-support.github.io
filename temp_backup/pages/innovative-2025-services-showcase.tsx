@@ -21,6 +21,5 @@ export default function Innovative2025ServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

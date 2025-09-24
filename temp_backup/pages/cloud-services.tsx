@@ -15,6 +15,5 @@ export default function CloudServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

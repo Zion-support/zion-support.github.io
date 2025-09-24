@@ -28,6 +28,5 @@ export default function Page() {
         Need help implementing eval-driven releases? Contact us to get,
         production-ready in weeks.,
       </p>,
-    </main>),
-}
+    </main>)}
 ,

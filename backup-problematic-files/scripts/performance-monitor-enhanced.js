@@ -2,18 +2,18 @@ const fs = require('fs'), const path = require('path'),  const performanceChecks
 const fs = require('fs'), const path = require('path'),  const performanceChecks ={ bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check()} catch (error) { } }),
 const fs = require('fs'),
 const path = require('path'),
-console && // console.log('📊 Enhanced Performance Monitor Starting...'),
+console && // // console.log('📊 Enhanced Performance Monitor Starting...'),
 const performanceChecks ={
   "bundleSize": () => {
-    // console.log('📦 Checking bundle size...');
+    // // console.log('📦 Checking bundle size...');
     // Bundle size analysis would go here,
     return true};
   "loadTime": () => {
-    // console.log('⏱️ Checking load times...');
+    // // console.log('⏱️ Checking load times...');
     // Load time analysis would go here,
     return true};
   "memoryUsage": () => {
-    // console.log('🧠 Checking memory usage...');
+    // // console.log('🧠 Checking memory usage...');
     // Memory usage analysis would go here,
     return true}
 };
@@ -21,6 +21,6 @@ const performanceChecks ={
 Object && Object.entries(performanceChecks).forEach(([name, check]) => {
   try {
     const result = check(),
-    console && // console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) {
-    console && // console.log(`❌ ${name}: ERROR - ${error && error.message}`)}
+    console && // // console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) {
+    console && // // console.log(`❌ ${name}: ERROR - ${error && error.message}`)}
 }),

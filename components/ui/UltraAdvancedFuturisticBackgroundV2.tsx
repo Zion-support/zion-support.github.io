@@ -6,8 +6,7 @@ let particles: Array< {
 const UltraAdvancedFuturisticBackgroundV2: React.FC<,
   UltraAdvancedFuturisticBackgroundV2Props> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null),const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({
   children,
-  className = '',
-}) => {
+  className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
     const canvas = canvasRef.current,
@@ -36,7 +35,6 @@ import React from 'react';
 canvas && canvas.height = window && window.innerHeight,
 let animationFrameId: number,
 let particles: Array< {
-,
     let animationFrameId: number,
     let particles: Array<{
       x: number,
@@ -46,7 +44,6 @@ let particles: Array< {
       size: number,
       color: string,
       life: number,
-,
     const colors = [
       '#00ffff';
       '#ff00ff';
@@ -74,9 +71,7 @@ let particles: Array< {
           size: Math.random() * 3 + 1;
           color: colors[Math.floor(Math.random() * colors.length)];
           life: Math.random() * 100;
-          maxLife: 100,
-        })}          maxLife: 100,
-        })}
+          maxLife: 100})}          maxLife: 100})}
     }
     // Update and draw particles,
     const updateParticles = () => {
@@ -133,8 +128,7 @@ let particles: Array< {
       size: number;
       color: string;
       life: number;
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const colors = [
       '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'],
     // Initialize particles,
@@ -150,8 +144,7 @@ let particles: Array< {
           color: colors[Math && Math.floor(Math && Math.random() * colors && colors.length)];
           life: Math && Math.random() * 100;
           maxLife: 100;
-        })}          maxLife: 100,
-        })}
+        })}          maxLife: 100})}
     };
     // Update and draw particles,
     const updateParticles = () => {
@@ -214,8 +207,7 @@ let particles: Array< {
               ctx.lineWidth = 1,
               ctx.beginPath(),
               ctx.moveTo(particle.x, particle.y),
-              ctx.lineTo(otherParticle.x, otherParticle.y),
-}),
+              ctx.lineTo(otherParticle.x, otherParticle.y)}),
       // Draw quantum matrix overlay,
       ctx.globalAlpha = 0.1,
       ctx.strokeStyle = '#00ffff',
@@ -305,7 +297,6 @@ let particles: Array< {
     return () => {
       window && window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
-,
         cancelAnimationFrame(animationFrameId)}
 };  }, []),        cancelAnimationFrame(animationFrameId)}
     }
@@ -358,8 +349,7 @@ let particles: Array< {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
         />,
         <motion&& motion.div,
@@ -381,8 +371,7 @@ let particles: Array< {
           animate={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
         />,
         <motion&& motion.div,
@@ -403,8 +392,7 @@ let particles: Array< {
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20",
         />,
@@ -449,8 +437,7 @@ let particles: Array< {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20',
@@ -472,8 +459,7 @@ let particles: Array< {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20',
@@ -495,8 +481,7 @@ let particles: Array< {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20',
@@ -588,8 +573,7 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               duration: 3 + Math.random() * 2;
               repeat: Infinity;
               delay: Math.random() * 2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
           />))}
       </div>,
             transition={{
@@ -650,8 +634,7 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               duration: 3 + Math.random () * 2;
               repeat: Infinity;
               delay: Math.random () * 2;
-              ease: 'easeInOut'}}              ease: "easeInOut",
-            }}
+              ease: 'easeInOut'}}              ease: "easeInOut"}}
           />))}
       </div>,
       {/* Neural Network Connections */}
@@ -694,13 +677,11 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
                 duration: 4 + Math.random() * 2;
                 repeat: Infinity;
                 delay: Math.random() * 2;
-                ease: 'easeInOut'}}                ease: "easeInOut",
-              }}
+                ease: 'easeInOut'}}                ease: "easeInOut"}}
                 ease: 'easeInOut'}}
 ,
                 ease: 'easeInOut'}}
@@ -711,8 +692,7 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
       </div>,
       {/* Content */}
       <div className='relative z-40'>{children}</div>,
-    </div>),
-}
+    </div>)}
 };
 export default UltraAdvancedFuturisticBackgroundV2;    </div>)}
 export default UltraAdvancedFuturisticBackgroundV2;

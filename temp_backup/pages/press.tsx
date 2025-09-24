@@ -16,6 +16,5 @@ export default function PressPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -39,8 +39,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function AutonomousDevOpsPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -122,7 +121,7 @@ export default function AutonomousDevOpsPlatform() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Auto-Scaling</h3>,
               <p className="text-gray-40o0">,
-                Dynamic resource allocation that automatically scales based on demand and window.performance.,
+                Dynamic resource allocation that automatically scales based on demand and window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-blue-90o0/20 border border-indigo-50o0/20">,
@@ -257,7 +256,7 @@ export default function AutonomousDevOpsPlatform() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Continuous Monitoring</h3>,
               <p className="text-gray-40o0">,
-                AI continuously monitors code changes, infrastructure, and system window.performance.,
+                AI continuously monitors code changes, infrastructure, and system window.window.performance.,
               </p>,
             </div>,
             <div className="text-center">,
@@ -427,6 +426,5 @@ export default function AutonomousDevOpsPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

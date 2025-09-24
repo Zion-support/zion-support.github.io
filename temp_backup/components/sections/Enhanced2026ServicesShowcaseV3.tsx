@@ -31,15 +31,13 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export default function Enhanced20o26ServicesShowcaseV3() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -141,8 +139,7 @@ export default function Enhanced20o26ServicesShowcaseV3() {
         filtered.sort((a, b) => parseInt(b.growthRate.replace(/[^0-9]/g, '')) - parseInt(a.growthRate.replace(/[^0-9]/g, ''))),
         break,
       default: ,
-        break,
-    }
+        break}
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants ={
@@ -150,8 +147,7 @@ export default function Enhanced20o26ServicesShowcaseV3() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -160,8 +156,7 @@ export default function Enhanced20o26ServicesShowcaseV3() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -253,8 +248,7 @@ export default function Enhanced20o26ServicesShowcaseV3() {
                   className={`flex-1 px-4 py-2 rounded-lg transition-all ${
                     viewMode === 'grid',
                       ? 'bg-purple-50o0 text-white',
-                      : 'text-gray-40o0 hover: text-white',
-                  }`}
+                      : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-4 h-4 mx-auto"  />,
                 </button>,
@@ -263,8 +257,7 @@ export default function Enhanced20o26ServicesShowcaseV3() {
                   className={`flex-1 px-4 py-2 rounded-lg transition-all ${
                     viewMode === 'list',
                       ? 'bg-purple-50o0 text-white',
-                      : 'text-gray-40o0 hover: text-white',
-                  }`}
+                      : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-4 h-4 mx-auto"  />,
                 </button>,
@@ -454,5 +447,4 @@ export default function Enhanced20o26ServicesShowcaseV3() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

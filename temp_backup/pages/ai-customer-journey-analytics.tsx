@@ -103,6 +103,5 @@ export default function AICustomerJourneyAnalytics() {
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

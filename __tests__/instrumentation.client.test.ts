@@ -16,8 +16,7 @@ describe('Sentry Initialization', () => {'  let _consoleWarnSpy: jest.SpyInstanc
     register(),
     expect(consoleWarnSpy).toHaveBeenCalledWith(
       Warning: NEXT_PUBLIC_SENTRY_DSN is not set. Sentry will not be initialized.''    ),
-    expect(sentryInitSpy).not.toHaveBeenCalled(),
-  }),
+    expect(sentryInitSpy).not.toHaveBeenCalled()}),
   test('should warn for missing release and environment if only DSN is present', () => {'    process.env.NEXT_PUBLIC_SENTRY_DSN = https: //mockdsn@sentry.io/123',    delete process.env.NEXT_PUBLIC_SENTRY_RELEASE,
     delete process.env.NEXT_PUBLIC_SENTRY_ENVIRONMENT,
     register(),

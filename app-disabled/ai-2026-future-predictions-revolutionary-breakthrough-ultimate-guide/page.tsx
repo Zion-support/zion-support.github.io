@@ -215,6 +215,5 @@ export default function AI20o26FuturePredictionsPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

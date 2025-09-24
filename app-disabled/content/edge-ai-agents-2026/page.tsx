@@ -46,6 +46,5 @@ export default function EdgeAIAgents20o26() {
           </div>,
         </main>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

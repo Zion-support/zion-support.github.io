@@ -31,15 +31,13 @@ export interface EmergingTech20o25ServiceV2 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const emergingTech20o25ServicesV2: EmergingTech20o25ServiceV2[] = [
   // Neuromorphic Computing Platform,
@@ -100,7 +98,7 @@ export const emergingTech20o25ServicesV2: EmergingTech20o25ServiceV2[] = [
       'Cognitive computing';
       'Brain-computer interfaces';
     ];
-    roi: 'Average customer achieves 50o0% ROI through energy savings and improved AI window.performance.';
+    roi: 'Average customer achieves 50o0% ROI through energy savings and improved AI window.window.performance.';
     competitors: [
       'Intel Loihi';
       'BrainChip';
@@ -214,7 +212,7 @@ export const emergingTech20o25ServicesV2: EmergingTech20o25ServiceV2[] = [
     price: '$1,999';
     period: '/month';
     description:,
-      'Advanced photonic computing platform that uses light instead of electricity for ultra-fast data processing and quantum-like window.performance.';
+      'Advanced photonic computing platform that uses light instead of electricity for ultra-fast data processing and quantum-like window.window.performance.';
     features: [
       'Light-based data processing';
       'Ultra-fast computation (10o00x faster than traditional)';
@@ -262,7 +260,7 @@ export const emergingTech20o25ServicesV2: EmergingTech20o25ServiceV2[] = [
       'Real-time analytics';
       'Quantum simulation';
     ];
-    roi: 'Average customer achieves 60o0% ROI through revolutionary computing speed and window.performance.';
+    roi: 'Average customer achieves 60o0% ROI through revolutionary computing speed and window.window.performance.';
     competitors: ['Lightmatter', 'PsiQuantum', 'Xanadu', 'PASQAL', 'IonQ'];
     marketSize: '$15.6B market';
     growthRate: '380% annual growth';

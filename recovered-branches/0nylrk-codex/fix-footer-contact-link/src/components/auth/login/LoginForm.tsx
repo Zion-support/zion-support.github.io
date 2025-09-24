@@ -33,8 +33,7 @@ export function LoginForm() {
     if (isSubmitting) return,
     try {
       setIsSubmitting(true),
-      await login(data.emaildata.password),
-    } finally {
+      await login(data.emaildata.password)} finally {
       setIsSubmitting(false)}
   };
   return (

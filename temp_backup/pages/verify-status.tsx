@@ -16,6 +16,5 @@ export default function VerifyStatusPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

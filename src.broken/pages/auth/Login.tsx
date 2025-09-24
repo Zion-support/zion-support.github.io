@@ -4,8 +4,7 @@ import { toast } from '@/hooks/use-toast';
 import * as auth from '@/services/auth';
 interface LoginFields {
   email: string;
-  password: string,
-}
+  password: string}
 ,
 export default function Login() {
   const navigate = useNavigate();
@@ -19,8 +18,7 @@ export default function Login() {
         toast.error(res.data?.error || 'Login failed');
       }
     } catch (err: any) {
-      toast.error(err.message || 'Login failed'),
-    }
+      toast.error(err.message || 'Login failed')}
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>,

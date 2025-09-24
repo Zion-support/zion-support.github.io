@@ -15,6 +15,5 @@ export default function QuantumAiFusionPlatformPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

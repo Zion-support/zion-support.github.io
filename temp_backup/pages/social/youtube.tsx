@@ -3,8 +3,7 @@ import Head from 'next/head',
 export default function YouTubeRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.location.replace('https: //www.youtube.com/@ziontechgroup'),
-    }
+      window.location.replace('https: //www.youtube.com/@ziontechgroup')}
   }, []),
   return (
     <>,
@@ -24,6 +23,5 @@ export default function YouTubeRedirect() {
           Continue to YouTube,
         </a>,
       </div>,
-    </>),
-}
+    </>)}
 ,

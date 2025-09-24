@@ -20,6 +20,5 @@ export default function SpaceResourceIntelligence20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

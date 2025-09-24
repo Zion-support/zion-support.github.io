@@ -40,24 +40,21 @@ const InnovativeServices20o25: React.FC = () => {
           price: "$1,299/month";
           features: ["AI-powered code analysis", "Security vulnerability detection", "Code quality scoring", "Performance optimization"];
           link: "https://ziontechgroup.com/ai-code-review";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Content Marketing Automation";
           description: "Intelligent content creation, optimization, and distribution automation";
           price: "$899/month";
           features: ["AI-powered content generation", "SEO optimization", "Multi-channel distribution", "Performance analytics"];
           link: "https://ziontechgroup.com/ai-content-marketing";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Customer Support Automation";
           description: "Intelligent customer support with automated responses and issue resolution";
           price: "$699/month";
           features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"];
           link: "https://ziontechgroup.com/ai-customer-support";
-          popular: true,
-        }
+          popular: true}
       ]};
     {
       title: "Advanced IT Infrastructure";
@@ -71,24 +68,21 @@ const InnovativeServices20o25: React.FC = () => {
           price: "$3,999/month";
           features: ["Quantum-resistant encryption", "Post-quantum cryptography", "Multi-cloud orchestration", "Zero-trust security"];
           link: "https://ziontechgroup.com/quantum-secure-cloud";
-          popular: true,
-        };
+          popular: true};
         {
           name: "Edge Computing Orchestration";
           description: "Intelligent orchestration of distributed edge computing resources";
           price: "$1,899/month";
           features: ["Intelligent workload distribution", "Edge-to-cloud synchronization", "Real-time optimization", "IoT integration"];
           link: "https://ziontechgroup.com/edge-computing-orchestration";
-          popular: true,
-        };
+          popular: true};
         {
           name: "Neuromorphic Computing Infrastructure";
           description: "Brain-inspired computing architecture for ultra-efficient AI processing";
           price: "$5,999/month";
           features: ["Brain-inspired neural architecture", "Ultra-low power consumption", "Real-time learning", "Spiking neural networks"];
           link: "https://ziontechgroup.com/neuromorphic-computing";
-          popular: false,
-        }
+          popular: false}
       ]};
     {
       title: "Innovative Micro-SaaS Solutions";
@@ -102,24 +96,21 @@ const InnovativeServices20o25: React.FC = () => {
           price: "$599/month";
           features: ["AI-powered contract generation", "Legal document review", "Compliance checking", "Workflow automation"];
           link: "https://ziontechgroup.com/ai-legal-automation";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Real Estate Analytics";
           description: "Intelligent real estate market analysis and investment insights";
           price: "$799/month";
           features: ["Market trend analysis", "Investment opportunity identification", "Property valuation", "Risk assessment"];
           link: "https://ziontechgroup.com/ai-real-estate-analytics";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Restaurant Management";
           description: "Intelligent restaurant operations, inventory, and customer management";
           price: "$399/month";
           features: ["Inventory management", "Demand forecasting", "Staff optimization", "Customer analytics"];
           link: "https://ziontechgroup.com/ai-restaurant-management";
-          popular: true,
-        }
+          popular: true}
       ]};
     {
       title: "Cutting-Edge AI Research";
@@ -133,32 +124,28 @@ const InnovativeServices20o25: React.FC = () => {
           price: "$8,999/month";
           features: ["Molecular analysis", "Drug efficacy prediction", "Toxicity prediction", "Clinical trial optimization"];
           link: "https://ziontechgroup.com/ai-drug-discovery";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Climate Prediction Platform";
           description: "Predict climate patterns with AI-powered environmental analysis";
           price: "$3,999/month";
           features: ["Climate modeling", "Weather prediction", "Environmental analysis", "Risk assessment"];
           link: "https://ziontechgroup.com/ai-climate-prediction";
-          popular: true,
-        };
+          popular: true};
         {
           name: "AI Space Exploration Platform";
           description: "Revolutionize space exploration with AI-powered mission optimization";
           price: "$12,999/month";
           features: ["Mission planning", "Satellite optimization", "Astronomical analysis", "Risk assessment"];
           link: "https://ziontechgroup.com/ai-space-exploration";
-          popular: false,
-        }
+          popular: false}
       ]}
   ],
   const contactInfo ={
     mobile: "+1 30o2 464 0950";
     email: "kleber@ziontechgroup.com";
     address: "364 E Main St STE 10o08 Middletown DE 19709";
-    website: "https://ziontechgroup.com",
-  };
+    website: "https://ziontechgroup.com"};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
       <SEOHead
@@ -243,8 +230,7 @@ const InnovativeServices20o25: React.FC = () => {
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-slate-70o0/50 rounded-xl p-6 border transition-all duration-30o0 hover: scale-10o5 ${
-                        service.popular ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/20' : 'border-slate-60o0/50',
-                      }`}
+                        service.popular ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/20' : 'border-slate-60o0/50'}`}
                     >,
                       {service.popular && (
                         <div className="flex items-center gap-2 mb-4">,

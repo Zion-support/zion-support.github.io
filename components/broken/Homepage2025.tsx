@@ -148,8 +148,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       features: service.features;
                       popular: service.popular;
                       category: service.category;
-                      icon: service.icon,
-                    }}
+                      icon: service.icon}}
                     variant="ai",
                   />,
                 </motion.div>))}
@@ -198,8 +197,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                       className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
                         activeSection === section.id,
                           ? 'bg-cyan-400/20 text-cyan-400',
-                          : 'text-gray-300 hover: bg-white/10',
-                      }`}
+                          : 'text-gray-300 hover: bg-white/10'}`}
                     >,
                       <span>{section.icon}</span>,
                       <span>{section.label}</span>,
@@ -610,33 +608,27 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 {
                   title: 'Innovation First';
                   description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.';
-                  icon: '🚀',
-                };
+                  icon: '🚀'};
                 {
                   title: 'Proven Results';
                   description: 'Our solutions have helped businesses achieve 10x improvements in efficiencycost savingsand competitive advantage.';
-                  icon: '📈',
-                };
+                  icon: '📈'};
                 {
                   title: 'Future-Proof Technology';
                   description: 'Built with quantum computingAI consciousnessand space technology - ensuring your business stays ahead of the curve.';
-                  icon: '🔮',
-                };
+                  icon: '🔮'};
                 {
                   title: 'Expert Team';
                   description: 'World-class engineerscientistsand business strategists with decades of experience in emerging technologies.';
-                  icon: '👥',
-                };
+                  icon: '👥'};
                 {
                   title: '24/7 Support';
                   description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.';
-                  icon: '🛡️',
-                };
+                  icon: '🛡️'};
                 {
                   title: 'Scalable Solutions';
                   description: 'From startups to enterprisesour solutions scale with your business and grow with your ambitions.';
-                  icon: '📊',
-                }
+                  icon: '📊'}
               ].map((featureindex) => (
                 <motion.div,
                   key={feature.title}

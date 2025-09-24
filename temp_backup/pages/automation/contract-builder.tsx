@@ -78,8 +78,7 @@ export default function ContractBuilderPage() {
 ,
       const data = (await res.json()) as { contract: string };
       setContract(data.contract)} catch (e: any) {
-      setError(e?.message || 'Failed to generate contract'),
-    } finally {
+      setError(e?.message || 'Failed to generate contract')} finally {
       setLoading(false)}
   }
 ,

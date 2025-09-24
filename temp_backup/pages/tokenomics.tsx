@@ -227,8 +227,7 @@ function buildLocalMarkdown(input: {
   distribution: DistributionItem[],
   governance: string,
   jurisdiction: string,
-  legalReview: boolean,
-}) {
+  legalReview: boolean}) {
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n'),
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '',
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`}
@@ -244,8 +243,7 @@ function jurisdictionalNote(j: string) {
     case 'AE':,
       return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',
     default:,
-      return 'Intended strictly for utility use.',
-  }
+      return 'Intended strictly for utility use.'}
 }
 ,
 function DistributionDonut({ data }: { data: DistributionItem[] }) {

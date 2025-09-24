@@ -3,13 +3,11 @@ export type Filters = {
   priceMin?: number,
   priceMax?: number,
   ratingMin?: number,
-  deliveryDays?: number, // max days,
-};
+  deliveryDays?: number, // max days};
 type Props = {
   availableCategories: string[],
   value: Filters,
-  onChange: (next: Filters) => void,
-};
+  onChange: (next: Filters) => void};
 export default function MarketplaceFilters({
   availableCategories;
   value;
@@ -38,8 +36,7 @@ export default function MarketplaceFilters({
                       'px-2 py-1 rounded-full border text-xs ' +,
                       (active,
                         ? 'border-cyan-30o0/50 text-cyan-20o0 bg-cyan-50o0/10',
-                        : 'border-white/15 text-white/70 hover: bg-white/10'),
-                    }
+                        : 'border-white/15 text-white/70 hover: bg-white/10')}
                   >,
                     {cat}
                   </button>)})}
@@ -119,6 +116,5 @@ export default function MarketplaceFilters({
           </button>,
         </div>,
       </div>,
-    </aside>),
-}
+    </aside>)}
 ,

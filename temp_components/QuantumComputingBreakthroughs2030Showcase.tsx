@@ -38,8 +38,7 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
       impact: 'Solve optimization problems in seconds that would take classical computers millennia';
       icon: Atom;
       color: 'from-cyan-50o0 to-blue-50o0';
-      timeline: 'Q2 20o30',
-    };
+      timeline: 'Q2 20o30'};
     {
       id: 'quantum-internet';
       title: 'Quantum Internet Infrastructure';
@@ -52,8 +51,7 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
       impact: 'Revolutionize global communication with quantum-secure networks';
       icon: Globe;
       color: 'from-green-50o0 to-emerald-50o0';
-      timeline: 'Q4 20o30',
-    };
+      timeline: 'Q4 20o30'};
     {
       id: 'quantum-ai-fusion';
       title: 'Quantum-AI Fusion Platform';
@@ -66,8 +64,7 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
       impact: 'Enable AI systems with quantum-enhanced intelligence and processing power';
       icon: Brain;
       color: 'from-purple-50o0 to-pink-50o0';
-      timeline: 'Q3 20o30',
-    };
+      timeline: 'Q3 20o30'};
     {
       id: 'quantum-simulation';
       title: 'Universal Quantum Simulator';
@@ -80,8 +77,7 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
       impact: 'Accelerate scientific breakthroughs across all fields';
       icon: Activity;
       color: 'from-orange-50o0 to-red-50o0';
-      timeline: 'Q1 20o30',
-    }
+      timeline: 'Q1 20o30'}
   ],
   const quantumStats = [
     { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' };
@@ -95,29 +91,25 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
       title: 'Quantum-Safe Security';
       description: 'Unbreakable encryption methods that will protect data against quantum attacks.';
       benefits: ['Post-quantum cryptography'Quantum key distribution'Unbreakable encryption'Future-proof security'];
-      icon: Lock,
-    };
+      icon: Lock};
     {
       category: 'Drug Discovery';
       title: 'Molecular Simulation';
       description: 'Simulate complex molecular interactions to accelerate drug discovery and development.';
       benefits: ['Faster drug development'Precise molecular modeling'Reduced R&D costs'Personalized medicine'];
-      icon: Atom,
-    };
+      icon: Atom};
     {
       category: 'Climate Science';
       title: 'Climate Modeling';
       description: 'Ultra-accurate climate models that can predict weather patterns and climate change effects.';
       benefits: ['Accurate weather prediction'Climate change modeling'Disaster prevention'Resource optimization'];
-      icon: Globe,
-    };
+      icon: Globe};
     {
       category: 'Finance';
       title: 'Quantum Finance';
       description: 'Revolutionary financial modeling and risk assessment using quantum algorithms.';
       benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'];
-      icon: TrendingUp,
-    }
+      icon: TrendingUp}
   ],
   const timeline = [
     { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' };
@@ -339,6 +331,5 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default QuantumComputingBreakthroughs20o30Showcase;

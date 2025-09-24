@@ -13,14 +13,12 @@ export interface CreateNotificationParams {
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
-  actionText?: string | null,
-}
+  actionText?: string | null}
 ,
 export interface CreateNotificationResult {
   success: boolean,
   notificationId?: string,
-  error?: any,
-}
+  error?: any}
 ,
 export interface HireRequestNotificationParams {
   talentId: string,
@@ -29,14 +27,12 @@ export interface HireRequestNotificationParams {
   requesterEmail: string,
   projectType?: string,
   projectSummary?: string,
-  hireRequestId: string,
-}
+  hireRequestId: string}
 ,
 export interface OnboardingNotificationParams {
   userId: string,
   missingMilestone: string,
-  userRole: 'talent' | 'client',
-}
+  userRole: 'talent' | 'client'}
 ,
 export interface SystemNotificationParams {
   userId: string,
@@ -44,6 +40,5 @@ export interface SystemNotificationParams {
   message: string,
   actionUrl?: string | null,
   actionText?: string | null,
-  sendEmail?: boolean,
-}
+  sendEmail?: boolean}
 ,

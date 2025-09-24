@@ -57,6 +57,5 @@ const AgentGovernancePolicyAsCode20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgentGovernancePolicyAsCode20o26;

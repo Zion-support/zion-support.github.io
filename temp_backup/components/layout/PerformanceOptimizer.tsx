@@ -5,8 +5,7 @@ interface PerformanceOptimizerProps {
   threshold?: number,
   delay?: number,
   duration?: number,
-  className?: string,
-}
+  className?: string}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children;

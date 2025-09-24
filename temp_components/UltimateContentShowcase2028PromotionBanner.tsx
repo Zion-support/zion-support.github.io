@@ -28,26 +28,22 @@ const UltimateContentShowcase20o28PromotionBanner = () => {
       icon: Brain;
       title: 'Quantum AI Systems';
       description: 'Revolutionary AI powered by quantum computing';
-      color: 'from-purple-60o0 to-blue-60o0',
-    };
+      color: 'from-purple-60o0 to-blue-60o0'};
     {
       icon: Target;
       title: 'Neural Interfaces';
       description: 'Direct brain-computer communication';
-      color: 'from-pink-60o0 to-rose-60o0',
-    };
+      color: 'from-pink-60o0 to-rose-60o0'};
     {
       icon: Rocket;
       title: 'Future Predictions';
       description: '20o30-20o35 technology roadmap';
-      color: 'from-orange-60o0 to-red-60o0',
-    };
+      color: 'from-orange-60o0 to-red-60o0'};
     {
       icon: Zap;
       title: 'Quantum Computing';
       description: 'Breakthrough quantum technologies';
-      color: 'from-cyan-60o0 to-teal-60o0',
-    }
+      color: 'from-cyan-60o0 to-teal-60o0'}
   ],
   if (isDismissed) return null,
   return (

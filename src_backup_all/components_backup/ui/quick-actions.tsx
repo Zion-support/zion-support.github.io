@@ -21,8 +21,7 @@ interface QuickAction {
   icon: React.ReactNode,
   action: () => void,
   category: 'performance' | 'development' | 'maintenance',
-  dangerous?: boolean,
-}
+  dangerous?: boolean}
 ,
 export function QuickActions() {
   const { user } = useAuth(),
@@ -36,8 +35,7 @@ export function QuickActions() {
   const executeAction = async (actionId: string, action: () => void) => {
     setIsProcessing(actionId),
     try {
-      await action(),
-    } catch (error) {
+      await action()} catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error;
       })} finally {
@@ -75,8 +73,7 @@ export function QuickActions() {
       action: () => {
         if ('caches' in window) {
           caches.keys().then(names => {
-            names.forEach(name => caches.delete(name)),
-          })}
+            names.forEach(name => caches.delete(name))})}
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()};
@@ -119,8 +116,8 @@ export function QuickActions() {
       action: () => {
         const metrics = {
           timestamp: new Date().toISOString();
-          performance: window.performance.getEntriesByType('navigation')[0];
-          resources: window.performance.getEntriesByType('resource').slice(0, 20);
+          performance: window.window.performance.getEntriesByType('navigation')[0];
+          resources: window.window.performance.getEntriesByType('resource').slice(0, 20);
           memory: (performance as any).memory || {};
           userAgent: navigator.userAgent;
           screen: {
@@ -150,8 +147,7 @@ export function QuickActions() {
       dangerous: true;
       action: () => {
         throw new Error(
-          'Test error for Sentry integration - this is intentional!'),
-      };
+          'Test error for Sentry integration - this is intentional!')};
     };
     {
       id: 'refresh-app';
@@ -160,8 +156,7 @@ export function QuickActions() {
       icon: <RefreshCw className='w-4 h-4' />;
       category: 'maintenance';
       action: () => {
-        window.location.reload(),
-      };
+        window.location.reload()};
     };
   ],
   const categorizedActions = {

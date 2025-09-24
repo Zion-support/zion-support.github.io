@@ -82,6 +82,5 @@ export default function AI20o30FutureVisionShowcasePromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

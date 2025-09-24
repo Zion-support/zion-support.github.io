@@ -31,6 +31,5 @@ export default function AgentSafetyToolkitV1Page() {
           </p>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

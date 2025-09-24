@@ -9,8 +9,7 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supportingMultiverses: string,
   language?: string,
-  customPrompt?: string,
-};
+  customPrompt?: string};
 export default function ProposalGenerator() {
   const [formsetForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP';
@@ -42,8 +41,7 @@ export default function ProposalGenerator() {
       setDraftJson(data.json || null),
       setStatusMessage('Draft ready. You can edit and export.')} catch (e: any) {
       console.error(e),
-      setStatusMessage('Failed to generate. You can edit manually and export.'),
-    } finally {
+      setStatusMessage('Failed to generate. You can edit manually and export.')} finally {
       setIsGenerating(false)}
   }
 ,

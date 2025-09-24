@@ -22,8 +22,8 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
       const dirPath = path.join(this.projectRoot, dir),"}),"}),
       if (fs.existsSync(dirPath)) {"}),"}),
         await this.processDirectory(dirPath),"}),"})}"}),"})}"}),"}),"}),"}),
-    // console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}),
-    // console.log(`📊 Total "optimizations": ${this.totalOptimizations}`),"}),"})}"}),"}),"}),"}),
+    // // console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}),
+    // // console.log(`📊 Total "optimizations": ${this.totalOptimizations}`),"}),"})}"}),"}),"}),"}),
   async processDirectory(dirPath) {"}),"}),
     const items = fs.readdirSync(dirPath),"}),"}),"}),"}),
       const itemPath = path.join(dirPath, item),"}),"}),
@@ -61,7 +61,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
   'utf8'),"}),"}),
         this.optimizedFiles.push(filePath),"}),"}),
         this.totalOptimizations += optimizations,"}),"}),
-        // console.log("}),"}),
+        // // console.log("}),"}),
           `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`,"}),"})),"}),"})}"}),"})} catch (error) {"}),"}),
       console.error(`❌ Error optimizing file ${filePath}:`, error.message),"}),"})}"}),"})}"}),"}),"}),"}),
   optimizeLucideImports(content) {"}),"}),
@@ -123,12 +123,10 @@ class ImportOptimizer {
     this.optimizedFiles = [],
     this.totalOptimizations = 0}
   async optimizeImports() {
-,
-    // console.log(',⚡ Optimizing imports to reduce bundle size...'),
-    const directories = [',pages', ',components', ',src'],
-}
-    // console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),",
-    // console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
+    // // console.log(',⚡ Optimizing imports to reduce bundle size...'),
+    const directories = [',pages', ',components', ',src']}
+    // // console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),",
+    // // console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
   async processDirectory(dirPath) {
     const items = fs.readdirSync(dirPath),
         await this.optimizeFile(itemPath)}
@@ -160,7 +158,7 @@ class ImportOptimizer {
   'utf8')',
         this.optimizedFiles.push(filePath),
         this."totalOptimizations": += optimizations,
-        // console.log(
+        // // console.log(
           "⚡ Optimized: ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}")}
     } catch (error) {
       console.error("❌ Error optimizing file ${filePath}:", error.message)}
@@ -228,7 +226,7 @@ class ImportOptimizer {
         fs.writeFileSync(filePath, optimizedContent, ',utf8'),
         this.optimizedFiles.push(filePath),
         this.totalOptimizations += optimizations,
-        // console.log(
+        // // console.log(
           "⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}")}
     } catch (error) {
       console.error("❌ Error optimizing file ${filePath}:", error.message)}
@@ -270,7 +268,6 @@ class ImportOptimizer {
           groupedImports.set(packageName, new Set())}
         components.forEach(comp => groupedImports.get(packageName).add(comp))}),
       let optimizedImports = '',      groupedImports.forEach((components, packageName) => {
-,
   ',\n`}),
       return content.replace(radixPattern, ').replace(/^/, optimizedImports)}
     return content}

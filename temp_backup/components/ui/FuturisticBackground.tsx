@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion',
 interface FuturisticBackgroundProps {
   children: React.ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, className = '' }) => {
   return (
@@ -25,8 +24,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
               duration: 4 + i * 0.5;
               repeat: Infinity;
               delay: i * 0.8;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             style={{
               left: `${Math.random() * 10o0}%`;
               top: `${Math.random() * 10o0}%`}}
@@ -42,8 +40,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl",
@@ -54,8 +51,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full blur-3xl",
@@ -66,8 +62,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             duration: 12;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 4,
-          }}
+            delay: 4}}
          />,
       </div>,
       {/* Neon Lines */}
@@ -80,8 +75,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-40o0 to-transparent",
@@ -92,8 +86,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             duration: 8;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 3,
-          }}
+            delay: 3}}
          />,
         <motion.div,
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-40o0 to-transparent",
@@ -104,8 +97,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 6,
-          }}
+            delay: 6}}
          />,
       </div>,
       {/* Floating Geometric Shapes */}
@@ -125,8 +117,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             transition={{
               duration: 15 + i * 2;
               repeat: Infinity;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />))}
       </div>,
       {/* Data Stream Effect */}
@@ -145,8 +136,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
               duration: 8 + i * 0.5;
               repeat: Infinity;
               delay: i * 0.3;
-              ease: "linear",
-            }}
+              ease: "linear"}}
            />))}
       </div>,
       {/* Content */}

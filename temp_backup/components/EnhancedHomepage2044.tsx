@@ -33,8 +33,7 @@ const OptimizedBackground = React.memo(() => {
   const [isReducedMotion, setIsReducedMotion] = useState(false),
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
-    setIsReducedMotion(mediaQuery.matches),
-  }, []),
+    setIsReducedMotion(mediaQuery.matches)}, []),
   if (isReducedMotion) {
     return (
       <div className="absolute inset-0 -z-10">,
@@ -64,8 +63,7 @@ const OptimizedBackground = React.memo(() => {
               duration: 8 + i * 0.3;
               repeat: Infinity as any;
               delay: i * 0.2;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             style={{
               left: `${Math.random() * 10o0}%`;
               top: `${Math.random() * 10o0}%`}}
@@ -90,8 +88,7 @@ const EnhancedHomepage20o44: React.FC = () => {
     setIsReducedMotion(mediaQuery.matches),
     // Check for mobile device,
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768),
-    };
+      setIsMobile(window.innerWidth < 768)};
     checkMobile(),
     window.addEventListener('resize', checkMobile),
     // Auto-rotate featured services (only if no reduced motion and not mobile),
@@ -153,16 +150,13 @@ const EnhancedHomepage20o44: React.FC = () => {
   const handleWatchDemo = useCallback(() => {
     window.location.href = '/services'}, []),
   const handleServiceClick = useCallback((service: any) => {
-    window.location.href = service.slug,
-  }, []),
+    window.location.href = service.slug}, []),
   const handleCategoryChange = useCallback((category: string) => {
     setSelectedCategory(category),
-    setUserInteraction(true),
-  }, []),
+    setUserInteraction(true)}, []),
   const handleSearch = useCallback((e: React.FormEvent) => {
     e.preventDefault(),
-    // Search functionality can be enhanced here,
-  }, []),
+    // Search functionality can be enhanced here}, []),
   // Enhanced animations with reduced motion support,
   const fadeInUp ={
     initial: isReducedMotion ? {} : { opacity: 0, y: 20 };
@@ -172,8 +166,7 @@ const EnhancedHomepage20o44: React.FC = () => {
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: isReducedMotion ? 0 : 0.1,
-      }
+        staggerChildren: isReducedMotion ? 0 : 0.1}
     }
   };
   // Add structured data for SEO,
@@ -199,8 +192,7 @@ const EnhancedHomepage20o44: React.FC = () => {
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup";
       "https://twitter.com/ziontechgroup";
-      "https: //github.com/ziontechgroup"],
-  };
+      "https: //github.com/ziontechgroup"]};
   return (
     <>,
       <EnhancedSEO
@@ -445,8 +437,7 @@ const EnhancedHomepage20o44: React.FC = () => {
                     className={`group px-4 md: px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-30o0 flex items-center gap-2 text-sm md:text-base ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white shadow-lg',
-                        : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'}`}
                     role="tab",
                     aria-selected={selectedCategory === category.id}
                     aria-controls={`services-${category.id}`}
@@ -562,6 +553,5 @@ const EnhancedHomepage20o44: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>),
-};
+    </>)};
 export default EnhancedHomepage20o44;

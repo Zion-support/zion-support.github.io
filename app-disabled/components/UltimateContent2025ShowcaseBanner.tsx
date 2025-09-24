@@ -202,8 +202,7 @@ const UltimateContent20o25ShowcaseBanner = () => {
               className={`bg-white/5 rounded-xl p-6 border transition-all cursor-pointer ${
                 index === currentSlide,
                   ? 'border-white/40 bg-white/10',
-                  : 'border-white/20 hover: border-white/30',
-              }`}
+                  : 'border-white/20 hover: border-white/30'}`}
               onClick={() => setCurrentSlide(index)}
             >,
               <div className='flex items-center gap-2 mb-3'>,
@@ -268,6 +267,5 @@ const UltimateContent20o25ShowcaseBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContent2025ShowcaseBanner;

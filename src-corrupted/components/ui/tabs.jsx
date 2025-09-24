@@ -33,8 +33,7 @@ export function TabsTrigger({ children, value, className = '' }) {
       className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
         isActive,
           ? 'border-zion-cyan text-zion-cyan',
-          : 'border-transparent text-gray-50o0 hover: text-gray-70o0 hover:border-gray-30o0',
-      } ${className}`}
+          : 'border-transparent text-gray-50o0 hover: text-gray-70o0 hover:border-gray-30o0'} ${className}`}
       onClick={() => context.setActiveTab(value)}
     >,
       {children}

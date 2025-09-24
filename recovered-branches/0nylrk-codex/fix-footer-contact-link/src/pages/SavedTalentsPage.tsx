@@ -11,10 +11,8 @@ import {TalentProfile} from "@/types/talent",
 import {toast} from "@/components/ui/use-toast",
 import {useNavigate} from "react-router-dom",
 export default function SavedTalentsPage() {
-,
   useEffect(() => {
     const fetchSavedTalents = async () => {
-,
       setIsLoading(true),
       try {
         if (!user) {
@@ -73,15 +71,13 @@ if ( {) {
           // Extract talent profiles and convert to TalentProfile type,
           const talent_profiles = data.map (
             item => item.talent_profile as unknown as TalentProfile),
-          setSavedTalents (talent_profiles),
-}
+          setSavedTalents (talent_profiles)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4} catch (error) {
         console.error ("Error fetching saved talents:", error),
         toast ({
           title: "Error";
           description: "Failed to load saved talents. Please try again later.";
-          variant: "destructive"}),
-} finally {
+          variant: "destructive"})} finally {
         setIsLoading (false)}
 }
     fetchSavedTalents()}, [user]),
@@ -92,7 +88,7 @@ if ( {) {
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)};
   const handleRequestHire = (talent: TalentProfile) => {
-    // console.log("Request to hire:", talent),
+    // // console.log("Request to hire:", talent),
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})}
@@ -101,8 +97,7 @@ if ( {) {
     try {
       if (!user) {
         console.warn("User not authenticated."),
-        return,
-      }
+        return}
       if (isCurrentlySaved) {
         // Remove from saved talents,
         const { error } = await supabase,
@@ -124,7 +119,7 @@ if ( {) {
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)};
   const handleRequestHire = (talent: TalentProfile) => {
-    // // // // console.log("Request to hire:", talent);
+    // // // // // console.log("Request to hire:", talent);
     toast({
       title: "Hire Request Sent";
       description: `A hire request has been sent to ${talent.full_name}.`})};
@@ -199,7 +194,7 @@ if ( {) {
   const handleViewProfile = (talentId: string) => {
     navigate(`/talent/${talentId}`)};
   const handleRequestHire = (talent: TalentProfile) => {
-    console && // console.log("Request to hire:", talent),
+    console && // // console.log("Request to hire:", talent),
     toast({
       title: "Hire Request Sent";
       description: `A hire request has been sent to ${talent && talent.full_name}.`})};
@@ -256,8 +251,7 @@ if ( {) {
       toast({
         title: "Error";
         description: "Failed to update saved talents. Please try again later.";
-        variant: "destructive"}),
-}
+        variant: "destructive"})}
 }
   };
   return (
@@ -333,9 +327,7 @@ if ( {) {
           <div className="text-center py-8">Loading saved talents...</div>) : savedTalents && savedTalents.length === 0 ? (
           <div className="text-center py-8">No talents saved yet.</div>) : (
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mt-8">,
-,
-    fetchSavedTalents (),
-  }, [user]),
+    fetchSavedTalents ()}, [user]),
   const handleViewProfile = (talent_id: string) =>: any {
     navigate (`/talent/${talent_id}`)}
 ,
@@ -349,8 +341,7 @@ if ( {) {
     try {
       // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
         console.warn ("User not authenticated.");
         return}
       // Check condition,

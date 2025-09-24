@@ -24,6 +24,5 @@ export function SortFilter({ sortOptionsetSortOption }: SortFilterProps) {
           <SelectItem value='price-high'>Price: High to Low</SelectItem>,
         </SelectContent>,
       </Select>,
-    </div>),
-}
+    </div>)}
 ,

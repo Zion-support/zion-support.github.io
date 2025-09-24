@@ -5,8 +5,7 @@ type Props ={
   milestone: Milestone,
   projectId: string,
   role: 'client' | 'talent' | 'admin',
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid'milestoneId: string) => Promise<void> | void,
-};
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid'milestoneId: string) => Promise<void> | void};
 const statusSteps = ['Pending'In Progress'Submitted'Approved'Paid'] as const,
 export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props) {
   const [expandedsetExpanded] = useState(false),

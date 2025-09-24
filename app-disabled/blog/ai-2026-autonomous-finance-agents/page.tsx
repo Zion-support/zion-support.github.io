@@ -84,6 +84,5 @@ const AutonomousFinanceAgents20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AutonomousFinanceAgents20o26;

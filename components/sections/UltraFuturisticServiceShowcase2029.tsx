@@ -41,8 +41,7 @@ interface UltraFuturisticServiceShowcase2029Props {
 export default function UltraFuturisticServiceShowcase2029({
   services,
   title = '2029 Cutting-Edge Services',
-  subtitle = 'Experience the future of technology with our revolutionary solutions',
-}: UltraFuturisticServiceShowcase2029Props) {
+  subtitle = 'Experience the future of technology with our revolutionary solutions'}: UltraFuturisticServiceShowcase2029Props) {
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string,
@@ -249,8 +248,7 @@ function UltraFuturisticServiceShowcase2029() {
           </Link>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12">,
@@ -352,11 +350,9 @@ function UltraFuturisticServiceShowcase2029() {
           </Link>,
         </motion.div>,
       </div>,
-    </section>),
+    </section>)}
 }
 }
 }
-}
-    </section>),
-}
+    </section>)}
 }}}}))

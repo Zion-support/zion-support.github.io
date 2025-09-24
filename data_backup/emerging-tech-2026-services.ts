@@ -109,8 +109,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced neural interface platform with real-time signal processing, AI-powered analysis, and comprehensive development tools.';
@@ -188,8 +187,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum consciousness simulation platform with research-grade algorithms and comprehensive collaboration tools.';
@@ -271,8 +269,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.';
@@ -354,8 +351,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.';
@@ -436,8 +432,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.';
@@ -518,8 +513,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum energy management platform with advanced optimization algorithms and comprehensive utility integration.';
@@ -601,8 +595,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured AI robotics platform with comprehensive robot programming and coordination tools.';
@@ -684,8 +677,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.';
@@ -768,8 +760,7 @@ reviews: number,export const emergingTech20o26Services: EmergingTech20o26Service
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.';

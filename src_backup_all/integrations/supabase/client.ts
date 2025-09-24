@@ -29,8 +29,7 @@ export const supabase = createClient(effectiveUrl, effectiveAnonKey, {
     storage: supabaseStorageAdapter};
   global: {
     headers: {
-      'apikey': effectiveAnonKey,
-    }
+      'apikey': effectiveAnonKey}
   }
 }),
 // Helper function to access profiles table,

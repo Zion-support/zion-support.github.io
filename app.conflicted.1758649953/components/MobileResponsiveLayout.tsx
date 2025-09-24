@@ -4,8 +4,7 @@ interface MobileResponsiveLayoutProps {
   children: React.ReactNode,
   enableMobileOptimization?: boolean,
   enableTouchGestures?: boolean,
-  enableSwipeNavigation?: boolean,
-}
+  enableSwipeNavigation?: boolean}
 ,
 const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
   children;
@@ -29,14 +28,12 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     setTouchEnd(null),
     setTouchStart({
       x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY,
-    })};
+      y: e.targetTouches[0].clientY})};
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!enableTouchGestures) return,
     setTouchEnd({
       x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY,
-    })};
+      y: e.targetTouches[0].clientY})};
   const handleTouchEnd = () => {
     if (!enableTouchGestures || !touchStart || !touchEnd) return,
     const deltaX = touchStart.x - touchEnd.x,

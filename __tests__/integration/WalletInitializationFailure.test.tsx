@@ -15,8 +15,7 @@ afterAll(() => {
   // Restore original import.meta to avoid affecting other tests,
   globalThis.importMeta = originalImportMeta}),
 vi.mock('@reown/appkit/react', () => ({'  createAppKit: vi.fn().mockReturnValue(undefined);
-  useAppKit: vi.fn().mockReturnValue(undefined),
-})),
+  useAppKit: vi.fn().mockReturnValue(undefined)})),
 vi.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'})),
 describe('App Integration - Wallet Initialization Failure', () => {'  let _consoleErrorSpy: jest.SpyInstance,
   beforeEach(() => {
@@ -32,8 +31,7 @@ describe('App Integration - Wallet Initialization Failure', () => {'  let _conso
     await waitFor(() => {
       expect(consoleErrorSpy).toHaveBeenCalledWith(
         // The error message from WalletContext concatenates these details into one string,
-        expect.stringContaining('WalletContext: CRITICAL - Wallet system disabled. Invalid, missing, or placeholder VITE_REOWN_PROJECT_ID. Detected ID: "YOUR_DEFAULT_PROJECT_ID_ENV_MISSING"')      ),
-    }),
+        expect.stringContaining('WalletContext: CRITICAL - Wallet system disabled. Invalid, missing, or placeholder VITE_REOWN_PROJECT_ID. Detected ID: "YOUR_DEFAULT_PROJECT_ID_ENV_MISSING"')      )}),
     // Verify that a fundamental part of the application layout is still rendered.,
     // This assumes that your App.tsx renders a header component (e.g., AppHeader),
     // which includes an HTML element with the role banner'.'    // Adjust the selector if your layout is different (e.g., a main' role, or a data-testid).'    const headerElement = await screen.findByRole('banner'),    expect(headerElement).toBeInTheDocument(),

@@ -828,6 +828,5 @@ export default function EnterpriseAISuccessCaseStudy() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

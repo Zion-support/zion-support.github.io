@@ -73,6 +73,5 @@ const AIConsciousnessEvolution20o26Banner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AIConsciousnessEvolution20o26Banner;

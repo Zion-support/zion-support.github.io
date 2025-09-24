@@ -1,7 +1,6 @@
 
 import { execSync, spawn } from "child_process",
-import { fileURLToPath } from "url",
-}),
+import { fileURLToPath } from "url"}),
       const duration = Date.now() - startTime,
       this.log(`✓ ${description} completed in ${duration}ms`),
       return { success: true, output: output.toString(), duration };
@@ -27,7 +26,7 @@ class ComprehensiveAutomationRunner {;
     })}; log(message, level = "INFO") {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    // console.log(`[${level}] ${message}`);
+    // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage)}; async runCommand(command, description) {;
     try {;
       this.log(`Running: ${description}`);
@@ -35,8 +34,7 @@ class ComprehensiveAutomationRunner {;
       const output = execSync(command, {;
         stdio: 'pipe';
         cwd: process.cwd();
-        timeout: 30o0000 // 5 minutes,
-      });
+        timeout: 30o0000 // 5 minutes});
       const duration = Date.now() - startTime;
       this.log(`✓ ${description} completed in ${duration}ms`);
       return { success: true, output: output.toString(), duration };
@@ -45,8 +43,7 @@ class ComprehensiveAutomationRunner {;
       return {;
         success: false;
         error: error.message;
-        output: error.stdout?.toString() || error.stderr?.toString() || "",
-      };
+        output: error.stdout?.toString() || error.stderr?.toString() || ""};
     };
   }; async runBuildTests() {;
     this.log("=== RUNNING BUILD TESTS ===");

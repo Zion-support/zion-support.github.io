@@ -21,6 +21,5 @@ export default function ResearchDevelopmentPage() {
           </p>,
         </div>,
       </main>,
-    </>),
-}
+    </>)}
 ,

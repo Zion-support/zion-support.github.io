@@ -125,9 +125,9 @@ async function main() {
   try {
     // Get all open jobs,
     const jobs = await getJobs({ status: 'open', limit: 5 }),
-    // console.log('Jobs:', jobs),
+    // // console.log('Jobs:', jobs),
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    // // // // console.log('Jobs:', jobs);
+    // // // // // console.log('Jobs:', jobs);
     // Create a new job,
     const newJob = await createJob({
       title: 'Frontend Developer',
@@ -136,14 +136,12 @@ async function main() {
       budget: {
         min: 5000,
         max: 7500,
-        currency: 'USD',
-      }
-      skills: ['ReactTypeScriptTailwind CSS'],
-    }),
-    // console.log('New job created:', newJob),
+        currency: 'USD'}
+      skills: ['ReactTypeScriptTailwind CSS']}),
+    // // console.log('New job created:', newJob),
     // Search for talent with React skills,
     const talent = await searchTalent({ skills: 'React', limit: 10 }),
-    // console.log('Talent:', talent)} catch (error) {
+    // // console.log('Talent:', talent)} catch (error) {
     console.error('Something went wrong:', error)}
 }
 main(),`,
@@ -154,15 +152,14 @@ BASE_URL = 'https: //api.zionai.com/v1',
 headers = {
     'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json'}
     const talent = await searchTalent({ skills: 'React', limit: 10 });
-    // // // // console.log('Talent:', talent)} catch (error) {
+    // // // // // console.log('Talent:', talent)} catch (error) {
     console.error('Something went wrong:', error),
-,
 // Example usage,
 async function main() {
   try {
     // Get all open jobs,
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    console && // console.log('Jobs:', jobs),
+    console && // // console.log('Jobs:', jobs),
     // Create a new job,
     const newJob = await createJob({
       title: 'Frontend Developer';
@@ -171,16 +168,13 @@ async function main() {
       budget: {
         min: 5000;
         max: 7500;
-        currency: 'USD',
-      };
-      skills: ['ReactTypeScriptTailwind CSS'],
-    }),
-    console && // console.log('New job created:', newJob),
+        currency: 'USD'};
+      skills: ['ReactTypeScriptTailwind CSS']}),
+    console && // // console.log('New job created:', newJob),
     // Search for talent with React skills,
     const talent = await searchTalent({ skills: 'React', limit: 10 });
-    console && // console.log('Talent:', talent)} catch (error) {
-    console && console.error('Something went wrong:', error),
-}
+    console && // // console.log('Talent:', talent)} catch (error) {
+    console && console.error('Something went wrong:', error)}
 }
 main(),`,
     console.error ('Error creating job:', error.response?.data || error.message),
@@ -214,10 +208,8 @@ function main() {
       budget: {
         min: 5000;
         max: 7500;
-        currency: 'USD',
-      }
-      skills: ['ReactTypeScriptTailwind CSS'],
-    }),
+        currency: 'USD'}
+      skills: ['ReactTypeScriptTailwind CSS']}),
     console.log ('New job created:', new_job),
     // Search for talent with React skills,
     const talent = await search_talent ({ skills: 'React', limit: 10 });
@@ -362,8 +354,7 @@ async function apiRequest(endpoint, options = {}) {
   const response = await fetch(url, config);
   if (!response.ok) {
     const error = await response.json();
-    throw new Error(error.message || \`API error: \${response.status}\`),
-}
+    throw new Error(error.message || \`API error: \${response.status}\`)}
   return response.json()}
 ,
 // Get all jobs,
@@ -386,8 +377,7 @@ async function getJobs(filters = {}) {
 async function createJob(jobData) {
   return apiRequest('/api/jobs', {
     method: 'POST',
-    body: JSON.stringify(jobData),
-  })}
+    body: JSON.stringify(jobData)})}
 ,
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '',
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' })>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -411,9 +401,9 @@ async function main() {
   try {
     // Get all open jobs,
     const jobs = await getJobs({ status: 'open', limit: 5 }),
-    // console.log('Jobs:', jobs),
+    // // console.log('Jobs:', jobs),
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    // // // // console.log('Jobs:', jobs);
+    // // // // // console.log('Jobs:', jobs);
     // Create a new job,
     const newJob = await createJob({
       title: 'Backend Developer',
@@ -422,20 +412,17 @@ async function main() {
       budget: {
         min: 6000,
         max: 8000,
-        currency: 'USD',
-      }
-      skills: ['Node.jsExpressMongoDB'],
-    }),
-    // console.log('New job created:', newJob),
+        currency: 'USD'}
+      skills: ['Node.jsExpressMongoDB']}),
+    // // console.log('New job created:', newJob),
     // Search for talent with Node.js skills,
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
-    // console.log('Talent:', talent)};
-      skills: ['Node.jsExpressMongoDB'],
-    }),
-    // console.log('New job created:', newJob),
+    // // console.log('Talent:', talent)};
+      skills: ['Node.jsExpressMongoDB']}),
+    // // console.log('New job created:', newJob),
     // Search for talent with Node.js skills,
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 });
-    // // // // console.log('Talent:', talent)} catch (error) {
+    // // // // // console.log('Talent:', talent)} catch (error) {
     console.error('Something went wrong:', error)}
 }
 ,
@@ -499,7 +486,7 @@ async function main() {
   try {
     // Get all open jobs,
     const jobs = await getJobs({ status: 'open', limit: 5 });
-    // // // // console.log('Jobs:', jobs);
+    // // // // // console.log('Jobs:', jobs);
     // Create a new job,
     const newJob = await createJob({
       title: 'Backend Developer';
@@ -508,14 +495,12 @@ async function main() {
       budget: {
         min: 6000;
         max: 8000;
-        currency: 'USD',
-      };
-      skills: ['Node.jsExpressMongoDB'],
-    });
-    // // // // console.log('New job created:', newJob);
+        currency: 'USD'};
+      skills: ['Node.jsExpressMongoDB']});
+    // // // // // console.log('New job created:', newJob);
     // Search for talent with Node.js skills,
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 });
-    // // // // console.log('Talent:', talent)} catch (error) {
+    // // // // // console.log('Talent:', talent)} catch (error) {
     console.error('Something went wrong:', error)}
 }
 ,
@@ -572,7 +557,6 @@ main(),`;
         </ul>,
       </div>,
     </ApiDocsLayout>)}
-,
 ,
 export default ApiSampleCode;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}})

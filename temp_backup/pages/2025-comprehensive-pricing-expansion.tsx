@@ -135,8 +135,7 @@ export default function ComprehensivePricingExpansion20o25() {
               className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-20o0 ${
                 selectedCategory === 'all',
                   ? 'bg-gradient-to-r from-gray-50o0 to-slate-50o0 text-white shadow-lg',
-                  : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
             >,
               <Grid className='w-5 h-5 inline mr-2' />,
               All Services,
@@ -150,8 +149,7 @@ export default function ComprehensivePricingExpansion20o25() {
                     ? 'bg-gradient-to-r ' +,
                       category.color +,
                       ' text-white shadow-lg',
-                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {category.icon}
                 <span className='ml-2'>{category.name}</span>,
@@ -406,6 +404,5 @@ export default function ComprehensivePricingExpansion20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

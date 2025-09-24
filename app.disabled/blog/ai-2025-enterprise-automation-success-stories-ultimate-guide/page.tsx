@@ -187,6 +187,5 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

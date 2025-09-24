@@ -30,8 +30,7 @@ const NextGenAIInnovationShowcase20o25 = () => {
       icon: Brain;
       features: ['10o00x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'];
       impact: 'Transform entire industries';
-      color: 'from-purple-60o0 to-blue-60o0',
-    };
+      color: 'from-purple-60o0 to-blue-60o0'};
     {
       id: 'neural-interfaces';
       title: 'Neural Interface Revolution';
@@ -39,8 +38,7 @@ const NextGenAIInnovationShowcase20o25 = () => {
       icon: Network;
       features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'];
       impact: 'Redefine human potential';
-      color: 'from-blue-60o0 to-cyan-60o0',
-    };
+      color: 'from-blue-60o0 to-cyan-60o0'};
     {
       id: 'autonomous-systems';
       title: 'Autonomous Business Systems';
@@ -48,8 +46,7 @@ const NextGenAIInnovationShowcase20o25 = () => {
       icon: Cpu;
       features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'];
       impact: 'Revolutionize business operations';
-      color: 'from-green-60o0 to-emerald-60o0',
-    };
+      color: 'from-green-60o0 to-emerald-60o0'};
     {
       id: 'consciousness-ai';
       title: 'Conscious AI Framework';
@@ -57,8 +54,7 @@ const NextGenAIInnovationShowcase20o25 = () => {
       icon: Lightbulb;
       features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'];
       impact: 'Create truly intelligent systems';
-      color: 'from-orange-60o0 to-red-60o0',
-    }
+      color: 'from-orange-60o0 to-red-60o0'}
   ],
   const stats = [
     { number: '50o0%'label: 'Performance 'Increase', 'icon: TrendingUp };
@@ -71,20 +67,17 @@ const NextGenAIInnovationShowcase20o25 = () => {
       name: 'Dr. Sarah Chen';
       role: 'CTOTechCorp';
       quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.';
-      rating: 5,
-    };
+      rating: 5};
     {
       name: 'Marcus Rodriguez';
       role: 'CEOInnovateLabs';
       quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.';
-      rating: 5,
-    };
+      rating: 5};
     {
       name: 'Dr. Emily Watson';
       role: 'AI Research Director';
       quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.';
-      rating: 5,
-    }
+      rating: 5}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -182,8 +175,7 @@ const NextGenAIInnovationShowcase20o25 = () => {
                   className={`p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer ${
                     activeFeature === index,
                       ? 'bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 border-blue-50o0/50 shadow-2xl',
-                      : 'bg-white/5 border-white/10 hover: bg-white/10',
-                  }`}
+                      : 'bg-white/5 border-white/10 hover: bg-white/10'}`}
                   onClick={() => setActiveFeature(index)}
                 >,
                   <div className="flex items-start gap-4">,
@@ -325,6 +317,5 @@ const NextGenAIInnovationShowcase20o25 = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default NextGenAIInnovationShowcase20o25;

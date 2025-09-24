@@ -9,11 +9,9 @@ export async function getCurrentUserRole(): Promise<UserRole> {
   if (!user) return 'guest',
   // Placeholder: adjust to your profiles table/claims,
   const role = (user.user_metadata?.role as UserRole) || 'guest',
-  return role,
-}
+  return role}
 ,
 export async function requireRole(allowed: UserRole[]): Promise<boolean> {
   const role = await getCurrentUserRole(),
-  return allowed.includes(role),
-}
+  return allowed.includes(role)}
 ,

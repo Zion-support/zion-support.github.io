@@ -542,6 +542,5 @@ export default function Fortune50o0AISuccessCaseStudy() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

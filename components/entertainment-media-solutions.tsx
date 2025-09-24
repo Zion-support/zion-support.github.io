@@ -24,6 +24,5 @@ export default function EntertainmentMediaSolutions() {
           </p>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -69,8 +69,7 @@ interface NavigationItem {
   badge?: string,
   featured?: boolean,
   neonColor?: string,
-  category?: string,
-}
+  category?: string}
 ,
 // Enhanced navigation items with better organization,
 const navigationItems: NavigationItem[] = [
@@ -279,8 +278,7 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
       if (
         searchRef.current &&,
         !searchRef.current.contains(event.target as Node)) {
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -296,12 +294,10 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
   const handleNavItemClick = (href: string) => {
     router.push(href),
     setIsOpen(false),
-    setActiveDropdown(null),
-  };
+    setActiveDropdown(null)};
   // Handle dropdown toggle,
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)};
   // Close mobile menu,
   const closeMobileMenu = () => {
     setIsOpen(false),

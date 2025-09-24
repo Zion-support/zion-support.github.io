@@ -18,8 +18,7 @@ export interface ZionCuttingEdgeService20o29 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   technology: string[],
   integrations: string[],
@@ -31,8 +30,7 @@ export interface ZionCuttingEdgeService20o29 {
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
   // AI-Powered Quantum Computing Solutions,
@@ -67,8 +65,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['IBM Qiskit', 'Google Cirq', 'Microsoft Q#', 'Python', 'TensorFlow Quantum'];
     integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Custom APIs'];
@@ -80,8 +77,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o24-0o1-15';
     customers: 45;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   // AI-Powered Cybersecurity Threat Intelligence,
   {
     id: 'ai-cyber-threat-intelligence';
@@ -113,8 +109,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['TensorFlow', 'PyTorch', 'Elasticsearch', 'Kafka', 'Python', 'React'];
     integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Cloud security tools'];
@@ -126,8 +121,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-11-20';
     customers: 234;
     rating: 4.8;
-    reviews: 156,
-  };
+    reviews: 156};
   // Autonomous Business Process Automation,
   {
     id: 'autonomous-business-automation';
@@ -159,8 +153,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['OpenAI GPT-4', 'Anthropic Claude', 'LangChain', 'Python', 'Node.js', 'React'];
     integrations: ['Salesforce', 'HubSpot', 'Zapier', 'Microsoft 365', 'Google Workspace'];
@@ -172,8 +165,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o24-0o3-10';
     customers: 167;
     rating: 4.7;
-    reviews: 20o3,
-  };
+    reviews: 20o3};
   // AI-Powered Financial Trading Platform,
   {
     id: 'ai-financial-trading-platform';
@@ -205,8 +197,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['TensorFlow', 'PyTorch', 'Python', 'React', 'Node.js', 'PostgreSQL'];
     integrations: ['Binance', 'Coinbase', 'Kraken', 'Traditional brokers', 'Bloomberg API'];
@@ -218,8 +209,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-09-15';
     customers: 89;
     rating: 4.6;
-    reviews: 134,
-  };
+    reviews: 134};
   // IoT Edge Computing Platform,
   {
     id: 'iot-edge-computing-platform';
@@ -251,8 +241,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['TensorFlow Lite', 'ONNX Runtime', 'Docker', 'Kubernetes', 'Python', 'React'];
     integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP'];
@@ -264,8 +253,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o24-0o2-28';
     customers: 156;
     rating: 4.8;
-    reviews: 98,
-  };
+    reviews: 98};
   // AI-Powered Healthcare Diagnostics,
   {
     id: 'ai-healthcare-diagnostics';
@@ -297,8 +285,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['TensorFlow', 'PyTorch', 'OpenCV', 'Python', 'React', 'Node.js'];
     integrations: ['Epic', 'Cerner', 'Allscripts', 'DICOM systems', 'HL7'];
@@ -310,8 +297,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-12-10';
     customers: 78;
     rating: 4.9;
-    reviews: 67,
-  };
+    reviews: 67};
   // Blockchain Supply Chain Platform,
   {
     id: 'blockchain-supply-chain';
@@ -343,8 +329,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['Ethereum', 'Hyperledger Fabric', 'Solidity', 'Node.js', 'React', 'MongoDB'];
     integrations: ['ERP systems', 'WMS systems', 'Logistics platforms', 'Payment gateways'];
@@ -356,8 +341,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o24-0o1-20';
     customers: 123;
     rating: 4.7;
-    reviews: 89,
-  };
+    reviews: 89};
   // AI-Powered Marketing Automation,
   {
     id: 'ai-marketing-automation';
@@ -389,8 +373,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'PostgreSQL'];
     integrations: ['HubSpot', 'Salesforce', 'Mailchimp', 'Facebook Ads', 'Google Ads'];
@@ -402,8 +385,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-10-15';
     customers: 456;
     rating: 4.8;
-    reviews: 234,
-  };
+    reviews: 234};
   // Cloud-Native Development Platform,
   {
     id: 'cloud-native-development';
@@ -435,8 +417,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['Kubernetes', 'Docker', 'Terraform', 'Jenkins', 'React', 'Node.js'];
     integrations: ['AWS', 'Azure', 'Google Cloud', 'GitHub', 'GitLab'];
@@ -448,8 +429,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o24-0o2-15';
     customers: 234;
     rating: 4.7;
-    reviews: 167,
-  };
+    reviews: 167};
   // AI-Powered Customer Service Platform,
   {
     id: 'ai-customer-service';
@@ -481,8 +461,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'MongoDB'];
     integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Slack'];
@@ -494,8 +473,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-11-10';
     customers: 567;
     rating: 4.8;
-    reviews: 345,
-  };
+    reviews: 345};
   // Data Analytics and Business Intelligence,
   {
     id: 'ai-data-analytics-bi';
@@ -527,8 +505,7 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     technology: ['TensorFlow', 'PyTorch', 'Python', 'React', 'Node.js', 'PostgreSQL'];
     integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'AWS', 'Azure'];
@@ -540,12 +517,10 @@ export const zionCuttingEdgeServices20o29: ZionCuttingEdgeService20o29[] = [
     launchDate: '20o23-12-20';
     customers: 345;
     rating: 4.8;
-    reviews: 234,
-  }
+    reviews: 234}
 ],
 export const getServicesByCategory = (category: ZionCuttingEdgeService20o29['category']) => {
-  return zionCuttingEdgeServices20o29.filter(service => service.category === category),
-};
+  return zionCuttingEdgeServices20o29.filter(service => service.category === category)};
 export const getPopularServices = () => {
   return zionCuttingEdgeServices20o29.filter(service => service.isPopular)};
 export const getNewServices = () => {

@@ -179,8 +179,7 @@ export default function FuturisticNav() {
                           className='flex items-center justify-between w-full text-left text-gray-30o0 hover: text-white transition-colors duration-20o0 py-2',
                           onClick={() =>,
                             setActiveDropdown(
-                              activeDropdown === item.name ? null : item.name),
-                          }
+                              activeDropdown === item.name ? null : item.name)}
                         >,
                           <span>{item.name}</span>,
                           <ChevronDown

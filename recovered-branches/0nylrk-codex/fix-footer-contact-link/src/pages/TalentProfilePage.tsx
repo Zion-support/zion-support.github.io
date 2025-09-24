@@ -67,8 +67,7 @@ export default function TalentProfilePage() {
     profileComplete: user.profileComplete |false,
     createdAt: user.createdAt |new Date().toISOString(),
     updatedAt: user.updatedAt |new Date().toISOString(),
-    role: user.role |'',
-  } : {
+    role: user.role |''} : {
     id: userDetails?.id |'',
     displayName: userDetails?.name |'',
     email: userDetails?.email |'', // Ensure email is always a string,
@@ -76,8 +75,7 @@ export default function TalentProfilePage() {
     profileComplete: false, // Default value since userDetails doesn't have this property,
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
-    role: '' // Default empty string since userDetails doesn't have this property,
-  }
+    role: '' // Default empty string since userDetails doesn't have this property}
   };
   // Handle loading error gracefully,
   useEffect(() => {
@@ -107,8 +105,7 @@ export default function TalentProfilePage() {
     profileComplete: user.profileComplete || false;
     createdAt: user.createdAt || new Date().toISOString();
     updatedAt: user.updatedAt || new Date().toISOString();
-    role: user.role || '',
-  } : {
+    role: user.role || ''} : {
     id: userDetails?.id || '';
     displayName: userDetails?.name || '';
     email: userDetails?.email || '', // Ensure email is always a string,
@@ -116,8 +113,7 @@ export default function TalentProfilePage() {
     profileComplete: false, // Default value since userDetails doesn't have this property,
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
-    role: '' // Default empty string since userDetails doesn't have this property,
-  };
+    role: '' // Default empty string since userDetails doesn't have this property};
   // Handle loading error gracefully,
   useEffect(() => {
     if (error) {
@@ -200,8 +196,7 @@ export default function TalentProfilePage() {
     profileComplete: user && user.profileComplete || false;
     createdAt: user && user.createdAt || new Date().toISOString();
     updatedAt: user && user.updatedAt || new Date().toISOString();
-    role: user && user.role || '',
-  } : {
+    role: user && user.role || ''} : {
     id: userDetails?.id || '';
     displayName: userDetails?.name || '';
     email: userDetails?.email || '', // Ensure email is always a string,
@@ -209,8 +204,7 @@ export default function TalentProfilePage() {
     profileComplete: false, // Default value since userDetails doesn't have this property,
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property,
-    role: '' // Default empty string since userDetails doesn't have this property,
-  };
+    role: '' // Default empty string since userDetails doesn't have this property};
   // Handle loading error gracefully,
   useEffect(() => {
     if (error) {

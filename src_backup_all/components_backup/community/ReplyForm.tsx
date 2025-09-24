@@ -12,12 +12,10 @@ import {
 import { Card, CardContent } from '@/components/ui/card',
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
-  parentId?: string,
-}
+  parentId?: string}
 ,
 interface ReplyFormValues {
-  content: string,
-}
+  content: string}
 ,
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -30,8 +28,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     setIsSubmitting(true),
     try {
       await onSubmit(values.content),
-      form.reset(),
-    } finally {
+      form.reset()} finally {
       setIsSubmitting(false)}
   };
   return (

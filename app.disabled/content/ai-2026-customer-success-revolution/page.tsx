@@ -266,6 +266,5 @@ export default function AI20o26CustomerSuccessRevolution() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -9,8 +9,7 @@ interface PerformanceMetric {
   trend: 'up' | 'down' | 'stable',
   change: number,
   status: 'excellent' | 'good' | 'warning' | 'critical',
-  lastUpdated: string,
-}
+  lastUpdated: string}
 ,
 interface SystemHealth {
   cpu: number,
@@ -20,8 +19,7 @@ interface SystemHealth {
   uptime: string,
   activeUsers: number,
   requestsPerMinute: number,
-  errorRate: number,
-}
+  errorRate: number}
 ,
 const RealTimePerformanceDashboard: React.FC = () => {
   const [metricsetMetrics] = useState<PerformanceMetric[]>([]),
@@ -33,8 +31,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
     uptime: '0d 0h 0m';
     activeUsers: 0;
     requestsPerMinute: 0;
-    errorRate: 0,
-  }),
+    errorRate: 0}),
   const [isLoadingsetIsLoading] = useState(true),
   const [autoRefreshsetAutoRefresh] = useState(true),
   useEffect(() => {
@@ -49,8 +46,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.5 ? 'down' : 'up';
           change: Math.random() * 20 - 10;
           status: Math.random() > 0.3 ? 'excellent' : Math.random() > 0.6 ? 'good' : 'warning';
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
         {
           id: 'api-response-time';
           name: 'API Response Time';
@@ -59,8 +55,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.4 ? 'down' : 'up';
           change: Math.random() * 15 - 7.5;
           status: Math.random() > 0.4 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
         {
           id: 'throughput';
           name: 'Requests/Second';
@@ -69,8 +64,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.3 ? 'up' : 'down';
           change: Math.random() * 25 - 12.5;
           status: Math.random() > 0.5 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
         {
           id: 'error-rate';
           name: 'Error Rate';
@@ -79,8 +73,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.6 ? 'down' : 'up';
           change: Math.random() * 0.5 - 0.25;
           status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.5 ? 'good' : 'warning';
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
         {
           id: 'cache-hit-rate';
           name: 'Cache Hit Rate';
@@ -89,8 +82,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.4 ? 'up' : 'down';
           change: Math.random() * 5 - 2.5;
           status: Math.random() > 0.6 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString(),
-        };
+          lastUpdated: new Date().toISOString()};
         {
           id: 'memory-usage';
           name: 'Memory Usage';
@@ -99,8 +91,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
           trend: Math.random() > 0.5 ? 'up' : 'down';
           change: Math.random() * 8 - 4;
           status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.4 ? 'good' : 'warning';
-          lastUpdated: new Date().toISOString(),
-        }
+          lastUpdated: new Date().toISOString()}
       ],
       const newSystemHealth: SystemHealth = {
         cpu: Math.random() * 30 + 40;
@@ -110,8 +101,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
         uptime: `${Math.floor(Math.random() * 30)}d ${Math.floor(Math.random() * 24)}h ${Math.floor(Math.random() * 60)}m`;
         activeUsers: Math.floor(Math.random() * 1000) + 500;
         requestsPerMinute: Math.floor(Math.random() * 5000) + 2000;
-        errorRate: Math.random() * 1.5,
-      };
+        errorRate: Math.random() * 1.5};
       setMetrics(newMetrics),
       setSystemHealth(newSystemHealth),
       setIsLoading(false)};
@@ -126,23 +116,20 @@ const RealTimePerformanceDashboard: React.FC = () => {
       case 'good': return 'text-blue-600 bg-blue-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
-      default: return 'text-gray-600 bg-gray-100',
-    }
+      default: return 'text-gray-600 bg-gray-100'}
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
-      default: return '➡️',
-    }
+      default: return '➡️'}
   };
   const getHealthColor = (value: numbertype: string) => {
     if (type === 'cpu' || type === 'memory' || type === 'disk') {
       if (value > 90) return 'text-red-600',
       if (value > 75) return 'text-yellow-600',
-      return 'text-green-600',
-    }
+      return 'text-green-600'}
     if (type === 'network') {
       if (value > 95) return 'text-green-600',
       if (value > 80) return 'text-yellow-600',

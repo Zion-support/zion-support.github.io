@@ -7,8 +7,7 @@ export default function AIAssistantPage() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const features = [
     'Multi-agent orchestration (task, tool, memory roles)';
     'Guardrails for PII, jailbreaks, and policy compliance';
@@ -24,44 +23,38 @@ export default function AIAssistantPage() {
       period: '/month';
       includes: ['Single agent', 'Basic guardrails', 'Email support'];
       color: 'from-blue-500 to-cyan-500';
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Growth';
       price: '$2,999';
       period: '/month';
       includes: ['Multi-agent', 'Advanced guardrails', 'Slack support', 'Eval suites'];
       color: 'from-purple-500 to-pink-500';
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: 'Custom';
       period: '';
       includes: ['SAML/SCIM', 'VPC deployment', '24/7 support', 'Custom tooling'];
       color: 'from-yellow-500 to-orange-500';
-      popular: false,
-    };
+      popular: false};
   ],
   const valueProps = [
     {
       icon: <Zap className="w-8 h-8" />;
       title: 'Ship Faster';
       description: 'Blueprints and evals help you move from idea to production quickly.';
-      color: 'from-yellow-500 to-orange-500',
-    };
+      color: 'from-yellow-500 to-orange-500'};
     {
       icon: <Shield className="w-8 h-8" />;
       title: 'Trust & Safety';
       description: 'Guardrails, redaction, and HITL ensure compliant outcomes.';
-      color: 'from-green-500 to-emerald-500',
-    };
+      color: 'from-green-500 to-emerald-500'};
     {
       icon: <Workflow className="w-8 h-8" />;
       title: 'Operate Reliably';
       description: 'Full telemetry and cost controls to prevent surprises.';
-      color: 'from-blue-500 to-cyan-500',
-    }
+      color: 'from-blue-500 to-cyan-500'}
   ],
   const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team collaboration and notifications' };
@@ -262,6 +255,5 @@ export default function AIAssistantPage() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

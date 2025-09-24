@@ -132,7 +132,7 @@ export function FeatureCTAs() {
     {
       title: 'Performance Analytics';
       description:,
-        'Comprehensive analytics and reporting to track your success and optimize window.performance.';
+        'Comprehensive analytics and reporting to track your success and optimize window.window.performance.';
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-slate-10o0 text-slate-70o0' />);
       link: '/analytics';

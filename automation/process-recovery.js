@@ -16,8 +16,7 @@ class ProcessRecoverySystem {
       recoveryStrategies: config.recoveryStrategies || ['restart', 'reload', 'scale'];
       processDependencies: config.processDependencies || {};
       criticalProcesses: config.criticalProcesses || [];
-      logRecovery: config.logRecovery || true,
-    };
+      logRecovery: config.logRecovery || true};
     this.recoveryHistory = new Map(),
     this.processHealth = new Map(),
     this.dependencyGraph = new Map(),
@@ -53,8 +52,7 @@ class ProcessRecoverySystem {
           this.queueRecovery(process.name, health.issues)}
       }),
       // Process recovery queue,
-      this.processRecoveryQueue(),
-} catch (error) {
+      this.processRecoveryQueue()} catch (error) {
       console.error('Error checking process health:', error)}
   }
 ,
@@ -69,8 +67,7 @@ class ProcessRecoverySystem {
       issues.push({
         type: 'stopped';
         severity: 'critical';
-        message: 'Process is stopped',
-      }),
+        message: 'Process is stopped'}),
       severity = 'critical'}
 ,
     // Check restart count,
@@ -79,8 +76,7 @@ class ProcessRecoverySystem {
         type: 'high_restarts';
         severity: 'warning';
         message: `High restart count: ${process.pm2_env.restart_time}`;
-        value: process.pm2_env.restart_time,
-      }),
+        value: process.pm2_env.restart_time}),
       if (severity === 'healthy') severity = 'warning'}
 ,
     // Check memory usage,
@@ -89,8 +85,7 @@ class ProcessRecoverySystem {
         type: 'high_memory';
         severity: 'warning';
         message: `High memory usage: ${Math.round(process.monit.memory / 10o24 / 10o24)}MB`;
-        value: process.monit.memory,
-      }),
+        value: process.monit.memory}),
       if (severity === 'healthy') severity = 'warning'}
 ,
     // Check CPU usage,
@@ -99,8 +94,7 @@ class ProcessRecoverySystem {
         type: 'high_cpu';
         severity: 'warning';
         message: `High CPU usage: ${process.monit.cpu}%`;
-        value: process.monit.cpu,
-      }),
+        value: process.monit.cpu}),
       if (severity === 'healthy') severity = 'warning'}
 ,
     // Check uptime for unstable processes,
@@ -109,8 +103,7 @@ class ProcessRecoverySystem {
         type: 'unstable';
         severity: 'warning';
         message: 'Process appears unstable (low uptime)';
-        value: process.pm2_env.pm_uptime,
-      }),
+        value: process.pm2_env.pm_uptime}),
       if (severity === 'healthy') severity = 'warning'}
 ,
     return {
@@ -123,8 +116,7 @@ class ProcessRecoverySystem {
       severity;
       needsRecovery: issues.some(issue => issue.severity === 'critical') ||,
                     (issues.length > 2 && severity === 'warning');
-      lastCheck: Date.now(),
-    };
+      lastCheck: Date.now()};
   }
 ,
   /**,
@@ -149,12 +141,11 @@ class ProcessRecoverySystem {
       issues;
       priority;
       timestamp: Date.now();
-      attempts: 0,
-    }),
+      attempts: 0}),
     // Sort queue by priority,
     this.recoveryQueue.sort((a, b) => b.priority - a.priority),
     if (this.logRecovery) {
-      // // // // // // // console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`)}
+      // // // // // // // // console.log(`🔄 Queued ${processName} for recovery (priority: ${priority})`)}
   }
 ,
   /**,
@@ -208,10 +199,9 @@ class ProcessRecoverySystem {
         try {
           await this.attemptRecovery(recoveryItem),
           if (this.logRecovery) {
-            // // // // // // // console.log(`✅ Successfully recovered process ${recoveryItem.processName}`)}
+            // // // // // // // // console.log(`✅ Successfully recovered process ${recoveryItem.processName}`)}
 ,
-          this.recordRecoverySuccess(recoveryItem),
-} catch (error) {
+          this.recordRecoverySuccess(recoveryItem)} catch (error) {
           console.error(`❌ Recovery attempt ${recoveryItem.attempts} failed for ${recoveryItem.processName}:`, error),
           // Re-queue with delay if not at max attempts,
           if (recoveryItem.attempts < this.config.maxRetries) {
@@ -246,8 +236,7 @@ class ProcessRecoverySystem {
         await this.checkAndStartDependencies(processName),
         break,
       default: ,
-        await this.restartProcess(processName),
-    }
+        await this.restartProcess(processName)}
 ,
     // Wait for process to stabilize,
     await this.waitForProcessStability(processName)}
@@ -379,8 +368,7 @@ class ProcessRecoverySystem {
       success: true;
       strategy: this.selectRecoveryStrategy(recoveryItem.processName, recoveryItem.issues);
       attempts: recoveryItem.attempts;
-      issues: recoveryItem.issues,
-    }),
+      issues: recoveryItem.issues}),
     // Keep only last 50 recovery attempts,
     if (history.length > 50) {
       history.splice(0, history.length - 50)}
@@ -397,8 +385,7 @@ class ProcessRecoverySystem {
       success: false;
       attempts: recoveryItem.attempts;
       issues: recoveryItem.issues;
-      error: 'Max recovery attempts exceeded',
-    }),
+      error: 'Max recovery attempts exceeded'}),
     // Keep only last 50 recovery attempts,
     if (history.length > 50) {
       history.splice(0, history.length - 50)}
@@ -427,8 +414,7 @@ class ProcessRecoverySystem {
       processesInQueue: this.recoveryQueue.length;
       isRecovering: this.isRecovering;
       processHealth: Object.fromEntries(this.processHealth);
-      recoveryHistory: Object.fromEntries(this.recoveryHistory),
-    };
+      recoveryHistory: Object.fromEntries(this.recoveryHistory)};
     this.recoveryHistory.forEach(history => {
       stats.totalRecoveries += history.length,
       stats.successfulRecoveries += history.filter(h => h.success).length,

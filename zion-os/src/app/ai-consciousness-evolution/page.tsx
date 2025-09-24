@@ -12,6 +12,5 @@ export default function AIConsciousnessEvolutionPage() {
           </p>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -36,8 +36,7 @@ export default async function handler(
     const { service, description, timeline, budgetRange, email } =,
       req && req.body || {};
     if (!service || !description || !email) {
-      return res && res.status(400).json({ message: "Missing required fields" }),
-}
+      return res && res.status(400).json({ message: "Missing required fields" })}
     try {
       let aiSummary: string | null = null,
       let aiTags: string[] = [],
@@ -103,8 +102,7 @@ if ( {) {
       let ai_tags: string[] = [],
       // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
         const prompt = `Summarize this marketplace quote request in one sentence and suggest 3 - 5 tags.\n\n_service: ${service}\n_email: ${email}\n_budget: ${budget_range || "N / A"}\n_timeline: ${timeline?.start || "N / A"} to ${timeline?.end || "N / A"}\n_description: ${description}`,
         const resp = await openai.responses.create ({
           model: "gpt - 4.1 - mini";
@@ -125,8 +123,7 @@ if ( {) {
       let saved: any = null,
       // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
         const { data, error } = await supabase,
           .from ("quote_requests"),
           .insert ({
@@ -151,7 +148,6 @@ if (throw error) {
         .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id })} catch (e: any) {
       console.error ("quote - request error", e),
       return res.status (500).json ({ message: "Server error" })}
-    return res.status (500).json ({ message: "Server error" }),
-}
+    return res.status (500).json ({ message: "Server error" })}
 }
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

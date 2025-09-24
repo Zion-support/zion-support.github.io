@@ -17,10 +17,8 @@ export const MobileEmailCapture: React.FC = () => {
       setIsSuccess(true),
       setEmail(""),
       setTimeout(() => {
-        setIsSuccess(false),
-      }5000)} catch (error) {
-      console.error("Error subscribing: "error),
-    } finally {
+        setIsSuccess(false)}5000)} catch (error) {
+      console.error("Error subscribing: "error)} finally {
       setIsSubmitting(false)}
   };
   return (

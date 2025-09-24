@@ -49,8 +49,7 @@ export function useMessages(
     try {
       const conversation = conversations.find(c => c.id === conversationId),
       if (!conversation) {
-        throw new Error('Conversation not found'),
-      }
+        throw new Error('Conversation not found')}
 ,
       // Send the message,
       const { data, error } = await supabase,

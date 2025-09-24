@@ -15,6 +15,5 @@ export default function EmergingTechPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

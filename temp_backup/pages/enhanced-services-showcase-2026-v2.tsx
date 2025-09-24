@@ -138,8 +138,7 @@ export default function EnhancedServicesShowcase20o26V2() {
     if (category?.includes('Biotech')) return <TestTube className="w-5 h-5"  />,
     if (category?.includes('Blockchain')) return <Database className="w-5 h-5"  />,
     if (category?.includes('Transportation')) return <Car className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />,
-  };
+    return <Zap className="w-5 h-5"  />};
   return (
     <>,
       <Head>,
@@ -394,5 +393,4 @@ export default function EnhancedServicesShowcase20o26V2() {
           </section>,
         </div>,
       </UltraAdvancedFuturisticBackground20o26V2>,
-    </>),
-}
+    </>)}

@@ -124,6 +124,5 @@ const AI20o26UltimateContentBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o26UltimateContentBanner;

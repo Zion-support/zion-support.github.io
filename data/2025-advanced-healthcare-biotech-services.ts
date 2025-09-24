@@ -31,8 +31,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
         'AI-powered molecular modeling and simulation';
   real_implementation: boolean,
@@ -380,8 +379,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true,
       implementationDetails:,
       color: 'from - orange - 600 to - red - 600';
@@ -441,8 +439,7 @@ export interface AdvancedHealthcareBiotechService {
   contactInfo: {
     mobile: string, email: string;
     address: string;
-    website: string,
-    };
+    website: string};
   ],    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems',
       'Mobile data collection appAPI for research platforms'],
@@ -481,8 +478,7 @@ export interface AdvancedHealthcareBiotechService {
     contact_info: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     popular: true, icon: '🔬';
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400';
     link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization';
@@ -500,14 +496,12 @@ export interface AdvancedHealthcareBiotechService {
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup && ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.';
     launchDate: '2024-11-01', customers: 34;
     rating: 4 && 4.8;
-    reviews: 19,
-  }
+    reviews: 19}
 ],
 export interface AdvancedHealthcareBiotechService {
   id: string;
@@ -540,15 +534,13 @@ export interface AdvancedHealthcareBiotechService {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
   // AI-Powered Drug Discovery Platform,
@@ -585,15 +577,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.';
     launchDate: '2024-08-15';
     customers: 23;
     rating: 4.9;
-    reviews: 12,
-  };
+    reviews: 12};
   // Precision Medicine & Genomics Platform,
   {
     id: 'precision-medicine-genomics';
@@ -628,15 +618,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.';
     launchDate: '2024-09-20';
     customers: 45;
     rating: 4.8;
-    reviews: 23,
-  };
+    reviews: 23};
   // AI-Powered Medical Imaging Analysis,
   {
     id: 'ai-medical-imaging-analysis';
@@ -671,15 +659,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.';
     launchDate: '2024-10-10';
     customers: 67;
     rating: 4.7;
-    reviews: 34,
-  };
+    reviews: 34};
   // Digital Health & Telemedicine Platform,
   {
     id: 'digital-health-telemedicine';
@@ -714,15 +700,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.';
     launchDate: '2024-07-15';
     customers: 156;
     rating: 4.6;
-    reviews: 78,
-  };
+    reviews: 78};
   // Clinical Trial Management & Optimization,
   {
     id: 'clinical-trial-management-optimization';
@@ -757,15 +741,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.';
     launchDate: '2024-11-01';
     customers: 34;
     rating: 4.8,
-    reviews: 19,
-  }
+    reviews: 19}
 ],
 export interface AdvancedHealthcareBiotechService {
   id: string;
@@ -798,15 +780,13 @@ export interface AdvancedHealthcareBiotechService {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
+  reviews: number}
 ,
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [
   // AI-Powered Drug Discovery Platform,
@@ -843,15 +823,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.';
     launchDate: '2024-08-15';
     customers: 23;
     rating: 4.9;
-    reviews: 12,
-  };
+    reviews: 12};
   // Precision Medicine & Genomics Platform,
   {
     id: 'precision-medicine-genomics';
@@ -886,15 +864,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.';
     launchDate: '2024-09-20';
     customers: 45;
     rating: 4.8;
-    reviews: 23,
-  };
+    reviews: 23};
   // AI-Powered Medical Imaging Analysis,
   {
     id: 'ai-medical-imaging-analysis';
@@ -929,15 +905,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.';
     launchDate: '2024-10-10';
     customers: 67;
     rating: 4.7;
-    reviews: 34,
-  };
+    reviews: 34};
   // Digital Health & Telemedicine Platform,
   {
     id: 'digital-health-telemedicine';
@@ -972,15 +946,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.';
     launchDate: '2024-07-15';
     customers: 156;
     rating: 4.6;
-    reviews: 78,
-  };
+    reviews: 78};
   // Clinical Trial Management & Optimization,
   {
     id: 'clinical-trial-management-optimization';
@@ -1015,14 +987,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.';
     launchDate: '2024-11-01';
     customers: 34;
     rating: 4.8,
-    reviews: 19,
-  }
-],
-}}}}
+    reviews: 19}
+]}}}}

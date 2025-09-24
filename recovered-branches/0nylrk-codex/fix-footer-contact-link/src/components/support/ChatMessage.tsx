@@ -18,8 +18,7 @@ import { use_theme } from '@/hooks / use_theme',
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
@@ -83,8 +82,7 @@ function formatMessageWithLinks(message: string): string {
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();
@@ -140,11 +138,9 @@ function formatMessageWithLinks(): any (message: string): string {
 interface ChatMessageProps {
   message: string;
   is_user: boolean;
-  timestamp: Date,
-}
+  timestamp: Date}
 export /**,
  * ChatMessage - Function description,
  */,
 function ChatMessage() {
-  const { theme } = use_theme (),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}
+  const { theme } = use_theme ()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

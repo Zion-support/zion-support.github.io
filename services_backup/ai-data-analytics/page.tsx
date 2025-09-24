@@ -291,8 +291,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? 'border-indigo-50o0' : 'border-gray-20o0'} relative`}>,
       {popular && (
@@ -315,8 +314,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
       <button className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
         popular,
           ? 'bg-indigo-60o0 text-white hover: bg-indigo-70o0',
-          : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-      }`}>,
+          : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}>,
         Start Free Trial,
       </button>,
     </div>)}
@@ -333,8 +331,7 @@ function IndustryCard({ icon, title, description, features }: {
   icon: string,
   title: string,
   description: string,
-  features: string[],
-}) {
+  features: string[]}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-20o0">,
       <div className="text-4xl mb-4">{icon}</div>,
@@ -361,8 +358,7 @@ function TestimonialCard({ name, role, company, content, avatar }: {
   role: string,
   company: string,
   content: string,
-  avatar: string,
-}) {
+  avatar: string}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-20o0">,
       <div className="flex items-center mb-4">,

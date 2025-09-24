@@ -30,8 +30,7 @@ export default function ContentRecommendationEngine() {
       relevance: 98;
       tags: [', 'AI', 'Content', 'Management', 'Automation'];
       readTime: '5 min read';
-      difficulty: 'Intermediate',
-    };
+      difficulty: 'Intermediate'};
     {
       id: 2;
       title: 'AI Automation Solutions 20o26';
@@ -44,8 +43,7 @@ export default function ContentRecommendationEngine() {
       relevance: 96;
       tags: [', 'Automation', 'AI', 'Productivity', 'ROI'];
       readTime: '7 min read';
-      difficulty: 'Advanced',
-    };
+      difficulty: 'Advanced'};
     {
       id: 3;
       title: 'Cybersecurity Solutions 20o26';
@@ -58,8 +56,7 @@ export default function ContentRecommendationEngine() {
       relevance: 94;
       tags: [', 'Security', 'Threat 'Protection', 'Compliance'AI'];
       readTime: '6 min read';
-      difficulty: 'Expert',
-    };
+      difficulty: 'Expert'};
     {
       id: 4;
       title: 'Cloud Infrastructure Solutions';
@@ -72,8 +69,7 @@ export default function ContentRecommendationEngine() {
       relevance: 90;
       tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'Security'];
       readTime: '8 min read';
-      difficulty: 'Intermediate',
-    };
+      difficulty: 'Intermediate'};
     {
       id: 5;
       title: 'Advanced Analytics Dashboard';
@@ -86,8 +82,7 @@ export default function ContentRecommendationEngine() {
       relevance: 92;
       tags: [', 'Analytics', 'Dashboard', 'Insights', 'Data'];
       readTime: '4 min read';
-      difficulty: 'Beginner',
-    };
+      difficulty: 'Beginner'};
     {
       id: 6;
       title: 'AI Tools & Utilities 20o25';
@@ -100,8 +95,7 @@ export default function ContentRecommendationEngine() {
       relevance: 89;
       tags: ['AI 'Tools', 'Utilities', 'Productivity', 'Business'];
       readTime: '5 min read';
-      difficulty: 'Beginner',
-    }
+      difficulty: 'Beginner'}
   ],
   useEffect(() => {
     // Simulate loading,
@@ -159,8 +153,7 @@ export default function ContentRecommendationEngine() {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                 userInterests.includes(category.id),
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-              }`}
+                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
             >,
               <span className="mr-2">{category.icon}</span>,
               {category.name}
@@ -221,5 +214,4 @@ export default function ContentRecommendationEngine() {
           Refresh Recommendations,
         </button>,
       </div>,
-    </div>),
-}
+    </div>)}

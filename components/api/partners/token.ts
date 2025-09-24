@@ -48,8 +48,7 @@ if ( {) {
   // Check condition,
 if ( {) {
   $2}
-    return res.status (401).json ({ error: "Invalid API key" }),
-}
+    return res.status (401).json ({ error: "Invalid API key" })}
   const { partner, api_key: key } = match,
   const token = sign_jwt (
     {

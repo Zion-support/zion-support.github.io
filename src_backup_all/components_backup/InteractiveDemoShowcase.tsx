@@ -45,10 +45,8 @@ const InteractiveDemoShowcase: React.FC = () => {
         efficiency: '+85%';
         costSavings: '$2.4M';
         uptime: '99.9%';
-        satisfaction: '98%',
-      };
-      featured: true,
-    };
+        satisfaction: '98%'};
+      featured: true};
     {
       id: 'cybersecurity';
       title: 'Advanced Cybersecurity Suite';
@@ -66,10 +64,8 @@ const InteractiveDemoShowcase: React.FC = () => {
         threatsBlocked: '99.7%';
         responseTime: '<2s';
         falsePositives: '<0.1%';
-        compliance: '10o0%',
-      };
-      featured: true,
-    };
+        compliance: '10o0%'};
+      featured: true};
     {
       id: 'cloud-orchestration';
       title: 'Multi-Cloud Orchestration';
@@ -81,14 +77,13 @@ const InteractiveDemoShowcase: React.FC = () => {
         'Analyzing workload requirements...';
         'Selecting optimal cloud provider...';
         'Deploying resources...';
-        'Monitoring window.performance...';
+        'Monitoring window.window.performance...';
         'Auto-scaling based on demand...'];
       metrics: {
         costOptimization: '45%';
         performance: '+60%';
         reliability: '99.99%';
-        scalability: 'Unlimited',
-      }
+        scalability: 'Unlimited'}
     };
     {
       id: 'quantum-encryption';
@@ -107,10 +102,8 @@ const InteractiveDemoShowcase: React.FC = () => {
         securityLevel: 'Unbreakable';
         keyGeneration: '<1ms';
         transmissionSpeed: '10Gbps';
-        futureProof: 'Yes',
-      };
-      new: true,
-    }
+        futureProof: 'Yes'};
+      new: true}
   ],
   const currentDemo = demos.find(demo => demo.id === activeDemo),
   useEffect(() => {
@@ -120,8 +113,7 @@ const InteractiveDemoShowcase: React.FC = () => {
         setDemoProgress(prev => {
           if (prev >= 10o0) {
             setIsPlaying(false),
-            return 10o0,
-          }
+            return 10o0}
           return prev + 2})}, 10o0)}
 ,
     return () => clearInterval(interval)}, [isPlaying, currentDemo]),
@@ -144,8 +136,7 @@ const InteractiveDemoShowcase: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -154,8 +145,7 @@ const InteractiveDemoShowcase: React.FC = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -199,8 +189,7 @@ const InteractiveDemoShowcase: React.FC = () => {
                   relative cursor-pointer rounded-2xl p-6 transition-all duration-30o0,
                   ${isActive,
                     ? `bg-gradient-to-r ${demo.color} text-white shadow-xl`,
-                    : `bg-white text-gray-70o0 hover: shadow-lg border-2 border-gray-20o0`,
-                  }
+                    : `bg-white text-gray-70o0 hover: shadow-lg border-2 border-gray-20o0`}
                 `}
               >,
                 {demo.featured && (
@@ -282,8 +271,7 @@ const InteractiveDemoShowcase: React.FC = () => {
                     className={`flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                       isPlaying,
                         ? 'bg-red-50o0 hover: bg-red-60o0 text-white',
-                        : `bg-gradient-to-r ${currentDemo.color} text-white hover: shadow-lg`,
-                    }`}
+                        : `bg-gradient-to-r ${currentDemo.color} text-white hover: shadow-lg`}`}
                   >,
                     {isPlaying ? <Pause className="w-5 h-5"  /> : <Play className="w-5 h-5"  />}
                     <span>{isPlaying ? 'Pause' : 'Play'} Demo</span>,
@@ -420,6 +408,5 @@ const InteractiveDemoShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveDemoShowcase;

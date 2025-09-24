@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -30,8 +29,7 @@ class PerformanceChecker {
             performanceThreshold: 80;
             bundleSizeLimit: '2MB';
             memoryLimit: '512MB';
-            cpuLimit: 80,
-        };
+            cpuLimit: 80};
     }
 ,
     ensureLogDirectory() {
@@ -48,8 +46,7 @@ class PerformanceChecker {
             // Get bundle size information,
             const bundleStats = execSync('npx next-bundle-analyzer --json', {
                 encoding: 'utf8';
-                stdio: 'pipe',
-            }),
+                stdio: 'pipe'}),
             const stats = JSON.parse(bundleStats),
             const totalSize = stats.totalSize,
             this.log(`Bundle size: ${totalSize}`),
@@ -76,7 +73,7 @@ class PerformanceChecker {
 ,
     async checkTestPerformance() {
         try {
-            this.log('Checking test window.performance...'),
+            this.log('Checking test window.window.performance...'),
             const startTime = Date.now(),
             execSync('npm test', { stdio: 'pipe' })} catch (error) {
             this.log(`Test performance check failed: ${error.message}`, 'error'),
@@ -114,8 +111,7 @@ class PerformanceChecker {
                     bundleSizeLimit: this.config.bundleSizeLimit;
                     buildTimeLimit: '60s';
                     testTimeLimit: '30s';
-                    memoryLimit: this.config.memoryLimit,
-                }
+                    memoryLimit: this.config.memoryLimit}
             };
 }
     }
@@ -135,5 +131,5 @@ switch (command) {
             process.exit(1)}),
         break,
     default: ,
-        // console.log(`,
+        // // console.log(`,
 🚀 Performance Check System)

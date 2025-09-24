@@ -9,8 +9,7 @@ export default function AIBusinessIntelligencePlatform() {
     {
       icon: <Brain className="w-6 h-6"  />;
       title: 'AI-Powered Analytics';
-      description: 'Advanced machine learning algorithms automatically analyze your data and identify hidden patterns and insights.',
-    };
+      description: 'Advanced machine learning algorithms automatically analyze your data and identify hidden patterns and insights.'};
     {
       icon: <BarChart3 className="w-6 h-6"  />;
       title: 'Real-Time Dashboards';
@@ -18,13 +17,11 @@ export default function AIBusinessIntelligencePlatform() {
     {
       icon: <TrendingUp className="w-6 h-6"  />;
       title: 'Predictive Analytics';
-      description: 'Forecast future trends and outcomes using advanced statistical models and AI predictions.',
-    };
+      description: 'Forecast future trends and outcomes using advanced statistical models and AI predictions.'};
     {
       icon: <Zap className="w-6 h-6"  />;
       title: 'Automated Reporting';
-      description: 'Generate comprehensive reports automatically with natural language insights and recommendations.',
-    };
+      description: 'Generate comprehensive reports automatically with natural language insights and recommendations.'};
     {
       icon: <Shield className="w-6 h-6"  />;
       title: 'Enterprise Security';
@@ -32,8 +29,7 @@ export default function AIBusinessIntelligencePlatform() {
     {
       icon: <Users className="w-6 h-6"  />;
       title: 'Collaborative Insights';
-      description: 'Share insights across teams with real-time collaboration tools and customizable dashboards.',
-    }
+      description: 'Share insights across teams with real-time collaboration tools and customizable dashboards.'}
   ],
   const useCases = [
     'Sales Performance Analysis';
@@ -231,5 +227,4 @@ export default function AIBusinessIntelligencePlatform() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}

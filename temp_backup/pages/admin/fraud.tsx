@@ -6,8 +6,7 @@ interface FraudItem {
   createdAt: string,
   heuristic: { reasons: string[], severity: string };
   gpt?: { label: string, reason: string, confidence: number };
-  status: string,
-}
+  status: string}
 ,
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]),
@@ -27,8 +26,7 @@ export default function FraudAdminPage() {
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed to load'),
       setItems(json.items || [])} catch (e: any) {
-      setError(e.message || 'Failed to load'),
-    } finally {
+      setError(e.message || 'Failed to load')} finally {
       setLoading(false)}
   };
   useEffect(() => {

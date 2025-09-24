@@ -185,8 +185,7 @@ export function AdvancedCollaborationPlatform() {
         className='fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40',
         title='Open Collaboration Platform'>,
         <Users className='w-6 h-6' />,
-      </button>),
-  }
+      </button>)}
   if (isMinimized) {
     return (
       <div className='fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50'>,
@@ -201,8 +200,7 @@ export function AdvancedCollaborationPlatform() {
             <Maximize2 className='w-4 h-4' />,
           </button>,
         </div>,
-      </div>),
-  }
+      </div>)}
   return (
     <div
       className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`}
@@ -261,8 +259,7 @@ export function AdvancedCollaborationPlatform() {
               className={`p-3 rounded-full transition-colors ${
                 participants.find(p => p.id === '1')?.hasRaisedHand,
                   ? 'bg-yellow-50o0 text-white',
-                  : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',
-              }`}
+                  : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
               title='Raise Hand'>,
               <Hand className='w-4 h-4' />,
             </button>,
@@ -378,8 +375,7 @@ export function AdvancedCollaborationPlatform() {
                       className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${
                         activeTab === tab.id,
                           ? 'border-zion-emerald text-zion-emerald bg-zion-emerald/5',
-                          : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20',
-                      }`}
+                          : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20'}`}
                     >,
                       <Icon className='w-4 h-4' />,
                       {tab.label}

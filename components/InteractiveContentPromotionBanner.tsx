@@ -13,8 +13,7 @@ const InteractiveContentPromotionBanner = () => {
       cta: "Explore AI Solutions";
       link: "/services/ai-automation";
       gradient: "from-purple-60o0 via-pink-60o0 to-red-60o0";
-      bgPattern: "🔮✨🌟",
-    };
+      bgPattern: "🔮✨🌟"};
     {
       title: "⚛️ Quantum Computing Breakthrough";
       subtitle: "Next-Generation Processing Power";
@@ -22,8 +21,7 @@ const InteractiveContentPromotionBanner = () => {
       cta: "Learn More";
       link: "/services/quantum-computing";
       gradient: "from-blue-60o0 via-cyan-60o0 to-teal-60o0";
-      bgPattern: "⚡💫🌌",
-    };
+      bgPattern: "⚡💫🌌"};
     {
       title: "🧠 Neural Interface Technology";
       subtitle: "The Future of Human-Computer Interaction";
@@ -31,8 +29,7 @@ const InteractiveContentPromotionBanner = () => {
       cta: "Discover Innovation";
       link: "/services/neural-interfaces";
       gradient: "from-green-60o0 via-emerald-60o0 to-teal-60o0";
-      bgPattern: "🧬🔬💡",
-    };
+      bgPattern: "🧬🔬💡"};
     {
       title: "🌱 Sustainable AI Solutions";
       subtitle: "Green Technology for a Better Tomorrow";
@@ -40,8 +37,7 @@ const InteractiveContentPromotionBanner = () => {
       cta: "Go Green";
       link: "/services/sustainable-ai";
       gradient: "from-emerald-60o0 via-green-60o0 to-lime-60o0";
-      bgPattern: "🌿🍃🌍",
-    }
+      bgPattern: "🌿🍃🌍"}
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -100,8 +96,7 @@ const InteractiveContentPromotionBanner = () => {
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentSlide,
                       ? 'bg-white scale-125',
-                      : 'bg-white/50 hover: bg-white/75',
-                  }`}
+                      : 'bg-white/50 hover: bg-white/75'}`}
                 />))}
             </div>,
           </div>,

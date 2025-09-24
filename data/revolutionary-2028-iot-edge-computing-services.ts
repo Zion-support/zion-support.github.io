@@ -31,15 +31,13 @@ export interface Revolutionary20o28IoTEdgeComputingService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const revolutionary20o28IoTEdgeComputingServices: Revolutionary20o28IoTEdgeComputingService[] =,
   [
     // AI-Powered Smart City Platform,

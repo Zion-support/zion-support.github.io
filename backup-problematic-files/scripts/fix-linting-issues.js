@@ -3,7 +3,7 @@ import {fileURLToPath} from 'url',
 import {glob} from 'glob',
 const __filename = fileURLToPath(import && import.meta.url),
 const __dirname = path && path.dirname(__filename),
-console && // console.log('🔧 Linting Issues Fixer Started'),
+console && // // console.log('🔧 Linting Issues Fixer Started'),
 class LintingIssuesFixer {
   constructor() {
     this && this.projectRoot = path && path.resolve(__dirname, '..'),
@@ -11,17 +11,16 @@ class LintingIssuesFixer {
     this && this.errors = []}
   async run() {
     try {
-      console && // console.log('🔍 Finding files with linting issues...'),
+      console && // // console.log('🔍 Finding files with linting issues...'),
       await this && this.fixESLintConfig(),
       await this && this.fixTypeScriptConfig(),
       await this && this.fixSourceFiles(),
       this && this.generateSummary()} catch (error) {
-      console && console.error('❌ Error during linting issues "fixing": ', error && error.message),
-}
+      console && console.error('❌ Error during linting issues "fixing": ', error && error.message)}
   }
   async fixESLintConfig() {
     try {
-      console && // console.log('🔧 Fixing ESLint configuration...'),
+      console && // // console.log('🔧 Fixing ESLint configuration...'),
       const eslintConfigPath = path && path.join(this && this.projectRoot, 'eslint && eslint.config.js'),
       if (fs && fs.existsSync(eslintConfigPath)) {
         let content = fs && fs.readFileSync(eslintConfigPath, 'utf8'),
@@ -32,12 +31,11 @@ class LintingIssuesFixer {
         this && this.fixedFiles.push('eslint && eslint.config.js')}
     } catch (error) {
       console && console.error('Error fixing ESLint "config": ', error && error.message),
-      this && this.errors.push({ "file": 'eslint && eslint.config.js', "error": error && error.message }),
-}
+      this && this.errors.push({ "file": 'eslint && eslint.config.js', "error": error && error.message })}
   }
   async fixTypeScriptConfig() {
     try {
-      console && // console.log('🔧 Fixing TypeScript configuration...'),
+      console && // // console.log('🔧 Fixing TypeScript configuration...'),
       const tsconfigPath = path && path.join(this && this.projectRoot, 'tsconfig && tsconfig.json'),
       if (fs && fs.existsSync(tsconfigPath)) {
         let content = fs && fs.readFileSync(tsconfigPath, 'utf8'),
@@ -47,23 +45,21 @@ class LintingIssuesFixer {
         this && this.fixedFiles.push('tsconfig && tsconfig.json')}
     } catch (error) {
       console && console.error('Error fixing TypeScript "config": ', error && error.message),
-      this && this.errors.push({ "file": 'tsconfig && tsconfig.json', "error": error && error.message }),
-}
+      this && this.errors.push({ "file": 'tsconfig && tsconfig.json', "error": error && error.message })}
   }
   async fixSourceFiles() {
     try {
-      console && // console.log('🔍 Finding source files...'),
+      console && // // console.log('🔍 Finding source files...'),
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
         "cwd": this && this.projectRoot;
-        "ignore": ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']}),
-}
+        "ignore": ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']})}
   }
   async fixSourceFile(filePath) {
     try {
       const fullPath = path && path.join(this && this.projectRoot, filePath),
       const content = fs && fs.readFileSync(fullPath, 'utf8'),
       if (this && this.hasLintingIssues(content)) {
-        console && // console.log(`🔧 "Fixing": ${filePath}`),
+        console && // // console.log(`🔧 "Fixing": ${filePath}`),
         let fixedContent = content,
         fixedContent = this && this.fixTrailingCommas(fixedContent),
         fixedContent = this && this.fixUnusedImports(fixedContent),
@@ -73,8 +69,7 @@ class LintingIssuesFixer {
         this && this.fixedFiles.push(filePath)}
     } catch (error) {
       console && console.error(`❌ Error fixing ${filePath}:`, error && error.message),
-      this && this.errors.push({ "file": filePath, "error": error && error.message }),
-}
+      this && this.errors.push({ "file": filePath, "error": error && error.message })}
   }
   hasLintingIssues(content) {
     const issuePatterns = [/,\s*}/g;
@@ -99,5 +94,5 @@ class LintingIssuesFixer {
     return content}
   generateSummary() {
       })}
-    // console.log('\n✅ Linting issues fixing completed!'),
-    // console.log('\n✅ Linting issues fixing completed!'),
+    // // console.log('\n✅ Linting issues fixing completed!'),
+    // // console.log('\n✅ Linting issues fixing completed!'),

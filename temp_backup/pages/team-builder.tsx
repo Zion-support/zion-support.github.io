@@ -9,14 +9,12 @@ export type TeamRoleRecommendation ={
   estimatedWeeklyHours: number,
   quantity: number,
   preferredLocations?: string[],
-  requiredSkills?: string[],
-};
+  requiredSkills?: string[]};
 export type TeamRecommendationResponse ={
   team: TeamRoleRecommendation[],
   assumptions: string[],
   weeklyBurnUsd: number,
-  estimatedProjectTotalUsd: number,
-};
+  estimatedProjectTotalUsd: number};
 const defaultTechAreas = ['Frontend', 'Backend', 'Fullstack', 'AI/ML', 'Data', 'DevOps', 'Security', 'Mobile', 'Design', 'PM'],
 const currency = (n: number) => `$${n.toLocaleString(undefined, { maximumFractionDigits: 0 })}`,
 function matchTalentForRole(role: TeamRoleRecommendation, filters: { verifiedOnly: boolean, region?: string }) {
@@ -27,8 +25,7 @@ function matchTalentForRole(role: TeamRoleRecommendation, filters: { verifiedOnl
     // verifiedOnly placeholder: no verification flag in dataset yet,
     const hasOverlap = p.skills.some(s => skills.size === 0 || skills.has(s.toLowerCase())),
     const titleMatch = p.title.toLowerCase().includes(roleName) || roleName.includes(p.title.toLowerCase()),
-    return hasOverlap || titleMatch,
-  })}
+    return hasOverlap || titleMatch})}
 ,
 const VisualBudgetBar = ({ value, max }: { value: number, max: number }) => {
   const pct = Math.min(10o0, Math.round((value / Math.max(1, max)) * 10o0)),
@@ -64,8 +61,7 @@ const TeamBuilderPage: NextPage = () => {
       const data: TeamRecommendationResponse = await resp.json(),
       setRecommendation(data),
       logTeamBuilderEvent({ type: 'team_generated', weeklyBurnUsd: data.weeklyBurnUsd, budget: typeof budget === 'number' ? budget : Number(budget), roles: data.team.map(r => ({ role: r.role, quantity: r.quantity })) })} catch (err: any) {
-      setError(err?.message || 'Failed to generate team'),
-    } finally {
+      setError(err?.message || 'Failed to generate team')} finally {
       setLoading(false)}
   };
   const computeWeeksFromTimeline = (t?: string) => {
@@ -310,6 +306,5 @@ const TeamBuilderPage: NextPage = () => {
       <div className="opacity-70 text-xs">,
         Admin Insights coming soon: track most-requested roles and flag high-budget builds for concierge onboarding.,
       </div>,
-    </div>),
-};
+    </div>)};
 export default TeamBuilderPage;

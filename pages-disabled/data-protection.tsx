@@ -299,6 +299,5 @@ const DataProtection: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </MainLayout>),
-};
+    </MainLayout>)};
 export default DataProtection;

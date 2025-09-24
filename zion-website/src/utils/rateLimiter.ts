@@ -3,8 +3,7 @@ import { NextRequest, NextResponse } from 'next/server',
 const rateLimitMap = new Map(),
 interface RateLimitConfig {
   windowMs: number,
-  maxRequests: number,
-}
+  maxRequests: number}
 ,
 const defaultConfig: RateLimitConfig = {
   windowMs: 15 * 60 * 1000, // 15 minutes,

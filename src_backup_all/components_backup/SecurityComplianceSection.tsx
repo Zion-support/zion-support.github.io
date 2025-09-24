@@ -246,6 +246,5 @@ export function SecurityComplianceSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

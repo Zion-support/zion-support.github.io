@@ -19,6 +19,5 @@ export default function CaseStudiesPage() {
           kleber@ziontechgroup.com.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

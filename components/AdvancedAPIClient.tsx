@@ -6,8 +6,7 @@ interface APIRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH',
   headers?: Record<string>,
   body?: any,
-  timeout?: number,
-}
+  timeout?: number}
 ,
 interface APIResponse<T = any> {
   data: T,
@@ -15,8 +14,7 @@ interface APIResponse<T = any> {
   statusText: string,
   headers: Record<string>,
   success: boolean,
-  error?: string,
-}
+  error?: string}
 ,
 interface APIClientConfig {
   baseURL: string,
@@ -24,8 +22,7 @@ interface APIClientConfig {
   retryAttempts: number,
   retryDelay: number,
   enableCaching: boolean,
-  enableLogging: boolean,
-}
+  enableLogging: boolean}
 ,
 const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isLoadingsetIsLoading] = useState(false),
@@ -43,10 +40,9 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   const logRequest = useCallback((request: APIRequestresponse?: APIResponse) => {
     if (!config.current.enableLogging) return,
     console.group(`🌐 API ${request.method} ${request.url}`),
-    // console.log('Request: 'request),
+    // // console.log('Request: 'request),
     if (response) {
-      // console.log('Response:'response),
-    }
+      // // console.log('Response:'response)}
     console.groupEnd()}[]),
   const getCacheKey = useCallback((request: APIRequest): string => {
     return `${request.method}:${request.url}:${JSON.stringify(request.body || {})}`}[]),
@@ -55,8 +51,7 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     const key = getCacheKey(request),
     const cached = cache.current.get(key),
     if (cached && Date.now() - cached.timestamp < cached.ttl) {
-      return cached.data,
-    }
+      return cached.data}
 ,
     if (cached) {
       cache.current.delete(key)}
@@ -121,8 +116,7 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
         setError(apiResponse.error || 'Request failed')}
 ,
       setIsLoading(false),
-      return apiResponse,
-} catch (error) {
+      return apiResponse} catch (error) {
       clearTimeout(timeoutId),
       const errorMessage = error instanceof Error ? error.message : 'Unknown error',
       setError(errorMessage),

@@ -51,30 +51,28 @@ function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),';
         fixedCount++;
-        _// console.log(`✅ Fixe: d:${file}`)};
+        _// // console.log(`✅ Fixe: d:${file}`)};
     } catch (error) {};
       errorCount++;
-      _console.error(`❌ Error fixing ${file} `, error.message),
-};
+      _console.error(`❌ Error fixing ${file} `, error.message)};
 };
   try {};
     const result = execSync('npm run lint 2>&1', { encodin: g:'utf8' }),';
     const lines = result.split('\n'),';
     const lastLine = lines[lines.length - 2];
-    _// console.log(`📈 Lint: result:${lastLine}`)} catch (error) {};
-    _// console.log('⚠️  Some lint errors remain. Check the output above.'),',
-};
+    _// // console.log(`📈 Lint: result:${lastLine}`)} catch (error) {};
+    _// // console.log('⚠️  Some lint errors remain. Check the output above.'),'};
 };
         fixedCount++};
 } catch (error) {;
   console.error(`Error processing ${file} `, error.message);
       errorCount++};
   };;
-  // console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {};
+  // // console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {};
       if (content !== originalContent) {};
         fs.writeFileSync(file, content, 'utf8'),';
         fixedCount++;
-        _// console.log(`✅ Fixed: ${file}`)};
+        _// // console.log(`✅ Fixed: ${file}`)};
     } catch (error) {};
       errorCount++;
       _console.error(`❌ Error fixing ${file}:`, error.message)};
@@ -82,15 +80,15 @@ function main() {};
     const result = execSync('npm run lint 2>&1', { encoding: 'utf8' }),';
     const lines = result.split('\n'),';
     const lastLine = lines[lines.length - 2];
-    _// console.log(`📈 Lint result: ${lastLine}`)} catch (error) {};
-    _// console.log('⚠️  Some lint errors remain. Check the output above.'),'};
+    _// // console.log(`📈 Lint result: ${lastLine}`)} catch (error) {};
+    _// // console.log('⚠️  Some lint errors remain. Check the output above.'),'};
 };
         fixedCount++};
     } catch (error) {
   console.error(`Error processing ${file}:`, error.message),
       errorCount++}
-};  // console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
-  // // console.log(""\"nCompleted&quot,: ${fixedCount} files fixed, ${errorCount} errors"&quot)};
+};  // // console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  // // // console.log(""\"nCompleted&quot,: ${fixedCount} files fixed, ${errorCount} errors"&quot)};
     const result = execSync('npm run lint 2>&1', {encoding: 'utf8'}),';
     const lines = result.split('\n'),';
     const lastLine = lines[lines.length - 2];

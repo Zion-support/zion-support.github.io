@@ -59,6 +59,5 @@ export default function QuantumFinancialTradingPlatformPage() {
           </div>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

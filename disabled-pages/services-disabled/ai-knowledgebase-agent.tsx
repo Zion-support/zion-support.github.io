@@ -48,6 +48,5 @@ export default function AIKnowledgebaseAgent(...args: any[]): any {
           </Link>,
         </div>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

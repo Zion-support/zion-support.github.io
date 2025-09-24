@@ -1,11 +1,9 @@
 
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
-}const completion = await client.chat.completions.create ({
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'}const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
-}const completion = await client.chat.completions.create ({
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'}const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
 type InsightResponse = {
@@ -18,7 +16,7 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[],
   regionalComparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
-  gptRecommendation?: string,};  gptRecommendation?: string}
+  gptRecommendation?: string};  gptRecommendation?: string}
 ,
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent',
@@ -27,8 +25,7 @@ type RequestBody = {
   roleTitle: string, skills: string[];
   region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead';
   remote: boolean;
-  employmentType: 'contract' | 'freelance' | 'full-time',
-};
+  employmentType: 'contract' | 'freelance' | 'full-time'};
 type InsightResponse = {
   recommendedHourlyUsd: number, recommendedMonthlyUsd: number;
   medianHourlyUsd: number, minHourlyUsd: number;
@@ -144,8 +141,7 @@ function groupBy<T K extends string | number>(items: T[], getKey: (item: T) => K
     return acc}, {} as Record<K T[]>)}
 function extractCountry(location: string): string {
   const parts = location.split().map((p) => p.trim()),
-  return parts[parts.length - 1] |'Global',
-}
+  return parts[parts.length - 1] |'Global'}
 function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
   const set = new Set(targetSkills.map((s) => s.toLowerCase())),
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length,
@@ -182,13 +178,11 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
         {
           role: 'system',
           content:,
-            'You are a compensation analyst. Be specific and concise. Use USD.',
-        }
+            'You are a compensation analyst. Be specific and concise. Use USD.'}
         { role: 'user', content: prompt }
       ],
       temperature: 0.2,
-      max_tokens: 300,
-    }),
+      max_tokens: 300}),
     return completion.choices?.[0]?.message?.content |undefined} catch {
     return undefined}
 ,
@@ -279,8 +273,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const regionalComparison = Object.entries(byRegion),
     .map(([r, list]) => ({
       region: r,
-      medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),
-    }))    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd),
+      medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd)))}))    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd),
     .slice(0, 8),
   // Tags  const remoteMultiplier = remote ? 1.1 : 1.0,
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher,
@@ -308,8 +301,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     median: baseMedian,
     min,
     max,
-    country,
-  }),
+    country}),
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly;
     recommendedMonthlyUsd: recommendedMonthly;

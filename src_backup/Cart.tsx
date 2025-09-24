@@ -44,8 +44,7 @@ export default function CartPage() {
   const updateQuantity = (id: string, qty: number) => {
     dispatch(updateQuantityAction({ id, quantity: qty }))};
   const removeItem = (id: string) => {
-    dispatch(removeItemAction(id)),
-  };
+    dispatch(removeItemAction(id))};
   const handleCheckout = () => {
     router.push('/checkout')};
   const applyCode = async () => {

@@ -313,6 +313,5 @@ const AIDevelopment: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </MainLayout>),
-};
+    </MainLayout>)};
 export default AIDevelopment;

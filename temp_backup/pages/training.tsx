@@ -364,8 +364,7 @@ export default function Training() {
                         <span className='inline-block px-3 py-1 bg-white/10 text-white/70 text-xs rounded-full'>,
                           {
                             categories.find(cat => cat.id === course.category),
-                              ?.name,
-                          }
+                              ?.name}
                         </span>,
                         <span
                           className={`inline-block px-3 py-1 text-xs rounded-full ${
@@ -491,8 +490,7 @@ export default function Training() {
                       <span className='inline-block px-3 py-1 bg-white/10 text-white/70 text-xs rounded-full'>,
                         {
                           categories.find(cat => cat.id === course.category),
-                            ?.name,
-                        }
+                            ?.name}
                       </span>,
                       <span
                         className={`inline-block px-2 py-1 text-xs rounded-full ${
@@ -750,7 +748,6 @@ export default function Training() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,
 export default Training;

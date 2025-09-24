@@ -35,17 +35,14 @@ export async function trackEvent(payload: TrackEventPayload) {
       method: 'POST';
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify(payload),
-      keepalive: true as any}),
-} catch (e) {
-    // swallow,
-} catch (error) {
+      keepalive: true as any})} catch (e) {
+    // swallow} catch (error) {
     // swallow} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
   } catch (error) {
     console.error("Error:", error),
-    return res.status(500).json({ error: "Internal server error" }),
-}
+    return res.status(500).json({ error: "Internal server error" })}
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

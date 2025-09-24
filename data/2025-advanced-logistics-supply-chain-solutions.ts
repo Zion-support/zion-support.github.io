@@ -30,8 +30,7 @@ import { ServiceVariant } from '../types/service-variants',
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  }
+    website: string}
 ,
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600';
       text_color: 'text - blue - 400';
@@ -90,8 +89,7 @@ import { ServiceVariant } from '../types/service-variants',
     ],
     popular: false, icon: '⛓️';
     ],
-    reviews: 112,
-  }
+    reviews: 112}
 ],
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025 {
@@ -125,15 +123,12 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string,
-  };
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number,
-}
-,
+  reviews: number}
 }
 ]>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

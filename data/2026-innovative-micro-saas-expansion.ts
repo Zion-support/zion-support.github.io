@@ -30,15 +30,13 @@ export interface InnovativeMicroSaasService20o26 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';
@@ -684,8 +682,7 @@ export const innovativeMicroSaasServices20o26: InnovativeMicroSaasService20o26[]
 export const getInnovativeMicroSaasServices20o26ByCategory = (
   category: string) => {
   return innovativeMicroSaasServices20o26.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularInnovativeMicroSaasServices20o26 = () => {
   return innovativeMicroSaasServices20o26.filter(service => service.popular)};
 export const getInnovativeMicroSaasServices20o26ByPriceRange = (

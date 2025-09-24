@@ -13,8 +13,7 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default function BusinessIntelligenceDashboard() {
   return null}
 ,

@@ -65,6 +65,5 @@ export default function FeaturedContent() {
           </a>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

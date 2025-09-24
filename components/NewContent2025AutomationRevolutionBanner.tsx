@@ -149,6 +149,5 @@ const NewContent20o25AutomationRevolutionBanner: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>),
-};
+    </motion.section>)};
 export default NewContent20o25AutomationRevolutionBanner;

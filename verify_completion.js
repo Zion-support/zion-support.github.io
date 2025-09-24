@@ -1,6 +1,6 @@
 const fs = require('fs'),
 const path = require('path'),
-// console.log('🔍 Verifying completion of all tasks...'),
+// // console.log('🔍 Verifying completion of all tasks...'),
 // Check if all required files exist,
 const requiredFiles = [
     'pages/index.js';
@@ -12,16 +12,16 @@ const requiredFiles = [
     'package.json';
     'next.config.js';
     'netlify.toml'],
-// console.log('📁 Checking required files...'),
+// // console.log('📁 Checking required files...'),
 let allFilesExist = true,
 requiredFiles.forEach(file => {
     if (fs.existsSync(path.join('/workspace', file))) {
-        // console.log(`✅ ${file} exists`)} else {
-        // console.log(`❌ ${file} missing`),
+        // // console.log(`✅ ${file} exists`)} else {
+        // // console.log(`❌ ${file} missing`),
         allFilesExist = false}
 }),
 // Check for merge conflicts,
-// console.log('\n🔧 Checking for merge conflicts...'),
+// // console.log('\n🔧 Checking for merge conflicts...'),
 const filesToCheck = ['pages', 'components', 'package.json'],
 let hasConflicts = false,
 filesToCheck.forEach(dir => {
@@ -32,5 +32,4 @@ filesToCheck.forEach(dir => {
             if (typeof file === 'string' && file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.json')) {
                 const filePath = path.join(dirPath, file),
                 try {
-                    const content = fs.readFileSync(filePath, 'utf8'),
-}}}}}))
+                    const content = fs.readFileSync(filePath, 'utf8')}}}}}))

@@ -89,26 +89,22 @@ const complianceStandards = [
     name: "WCAG 2.1 AA";
     description: "Web Content Accessibility Guidelines Level AA compliance";
     status: "Compliant";
-    icon: Award,
-  };
+    icon: Award};
   {
     name: "Section 508";
     description: "US Federal accessibility requirements";
     status: "Compliant";
-    icon: FileText,
-  };
+    icon: FileText};
   {
     name: "ADA";
     description: "Americans with Disabilities Act compliance";
     status: "Compliant";
-    icon: Users,
-  };
+    icon: Users};
   {
     name: "EN 30o1 549";
     description: "European accessibility standard";
     status: "Compliant";
-    icon: Globe,
-  }
+    icon: Globe}
 ],
 export default function AccessibilityPage() {
   const accessibilityFeatures = [
@@ -154,70 +150,58 @@ export default function AccessibilityPage() {
       standard: 'WCAG 2.1 AA';
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance';
       status: 'Compliant';
-      icon: CheckCircle,
-    };
+      icon: CheckCircle};
     {
       standard: 'Section 508';
       description: 'U.S. federal accessibility requirements compliance';
       status: 'Compliant';
-      icon: CheckCircle,
-    };
+      icon: CheckCircle};
     {
       standard: 'ADA Compliance';
       description: 'Americans with Disabilities Act compliance';
       status: 'Compliant';
-      icon: CheckCircle,
-    };
+      icon: CheckCircle};
     {
       standard: 'EN 30o1 549';
       description: 'European accessibility standard compliance';
       status: 'Compliant';
-      icon: CheckCircle,
-    }
+      icon: CheckCircle}
   ],
   const accessibilityTools = [
     {
       name: 'Screen Reader Testing';
       description: 'Regular testing with NVDA, JAWS, and VoiceOver';
-      icon: Ear,
-    };
+      icon: Ear};
     {
       name: 'Keyboard Testing';
       description: 'Comprehensive keyboard-only navigation testing';
-      icon: Hand,
-    };
+      icon: Hand};
     {
       name: 'Color Contrast Analysis';
       description: 'Automated and manual color contrast verification';
-      icon: Eye,
-    };
+      icon: Eye};
     {
       name: 'User Testing';
       description: 'Regular testing with users with disabilities';
-      icon: Users,
-    }
+      icon: Users}
   ],
   const accessibilityCommitments = [
     {
       title: 'Continuous Improvement';
       description: 'We regularly audit and improve our accessibility features';
-      icon: Zap,
-    };
+      icon: Zap};
     {
       title: 'User Feedback';
       description: 'We actively seek and incorporate feedback from users with disabilities';
-      icon: Heart,
-    };
+      icon: Heart};
     {
       title: 'Training & Awareness';
       description: 'Our team receives regular accessibility training and education';
-      icon: Brain,
-    };
+      icon: Brain};
     {
       title: 'Compliance Monitoring';
       description: 'Ongoing monitoring to ensure continued compliance with standards';
-      icon: Shield,
-    }
+      icon: Shield}
   ],
   return (
     <Layout
@@ -428,5 +412,4 @@ export default function AccessibilityPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}

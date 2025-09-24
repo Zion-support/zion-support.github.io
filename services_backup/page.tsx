@@ -301,7 +301,7 @@ export default function ServicesPage() {
                 </h3>,
                 <p className='text-gray-60o0'>,
                   Ongoing support, monitoring, and continuous improvement to,
-                  ensure maximum value and window.performance.,
+                  ensure maximum value and window.window.performance.,
                 </p>,
               </div>,
             </div>,
@@ -332,6 +332,5 @@ export default function ServicesPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

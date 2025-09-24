@@ -15,12 +15,10 @@ const UltimateAI20o25ContentShowcase = () => {
         roi: '5,0o00%';
         savings: '$15.8B+';
         efficiency: '2,40o0%';
-        satisfaction: '99.7%',
-      };
+        satisfaction: '99.7%'};
       readingTime: '35 min read';
       featured: true;
-      category: 'transformation',
-    };
+      category: 'transformation'};
     {
       id: 'fortune-50o0-success-story';
       type: 'case-study';
@@ -31,12 +29,10 @@ const UltimateAI20o25ContentShowcase = () => {
         roi: '5,0o00%';
         savings: '$15.8B';
         timeline: '18 months';
-        uptime: '99.9%',
-      };
+        uptime: '99.9%'};
       readingTime: '25 min read';
       featured: true;
-      category: 'case-study',
-    };
+      category: 'case-study'};
     {
       id: 'implementation-master-guide';
       type: 'resource';
@@ -47,12 +43,10 @@ const UltimateAI20o25ContentShowcase = () => {
         roi: '5,0o00%';
         guide: '45 min';
         success: '94%';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       readingTime: '45 min read';
       featured: true;
-      category: 'implementation',
-    };
+      category: 'implementation'};
     {
       id: 'quantum-ai-revolution';
       type: 'blog';
@@ -66,8 +60,7 @@ const UltimateAI20o25ContentShowcase = () => {
         speed: '1,20o0%'};
       readingTime: '20 min read';
       featured: false;
-      category: 'innovation',
-    };
+      category: 'innovation'};
     {
       id: 'autonomous-enterprise';
       type: 'blog';
@@ -78,12 +71,10 @@ const UltimateAI20o25ContentShowcase = () => {
         roi: '8,50o0%';
         savings: '$45.2B+';
         efficiency: '3,20o0%';
-        autonomy: '99.7%',
-      };
+        autonomy: '99.7%'};
       readingTime: '35 min read';
       featured: false;
-      category: 'transformation',
-    };
+      category: 'transformation'};
     {
       id: 'neural-architectures';
       type: 'blog';
@@ -94,12 +85,10 @@ const UltimateAI20o25ContentShowcase = () => {
         roi: '5,0o00%';
         savings: '$18.2B+';
         efficiency: '2,40o0%';
-        accuracy: '99.98%',
-      };
+        accuracy: '99.98%'};
       readingTime: '32 min read';
       featured: false;
-      category: 'innovation',
-    }
+      category: 'innovation'}
   ],
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'count: content.length };
@@ -176,8 +165,7 @@ const UltimateAI20o25ContentShowcase = () => {
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
               >,
                 {category.name} ({category.count}),
               </button>))}
@@ -194,8 +182,7 @@ const UltimateAI20o25ContentShowcase = () => {
                       ? 'bg-blue-10o0 text-blue-80o0',
                       : item.type === 'case-study',
                       ? 'bg-green-10o0 text-green-80o0',
-                      : 'bg-purple-10o0 text-purple-80o0',
-                  }`}>,
+                      : 'bg-purple-10o0 text-purple-80o0'}`}>,
                     {item.type.toUpperCase()}
                   </span>,
                   <span className="text-sm text-gray-50o0">{item.readingTime}</span>,
@@ -245,6 +232,5 @@ const UltimateAI20o25ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAI20o25ContentShowcase;

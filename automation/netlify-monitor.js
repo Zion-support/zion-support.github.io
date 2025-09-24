@@ -11,8 +11,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const https = require('https'),
 const path = require('path'),
@@ -35,8 +34,7 @@ class NetlifyBuildMonitor {
       currentBuild: null;
       buildHistory: [];
       errors: [];
-      fixes: [],
-    };
+      fixes: []};
     this.loadStatus()}
 ,
   log(message, level = 'info') {
@@ -157,8 +155,7 @@ class NetlifyBuildMonitor {
       case 'dependency':,
         return await this.fixDependencyError(),
       default: ,
-        return await this.fixGenericError(error),
-    }
+        return await this.fixGenericError(error)}
   }
 ,
   async fixMemoryError() {
@@ -178,8 +175,7 @@ class NetlifyBuildMonitor {
       this.status.fixes.push({
         type: 'memory';
         timestamp: new Date().toISOString();
-        action: 'Increased Node.js memory limit',
-      }),
+        action: 'Increased Node.js memory limit'}),
       return true} catch (error) {
       this.log(`Error fixing memory issue: ${error.message}`, 'error'),
       return false}
@@ -199,16 +195,14 @@ class NetlifyBuildMonitor {
 module.exports ={
   experimental: {
     workerThreads: false;
-    cpus: 1,
-  }
+    cpus: 1}
 };`}
 ,
       fs.writeFileSync(nextConfigPath, nextConfig),
       this.status.fixes.push({
         type: 'timeout';
         timestamp: new Date().toISOString();
-        action: 'Added timeout configuration',
-      }),
+        action: 'Added timeout configuration'}),
       return true} catch (error) {
       this.log(`Error fixing timeout issue: ${error.message}`, 'error'),
       return false}
@@ -223,8 +217,7 @@ module.exports ={
       this.status.fixes.push({
         type: 'dependency';
         timestamp: new Date().toISOString();
-        action: 'Reinstalled dependencies',
-      }),
+        action: 'Reinstalled dependencies'}),
       return true} catch (error) {
       this.log(`Error fixing dependency issue: ${error.message}`, 'error'),
       return false}
@@ -237,15 +230,13 @@ module.exports ={
       this.status.errors.push({
         message: error.message;
         timestamp: new Date().toISOString();
-        buildId: error.buildId,
-      }),
+        buildId: error.buildId}),
       // Try to trigger a new build,
       await this.triggerBuild(),
       this.status.fixes.push({
         type: 'generic';
         timestamp: new Date().toISOString();
-        action: 'Triggered new build',
-      }),
+        action: 'Triggered new build'}),
       return true} catch (err) {
       this.log(`Error fixing generic issue: ${err.message}`, 'error'),
       return false}
@@ -309,8 +300,7 @@ module.exports ={
       status: this.status;
       config: {
         siteId: this.config.netlifySiteId;
-        checkInterval: this.config.checkInterval,
-      }
+        checkInterval: this.config.checkInterval}
     };
     try {
       fs.writeFileSync(this.config.logFile, JSON.stringify(report, null, 2)),

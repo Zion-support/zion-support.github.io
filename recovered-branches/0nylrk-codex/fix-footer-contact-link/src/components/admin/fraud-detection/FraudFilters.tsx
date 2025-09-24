@@ -19,8 +19,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void,
   contentTypeFilter: string | null,
   setContentTypeFilter: (value: string | null) => void,
-  resetFilters: () => void,
-}
+  resetFilters: () => void}
 ,
 interface FraudFiltersProps {
   searchQuery: string;
@@ -31,11 +30,9 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
-  resetFilters: () => void,
-}
+  resetFilters: () => void}
 ,
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-,
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -63,7 +60,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   resetFilters}) => {
   setContentTypeFilter;
   resetFilters}) => {
-,
   return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">,
       <div className="relative flex-1">,
@@ -113,8 +109,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">,
         <Filter className="h-4 w-4 mr-2" /> Reset Filters,
       </Button>,
-    </div>),
-}
+    </div>)}
 };
 };
 interface FraudFiltersProps {
@@ -126,8 +121,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void;
   contentTypeFilter: string | null;
   setContentTypeFilter: (value: string | null) => void;
-  resetFilters: () => void,
-}
+  resetFilters: () => void}
 ,
           className="pl-10",
         />,
@@ -185,8 +179,7 @@ interface FraudFiltersProps {
       <Button variant="outline" on_click={reset_filters} className="md: w - auto">,
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters,
       </Button>,
-    </div>),
-}
+    </div>)}
 ,
 export default FraudFilters;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -28,8 +28,7 @@
       })} catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" })}
 ,
-    return res && res.status(500).json({ error: "Failed to create partner" }),
-}
+    return res && res.status(500).json({ error: "Failed to create partner" })}
 }
 }
       return res.status (400).json ({ error: "Missing required fields" })}
@@ -85,7 +84,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       apiKey: apiKey.key;
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`})} catch (e) {_return res.status(500).json({ error: "Failed to create partner"}),
 import type { NextApiRequest, NextApiResponse } from "next",
-import { createPartner } from "../../../utils/api/partnerAuth",
-}
+import { createPartner } from "../../../utils/api/partnerAuth"}
 }
 ,

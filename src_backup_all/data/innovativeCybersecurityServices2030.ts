@@ -12,8 +12,7 @@ pricing: {
     custom: string,
     currency: string,
     pricingModel: string,
-    marketPrice: string,
-};
+    marketPrice: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -46,21 +45,19 @@ pricing: {
   image: string,
   createdAt: string,
   featured: boolean,
-  trending: boolean,
-}
+  trending: boolean}
 ,
 // Zion Tech Group Contact Information,
 const zionContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
   {
     id: "quantum-resistant-encryption";
     title: "Zion Quantum-Resistant Encryption Platform";
-    description: "Next-generation encryption platform that provides quantum-resistant cryptographic algorithms, ensuring data security against future quantum computing threats while maintaining high window.performance.";
+    description: "Next-generation encryption platform that provides quantum-resistant cryptographic algorithms, ensuring data security against future quantum computing threats while maintaining high window.window.performance.";
     category: "Cybersecurity Services";
     subcategory: "Encryption & Cryptography";
     pricing: {
@@ -138,8 +135,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-threat-hunting-platform";
     title: "Zion AI Threat Hunting Platform";
@@ -221,8 +217,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "zero-trust-network-access";
     title: "Zion Zero Trust Network Access Platform";
@@ -235,8 +230,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
       custom: "Enterprise ZTNA solutions";
       currency: "$";
       pricingModel: "Monthly subscription with user-based pricing";
-      marketPrice: "$499-999/month",
-    };
+      marketPrice: "$499-999/month"};
     features: [
       "Identity-based access control";
       "Application-level security";
@@ -305,8 +299,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-powered-vulnerability-management";
     title: "Zion AI-Powered Vulnerability Management";
@@ -319,8 +312,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
       custom: "Enterprise vulnerability management";
       currency: "$";
       pricingModel: "Monthly subscription with asset-based pricing";
-      marketPrice: "$399-799/month",
-    };
+      marketPrice: "$399-799/month"};
     features: [
       "AI-powered risk prioritization";
       "Automated vulnerability scanning";
@@ -389,8 +381,7 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "blockchain-security-audit";
     title: "Zion Blockchain Security Audit Platform";
@@ -472,7 +463,6 @@ export const innovativeCybersecurityServices20o30: CybersecurityService[] = [
     image: "https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  }
+    trending: true}
 ],
 export default innovativeCybersecurityServices20o30;

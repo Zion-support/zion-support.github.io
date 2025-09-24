@@ -19,6 +19,5 @@ export default function EdgeComputingOrchestrationPlatform() {
       industries={['Retail', 'Telecom', 'Manufacturing', 'Media']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/edge-computing-orchestration-platform',
-    />),
-}
+    />)}
 ,

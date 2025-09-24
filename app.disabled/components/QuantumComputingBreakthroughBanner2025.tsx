@@ -16,12 +16,10 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
         roi: '60o0%';
         savings: '$50o0M+';
         accuracy: '99.7%';
-        speed: '67% faster',
-      };
+        speed: '67% faster'};
       type: 'Blog Post';
       readingTime: '18 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-case-study';
       title: 'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI';
@@ -31,12 +29,10 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
         roi: '80o0%';
         savings: '$2.8B';
         accuracy: '99.9%';
-        speed: '67% reduction',
-      };
+        speed: '67% reduction'};
       type: 'Case Study';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'quantum-implementation-guide';
       title: 'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI';
@@ -46,12 +42,10 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
         roi: '80o0%';
         savings: '$50o0M+';
         accuracy: '99.9%';
-        speed: '340% improvement',
-      };
+        speed: '340% improvement'};
       type: 'Resource';
       readingTime: '35 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     // Check if banner was previously dismissed,

@@ -18,7 +18,7 @@ export default function ProductPage() {
             Integration Hub is designed to revolutionize how businesses operate and grow in today's competitive landscape.,
           </p>,
           <p className="text-white/80">,
-            Built with cutting-edge technology and user experience in mind, it delivers exceptional value and window.performance.,
+            Built with cutting-edge technology and user experience in mind, it delivers exceptional value and window.window.performance.,
           </p>,
         </section>,
         <section className="mb-8">,
@@ -49,8 +49,7 @@ export default function ProductPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,
 <Link href="/products/rapid-1755539340o460-oastx4" className="internal-link">Related Content</Link>,
 <Link href="/products/rapid-1755539347155-oli1gc" className="internal-link">Related Content</Link>,

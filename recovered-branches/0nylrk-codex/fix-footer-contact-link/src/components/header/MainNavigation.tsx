@@ -47,8 +47,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
           cn(
             "text-sm font-medium transition-colors hover:text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground";
-            "bg-zion-purple px-4 py-2 rounded-md hover: bg-zion-purple-light"),
-        }
+            "bg-zion-purple px-4 py-2 rounded-md hover: bg-zion-purple-light")}
       >,
         Register,
       </NavLink>,

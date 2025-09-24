@@ -10,8 +10,7 @@ import { StatusBadge } from "./StatusBadge",
 import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
-  application: JobApplication,
-}
+  application: JobApplication}
 ,
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expandedsetExpanded] = useState(false),
@@ -41,8 +40,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback,
           </Button>),
       default:,
-        return null,
-    }
+        return null}
   };
   return (
     <Card className="overflow-hidden">,

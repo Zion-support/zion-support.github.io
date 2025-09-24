@@ -20,6 +20,5 @@ export default function Innovative20o38CuttingEdgeShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

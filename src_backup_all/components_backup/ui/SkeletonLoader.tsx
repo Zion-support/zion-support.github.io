@@ -17,13 +17,11 @@ export function Skeleton({
     text: 'h-4 rounded';
     circular: 'rounded-full';
     rectangular: '';
-    rounded: 'rounded-lg',
-  };
+    rounded: 'rounded-lg'};
   const animationClasses ={
     pulse: 'animate-pulse';
     wave: 'animate-pulse bg-gradient-to-r from-gray-30o0 via-gray-10o0 to-gray-30o0 dark:from-gray-70o0 dark:via-gray-60o0 dark:to-gray-70o0';
-    none: '',
-  };
+    none: ''};
   const style ={
     width: typeof width === 'number' ? `${width}px` : width;
     height: typeof height === 'number' ? `${height}px` : height};

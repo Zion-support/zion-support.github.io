@@ -77,8 +77,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
       case 'Quantum Computing':,
         return Rocket,
       default:,
-        return Zap,
-    }
+        return Zap}
   };
   const getCategoryColor = (category: anystring) => {
     switch (category) {
@@ -97,8 +96,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
       case 'Quantum Computing':,
         return 'from-indigo-60o0 to-purple-60o0',
       default:,
-        return 'from-gray-60o0 to-slate-60o0',
-    }
+        return 'from-gray-60o0 to-slate-60o0'}
   };
   const pricingTiers = [
     {
@@ -332,8 +330,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
                   className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-30o0 ${
                     tier.popular,
                       ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white hover: opacity-90',
-                      : 'border border-cyan-40o0/30 text-cyan-40o0 hover:bg-cyan-40o0/10',
-                  }`}
+                      : 'border border-cyan-40o0/30 text-cyan-40o0 hover:bg-cyan-40o0/10'}`}
                 >,
                   Get Started,
                 </Link>,
@@ -473,8 +470,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
                       Get Quote,
                     </Link>,
                   </div>,
-                </motion.div>),
-            })}
+                </motion.div>)})}
           </div>,
           {filteredServices.length === 0 && (
             <div className='text-center py-16'>,

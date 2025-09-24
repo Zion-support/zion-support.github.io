@@ -15,6 +15,5 @@ export default function NetworkAutomationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -42,7 +42,6 @@ export default async function handler(
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json"),
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   const started = Date.now(),
   const auth = await authenticateRequest(req),
   if (!auth) {

@@ -20,6 +20,5 @@ export default function IntelligentSupportAutomationPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

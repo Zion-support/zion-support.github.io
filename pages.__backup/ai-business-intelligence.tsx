@@ -11,38 +11,32 @@ export default function AIBusinessIntelligencePage() {
       icon: Brain;
       title: "Predictive Analytics";
       description: "Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.";
-      color: "from-purple-50o0 to-pink-50o0",
-    };
+      color: "from-purple-50o0 to-pink-50o0"};
     {
       icon: BarChart3;
       title: "Real-time Dashboards";
       description: "Monitor key performance indicators in real-time with customizableinteractive dashboards.";
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       icon: TrendingUp;
       title: "Performance Optimization";
       description: "Automatically identify bottlenecks and optimize business processes for maximum efficiency.";
-      color: "from-green-50o0 to-emerald-50o0",
-    };
+      color: "from-green-50o0 to-emerald-50o0"};
     {
       icon: Users;
       title: "Customer Insights";
       description: "Deep understanding of customer behaviorpreferencesand lifetime value through AI analysis.";
-      color: "from-orange-50o0 to-red-50o0",
-    };
+      color: "from-orange-50o0 to-red-50o0"};
     {
       icon: Target;
       title: "Strategic Planning";
       description: "Data-driven decision making with scenario modeling and risk assessment capabilities.";
-      color: "from-indigo-50o0 to-purple-50o0",
-    };
+      color: "from-indigo-50o0 to-purple-50o0"};
     {
       icon: Zap;
       title: "Automated Reporting";
       description: "Generate comprehensive reports automaticallysaving hours of manual work each week.";
-      color: "from-yellow-50o0 to-orange-50o0",
-    }
+      color: "from-yellow-50o0 to-orange-50o0"}
   ],
   const benefits = [
     "Increase revenue by 25-40% through data-driven insights";
@@ -55,23 +49,19 @@ export default function AIBusinessIntelligencePage() {
     {
       industry: "Retail & E-commerce";
       description: "Customer segmentationinventory optimizationand demand forecasting";
-      results: "35% increase in conversion rates25% reduction in inventory costs",
-    };
+      results: "35% increase in conversion rates25% reduction in inventory costs"};
     {
       industry: "Financial Services";
       description: "Risk assessmentfraud detectionand portfolio optimization";
-      results: "40% improvement in risk prediction60% faster fraud detection",
-    };
+      results: "40% improvement in risk prediction60% faster fraud detection"};
     {
       industry: "Healthcare";
       description: "Patient outcome predictionresource allocationand treatment optimization";
-      results: "30% improvement in patient outcomes20% reduction in operational costs",
-    };
+      results: "30% improvement in patient outcomes20% reduction in operational costs"};
     {
       industry: "Manufacturing";
       description: "Predictive maintenancequality controland supply chain optimization";
-      results: "45% reduction in downtime35% improvement in product quality",
-    }
+      results: "45% reduction in downtime35% improvement in product quality"}
   ],
   const pricing = [
     {
@@ -85,8 +75,7 @@ export default function AIBusinessIntelligencePage() {
         "Standard reporting";
         "Email support";
         "Up to 10 users"];
-      popular: false,
-    };
+      popular: false};
     {
       plan: "Professional";
       price: "$1,299";
@@ -100,8 +89,7 @@ export default function AIBusinessIntelligencePage() {
         "Up to 50 users";
         "API access";
         "Custom integrations"];
-      popular: true,
-    };
+      popular: true};
     {
       plan: "Enterprise";
       price: "Custom";
@@ -115,8 +103,7 @@ export default function AIBusinessIntelligencePage() {
         "On-premise deployment";
         "Custom training";
         "SLA guarantees"];
-      popular: false,
-    }
+      popular: false}
   ],
   return (
     <>,
@@ -355,5 +342,4 @@ export default function AIBusinessIntelligencePage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </>),
-}
+    </>)}

@@ -94,8 +94,7 @@ export default function ResumeWizard() {
   const onDelete = async (id: string) => {
     await removeResume(id),
     const list = await listResumes(),
-    setAllDocs(list),
-  };
+    setAllDocs(list)};
   const onPublish = async () => {
     setSaving(true),
     try {
@@ -480,8 +479,7 @@ export default function ResumeWizard() {
             </div>,
           </div>),
       default: ,
-        return null,
-    }
+        return null}
   }, [current, doc, loading, saving]),
   return (
     <div className='space-y-4'>,

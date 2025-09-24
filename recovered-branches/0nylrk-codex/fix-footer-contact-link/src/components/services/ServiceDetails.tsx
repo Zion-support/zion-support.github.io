@@ -7,14 +7,12 @@ import { Server, Clock, MapPin } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card',
 import { Server, Clock, MapPin } from './lucide-react',
 interface ServiceDetailsProps {
-  country: string,
-}
+  country: string}
 // Component to show service details for the selected country,
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database),
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string string[]> = {
-,
 // Component to show service details for the selected country,
 export /**,
  * ServiceDetails - Function description,
@@ -54,8 +52,7 @@ function ServiceDetails() {
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder,
-      "default": "https: //source.unsplash.com/featured/900x700/?datacenter",
-    }
+      "default": "https: //source.unsplash.com/featured/900x700/?datacenter"}
     return regions[country] |regions["default"]}
     };
     return regions[country] || regions["default"]};
@@ -76,8 +73,7 @@ function ServiceDetails() {
            `Response times are typically within 4 hours for metropolitan areas. ` +,
            `Please have site access permissions and contact details ready for our technicians. ` +,
            `For remote locations, additional travel fees may apply.`}
-  const datacenters = getDatacenters(country),
-};
+  const datacenters = getDatacenters(country)};
   const datacenters = getDatacenters(country);
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">,
@@ -123,8 +119,7 @@ function ServiceDetails() {
                   key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">,
 interface ServiceDetailsProps {
-  country: string,
-}
+  country: string}
 ,
 // Component to show service details for the selected country,
 export function ServiceDetails({ country }: ServiceDetailsProps) {
@@ -152,8 +147,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia";
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
       // Default placeholder,
-      "default": "https: //source.unsplash.com/featured/900x700/?datacenter",
-    };
+      "default": "https: //source.unsplash.com/featured/900x700/?datacenter"};
     return regions[country] || regions["default"]};
   // Get region-specific instructions,
   const getRegionalInstructions = (country: string): string => {

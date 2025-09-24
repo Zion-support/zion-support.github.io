@@ -50,8 +50,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
       case 'skeleton':,
         return renderSkeleton(),
       default: ,
-        return renderSpinner(),
-    }
+        return renderSpinner()}
   };
   return (
     <div

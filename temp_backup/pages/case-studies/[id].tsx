@@ -147,6 +147,5 @@ export default function CaseStudyPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

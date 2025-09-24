@@ -29,15 +29,13 @@ export interface EmergingTechService20o26 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 const contact = {
   mobile: '+1 30o2 464 0950';
@@ -221,7 +219,7 @@ export const emergingTechServices20o26: EmergingTechService20o26[] = [
     textColor: 'text-green-40o0';
     link: 'https://ziontechgroup.com/ai-iot-intelligence-platform';
     marketPosition:,
-      'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device window.performance.';
+      'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device window.window.performance.';
     targetAudience:,
       'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies';
     trialDays: 14;
@@ -559,8 +557,7 @@ export const emergingTechServices20o26: EmergingTechService20o26[] = [
 ],
 export const getEmergingTechServices20o26ByCategory = (category: string) => {
   return emergingTechServices20o26.filter(
-    service => service.category === category),
-};
+    service => service.category === category)};
 export const getPopularEmergingTechServices20o26 = () => {
   return emergingTechServices20o26.filter(service => service.popular)};
 export const getEmergingTechServices20o26ByPriceRange = (

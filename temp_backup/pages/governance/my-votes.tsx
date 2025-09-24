@@ -15,6 +15,5 @@ export default function MyVotesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

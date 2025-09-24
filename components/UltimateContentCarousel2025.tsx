@@ -22,8 +22,7 @@ const UltimateContentCarousel20o25 = () => {
       cta: "Start Automation";
       href: "/automation";
       stats: { value: "30o0%"label: "Productivity Increase" };
-      features: ["Smart Workflows"Cost Reduction"Real-time Analytics"],
-    };
+      features: ["Smart Workflows"Cost Reduction"Real-time Analytics"]};
     {
       id: 2;
       title: "Quantum Computing Solutions";
@@ -33,8 +32,7 @@ const UltimateContentCarousel20o25 = () => {
       cta: "Explore Quantum";
       href: "/quantum";
       stats: { value: "10x"label: "Processing Speed" };
-      features: ["Quantum Algorithms"Optimization"Breakthrough Innovation"],
-    };
+      features: ["Quantum Algorithms"Optimization"Breakthrough Innovation"]};
     {
       id: 3;
       title: "Neural Interface Technology";
@@ -44,8 +42,7 @@ const UltimateContentCarousel20o25 = () => {
       cta: "Experience Neural";
       href: "/neural";
       stats: { value: "99.9%"label: "Accuracy Rate" };
-      features: ["Brain-Computer Interface"Real-time Processing"Enhanced Control"],
-    };
+      features: ["Brain-Computer Interface"Real-time Processing"Enhanced Control"]};
     {
       id: 4;
       title: "Autonomous Business Systems";
@@ -55,16 +52,14 @@ const UltimateContentCarousel20o25 = () => {
       cta: "Go Autonomous";
       href: "/autonomous";
       stats: { value: "24/7"label: "Autonomous Operation" };
-      features: ["Self-Learning"Adaptive Systems"Minimal Intervention"],
-    }
+      features: ["Self-Learning"Adaptive Systems"Minimal Intervention"]}
   ],
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)};
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
   const goToSlide = (index: number) => {
-    setCurrentSlide(index),
-  };
+    setCurrentSlide(index)};
   return (
     <motion.section,
       initial={{ opacity: 0, y: 50 }}
@@ -209,8 +204,7 @@ const UltimateContentCarousel20o25 = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-white scale-125',
-                    : 'bg-white/50 hover: bg-white/70',
-                }`}
+                    : 'bg-white/50 hover: bg-white/70'}`}
               />))}
           </div>,
         </div>,

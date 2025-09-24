@@ -41,8 +41,7 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       impact: 'Reduce operational costs by 80% while increasing efficiency by 30o0%';
       icon: Bot;
       color: 'from-blue-50o0 to-cyan-50o0';
-      roi: '50o0% ROI',
-    };
+      roi: '50o0% ROI'};
     {
       id: 'intelligent-workflows';
       title: 'Intelligent Workflow Automation';
@@ -55,8 +54,7 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       impact: 'Streamline operations and eliminate bottlenecks automatically';
       icon: Workflow;
       color: 'from-green-50o0 to-emerald-50o0';
-      roi: '40o0% ROI',
-    };
+      roi: '40o0% ROI'};
     {
       id: 'predictive-analytics';
       title: 'Predictive Analytics Engine';
@@ -69,8 +67,7 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       impact: 'Make data-driven decisions with 95% accuracy';
       icon: BarChart3;
       color: 'from-purple-50o0 to-pink-50o0';
-      roi: '60o0% ROI',
-    };
+      roi: '60o0% ROI'};
     {
       id: 'cognitive-automation';
       title: 'Cognitive Process Automation';
@@ -83,8 +80,7 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       impact: 'Automate complex cognitive tasks with human-level accuracy';
       icon: Brain;
       color: 'from-orange-50o0 to-red-50o0';
-      roi: '70o0% ROI',
-    }
+      roi: '70o0% ROI'}
   ],
   const automationStats = [
     { label: 'Process Efficiency'value: '95%'icon: Gaugedescription: 'Average improvement' };
@@ -99,32 +95,28 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       description: 'Fully automated production lines with predictive maintenance and quality control.';
       benefits: ['Zero-defect production'Predictive maintenance'Supply chain optimization'Energy efficiency'];
       icon: Cog;
-      savings: '$2M+ annually',
-    };
+      savings: '$2M+ annually'};
     {
       name: 'Healthcare';
       title: 'Automated Healthcare Systems';
       description: 'AI-powered patient carediagnosis assistanceand administrative automation.';
       benefits: ['Patient monitoring'Diagnostic assistance'Administrative automation'Treatment optimization'];
       icon: Shield;
-      savings: '$5M+ annually',
-    };
+      savings: '$5M+ annually'};
     {
       name: 'Finance';
       title: 'Intelligent Financial Operations';
       description: 'Automated tradingrisk managementand compliance monitoring systems.';
       benefits: ['Automated trading'Risk assessment'Compliance monitoring'Fraud detection'];
       icon: TrendingUp;
-      savings: '$10M+ annually',
-    };
+      savings: '$10M+ annually'};
     {
       name: 'Retail';
       title: 'Smart Retail Automation';
       description: 'Inventory managementcustomer serviceand personalized shopping experiences.';
       benefits: ['Inventory optimization'Customer service bots'Personalized recommendations'Supply chain management'];
       icon: Users;
-      savings: '$3M+ annually',
-    }
+      savings: '$3M+ annually'}
   ],
   const automationFeatures = [
     {
@@ -132,29 +124,25 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
       title: 'AI-Powered Decision Making';
       description: 'Advanced AI systems that make complex business decisions autonomously.';
       icon: Brain;
-      capabilities: ['Pattern recognition'Predictive modeling'Risk assessment'Strategic planning'],
-    };
+      capabilities: ['Pattern recognition'Predictive modeling'Risk assessment'Strategic planning']};
     {
       category: 'Integration';
       title: 'Seamless System Integration';
       description: 'Connect and automate across all your existing systems and platforms.';
       icon: Layers;
-      capabilities: ['API integration'Data synchronization'Workflow orchestration'Real-time monitoring'],
-    };
+      capabilities: ['API integration'Data synchronization'Workflow orchestration'Real-time monitoring']};
     {
       category: 'Scalability';
       title: 'Infinite Scalability';
       description: 'Automation solutions that grow with your business needs.';
       icon: Globe;
-      capabilities: ['Cloud-native architecture'Auto-scaling'Global deployment'Multi-tenant support'],
-    };
+      capabilities: ['Cloud-native architecture'Auto-scaling'Global deployment'Multi-tenant support']};
     {
       category: 'Security';
       title: 'Enterprise-Grade Security';
       description: 'Bank-level security for all automated processes and data.';
       icon: Shield;
-      capabilities: ['End-to-end encryption'Access control'Audit trails'Compliance monitoring'],
-    }
+      capabilities: ['End-to-end encryption'Access control'Audit trails'Compliance monitoring']}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -366,6 +354,5 @@ const AdvancedAutomationSolutions20o30Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedAutomationSolutions20o30Showcase;

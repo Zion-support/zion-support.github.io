@@ -12,8 +12,7 @@ export interface ServiceAdItem {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   marketData?: string,
   competitors?: string,
   savings?: string}
@@ -21,8 +20,7 @@ export interface ServiceAdItem {
 interface ServiceAdsProps {
   items: ServiceAdItem[],
   heading?: string,
-  subheading?: string,
-}
+  subheading?: string}
 ,
 const ServiceAds: React.FC<ServiceAdsProps> = ({
   items;

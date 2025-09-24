@@ -22,8 +22,7 @@ interface MilestoneManagerProps {
     comment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
-  refetch: () => Promise<void>,
-}
+  refetch: () => Promise<void>}
 ,
 export function MilestoneManager({
   projectId;

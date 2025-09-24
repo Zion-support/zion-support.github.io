@@ -362,8 +362,7 @@ export default function UltraFuturisticFooter20o37() {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-1/4 left-10 w-24 h-24 bg-gradient-to-r from-purple-50o0/5 to-pink-50o0/5 rounded-full blur-3xl",
@@ -374,8 +373,7 @@ export default function UltraFuturisticFooter20o37() {
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
       </div>,
     </footer>)};

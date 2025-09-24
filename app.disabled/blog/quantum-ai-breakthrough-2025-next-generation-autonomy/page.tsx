@@ -332,6 +332,5 @@ export default function QuantumAIBreakthroughPage() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

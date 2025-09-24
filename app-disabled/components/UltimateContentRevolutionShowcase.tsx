@@ -155,8 +155,7 @@ const UltimateContentRevolutionShowcase = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -167,8 +166,7 @@ const UltimateContentRevolutionShowcase = () => {
       case 'resource':,
         return 'bg-purple-50o0/20 text-purple-30o0 border-purple-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-30o0 border-gray-50o0/30',
-    }
+        return 'bg-gray-50o0/20 text-gray-30o0 border-gray-50o0/30'}
   };
   return (
     <div className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -225,8 +223,7 @@ const UltimateContentRevolutionShowcase = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -237,8 +234,7 @@ const UltimateContentRevolutionShowcase = () => {
             <div
               key={content.id}
               className={`bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                content.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                content.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured Badge */}
               {content.featured && (
@@ -335,6 +331,5 @@ const UltimateContentRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentRevolutionShowcase;

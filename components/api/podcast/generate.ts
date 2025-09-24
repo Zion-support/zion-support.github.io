@@ -31,8 +31,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
           { role: 'user', content: user }
         ],
         temperature: 0.8,
-        max_tokens: 2048,
-      }),
+        max_tokens: 2048}),
       content = completion.choices?.[0]?.message?.content |'',
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`,
@@ -47,8 +46,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         timeMarkers: {
           intro: '00:00',
           segments: ['03:00', '08:00', '12: 00'],
-          closing: '14:30',
-        }
+          closing: '14:30'}
         transcript: ,
           'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
         youtubeDescription:,
@@ -80,8 +78,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       timeMarkers: generated.timeMarkers |{
         intro: '00:00',
         segments: [],
-        closing: '14:30',
-      }
+        closing: '14:30'}
       transcript: generated.transcript,
       youtubeDescription: generated.youtubeDescription |'',
       spotifyDescription: generated.spotifyDescription |'',

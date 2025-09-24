@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   Phone,
   Mail,
   MapPin,
@@ -55,7 +53,6 @@ import {
   Award;
   CheckCircle;} from 'lucide-react',import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom,
-,
   Rocket, Shield, Cpu, Target, Microscope, Users,
   Facebook, Twitter, Linkedin, Instagram, Youtube,
   Github, ArrowRight, Heart, Star, Award, CheckCircle,
@@ -63,63 +60,51 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
 const serviceCategories = [
   {
     title: ' AI & Consciousness',
     services: [
       {
         name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-platform',
-      }
+        href: '/ai-consciousness-evolution-platform'}
       {
         name: 'AI Emotional Intelligence',
-        href: '/ai-emotion-intelligence-platform',
-      }
+        href: '/ai-emotion-intelligence-platform'}
       {
         name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-      }
+        href: '/ai-creativity-orchestrator'}
       {
         name: 'AI Autonomous Business Manager',
-        href: '/ai-autonomous-business-manager',
-      }
+        href: '/ai-autonomous-business-manager'}
     ]}
     title: ' Quantum & Emerging Tech',
     services: [
       {
         name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-      }
+        href: '/quantum-internet-security-gateway'}
       {
         name: 'Quantum Learning Accelerator',
-        href: '/quantum-learning-accelerator',
-      }
+        href: '/quantum-learning-accelerator'}
       {
         name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-platform',
-      }
+        href: '/quantum-financial-trading-platform'}
       {
         name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-      }
+        href: '/quantum-cloud-infrastructure'}
     ]}
   {
     title: ' Biotech & DNA Computing',
     services: [
       {
         name: 'DNA Computing Platform',
-        href: '/biotech-dna-computing-platform',
-      }
+        href: '/biotech-dna-computing-platform'}
       {
         name: 'Personalized Nutrition',
-        href: '/biotech-personalized-nutrition',
-      }
+        href: '/biotech-personalized-nutrition'}
       {
         name: 'Predictive Health Analytics',
-        href: '/ai-predictive-health-analytics',
-      }
+        href: '/ai-predictive-health-analytics'}
       { name: 'Research Automation', href: '/advanced-research-automation' }
     ]},  {
     title: ' Enterprise IT Solutions',
@@ -134,27 +119,22 @@ const serviceCategories = [
       { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
       {
         name: 'Autonomous IT Operations',
-        href: '/autonomous-it-operations-center',
-      }
+        href: '/autonomous-it-operations-center'}
       {
         name: 'AI Enterprise Security',
-        href: '/ai-powered-enterprise-security',
-      }
+        href: '/ai-powered-enterprise-security'}
       {
         name: 'Intelligent Data Governance',
-        href: '/intelligent-data-governance',
-      }
+        href: '/intelligent-data-governance'}
     ]}
     title: ' Space & Metaverse Tech',
     services: [
       {
         name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
-      }
+        href: '/space-mining-automation-platform'}
       {
         name: 'Metaverse Digital Reality',
-        href: '/metaverse-digital-reality-platform',
-      }
+        href: '/metaverse-digital-reality-platform'}
       { name: 'Quantum Research Platform', href: '/quantum-research-platform' }
       { name: 'AI Research Assistant', href: '/ai-research-assistant' }
     ]}
@@ -163,20 +143,16 @@ const serviceCategories = [
     services: [
       {
         name: 'AI Business Intelligence Suite 2030',
-        href: '/ai-business-intelligence-suite-2030',
-      }
+        href: '/ai-business-intelligence-suite-2030'}
       {
         name: 'AI Customer Experience Platform 2030',
-        href: '/ai-customer-experience-platform-2030',
-      }
+        href: '/ai-customer-experience-platform-2030'}
       {
         name: 'AI Marketing Automation Suite 2030',
-        href: '/ai-marketing-automation-2030',
-      }
+        href: '/ai-marketing-automation-2030'}
       {
         name: 'AI HR Management Suite 2030',
-        href: '/ai-hr-management-suite-2030',
-      }
+        href: '/ai-hr-management-suite-2030'}
     ]}],      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
@@ -234,8 +210,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
 const serviceCategories = [
   {
     title: ' AI & Consciousness';
@@ -392,8 +367,7 @@ const contact_info = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com'}
 ,
 const service_categories = [
   {
@@ -540,19 +514,16 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-  }
+    icon: Linkedin}
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
   {
     name: 'Facebook',
     href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook,
-  }
+    icon: Facebook}
   {
     name: 'Instagram',
     href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-  }
+    icon: Instagram}
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
 ],
@@ -1339,6 +1310,5 @@ export default function UltraFuturisticFooter2030() {
             </div>,
           </div>,
         </div>,
-      </div>)),
-}
+      </div>))}
 }}}}}))))))))))))))))))))))))))))))))

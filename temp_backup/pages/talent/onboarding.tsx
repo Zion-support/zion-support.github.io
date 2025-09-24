@@ -121,8 +121,7 @@ export default function TalentOnboardingPage() {
             <p className="text-high-contrast-secondary">You’ll appear in search results shortly.</p>,
           </div>,
         </div>,
-      </div>),
-  }
+      </div>)}
 ,
   return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast flex items-center justify-center p-4 md: p-8">,
@@ -365,8 +364,7 @@ function FileUpload(props: {
   label: string;
   accept?: string;
   fileData: FileData | null | undefined;
-  onFileChange: (file: FileData | null) => void,
-}) {
+  onFileChange: (file: FileData | null) => void}) {
   const { id, label, accept, fileData, onFileChange } = props;
   const [localError, setLocalError] = useState<string | null>(null);
   return (

@@ -21,6 +21,5 @@ export default function Comprehensive2025ServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

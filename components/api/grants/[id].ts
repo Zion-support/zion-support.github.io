@@ -10,8 +10,7 @@ import type {
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants'),
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true }),
-}
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })}
 }
 ,
 function grantPath(id: string) {
@@ -71,8 +70,7 @@ function readGrant(id: string): GrantApplication | null {
   ensureDir(),
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true }),
-}
+    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })}
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`),function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {

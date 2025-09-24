@@ -15,6 +15,5 @@ export default function EnergyPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

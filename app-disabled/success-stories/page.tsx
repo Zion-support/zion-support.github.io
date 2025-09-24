@@ -165,6 +165,5 @@ export default function SuccessStoriesPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

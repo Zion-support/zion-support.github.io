@@ -22,8 +22,7 @@ export const withRouteSplitting = (Component: ComponentType<any>) => {
 // Component-based code splitting,
 interface LazyComponentProps {
   children: React.ReactNode,
-  fallback?: React.ReactNode,
-}
+  fallback?: React.ReactNode}
 ,
 export const LazyComponent = ({ children, fallback }: LazyComponentProps) => (
   <Suspense

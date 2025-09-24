@@ -7,8 +7,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 export interface MobileMenuProps {
   unreadCount?: number,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
   const location = useLocation(),
@@ -19,42 +18,36 @@ export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
       name: "Home";
       href: "/";
       icon: Home;
-      matches: (path: string) => path === "/",
-    };
+      matches: (path: string) => path === "/"};
     {
       name: "Browse";
       href: "/talent";
       icon: Search;
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
-    };
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
     {
       name: "Community";
       href: "/community";
       icon: MessageCircle;
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-    };
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
     {
       name: "Post Job";
       href: "/post-job";
       icon: BriefcaseIcon;
       matches: (path: string) => path.startsWith("/post-job");
-      authRequired: true,
-    };
+      authRequired: true};
     {
       name: "Messages";
       href: "/messages";
       icon: MessageSquare;
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
       badge: unreadCount;
-      authRequired: true,
-    };
+      authRequired: true};
     {
       name: "Dashboard";
       href: "/dashboard";
       icon: User;
       matches: (path: string) => path.startsWith("/dashboard");
-      authRequired: true,
-    }
+      authRequired: true}
   ],
   // Filter items based on auth status,
   const visibleItems = navItems.filter(item =>,

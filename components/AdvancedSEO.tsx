@@ -11,8 +11,7 @@ interface AdvancedSEOProps {
   modifiedTime?: string,
   author?: string,
   section?: string,
-  tags?: string[],
-}
+  tags?: string[]}
 ,
 export default function AdvancedSEO({
   title;
@@ -89,8 +88,7 @@ export default function AdvancedSEO({
       <script
         type="application/ld+json",
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+          __html: JSON.stringify(structuredData)}}
        />,
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https: //fonts.googleapis.com"  />,

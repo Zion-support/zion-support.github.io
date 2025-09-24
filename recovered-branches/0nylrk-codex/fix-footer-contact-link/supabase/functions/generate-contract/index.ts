@@ -9,8 +9,7 @@ interface Milestone {
   title: string,
   description: string,
   dueDate: string,
-  estimatedHours: number,
-}
+  estimatedHours: number}
 ,
 serve(async req => {
   // Handle CORS preflight requests,

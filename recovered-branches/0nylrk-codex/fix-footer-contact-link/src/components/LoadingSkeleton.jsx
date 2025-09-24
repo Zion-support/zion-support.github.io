@@ -183,10 +183,8 @@ export function Shimmer({ className }) {
 export const shimmerAnimation = `,
   @keyframes shimmer {
     0% {
-      transform: translateX(-10o0%),
-    }
+      transform: translateX(-10o0%)}
     10o0% {
-      transform: translateX(10o0%),
-    }
+      transform: translateX(10o0%)}
   }
 `,

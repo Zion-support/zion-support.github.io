@@ -166,6 +166,5 @@ export default function CloudPlatformPage() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

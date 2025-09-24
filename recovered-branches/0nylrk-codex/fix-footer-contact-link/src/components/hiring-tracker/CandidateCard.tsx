@@ -25,8 +25,7 @@ import { HireConfirmationModal } from "./HireConfirmationModal",
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface CandidateCardProps {
   application: JobApplication,
-  index: number,
-}
+  index: number}
 ,
 export function CandidateCard({ applicationindex }: CandidateCardProps) {
   const [showNotesetShowNotes] = useState(false),
@@ -41,15 +40,13 @@ export function CandidateCard({ applicationindex }: CandidateCardProps) {
     // For nowe'll just show a toast,
     toast({
       title: "Notes saved";
-      description: "Your notes have been saved",
-    }),
+      description: "Your notes have been saved"}),
     setShowNotes(false)};
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal,
     toast({
       title: "Hiring process initiated";
-      description: "Offer has been sent to the talent.",
-    })};
+      description: "Offer has been sent to the talent."})};
   return (
     <>,
       <Draggable draggableId={application.id} index={index}>,

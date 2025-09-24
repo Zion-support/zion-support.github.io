@@ -9,8 +9,7 @@ import {
   LoadingState;
   ScoreDialog} from "./applications",
 interface JobApplicationsTableProps {
-  jobId: string,
-}
+  jobId: string}
 ,
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const {
@@ -30,21 +29,17 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       // If it's not already viewedmark it as viewed,
       const application = applications.find(app => app.id === applicationId),
       if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId),
-      }
+        await markApplicationAsViewed(applicationId)}
     } finally {
       setProcessingId(null)}
   };
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application),
-    setShowScoreDialog(true),
-  };
+    setShowScoreDialog(true)};
   const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId),
-  };
+    await markApplicationAsViewed(applicationId)};
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch(),
-  };
+    refetch()};
   if (isLoading) {
     return <LoadingState />}
 ,

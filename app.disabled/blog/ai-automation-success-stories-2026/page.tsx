@@ -485,6 +485,5 @@ export default function AIAutomationSuccessStories20o26() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

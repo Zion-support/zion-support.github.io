@@ -25,6 +25,5 @@ export default function FAQPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

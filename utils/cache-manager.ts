@@ -20,8 +20,7 @@ export class CacheManager {
     if (!item) return null,
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key),
-      return null,
-    }
+      return null}
 ,
     return item.data}
 ,

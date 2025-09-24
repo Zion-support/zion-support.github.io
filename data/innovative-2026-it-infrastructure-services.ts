@@ -30,15 +30,13 @@ export interface Innovative20o26ITInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastructureService[] = [
   // Zero Trust Network Architecture,
@@ -83,15 +81,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade zero trust platform with micro-segmentation, continuous monitoring, and automated threat response. Includes professional services and 24/7 support.';
     launchDate: '20o26-0o1-10';
     customers: 150;
     rating: 4.9;
-    reviews: 75,
-  };
+    reviews: 75};
   // Edge Computing Orchestration Platform,
   {
     id: 'edge-computing-orchestration-20o26';
@@ -134,15 +130,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive edge computing platform with AI-powered orchestration, real-time monitoring, and automated optimization. Includes professional services and support.';
     launchDate: '20o26-0o1-20';
     customers: 20o0;
     rating: 4.8;
-    reviews: 10o0,
-  };
+    reviews: 10o0};
   // 5G Private Network Infrastructure,
   {
     id: '5g-private-network-infrastructure-20o26';
@@ -185,15 +179,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Complete 5G private network solution with core network, radio access, and management systems. Includes professional installation and ongoing support.';
     launchDate: '20o26-0o2-0o1';
     customers: 50;
     rating: 4.9;
-    reviews: 25,
-  };
+    reviews: 25};
   // Quantum-Safe Cloud Infrastructure,
   {
     id: 'quantum-safe-cloud-infrastructure-20o26';
@@ -236,15 +228,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced quantum-safe infrastructure with post-quantum cryptography, quantum key distribution, and hybrid encryption systems. Includes professional services and ongoing support.';
     launchDate: '20o26-0o2-15';
     customers: 75;
     rating: 4.9;
-    reviews: 40,
-  };
+    reviews: 40};
   // Autonomous DevOps Platform,
   {
     id: 'autonomous-devops-platform-20o26';
@@ -287,15 +277,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive autonomous DevOps platform with AI-powered operations, automated workflows, and intelligent optimization. Includes professional services and support.';
     launchDate: '20o26-0o1-25';
     customers: 30o0;
     rating: 4.8;
-    reviews: 150,
-  };
+    reviews: 150};
   // Hyperconverged Infrastructure Platform,
   {
     id: 'hyperconverged-infrastructure-platform-20o26';
@@ -338,22 +326,19 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced hyperconverged infrastructure with AI-powered management, automated optimization, and enterprise-grade reliability. Includes professional services and ongoing support.';
     launchDate: '20o26-0o3-0o1';
     customers: 10o0;
     rating: 4.8;
-    reviews: 50,
-  }
+    reviews: 50}
 ],
 export const getPopularITInfrastructureServices = () => {
   return innovative20o26ITInfrastructureServices.filter(service => service.popular)};
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return innovative20o26ITInfrastructureServices.filter(service =>,
-    service.category.toLowerCase().includes(category.toLowerCase())),
-};
+    service.category.toLowerCase().includes(category.toLowerCase()))};
 export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative20o26ITInfrastructureServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', '')),

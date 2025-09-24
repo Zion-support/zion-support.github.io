@@ -127,6 +127,5 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o25UltimateBusinessTransformationBanner;

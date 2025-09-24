@@ -12,18 +12,15 @@ export interface ComprehensivePricingPlan20o28 {
   addOns: {
     name: string,
     price: number,
-    description: string,
-  }[],
+    description: string}[],
   comparison: {
     feature: string,
     included: boolean,
-    details?: string,
-  }[],
+    details?: string}[],
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
 }
 ,
 export interface ServiceCategory20o28 {
@@ -38,8 +35,7 @@ export interface ServiceCategory20o28 {
     marketPrice: string,
     roi: string,
     features: string[],
-    benefits: string[],
-  }[]}
+    benefits: string[]}[]}
 ,
 export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] = [
   {
@@ -79,18 +75,15 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
       {
         name: "Advanced Analytics";
         price: 50o0;
-        description: "Enhanced reporting and insights",
-      };
+        description: "Enhanced reporting and insights"};
       {
         name: "Priority Support";
         price: 30o0;
-        description: "24/7 dedicated support",
-      };
+        description: "24/7 dedicated support"};
       {
         name: "Custom Integrations";
         price: 80o0;
-        description: "Tailored system integrations",
-      }
+        description: "Tailored system integrations"}
     ];
     comparison: [
       { feature: "AI Services", included: true, details: "5 core services" };
@@ -103,8 +96,7 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "professional-20o28";
@@ -155,23 +147,19 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
       {
         name: "Quantum Computing Access";
         price: 50o00;
-        description: "Access to quantum computing services",
-      };
+        description: "Access to quantum computing services"};
       {
         name: "Space Technology Platform";
         price: 80o00;
-        description: "Advanced space technology solutions",
-      };
+        description: "Advanced space technology solutions"};
       {
         name: "Biotechnology Platform";
         price: 60o00;
-        description: "AI-powered biotechnology solutions",
-      };
+        description: "AI-powered biotechnology solutions"};
       {
         name: "Autonomous Vehicles Platform";
         price: 10o000;
-        description: "Self-driving technology solutions",
-      }
+        description: "Self-driving technology solutions"}
     ];
     comparison: [
       { feature: "AI Services", included: true, details: "15+ advanced services" };
@@ -186,8 +174,7 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   };
   {
     id: "enterprise-20o28";
@@ -236,23 +223,19 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
       {
         name: "Custom AI Development";
         price: 150o00;
-        description: "Tailored AI solutions development",
-      };
+        description: "Tailored AI solutions development"};
       {
         name: "White-label Solutions";
         price: 20o000;
-        description: "Branded solutions for resale",
-      };
+        description: "Branded solutions for resale"};
       {
         name: "Advanced R&D";
         price: 250o00;
-        description: "Custom research and development",
-      };
+        description: "Custom research and development"};
       {
         name: "Quantum Internet Access";
         price: 30o000;
-        description: "Quantum internet platform access",
-      }
+        description: "Quantum internet platform access"}
     ];
     comparison: [
       { feature: "AI Services", included: true, details: "All 25+ services" };
@@ -271,8 +254,7 @@ export const COMPREHENSIVE_PRICING_PLANS_20o28: ComprehensivePricingPlan20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    }
+      website: "https://ziontechgroup.com"}
   }
 ],
 export const SERVICE_CATEGORIES_20o28: ServiceCategory20o28[] = [

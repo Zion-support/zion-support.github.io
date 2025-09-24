@@ -495,6 +495,5 @@ export default function SitemapPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

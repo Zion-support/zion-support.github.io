@@ -29,15 +29,13 @@ const ServiceComparison: React.FC<ServiceComparisonProps> = ({
   // Get services to display,
   let services: MicroSaasService[] = [],
   if (propServices) {
-    services = propServices,
-  } else if (category) {
+    services = propServices} else if (category) {
     services = getServicesByCategory(category)} else {
     services = []}
 ,
   const handleServiceToggle = (serviceId: string) => {
     if (selectedServices.includes(serviceId)) {
-      setSelectedServices(selectedServices.filter(id => id !== serviceId)),
-    } else if (selectedServices.length < 3) {
+      setSelectedServices(selectedServices.filter(id => id !== serviceId))} else if (selectedServices.length < 3) {
       setSelectedServices([...selectedServices, serviceId])}
   };
   const startComparison = () => {
@@ -265,8 +263,7 @@ const ServiceComparison: React.FC<ServiceComparisonProps> = ({
               className={`relative cursor-pointer transition-all duration-30o0 ${
                 selectedServices.includes(service.id),
                   ? 'border-blue-50o0 bg-blue-50o0/10',
-                  : 'border-gray-80o0 hover: border-gray-60o0',
-              }`}
+                  : 'border-gray-80o0 hover: border-gray-60o0'}`}
               onClick={() => handleServiceToggle(service.id)}
             >,
               {/* Selection Indicator */}

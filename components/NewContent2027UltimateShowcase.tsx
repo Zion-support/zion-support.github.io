@@ -21,8 +21,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "25,0o00% ROI";
       category: "AI Innovation";
       readingTime: "30 min read";
-      featured: true,
-    };
+      featured: true};
     {
       title: "Quantum Computing Revolution 20o27: Enterprise Implementation Guide";
       description: "Complete roadmap for implementing quantum computing solutions in enterprise environments with proven ROI strategies.";
@@ -33,8 +32,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "18,0o00% ROI";
       category: "Quantum Computing";
       readingTime: "35 min read";
-      featured: true,
-    };
+      featured: true};
     {
       title: "Neural Interface Technology: The Future of Human-AI Collaboration";
       description: "Explore cutting-edge neural interface technologies that enable seamless brain-computer interaction for enhanced productivity.";
@@ -45,8 +43,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "12,0o00% ROI";
       category: "Neural Technology";
       readingTime: "28 min read";
-      featured: false,
-    };
+      featured: false};
     {
       title: "Autonomous Business Ecosystems: Self-Managing Enterprise Systems";
       description: "Learn how autonomous AI systems can manage entire business ecosystems with minimal human intervention.";
@@ -57,8 +54,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "22,0o00% ROI";
       category: "Autonomous AI";
       readingTime: "32 min read";
-      featured: true,
-    };
+      featured: true};
     {
       title: "Synthetic Intelligence: Beyond Traditional AI Limitations";
       description: "Discover synthetic intelligence technologies that transcend current AI capabilities and create truly intelligent systems.";
@@ -69,8 +65,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "30,0o00% ROI";
       category: "Synthetic AI";
       readingTime: "40 min read";
-      featured: true,
-    };
+      featured: true};
     {
       title: "Edge Computing Revolution: Distributed Intelligence Networks";
       description: "Comprehensive guide to implementing edge computing solutions for real-time AI processing and decision-making.";
@@ -81,8 +76,7 @@ const NewContent20o27UltimateShowcase = () => {
       stats: "15,0o00% ROI";
       category: "Edge Computing";
       readingTime: "25 min read";
-      featured: false,
-    }
+      featured: false}
   ],
   const featuredItems = contentItems.filter(item => item.featured),
   return (
@@ -186,8 +180,7 @@ const NewContent20o27UltimateShowcase = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
-                    currentSlide === index ? 'bg-purple-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0',
-                  }`}
+                    currentSlide === index ? 'bg-purple-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
                 />))}
             </div>,
           </div>,
@@ -262,6 +255,5 @@ const NewContent20o27UltimateShowcase = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default NewContent20o27UltimateShowcase;

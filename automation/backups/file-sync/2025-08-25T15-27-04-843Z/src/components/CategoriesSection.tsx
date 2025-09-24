@@ -34,16 +34,13 @@ const categories = [
 const specialServices = [
   {
     title: "IT Onsite Services";
-    link: "/it-onsite-services",
-  };
+    link: "/it-onsite-services"};
   {
     title: "Comprehensive Services";
-    link: "/comprehensive-services",
-  };
+    link: "/comprehensive-services"};
   {
     title: "Services Comparison";
-    link: "/services-comparison",
-  }
+    link: "/services-comparison"}
 ],
 interface CategoriesSectionProps {
   showTitle?: boolean}
@@ -53,8 +50,7 @@ const containerVariants ={
     opacity: 1;
     transition: {
       staggerChildren: 0.1;
-      delayChildren: 0.2,
-    }
+      delayChildren: 0.2}
   }
 };
 const itemVariants ={
@@ -64,8 +60,7 @@ const itemVariants ={
     opacity: 1;
     transition: {
       duration: 0.5;
-      ease: "easeOut",
-    }
+      ease: "easeOut"}
   }
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -75,8 +70,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 opacity-5">,
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`;
-          backgroundSize: '50px 50px',
-        }}></div>,
+          backgroundSize: '50px 50px'}}></div>,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,
         {showTitle && (
@@ -146,6 +140,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </Link>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

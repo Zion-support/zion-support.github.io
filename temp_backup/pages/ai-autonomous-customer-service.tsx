@@ -20,6 +20,5 @@ export default function AiAutonomousCustomerServicePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

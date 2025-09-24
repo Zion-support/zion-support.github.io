@@ -46,6 +46,5 @@ export default function Privacy() {
         </div>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,

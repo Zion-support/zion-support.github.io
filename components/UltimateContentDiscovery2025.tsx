@@ -24,8 +24,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '12.5k';
       rating: 4.9;
       featured: true;
-      image: '/api/placeholder/40o0/250',
-    };
+      image: '/api/placeholder/40o0/250'};
     {
       id: 2;
       title: "Quantum Computing: The Future is Now";
@@ -36,8 +35,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '8.2k';
       rating: 4.8;
       featured: false;
-      image: '/api/placeholder/40o0/250',
-    };
+      image: '/api/placeholder/40o0/250'};
     {
       id: 3;
       title: "Automation Mastery: From Zero to Hero";
@@ -48,8 +46,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '15.3k';
       rating: 4.9;
       featured: true;
-      image: '/api/placeholder/40o0/250',
-    };
+      image: '/api/placeholder/40o0/250'};
     {
       id: 4;
       title: "Cloud Infrastructure Best Practices";
@@ -60,8 +57,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '6.7k';
       rating: 4.7;
       featured: false;
-      image: '/api/placeholder/40o0/250',
-    };
+      image: '/api/placeholder/40o0/250'};
     {
       id: 5;
       title: "Neural Networks Explained Simply";
@@ -72,8 +68,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '9.8k';
       rating: 4.8;
       featured: false;
-      image: '/api/placeholder/40o0/250',
-    };
+      image: '/api/placeholder/40o0/250'};
     {
       id: 6;
       title: "The Future of Work: AI Integration";
@@ -84,8 +79,7 @@ const UltimateContentDiscovery20o25 = () => {
       views: '11.2k';
       rating: 4.9;
       featured: true;
-      image: '/api/placeholder/40o0/250',
-    }
+      image: '/api/placeholder/40o0/250'}
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -94,8 +88,7 @@ const UltimateContentDiscovery20o25 = () => {
       case 'guide': return <BookOpen className="w-4 h-4"  />,
       case 'tutorial': return <Zap className="w-4 h-4"  />,
       case 'whitepaper': return <FileText className="w-4 h-4"  />,
-      default: return <BookOpen className="w-4 h-4"  />,
-    }
+      default: return <BookOpen className="w-4 h-4"  />}
   };
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -143,8 +136,7 @@ const UltimateContentDiscovery20o25 = () => {
                   className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id,
                       ? 'bg-blue-60o0 text-white shadow-lg',
-                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                  }`}
+                      : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
                   {category.icon}
                   <span className="ml-2">{category.name}</span>,

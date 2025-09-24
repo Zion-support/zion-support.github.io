@@ -31,6 +31,5 @@ export default function SyntheticIntelligence20o26Banner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

@@ -757,6 +757,5 @@ export default function ServicesPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

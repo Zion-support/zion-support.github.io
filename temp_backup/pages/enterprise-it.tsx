@@ -167,6 +167,5 @@ export default function EnterpriseITPage() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -5,8 +5,7 @@ interface ToastProps {
   type: ToastType,
   title: string,
   message?: string,
-  onRemove: (id: string) => void,
-}
+  onRemove: (id: string) => void}
 ,
 const Toast: React.FC<ToastProps> = ({
   id;
@@ -25,8 +24,7 @@ const Toast: React.FC<ToastProps> = ({
         return 'bg-yellow-50o0 text-black',
       case 'info':,
       default: ,
-        return 'bg-blue-50o0 text-white',
-    }
+        return 'bg-blue-50o0 text-white'}
   };
   return (
     <div className={`p-4 rounded-lg shadow-lg ${getToastStyles()}`}>,
@@ -41,6 +39,5 @@ const Toast: React.FC<ToastProps> = ({
           ×,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default Toast;

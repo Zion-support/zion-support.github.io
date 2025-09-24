@@ -323,6 +323,5 @@ export default function SustainableAIGreenComputing() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

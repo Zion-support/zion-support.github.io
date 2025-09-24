@@ -447,6 +447,5 @@ export default function Fortune50o0AITransformation() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

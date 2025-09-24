@@ -15,6 +15,5 @@ export default function UiUxDesignChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

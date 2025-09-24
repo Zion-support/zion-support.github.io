@@ -7,14 +7,12 @@ interface PerformanceMetrics {
   cls: number | null,
   ttfb: number | null,
   loadTime: number | null,
-  memoryUsage: number | null,
-}
+  memoryUsage: number | null}
 ,
 interface PerformanceEnhancerProps {
   children: React.ReactNode,
   enableMonitoring?: boolean,
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
-}
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void}
 ,
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   children;
@@ -41,7 +39,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         memoryUsage: null};
       // Get navigation timing,
       if ('performance' in window) {
-        const perfData = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+        const perfData = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         if (perfData) {
           newMetrics.loadTime = perfData.loadEventEnd - perfData.fetchStart,
           newMetrics.ttfb = perfData.responseStart - perfData.fetchStart}

@@ -229,6 +229,5 @@ export default function AI20o26RevolutionaryContentPage() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

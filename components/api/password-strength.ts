@@ -2,8 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 interface PasswordStrengthResult {
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong',
   score: number,
-  feedback: string[],
-}
+  feedback: string[]}
 ,
 export default async function handler(
   req: NextApiRequest;
@@ -28,8 +27,7 @@ function calculatePasswordStrength(password: string): PasswordStrengthResult {
   const feedback: string[] = [],
   // Length check,
   if (password.length < 8) {
-    feedback.push('Password is too short (minimum 8 characters)'),
-  } else if (password.length >= 12) {
+    feedback.push('Password is too short (minimum 8 characters)')} else if (password.length >= 12) {
     score += 2} else {
     score += 1}
 ,

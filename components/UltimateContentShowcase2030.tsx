@@ -56,8 +56,7 @@ const UltimateContentShowcase20o30: React.FC = () => {
             <div
               key={index}
               className={`bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                content.featured ? 'ring-4 ring-purple-20o0' : '',
-              }`}
+                content.featured ? 'ring-4 ring-purple-20o0' : ''}`}
             >,
               <div className='p-8'>,
                 <div className='flex items-center justify-between mb-4'>,
@@ -164,6 +163,5 @@ const UltimateContentShowcase20o30: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentShowcase20o30;

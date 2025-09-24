@@ -31,15 +31,13 @@ export interface Innovative20o26ITInfrastructureService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastructureService[] = [
   // Quantum-Enhanced Cloud Infrastructure,
@@ -84,15 +82,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.';
     launchDate: '20o25-08-15';
     customers: 80o0;
     rating: 4.9;
-    reviews: 40o0,
-  };
+    reviews: 40o0};
   // Edge Computing Orchestration Platform,
   {
     id: 'edge-computing-orchestration';
@@ -135,15 +131,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.';
     launchDate: '20o25-0o7-20';
     customers: 120o0;
     rating: 4.8;
-    reviews: 60o0,
-  };
+    reviews: 60o0};
   // Zero-Trust Network Architecture,
   {
     id: 'zero-trust-network-architecture';
@@ -186,15 +180,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.';
     launchDate: '20o25-09-10';
     customers: 90o0;
     rating: 4.9;
-    reviews: 450,
-  };
+    reviews: 450};
   // AI-Powered DevOps Platform,
   {
     id: 'ai-powered-devops-platform';
@@ -237,15 +229,13 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.';
     launchDate: '20o25-10-15';
     customers: 250o0;
     rating: 4.7;
-    reviews: 1250,
-  };
+    reviews: 1250};
   // Quantum-Safe Data Storage,
   {
     id: 'quantum-safe-data-storage';
@@ -288,13 +278,11 @@ export const innovative20o26ITInfrastructureServices: Innovative20o26ITInfrastru
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.';
     launchDate: '20o25-11-20';
     customers: 110o0;
     rating: 4.8;
-    reviews: 550,
-  }
+    reviews: 550}
 ],

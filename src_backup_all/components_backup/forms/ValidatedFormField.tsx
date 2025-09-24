@@ -12,8 +12,7 @@ interface ValidationRule {
   minLength?: number,
   maxLength?: number,
   pattern?: RegExp,
-  custom?: (value: any) => string | null,
-}
+  custom?: (value: any) => string | null}
 ,
 interface ValidatedFormFieldProps {
   name: string,
@@ -27,8 +26,7 @@ interface ValidatedFormFieldProps {
   className?: string,
   disabled?: boolean,
   showValidIcon?: boolean,
-  debounceMs?: number,
-}
+  debounceMs?: number}
 ,
 export function ValidatedFormField({
   name;
@@ -95,8 +93,7 @@ export function ValidatedFormField({
       case 'invalid':,
         return <AlertCircle className="h-4 w-4 text-red-50o0"  />,
       default: ,
-        return null,
-    }
+        return null}
   };
   const getFieldClasses = () => {
     if (!isTouched) return '',
@@ -106,8 +103,7 @@ export function ValidatedFormField({
       case 'invalid':,
         return 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20',
       default:,
-        return '',
-    }
+        return ''}
   };
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
@@ -260,8 +256,7 @@ export const commonValidations ={
     pattern: validationPatterns.email;
     custom: (value: string) => {
       if (value && !validationPatterns.email.test(value)) {
-        return 'Please enter a valid email address',
-      }
+        return 'Please enter a valid email address'}
       return null}
   };
   password: {
@@ -276,7 +271,6 @@ export const commonValidations ={
     pattern: validationPatterns.phone;
     custom: (value: string) => {
       if (value && !validationPatterns.phone.test(value)) {
-        return 'Please enter a valid phone number',
-      }
+        return 'Please enter a valid phone number'}
       return null}
   }};

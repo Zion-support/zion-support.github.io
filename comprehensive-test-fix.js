@@ -67,15 +67,15 @@ function fixTestFile(filePath) {
     // Ensure proper structure,
     const finalContent = fixedLines.join('\n') + '\n',
     fs.writeFileSync(filePath, finalContent),
-    // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 ,
 // Get all test files,
 const testDir = path.join(__dirname, '__tests__'),
 const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.js')),
-// console.log(`Found ${files.length} test files to fix`),
+// // console.log(`Found ${files.length} test files to fix`),
 files.forEach(file => {
   const filePath = path.join(testDir, file),
   fixTestFile(filePath)}),
-// console.log('Comprehensive test file fixing completed!')))
+// // console.log('Comprehensive test file fixing completed!')))

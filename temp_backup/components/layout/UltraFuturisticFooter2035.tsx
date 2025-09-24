@@ -222,8 +222,7 @@ export default function UltraFuturisticFooter20o35() {
                           className={`flex items-center text-sm transition-colors ${
                             link.featured,
                               ? 'text-cyan-40o0 hover: text-cyan-30o0 font-medium',
-                              : 'text-gray-40o0 hover:text-cyan-40o0',
-                          }`}
+                              : 'text-gray-40o0 hover:text-cyan-40o0'}`}
                         >,
                           {link.featured && <Star className="w-3 h-3 mr-2 text-cyan-40o0"  />}
                           {link.name}
@@ -450,8 +449,7 @@ export default function UltraFuturisticFooter20o35() {
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
          />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-40o0 rounded-full opacity-40",
@@ -461,8 +459,7 @@ export default function UltraFuturisticFooter20o35() {
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
          />,
         <motion.div,
           className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-40o0 rounded-full opacity-30",
@@ -472,8 +469,7 @@ export default function UltraFuturisticFooter20o35() {
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
          />,
       </div>,
       {/* Bottom Gradient Line */}

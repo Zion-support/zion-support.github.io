@@ -612,6 +612,5 @@ export default function AISeosuitePage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

@@ -15,8 +15,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 // Service categories with icons and colors,
 const serviceCategories = [
   {
@@ -24,29 +23,25 @@ const serviceCategories = [
     name: 'Cybersecurity & Threat Intelligence';
     icon: <Shield className="w-8 h-8"  />;
     color: 'from-red-50o0 to-orange-60o0';
-    services: advancedCybersecurityMicroSaasServices,
-  };
+    services: advancedCybersecurityMicroSaasServices};
   {
     id: 'ai-ml';
     name: 'AI & Machine Learning';
     icon: <Brain className="w-8 h-8"  />;
     color: 'from-purple-50o0 to-pink-60o0';
-    services: advancedAIMLMicroSaasServices,
-  };
+    services: advancedAIMLMicroSaasServices};
   {
     id: 'fintech-blockchain';
     name: 'Fintech & Blockchain';
     icon: <Target className="w-8 h-8"  />;
     color: 'from-green-50o0 to-emerald-60o0';
-    services: fintechBlockchainMicroSaasServices,
-  };
+    services: fintechBlockchainMicroSaasServices};
   {
     id: 'healthcare-biotech';
     name: 'Healthcare & Biotech';
     icon: <Heart className="w-8 h-8"  />;
     color: 'from-blue-50o0 to-cyan-60o0';
-    services: healthcareBiotechMicroSaasServices,
-  }
+    services: healthcareBiotechMicroSaasServices}
 ],
 export default function AdvancedPricingShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -61,15 +56,13 @@ export default function AdvancedPricingShowcase20o25() {
     : serviceCategories.find(cat => cat.id === selectedCategory)?.services || [],
   const getPrice = (service: any) => {
     if (billingCycle === 'yearly') {
-      return service.price?.yearly || service.price?.monthly * 12,
-    }
+      return service.price?.yearly || service.price?.monthly * 12}
     return service.price?.monthly || 0};
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly' && service.price?.yearly && service.price?.monthly) {
       const monthlyTotal = service.price.monthly * 12,
       const yearlyPrice = service.price.yearly,
-      return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 10o0),
-    }
+      return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 10o0)}
     return 0};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">,
@@ -151,8 +144,7 @@ export default function AdvancedPricingShowcase20o25() {
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   billingCycle === 'monthly',
                     ? 'bg-white text-gray-90o0 shadow-sm',
-                    : 'text-gray-60o0 hover: text-gray-90o0',
-                }`}
+                    : 'text-gray-60o0 hover: text-gray-90o0'}`}
               >,
                 Monthly,
               </button>,
@@ -161,8 +153,7 @@ export default function AdvancedPricingShowcase20o25() {
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   billingCycle === 'yearly',
                     ? 'bg-white text-gray-90o0 shadow-sm',
-                    : 'text-gray-60o0 hover: text-gray-90o0',
-                }`}
+                    : 'text-gray-60o0 hover: text-gray-90o0'}`}
               >,
                 Yearly,
                 {billingCycle === 'yearly' && (
@@ -183,8 +174,7 @@ export default function AdvancedPricingShowcase20o25() {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === 'all',
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-              }`}
+                  : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
             >,
               All Services ({allServices.length}),
             </button>,
@@ -195,8 +185,7 @@ export default function AdvancedPricingShowcase20o25() {
                 className={`px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                   selectedCategory === category.id,
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                }`}
+                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
               >,
                 {category.icon}
                 {category.name} ({category.services.length}),

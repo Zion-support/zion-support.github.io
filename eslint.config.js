@@ -30,9 +30,7 @@ export default [
 			'components/2025-comprehensive-services-showcase-v2.tsx',
 			'components/AI2025AdvancedAutomationShowcase.tsx',
 			'components/AI2025AdvancedAnalyticsDashboard.tsx',
-			'**/*.min.js',
-		],
-	},
+			'**/*.min.js']},
 	eslintJs.configs.recommended,
 	...tseslint.configs.recommended,
 	{
@@ -40,21 +38,15 @@ export default [
 		languageOptions: {
 			parser: tseslint.parser,
 			ecmaVersion: 2021,
-			sourceType: 'module',
-		},
+			sourceType: 'module'},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
-			'@typescript-eslint': tseslint.plugin,
-		},
+			'@typescript-eslint': tseslint.plugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
 			'@typescript-eslint/no-unused-vars': [
 				'warn',
-				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' },
-			],
-		},
-	},
-]
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}]

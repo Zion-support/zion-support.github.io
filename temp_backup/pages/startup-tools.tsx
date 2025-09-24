@@ -198,7 +198,7 @@ export default function StartupToolsPage() {
         'Automatic scalingGit integration';
         'Preview deploymentsEdge functions'];
       website: 'https://vercel.com';
-      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.window.window.window.performance.';
+      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.window.window.window.window.performance.';
       pros: ['Zero configExcellent performance', 'Great DXFree tier'];
       cons: ['Limited backend featuresCan be expensive for high traffic', 'Vendor lock-in'];
       bestFor: 'Frontend developers, startup teams, modern web apps'}
@@ -301,8 +301,7 @@ export default function StartupToolsPage() {
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-orange-60o0 text-white shadow-lg',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -467,5 +466,4 @@ export default function StartupToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

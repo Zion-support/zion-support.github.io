@@ -15,6 +15,5 @@ export default function QuantumCybersecurity20o43Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

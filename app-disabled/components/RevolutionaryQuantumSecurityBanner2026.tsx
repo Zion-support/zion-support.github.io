@@ -76,6 +76,5 @@ const RevolutionaryQuantumSecurityBanner20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryQuantumSecurityBanner20o26;

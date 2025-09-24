@@ -49,6 +49,5 @@ export default function AIWhitePaperBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

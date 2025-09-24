@@ -32,8 +32,7 @@ export function PageViewsTable() {
   // Format path names for better display,
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page',
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g' '),
-  };
+    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g' ')};
   // Calculate total views to determine percentages,
   const totalViews = pageViews?.reduce((sumpage) => sum + page.count0) || 0,
   return (

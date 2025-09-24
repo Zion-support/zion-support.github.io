@@ -11,8 +11,7 @@ import { useNavigate } from "react-router-dom",
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void,
-}
+  onRequestHire?: (profile: TalentProfile) => void}
 ,
 export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpensetIsHireModalOpen] = useState(false),
@@ -26,14 +25,12 @@ export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCa
     userType: '';
     profileComplete: false;
     createdAt: new Date().toISOString();
-    updatedAt: new Date().toISOString(),
-  };
+    updatedAt: new Date().toISOString()};
   // Handle request to hire,
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(profile),
-    } else {
+      onRequestHire(profile)} else {
       // Open hire modal directly if no handler provided,
       setIsHireModalOpen(true)}
   };

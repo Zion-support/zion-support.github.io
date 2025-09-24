@@ -24,13 +24,11 @@ interface ContactFormData {
   budget: string,
   timeline: string,
   message: string,
-  priority: 'low' | 'medium' | 'high' | 'urgent',
-}
+  priority: 'low' | 'medium' | 'high' | 'urgent'}
 ,
 interface ContactFormProps {
   onSubmit?: (data: ContactFormData) => void,
-  className?: string,
-}
+  className?: string}
 ,
 const EnhancedContactForm: React.FC<ContactFormProps> = ({
   onSubmit;
@@ -46,8 +44,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
     budget: '';
     timeline: '';
     message: '';
-    priority: 'medium',
-  }),
+    priority: 'medium'}),
   const [errors, setErrors] = useState<Partial<ContactFormData>>({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
@@ -79,8 +76,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
 ,
     // Website validation (optional but if provided, must be valid),
     if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid website URL (include http: // or https://)',
-    }
+      newErrors.website = 'Please enter a valid website URL (include http: // or https://)'}
     if (!formData.company.trim()) newErrors.company = 'Company name is required',
     if (!formData.service) newErrors.service = 'Please select a service',
     if (!formData.message.trim()) newErrors.message = 'Message is required',
@@ -128,10 +124,8 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           budget: '';
           timeline: '';
           message: '';
-          priority: 'medium',
-        }),
-        setIsSubmitted(false)}, 50o00),
-} catch (error) {
+          priority: 'medium'}),
+        setIsSubmitted(false)}, 50o00)} catch (error) {
       console.error('Form submission error:', error)} finally {
       setIsSubmitting(false)}
   };
@@ -142,8 +136,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
         setErrors({
           firstName: !formData.firstName ? 'First name is required' : undefined;
           lastName: !formData.lastName ? 'Last name is required' : undefined;
-          email: !formData.email ? 'Email is required' : undefined,
-        }),
+          email: !formData.email ? 'Email is required' : undefined}),
         return}
     }
 ,
@@ -212,8 +205,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             value={formData.lastName}
             onChange={(e) => handleInputChange('lastName', e.target.value)}
             className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus: ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
-              errors.lastName ? 'border-red-50o0' : 'border-gray-60o0',
-            }`}
+              errors.lastName ? 'border-red-50o0' : 'border-gray-60o0'}`}
             placeholder="Enter your last name",
           />,
           {errors.lastName && (
@@ -233,8 +225,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             value={formData.email}
             onChange={(e) => handleInputChange('email', e.target.value)}
             className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus: ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
-              errors.email ? 'border-red-50o0' : 'border-gray-60o0',
-            }`}
+              errors.email ? 'border-red-50o0' : 'border-gray-60o0'}`}
             placeholder="your.email@company.com",
           />,
           {errors.email && (
@@ -252,8 +243,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             value={formData.company}
             onChange={(e) => handleInputChange('company', e.target.value)}
             className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus: ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
-              errors.company ? 'border-red-50o0' : 'border-gray-60o0',
-            }`}
+              errors.company ? 'border-red-50o0' : 'border-gray-60o0'}`}
             placeholder="Your company name",
           />,
           {errors.company && (
@@ -290,8 +280,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           value={formData.service}
           onChange={(e) => handleInputChange('service', e.target.value)}
           className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus: ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all ${
-            errors.service ? 'border-red-50o0' : 'border-gray-60o0',
-          }`}
+            errors.service ? 'border-red-50o0' : 'border-gray-60o0'}`}
         >,
           <option value="">Select a service</option>,
           {services.map((service) => (
@@ -350,8 +339,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                 className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${
                   formData.preferredContact === method.value,
                     ? 'border-cyan-50o0 bg-cyan-50o0/10',
-                    : 'border-gray-60o0 hover: border-gray-50o0',
-                }`}
+                    : 'border-gray-60o0 hover: border-gray-50o0'}`}
               >,
                 <input
                   type="radio",
@@ -382,8 +370,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
           onChange={(e) => handleInputChange('message', e.target.value)}
           rows={6}
           className={`w-full px-4 py-3 bg-gray-80o0/50 border rounded-lg focus: ring-2 focus:ring-cyan-50o0 focus:border-transparent transition-all resize-none ${
-            errors.message ? 'border-red-50o0' : 'border-gray-60o0',
-          }`}
+            errors.message ? 'border-red-50o0' : 'border-gray-60o0'}`}
           placeholder="Tell us about your project, requirements, and goals...",
         />,
         {errors.message && (
@@ -482,8 +469,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     value={formData.firstName}
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
-                      errors.firstName ? 'border-red-40o0' : 'border-white/20',
-                    }`}
+                      errors.firstName ? 'border-red-40o0' : 'border-white/20'}`}
                     placeholder="Enter your first name",
                     aria-describedby={errors.firstName ? 'firstName-error' : undefined}
                   />,
@@ -504,8 +490,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     value={formData.lastName}
                     onChange={(e) => handleInputChange('lastName', e.target.value)}
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
-                      errors.lastName ? 'border-red-40o0' : 'border-white/20',
-                    }`}
+                      errors.lastName ? 'border-red-40o0' : 'border-white/20'}`}
                     placeholder="Enter your last name",
                     aria-describedby={errors.lastName ? 'lastName-error' : undefined}
                   />,
@@ -527,8 +512,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
-                    errors.email ? 'border-red-40o0' : 'border-white/20',
-                  }`}
+                    errors.email ? 'border-red-40o0' : 'border-white/20'}`}
                   placeholder="Enter your email address",
                   aria-describedby={errors.email ? 'email-error' : undefined}
                 />,
@@ -550,8 +534,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
-                      errors.phone ? 'border-red-40o0' : 'border-white/20',
-                    }`}
+                      errors.phone ? 'border-red-40o0' : 'border-white/20'}`}
                     placeholder="Enter your phone number",
                     aria-describedby={errors.phone ? 'phone-error' : undefined}
                   />,
@@ -618,8 +601,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                     value={formData.website}
                     onChange={(e) => handleInputChange('website', e.target.value)}
                     className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 ${
-                      errors.website ? 'border-red-40o0' : 'border-white/20',
-                    }`}
+                      errors.website ? 'border-red-40o0' : 'border-white/20'}`}
                     placeholder="https: //yourcompany.com",
                     aria-describedby={errors.website ? 'website-error' : undefined}
                   />,
@@ -702,8 +684,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent transition-all duration-30o0 resize-none ${
-                    errors.message ? 'border-red-40o0' : 'border-white/20',
-                  }`}
+                    errors.message ? 'border-red-40o0' : 'border-white/20'}`}
                   placeholder="Tell us about your project, goals, and requirements...",
                   aria-describedby={errors.message ? 'message-error' : undefined}
                 />,

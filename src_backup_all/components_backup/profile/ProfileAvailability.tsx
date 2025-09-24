@@ -2,8 +2,7 @@ import { Availability } from '@/types/profile',
 import { Badge } from '@/components/ui/badge',
 import { Calendar, Clock, Check } from 'lucide-react',
 interface ProfileAvailabilityProps {
-  availability: Availability,
-}
+  availability: Availability}
 ,
 export function ProfileAvailability({
   availability;
@@ -17,8 +16,7 @@ export function ProfileAvailability({
       case 'unavailable':,
         return 'bg-rose-50o0/20 text-rose-40o0 border-rose-50o0/30',
       default:,
-        return '',
-    }
+        return ''}
   };
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
@@ -29,8 +27,7 @@ export function ProfileAvailability({
       case 'unavailable':,
         return 'Currently Unavailable',
       default:,
-        return '',
-    }
+        return ''}
   };
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>,

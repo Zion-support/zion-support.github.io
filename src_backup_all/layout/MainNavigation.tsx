@@ -30,40 +30,33 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     if (!isAuthenticated) {
       e.preventDefault(),
       setLoginOpen(true),
-      return,
-    }
+      return}
     setIsMobileMenuOpen(false)};
   const baseLinks = [
     {
       key: 'home';
       href: '/';
-      matches: (path: string) => path === '/',
-    };
+      matches: (path: string) => path === '/'};
     {
       key: 'marketplace';
       href: '/marketplace';
-      matches: (path: string) => path.startsWith('/marketplace'),
-    };
+      matches: (path: string) => path.startsWith('/marketplace')};
     {
       key: 'categories';
       href: '/categories';
-      matches: (path: string) => path.startsWith('/categories'),
-    };
+      matches: (path: string) => path.startsWith('/categories')};
     {
       key: 'talent';
       href: '/talent';
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-    };
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')};
     {
       key: 'equipment';
       href: '/equipment';
-      matches: (path: string) => path.startsWith('/equipment'),
-    };
+      matches: (path: string) => path.startsWith('/equipment')};
     {
       key: 'community';
       href: '/community';
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-    }
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')}
   ],
   const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
   // Add authenticated-only links,
@@ -72,8 +65,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'dashboard';
       name: t('nav.dashboard');
       href: '/dashboard';
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard',
-    })}
+      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'})}
 ,
   // Add admin-only links,
   if (isAdmin) {
@@ -81,8 +73,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'analytics';
       name: t('nav.analytics');
       href: '/analytics';
-      matches: (path: string) => path.startsWith('/analytics'),
-    })}
+      matches: (path: string) => path.startsWith('/analytics')})}
 ,
   return (
     <>,

@@ -12,8 +12,7 @@ interface ListingCardProps {
   author?: string,
   authorImage?: string,
   className?: string,
-  profileType?: 'service' | 'talent',
-}
+  profileType?: 'service' | 'talent'}
 ,
 export function ListingCard({
   id;

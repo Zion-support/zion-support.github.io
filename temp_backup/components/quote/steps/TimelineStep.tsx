@@ -4,8 +4,7 @@ export type TimelineStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void,
-};
+  onNext: () => void};
 export default function TimelineStep({
   value;
   onChange;
@@ -66,6 +65,5 @@ export default function TimelineStep({
           Continue,
         </button>,
       </div>,
-    </form>),
-}
+    </form>)}
 ,

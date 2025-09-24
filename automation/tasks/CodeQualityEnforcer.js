@@ -12,8 +12,7 @@ const logger = winston.createLogger({
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
-    format: winston.format.simple(),
-  }))}
+    format: winston.format.simple()}))}
 ,
 const AutomationTask = require('../continuous-improvement/AutomationTask'),
 const { execSync, spawn } = require('child_process'),
@@ -84,8 +83,7 @@ class CodeQualityEnforcer extends AutomationTask {
       await this.generateQualityReport(results),
       this.lastStatus = success',
       this.lastRun = new Date(),
-      return results,
-} catch (error) {
+      return results} catch (error) {
       logger.error('❌ Code quality enforcement failed:', error),
       this.lastStatus = failed',
       this.lastError = error.message,
@@ -99,8 +97,7 @@ class CodeQualityEnforcer extends AutomationTask {
       // Run ESLint with JSON output,
       const output = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --format json', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       const results = JSON.parse(output),
       const summary ={
         totalFiles: results.length;
@@ -108,8 +105,7 @@ class CodeQualityEnforcer extends AutomationTask {
         totalWarnings: 0;
         fixableErrors: 0;
         fixableWarnings: 0;
-        violations: [],
-      };
+        violations: []};
       for (const file of results) {
         summary.totalErrors += file.errorCount,
         summary.totalWarnings += file.warningCount,
@@ -123,13 +119,11 @@ class CodeQualityEnforcer extends AutomationTask {
             severity: message.severity;
             message: message.message;
             rule: message.ruleId;
-            fixable: message.fix,
-          })}
+            fixable: message.fix})}
       }
 ,
       logger.info(`✅ ESLint: ${summary.totalErrors} errors, ${summary.totalWarnings} warnings`),
-      return summary,
-} catch (error) {
+      return summary} catch (error) {
       if (error.status === 1) {
         // ESLint returns 1 when violations are found,
         return this.parseESLintError(error.stdout)}
@@ -152,8 +146,7 @@ class CodeQualityEnforcer extends AutomationTask {
       totalWarnings: 0;
       fixableErrors: 0;
       fixableWarnings: 0;
-      violations: [],
-    };
+      violations: []};
     for (const file of results) {
       summary.totalErrors += file.errorCount,
       summary.totalWarnings += file.warningCount,
@@ -167,8 +160,7 @@ class CodeQualityEnforcer extends AutomationTask {
           severity: message.severity;
           message: message.message;
           rule: message.ruleId;
-          fixable: message.fix,
-        })}
+          fixable: message.fix})}
     }
 ,
     return summary}
@@ -179,8 +171,7 @@ class CodeQualityEnforcer extends AutomationTask {
       // Check formatting,
       const output = execSync('npx prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       logger.info('✅ Prettier: All files properly formatted'),
       return { formatted: true, violations: [] };
 } catch (error) {
@@ -201,8 +192,7 @@ class CodeQualityEnforcer extends AutomationTask {
         violations.push({
           file: line.trim();
           type: 'formatting';
-          message: File needs formatting,
-        })}
+          message: File needs formatting})}
     }
 ,
     return violations}
@@ -212,8 +202,7 @@ class CodeQualityEnforcer extends AutomationTask {
     try {
       const output = execSync('npx tsc --noEmit', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       logger.info('✅ TypeScript: No type errors'),
       return { hasErrors: false, errors: [] };
 } catch (error) {
@@ -237,8 +226,7 @@ class CodeQualityEnforcer extends AutomationTask {
             line: parseInt(match[2]);
             column: parseInt(match[3]);
             message: match[4];
-            type: typescript,
-          })}
+            type: typescript})}
       }
     }
 ,
@@ -249,12 +237,10 @@ class CodeQualityEnforcer extends AutomationTask {
     try {
       const output = execSync('npm test', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       const results = this.parseTestResults(output),
       logger.info(`✅ Tests: ${results.passed} passed, ${results.failed} failed`),
-      return results,
-} catch (error) {
+      return results} catch (error) {
       const results = this.parseTestResults(error.stdout || ),
       logger.info(`⚠️ Tests: ${results.passed} passed, ${results.failed} failed`),
       return results}
@@ -279,12 +265,10 @@ class CodeQualityEnforcer extends AutomationTask {
     try {
       const output = execSync('npm run test: 'coverage', {
         encoding: 'utf8';
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       const coverage = this.parseCoverageOutput(output),
       logger.info(`✅ Coverage: ${coverage.total}%`),
-      return coverage,
-} catch (error) {
+      return coverage} catch (error) {
       logger.warn('⚠️ Could not check test coverage'),
       return { total: 0, lines: 0, functions: 0, branches: 0, statements: 0 };
     }
@@ -317,8 +301,7 @@ class CodeQualityEnforcer extends AutomationTask {
       fixableViolations;
       testResults: results.tests;
       coverage: results.coverage;
-      timestamp: results.timestamp,
-    };
+      timestamp: results.timestamp};
   }
 ,
   extractViolations(results) {
@@ -327,22 +310,19 @@ class CodeQualityEnforcer extends AutomationTask {
     if (results.eslint.violations) {
       violations.push(...results.eslint.violations.map(v => ({
         ...v;
-        tool: eslint,
-      })))}
+        tool: eslint})))}
 ,
     // Prettier violations,
     if (results.prettier.violations) {
       violations.push(...results.prettier.violations.map(v => ({
         ...v;
-        tool: prettier,
-      })))}
+        tool: prettier})))}
 ,
     // TypeScript violations,
     if (results.typescript.errors) {
       violations.push(...results.typescript.errors.map(v => ({
         ...v;
-        tool: typescript,
-      })))}
+        tool: typescript})))}
 ,
     return violations}
 ,
@@ -361,8 +341,7 @@ class CodeQualityEnforcer extends AutomationTask {
 ,
       logger.info('✅ Auto-fix completed'),
       // Re-run checks to see what's left,
-      await this.run(),
-} catch (error) {
+      await this.run()} catch (error) {
       logger.error('❌ Auto-fix failed:', error)}
   }
 ,
@@ -387,8 +366,7 @@ class CodeQualityEnforcer extends AutomationTask {
       execSync(`git push origin ${branchName}`, { stdio: 'pipe' }),
       // Create PR,
       await this.createGitHubQualityPR(branchName),
-      logger.info(`✅ Quality PR created: ${branchName}`),
-} catch (error) {
+      logger.info(`✅ Quality PR created: ${branchName}`)} catch (error) {
       logger.error('❌ Failed to create quality PR:', error.message),
       throw error}
   }
@@ -407,9 +385,7 @@ This commit was automatically generated by the Code Quality Enforcer.`}
       const title = style: auto-fix code quality violations',
       const body = this.generateQualityPRBody(),
       execSync(`gh pr create --title "${title}" --body "${body}" --base main --head ${branchName}`, {
-        stdio: pipe,
-      }),
-} catch (error) {
+        stdio: pipe})} catch (error) {
       logger.warn('⚠️ GitHub CLI not available, PR creation skipped')}
   }
 ,
@@ -461,8 +437,7 @@ This PR was automatically generated by the Code Quality Enforcer.,
     try {
       // Install common code quality tools,
       execSync('npm install --save-dev eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin', {
-        stdio: pipe,
-      }),
+        stdio: pipe}),
       logger.info('✅ Dependencies installed')} catch (error) {
       logger.error('❌ Failed to install dependencies:', error.message)}
   }
@@ -481,8 +456,7 @@ This PR was automatically generated by the Code Quality Enforcer.,
       qualityHistory: this.qualityHistory.slice(-5), // Last 5 scans,
       totalScans: this.qualityHistory.length;
       currentViolations: this.violations.length;
-      fixableViolations: this.violations.filter(v => v.fixable).length,
-    };
+      fixableViolations: this.violations.filter(v => v.fixable).length};
   }
 }
 ,

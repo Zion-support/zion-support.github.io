@@ -16,8 +16,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       metrics: {
         efficiency: '+340%';
         costReduction: '-68%';
-        defectRate: '-92%',
-      }
+        defectRate: '-92%'}
     };
     {
       id: 'financial-services-breakthrough';
@@ -32,8 +31,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       metrics: {
         processingSpeed: '+450%';
         accuracy: '+98%';
-        customerSatisfaction: '+89%',
-      }
+        customerSatisfaction: '+89%'}
     };
     {
       id: 'healthcare-diagnostic-revolution';
@@ -48,8 +46,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       metrics: {
         diagnosisSpeed: '+850%';
         accuracy: '+98.7%';
-        patientOutcomes: '+76%',
-      }
+        patientOutcomes: '+76%'}
     };
     {
       id: 'retail-transformation-success';
@@ -64,8 +61,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       metrics: {
         salesGrowth: '+156%';
         inventoryEfficiency: '+234%';
-        customerRetention: '+78%',
-      }
+        customerRetention: '+78%'}
     };
     {
       id: 'logistics-automation-breakthrough';
@@ -80,8 +76,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       metrics: {
         deliverySpeed: '+290%';
         fuelEfficiency: '+67%';
-        operationalCosts: '-45%',
-      }
+        operationalCosts: '-45%'}
     };
     {
       id: 'quantum-financial-optimization';
@@ -104,8 +99,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -114,8 +108,7 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.6,
-      }
+        duration: 0.6}
     }
   };
   return (

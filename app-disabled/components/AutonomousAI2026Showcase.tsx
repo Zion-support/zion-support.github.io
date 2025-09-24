@@ -184,6 +184,5 @@ const AutonomousAI20o26Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AutonomousAI20o26Showcase;

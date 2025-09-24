@@ -21,15 +21,13 @@ export interface FinancialAIService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   regulatoryCompliance?: string[]}
@@ -83,8 +81,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "C++", "PostgreSQL", "Redis", "Kafka"];
       integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs", "Market data feeds"];
@@ -142,8 +139,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Scikit-learn", "PostgreSQL", "Redis", "Kubernetes"];
       integrations: ["Credit bureaus", "Banking systems", "Lending platforms", "Identity verification services"];
@@ -201,8 +197,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "PostgreSQL", "Redis", "Kafka", "Elasticsearch"];
       integrations: ["Payment systems", "Banking platforms", "Identity verification", "Risk management systems"];
@@ -260,8 +255,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Brokerage accounts", "Banking systems", "Tax software", "Insurance platforms"];
@@ -319,8 +313,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_20o28: FinancialAIService20o28[] 
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Scikit-learn", "PostgreSQL", "Redis", "Kubernetes"];
       integrations: ["Insurance systems", "Claims systems", "Customer databases", "Risk management platforms"];

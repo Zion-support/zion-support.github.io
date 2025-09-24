@@ -15,6 +15,5 @@ export default function QuantumAiMetaverse20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

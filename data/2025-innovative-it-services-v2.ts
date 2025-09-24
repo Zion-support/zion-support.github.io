@@ -11,8 +11,7 @@ export interface InnovativeITService {
     currency: string,
     trialDays: number,
     setupTime: string,
-    enterprise: number,
-  };
+    enterprise: number};
   features: string[],
   benefits: string[],
   targetAudience: string[],
@@ -35,8 +34,7 @@ export interface InnovativeITService {
   rating: number,
   reviews: number,
   marketSize: string,
-  growthRate: string,
-}
+  growthRate: string}
 ,
 export const innovativeITServicesV2: InnovativeITService[] = [
   {
@@ -51,8 +49,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '4 hours';
-      enterprise: 1299,
-    };
+      enterprise: 1299};
     features: [
       'Hybrid quantum-classical computing';
       'Quantum-enhanced cloud services';
@@ -102,8 +99,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
     rating: 4.8;
     reviews: 190;
     marketSize: '$50o0B cloud computing market';
-    growthRate: '20% annually',
-  };
+    growthRate: '20% annually'};
   {
     id: 'ai-powered-devops-automation';
     name: 'AI-Powered DevOps Automation Suite';
@@ -116,8 +112,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '3 hours';
-      enterprise: 699,
-    };
+      enterprise: 699};
     features: [
       'AI-powered code review';
       'Automated testing orchestration';
@@ -167,8 +162,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
     rating: 4.7;
     reviews: 480;
     marketSize: '$25B DevOps market';
-    growthRate: '25% annually',
-  };
+    growthRate: '25% annually'};
   {
     id: 'quantum-networking-solutions';
     name: 'Quantum Networking Solutions';
@@ -181,8 +175,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '6 hours';
-      enterprise: 899,
-    };
+      enterprise: 899};
     features: [
       'Quantum key distribution';
       'Quantum encryption protocols';
@@ -232,13 +225,12 @@ export const innovativeITServicesV2: InnovativeITService[] = [
     rating: 4.9;
     reviews: 150;
     marketSize: '$35B network security market';
-    growthRate: '18% annually',
-  };
+    growthRate: '18% annually'};
   {
     id: 'autonomous-it-operations-center';
     name: 'Autonomous IT Operations Center';
     tagline: 'Self-managing IT infrastructure and operations';
-    description: 'Revolutionary IT operations platform that uses AI and automation to manage, monitor, and optimize IT infrastructure without human intervention, ensuring maximum uptime and window.performance.';
+    description: 'Revolutionary IT operations platform that uses AI and automation to manage, monitor, and optimize IT infrastructure without human intervention, ensuring maximum uptime and window.window.performance.';
     category: 'Enterprise IT';
     price: {
       monthly: 249;
@@ -246,8 +238,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
       currency: 'USD';
       trialDays: 21;
       setupTime: '4 hours';
-      enterprise: 999,
-    };
+      enterprise: 999};
     features: [
       'AI-powered infrastructure management';
       'Automated problem resolution';
@@ -297,8 +288,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
     rating: 4.6;
     reviews: 280;
     marketSize: '$30B IT operations market';
-    growthRate: '22% annually',
-  };
+    growthRate: '22% annually'};
   {
     id: 'quantum-data-center-platform';
     name: 'Quantum Data Center Platform';
@@ -311,8 +301,7 @@ export const innovativeITServicesV2: InnovativeITService[] = [
       currency: 'USD';
       trialDays: 14;
       setupTime: '8 hours';
-      enterprise: 1599,
-    };
+      enterprise: 1599};
     features: [
       'Quantum-enhanced processing';
       'Hybrid computing architecture';
@@ -362,6 +351,5 @@ export const innovativeITServicesV2: InnovativeITService[] = [
     rating: 4.9;
     reviews: 120;
     marketSize: '$20o0B data center market';
-    growthRate: '15% annually',
-  }
+    growthRate: '15% annually'}
 ],

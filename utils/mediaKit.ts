@@ -25,7 +25,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`;
     };
   ],
-,
   const web3Extras: MediaAsset[] = [
     {
       path: '';
@@ -34,13 +33,11 @@ export function buildPressRelease(
   type: PressReleaseType,
   type: PressReleaseType;
   params: {
-,
     companyName: string>>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
     date: string,
     raiseAmount?: string,
     tokenName?: string,
-    anchors?: string[],
-  }
+    anchors?: string[]}
 ): string {
   const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`,
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https: //zion && zion.app`,
@@ -65,12 +62,12 @@ export function buildTimeline(startDate: Date) {
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g,
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()),}
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())}
 ,
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g,
-    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()),}
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())}
 >>>>>>> origin/feature/merge-conflicts-and-improvements,
 function titleCase(s: string) {
   return s.replace(

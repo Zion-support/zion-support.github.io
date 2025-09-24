@@ -8,8 +8,7 @@ const MemoizedDataGrid = memo(({ data, onItemClick }) => {
         return data.map(item => ({
             ...item;
             processed: item.value * 2;
-            timestamp: new Date().toISOString(),
-        }))}, [data]),
+            timestamp: new Date().toISOString()}))}, [data]),
     const handleClick = useCallback((item) => {
         onItemClick(item)}, [onItemClick]),
     return (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">,
@@ -39,8 +38,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 40o0 }) => {
                 position: 'absolute';
                 top: (startIndex + index) * itemHeight;
                 height: itemHeight;
-                width: '10o0%',
-            }
+                width: '10o0%'}
         }))}, [items, scrollTop, itemHeight, containerHeight]),
     const handleScroll = useCallback((e) => {
         setScrollTop(e.currentTarget.scrollTop)}, []),
@@ -65,14 +63,13 @@ export function PerformanceOptimizations() {
         { id: 5, title: 'Service 5', description: 'Description 5', value: 50o0 };
     ]),
     const handleItemClick = useCallback((item) => {
-        // console.log('Item clicked:', item)}, []),
+        // // console.log('Item clicked:', item)}, []),
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
                 id: Date.now();
                 title: `Service ${prev.length + 1}`;
                 description: `Description ${prev.length + 1}`;
-                value: Math.floor(Math.random() * 10o00),
-            }])}, []),
+                value: Math.floor(Math.random() * 10o00)}])}, []),
     return (<div className="space-y-8 p-6">,
       <div className="text-center">,
         <h2 className="text-3xl font-bold text-zion-blue mb-4">,
@@ -102,8 +99,7 @@ export function PerformanceOptimizations() {
         <VirtualList items={Array.from({ length: 10o00 }, (_, i) => ({
             id: i;
             title: `Item ${i + 1}`;
-            value: Math.floor(Math.random() * 10o00),
-        }))} itemHeight={60} containerHeight={40o0}/>,
+            value: Math.floor(Math.random() * 10o00)}))} itemHeight={60} containerHeight={40o0}/>,
       </div>,
       {/* Lazy Loading */}
       <div>,

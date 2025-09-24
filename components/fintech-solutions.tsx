@@ -18,5 +18,4 @@ export default function FintechSolutions() {
 				"Integrations: Core bankingKYCpaymentsCRMs"]}
 			industries={["Fintech"Banking"Lending"Payments"]}
 			canonical="https: //ziontechgroup.com/fintech-solutions",
-		 />),
-}
+		 />)}

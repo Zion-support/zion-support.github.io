@@ -23,8 +23,7 @@ type Thread = {
   isLocked: boolean,
   isFeatured: boolean,
   createdAt: string,
-  updatedAt: string,
-};
+  updatedAt: string};
 type Reply = {
   id: string,
   threadId: string,
@@ -35,8 +34,7 @@ type Reply = {
   body: string,
   votes: number,
   createdAt: string,
-  updatedAt: string,
-};
+  updatedAt: string};
 export default function ThreadDetailPage() {
   const router = useRouter(),
   const { id } = router.query as { id: string };

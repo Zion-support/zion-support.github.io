@@ -26,8 +26,7 @@ export default function GreenIT() {
       title: 'Energy-Efficient Hardware',
       description:,
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',
-      icon: Server,
-    }
+      icon: Server}
 ,
     return this.props.children}
 }
@@ -74,7 +73,7 @@ export default function GreenIT() {
     <>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.window.performance.",
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware",
         canonical="https: //ziontechgroup.com/marketplace/category/green-it",
        />,
@@ -132,7 +131,7 @@ export default function GreenIT() {
     <>,
       <SEO
         title='Green IT Solutions - Sustainable Technology',
-        description='Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.',
+        description='Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.',
         keywords='green IT, sustainable technology, eco - friendly computing, energy efficient hardware',
         canonical='https: //app.ziontechgroup.com / marketplace / category / green - it',
        />,
@@ -241,7 +240,7 @@ export default function GreenIT() {
     <>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.",
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware",
         canonical="https: //app.ziontechgroup.com/marketplace/category/green-it",
        />,
@@ -307,7 +306,7 @@ export default function GreenIT() {
     <>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.performance.",
+        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.performance.",
         keywords="green IT, sustainable technology, eco - friendly computing, energy efficient hardware",
         canonical="https: //app.ziontechgroup.com / marketplace / category / green - it",
        />,
@@ -1078,8 +1077,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
 '''`,
                   selectedCategory === category && category.id'''`'`,
                     ? 'bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white'''`'`'`,
-                    : 'bg-slate-80o0/50 text-gray-30o0 hover: bg-slate-70o0/50'````,
-}`}
+                    : 'bg-slate-80o0/50 text-gray-30o0 hover: bg-slate-70o0/50'````}`}
 >,
                 {category.name} ({category.count}) </button>) ) }
           </div>",
@@ -1441,8 +1439,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 '''`,
                   selectedCategory === category && category.id'''`'`,
                     ? 'bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white'''`'`'`,
-                    : 'bg-slate-80o0/50 text-gray-30o0 hover: bg-slate-70o0/50'````,
-}`}
+                    : 'bg-slate-80o0/50 text-gray-30o0 hover: bg-slate-70o0/50'````}`}
               >,
                 {category && category.name} ({category && category.count}) </button>) ) }
           </div>",
@@ -1481,8 +1478,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                               ? 'bg - blue - 50o0 / 20 text - blue - 40o0'''''`,
                               : solution.category === 'software''''`'`,
                                 ? 'bg - purple - 50o0 / 20 text - purple - 40o0'''`'`'`,
-                                : 'bg - orange - 50o0 / 20 text - orange - 40o0'````,
-}`}
+                                : 'bg - orange - 50o0 / 20 text - orange - 40o0'````}`}
                       >,
                         {categories.find(c => c.id === solution.category) ?.name}
                       </span>,
@@ -1763,7 +1759,7 @@ export default function GreenIT() {
     <>,
       <SEO
         title="Green IT Solutions - Sustainable Technology",
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.performance.",
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.window.window.performance.",
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware",
         canonical="https: //app.ziontechgroup.com/marketplace/category/green-it",
        />,
@@ -1889,14 +1885,12 @@ export default function GreenIT() {
                 Get a free sustainability assessment and customized Green IT,
                 roadmap,
               </p>,
-            </div>,
-}
+            </div>}
 ,
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 export { GreenIT }
 export { GreenIT }
 export { GreenIT }

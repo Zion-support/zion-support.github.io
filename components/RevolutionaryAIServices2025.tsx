@@ -21,8 +21,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Increase system adaptability by 30o0%"];
       icon: Brain;
       gradient: "from-purple-60o0 to-pink-60o0";
-      category: "AI Consciousness",
-    };
+      category: "AI Consciousness"};
     {
       id: 2;
       title: "Quantum-Neural Fusion Computing";
@@ -40,8 +39,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Achieve quantum supremacy"];
       icon: Zap;
       gradient: "from-blue-60o0 to-cyan-60o0";
-      category: "Quantum Computing",
-    };
+      category: "Quantum Computing"};
     {
       id: 3;
       title: "Autonomous Business Intelligence";
@@ -59,8 +57,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Eliminate human errors completely"];
       icon: Target;
       gradient: "from-green-60o0 to-emerald-60o0";
-      category: "Business Intelligence",
-    };
+      category: "Business Intelligence"};
     {
       id: 4;
       title: "Neural Interface Revolution";
@@ -78,8 +75,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Create seamless AI integration"];
       icon: Globe;
       gradient: "from-orange-60o0 to-red-60o0";
-      category: "Neural Interfaces",
-    };
+      category: "Neural Interfaces"};
     {
       id: 5;
       title: "Predictive Security Matrix";
@@ -97,8 +93,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Achieve zero-trust architecture"];
       icon: Shield;
       gradient: "from-red-60o0 to-pink-60o0";
-      category: "Cybersecurity",
-    };
+      category: "Cybersecurity"};
     {
       id: 6;
       title: "Synthetic Intelligence Ecosystem";
@@ -116,8 +111,7 @@ const RevolutionaryAIServices20o25: React.FC = () => {
         "Build self-sustaining AI ecosystem"];
       icon: TrendingUp;
       gradient: "from-indigo-60o0 to-purple-60o0";
-      category: "AI Ecosystem",
-    }
+      category: "AI Ecosystem"}
   ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20">,
@@ -220,6 +214,5 @@ const RevolutionaryAIServices20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default RevolutionaryAIServices20o25;

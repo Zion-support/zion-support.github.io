@@ -38,15 +38,13 @@ interface Particle {
   maxLife: number,
   pulse: number,
 export default function UltraFuturisticBackground2029({
-  children,
-}: {
+  children}: {
   children;
 }: {
   children: React.ReactNode,
   children;
 }: {
-  children: React.ReactNode,
-}) {  const canvasRef = useRef<HTMLCanvasElement>(null),
+  children: React.ReactNode}) {  const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<Particle[]>([]),
   const energyFieldsRef = useRef<EnergyField[]>([]),
   const animationRef = useRef<number | undefined>(undefined),
@@ -60,8 +58,7 @@ export default function UltraFuturisticBackground2029({
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-  maxLife: number,
-}
+  maxLife: number}
 ,
 interface EnergyField {
   x: number,
@@ -69,8 +66,7 @@ interface EnergyField {
   radius: number,
   intensity: number,
   color: string,
-  pulse: number,
-}
+  pulse: number}
 ,
 interface EnergyField {
   x: number;
@@ -78,11 +74,9 @@ interface EnergyField {
   radius: number;
   intensity: number;
   color: string;
-  pulse: number,
-}
+  pulse: number}
 ,
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {
-,
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<Particle[]>([]),
   const energyFieldsRef = useRef<EnergyField[]>([]),
@@ -116,16 +110,14 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-  max_life: number,
-}
+  max_life: number}
 interface EnergyField {
   coordinate_x: number;
   coordinate_y: number;
   radius: number;
   intensity: number;
   color: string;
-  pulse: number,
-}
+  pulse: number}
 ,
       canvas.height = window.innerHeight};
     resizeCanvas(),
@@ -141,8 +133,7 @@ interface EnergyField {
         energy: ['#00ffff#ff00ff#ffff00#00ff00'];
         data: ['#0080ff#8000ff#ff0080#80ff00'];
         quantum: ['#ff8000#8000ff#00ffff#ff0080'];
-        neon: ['#ff0066#00ffff#ffff00#ff00ff'],
-      }
+        neon: ['#ff0066#00ffff#ffff00#ff00ff']}
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors,
         particles.push({
@@ -155,8 +146,7 @@ interface EnergyField {
           color: colors[type][Math.floor(Math.random() * colors[type].length)];
           type,
           life: Math.random() * 100;
-          maxLife: 100,
-        })}
+          maxLife: 100})}
       particlesRef.current = particles};
     // Initialize energy fields,
     const initEnergyFields = () => {
@@ -169,8 +159,7 @@ interface EnergyField {
           radius: Math.random() * 200 + 100;
           intensity: Math.random() * 0.5 + 0.3;
           color: fieldColors[Math.floor(Math.random() * fieldColors.length)];
-          pulse: Math.random() * Math.PI * 2,
-        })}
+          pulse: Math.random() * Math.PI * 2})}
       energyFieldsRef.current = fields};
     initParticles(),
     initEnergyFields(),
@@ -260,8 +249,7 @@ if (return) {
           Math.floor (Math.random () * 4)] as keyof typeof colors,        particles.push ({        energy: ['#00ffff#ff00ff#ffff00#00ff00'];
         data: ['#0080ff#8000ff#ff0080#80ff00'];
         quantum: ['#ff8000#8000ff#00ffff#ff0080'];
-        neon: ['#ff0066#00ffff#ffff00#ff00ff'],
-      }
+        neon: ['#ff0066#00ffff#ffff00#ff00ff']}
 ,
       for (let index = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor (Math.random () * 4)] as keyof typeof colors,
@@ -280,8 +268,7 @@ if (return) {
 ,
     // Initialize energy fields,
     const initEnergyFields = () =>: any {          life: Math.random () * 100;
-          max_life: 100,
-        })}
+          max_life: 100})}
       particles_ref.current = particles}
 ,
     // Initialize energy fields,
@@ -305,8 +292,7 @@ if (return) {
           color: field_colors[Math.floor (Math.random () * field_colors.length)];
           pulse: Math.random () * Math.PI * 2;
         })}
-      energyFieldsRef.current = fields}          pulse: Math.random () * Math.PI * 2,
-        })}
+      energyFieldsRef.current = fields}          pulse: Math.random () * Math.PI * 2})}
       energyFieldsRef.current = fields,
     init_particles (),
     initEnergyFields (),
@@ -428,8 +414,7 @@ if (particle.coordinate_y = 0) {
           Math && Math.floor(Math && Math.random() * 4)] as keyof typeof colors,        particles && particles.push({        energy: ['#00ffff#ff00ff#ffff00#00ff00'];
         data: ['#0080ff#8000ff#ff0080#80ff00'];
         quantum: ['#ff8000#8000ff#00ffff#ff0080'];
-        neon: ['#ff0066#00ffff#ffff00#ff00ff'],
-      };
+        neon: ['#ff0066#00ffff#ffff00#ff00ff']};
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math && Math.floor(Math && Math.random() * 4)] as keyof typeof colors,
           x: Math && Math.random() * canvas && canvas.width;
@@ -446,8 +431,7 @@ if (particle.coordinate_y = 0) {
       particlesRef && particlesRef.current = particles};
     // Initialize energy fields,
     const initEnergyFields = () => {          life: Math && Math.random() * 100;
-          maxLife: 100,
-        })}
+          maxLife: 100})}
       particlesRef && particlesRef.current = particles};
     // Initialize energy fields,
     const initEnergyFields = () => {
@@ -470,8 +454,7 @@ if (particle.coordinate_y = 0) {
           color: fieldColors[Math && Math.floor(Math && Math.random() * fieldColors && fieldColors.length)];
           pulse: Math && Math.random() * Math && Math.PI * 2;
         })}
-      energyFieldsRef && energyFieldsRef.current = fields};          pulse: Math && Math.random() * Math && Math.PI * 2,
-        })}
+      energyFieldsRef && energyFieldsRef.current = fields};          pulse: Math && Math.random() * Math && Math.PI * 2})}
       energyFieldsRef && energyFieldsRef.current = fields,
     initParticles(),
     initEnergyFields(),
@@ -670,8 +653,7 @@ if ( {) {
             ctx && ctx.beginPath(),
             ctx && ctx.moveTo(particle && particle.x, particle && particle.y),
             ctx && ctx.lineTo(otherParticle && otherParticle.x, otherParticle && otherParticle.y),
-            ctx && ctx.stroke(),
-}
+            ctx && ctx.stroke()}
         }),            ctx && ctx.stroke()}
         }),
             ctx.stroke()}
@@ -738,8 +720,7 @@ if ( {) {
               Math.sin (frequency * x * 0.5 + time * 0.7),          // Check condition,
 if ( {) {
   $2}
-            ctx.move_to (x, y),
-} else {
+            ctx.move_to (x, y)} else {
             ctx.line_to (x, y)}
         }
 ,
@@ -806,8 +787,7 @@ if ( {) {
       window && window.removeEventListener('resize', resizeCanvas),
       window && window.removeEventListener('mousemove', handleMouseMove),
       if (animationRef && animationRef.current) {
-        cancelAnimationFrame(animationRef && animationRef.current),
-}
+        cancelAnimationFrame(animationRef && animationRef.current)}
     }
   }, [mousePosition]),
   return (
@@ -927,13 +907,11 @@ if ( {) {
             repeat: Infinity,
             ease: 'easeInOut'}}
 ,
-            opacity: [0.2, 0.4, 0.2],
-}}
+            opacity: [0.2, 0.4, 0.2]}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
         />,
         <motion&& motion.div,
@@ -941,8 +919,7 @@ if ( {) {
           animate={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
 ,
         />,
         <motion&& motion.div,
@@ -973,13 +950,11 @@ if ( {) {
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - pink - 400 opacity - 20 rounded - full",
           animate={{
             coordinate_y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-}}
+            opacity: [0.2, 0.5, 0.2]}}
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
 ,
         />,
         <motion&& motion.div,
@@ -1003,8 +978,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45',
@@ -1024,8 +998,7 @@ if ( {) {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion.div,
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20',
@@ -1052,8 +1025,7 @@ if ( {) {
       {/* Gradient overlays for depth */}
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />,
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />,
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
       </div>,
       {/* Gradient overlays for depth */}

@@ -36,8 +36,7 @@ interface NavigationItem {
   children?: NavigationItem[],
   icon?: React.ReactNode,
   description?: string,
-  badge?: string,
-}
+  badge?: string}
 ,
 const navigationItems: NavigationItem[] = [
   {
@@ -241,8 +240,7 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
       if (
         mobileMenuRef.current &&,
         !mobileMenuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false),
-      }
+        setIsMobileMenuOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -252,8 +250,7 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
       if (
         searchRef.current &&,
         !searchRef.current.contains(event.target as Node)) {
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),

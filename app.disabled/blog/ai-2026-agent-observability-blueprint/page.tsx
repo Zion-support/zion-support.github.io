@@ -67,6 +67,5 @@ const AgentObservabilityBlueprint: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgentObservabilityBlueprint;

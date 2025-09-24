@@ -21,29 +21,25 @@ const categories = [
     name: 'All New Services';
     icon: <Grid className="w-6 h-6"  />;
     color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of new innovative services',
-  };
+    description: 'Complete portfolio of new innovative services'};
   {
     id: 'micro-saas';
     name: 'Micro SAAS Solutions';
     icon: <Target className="w-6 h-6"  />;
     color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Innovative business solutions and automation',
-  };
+    description: 'Innovative business solutions and automation'};
   {
     id: 'it-infrastructure';
     name: 'IT Infrastructure';
     icon: <Building className="w-6 h-6"  />;
     color: 'from-indigo-50o0 to-purple-50o0';
-    description: 'Advanced infrastructure and security solutions',
-  };
+    description: 'Advanced infrastructure and security solutions'};
   {
     id: 'ai-services';
     name: 'AI Services';
     icon: <Brain className="w-6 h-6"  />;
     color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Cutting-edge AI and machine learning services',
-  }
+    description: 'Cutting-edge AI and machine learning services'}
 ],
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' };
@@ -91,8 +87,7 @@ export default function ComprehensiveServicesExpansion20o25() {
       case 'rating':,
         return b.rating - a.rating,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   // Pagination,
   const totalPages = Math.ceil(sortedServices.length / pageSize),
@@ -104,8 +99,7 @@ export default function ComprehensiveServicesExpansion20o25() {
     window.scrollTo({ top: 0, behavior: 'smooth' })};
   const getServiceCategory = (service: any) => {
     if (service.category) return service.category,
-    return 'Other',
-  };
+    return 'Other'};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <SEO
@@ -186,8 +180,7 @@ export default function ComprehensiveServicesExpansion20o25() {
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg',
-                      : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {category.icon}
                   <span className="ml-2">{category.name}</span>,
@@ -208,16 +201,14 @@ export default function ComprehensiveServicesExpansion20o25() {
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-20o0 ${
-                    viewMode === 'grid' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'grid' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-md transition-all duration-20o0 ${
-                    viewMode === 'list' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  }`}
+                    viewMode === 'list' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,
@@ -251,8 +242,7 @@ export default function ComprehensiveServicesExpansion20o25() {
                       <div className={`grid gap-6 ${
                         viewMode === 'grid',
                           ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-                          : 'grid-cols-1',
-                      }`}>,
+                          : 'grid-cols-1'}`}>,
                         {paginatedServices.map((service, index) => (
                           <motion.div,
                             key={service.id}
@@ -260,8 +250,7 @@ export default function ComprehensiveServicesExpansion20o25() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className={`bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl ${
-                              viewMode === 'list' ? 'flex gap-6' : '',
-                            }`}
+                              viewMode === 'list' ? 'flex gap-6' : ''}`}
                           >,
                             {viewMode === 'list' && (
                               <div className="flex-shrink-0">,
@@ -347,8 +336,7 @@ export default function ComprehensiveServicesExpansion20o25() {
                                 className={`px-4 py-2 rounded-lg transition-all duration-20o0 ${
                                   currentPage === page,
                                     ? 'bg-blue-50o0 text-white',
-                                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                                }`}
+                                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
                               >,
                                 {page}
                               </button>))}
@@ -392,5 +380,4 @@ export default function ComprehensiveServicesExpansion20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}

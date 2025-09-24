@@ -28,8 +28,7 @@ const mockBusinessProcesses = [
                 aiDecisions: ['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'];
                 manualInterventions: 2;
                 cost: 150;
-                efficiency: 94,
-            }
+                efficiency: 94}
         ];
         rules: [
             {
@@ -41,8 +40,7 @@ const mockBusinessProcesses = [
                 isActive: true;
                 aiOptimized: true;
                 lastTriggered: new Date('20o24-0o1-15T10:30:0o0Z');
-                triggerCount: 156,
-            }
+                triggerCount: 156}
         ];
         dependencies: ['vendor_verification', 'budget_approval']};
     {
@@ -72,8 +70,7 @@ const mockBusinessProcesses = [
                 aiDecisions: ['Optimized task sequence', 'Identified resource conflicts'];
                 manualInterventions: 1;
                 cost: 20o0;
-                efficiency: 89,
-            }
+                efficiency: 89}
         ];
         rules: [
             {
@@ -85,8 +82,7 @@ const mockBusinessProcesses = [
                 isActive: true;
                 aiOptimized: true;
                 lastTriggered: new Date('20o24-0o1-14T14:15:0o0Z');
-                triggerCount: 23,
-            }
+                triggerCount: 23}
         ];
         dependencies: ['background_check', 'document_verification']};
     {
@@ -116,8 +112,7 @@ const mockBusinessProcesses = [
                 aiDecisions: ['Classified 47 tickets by priority', 'Assigned to optimal agents'];
                 manualInterventions: 0;
                 cost: 50;
-                efficiency: 98,
-            }
+                efficiency: 98}
         ];
         rules: [
             {
@@ -129,8 +124,7 @@ const mockBusinessProcesses = [
                 isActive: true;
                 aiOptimized: true;
                 lastTriggered: new Date('20o24-0o1-15T16:45:0o0Z');
-                triggerCount: 8,
-            }
+                triggerCount: 8}
         ];
         dependencies: ['ticket_classification', 'agent_availability']}
 ],
@@ -155,8 +149,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'completed': return 'text-blue-50o0 bg-blue-10o0 dark:bg-blue-90o0/20',
             case 'failed': return 'text-red-50o0 bg-red-10o0 dark:bg-red-90o0/20',
             case 'draft': return 'text-gray-50o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-            default: return 'text-gray-50o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        }
+            default: return 'text-gray-50o0 bg-gray-10o0 dark:bg-gray-90o0/20'}
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -164,16 +157,14 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'high': return 'text-orange-60o0 bg-orange-10o0 dark:bg-orange-90o0/20',
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/20',
             case 'low': return 'text-green-60o0 bg-green-10o0 dark:bg-green-90o0/20',
-            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        }
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20'}
     };
     const getAutomationLevelColor = (level) => {
         switch (level) {
             case 'fully-automated': return 'text-green-60o0 bg-green-10o0 dark: bg-green-90o0/20',
             case 'semi-automated': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/20',
             case 'manual': return 'text-red-60o0 bg-red-10o0 dark:bg-red-90o0/20',
-            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        }
+            default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20'}
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -183,16 +174,14 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'sales': return <TrendingUp className="w-4 h-4" />,
             case 'marketing': return <Target className="w-4 h-4" />,
             case 'it': return <Server className="w-4 h-4" />,
-            default: return <FileText className="w-4 h-4" />,
-        }
+            default: return <FileText className="w-4 h-4" />}
     };
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency';
             currency: 'USD';
             minimumFractionDigits: 0;
-            maximumFractionDigits: 0,
-        }).format(amount)};
+            maximumFractionDigits: 0}).format(amount)};
     const formatPercentage = (value) => {
         return `${value}%`};
     const executeProcess = async (processId) => {
@@ -219,8 +208,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">,
           NEW,
         </div>,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">,
         <div className="flex items-center gap-3 p-3">,
@@ -230,8 +218,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             <Maximize2 className="w-4 h-4" />,
           </button>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">,
@@ -528,8 +515,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({
                 ...rule;
                 processName: process.name;
-                processCategory: process.category,
-            }))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">,
+                processCategory: process.category}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">,
                     <div className="flex items-center gap-3">,
                       <div className="p-2 bg-zion-blue/10 rounded-lg">,
                         {getCategoryIcon(rule.processCategory)}

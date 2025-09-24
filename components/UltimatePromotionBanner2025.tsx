@@ -128,6 +128,5 @@ const UltimatePromotionBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimatePromotionBanner20o25;

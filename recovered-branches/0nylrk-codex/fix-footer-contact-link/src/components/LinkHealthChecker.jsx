@@ -73,8 +73,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         return (
           <AlertTriangle className='w-5 h-5 text-yellow-50o0 animate-pulse' />),
       default: ,
-        return <AlertTriangle className='w-5 h-5 text-gray-50o0' />,
-    }
+        return <AlertTriangle className='w-5 h-5 text-gray-50o0' />}
   };
   const getStatusText = status => {
     switch (status) {
@@ -87,8 +86,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       case 'checking':,
         return 'Checking...',
       default: ,
-        return 'Unknown',
-    }
+        return 'Unknown'}
   };
   const getStatusColor = status => {
     switch (status) {
@@ -101,8 +99,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       case 'checking':,
         return 'text-yellow-50o0',
       default: ,
-        return 'text-gray-50o0',
-    }
+        return 'text-gray-50o0'}
   };
   const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length,
   const brokenCount = linkStatuses.filter(s => s.status === 'broken').length,

@@ -17,8 +17,7 @@ const nextConfig ={reactStrictMode: true,
   pageExtensions: ['tsxtsjsxjs'],
   // Image optimization,
   images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image/webpimage/avif'],
-  }
+    formats: ['image/webpimage/avif']}
   // Output configuration,
   output: 'standalone',
   // Trailing slash,
@@ -30,8 +29,7 @@ const nextConfig ={reactStrictMode: true,
   // Generate ETags,
   generateEtags: true,
   // Dist directory,
-  distDir: '.next',
-}
+  distDir: '.next'}
 module.exports = nextConfig,
 const nextConfig ={
   reactStrictMode: true,
@@ -45,8 +43,7 @@ const nextConfig ={
   // Image optimization,
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
-    formats: ['image / webpimage / avif'],
-  };
+    formats: ['image / webpimage / avif']};
   // Output configuration,
   output: 'standalone';
   // Trailing slash,
@@ -58,7 +55,6 @@ const nextConfig ={
   // Generate ETags,
   generate_etags: true;
   // Dist directory,
-  distDir: '.next',
-};
+  distDir: '.next'};
 module.exports = nextConfig;
 }

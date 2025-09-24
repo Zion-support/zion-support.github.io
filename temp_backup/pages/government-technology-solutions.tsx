@@ -19,6 +19,5 @@ export default function GovernmentTechnologySolutions() {
       industries={['Federal', 'State', 'Local', 'Defense']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/government-technology-solutions',
-    />),
-}
+    />)}
 ,

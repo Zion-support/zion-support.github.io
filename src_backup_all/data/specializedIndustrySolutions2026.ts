@@ -20,15 +20,13 @@ export interface SpecializedIndustrySolution20o26 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -81,8 +79,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Computer Vision", "NLP", "Cloud Computing", "IoT"];
       integrations: ["EHR Systems", "PACS", "Lab Systems", "Telemedicine Platforms"];
@@ -90,8 +87,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.99%";
       security: ["HIPAA", "SOC 2", "ISO 270o01", "Data Encryption"]};
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Epic"];
-    marketSize: "$45.2 billion by 20o26",
-  };
+    marketSize: "$45.2 billion by 20o26"};
   // Financial Services AI Platform,
   {
     id: "financial-services-ai-platform-20o26";
@@ -140,8 +136,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Deep Learning", "NLP", "Blockchain", "Cloud Computing"];
       integrations: ["Core Banking Systems", "Trading Platforms", "CRM Systems", "Regulatory Systems"];
@@ -149,8 +144,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.99%";
       security: ["SOC 2", "PCI DSS", "Financial Regulations", "Encryption"]};
     competitors: ["Palantir", "SAS", "FICO", "Experian", "Equifax"];
-    marketSize: "$67.8 billion by 20o26",
-  };
+    marketSize: "$67.8 billion by 20o26"};
   // Manufacturing IoT Platform,
   {
     id: "manufacturing-iot-platform-20o26";
@@ -199,8 +193,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["IoT Sensors", "Edge Computing", "Cloud Computing", "Machine Learning", "Analytics"];
       integrations: ["ERP Systems", "MES Systems", "SCADA Systems", "PLM Systems"];
@@ -208,8 +201,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.9%";
       security: ["Industrial Security", "Data Encryption", "Access Control", "Audit Logging"]};
     competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation", "ABB"];
-    marketSize: "$78.9 billion by 20o26",
-  };
+    marketSize: "$78.9 billion by 20o26"};
   // Retail AI Platform,
   {
     id: "retail-ai-platform-20o26";
@@ -258,8 +250,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Recommendation Engines", "Analytics", "Cloud Computing", "Mobile"];
       integrations: ["E-commerce Platforms", "POS Systems", "CRM Systems", "Marketing Tools"];
@@ -267,8 +258,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.8%";
       security: ["PCI DSS", "Data Encryption", "Access Control", "Fraud Detection"]};
     competitors: ["Salesforce", "Adobe", "Shopify", "BigCommerce", "WooCommerce"];
-    marketSize: "$34.5 billion by 20o26",
-  };
+    marketSize: "$34.5 billion by 20o26"};
   // Education Technology Platform,
   {
     id: "education-technology-platform-20o26";
@@ -317,8 +307,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Analytics", "Cloud Computing", "Mobile", "Web Technologies"];
       integrations: ["LMS Systems", "SIS Systems", "Content Platforms", "Communication Tools"];
@@ -326,8 +315,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.8%";
       security: ["FERPA", "Data Encryption", "Access Control", "Privacy Protection"]};
     competitors: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"];
-    marketSize: "$28.7 billion by 20o26",
-  };
+    marketSize: "$28.7 billion by 20o26"};
   // Transportation & Logistics Platform,
   {
     id: "transportation-logistics-platform-20o26";
@@ -376,8 +364,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "GPS", "IoT", "Cloud Computing", "Mobile"];
       integrations: ["TMS Systems", "WMS Systems", "ERP Systems", "GPS Systems"];
@@ -385,8 +372,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.9%";
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]};
     competitors: ["Manhattan Associates", "Oracle", "SAP", "JDA Software", "Blue Yonder"];
-    marketSize: "$56.3 billion by 20o26",
-  };
+    marketSize: "$56.3 billion by 20o26"};
   // Energy Management Platform,
   {
     id: "energy-management-platform-20o26";
@@ -435,8 +421,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["IoT Sensors", "Machine Learning", "Analytics", "Cloud Computing", "Mobile"];
       integrations: ["Building Management Systems", "SCADA Systems", "Smart Meters", "Renewable Systems"];
@@ -444,8 +429,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.9%";
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]};
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "ABB"];
-    marketSize: "$42.8 billion by 20o26",
-  };
+    marketSize: "$42.8 billion by 20o26"};
   // Real Estate Technology Platform,
   {
     id: "real-estate-technology-platform-20o26";
@@ -494,8 +478,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "Analytics", "CRM", "Cloud Computing", "Mobile"];
       integrations: ["MLS Systems", "CRM Systems", "Property Databases", "Marketing Tools"];
@@ -503,8 +486,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.8%";
       security: ["Data Encryption", "Access Control", "Audit Logging", "Secure Communication"]};
     competitors: ["Zillow", "Redfin", "Realtor.com", "CoStar", "RealPage"];
-    marketSize: "$25.6 billion by 20o26",
-  };
+    marketSize: "$25.6 billion by 20o26"};
   // Legal Technology Platform,
   {
     id: "legal-technology-platform-20o26";
@@ -553,8 +535,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Machine Learning", "NLP", "Document Processing", "Cloud Computing", "Analytics"];
       integrations: ["Practice Management Systems", "Document Management", "Legal Databases", "CRM Systems"];
@@ -562,6 +543,5 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_20o26: SpecializedIndustrySolution20
       uptime: "99.9%";
       security: ["Data Encryption", "Access Control", "Audit Logging", "Compliance"]};
     competitors: ["Relativity", "LexisNexis", "Westlaw", "Clio", "MyCase"];
-    marketSize: "$18.9 billion by 20o26",
-  }
+    marketSize: "$18.9 billion by 20o26"}
 ],

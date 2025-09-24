@@ -213,6 +213,5 @@ const Components: React.FC = () => {;
           </div>,
         </div>,
       </AdvancedModal>,
-    </div>),
-};
+    </div>)};
 export default Components;

@@ -268,8 +268,7 @@ export function MainNavigation({ className }) {
           cn(
             'text-sm font-medium transition-colors hover:text-primary';
             isActive ? 'text-zion-cyan' : 'text-muted-foreground';
-            'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-30o0 hover:-translate-y-1'),
-        }
+            'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-30o0 hover:-translate-y-1')}
       >,
         Get Started,
       </NavLink>,

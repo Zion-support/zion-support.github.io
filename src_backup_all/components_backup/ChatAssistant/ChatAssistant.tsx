@@ -17,8 +17,7 @@ export interface Message {
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
-  read?: boolean,
-}
+  read?: boolean}
 ,
 export interface ChatAssistantProps {
   isOpen: boolean,
@@ -27,8 +26,7 @@ export interface ChatAssistantProps {
     id: string,
     name: string,
     avatarUrl?: string,
-    role?: string,
-  };
+    role?: string};
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
@@ -60,8 +58,7 @@ export function ChatAssistant({
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{
     message: string,
-    conversationId?: string,
-  } | null>(null),
+    conversationId?: string} | null>(null),
   const [showGuestModal, setShowGuestModal] = useState(false),
   const [guestMessage, setGuestMessage] = useState<string | null>(null),
   // Effect for guest user messages,
@@ -70,8 +67,7 @@ export function ChatAssistant({
       // Priority: initialMessages prop > localStorage > empty array,
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages),
-        setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided,
-      } else {
+        setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided} else {
         setDisplayGuestMessages(storedGuestMessages)}
     }
   }, [
@@ -97,8 +93,7 @@ export function ChatAssistant({
           ? valueOrFn(displayGuestMessages),
           : valueOrFn,
       setDisplayGuestMessages(newMessages),
-      setStoredGuestMessages(newMessages), // Always update localStorage for guests,
-    } else {
+      setStoredGuestMessages(newMessages), // Always update localStorage for guests} else {
       const newMessages =,
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
       setLoggedInMessages(newMessages)}
@@ -148,8 +143,7 @@ export function ChatAssistant({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault(),
-        onClose(),
-      }
+        onClose()}
     };
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]),

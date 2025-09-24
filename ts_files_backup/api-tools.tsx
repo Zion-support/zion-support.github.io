@@ -35,8 +35,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '100 requests/month';
         pro: '$49/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Development';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
       gradient: 'from-blue-400 to-cyan-500';
@@ -46,8 +45,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '15,000+';
       rating: 4.8;
-      responseTime: '<100ms',
-    };
+      responseTime: '<100ms'};
     {
       icon: <Database className="w-8 h-8 text-white" />;
       title: 'DataSync API - Real-time Data Synchronization';
@@ -61,8 +59,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,000 syncs/month';
         pro: '$79/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Data';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600';
       gradient: 'from-green-400 to-emerald-500';
@@ -72,8 +69,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '8,500+';
       rating: 4.9;
-      responseTime: '<50ms',
-    };
+      responseTime: '<50ms'};
     {
       icon: <Globe className="w-8 h-8 text-white" />;
       title: 'GeoAPI - Advanced Geospatial Services';
@@ -87,8 +83,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '10,000 requests/month';
         pro: '$99/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Location';
       color: 'bg-gradient-to-br from-purple-500 to-pink-600';
       gradient: 'from-purple-400 to-pink-500';
@@ -98,8 +93,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '12,000+';
       rating: 4.7;
-      responseTime: '<75ms',
-    };
+      responseTime: '<75ms'};
     {
       icon: <Shield className="w-8 h-8 text-white" />;
       title: 'AuthGuard API - Enterprise Authentication';
@@ -113,8 +107,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,000 users/month';
         pro: '$149/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Security';
       color: 'bg-gradient-to-br from-red-500 to-orange-600';
       gradient: 'from-red-400 to-orange-500';
@@ -124,8 +117,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '6,800+';
       rating: 4.9;
-      responseTime: '<25ms',
-    };
+      responseTime: '<25ms'};
     {
       icon: <Zap className="w-8 h-8 text-white" />;
       title: 'WebhookHub - Intelligent Webhook Management';
@@ -139,8 +131,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '5,000 webhooks/month';
         pro: '$39/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Integration';
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600';
       gradient: 'from-yellow-400 to-orange-500';
@@ -150,8 +141,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '9,200+';
       rating: 4.8;
-      responseTime: '<30ms',
-    };
+      responseTime: '<30ms'};
     {
       icon: <Bot className="w-8 h-8 text-white" />;
       title: 'NLP API - Natural Language Processing';
@@ -165,8 +155,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '5,000 requests/month';
         pro: '$69/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'AI/ML';
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600';
       gradient: 'from-indigo-400 to-purple-500';
@@ -176,8 +165,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '11,500+';
       rating: 4.7;
-      responseTime: '<200ms',
-    };
+      responseTime: '<200ms'};
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />;
       title: 'Analytics API - Business Intelligence';
@@ -191,8 +179,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '10,000 events/month';
         pro: '$89/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Analytics';
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
       gradient: 'from-teal-400 to-cyan-500';
@@ -202,8 +189,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '7,800+';
       rating: 4.8;
-      responseTime: '<150ms',
-    };
+      responseTime: '<150ms'};
     {
       icon: <Lock className="w-8 h-8 text-white" />;
       title: 'EncryptAPI - Data Encryption Services';
@@ -217,8 +203,7 @@ export default function ApiToolsPage() {
       pricing: {
         free: '1,000 operations/month';
         pro: '$119/month';
-        enterprise: 'Custom',
-      };
+        enterprise: 'Custom'};
       category: 'Security';
       color: 'bg-gradient-to-br from-gray-500 to-slate-600';
       gradient: 'from-gray-400 to-slate-500';
@@ -228,8 +213,7 @@ export default function ApiToolsPage() {
       status: 'Live';
       users: '4,200+';
       rating: 4.9;
-      responseTime: '<20ms',
-    }
+      responseTime: '<20ms'}
   ],
   const categories = [', 'All', 'Development', 'Data', 'Location', 'Security', 'Integration'AI/'ML', 'Analytics'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
@@ -268,8 +252,7 @@ export default function ApiToolsPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category,
                     ? 'bg-indigo-600 text-white shadow-lg',
-                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 hover:text-white',
-                }`}
+                    : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 hover:text-white'}`}
               >,
                 {category}
               </button>))}
@@ -455,6 +438,5 @@ export default function ApiToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

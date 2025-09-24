@@ -18,8 +18,7 @@ const AIRevolution50o000ROIPromotionBanner: React.FC = () => {
         accuracy: '99.99%';
         efficiency: '5,0o00%'};
       readingTime: '45 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 AI Revolution Success Story';
@@ -32,8 +31,7 @@ const AIRevolution50o000ROIPromotionBanner: React.FC = () => {
         timeline: '18 months';
         efficiency: '5,0o00%'};
       readingTime: '25 min read';
-      isNew: true,
-    };
+      isNew: true};
     {
       id: 'revolutionary-implementation-guide';
       title: 'Revolutionary AI Implementation Guide';
@@ -44,11 +42,9 @@ const AIRevolution50o000ROIPromotionBanner: React.FC = () => {
         roi: '50,0o00%';
         timeline: '18 months';
         success: '99.7%';
-        guide: '60 min read',
-      };
+        guide: '60 min read'};
       readingTime: '60 min read';
-      isNew: true,
-    }
+      isNew: true}
   ],
   useEffect(() => {
     // Check if banner was dismissed,

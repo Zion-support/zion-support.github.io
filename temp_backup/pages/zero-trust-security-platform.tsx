@@ -19,8 +19,7 @@ export default function ZeroTrustSecurityPlatform() {
 			]}
 			industries={["Financial Services", "Healthcare", "SaaS", "Government"]}
 			url="https: //ziontechgroup.com/zero-trust-security-platform",
-		/>),
-}
+		/>)}
 ,
 // Disable static generation to prevent SSR issues,
 export async function getServerSideProps() {

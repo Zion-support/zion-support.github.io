@@ -31,6 +31,5 @@ export function EnterpriseTrustBadges() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

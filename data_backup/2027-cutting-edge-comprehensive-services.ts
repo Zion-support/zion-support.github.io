@@ -77,8 +77,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Custom AI model training, system integration, and continuous optimization';
     "launchDate": '20o27-0o1-15';
@@ -125,8 +124,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Quantum hardware integration, custom algorithm development, and ongoing optimization';
     "launchDate": '20o27-0o2-0o1';
@@ -173,8 +171,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Blockchain development, smart contract deployment, and marketplace integration';
     "launchDate": '20o27-0o1-20';
@@ -221,8 +218,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Security assessment, system hardening, and continuous monitoring setup';
     "launchDate": '20o27-0o1-10';
@@ -269,8 +265,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'AI model training, data integration, and regulatory compliance setup';
     "launchDate": '20o27-0o1-0o5';
@@ -317,8 +312,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Trading strategy development, risk management setup, and regulatory compliance';
     "launchDate": '20o27-0o1-12';
@@ -365,8 +359,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'IoT device integration, AI model deployment, and automation workflow setup';
     "launchDate": '20o27-0o1-18';
@@ -413,8 +406,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Cloud assessment, migration planning, and ongoing optimization';
     "launchDate": '20o27-0o1-08';
@@ -461,8 +453,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Data source integration, dashboard development, and user training';
     "launchDate": '20o27-0o1-25';
@@ -509,8 +500,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Campaign setup, automation workflow creation, and performance optimization';
     "launchDate": '20o27-0o1-15';
@@ -557,8 +547,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Platform integration, optimization strategy development, and performance monitoring';
     "launchDate": '20o27-0o1-22';
@@ -605,8 +594,7 @@ export const "cuttingEdgeComprehensiveServices20o27": CuttingEdgeComprehensiveSe
       mobile: '+1 30o2 464 0950';
       "email": 'kleber@ziontechgroup.com';
       "address": '364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com',
-    };
+      "website": 'https: //ziontechgroup.com'};
     "realImplementation": true;
     "implementationDetails": 'Platform setup, content integration, and teacher training';
     "launchDate": '20o27-0o1-30';

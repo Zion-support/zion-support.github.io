@@ -17,8 +17,7 @@ const UltimateBusinessIntelligence20o25Banner = () => {
         accuracy: '99.99%';
         speed: '5,0o00% faster'};
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-business-intelligence-success';
       title: 'Fortune 50o0 Ultimate Business Intelligence Success';
@@ -29,11 +28,9 @@ const UltimateBusinessIntelligence20o25Banner = () => {
         roi: '30,0o00%';
         savings: '$750B';
         company: '$15.2B';
-        timeline: '18 months',
-      };
+        timeline: '18 months'};
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'business-intelligence-implementation-guide';
       title: 'AI 20o25 Ultimate Business Intelligence Implementation Guide';
@@ -44,11 +41,9 @@ const UltimateBusinessIntelligence20o25Banner = () => {
         roi: '30,0o00%';
         success: '99.8%';
         timeline: '18 months';
-        guide: '60 min read',
-      };
+        guide: '60 min read'};
       readingTime: '60 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -156,8 +151,7 @@ const UltimateBusinessIntelligence20o25Banner = () => {
               <div
                 key={item.id}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-30o0 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-40o0 bg-white/20' : 'hover: bg-white/15',
-                }`}
+                  index === currentSlide ? 'ring-2 ring-yellow-40o0 bg-white/20' : 'hover: bg-white/15'}`}
                 onClick={() => setCurrentSlide(index)}
               >,
                 <div className="flex items-start justify-between">,

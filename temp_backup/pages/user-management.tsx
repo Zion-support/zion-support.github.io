@@ -15,6 +15,5 @@ export default function UserManagementPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

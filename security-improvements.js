@@ -4,26 +4,25 @@ import path from 'path',
 import { fileURLToPath } from 'url',
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
-// console.log('🔒 Starting Security Improvements...\n'),
+// // console.log('🔒 Starting Security Improvements...\n'),
 async function runSecurityImprovements() {
   try {
     // 1. Add security headers,
-    // console.log('🛡️ Adding security headers...'),
+    // // console.log('🛡️ Adding security headers...'),
     await addSecurityHeaders(),
     // 2. Input validation utilities,
-    // console.log('✅ Adding input validation...'),
+    // // console.log('✅ Adding input validation...'),
     await addInputValidation(),
     // 3. Rate limiting,
-    // console.log('⏱️ Adding rate limiting...'),
+    // // console.log('⏱️ Adding rate limiting...'),
     await addRateLimiting(),
     // 4. CSRF protection,
-    // console.log('🛡️ Adding CSRF protection...'),
+    // // console.log('🛡️ Adding CSRF protection...'),
     await addCSRFProtection(),
     // 5. Content Security Policy,
-    // console.log('📋 Adding Content Security Policy...'),
+    // // console.log('📋 Adding Content Security Policy...'),
     await addCSP(),
-    // console.log('\n✅ Security improvements completed successfully!'),
-} catch (error) {
+    // // console.log('\n✅ Security improvements completed successfully!')} catch (error) {
     console.error('❌ Error during security improvements:', error.message),
     process.exit(1)}
 }
@@ -46,7 +45,7 @@ export const getSecurityHeaders = () => {
   if (!fs.existsSync(utilsDir)) {
     fs.mkdirSync(utilsDir, { recursive: true })}
   fs.writeFileSync(path.join(utilsDir, 'security-headers.ts'), securityHeaders),
-  // console.log('  ✓ Added security headers configuration')}
+  // // console.log('  ✓ Added security headers configuration')}
 ,
 async function addInputValidation() {
   const inputValidator = `,
@@ -61,14 +60,12 @@ export class InputValidator {
 ,
   static validateEmail(email: string): boolean {
     const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/,
-    return emailRegex.test(email),
-  }
+    return emailRegex.test(email)}
 ,
   static validateURL(url: string): boolean {
     try {
       const parsedUrl = new URL(url),
-      return ['http:', 'https: '].includes(parsedUrl.protocol),
-    } catch {
+      return ['http:', 'https: '].includes(parsedUrl.protocol)} catch {
       return false}
   }
 ,
@@ -89,15 +86,14 @@ export class InputValidator {
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'input-validator.ts'), inputValidator),
-  // console.log('  ✓ Added input validation utilities')}
+  // // console.log('  ✓ Added input validation utilities')}
 ,
 async function addRateLimiting() {
   const rateLimiter = `,
 // Rate limiting utilities,
 interface RateLimitEntry {
   count: number,
-  resetTime: number,
-}
+  resetTime: number}
 ,
 export class RateLimiter {
   private requests: Map<string RateLimitEntry> = new Map(),
@@ -125,21 +121,19 @@ export class RateLimiter {
   getRemainingRequests(identifier: string): number {
     const entry = this.requests.get(identifier),
     if (!entry || Date.now() > entry.resetTime) {
-      return this.maxRequests,
-    }
+      return this.maxRequests}
     return Math.max(0, this.maxRequests - entry.count)}
 ,
   getResetTime(identifier: string): number {
     const entry = this.requests.get(identifier),
-    return entry?.resetTime || Date.now() + this.windowMs,
-  }
+    return entry?.resetTime || Date.now() + this.windowMs}
 }
 ,
 export const rateLimiter = new RateLimiter(),
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'rate-limiter.ts'), rateLimiter),
-  // console.log('  ✓ Added rate limiting utilities')}
+  // // console.log('  ✓ Added rate limiting utilities')}
 ,
 async function addCSRFProtection() {
   const csrfProtection = `,
@@ -157,14 +151,12 @@ export class CSRFProtection {
     const entry = this.tokens.get(sessionId),
     if (!entry || Date.now() > entry.expires) {
       this.tokens.delete(sessionId),
-      return false,
-    }
+      return false}
 ,
     return entry.token === providedToken}
 ,
   invalidateToken(sessionId: string): void {
-    this.tokens.delete(sessionId),
-  }
+    this.tokens.delete(sessionId)}
 ,
   cleanup(): void {
     const now = Date.now(),
@@ -182,7 +174,7 @@ setInterval(() => {
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'csrf-protection.ts'), csrfProtection),
-  // console.log('  ✓ Added CSRF protection utilities')}
+  // // console.log('  ✓ Added CSRF protection utilities')}
 ,
 async function addCSP() {
   const cspConfig = `,
@@ -243,7 +235,7 @@ export const cspHeader = \`Content-Security-Policy: \${generateCSP()}\`,
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'csp-config.ts'), cspConfig),
-  // console.log('  ✓ Added Content Security Policy configuration')}
+  // // console.log('  ✓ Added Content Security Policy configuration')}
 ,
 // Run security improvements,
 runSecurityImprovements(),

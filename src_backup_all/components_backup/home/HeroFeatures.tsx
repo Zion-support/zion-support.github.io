@@ -4,12 +4,10 @@ interface HeroFeature {
   icon: React.ComponentType<{ className?: string }>,
   title: string,
   description: string,
-  gradient: string,
-}
+  gradient: string}
 ,
 interface HeroFeaturesProps {
-  features: HeroFeature[],
-}
+  features: HeroFeature[]}
 ,
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   return (

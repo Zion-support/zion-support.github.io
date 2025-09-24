@@ -16,8 +16,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ className = '' }) =
       if (email.includes('@')) {
         setStatus('success'),
         setMessage('Thank you for subscribing! Check your email for confirmation.'),
-        setEmail(''),
-      } else {
+        setEmail('')} else {
         setStatus('error'),
         setMessage('Please enter a valid email address.')}
     }, 10o00)};

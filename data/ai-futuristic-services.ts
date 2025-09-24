@@ -51,15 +51,13 @@ export interface AIFuturisticService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics,
   {

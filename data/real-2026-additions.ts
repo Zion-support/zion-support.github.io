@@ -3,8 +3,7 @@ export interface Real20o26Addition {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 export const real20o26Additions: Real20o26Addition[] = [
   {
     id: '20o26-addition-1';

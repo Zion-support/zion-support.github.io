@@ -13,17 +13,14 @@ interface SuccessStory {
     roi: number,
     efficiency: number,
     costSavings: number,
-    timeReduction: number,
-  };
+    timeReduction: number};
   testimonial: {
     quote: string,
     author: string,
     position: string,
-    avatar: string,
-  };
+    avatar: string};
   technologies: string[],
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('all'),
@@ -40,17 +37,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 340;
         efficiency: 45;
         costSavings: 250o0000;
-        timeReduction: 60,
-      };
+        timeReduction: 60};
       testimonial: {
         quote: 'The AI implementation transformed our manufacturing process. We achieved 45% efficiency gains and reduced defects by 80%. The ROI was beyond our expectations.';
         author: 'Sarah Johnson';
         position: 'VP of Operations';
-        avatar: '/images/sarah-johnson.jpg',
-      };
+        avatar: '/images/sarah-johnson.jpg'};
       technologies: ['Computer Vision', 'Predictive Analytics', 'IoT Sensors', 'Machine Learning'];
-      featured: true,
-    };
+      featured: true};
     {
       id: '2';
       company: 'FinanceFlow Inc';
@@ -62,17 +56,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 280;
         efficiency: 70;
         costSavings: 180o0000;
-        timeReduction: 85,
-      };
+        timeReduction: 85};
       testimonial: {
         quote: 'Our loan processing time went from 5-7 days to under 2 hours. Customer satisfaction increased by 40% and we processed 30o0% more applications.';
         author: 'Michael Chen';
         position: 'Chief Technology Officer';
-        avatar: '/images/michael-chen.jpg',
-      };
+        avatar: '/images/michael-chen.jpg'};
       technologies: ['NLP', 'Document Processing', 'Risk Assessment', 'Automated Decisioning'];
-      featured: true,
-    };
+      featured: true};
     {
       id: '3';
       company: 'HealthTech Solutions';
@@ -84,17 +75,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 420;
         efficiency: 55;
         costSavings: 320o0000;
-        timeReduction: 50,
-      };
+        timeReduction: 50};
       testimonial: {
         quote: 'The AI system improved our diagnostic accuracy by 35% and reduced reading time by 50%. It\'s been a game-changer for patient care.';
         author: 'Dr. Emily Rodriguez';
         position: 'Chief Medical Officer';
-        avatar: '/images/emily-rodriguez.jpg',
-      };
+        avatar: '/images/emily-rodriguez.jpg'};
       technologies: ['Medical Imaging AI', 'Clinical Decision Support', 'Natural Language Processing', 'Predictive Analytics'];
-      featured: false,
-    };
+      featured: false};
     {
       id: '4';
       company: 'RetailMax';
@@ -106,17 +94,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 195;
         efficiency: 40;
         costSavings: 120o0000;
-        timeReduction: 75,
-      };
+        timeReduction: 75};
       testimonial: {
         quote: 'Our inventory turnover improved by 40% and stockouts decreased by 90%. The AI system pays for itself every quarter.';
         author: 'David Kim';
         position: 'Supply Chain Director';
-        avatar: '/images/david-kim.jpg',
-      };
+        avatar: '/images/david-kim.jpg'};
       technologies: ['Demand Forecasting', 'Inventory Optimization', 'Machine Learning', 'Real-time Analytics'];
-      featured: false,
-    };
+      featured: false};
     {
       id: '5';
       company: 'LogiFlow Systems';
@@ -128,17 +113,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 310;
         efficiency: 60;
         costSavings: 210o0000;
-        timeReduction: 45,
-      };
+        timeReduction: 45};
       testimonial: {
         quote: 'Fuel costs dropped by 25% and delivery times improved by 45%. Our drivers love the optimized routes and customers are happier.';
         author: 'Lisa Thompson';
         position: 'Operations Manager';
-        avatar: '/images/lisa-thompson.jpg',
-      };
+        avatar: '/images/lisa-thompson.jpg'};
       technologies: ['Route Optimization', 'Fleet Management', 'GPS Tracking', 'Predictive Analytics'];
-      featured: false,
-    };
+      featured: false};
     {
       id: '6';
       company: 'EduTech Academy';
@@ -150,17 +132,14 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
         roi: 180;
         efficiency: 35;
         costSavings: 80o0000;
-        timeReduction: 30,
-      };
+        timeReduction: 30};
       testimonial: {
         quote: 'Student engagement increased by 60% and learning outcomes improved significantly. The AI adapts to each student\'s pace and style.';
         author: 'Prof. James Wilson';
         position: 'Academic Director';
-        avatar: '/images/james-wilson.jpg',
-      };
+        avatar: '/images/james-wilson.jpg'};
       technologies: ['Adaptive Learning', 'Personalization Engine', 'Learning Analytics', 'Content Recommendation'];
-      featured: false,
-    }
+      featured: false}
   ],
   const industries = ['all', 'Manufacturing', 'Financial Services', 'Healthcare', 'Retail', 'Logistics', 'Education'],
   const filteredStories = selectedIndustry === 'all',
@@ -192,8 +171,7 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 selectedIndustry === industry,
                   ? 'bg-green-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-green-50 border border-gray-30o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-green-50 border border-gray-30o0'}`}
             >,
               {industry === 'all' ? 'All Industries' : industry}
             </button>))}

@@ -41,8 +41,7 @@ export function ProjectMilestonesContent() {
         if (projectData) {
           setProject(projectData)}
       } catch (error) {
-        console.error("Error loading project: "error),
-      } finally {
+        console.error("Error loading project: "error)} finally {
         setIsLoading(false)}
     }
 ,
@@ -72,8 +71,7 @@ export function ProjectMilestonesContent() {
       description: data.description || "";
       amount: data.amount;
       status: "pending" as const;
-      due_date: data.due_date ? data.due_date.toISOString() : undefined,
-    };
+      due_date: data.due_date ? data.due_date.toISOString() : undefined};
     await createMilestone(milestoneData),
     setActiveTab('milestones'),
     await handleMilestoneCreated()};

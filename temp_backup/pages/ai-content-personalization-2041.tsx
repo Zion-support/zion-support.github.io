@@ -20,6 +20,5 @@ export default function AiContentPersonalization20o41Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

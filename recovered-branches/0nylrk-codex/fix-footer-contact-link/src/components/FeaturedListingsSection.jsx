@@ -100,8 +100,7 @@ const FeaturedListingsSection = () => {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -301,6 +300,5 @@ const FeaturedListingsSection = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeaturedListingsSection;

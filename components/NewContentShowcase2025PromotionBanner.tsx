@@ -34,20 +34,17 @@ const NewContentShowcase20o25PromotionBanner = () => {
       icon: Brain;
       title: 'AI Solutions';
       description: 'Revolutionary AI technology';
-      color: 'from-purple-50o0 to-blue-50o0',
-    };
+      color: 'from-purple-50o0 to-blue-50o0'};
     {
       icon: Zap;
       title: 'Automation';
       description: 'Intelligent workflow automation';
-      color: 'from-green-50o0 to-teal-50o0',
-    };
+      color: 'from-green-50o0 to-teal-50o0'};
     {
       icon: Shield;
       title: 'Security';
       description: 'Advanced cybersecurity protection';
-      color: 'from-red-50o0 to-orange-50o0',
-    }
+      color: 'from-red-50o0 to-orange-50o0'}
   ],
   const stats = [
     { label: 'New 'Features', 'value: '50+'icon: Sparkles };

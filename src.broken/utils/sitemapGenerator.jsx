@@ -65,8 +65,7 @@ Allow: /contact/,
 Allow: /blog/,
 Allow: /careers/,
 # Crawl delay (optional),
-Crawl-delay: 1`,
-  }
+Crawl-delay: 1`}
   /**,
    * Generate JSON sitemap for JavaScript applications,
    */,
@@ -94,17 +93,17 @@ Crawl-delay: 1`,
     <title>Sitemap - Zion Tech Group</title>,
     <meta name="description" content="Complete sitemap of Zion Tech Group website">,
     <style>,
-        body { font-family: Arial, sans-serif, margin: 40px, line-height: 1.6, }
-        .container { max-width: 120o0px, margin: 0 auto, }
-        h1 { color: #0o0e5ff, border-bottom: 2px solid #0o0e5ff, padding-bottom: 10px, }
-        .sitemap-section { margin: 30px 0, }
-        .sitemap-section h2 { color: #333, margin-bottom: 15px, }
-        .sitemap-links { display: grid, grid-template-columns: repeat(auto-fit, minmax(30o0px, 1fr)), gap: 20px, }
-        .sitemap-link { padding: 10px, border: 1px solid #ddd, border-radius: 5px, text-decoration: none, color: #333, }
-        .sitemap-link: hover { background-color: #f5f5f5, border-color: #0o0e5ff, }
-        .priority-high { border-left: 4px solid #0o0e5ff, }
-        .priority-medium { border-left: 4px solid #ff980o0, }
-        .priority-low { border-left: 4px solid #4caf50, }
+        body { font-family: Arial, sans-serif, margin: 40px, line-height: 1.6}
+        .container { max-width: 120o0px, margin: 0 auto}
+        h1 { color: #0o0e5ff, border-bottom: 2px solid #0o0e5ff, padding-bottom: 10px}
+        .sitemap-section { margin: 30px 0}
+        .sitemap-section h2 { color: #333, margin-bottom: 15px}
+        .sitemap-links { display: grid, grid-template-columns: repeat(auto-fit, minmax(30o0px, 1fr)), gap: 20px}
+        .sitemap-link { padding: 10px, border: 1px solid #ddd, border-radius: 5px, text-decoration: none, color: #333}
+        .sitemap-link: hover { background-color: #f5f5f5, border-color: #0o0e5ff}
+        .priority-high { border-left: 4px solid #0o0e5ff}
+        .priority-medium { border-left: 4px solid #ff980o0}
+        .priority-low { border-left: 4px solid #4caf50}
     </style>,
 </head>,
 <body>,

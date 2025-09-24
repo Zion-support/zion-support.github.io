@@ -152,6 +152,5 @@ const UltimateContentPromotion20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default UltimateContentPromotion20o26;

@@ -12,8 +12,7 @@ interface TalentProfileData {
   title: string,
   bio: string,
   skills: string[],
-  location?: string,
-}
+  location?: string}
 ,
 interface EnhancedProfile {
   summary: string,
@@ -22,8 +21,7 @@ interface EnhancedProfile {
     devops: string[],
     platforms: string[],
     softSkills: string[],
-    other: string[],
-  };
+    other: string[]};
 }
 ,
 serve(async req => {
@@ -33,8 +31,7 @@ serve(async req => {
 ,
   try {
     const { talentData } = (await req.json()) as {
-      talentData: TalentProfileData,
-    };
+      talentData: TalentProfileData};
     if (!talentData.bio || talentData.bio.length < 20) {
       return new Response(
         JSON.stringify({ error: 'Bio must be at least 20 characters long' });
@@ -97,8 +94,7 @@ serve(async req => {
     // Parse the JSON response,
     let enhancedProfile: EnhancedProfile,
     try {
-      enhancedProfile = JSON.parse(responseContent),
-    } catch (e) {
+      enhancedProfile = JSON.parse(responseContent)} catch (e) {
       console.error('Error parsing OpenAI response:', e),
       throw new Error('Failed to parse the generated content')}
 ,

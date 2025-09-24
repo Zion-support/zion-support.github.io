@@ -118,7 +118,7 @@ export default function QuantumCloudHybridPlatformPage() {
                     </h3>,
                     <p className='text-slate-30o0 text-sm'>,
                       Portfolio optimization, risk assessment, and algorithmic,
-                      trading using quantum algorithms for superior window.performance.,
+                      trading using quantum algorithms for superior window.window.performance.,
                     </p>,
                   </div>,
                   <div className='space-y-3'>,

@@ -34,8 +34,7 @@ export default function ContactPage() {
     company: '';
     phone: '';
     service: '';
-    message: '',
-  }),
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
   const contactInfo = {
@@ -44,8 +43,7 @@ export default function ContactPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
     hours: '24/7 Support Available';
-    timezone: 'Eastern Time (ET)',
-  };
+    timezone: 'Eastern Time (ET)'};
   // Get popular services for showcase,
   const popularServices = [
     ...innovativeAIServices2029.filter(s => s.popular);
@@ -74,8 +72,7 @@ export default function ContactPage() {
         service: '';
         message: '';
         budget: '';
-        timeline: '',
-      })}, 5000)};
+        timeline: ''})}, 5000)};
   const contactMethods = [
     {
       icon: Phone;
@@ -83,16 +80,14 @@ export default function ContactPage() {
       value: '+1 (302) 464-0950';
       description: 'Available 24/7 for urgent inquiries';
       color: 'from-blue-500 to-cyan-500';
-      action: 'tel:+13024640950',
-    };
+      action: 'tel:+13024640950'};
     {
       icon: Mail;
       title: 'Email Us';
       value: 'kleber@ziontechgroup.com';
       description: 'Response within 2 hours guaranteed';
       color: 'from-green-500 to-emerald-500';
-      action: 'mailto:kleber@ziontechgroup.com',
-    };
+      action: 'mailto:kleber@ziontechgroup.com'};
     {
       icon: MapPin;
       title: 'Visit Us';
@@ -106,8 +101,7 @@ export default function ContactPage() {
       value: '24/7 Support';
       description: 'Always here when you need us';
       color: 'from-orange-500 to-red-500';
-      action: '#',
-    }
+      action: '#'}
   ],
       <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
@@ -606,16 +600,14 @@ export default function ContactPage() {
           </div>,
         </footer>,
       </div>,
-    </>),
-};
+    </>)};
 export default ContactPage;
 =======,
 export default function ContactPage() {
 	const contact = {
 		mobile: '+1 302 464 0950';
 		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-	};
+		address: '364 E Main St STE 1008 Middletown DE 19709'};
 	return (
 		<Layout>,
 =======,
@@ -624,8 +616,7 @@ export default function ContactPage() {
 		mobile: '+1 302 464 0950';
 		email: 'kleber@ziontechgroup.com';
 		address: '364 E Main St STE 1008 Middletown DE 19709';
-		website: 'https://ziontechgroup.com',
-	};
+		website: 'https://ziontechgroup.com'};
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">,
 			<Head>,
@@ -655,8 +646,7 @@ export default function ContactPage() {
 			</div>,
 		</UltraFuturisticBackground>),
 =======,
-        message: '',
-      })}, 3000)};
+        message: ''})}, 3000)};
   const stats = [
     { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' };
     { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' };

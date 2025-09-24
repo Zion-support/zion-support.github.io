@@ -49,6 +49,5 @@ export default function AgentIncidentResponsePlaybookPage() {
           </li>,
         </ul>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

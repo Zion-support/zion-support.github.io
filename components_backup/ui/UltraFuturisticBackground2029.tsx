@@ -7,12 +7,10 @@ interface Particle {
   vy: number,
   size: number,
   opacity: number,
-  color: string,
-}
+  color: string}
 ,
 interface UltraFuturisticBackground20o29Props {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 export default function UltraFuturisticBackground20o29({ children }: UltraFuturisticBackground20o29Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
@@ -46,8 +44,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
           vy: (Math.random() - 0.5) * 0.5;
           size: Math.random() * 3 + 1;
           opacity: Math.random() * 0.5 + 0.3;
-          color: colors[Math.floor(Math.random() * colors.length)],
-        })}
+          color: colors[Math.floor(Math.random() * colors.length)]})}
       particlesRef.current = particles};
     initParticles(),
     // Animation loop,
@@ -171,8 +168,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
           transition={{
             duration: 4;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-40 h-40 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 rounded-full blur-3xl",
@@ -182,8 +178,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
           transition={{
             duration: 5;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-3xl",
@@ -193,8 +188,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Neon Lines */}
         <div className="absolute inset-0">,
@@ -205,8 +199,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             transition={{
               duration: 3;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-blue-50o0 to-transparent",
@@ -215,8 +208,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             transition={{
               duration: 4;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-50o0 to-transparent",
@@ -225,8 +217,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             transition={{
               duration: 5;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-green-50o0 to-transparent",
@@ -235,8 +226,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             transition={{
               duration: 6;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>,
       </div>,

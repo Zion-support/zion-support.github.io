@@ -9,8 +9,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react',
 interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>,
-}
+  form: UseFormReturn<AppMetadataValues>}
 ,
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -143,10 +142,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   {
   {
   X }from 'lucide-react' interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues> ,
-}export const MetadataForm: React.FC<MetadataFormProps> = ({
-  form ,
-}) => {
+  form: UseFormReturn<AppMetadataValues> }export const MetadataForm: React.FC<MetadataFormProps> = ({
+  form }) => {
   e.preventDefault (),
 const value = e.currentTarget.value.trim (),
 if (value && !keywords.includes (value) ) {

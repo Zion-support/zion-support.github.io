@@ -2,8 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react',
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
 import React, { useState, useEffect, useMemo } from 'react';
 import {
-
-,
 :components/ContentCategorizer.tsx,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
@@ -36,16 +34,14 @@ interface ContentItem {
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
-}
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx}
 interface ContentCategory {id: string,
   name: string,
   icon: any,
   description: string,
   color: string,
   count: number,
-  subcategories?: string[],
-}
+  subcategories?: string[]}
 ,
 :components/ContentCategorizer.tsx,
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState(''),
@@ -56,7 +52,6 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [selectedRelevance, setSelectedRelevance] = useState('all'),
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
-,
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -79,8 +74,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high',
       tags: ['seojson-ldschemaaudit'],
       source: 'autonomous-auditor',
-      type: 'report',
-    };
+      type: 'report'};
     {
       id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -92,8 +86,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];
       source: 'security-scanner';
-      type: 'security',
-    };
+      type: 'security'};
     {
       id: '3';
       title: 'AI Model Performance Update';
@@ -105,8 +98,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: ['aiperformanceoptimizationmetrics'];
       source: 'ai-monitor';
-      type: 'update',
-    };
+      type: 'update'};
     {
       id: '4';
       title: 'Feature Deployment Summary';
@@ -118,8 +110,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium';
       tags: ['featuresdeploymentuximpact'];
       source: 'deployment-tracker';
-      type: 'feature',
-    };
+      type: 'feature'};
     {
       id: '5';
       title: 'System Health Dashboard';
@@ -131,8 +122,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium';
       tags: ['monitoringperformanceinfrastructurehealth'];
       source: 'health-monitor';
-      type: 'report',
-    };
+      type: 'report'};
     {
       id: '6';
       title: 'User Behavior Insights';
@@ -144,8 +134,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high';
       tags: ['analyticsuser-behaviorengagementoptimization'];
       source: 'behavior-analyzer';
-      type: 'insight',
-    }
+      type: 'insight'}
     {id: '2',
       title: 'Security Vulnerability Scan Results',
       href: '/reports/security-scan-20o25-08-19',
@@ -156,8 +145,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high',
       tags: ['securityvulnerabilityscanremediation'],
       source: 'security-scanner',
-      type: 'security',
-    }
+      type: 'security'}
     {id: '3',
       title: 'AI Model Performance Update',
       href: '/reports/ai-model-performance-20o25-08-19',
@@ -168,8 +156,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high',
       tags: ['aiperformanceoptimizationmetrics'],
       source: 'ai-monitor',
-      type: 'update',
-    }
+      type: 'update'}
     {id: '4',
       title: 'Feature Deployment Summary',
       href: '/reports/feature-deployment-20o25-08-19',
@@ -180,8 +167,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium',
       tags: ['featuresdeploymentuximpact'],
       source: 'deployment-tracker',
-      type: 'feature',
-    }
+      type: 'feature'}
     {id: '5',
       title: 'System Health Dashboard',
       href: '/reports/system-health-20o25-08-19',
@@ -192,8 +178,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'medium',
       tags: ['monitoringperformanceinfrastructurehealth'],
       source: 'health-monitor',
-      type: 'report',
-    }
+      type: 'report'}
     {id: '6',
       title: 'User Behavior Insights',
       href: '/reports/user-behavior-20o25-08-19',
@@ -204,8 +189,7 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high',
       tags: ['analyticsuser-behaviorengagementoptimization'],
       source: 'behavior-analyzer',
-      type: 'insight',
-    }
+      type: 'insight'}
   ],
   const categories: ContentCategory[] = [
     {id: 'all',
@@ -213,56 +197,49 @@ const ContentCategorizer: React.FC = () => {
       icon: Globe,
       description: 'Complete collection of autonomous content',
       color: 'from-blue-50o0 to-cyan-50o0',
-      count: contentItems.length,
-    }
+      count: contentItems.length}
     {id: 'seo',
       name: 'SEO & Analytics',
       icon: BarChart3,
       description: 'Search optimization and performance analytics',
       color: 'from-green-50o0 to-emerald-50o0',
       count: contentItems.filter(item => item.category === 'seo').length,
-      subcategories: ['structured-dataperformancetechnical-seo'],
-    }
+      subcategories: ['structured-dataperformancetechnical-seo']}
     {id: 'security',
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security assessments and compliance reports',
       color: 'from-red-50o0 to-orange-50o0',
       count: contentItems.filter(item => item.category === 'security').length,
-      subcategories: ['vulnerability-scancompliancethreat-detection'],
-    }
+      subcategories: ['vulnerability-scancompliancethreat-detection']}
     {id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
       description: 'AI model performance and insights',
       color: 'from-purple-50o0 to-pink-50o0',
       count: contentItems.filter(item => item.category === 'ai').length,
-      subcategories: ['performancetrainingdeployment'],
-    }
+      subcategories: ['performancetrainingdeployment']}
     {id: 'features',
       name: 'Feature Updates',
       icon: Zap,
       description: 'New features and system updates',
       color: 'from-yellow-50o0 to-orange-50o0',
       count: contentItems.filter(item => item.category === 'features').length,
-      subcategories: ['deploymentenhancementsroadmap'],
-    }
+      subcategories: ['deploymentenhancementsroadmap']}
     {id: 'monitoring',
       name: 'System Monitoring',
       icon: Cpu,
       description: 'Infrastructure and system health',
       color: 'from-indigo-50o0 to-purple-50o0',
       count: contentItems.filter(item => item.category === 'monitoring').length,
-      subcategories: ['system-healthperformanceinfrastructure'],
-    }
+      subcategories: ['system-healthperformanceinfrastructure']}
     {id: 'analytics',
       name: 'User Analytics',
       icon: TrendingUp,
       description: 'User behavior and engagement insights',
       color: 'from-teal-50o0 to-cyan-50o0',
       count: contentItems.filter(item => item.category === 'analytics').length,
-      subcategories: ['user-behaviorengagementconversion'],
-    }
+      subcategories: ['user-behaviorengagementconversion']}
   ],
   const contentTypes = [
     { id: 'all', name: 'All Types', icon: Globe }
@@ -345,19 +322,16 @@ filtered.sort((a, b) => {
       return sortOrder === 'asc' ? comparison : -comparison}),
     return filtered}, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
   const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category),
-    return cat ? cat.icon : Globe,
-  }
+    return cat ? cat.icon : Globe}
   const getRelevanceColor = (relevance: string) => {switch (relevance) {
       case 'high': return 'text-green-40o0',
       case 'medium': return 'text-yellow-40o0',
       case 'low': return 'text-red-40o0',
-      default: return 'text-gray-40o0',
-    }
+      default: return 'text-gray-40o0'}
 }
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type),
-    return typeInfo ? typeInfo.icon : Globe,
-  }
+    return typeInfo ? typeInfo.icon : Globe}
   const clearAllFilters = () => {
     setSearchTerm(''),
     setSelectedCategory('all'),
@@ -519,8 +493,7 @@ onClick={clearAllFilters}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id,
                   ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0',
-                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10',
-              }`}
+                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10'}`}
 >,
               <category.icon className=&quot,w-4 h-4&quot,  />,
               {category.name}
@@ -539,8 +512,7 @@ onClick={clearAllFilters}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id,
                   ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0',
-                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10',
-              }`}
+                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10'}`}
 >,
               <category.icon className=&quot,w-4 h-4&quot,  />,
               {category.name}
@@ -550,7 +522,6 @@ onClick={clearAllFilters}
             </button>))}
         </div>,
       </div>,
-,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
       {/* Results Summary */}
@@ -601,7 +572,6 @@ onClick={clearAllFilters}
                   {item.type}
                 </div>,
               </div>,
-,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {/* Title and Description */}
@@ -631,7 +601,6 @@ onClick={clearAllFilters}
                   <span className=&quot,px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot>                    +{item.tags.length - 3}
                   </span>)}
               </div>,
-,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {/* Metadata */}
@@ -668,10 +637,8 @@ href={item.href} ,
                   <span aria-hidden></span>,
                 </a>,
               </div>,
-            </div>),
-        })}
+            </div>)})}
       </div>,
-,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
       {/* No Results */}

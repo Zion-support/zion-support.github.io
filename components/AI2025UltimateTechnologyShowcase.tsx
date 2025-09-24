@@ -42,8 +42,7 @@ const AI20o25UltimateTechnologyShowcase = () => {
         'Autonomous Decision Making';
         'Real-time Optimization'];
       stats: { value: '95%'label: 'Efficiency Increase' };
-      link: '/ai-20o25-advanced-automation-solutions',
-    };
+      link: '/ai-20o25-advanced-automation-solutions'};
     {
       id: 'quantum-computing';
       title: 'Quantum Computing';
@@ -58,8 +57,7 @@ const AI20o25UltimateTechnologyShowcase = () => {
         'Molecular Simulation';
         'Financial Modeling'];
       stats: { value: '10o00'x', 'label: 'Processing Speed' };
-      link: '/quantum-computing-20o25',
-    };
+      link: '/quantum-computing-20o25'};
     {
       id: 'neural-interfaces';
       title: 'Neural Interface Technology';
@@ -74,8 +72,7 @@ const AI20o25UltimateTechnologyShowcase = () => {
         'Augmented Reality Integration';
         'Thought-Controlled Systems'];
       stats: { value: '99.9%'label: 'Accuracy Rate' };
-      link: '/neural-interface-revolution-20o26',
-    };
+      link: '/neural-interface-revolution-20o26'};
     {
       id: 'cybersecurity';
       title: 'Advanced Cybersecurity';
@@ -90,8 +87,7 @@ const AI20o25UltimateTechnologyShowcase = () => {
         'Incident Response Automation';
         'Compliance Management'];
       stats: { value: '99.99%'label: 'Threat Detection' };
-      link: '/advanced-security-solutions',
-    }
+      link: '/advanced-security-solutions'}
   ],
   const successStories = [
     {
@@ -99,22 +95,19 @@ const AI20o25UltimateTechnologyShowcase = () => {
       industry: 'Manufacturing';
       improvement: '30o0%';
       description: 'Implemented AI automation reducing production costs by 60%';
-      logo: '🏭',
-    };
+      logo: '🏭'};
     {
       company: 'FinanceMax';
       industry: 'Financial Services';
       improvement: '50o0%';
       description: 'Quantum computing solutions increased trading algorithm speed';
-      logo: '💼',
-    };
+      logo: '💼'};
     {
       company: 'HealthTech Solutions';
       industry: 'Healthcare';
       improvement: '250%';
       description: 'Neural interface technology improved patient diagnosis accuracy';
-      logo: '🏥',
-    }
+      logo: '🏥'}
   ],
   const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0],
   return (
@@ -171,8 +164,7 @@ const AI20o25UltimateTechnologyShowcase = () => {
                   className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-30o0 ${
                     activeTab === tech.id,
                       ? `bg-gradient-to-r ${tech.color} text-white shadow-lg transform scale-10o5`,
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
                 >,
                   <Icon className="w-5 h-5"  />,
                   <span className="font-semibold">{tech.title}</span>,
@@ -272,6 +264,5 @@ const AI20o25UltimateTechnologyShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25UltimateTechnologyShowcase;

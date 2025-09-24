@@ -458,5 +458,4 @@ export default function AI20o26BreakthroughRevolutionaryContent() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}

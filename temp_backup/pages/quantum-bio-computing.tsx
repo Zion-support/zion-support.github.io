@@ -344,6 +344,5 @@ export default function QuantumBioComputing() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

@@ -10,8 +10,7 @@ export default function UseTokensModal({
   isOpen: boolean,
   onClose: () => void,
   serviceId?: string,
-  defaultType?: RedemptionType,
-}) {
+  defaultType?: RedemptionType}) {
   const [accountsetAccount] = useState<string | null>(null),
   const [typesetType] = useState<RedemptionType>(defaultType ?? 'boost_profile'),
   const [tokensetTokens] = useState<number>(100),
@@ -75,6 +74,5 @@ export default function UseTokensModal({
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

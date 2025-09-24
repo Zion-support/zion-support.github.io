@@ -20,6 +20,5 @@ export default function QuantumMaterialsDiscovery20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

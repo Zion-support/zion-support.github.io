@@ -6,18 +6,15 @@ const RevolutionaryTechBanner20o26: React.FC = () => {
     {
       icon: Brain;
       title: "AI-Powered Automation";
-      description: "Revolutionary AI systems that automate complex business processes",
-    };
+      description: "Revolutionary AI systems that automate complex business processes"};
     {
       icon: Zap;
       title: "Quantum Computing";
-      description: "Breakthrough quantum algorithms for unprecedented computational power",
-    };
+      description: "Breakthrough quantum algorithms for unprecedented computational power"};
     {
       icon: Target;
       title: "Neural Interfaces";
-      description: "Next-generation brain-computer interfaces for seamless interaction",
-    }
+      description: "Next-generation brain-computer interfaces for seamless interaction"}
   ],
   return (
     <section className="relative py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 overflow-hidden">,

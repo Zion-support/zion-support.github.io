@@ -30,24 +30,21 @@ const AI20o25ToolsUtilitiesPromotionBanner = () => {
       rating: 4.9;
       users: "50K+";
       icon: Cpu;
-      color: "from-blue-50o0 to-cyan-50o0",
-    };
+      color: "from-blue-50o0 to-cyan-50o0"};
     {
       name: "Smart Analytics Dashboard";
       description: "Real-time data visualization and insights";
       rating: 4.8;
       users: "25K+";
       icon: Target;
-      color: "from-green-50o0 to-emerald-50o0",
-    };
+      color: "from-green-50o0 to-emerald-50o0"};
     {
       name: "AI Security Scanner";
       description: "Automated vulnerability detection";
       rating: 4.9;
       users: "15K+";
       icon: Shield;
-      color: "from-red-50o0 to-pink-50o0",
-    }
+      color: "from-red-50o0 to-pink-50o0"}
   ],
   const stats = [
     { icon: Zapvalue: "10o0+"label: "AI Tools Available" };

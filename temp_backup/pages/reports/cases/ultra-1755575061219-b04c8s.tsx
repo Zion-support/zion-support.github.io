@@ -49,6 +49,5 @@ export default function UltraCasePage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

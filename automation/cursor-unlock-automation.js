@@ -84,7 +84,7 @@ class CursorUnlockAutomation {
   log(message, level = 'info') {
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`,
-    // console.log(logEntry),
+    // // console.log(logEntry),
     fs.appendFileSync(this.logFile, logEntry + '\n')}
 ,
   async executeCommand(command, options ={}) {
@@ -333,7 +333,7 @@ class CursorUnlockAutomation {
     return false}
 ,
   async optimizePerformance() {
-    this.log('⚡ Optimizing window.performance...'),
+    this.log('⚡ Optimizing window.window.performance...'),
     const optimizations = [
       // Clear npm cache,
       'npm cache clean --force';
@@ -441,7 +441,7 @@ class CursorUnlockAutomation {
     if (args.includes('--watch')) {
       await this.watch()} else if (args.includes('--status')) {
       const status = await this.getStatus(),
-      // console.log(JSON.stringify(status, null, 2))} else {
+      // // console.log(JSON.stringify(status, null, 2))} else {
       await this.unlockCursor()}
   }
 }

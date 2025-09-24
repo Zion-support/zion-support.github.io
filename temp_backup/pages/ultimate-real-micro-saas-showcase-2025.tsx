@@ -14,8 +14,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const categories = [
   'All Services';
   'Customer Success';
@@ -54,8 +53,7 @@ export default function UltimateRealMicroSaasShowcase20o25() {
       case 'newest':,
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const toggleAudio = () => setIsPlaying(!isPlaying),
   const toggleMute = () => setIsMuted(!isMuted),
@@ -93,8 +91,7 @@ export default function UltimateRealMicroSaasShowcase20o25() {
               transition={{
                 duration: Math.random() * 10 + 10;
                 repeat: Infinity;
-                ease: "linear",
-              }}
+                ease: "linear"}}
               style={{
                 left: `${Math.random() * 10o0}%`;
                 top: `${Math.random() * 10o0}%`}}
@@ -251,8 +248,7 @@ export default function UltimateRealMicroSaasShowcase20o25() {
             className={`grid gap-8 ${
               viewMode === 'grid',
                 ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-                : 'grid-cols-1',
-            }`}
+                : 'grid-cols-1'}`}
           >,
             {sortedServices.map((service, index) => (
               <motion.div,
@@ -264,8 +260,7 @@ export default function UltimateRealMicroSaasShowcase20o25() {
                 className={`group relative ${
                   viewMode === 'grid',
                     ? 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: border-purple-50o0/50 hover:bg-white/10 transition-all duration-30o0 hover:scale-10o5',
-                    : 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-50o0/50 hover:bg-white/10 transition-all duration-30o0',
-                }`}
+                    : 'bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-purple-50o0/50 hover:bg-white/10 transition-all duration-30o0'}`}
               >,
                 {/* Popular Badge */}
                 {service.popular && (
@@ -417,5 +412,4 @@ export default function UltimateRealMicroSaasShowcase20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}

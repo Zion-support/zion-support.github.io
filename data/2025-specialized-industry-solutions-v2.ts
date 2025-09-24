@@ -18,8 +18,7 @@ export interface SpecializedIndustrySolution {
   contact: {
     phone: string,
     email: string,
-    address: string,
-  };
+    address: string};
   trialDays: number,
   setupTime: string,
   competitors: string[],
@@ -30,8 +29,7 @@ export interface SpecializedIndustrySolution {
   reviews: number,
   industrySpecificFeatures: string[],
   regulatoryCompliance: string[],
-  certifications: string[],
-}
+  certifications: string[]}
 ,
 export const specializedIndustrySolutions20o25V2: SpecializedIndustrySolution[] =,
   [

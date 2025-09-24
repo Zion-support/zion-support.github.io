@@ -24,64 +24,56 @@ const SearchComponent: React.FC = () => {
       description: 'Advanced AI solutions for enterprise automation';
       category: 'ai';
       url: '/ai-services';
-      icon: Brain,
-    };
+      icon: Brain};
     {
       id: 'quantum-computing';
       title: 'Quantum Computing';
       description: 'Next-generation computational power';
       category: 'quantum';
       url: '/quantum-computing';
-      icon: Cpu,
-    };
+      icon: Cpu};
     {
       id: 'cybersecurity';
       title: 'Cybersecurity';
       description: 'Military-grade protection for digital assets';
       category: 'security';
       url: '/cybersecurity';
-      icon: Shield,
-    };
+      icon: Shield};
     {
       id: 'cloud-infrastructure';
       title: 'Cloud Infrastructure';
       description: 'Scalable cloud solutions for growth';
       category: 'cloud';
       url: '/cloud-platform';
-      icon: Cloud,
-    };
+      icon: Cloud};
     {
       id: 'data-analytics';
       title: 'Data Analytics';
       description: 'Transform data into actionable insights';
       category: 'analytics';
       url: '/data-analytics';
-      icon: BarChart3,
-    };
+      icon: BarChart3};
     {
       id: 'blockchain';
       title: 'Blockchain Solutions';
       description: 'Secure, transparent digital infrastructure';
       category: 'blockchain';
       url: '/blockchain-solutions';
-      icon: Lock,
-    };
+      icon: Lock};
     {
       id: 'quantum-ai';
       title: 'Quantum AI Fusion';
       description: 'Combining quantum computing with AI';
       category: 'quantum';
       url: '/quantum-ai-fusion';
-      icon: Brain,
-    };
+      icon: Brain};
     {
       id: 'ai-automation';
       title: 'AI Process Automation';
       description: 'Automate complex business processes';
       category: 'ai';
       url: '/ai-automation-services';
-      icon: Brain,
-    }
+      icon: Brain}
   ],
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe };
@@ -95,8 +87,7 @@ const SearchComponent: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
@@ -119,12 +110,11 @@ const SearchComponent: React.FC = () => {
     e.preventDefault(),
     if (query.trim()) {
       // Handle search submission,
-      // // console.log('Searching for:', query)}
+      // // // console.log('Searching for:', query)}
   };
   const handleResultClick = (result: SearchResult) => {
     // Navigate to the result,
-    window.location.href = result.url,
-  };
+    window.location.href = result.url};
   return (
     <div className="relative" ref={searchRef}>,
       {/* Search Button */}
@@ -181,8 +171,7 @@ const SearchComponent: React.FC = () => {
                       className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
                         selectedCategory === category.id,
                           ? 'bg-cyan-50o0 text-white',
-                          : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                      }`}
+                          : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
                     >,
                       <category.icon className="w-4 h-4"  />,
                       <span>{category.name}</span>,

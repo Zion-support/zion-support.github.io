@@ -105,6 +105,5 @@ export default function QuantumComputingBreakthroughBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -30,8 +30,7 @@ const AdvancedAutomationMastery20o25Banner = () => {
       url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-breakthrough-20o25';
       type: 'blog';
       badge: 'Ultimate Breakthrough';
-      readingTime: '28 min read',
-    };
+      readingTime: '28 min read'};
     {
       id: 'automation-mastery-benefits';
       title: 'Advanced Automation Mastery Benefits';
@@ -40,8 +39,7 @@ const AdvancedAutomationMastery20o25Banner = () => {
       url: '/services/advanced-automation';
       type: 'service';
       badge: 'Service';
-      readingTime: '5 min read',
-    };
+      readingTime: '5 min read'};
     {
       id: 'automation-implementation';
       title: 'Advanced Automation Implementation';
@@ -50,8 +48,7 @@ const AdvancedAutomationMastery20o25Banner = () => {
       url: '/resources/automation-implementation-guide';
       type: 'resource';
       badge: 'Implementation Guide';
-      readingTime: '25 min read',
-    }
+      readingTime: '25 min read'}
   ],
   if (dismissed || !isVisible) {
     return null}
@@ -117,8 +114,7 @@ const AdvancedAutomationMastery20o25Banner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentContent,
                     ? 'bg-white scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
                />))}
           </div>,
         </div>,

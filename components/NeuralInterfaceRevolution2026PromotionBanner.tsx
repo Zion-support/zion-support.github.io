@@ -51,5 +51,4 @@ export default function NeuralInterfaceRevolution20o26PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

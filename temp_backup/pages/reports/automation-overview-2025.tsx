@@ -287,6 +287,5 @@ export default function AutomationOverview20o25() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

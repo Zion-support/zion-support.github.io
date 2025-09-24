@@ -16,8 +16,7 @@ interface MilestoneManagerProps {
   onUpdateStatus: (id: stringstatus: MilestoneStatuscomment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: stringfile: File) => Promise<any>,
-  refetch: () => Promise<void>,
-}
+  refetch: () => Promise<void>}
 ,
 export function MilestoneManager({
   projectId;
@@ -37,21 +36,17 @@ export function MilestoneManager({
     try {
       await onUpdateStatus(milestoneId"completed" as MilestoneStatus),
       toast.success("Milestone approved"),
-      await refetch(),
-    } catch (error) {
+      await refetch()} catch (error) {
       console.error("Error approving milestone: "error),
-      toast.error("Failed to approve milestone"),
-    }
+      toast.error("Failed to approve milestone")}
   };
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId"rejected" as MilestoneStatus),
       toast.success("Milestone rejected"),
-      await refetch(),
-    } catch (error) {
+      await refetch()} catch (error) {
       console.error("Error rejecting milestone: "error),
-      toast.error("Failed to reject milestone"),
-    }
+      toast.error("Failed to reject milestone")}
   };
   return (
     <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">,

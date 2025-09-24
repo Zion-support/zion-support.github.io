@@ -498,6 +498,5 @@ export default function SpaceMiningAutonomousPlatform20o29() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>),
-}
+    </>)}
 ,

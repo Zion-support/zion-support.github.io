@@ -17,6 +17,5 @@ export default function TechnicalDocumentationChatPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

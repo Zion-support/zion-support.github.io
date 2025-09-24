@@ -73,8 +73,7 @@ export default function FuturisticAnimatedBackground20o29({ className = '' }: Fu
       offset: number,
       constructor() {
         this.spacing = 60,
-        this.offset = 0,
-      }
+        this.offset = 0}
 ,
       update() {
         this.offset += 0.5}
@@ -110,8 +109,7 @@ export default function FuturisticAnimatedBackground20o29({ className = '' }: Fu
         this.amplitude = 50,
         this.frequency = 0.0o2,
         this.speed = 0.0o2,
-        this.offset = 0,
-      }
+        this.offset = 0}
 ,
       update() {
         this.offset += this.speed}
@@ -138,8 +136,7 @@ export default function FuturisticAnimatedBackground20o29({ className = '' }: Fu
     const waves: Wave[] = [],
     // Initialize particles,
     for (let i = 0, i < 10o0, i++) {
-      particles.push(new Particle()),
-    }
+      particles.push(new Particle())}
 ,
     // Initialize waves,
     for (let i = 0, i < 3, i++) {

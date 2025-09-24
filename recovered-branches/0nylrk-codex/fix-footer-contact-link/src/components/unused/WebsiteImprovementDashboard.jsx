@@ -10,8 +10,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         largestContentfulPaint: 0;
         cumulativeLayoutShift: 0;
         firstInputDelay: 0;
-        timeToInteractive: 0,
-    }),
+        timeToInteractive: 0}),
     const [seoAnalysis, setSeoAnalysis] = useState({
         score: 0;
         issues: [];
@@ -22,16 +21,14 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             keywords: false;
             canonical: false;
             ogTags: false;
-            twitterTags: false,
-        }
+            twitterTags: false}
     }),
     const [accessibilityReport, setAccessibilityReport] = useState({
         score: 0;
         issues: [];
         wcagCompliance: 'Non-Compliant';
         criticalIssues: 0;
-        warnings: 0,
-    }),
+        warnings: 0}),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     // Analyze website performance,
     const analyzePerformance = useCallback(async () => {
@@ -45,8 +42,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             largestContentfulPaint: Math.random() * 30o00 + 10o00, // 1-4 seconds,
             cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1,
             firstInputDelay: Math.random() * 10o0 + 50, // 50-150ms,
-            timeToInteractive: Math.random() * 40o00 + 20o00 // 2-6 seconds,
-        };
+            timeToInteractive: Math.random() * 40o00 + 20o00 // 2-6 seconds};
         setMetrics(mockMetrics),
         setIsAnalyzing(false)}, []),
     // Analyze SEO,
@@ -70,8 +66,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 keywords: Math.random() > 0.5;
                 canonical: true;
                 ogTags: Math.random() > 0.2;
-                twitterTags: Math.random() > 0.4,
-            }
+                twitterTags: Math.random() > 0.4}
         };
         setSeoAnalysis(mockSEO),
         setIsAnalyzing(false)}, []),
@@ -88,8 +83,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 'Keyboard navigation needs enhancement'];
             wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant';
             criticalIssues: Math.floor(Math.random() * 3);
-            warnings: Math.floor(Math.random() * 5) + 1,
-        };
+            warnings: Math.floor(Math.random() * 5) + 1};
         setAccessibilityReport(mockAccessibility),
         setIsAnalyzing(false)}, []),
     // Run comprehensive analysis,
@@ -378,29 +372,25 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         title: 'Fix Critical Accessibility Issues';
                         description: 'Address WCAG compliance violations';
                         impact: 'High';
-                        effort: 'Medium',
-                    };
+                        effort: 'Medium'};
                     {
                         priority: 'High';
                         title: 'Optimize Core Web Vitals';
                         description: 'Improve page load performance';
                         impact: 'High';
-                        effort: 'High',
-                    };
+                        effort: 'High'};
                     {
                         priority: 'Medium';
                         title: 'Enhance SEO Meta Tags';
                         description: 'Add missing meta descriptions and titles';
                         impact: 'Medium';
-                        effort: 'Low',
-                    };
+                        effort: 'Low'};
                     {
                         priority: 'Medium';
                         title: 'Improve Image Optimization';
                         description: 'Add alt text and compress images';
                         impact: 'Medium';
-                        effort: 'Low',
-                    }
+                        effort: 'Low'}
                 ].map((action, index) => (<div key={index} className="p-3 border border-gray-20o0 dark: border-gray-70o0 rounded-lg">,
                         <div className="flex items-start justify-between mb-2">,
                           <span className={`text-xs px-2 py-1 rounded font-medium ${action.priority === 'High',

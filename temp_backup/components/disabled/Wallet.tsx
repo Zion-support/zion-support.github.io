@@ -3,8 +3,7 @@ import { ethers } from 'ethers',
 export function Wallet({
   onProvider;
 }: {
-  onProvider: (p: ethers.providers.Web3Provider | null) => void,
-}) {
+  onProvider: (p: ethers.providers.Web3Provider | null) => void}) {
   const [account, setAccount] = useState<string>(''),
   useEffect(() => {
     if (typeof window === 'undefined') return,
@@ -15,8 +14,7 @@ export function Wallet({
       provider.listAccounts().then(accs => {
         if (accs.length) setAccount(accs[0])}),
       (window as any).ethereum.on('accountsChanged', (accs: string[]) =>,
-        setAccount(accs[0] || '')),
-    } else {
+        setAccount(accs[0] || ''))} else {
       onProvider(null)}
   }, [onProvider]),
   async function connect() {

@@ -9,8 +9,7 @@ export const metadata = {
 interface FeatureProps {
   title: string,
   description: string,
-  icon: string,
-}
+  icon: string}
 ,
 function Feature({ title, description, icon }: FeatureProps) {
   return (
@@ -27,8 +26,7 @@ interface PricingTierProps {
   description: string,
   features: string[],
   popular?: boolean,
-  cta: string,
-}
+  cta: string}
 ,
 function PricingTier({
   name;
@@ -78,8 +76,7 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-            : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        }`}
+            : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}
       >,
         {cta}
       </a>,
@@ -352,6 +349,5 @@ export default function AIEmailOptimizerPage() {
           <p>Email: kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

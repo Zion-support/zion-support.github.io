@@ -346,6 +346,5 @@ export default function BrainComputerInterface() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

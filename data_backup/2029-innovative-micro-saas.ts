@@ -107,8 +107,7 @@ reviews: number,export const innovative20o29MicroSaasServices: Innovative20o29Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced emotional intelligence platform with real-time emotion detection, AI-powered responses, and comprehensive emotional analytics. Includes multi-modal recognition and empathy simulation.';
@@ -185,8 +184,7 @@ reviews: number,export const innovative20o29MicroSaasServices: Innovative20o29Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced multimodal AI platform with unified processing capabilities, cross-modal understanding, and seamless data integration. Includes comprehensive API access and real-time processing.';
@@ -264,8 +262,7 @@ reviews: number,export const innovative20o29MicroSaasServices: Innovative20o29Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum blockchain platform with quantum-resistant cryptography, enhanced security, and high-performance capabilities. Includes smart contract automation and cross-chain interoperability.';
@@ -343,8 +340,7 @@ reviews: number,export const innovative20o29MicroSaasServices: Innovative20o29Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced personalized medicine platform with AI-powered treatment planning, genetic analysis, drug discovery acceleration, and comprehensive clinical tools. Includes research collaboration features.';
@@ -422,8 +418,7 @@ reviews: number,export const innovative20o29MicroSaasServices: Innovative20o29Mi
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced smart city orchestrator with comprehensive infrastructure management, AI optimization, and real-time monitoring. Includes predictive maintenance and emergency response coordination.';

@@ -115,6 +115,5 @@ export default function EnterpriseAutomation20o26Banner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

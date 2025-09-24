@@ -21,15 +21,13 @@ export interface HealthcareAIService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string,
   regulatoryCompliance?: string[]}
@@ -83,8 +81,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "OpenCV", "DICOM", "Kubernetes"];
       integrations: ["PACS", "EMR systems", "RIS", "Hospital information systems"];
@@ -142,8 +139,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PyTorch", "RDKit", "OpenMM", "Docker"];
       integrations: ["Lab information systems", "Chemical databases", "Clinical trial platforms"];
@@ -201,8 +197,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "IoT platforms", "React Native", "PostgreSQL"];
       integrations: ["Medical devices", "EMR systems", "Hospital information systems", "Wearable devices"];
@@ -260,8 +255,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Natural Language Processing", "Knowledge Graphs", "PostgreSQL"];
       integrations: ["EMR systems", "Clinical databases", "Medical literature", "Drug databases"];
@@ -319,8 +313,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_20o28: HealthcareAIService20o28[
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "PostgreSQL", "Redis", "Kubernetes", "Docker"];
       integrations: ["EMR systems", "Claims data", "Social determinants data", "Public health databases"];

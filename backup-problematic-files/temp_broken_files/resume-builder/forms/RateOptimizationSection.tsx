@@ -17,8 +17,7 @@ interface RateOptimizationSectionProps {
   skills:string[];
   yearsExperience:number;
   location?:string;
-  rateType: "hourly" | "fixed",
-}
+  rateType: "hourly" | "fixed"}
 ,
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
   control;
@@ -84,5 +83,4 @@ return (<div className="space-y-4" > <FormField control={"  control ","}name="ho
   yearsExperience }location={
   location }onSuggestionApplied={
   handleSuggestionApplied }rateType={
-  rateType } /> </CardContent> </Card> </div>) ,
-}})
+  rateType } /> </CardContent> </Card> </div>) }})

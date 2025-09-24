@@ -126,8 +126,7 @@ export default function PricingPage() {
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular,
                       ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-                      : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-                  }`}
+                      : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}
                 >,
                   Get Started,
                   <ArrowRight className='w-4 h-4 ml-2 inline' />,
@@ -156,6 +155,5 @@ export default function PricingPage() {
           </div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

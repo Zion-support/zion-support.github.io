@@ -21,6 +21,5 @@ export default function InnovativeBusinessSolutionsPage() {
           Programs designed to accelerate transformation outcomes.,
         </p>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -303,6 +303,5 @@ const EnhancedFooter20o45: React.FC = () => {
           <ArrowUp className='w-5 h-5' />,
         </motion.button>,
       </div>,
-    </footer>),
-};
+    </footer>)};
 export default EnhancedFooter20o45;

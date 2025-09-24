@@ -12,8 +12,7 @@ export interface ProductListing {
   reviewCount?: number,
   availability?: string,
   specifications?: string[],
-  tags?: string[],
-}
+  tags?: string[]}
 ,
 export const equipmentListings: ProductListing[] = [
   {

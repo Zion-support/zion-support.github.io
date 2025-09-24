@@ -4,13 +4,11 @@ interface RelatedContentItem {
   description: string,
   href: string,
   category: string,
-  icon?: string,
-}
+  icon?: string}
 ,
 interface RelatedContentProps {
   currentPage: string,
-  items?: RelatedContentItem[],
-}
+  items?: RelatedContentItem[]}
 ,
 export default function RelatedContent({
   currentPage;

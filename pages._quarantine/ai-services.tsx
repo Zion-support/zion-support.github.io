@@ -603,6 +603,5 @@ export default function AIServices() {
           </div>,
         </div>,
       </section>,
-    </PageTransition>),
-}
+    </PageTransition>)}
 ,

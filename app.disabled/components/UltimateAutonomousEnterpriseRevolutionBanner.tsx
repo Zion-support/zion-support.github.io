@@ -19,8 +19,7 @@ const UltimateAutonomousEnterpriseRevolutionBanner = () => {
       cta: 'Get Ultimate Guide';
       link: '/blog/ai-20o25-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough';
       type: 'blog';
-      readingTime: '35 min read',
-    };
+      readingTime: '35 min read'};
     {
       id: 'fortune-50o0-success-story';
       title: 'Fortune 50o0 Success: $52.8B Annual Savings';
@@ -30,13 +29,11 @@ const UltimateAutonomousEnterpriseRevolutionBanner = () => {
         roi: '15,0o00%';
         savings: '$52.8B';
         timeline: '18 months';
-        accuracy: '99.97%',
-      };
+        accuracy: '99.97%'};
       cta: 'Read Case Study';
       link: '/case-studies/fortune-50o0-ultimate-autonomous-enterprise-transformation-150o00-roi-success-story';
       type: 'case-study';
-      readingTime: '25 min read',
-    };
+      readingTime: '25 min read'};
     {
       id: 'implementation-guide';
       title: 'Complete Implementation Roadmap';
@@ -50,8 +47,7 @@ const UltimateAutonomousEnterpriseRevolutionBanner = () => {
       cta: 'Get Roadmap';
       link: '/resources/autonomous-enterprise-implementation-ultimate-guide-20o25-ultimate-breakthrough';
       type: 'resource';
-      readingTime: '45 min read',
-    }
+      readingTime: '45 min read'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -167,8 +163,7 @@ const UltimateAutonomousEnterpriseRevolutionBanner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
                   index === currentSlide,
                     ? 'bg-white scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                }`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
                 aria-label={`Go to slide ${index + 1}`}
               />))}
           </div>,

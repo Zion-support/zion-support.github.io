@@ -20,6 +20,5 @@ export default function Revolutionary20o38ServicesShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

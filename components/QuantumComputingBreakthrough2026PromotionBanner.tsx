@@ -150,6 +150,5 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

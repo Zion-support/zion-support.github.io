@@ -373,6 +373,5 @@ export default function TeamPage() {
           </section>,
         </div>,
       </main>,
-    </>),
-}
+    </>)}
 ,

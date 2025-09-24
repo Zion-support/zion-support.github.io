@@ -11,8 +11,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const heroStats = [
   { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  />, color: 'text-purple-40o0' };
   { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6"  />, color: 'text-green-40o0' };
@@ -59,8 +58,7 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
                 linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
                 linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               `;
-              backgroundSize: '10o0px 10o0px',
-            }}
+              backgroundSize: '10o0px 10o0px'}}
            />,
         </div>,
         {/* Floating Elements */}

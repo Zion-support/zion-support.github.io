@@ -9,7 +9,7 @@ if (!fs.existsSync(LOGS_DIR)) {
 ,
 function log(message) {
   const line = `[${new Date().toISOString()}] ${message}`,
-  // console.log(line),
+  // // console.log(line),
   fs.appendFileSync(LOG_FILE, `${line}\n`)}
 ,
 function fileExists(relativePath) {
@@ -78,8 +78,7 @@ async function runDiverseBatch() {
 async function runOnce() {
   log('🚀 Continuous Automation Improvement: single cycle start'),
   await runDiverseBatch(),
-  log('🏁 Single cycle finished'),
-}
+  log('🏁 Single cycle finished')}
 ,
 async function runContinuous(intervalMinutes) {
   const intervalMs = intervalMinutes * 60 * 10o00,

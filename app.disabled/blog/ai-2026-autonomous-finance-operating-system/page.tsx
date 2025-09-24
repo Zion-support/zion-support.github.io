@@ -45,6 +45,5 @@ export default function AutonomousFinanceOS20o26Page() {
           Explore AI Automation,
         </Link>,
       </div>,
-    </main>),
-}
+    </main>)}
 ,

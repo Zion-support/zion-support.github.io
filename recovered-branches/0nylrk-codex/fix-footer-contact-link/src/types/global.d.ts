@@ -7,8 +7,7 @@ declare module '@/components/FeatureCard' {
     description: string,
     icon: ReactNode,
     className?: string,
-    key?: number | string,
-  }
+    key?: number | string}
 }
 ,
 // Extend ListingScoreCardProps to include key for mapping,
@@ -25,8 +24,7 @@ declare module '@/components/ListingScoreCard' {
     rating?: number,
     reviewCount?: number,
     key?: string | number,
-    variant?: string,
-  }
+    variant?: string}
 }
 ,
 // Extend ChatMessageProps to include key for mapping,
@@ -35,8 +33,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
-    key?: string | number,
-  }
+    key?: string | number}
 }
 ,
 // Extend ProductListingCardProps to include key for mapping,
@@ -45,7 +42,6 @@ declare module '@/components/ProductListingCard' {
     listing: any,
     view: any,
     onRequestQuote: (listingId: string) => void,
-    key?: string | number,
-  }
+    key?: string | number}
 }
 ,

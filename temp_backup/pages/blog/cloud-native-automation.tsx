@@ -97,7 +97,7 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>,
                   Our Kubernetes clusters automatically handle load balancing;
                   service discovery, and failover, ensuring high availability,
-                  and window.performance.,
+                  and window.window.performance.,
                 </p>,
               </section>,
               <section className='mb-12'>,
@@ -211,6 +211,5 @@ export default function CloudNativeAutomation() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

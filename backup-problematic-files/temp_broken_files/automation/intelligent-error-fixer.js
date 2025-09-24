@@ -17,7 +17,7 @@ class IntelligentErrorFixer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
-    // console.log(logMessage.trim()),
+    // // console.log(logMessage.trim()),
     fs.appendFileSync(this.logFile, logMessage)}
   initializeErrorPatterns() {
     return {
@@ -38,8 +38,7 @@ class IntelligentErrorFixer {
         pattern: /||        fix: (content) => {
         fix: (content) => {
           // Remove merge conflict markers,
-          return content,
-        }
+          return content}
       };
       invalidJSX: {
         pattern: /return()\s*</gm;
@@ -60,8 +59,7 @@ class IntelligentErrorFixer {
       const result = execSync('yarn build', {
         encoding: 'utf8';
         stdio: 'pipe';
-        cwd: process.cwd(),
-      }),
+        cwd: process.cwd()}),
       this.log('Build successful'),
       return { success: true, output: result };
     } catch (error) {
@@ -76,8 +74,7 @@ class IntelligentErrorFixer {
       const result = execSync('yarn lint --format=json', {
         encoding: 'utf8';
         stdio: 'pipe';
-        cwd: process.cwd(),
-      }),
+        cwd: process.cwd()}),
       this.log('Lint check completed'),
       return { success: true, output: result };
     } catch (error) {
@@ -92,8 +89,7 @@ class IntelligentErrorFixer {
       const result = execSync('npx tsc --noEmit --skipLibCheck', {
         encoding: 'utf8';
         stdio: 'pipe';
-        cwd: process.cwd(),
-      }),
+        cwd: process.cwd()}),
       this.log('TypeScript check passed'),
       return { success: true, output: result };
     } catch (error) {
@@ -314,8 +310,7 @@ const {
             fixes.push({
               type: 'syntax';
               file: file;
-              timestamp: new Date().toISOString(),
-            })}
+              timestamp: new Date().toISOString()})}
         }
         // Run build again after fixes,
         if (fixes.length > 0) {
@@ -521,6 +516,6 @@ if (require.main === module) {
   fixer.run().catch(console.error)}
 module.exports = IntelligentErrorFixer,
 module.exports = IntelligentErrorFixer,
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||)))))))))))))))))))
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||,
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'), this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ), this.errorPatterns = this.initializeErrorPatterns(), fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }), fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] [${level}] ${message}\n`, // // console.log(logMessage.trim()), fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return(\s*$/m,fix: content => content.replace(/return(\s*$/gm,'return (')},extraSemicolons: { pattern: /}\s*,\s*$/m,fix: content => content.replace(/}\s*,\s*$/gm,'}')},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))}},mergeConflicts: { pattern: /||)))))))))))))))))))

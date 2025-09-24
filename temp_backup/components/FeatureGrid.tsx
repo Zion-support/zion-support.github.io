@@ -6,12 +6,10 @@ interface Feature {
   title: string,
   description: string,
   href: string,
-  color: string,
-}
+  color: string}
 ,
 interface FeatureGridProps {
-  features: Feature[],
-}
+  features: Feature[]}
 ,
 const FeatureGrid: React.FC<FeatureGridProps> = ({ features }) => {
   return (
@@ -92,6 +90,5 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ features }) => {
           </button>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default FeatureGrid;

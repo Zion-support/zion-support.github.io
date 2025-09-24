@@ -17,8 +17,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         rating: 0;
         location: [];
         verified: false;
-        featured: false,
-    }),
+        featured: false}),
     const [results, setResults] = useState([]),
     const [suggestions, setSuggestions] = useState([]),
     const [_selectedResult, setSelectedResult] = useState(null),
@@ -71,8 +70,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 metadata: {
                     lastUpdated: '20o24-0o1-15';
                     verified: true;
-                    featured: true,
-                }
+                    featured: true}
             };
             {
                 id: '2';
@@ -88,8 +86,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 metadata: {
                     lastUpdated: '20o24-0o1-20';
                     verified: true;
-                    featured: false,
-                }
+                    featured: false}
             };
             {
                 id: '3';
@@ -105,8 +102,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 metadata: {
                     lastUpdated: '20o24-0o1-18';
                     verified: true;
-                    featured: true,
-                }
+                    featured: true}
             }
         ],
         // Simulate API call,
@@ -157,8 +153,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             navigator.share({
                 title: 'Search Results from Zion Tech Group';
                 text: `Check out these results for "${query}"`;
-                url: window.location.href,
-            })}
+                url: window.location.href})}
         else {
             // Fallback to copying to clipboard,
             navigator.clipboard.writeText(`Search Results for "${query}": ${window.location.href}`)}

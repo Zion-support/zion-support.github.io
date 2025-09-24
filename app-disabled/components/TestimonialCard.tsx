@@ -4,8 +4,7 @@ interface TestimonialCardProps {
   position: string,
   company: string,
   avatar?: string,
-  rating?: number,
-}
+  rating?: number}
 ,
 export default function TestimonialCard({
   quote;

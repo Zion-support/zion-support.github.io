@@ -8,8 +8,7 @@ import { useTheme } from '@/hooks/useTheme',
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
-  timestamp: Date,
-}
+  timestamp: Date}
 ,
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message;
@@ -92,6 +91,5 @@ function formatMessageWithLinks(message: string): string {
   formattedMessage = formattedMessage.replace(
     helpCenterRegex;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
-  return formattedMessage,
-}
+  return formattedMessage}
 ,

@@ -68,8 +68,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
       rating: 4.9;
       readTime: '15 min';
       isTrending: true;
-      isFeatured: true,
-    };
+      isFeatured: true};
     {
       id: 2;
       title: 'Infinite Qubit Processor';
@@ -81,8 +80,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
       rating: 4.8;
       readTime: '14 min';
       isTrending: true;
-      isFeatured: false,
-    };
+      isFeatured: false};
     {
       id: 3;
       title: 'Dimensional Gateway Technology';
@@ -94,8 +92,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
       rating: 4.9;
       readTime: '20 min';
       isTrending: true;
-      isFeatured: true,
-    };
+      isFeatured: true};
     {
       id: 4;
       title: 'Perfect Neural Integration';
@@ -107,8 +104,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
       rating: 4.9;
       readTime: '13 min';
       isTrending: false;
-      isFeatured: false,
-    };
+      isFeatured: false};
     {
       id: 5;
       title: 'Reality Creation Engine';
@@ -120,8 +116,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
       rating: 4.8;
       readTime: '16 min';
       isTrending: true;
-      isFeatured: false,
-    }
+      isFeatured: false}
   ],
   const filteredContent = trendingContent.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -182,8 +177,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
                         className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${
                           selectedCategory === category.id,
                             ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                            : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                        }`}
+                            : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                       >,
                         <Icon className="w-4 h-4"  />,
                         {category.name}
@@ -201,8 +195,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
                       className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${
                         selectedTimeframe === timeframe.id,
                           ? 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white shadow-lg',
-                          : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                      }`}
+                          : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                     >,
                       {timeframe.name}
                     </button>))}
@@ -304,8 +297,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>),
-            })}
+                </motion.div>)})}
           </AnimatePresence>,
         </div>,
         {/* Load More */}
@@ -316,6 +308,5 @@ const UltimateContentDiscoveryWidget20o30 = () => {
           </button>,
         </div>,
       </div>,
-    </motion.div>),
-};
+    </motion.div>)};
 export default UltimateContentDiscoveryWidget20o30;

@@ -542,6 +542,5 @@ export default function FeaturesPage() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

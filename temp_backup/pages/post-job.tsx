@@ -17,8 +17,7 @@ export default function PostJobPage() {
     setError(null),
     if (!title || !description || !category || !clientEmail) {
       setError('Please fill in all required fields.'),
-      return,
-    }
+      return}
 ,
     try {
       setIsSubmitting(true),
@@ -42,8 +41,7 @@ export default function PostJobPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to post job'),
       router.push(`/client/dashboard`)} catch (err: any) {
-      setError(err.message || 'Something went wrong'),
-    } finally {
+      setError(err.message || 'Something went wrong')} finally {
       setIsSubmitting(false)}
   }
 ,

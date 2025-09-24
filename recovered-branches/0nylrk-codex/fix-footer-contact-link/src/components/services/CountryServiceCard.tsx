@@ -13,14 +13,12 @@ import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
-  isPopular?: boolean,
-}
+  isPopular?: boolean}
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes),
   const getRegionEmoji = (countryName: string): string => {
     const emojiMap: Record<string string> = {
     const emojiMap: Record<string string> = {
-,
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
@@ -73,8 +71,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     <Card className={`h-full transition-all duration-300 hover: shadow-lg ${
       isPopular,
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple",
-        : "bg-zion-blue-dark border-zion-blue-light",
-    }`}>,
+        : "bg-zion-blue-dark border-zion-blue-light"}`}>,
       <CardHeader className="pb-2">,
         <div className="flex items-center justify-between">,
           <div className="flex items-center space-x-2">,
@@ -114,8 +111,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           className={`w-full ${
             isPopular,
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple",
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light",
-          }`}
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"}`}
         >,
           Select Service,
         </Button>,
@@ -168,8 +164,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular,
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple",
-        : "bg-zion-blue-dark border-zion-blue-light",
-    }`}>,
+        : "bg-zion-blue-dark border-zion-blue-light"}`}>,
       <CardHeader className="pb-2">,
         <div className="flex items-center justify-between">,
           <div className="flex items-center space-x-2">,
@@ -217,8 +212,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     <Card className={`h - full transition - all duration - 300 hover: shadow - lg ${
       is_popular,
         ? "bg - gradient - to - br from - zion - blue - dark to - zion - purple / 10 border - zion - purple",
-        : "bg - zion - blue - dark border - zion - blue - light",
-    }`}>,
+        : "bg - zion - blue - dark border - zion - blue - light"}`}>,
       <CardHeader className="pb - 2">,
         <div className="flex items - center justify - between">,
           <div className="flex items - center space - x-2">,
@@ -258,12 +252,10 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
           className={`w - full ${
             is_popular,
               ? "bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple",
-              : "bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light",
-          }`}
+              : "bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light"}`}
         >,
           Select Service,
         </Button>,
       </CardFooter>,
-    </Card>),
-}
+    </Card>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}})

@@ -54,6 +54,5 @@ const InteractiveTechDemo20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default InteractiveTechDemo20o26PromotionBanner;

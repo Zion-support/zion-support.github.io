@@ -6,8 +6,7 @@ import { EnhancedSidebar } from './EnhancedSidebar',
 import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground',
 interface EnhancedLayoutProps {
   children: ReactNode,
-  showSidebar?: boolean,
-}
+  showSidebar?: boolean}
 ,
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children;

@@ -52,6 +52,5 @@ export default function RAGEvaluationLabPage() {
 					</div>,
 				</div>,
 			</section>,
-		</>),
-}
+		</>)}
 ,

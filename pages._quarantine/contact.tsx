@@ -33,20 +33,17 @@ const "ContactPage": React.FC = () => {
       icon: <Phone className="w-6 h-6"   />;
       "title": "Phone";
       "details": "+1 30o2 464 0950";
-      "link": "tel: +130o24640950",
-    };
+      "link": "tel: +130o24640950"};
     {
       "icon": <Mail className="w-6 h-6"   />;
       "title": "Email";
       "details": "kleber@ziontechgroup.com";
-      "link": "mailto: kleber@ziontechgroup.com",
-    };
+      "link": "mailto: kleber@ziontechgroup.com"};
     {
       "icon": <MapPin className="w-6 h-6"   />;
       "title": "Address";
       "details": "364 E Main St STE 10o08\nMiddletown, DE 19709";
-      "link": "https: //maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709",
-    };
+      "link": "https: //maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709"};
     {
       "icon": <Clock className="w-6 h-6"   />;
       "title": "Business Hours";

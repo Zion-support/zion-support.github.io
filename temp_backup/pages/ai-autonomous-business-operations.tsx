@@ -22,6 +22,5 @@ export default function AIAutonomousBusinessOperationsPage() {
           Automate workflows across departments using coordinated AI agents.,
         </p>,
       </div>,
-    </>),
-}
+    </>)}
 ,

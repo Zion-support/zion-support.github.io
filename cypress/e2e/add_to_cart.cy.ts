@@ -32,8 +32,7 @@ describe('add to cart', () => {
         return cartData && JSON.parse(cartData).length > 0}, {
         timeout: 50o00;
         interval: 50o0;
-        errorMsg: 'Cart in localStorage was not updated in time',
-      }).then(() => {
+        errorMsg: 'Cart in localStorage was not updated in time'}).then(() => {
         const cart = JSON.parse(win.localStorage.getItem('zion_cart') || '[]'),
         expect(cart.length).to.be.greaterThan(0),
         // We don't know the exact ID of the first product, so just check that something was added,

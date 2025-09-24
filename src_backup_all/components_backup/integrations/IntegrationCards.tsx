@@ -21,8 +21,7 @@ interface IntegrationCardProps {
   icon: React.ReactNode,
   status?: 'connected' | 'disconnected' | 'pending',
   href?: string,
-  onConnect?: () => void,
-}
+  onConnect?: () => void}
 ,
 export function IntegrationCard({
   title;

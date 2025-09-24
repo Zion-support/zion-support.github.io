@@ -70,6 +70,5 @@ export default function TutorialPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

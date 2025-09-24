@@ -12,16 +12,14 @@ const SidebarContext = React.createContext<SidebarContextType | null>(null),
 export function useSidebar(): SidebarContextType {
   const context = React.useContext(SidebarContext),
   if (!context) {
-    throw new Error("useSidebar must be used within a SidebarProvider."),
-  }
+    throw new Error("useSidebar must be used within a SidebarProvider.")}
 ,
   return context as SidebarContextType}
 ,
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   defaultOpen?: boolean,
   open?: boolean,
-  onOpenChange?: (open: boolean) => void,
-}
+  onOpenChange?: (open: boolean) => void}
 ,
 export const SidebarProvider = React.forwardRef<,
   HTMLDivElement;
@@ -46,8 +44,7 @@ export const SidebarProvider = React.forwardRef<,
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value,
         if (setOpenProp) {
-          setOpenProp(openState),
-        } else {
+          setOpenProp(openState)} else {
           _setOpen(openState)}
 ,
         // This sets the cookie to keep the sidebar state.,
@@ -65,8 +62,7 @@ export const SidebarProvider = React.forwardRef<,
           event.key === SIDEBAR_KEYBOARD_SHORTCUT &&,
           (event.metaKey || event.ctrlKey)) {
           event.preventDefault(),
-          toggleSidebar(),
-        }
+          toggleSidebar()}
       }
 ,
       window.addEventListener("keydown"handleKeyDown),

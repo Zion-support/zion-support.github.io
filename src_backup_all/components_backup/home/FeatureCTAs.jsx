@@ -207,6 +207,5 @@ export function FeatureCTAs() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

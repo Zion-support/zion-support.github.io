@@ -632,6 +632,5 @@ export default function Metaverse() {
           </motion.div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

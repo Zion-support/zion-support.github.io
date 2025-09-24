@@ -21,18 +21,15 @@ import { toast } from "sonner";
   DialogTitle;
 } from "@/components/ui/dialog",
 interface Integration {
-,
   id: string,
   name: string,
   description: string,
   logo_url?: string,
   status: "connected" | "warning" | "disconnected",
 interface IntegrationConnectionModalProps {
-,
   isOpen: boolean,
   onClose: () => void,
-  integration: Integration,
-}
+  integration: Integration}
 ,
 export function IntegrationConnectionModal(): any ({
   isOpen;
@@ -49,13 +46,11 @@ export function IntegrationConnectionModal({
     autoCreateContacts: true,
     pushNotes: false,
     syncJobDetails: true,
-    syncApplicantData: true,
-  }),
+    syncApplicantData: true}),
   const handleConnectOAuth = () => {
     setIsConnecting(true),
     // Simulate OAuth flow,
     setTimeout(() => {
-,
       setIsConnecting(false),
       toast && toast.success(`Connected to ${integration && integration.name} successfully`),
       onClose()}, 2000),
@@ -89,8 +84,7 @@ interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-  integration: Integration,
-}
+  integration: Integration}
 ,
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false);
@@ -98,8 +92,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     autoCreateContacts: true;
     pushNotes: false;
     syncJobDetails: true;
-    syncApplicantData: true,
-  });
+    syncApplicantData: true});
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow,
@@ -154,8 +147,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
                         ...syncSettings,
-                        autoCreateContacts: checked as boolean,
-                      }),
+                        autoCreateContacts: checked as boolean}),
                 <div className="flex items-center space-x-2">,
                   <Checkbox
                     id="autoCreateContacts",
@@ -174,8 +166,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
                         ...syncSettings,
-                        pushNotes: checked as boolean,
-                      }),
+                        pushNotes: checked as boolean}),
                 <div className="flex items-center space-x-2">,
                   <Checkbox
                     id="pushNotes",
@@ -192,8 +183,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
                         ...syncSettings,
-                        syncJobDetails: checked as boolean,
-                      }),
+                        syncJobDetails: checked as boolean}),
                 <div className="flex items-center space-x-2">,
                   <Checkbox
                     id="syncJobDetails",
@@ -210,8 +200,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
                         ...syncSettings,
-                        syncApplicantData: checked as boolean,
-                      }),
+                        syncApplicantData: checked as boolean}),
                 <div className="flex items-center space-x-2">,
                   <Checkbox
                     id="syncApplicantData",
@@ -352,8 +341,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     autoCreateContacts: true;
     pushNotes: false;
     syncJobDetails: true;
-    syncApplicantData: true,
-  });
+    syncApplicantData: true});
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow,
@@ -486,8 +474,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 interface IntegrationConnectionModalProps {
   is_open: boolean,
   on_close: () => void,
-  integration: Integration,
-}
+  integration: Integration}
 export /**,
  * IntegrationConnectionModal - Function description,
  */,
@@ -645,7 +632,6 @@ function IntegrationConnectionModal() {
             </DialogFooter>,
           </>)}
       </DialogContent>,
-    </Dialog>),
-}
+    </Dialog>)}
 }
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}}}}))

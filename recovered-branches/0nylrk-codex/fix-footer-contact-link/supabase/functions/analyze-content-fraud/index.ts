@@ -4,14 +4,12 @@ import { corsHeaders } from '../_shared/cors.ts',
 interface AnalyzeRequest {
   content: string,
   contentType: string,
-  flagId?: string,
-}
+  flagId?: string}
 ,
 interface AnalysisResult {
   classification: string,
   explanation: string,
-  success: boolean,
-}
+  success: boolean}
 ,
 // Initialize environment and clients,
 const initializeServices = () => {
@@ -29,8 +27,7 @@ const initializeServices = () => {
 // Validate request content,
 const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data || typeof data !== 'object') {
-    throw new Error('Invalid request body'),
-  }
+    throw new Error('Invalid request body')}
 ,
   const request = data as AnalyzeRequest,
   if (!request.content) {
@@ -52,8 +49,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     Respond with one of these classifications: SAFE / SUSPICIOUS / DANGEROUS,
     followed by a brief explanation (max 1-2 sentences) of your reasoning.,
     Format your response exactly like: "CLASSIFICATION: explanation",
-  `,
-};
+  `};
 // Call OpenAI API for content analysis,
 const analyzeWithOpenAI = async (
   prompt: string;
@@ -86,7 +82,7 @@ const analyzeWithOpenAI = async (
         `OpenAI API error: ${data.error?.message || 'Unknown error'}`)}
 ,
     const analysisText = data.choices[0]?.message?.content || '',
-    // console.log('OpenAI analysis result:', analysisText),
+    // // console.log('OpenAI analysis result:', analysisText),
     // Parse the result,
     let classification = 'SAFE',
     let explanation = 'No issues detected.',
@@ -122,7 +118,7 @@ const updateFraudFlag = async (
     console.error('Error updating fraud flag:', error),
     throw new Error(`Error updating fraud flag: ${error.message}`)}
 ,
-  // console.log(
+  // // console.log(
     `Updated fraud flag ${flagId} with classification: ${classification}`)};
 // Main request handler,
 serve(async req => {
@@ -131,7 +127,7 @@ serve(async req => {
     return new Response(null, { headers: corsHeaders })}
 ,
   try {
-    // console.log('Received content analysis request'),
+    // // console.log('Received content analysis request'),
     // Initialize services,
     const { supabase, openaiApiKey } = initializeServices(),
     // Parse and validate request,
@@ -139,7 +135,7 @@ serve(async req => {
       console.error('Error parsing request JSON:', err),
       throw new Error('Invalid JSON in request body')}),
     const { content, contentType, flagId } = validateRequest(requestData),
-    // console.log(
+    // // console.log(
       `Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`),
     // Create prompt and analyze with OpenAI,
     const prompt = createAnalysisPrompt(contentType, content),
@@ -156,7 +152,7 @@ serve(async req => {
       explanation;
       success: true;
     };
-    // console.log('Analysis completed successfully:', result),
+    // // console.log('Analysis completed successfully:', result),
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' };
     })} catch (error) {

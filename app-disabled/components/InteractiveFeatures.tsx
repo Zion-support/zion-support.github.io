@@ -26,8 +26,7 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
       aiInvestment: 10o0000;
       expectedEfficiency: 25;
       expectedSavings: 15;
-      timeFrame: 12,
-    }),
+      timeFrame: 12}),
     const calculateROI = () => {
       const currentProfit = formData.currentRevenue - formData.currentCosts,
       const efficiencyGain = (formData.currentRevenue * formData.expectedEfficiency) / 10o0,
@@ -39,8 +38,7 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
         roi: Math.round(roi);
         totalGain: Math.round(totalGain);
         paybackPeriod: Math.round(paybackPeriod * 10) / 10;
-        monthlyGain: Math.round(totalGain / formData.timeFrame),
-      };
+        monthlyGain: Math.round(totalGain / formData.timeFrame)};
     };
     const results = calculateROI(),
     return (
@@ -133,8 +131,7 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
         id: Date.now();
         text: chatInput;
         sender: 'user';
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       setChatMessages(prev => [...prev, newMessage]),
       setChatInput(''),
       // Simulate AI response,
@@ -143,8 +140,7 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
           id: Date.now() + 1;
           text: "Thank you for your message! Our AI experts will get back to you within 24 hours with personalized recommendations for your business.";
           sender: 'ai';
-          timestamp: new Date(),
-        };
+          timestamp: new Date()};
         setChatMessages(prev => [...prev, aiResponse])}, 10o00)};
     useEffect(() => {
       chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [chatMessages]),
@@ -188,8 +184,7 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
             </button>,
           </div>,
         </div>,
-      </div>),
-  };
+      </div>)};
   // Content Recommendations,
   useEffect(() => {
     if (enableContentRecommendations) {
@@ -200,22 +195,19 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
           title: 'AI Business Intelligence Implementation Guide';
           type: 'resource';
           matchScore: 95;
-          reason: 'Based on your interest in BI solutions',
-        };
+          reason: 'Based on your interest in BI solutions'};
         {
           id: 2;
           title: 'Fortune 50o0 AI Success Stories';
           type: 'case-study';
           matchScore: 88;
-          reason: 'Similar company size and industry',
-        };
+          reason: 'Similar company size and industry'};
         {
           id: 3;
           title: 'Quantum AI Revolution 20o25';
           type: 'blog';
           matchScore: 82;
-          reason: 'Trending in your industry',
-        }
+          reason: 'Trending in your industry'}
       ],
       setRecommendations(mockRecommendations)}
   }, [enableContentRecommendations]),

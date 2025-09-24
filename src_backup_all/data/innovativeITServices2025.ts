@@ -21,15 +21,13 @@ export interface InnovativeITService {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors?: string[],
   marketSize?: string}
 ,
@@ -82,8 +80,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Quantum Algorithms", "Python", "Qiskit", "AWS", "Azure", "React"];
       integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"];
@@ -91,8 +88,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "Quantum-resistant encryption", "Zero-trust architecture"]};
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"];
-    marketSize: "$89.7 billion by 20o27",
-  };
+    marketSize: "$89.7 billion by 20o27"};
   // Blockchain-Based Supply Chain Management,
   {
     id: "blockchain-supply-chain-management";
@@ -141,8 +137,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Ethereum", "Hyperledger", "React", "Node.js", "PostgreSQL"];
       integrations: ["ERP systems", "WMS", "TMS", "IoT devices", "Payment gateways"];
@@ -150,8 +145,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Blockchain security", "End-to-end encryption"]};
     competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens"];
-    marketSize: "$67.8 billion by 20o27",
-  };
+    marketSize: "$67.8 billion by 20o27"};
   // Edge Computing & IoT Management Platform,
   {
     id: "edge-computing-iot-management";
@@ -200,8 +194,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Python", "React", "Node.js"];
       integrations: ["IoT protocols", "Cloud platforms", "Analytics tools", "Security systems"];
@@ -209,8 +202,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.95%";
       security: ["SOC 2", "ISO 270o01", "Edge security", "Device authentication"]};
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge"];
-    marketSize: "$43.4 billion by 20o27",
-  };
+    marketSize: "$43.4 billion by 20o27"};
   // Zero-Trust Security Architecture,
   {
     id: "zero-trust-security-architecture";
@@ -259,8 +251,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Identity providers", "SIEM systems", "Cloud platforms", "Network devices"];
@@ -268,8 +259,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "FedRAMP", "Zero-trust architecture"]};
     competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"];
-    marketSize: "$51.6 billion by 20o27",
-  };
+    marketSize: "$51.6 billion by 20o27"};
   // DevOps Automation & CI/CD Platform,
   {
     id: "devops-automation-cicd";
@@ -318,8 +308,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Jenkins", "GitLab", "Docker", "Kubernetes", "React", "Node.js"];
       integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"];
@@ -327,8 +316,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Secure pipelines", "Access control"]};
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"];
-    marketSize: "$25.8 billion by 20o27",
-  };
+    marketSize: "$25.8 billion by 20o27"};
   // Data Center Modernization & Hybrid Cloud,
   {
     id: "data-center-modernization-hybrid-cloud";
@@ -377,8 +365,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["VMware", "OpenStack", "Kubernetes", "React", "Node.js", "PostgreSQL"];
       integrations: ["Cloud platforms", "Storage systems", "Network devices", "Monitoring tools"];
@@ -386,8 +373,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.95%";
       security: ["SOC 2", "ISO 270o01", "Encryption", "Access control"]};
     competitors: ["VMware", "Microsoft", "IBM", "HPE"];
-    marketSize: "$78.9 billion by 20o27",
-  };
+    marketSize: "$78.9 billion by 20o27"};
   // Network Virtualization & SDN Platform,
   {
     id: "network-virtualization-sdn";
@@ -436,8 +422,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["OpenFlow", "OpenDaylight", "Python", "React", "Node.js"];
       integrations: ["Network devices", "Cloud platforms", "Monitoring tools", "Security systems"];
@@ -445,8 +430,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Network segmentation", "Access control"]};
     competitors: ["Cisco", "VMware", "Juniper", "Arista"];
-    marketSize: "$32.7 billion by 20o27",
-  };
+    marketSize: "$32.7 billion by 20o27"};
   // API Management & Integration Platform,
   {
     id: "api-management-integration";
@@ -495,8 +479,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kong", "Apigee", "React", "Node.js", "PostgreSQL", "Redis"];
       integrations: ["Cloud platforms", "Databases", "Message queues", "Authentication systems"];
@@ -504,8 +487,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "OAuth 2.0", "JWT", "API security"]};
     competitors: ["Apigee", "Kong", "MuleSoft", "Tyk"];
-    marketSize: "$19.8 billion by 20o27",
-  };
+    marketSize: "$19.8 billion by 20o27"};
   // Digital Twin & Simulation Platform,
   {
     id: "digital-twin-simulation";
@@ -554,8 +536,7 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "PostgreSQL"];
       integrations: ["IoT platforms", "CAD software", "PLM systems", "Analytics tools"];
@@ -563,6 +544,5 @@ export const INNOVATIVE_IT_SERVICES_20o25: InnovativeITService[] = [
       uptime: "99.9%";
       security: ["SOC 2", "ISO 270o01", "Data encryption", "Access control"]};
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"];
-    marketSize: "$86.1 billion by 20o27",
-  }
+    marketSize: "$86.1 billion by 20o27"}
 ],

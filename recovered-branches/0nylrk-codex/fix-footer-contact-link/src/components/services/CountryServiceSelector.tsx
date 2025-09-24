@@ -15,12 +15,10 @@ import { ServiceDetails } from "./ServiceDetails";
 } from "@/data/onsiteServicePricing">>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void,
-  selectedCountry?: CountryPricing | null,
-}
+  selectedCountry?: CountryPricing | null}
 export function CountryServiceSelector({
   onCountryChange,
-  selectedCountry: initialCountry,
-}: CountryServiceSelectorProps) {
+  selectedCountry: initialCountry}: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">,
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">,
@@ -30,8 +28,7 @@ export function CountryServiceSelector({
         />,
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void,
-  selectedCountry?: CountryPricing | null,
-}
+  selectedCountry?: CountryPricing | null}
 ,
 export function CountryServiceSelector({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {
   return (

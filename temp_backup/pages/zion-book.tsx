@@ -15,6 +15,5 @@ export default function ZionBookPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

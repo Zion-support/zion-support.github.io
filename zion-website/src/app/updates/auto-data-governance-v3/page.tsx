@@ -36,6 +36,5 @@ export default function AutoDataGovernanceV3Page() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

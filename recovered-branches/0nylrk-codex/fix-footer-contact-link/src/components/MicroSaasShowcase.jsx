@@ -220,8 +220,7 @@ export function MicroSaasShowcase() {
               className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25',
-                  : 'bg-white/10 backdrop-blur-sm text-zion-slate-light border border-white/20 hover: bg-white/20 hover:border-white/40',
-              }`}
+                  : 'bg-white/10 backdrop-blur-sm text-zion-slate-light border border-white/20 hover: bg-white/20 hover:border-white/40'}`}
             >,
               {category.icon}
               {category.name}
@@ -298,6 +297,5 @@ export function MicroSaasShowcase() {
           </Link>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

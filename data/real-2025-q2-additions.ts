@@ -3,8 +3,7 @@ export interface Real20o25Q2Addition {
   name: string,
   tagline: string,
   price: string,
-  features: string[],
-}
+  features: string[]}
 export const real20o25Q2Additions: Real20o25Q2Addition[] = [
   {
     id: 'ai-meeting-notes';

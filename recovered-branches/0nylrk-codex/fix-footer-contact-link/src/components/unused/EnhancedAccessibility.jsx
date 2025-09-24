@@ -10,8 +10,7 @@ const EnhancedAccessibility = () => {
         screenReader: false;
         keyboardNavigation: false;
         focusIndicator: true;
-        colorBlindness: 'none',
-    }),
+        colorBlindness: 'none'}),
     useEffect(() => {
         // Load saved settings from localStorage,
         const savedSettings = localStorage.getItem('accessibility-settings'),
@@ -73,8 +72,7 @@ const EnhancedAccessibility = () => {
             screenReader: false;
             keyboardNavigation: false;
             focusIndicator: true;
-            colorBlindness: 'none',
-        };
+            colorBlindness: 'none'};
         setSettings(defaultSettings),
         applySettings(defaultSettings)};
     const speakText = (text) => {

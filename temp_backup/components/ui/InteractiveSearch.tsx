@@ -4,15 +4,13 @@ export type FilterState = {
   category: string,
   minPrice?: number,
   maxPrice?: number,
-  minRating?: number,
-};
+  minRating?: number};
 export type InteractiveSearchProps = {
   categories: CategoryOption[],
   value: FilterState,
   onChange: (next: FilterState) => void,
   priceEnabled?: boolean,
-  ratingEnabled?: boolean,
-};
+  ratingEnabled?: boolean};
 export default function InteractiveSearch({
   categories;
   value;

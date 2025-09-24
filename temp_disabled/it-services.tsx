@@ -37,8 +37,7 @@ const itServices = [
     benefits: ['Reduced Downtime'Cost Optimization'Proactive Management'Scalable Operations'];
     marketPrice: '$5,0o00 - $15,0o00/month';
     link: 'https://ziontechgroup.com/ai-it-operations';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Quantum-Safe Cybersecurity Implementation';
     description: 'Future-proof security solutions using quantum-resistant encryption and advanced threat protection.';
@@ -49,8 +48,7 @@ const itServices = [
     benefits: ['Future-Proof Security'Advanced Protection'Compliance Ready'Scalable Security'];
     marketPrice: '$8,0o00 - $25,0o00/month';
     link: 'https://ziontechgroup.com/quantum-security';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Edge Computing Infrastructure';
     description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.';
@@ -61,8 +59,7 @@ const itServices = [
     benefits: ['Ultra-Low Latency'Improved Performance'Cost Efficiency'Scalable Infrastructure'];
     marketPrice: '$3,0o00 - $12,0o00/month';
     link: 'https://ziontechgroup.com/edge-computing';
-    popular: false,
-  };
+    popular: false};
   {
     title: '5G Network Implementation & Optimization';
     description: 'Complete 5G network deployment and optimization services for enhanced connectivity.';
@@ -73,8 +70,7 @@ const itServices = [
     benefits: ['Ultra-Fast Connectivity'Enhanced Coverage'Future-Ready Infrastructure'Optimized Performance'];
     marketPrice: '$15,0o00 - $75,0o00/month';
     link: 'https://ziontechgroup.com/5g-networks';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Blockchain Infrastructure & Integration';
     description: 'Enterprise blockchain solutions with smart contracts and decentralized applications.';
@@ -85,8 +81,7 @@ const itServices = [
     benefits: ['Decentralized Solutions'Enhanced Security'Transparent Operations'Cost Reduction'];
     marketPrice: '$6,0o00 - $20,0o00/month';
     link: 'https://ziontechgroup.com/blockchain-infrastructure';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'IoT Platform Development & Management';
     description: 'Comprehensive IoT solutions for device managementdata collectionand analytics.';
@@ -97,8 +92,7 @@ const itServices = [
     benefits: ['Connected Devices'Real-time Insights'Operational Efficiency'Data-Driven Decisions'];
     marketPrice: '$4,0o00 - $15,0o00/month';
     link: 'https://ziontechgroup.com/iot-platforms';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'AI Infrastructure & ML Pipeline Setup';
     description: 'Complete AI infrastructure setup with machine learning pipelines and model deployment.';
@@ -109,8 +103,7 @@ const itServices = [
     benefits: ['Advanced AI Capabilities'Scalable ML Operations'Automated Workflows'High Performance'];
     marketPrice: '$8,0o00 - $30,0o00/month';
     link: 'https://ziontechgroup.com/ai-infrastructure';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Green IT & Sustainability Solutions';
     description: 'Eco-friendly IT solutions for reducing carbon footprint and energy consumption.';
@@ -121,8 +114,7 @@ const itServices = [
     benefits: ['Environmental Impact'Cost Savings'Sustainability Goals'Efficient Operations'];
     marketPrice: '$3,0o00 - $12,0o00/month';
     link: 'https://ziontechgroup.com/green-it';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Zero Trust Security Architecture';
     description: 'Comprehensive zero trust security implementation for enhanced protection.';
@@ -133,8 +125,7 @@ const itServices = [
     benefits: ['Enhanced Security'Reduced Risk'Compliance Ready'Scalable Protection'];
     marketPrice: '$6,0o00 - $20,0o00/month';
     link: 'https://ziontechgroup.com/zero-trust';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Hybrid Cloud Management Platform';
     description: 'Unified management platform for hybrid cloud environments and multi-cloud operations.';
@@ -145,8 +136,7 @@ const itServices = [
     benefits: ['Unified Operations'Cost Optimization'Flexible Deployment'Enhanced Security'];
     marketPrice: '$5,0o00 - $18,0o00/month';
     link: 'https://ziontechgroup.com/hybrid-cloud';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Advanced Analytics & Business Intelligence';
     description: 'Comprehensive analytics platform with real-time insights and predictive capabilities.';
@@ -157,8 +147,7 @@ const itServices = [
     benefits: ['Data-Driven Insights'Predictive Capabilities'Real-time Monitoring'Business Intelligence'];
     marketPrice: '$4,0o00 - $15,0o00/month';
     link: 'https://ziontechgroup.com/advanced-analytics';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'IT Disaster Recovery & Business Continuity';
     description: 'Comprehensive disaster recovery solutions ensuring business continuity and data protection.';
@@ -169,8 +158,7 @@ const itServices = [
     benefits: ['Business Continuity'Data Protection'Minimal Downtime'Risk Mitigation'];
     marketPrice: '$3,0o00 - $12,0o00/month';
     link: 'https://ziontechgroup.com/disaster-recovery';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Advanced Network Security Implementation';
     description: 'Comprehensive network security solutions with advanced threat protection and monitoring.';
@@ -181,8 +169,7 @@ const itServices = [
     benefits: ['Enhanced Protection'Threat Prevention'Network Monitoring'Compliance Ready'];
     marketPrice: '$5,0o00 - $18,0o00/month';
     link: 'https://ziontechgroup.com/network-security';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'IT Compliance & Regulatory Services';
     description: 'Comprehensive compliance management for various industry regulations and standards.';
@@ -193,8 +180,7 @@ const itServices = [
     benefits: ['Regulatory Compliance'Audit Support'Risk Mitigation'Documentation Management'];
     marketPrice: '$3,0o00 - $12,0o00/month';
     link: 'https://ziontechgroup.com/it-compliance';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Digital Transformation Consulting';
     description: 'Strategic consulting services for digital transformation and technology modernization.';
@@ -205,8 +191,7 @@ const itServices = [
     benefits: ['Strategic Guidance'Technology Modernization'Change Management'Competitive Advantage'];
     marketPrice: '$8,0o00 - $30,0o00/month';
     link: 'https://ziontechgroup.com/digital-transformation';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'IT Asset Management & Optimization';
     description: 'Comprehensive IT asset management with optimization and lifecycle management.';
@@ -217,8 +202,7 @@ const itServices = [
     benefits: ['Cost Optimization'Asset Visibility'Lifecycle Management'Performance Tracking'];
     marketPrice: '$2,50o0 - $9,0o00/month';
     link: 'https://ziontechgroup.com/it-asset-management';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Advanced Backup & Data Protection';
     description: 'Comprehensive backup and data protection solutions with automated recovery.';
@@ -229,8 +213,7 @@ const itServices = [
     benefits: ['Data Security'Automated Backups'Quick Recovery'Compliance Ready'];
     marketPrice: '$3,0o00 - $12,0o00/month';
     link: 'https://ziontechgroup.com/backup-protection';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'IT Performance Monitoring & Optimization';
     description: 'Comprehensive IT performance monitoring with optimization and capacity planning.';
@@ -241,8 +224,7 @@ const itServices = [
     benefits: ['Performance Optimization'Capacity Planning'Proactive Management'Cost Efficiency'];
     marketPrice: '$4,0o00 - $15,0o00/month';
     link: 'https://ziontechgroup.com/performance-monitoring';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Cloud Security & Compliance Services';
     description: 'Comprehensive cloud security solutions with compliance management and monitoring.';
@@ -253,8 +235,7 @@ const itServices = [
     benefits: ['Enhanced Security'Compliance Ready'Threat Protection'Scalable Solutions'];
     marketPrice: '$5,0o00 - $18,0o00/month';
     link: 'https://ziontechgroup.com/cloud-security';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'IT Service Management (ITSM) Implementation';
     description: 'Complete ITSM implementation with service deskchange managementand incident handling.';
@@ -265,8 +246,7 @@ const itServices = [
     benefits: ['Improved Service Delivery'Process Standardization'Better Visibility'Cost Optimization'];
     marketPrice: '$6,0o00 - $20,0o00/month';
     link: 'https://ziontechgroup.com/itsm';
-    popular: false,
-  };
+    popular: false};
   {
     title: 'Edge Computing Infrastructure';
     description: 'Deploy and manage edge computing infrastructure for low-latency applications.';
@@ -274,8 +254,7 @@ const itServices = [
     features: ['Edge Node Deployment'Content Delivery Networks'IoT Integration'Real-time Processing'];
     pricing: '$20,0o00 - $10o0,0o00/setup';
     category: 'Edge Computing';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Blockchain Infrastructure Services';
     description: 'Complete blockchain infrastructure setup and management for enterprise applications.';
@@ -283,16 +262,14 @@ const itServices = [
     features: ['Blockchain Deployment'Smart Contract Development'Node Management'Security Hardening'];
     pricing: '$30,0o00 - $150,0o00/setup';
     category: 'Blockchain';
-    popular: true,
-  };
+    popular: true};
   {
     title: '5G Network Implementation';
     description: '5G network infrastructure designdeploymentand optimization services.';
     icon: Network;
     features: ['5G Core Network'RAN Implementation'Network Slicing'Performance Optimization'];
     pricing: '$10o0,0o00 - $50o0,0o00/project';
-    category: '5G Technology',
-  };
+    category: '5G Technology'};
   {
     title: 'IoT Platform Development';
     description: 'Comprehensive IoT platform development and device management solutions.';
@@ -300,8 +277,7 @@ const itServices = [
     features: ['Device Management'Data Analytics'Real-time Monitoring'Security Framework'];
     pricing: '$25,0o00 - $125,0o00/project';
     category: 'IoT';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Digital Transformation Consulting';
     description: 'Strategic digital transformation consulting and implementation services.';
@@ -309,8 +285,7 @@ const itServices = [
     features: ['Technology Assessment'Digital Strategy'Change Management'Implementation Support'];
     pricing: '$50,0o00 - $30o0,0o00/project';
     category: 'Consulting';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'DevOps & CI/CD Implementation';
     description: 'Complete DevOps culture implementation with CI/CD pipelines and automation.';
@@ -318,24 +293,21 @@ const itServices = [
     features: ['CI/CD Pipelines'Infrastructure as Code'Automated Testing'Deployment Automation'];
     pricing: '$15,0o00 - $75,0o00/setup';
     category: 'DevOps';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Microservices Architecture';
     description: 'Design and implement microservices architecture for scalable applications.';
     icon: Server;
     features: ['Service Design'API Gateway'Service Mesh'Container Orchestration'];
     pricing: '$40,0o00 - $20o0,0o00/project';
-    category: 'Architecture',
-  };
+    category: 'Architecture'};
   {
     title: 'Data Center Migration Services';
     description: 'Complete data center migration and consolidation services.';
     icon: Server;
     features: ['Migration Planning'Data Transfer'Downtime Minimization'Testing & Validation'];
     pricing: '$25,0o00 - $150,0o00/project';
-    category: 'Migration',
-  };
+    category: 'Migration'};
   {
     title: 'Disaster Recovery Solutions';
     description: 'Comprehensive disaster recovery and business continuity solutions.';
@@ -343,16 +315,14 @@ const itServices = [
     features: ['Backup Strategies'Recovery Testing'Failover Systems'RTO/RPO Optimization'];
     pricing: '$20,0o00 - $10o0,0o00/setup';
     category: 'Disaster Recovery';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'API Management Platform';
     description: 'Complete API management platform with securitymonitoringand analytics.';
     icon: Network;
     features: ['API Gateway'Rate Limiting'Authentication'Analytics Dashboard'];
     pricing: '$10,0o00 - $50,0o00/setup';
-    category: 'API Management',
-  };
+    category: 'API Management'};
   {
     title: 'Identity & Access Management (IAM)';
     description: 'Comprehensive identity and access management solutions for enterprise security.';
@@ -360,16 +330,14 @@ const itServices = [
     features: ['Single Sign-On'Multi-Factor Authentication'Role-Based Access'Compliance Reporting'];
     pricing: '$15,0o00 - $75,0o00/setup';
     category: 'Security';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Performance Testing & Optimization';
     description: 'Comprehensive performance testing and optimization services for applications.';
     icon: Zap;
     features: ['Load Testing'Stress Testing'Performance Profiling'Optimization Recommendations'];
     pricing: '$5,0o00 - $25,0o00/project';
-    category: 'Performance',
-  };
+    category: 'Performance'};
   {
     title: 'Cloud Cost Optimization';
     description: 'Optimize cloud infrastructure costs and resource utilization.';
@@ -377,16 +345,14 @@ const itServices = [
     features: ['Cost Analysis'Resource Rightsizing'Reserved Instances'Cost Monitoring'];
     pricing: '$10,0o00 - $50,0o00/project';
     category: 'Cloud Optimization';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'IT Service Management (ITSM)';
     description: 'Implement IT service management processes and tools for better service delivery.';
     icon: Settings;
     features: ['Incident Management'Change Management'Service Catalog'SLA Monitoring'];
     pricing: '$20,0o00 - $10o0,0o00/setup';
-    category: 'ITSM',
-  };
+    category: 'ITSM'};
   {
     title: 'Zero Trust Security Architecture';
     description: 'Implement zero trust security model for enhanced enterprise security.';
@@ -394,24 +360,21 @@ const itServices = [
     features: ['Identity Verification'Device Trust'Network Segmentation'Continuous Monitoring'];
     pricing: '$30,0o00 - $150,0o00/setup';
     category: 'Security Architecture';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'Hybrid Cloud Solutions';
     description: 'Design and implement hybrid cloud solutions for seamless cloud integration.';
     icon: Cloud;
     features: ['Multi-cloud Strategy'Data Synchronization'Workload Migration'Security Integration'];
     pricing: '$40,0o00 - $20o0,0o00/project';
-    category: 'Hybrid Cloud',
-  };
+    category: 'Hybrid Cloud'};
   {
     title: 'IT Asset Management';
     description: 'Complete IT asset lifecycle management and optimization services.';
     icon: Package;
     features: ['Asset Discovery'License Management'Lifecycle Tracking'Cost Optimization'];
     pricing: '$5,0o00 - $25,0o00/setup';
-    category: 'Asset Management',
-  };
+    category: 'Asset Management'};
   {
     title: 'Network Security Operations Center (SOC)';
     description: '24/7 security monitoring and incident response services.';
@@ -419,16 +382,14 @@ const itServices = [
     features: ['Threat Monitoring'Incident Response'Security Analytics'Compliance Reporting'];
     pricing: '$50,0o00 - $250,0o00/month';
     category: 'SOC Services';
-    popular: true,
-  };
+    popular: true};
   {
     title: 'IT Governance & Risk Management';
     description: 'Comprehensive IT governance and risk management framework implementation.';
     icon: Lock;
     features: ['Risk Assessment'Policy Development'Compliance Monitoring'Audit Support'];
     pricing: '$25,0o00 - $125,0o00/project';
-    category: 'Governance',
-  }
+    category: 'Governance'}
 ],
 const categories = [
   'All';
@@ -515,8 +476,7 @@ export default function ITServicesPage() {
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category,
                         ? 'bg-blue-60o0 text-white',
-                        : 'bg-gray-20o0 text-gray-70o0 hover: bg-gray-30o0',
-                    }`}
+                        : 'bg-gray-20o0 text-gray-70o0 hover: bg-gray-30o0'}`}
                   >,
                     {category}
                   </button>))}

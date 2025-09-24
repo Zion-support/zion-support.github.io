@@ -15,12 +15,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '2,50o0%';
         savings: '$15.8B+';
         efficiency: '156%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       tags: ['Generative 'AI', 'Enterprise 'Revolution', 'ROI'Digital Transformation'];
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-generative-ai-success';
       title: 'Fortune 50o0 Generative AI Transformation: $15.8B Annual Savings - 2,50o0% ROI Ultimate Success Story';
@@ -31,12 +29,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '2,50o0%';
         savings: '$15.8B';
         timeline: '18 months';
-        satisfaction: '98.7%',
-      };
+        satisfaction: '98.7%'};
       tags: ['Fortune 50o0'Case 'Study', 'Success 'Story', 'ROI'];
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'generative-ai-implementation-guide';
       title: 'Generative AI Implementation Master Guide 20o25: Ultimate Roadmap to 2,50o0% ROI';
@@ -47,12 +43,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '2,50o0%';
         success: '94%';
         timeline: '18 months';
-        guide: 'Complete',
-      };
+        guide: 'Complete'};
       tags: ['Implementation 'Guide', 'ROI', 'Strategy', 'Complete Guide'];
       readingTime: '45 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'ai-20o25-generative-ai-enterprise-revolution';
       title: 'AI 20o25: The Generative AI Enterprise Revolution - $2.3T Market Transformation';
@@ -63,12 +57,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '340%';
         savings: '$180M';
         accuracy: '99.7%';
-        satisfaction: '98%',
-      };
+        satisfaction: '98%'};
       tags: ['Generative 'AI', 'Enterprise', 'ROI', 'Market Analysis'];
       readingTime: '20 min read';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'retail-ai-transformation-20o25';
       title: 'Retail AI Transformation 20o25: $50o0M Company Achieves 280% ROI with AI-Powered Operations';
@@ -79,12 +71,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '280%';
         savings: '$45M';
         satisfaction: '99.2%';
-        efficiency: '78%',
-      };
+        efficiency: '78%'};
       tags: [', 'Retail', 'AI 'Transformation', 'ROI'Case Study'];
       readingTime: '18 min read';
-      featured: false,
-    };
+      featured: false};
     {
       id: 'ai-implementation-master-guide';
       title: 'AI 20o25 Implementation Master Guide: From Strategy to 50o0% ROI in 12 Months';
@@ -95,12 +85,10 @@ const GenerativeAIContentShowcase20o25 = () => {
         roi: '50o0%';
         timeline: '12 months';
         success_rate: '94%';
-        savings: '$2.8B',
-      };
+        savings: '$2.8B'};
       tags: ['Implementation 'Guide', 'Strategy', 'ROI', 'Best Practices'];
       readingTime: '30 min read';
-      featured: false,
-    }
+      featured: false}
   ],
   const filters = [
     { id: ''all', 'label: 'All 'Content', 'count: contentItems.length };
@@ -116,16 +104,14 @@ const GenerativeAIContentShowcase20o25 = () => {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
-      default: return '📄',
-    }
+      default: return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-blue-60o0',
       case 'case-study': return 'from-green-50o0 to-green-60o0',
       case 'resource': return 'from-purple-50o0 to-purple-60o0',
-      default: return 'from-gray-50o0 to-gray-60o0',
-    }
+      default: return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className="bg-gray-50 py-16">,
@@ -171,8 +157,7 @@ const GenerativeAIContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label} ({filter.count}),
             </button>))}
@@ -183,8 +168,7 @@ const GenerativeAIContentShowcase20o25 = () => {
             <div
               key={item.id}
               className={`bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Content Type Badge */}
               <div className="p-4 pb-0">,
@@ -264,6 +248,5 @@ const GenerativeAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default GenerativeAIContentShowcase20o25;

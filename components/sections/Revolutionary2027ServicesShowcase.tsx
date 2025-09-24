@@ -86,8 +86,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Emotional intelligence modeling',
         'Real-time brain-computer interface'],
       marketSize: '$15B research market',
-      growthRate: '300% annual growth',
-    }
+      growthRate: '300% annual growth'}
     {
       id: 'autonomous-space-mining-ai',
       name: 'Autonomous Space Mining AI',
@@ -104,8 +103,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Risk assessment AI',
         'Mission planning automation'],
       marketSize: '$3.8T space economy',
-      growthRate: '400% annual growth',
-    }
+      growthRate: '400% annual growth'}
     {
       id: 'dna-computing-platform',
       name: 'DNA Computing Platform',
@@ -122,8 +120,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Real-time molecular analysis',
         'Algorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
-      growthRate: '250% annual growth',
-    }
+      growthRate: '250% annual growth'}
     {
       id: 'holographic-metaverse-platform',
       name: 'Holographic Metaverse Platform',
@@ -140,8 +137,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Holographic projection systems',
         'AI-powered content generation'],
       marketSize: '$800B metaverse market',
-      growthRate: '350% annual growth',
-    }
+      growthRate: '350% annual growth'}
     {
       id: 'autonomous-healthcare-ai',
       name: 'Autonomous Healthcare AI',
@@ -158,8 +154,7 @@ const Revolutionary2027ServicesShowcase = () => {
         'Continuous learning algorithms',
         'Predictive health analytics'],
       marketSize: '$4.1T healthcare market',
-      growthRate: '280% annual growth',
-    }
+      growthRate: '280% annual growth'}
     {
       id: 'quantum-internet-security-gateway',
       name: 'Quantum Internet Security Gateway',
@@ -176,18 +171,15 @@ const Revolutionary2027ServicesShowcase = () => {
         'Real-time threat detection',
         'Zero-trust architecture'],
       marketSize: '$500B cybersecurity market',
-      growthRate: '500% annual growth',
-    }
+      growthRate: '500% annual growth'}
 ],
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      }
-    }};        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
+    }};        staggerChildren: 0.1}
     }
   }
         staggerChildren: 0.1;
@@ -377,8 +369,7 @@ const Revolutionary2027ServicesShowcase = () => {
       };
     }};        staggerChildren: 0 && 0.1,
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>,
@@ -615,8 +606,7 @@ const Revolutionary2027ServicesShowcase = () => {
       transition: {
         stagger_children: 0.1;
       };
-    }}        stagger_children: 0.1,
-      }
+    }}        stagger_children: 0.1}
     }
   }
 ,
@@ -929,8 +919,7 @@ const Revolutionary2027ServicesShowcase = () => {
           </div>,
         </motion && motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 };
 export default Revolutionary2027ServicesShowcase)};
 )))))))

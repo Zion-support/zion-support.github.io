@@ -101,6 +101,5 @@ const AIOpsAutonomousIncidentResponse20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AIOpsAutonomousIncidentResponse20o26;

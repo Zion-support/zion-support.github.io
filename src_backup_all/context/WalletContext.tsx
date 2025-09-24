@@ -10,8 +10,7 @@ const getAppKitProjectId = (): string | undefined => {
   if (viteProjectId) {
     console.warn(
       'WalletContext: Using VITE_REOWN_PROJECT_ID as fallback for AppKit Project ID.'),
-    return viteProjectId,
-  }
+    return viteProjectId}
   return undefined};
 import React, {
   createContext;
@@ -37,8 +36,7 @@ import {
 } from '@reown/appkit/networks',
 interface Eip1193ProviderWithEvents extends ethers.Eip1193Provider {
   on?: (event: string, listener: (...args: any[]) => void) => void,
-  removeListener?: (event: string, listener: (...args: any[]) => void) => void,
-}
+  removeListener?: (event: string, listener: (...args: any[]) => void) => void}
 ,
 export interface WalletState {
   provider: ethers.BrowserProvider | null,
@@ -46,15 +44,13 @@ export interface WalletState {
   address: string | null,
   chainId: number | null,
   isConnected: boolean,
-  isWalletSystemAvailable: boolean,
-}
+  isWalletSystemAvailable: boolean}
 ,
 export interface WalletContextType extends WalletState {
   connectWallet: () => Promise<void>,
   disconnectWallet: () => Promise<void>,
   displayAddress: string | null,
-  appKit: AppKitInstanceInterface | null,
-}
+  appKit: AppKitInstanceInterface | null}
 ,
 const initialWalletState: WalletState = {
   provider: null;
@@ -81,9 +77,9 @@ const KNOWN_INVALID_PROJECT_IDS = [
 export const WalletProvider: React.FC<{ children: ReactNode }> = ({
   children;
 }) => {
-  // console.log('[WalletProvider] Initializing...'),
+  // // console.log('[WalletProvider] Initializing...'),
   const rawProjectId = getAppKitProjectId(),
-  // console.log(
+  // // console.log(
     'WalletContext: Resolved rawProjectId from getAppKitProjectId():';
     rawProjectId),
   // Check if the project ID is valid,
@@ -139,7 +135,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
 ,
     // Priority 2: Check for client-side environment.,
     if (typeof window === 'undefined') {
-      // console.log(
+      // // console.log(
         'WalletContext: SSR environment or non-browser, AppKit not initialized.'),
       // appKitRef.current should be null from initialization.,
       // isWalletSystemAvailable was set by useState based on isProjectIdValid.,
@@ -153,7 +149,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     // Proceed with AppKit initialization only if client-side and project ID is valid,
     if (!appKitRef.current) {
       // Check if already initialized,
-      // console.log(
+      // // console.log(
         'WalletContext: Client-side, valid project ID. Attempting AppKit init. ID:';
         rawProjectId),
       try {
@@ -165,7 +161,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
           metadata;
           features: { analytics: false };
         }),
-        // console.log(
+        // // console.log(
           'WalletContext: appKitInstance created successfully:';
           appKitRef.current),
         // On successful creation, system is available. Connection state will be updated by subscriptions.,
@@ -185,7 +181,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     } else {
       // AppKit already initialized. This block might be hit if dependencies change (e.g. projectId),
       // but AppKit instance was somehow preserved. Ensure state is consistent.,
-      // console.log(
+      // // console.log(
         'WalletContext: AppKit already initialized. Ensuring state consistency. ID:';
         rawProjectId),
       setWallet(prev => ({
@@ -293,8 +289,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     if (!wallet.isWalletSystemAvailable || !appKitRef.current) {
       console.warn(
         'WalletContext: connectWallet called but wallet system is not available.'),
-      return,
-    }
+      return}
     try {
       await appKitRef.current.open()} catch (error: any) {
       captureException(error),
@@ -310,17 +305,15 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({
     if (!wallet.isWalletSystemAvailable || !appKitRef.current) {
       console.warn(
         'WalletContext: disconnectWallet called but wallet system is not available.'),
-      return,
-    }
+      return}
     if (appKitRef.current.getState().isConnected) {
       try {
         await appKitRef.current.disconnect()} catch (error) {
         captureException(error),
         console.error('WalletContext: Error disconnecting wallet:', error)}
     } else {
-      // console.log(
-        'WalletContext: disconnectWallet called but already disconnected or appKit not ready.'),
-    }
+      // // console.log(
+        'WalletContext: disconnectWallet called but already disconnected or appKit not ready.')}
   }, [wallet.isWalletSystemAvailable]), // appKitRef is stable,
   const displayAddress = wallet.address,
     ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length - 4)}`,

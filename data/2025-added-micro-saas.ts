@@ -4,8 +4,7 @@ const contact ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}
 export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
   {
     id: 'ai-sales-sequence-orchestrator';
@@ -46,8 +45,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o4-10';
     customers: 86;
     rating: 4.8;
-    reviews: 55,
-  };
+    reviews: 55};
   {
     id: 'ai-rfp-response-copilot';
     name: 'AI RFP Response Copilot';
@@ -86,8 +84,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o2-20';
     customers: 41;
     rating: 4.7;
-    reviews: 29,
-  };
+    reviews: 29};
   {
     id: 'local-seo-insights-engine';
     name: 'Local SEO Insights Engine';
@@ -125,8 +122,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o5-12';
     customers: 211;
     rating: 4.8;
-    reviews: 77,
-  };
+    reviews: 77};
   {
     id: 'gdpr-cookie-consent-manager';
     name: 'GDPR Cookie Consent Manager';
@@ -164,8 +160,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-0o1';
     customers: 318;
     rating: 4.7;
-    reviews: 96,
-  };
+    reviews: 96};
   {
     id: 'churn-prediction-insights';
     name: 'Churn Prediction Insights';
@@ -203,8 +198,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o5-28';
     customers: 122;
     rating: 4.6;
-    reviews: 41,
-  };
+    reviews: 41};
   {
     id: 'docs-to-knowledge-bot';
     name: 'Docs-to-Knowledge Bot';
@@ -242,8 +236,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o5-15';
     customers: 187;
     rating: 4.8;
-    reviews: 68,
-  };
+    reviews: 68};
   {
     id: 'soc2-evidence-collector';
     name: 'SOC 2 Evidence Collector';
@@ -281,8 +274,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-14';
     customers: 57;
     rating: 4.7;
-    reviews: 24,
-  };
+    reviews: 24};
   {
     id: 'smart-invoice-extractor';
     name: 'Smart Invoice Extractor';
@@ -320,8 +312,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-10';
     customers: 133;
     rating: 4.6;
-    reviews: 52,
-  };
+    reviews: 52};
   {
     id: 'partner-portal-builder';
     name: 'Partner Portal Builder';
@@ -359,8 +350,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-12';
     customers: 48;
     rating: 4.7;
-    reviews: 19,
-  };
+    reviews: 19};
   {
     id: 'ai-procurement-bid-analyzer';
     name: 'AI Procurement Bid Analyzer';
@@ -398,8 +388,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-20';
     customers: 33;
     rating: 4.6;
-    reviews: 14,
-  };
+    reviews: 14};
   {
     id: 'smart-terms-policy-generator';
     name: 'Smart Terms & Policy Generator';
@@ -437,8 +426,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-18';
     customers: 122;
     rating: 4.7;
-    reviews: 39,
-  };
+    reviews: 39};
   {
     id: 'vendor-security-review-assistant';
     name: 'Vendor Security Review Assistant';
@@ -476,8 +464,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-22';
     customers: 58;
     rating: 4.6;
-    reviews: 21,
-  };
+    reviews: 21};
   {
     id: 'smart-release-notes-broadcaster';
     name: 'Smart Release Notes Broadcaster';
@@ -515,8 +502,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-21';
     customers: 74;
     rating: 4.7;
-    reviews: 26,
-  };
+    reviews: 26};
   {
     id: 'contract-redline-copilot';
     name: 'Contract Redline Copilot';
@@ -554,8 +540,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-19';
     customers: 61;
     rating: 4.7;
-    reviews: 28,
-  };
+    reviews: 28};
   {
     id: 'vendor-security-questionnaire-automation';
     name: 'Vendor Security Questionnaire Automation';
@@ -593,8 +578,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o5-12';
     customers: 57;
     rating: 4.7;
-    reviews: 33,
-  };
+    reviews: 33};
   {
     id: 'contract-clause-analyzer';
     name: 'Contract Clause Analyzer';
@@ -632,8 +616,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-0o1';
     customers: 39;
     rating: 4.6;
-    reviews: 22,
-  };
+    reviews: 22};
   {
     id: 'marketing-attribution-insights';
     name: 'Marketing Attribution Insights';
@@ -671,8 +654,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o5-25';
     customers: 10o2;
     rating: 4.8;
-    reviews: 61,
-  };
+    reviews: 61};
   {
     id: 'ai-compliance-policy-watcher';
     name: 'AI Compliance Policy Watcher';
@@ -710,8 +692,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-24';
     customers: 27;
     rating: 4.6;
-    reviews: 12,
-  };
+    reviews: 12};
   {
     id: 'smart-churn-winback-campaigns';
     name: 'Smart Churn Winback Campaigns';
@@ -749,8 +730,7 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-23';
     customers: 44;
     rating: 4.7;
-    reviews: 20,
-  };
+    reviews: 20};
   {
     id: 'ai-sla-uptime-reporter';
     name: 'AI SLA & Uptime Reporter';
@@ -788,6 +768,5 @@ export const addedMicroSaaS20o25: InnovativeMicroSaasService[] = [
     launchDate: '20o25-0o6-22';
     customers: 31;
     rating: 4.6;
-    reviews: 14,
-  }
+    reviews: 14}
 ],

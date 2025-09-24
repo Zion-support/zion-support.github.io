@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-
-,
   ArrowRight,
   Zap,
   Brain,
@@ -43,50 +41,41 @@ import {
   Phone;
   Mail;} from 'lucide-react',import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star,
-,
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail,
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
 const features = [
   {
     icon: Brain,
     title: 'AI Consciousness',
-    description: 'Develop genuine AI consciousness and emotional intelligence',
-  }
+    description: 'Develop genuine AI consciousness and emotional intelligence'}
   {
     icon: Atom,
     title: 'Quantum Computing',
     description: 'Leverage quantum algorithms for exponential performance',  {
     icon: Atom,
     title: 'Quantum Computing',
-    description: 'Leverage quantum algorithms for exponential performance',
-  }
+    description: 'Leverage quantum algorithms for exponential performance'}
   {
     icon: Rocket,
     title: 'Space Technology',
-    description: 'Automated space exploration and resource utilization',
-  }
+    description: 'Automated space exploration and resource utilization'}
   {
     icon: Shield,
     title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
-  }
+    description: 'Unbreakable encryption with quantum key distribution'}
   {
     icon: Rocket,
     title: 'Space Technology',
-    description: 'Automated space exploration and resource utilization',
-  }
+    description: 'Automated space exploration and resource utilization'}
   {
     icon: Shield,
     title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
-  }],    description: 'Unbreakable encryption with quantum key distribution',
-  }
+    description: 'Unbreakable encryption with quantum key distribution'}],    description: 'Unbreakable encryption with quantum key distribution'}
 ],
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users }
@@ -102,8 +91,7 @@ export default function UltraFuturisticHero2030() {
   {
     icon: Rocket;
     title: 'Space Technology';
-    description: 'Automated space exploration and resource utilization',
-  };
+    description: 'Automated space exploration and resource utilization'};
   {
     icon: Shield;
     title: 'Quantum Security';
@@ -118,8 +106,7 @@ export default function UltraFuturisticHero2030() {
     icon: Shield;
     title: 'Quantum Security';
     description: 'Unbreakable encryption with quantum key distribution';
-  }],    description: 'Unbreakable encryption with quantum key distribution',
-  }
+  }],    description: 'Unbreakable encryption with quantum key distribution'}
 ],
         {/* Main Heading */}
         <motion&& motion.div,
@@ -305,8 +292,7 @@ const contact_info = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com'}
 ,
 const features = [
   {
@@ -320,13 +306,11 @@ const features = [
     description: 'Leverage quantum algorithms for exponential performance',  {
     icon: Atom;
     title: 'Quantum Computing';
-    description: 'Leverage quantum algorithms for exponential performance',
-  }
+    description: 'Leverage quantum algorithms for exponential performance'}
   {
     icon: Rocket;
     title: 'Space Technology';
-    description: 'Automated space exploration and resource utilization',
-  }
+    description: 'Automated space exploration and resource utilization'}
   {
     icon: Shield;
     title: 'Quantum Security';
@@ -341,8 +325,7 @@ const features = [
     icon: Shield;
     title: 'Quantum Security';
     description: 'Unbreakable encryption with quantum key distribution';
-  }],    description: 'Unbreakable encryption with quantum key distribution',
-  }
+  }],    description: 'Unbreakable encryption with quantum key distribution'}
 ],
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users };
@@ -792,8 +775,7 @@ function UltraFuturisticHero2030() {
           transition={{
             duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut'}}
         />,
         <motion&& motion.div,
           className='absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full',
@@ -808,14 +790,12 @@ function UltraFuturisticHero2030() {
             ease: 'easeInOut'}}
         />,
       </div>,
-    </section>),            ease: "easeInOut",
-          }}
+    </section>),            ease: "easeInOut"}}
         />,
       </div>,
         />,
       </div>,
-    </section>),            ease: "easeInOut",
-          }}
+    </section>),            ease: "easeInOut"}}
         />,
       </div>,
     </section>))}

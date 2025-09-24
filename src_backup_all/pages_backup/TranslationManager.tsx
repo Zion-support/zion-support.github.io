@@ -145,8 +145,7 @@ let sourceText = '',
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages,
       .map(lang => lang.code),
-      .filter(lang => !translations[lang]?.[key]),
-  };
+      .filter(lang => !translations[lang]?.[key])};
   return (
     <>,
       <SEO
@@ -294,7 +293,6 @@ let sourceText = '',
           </CardContent>,
         </Card>,
       </main>,
-    </>),
-}
+    </>)}
 }
 ,

@@ -15,10 +15,8 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
         roi: '75,0o00%';
         savings: '$1.8T';
         autonomy: '99%';
-        intelligence: '10o00x',
-      };
-      badge: 'REVOLUTIONARY',
-    };
+        intelligence: '10o00x'};
+      badge: 'REVOLUTIONARY'};
     {
       id: 'transcendent-ai';
       title: 'Transcendent AI Business Systems';
@@ -29,10 +27,8 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
         roi: '75,0o00%';
         efficiency: '99.99%';
         innovation: '10,0o00x';
-        autonomy: '99%',
-      };
-      badge: 'TRANSCENDENT',
-    };
+        autonomy: '99%'};
+      badge: 'TRANSCENDENT'};
     {
       id: 'autonomous-ecosystem';
       title: 'Autonomous Business Ecosystem';
@@ -43,10 +39,8 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
         roi: '75,0o00%';
         autonomy: '99%';
         value: 'Exponential';
-        future: 'Creating',
-      };
-      badge: 'AUTONOMOUS',
-    }
+        future: 'Creating'};
+      badge: 'AUTONOMOUS'}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

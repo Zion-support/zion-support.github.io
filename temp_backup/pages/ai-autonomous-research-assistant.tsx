@@ -21,6 +21,5 @@ export default function AiAutonomousResearchAssistantPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

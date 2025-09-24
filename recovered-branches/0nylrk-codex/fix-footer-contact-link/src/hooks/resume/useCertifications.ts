@@ -16,8 +16,7 @@ export function useCertifications() {
     cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add certifications'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -45,8 +44,7 @@ export function useCertifications() {
     cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update certifications'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),
@@ -74,8 +72,7 @@ export function useCertifications() {
   const deleteCertification = async (certId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete certifications'),
-      return false,
-    }
+      return false}
 ,
     setIsLoading(true),
     setError(null),

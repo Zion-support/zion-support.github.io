@@ -20,6 +20,5 @@ export default function AiPoweredSalesForecasting20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -510,6 +510,5 @@ export default function CybersecurityAIEra() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

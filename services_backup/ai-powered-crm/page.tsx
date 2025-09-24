@@ -10,8 +10,7 @@ interface FeatureCardProps {
   icon: string,
   title: string,
   description: string,
-  benefits: string[],
-}
+  benefits: string[]}
 ,
 function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
   return (
@@ -40,8 +39,7 @@ function PricingTier({
   period: string,
   description: string,
   features: string[],
-  popular?: boolean,
-}) {
+  popular?: boolean}) {
   return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
       {popular && (
@@ -72,8 +70,7 @@ function PricingTier({
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-            : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        }`}
+            : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}
       >,
         Get Started,
       </a>,
@@ -198,7 +195,7 @@ export default function AIPoweredCRMPage() {
               "Call sentiment analysis";
               "Deal progression tracking";
             title="Conversation Intelligence",
-            description="Analyze call recordings, emails, and meetings to extract insights and improve sales window.performance.",
+            description="Analyze call recordings, emails, and meetings to extract insights and improve sales window.window.performance.",
             benefits={[
               "Call transcription & analysis";
               "Sentiment analysis";
@@ -378,15 +375,13 @@ export default function AIPoweredCRMPage() {
           <p>Email: kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,
 function FeatureCard({ icon, title, description, benefits }: {
   icon: string,
   title: string,
   description: string,
-  benefits: string[],
-}) {
+  benefits: string[]}) {
   return (
 <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
       <div className="text-4xl mb-4">{icon}</div>,
@@ -407,8 +402,7 @@ function PricingCard({ name, price, period, description, features, popular }: {
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-}) {
+  popular: boolean}) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'} shadow-lg`}>,
       {popular && (
@@ -439,8 +433,7 @@ href="mailto: kleber@ziontechgroup.com?subject=AI CRM Platform - {name} Plan",
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-            : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        }`}
+            : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}
       >,
         Get Started,
       </a>,
@@ -451,8 +444,7 @@ function CaseStudy({ company, industry, result, description, metrics }: {
   industry: string,
   result: string,
   description: string,
-  metrics: string[],
-}) {
+  metrics: string[]}) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0">,
       <div className="flex items-center justify-between mb-4">,

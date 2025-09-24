@@ -80,6 +80,5 @@ const AutonomousEnterpriseBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AutonomousEnterpriseBlueprint20o26;

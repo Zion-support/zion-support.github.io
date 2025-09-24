@@ -38,8 +38,7 @@ function handler() {
   // Check condition,
 if ( {) {
   $2}
-    return res.status (405).json ({ error: 'Method not allowed' }),
-}
+    return res.status (405).json ({ error: 'Method not allowed' })}
   const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) |'all',
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined,

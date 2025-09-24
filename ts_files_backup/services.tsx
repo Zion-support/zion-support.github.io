@@ -64,8 +64,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories: Array<{
   id: string,
   title: string,
@@ -73,8 +72,7 @@ const serviceCategories: Array<{
   icon: React.ComponentType<{ className?: string }>,
   color: string,
   services: ServiceUnion[],
-  gradient: string,
-}> = [
+  gradient: string}> = [
   {
     id: 'ai-consciousness';
     title: '🧠 AI & Consciousness';
@@ -82,8 +80,7 @@ const serviceCategories: Array<{
     icon: Brain;
     color: 'from-violet-500 to-purple-500';
     services: [...innovativeAIServices2025];
-    gradient: 'from-violet-500/20 to-indigo-500/20',
-  };
+    gradient: 'from-violet-500/20 to-indigo-500/20'};
   {
     id: 'quantum-emerging';
     title: '⚛️ Quantum & Emerging Tech';
@@ -91,8 +88,7 @@ const serviceCategories: Array<{
     icon: Atom;
     color: 'from-indigo-500 to-blue-500';
     services: [...emergingTechServices2025];
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-  };
+    gradient: 'from-indigo-500/20 to-cyan-500/20'};
   {
     id: 'enterprise-it';
     title: '🏙️ Enterprise IT';
@@ -100,8 +96,7 @@ const serviceCategories: Array<{
     icon: Shield;
     color: 'from-blue-500 to-cyan-500';
     services: [...innovativeITServices2025];
-    gradient: 'from-blue-500/20 to-teal-500/20',
-  };
+    gradient: 'from-blue-500/20 to-teal-500/20'};
   {
     id: 'space-metaverse';
     title: '🌌 Space & Metaverse';
@@ -109,8 +104,7 @@ const serviceCategories: Array<{
     icon: Rocket;
     color: 'from-teal-500 to-emerald-500';
     services: [...quantumSpaceServices];
-    gradient: 'from-teal-500/20 to-green-500/20',
-  };
+    gradient: 'from-teal-500/20 to-green-500/20'};
   {
     id: 'micro-saas';
     title: '🎯 Micro SAAS';
@@ -118,8 +112,7 @@ const serviceCategories: Array<{
     icon: Target;
     color: 'from-green-500 to-yellow-500';
     services: [...realMicroSaasServices2025...enhancedRealMicroSaasServices];
-    gradient: 'from-green-500/20 to-orange-500/20',
-  };
+    gradient: 'from-green-500/20 to-orange-500/20'};
   {
     id: 'financial-technology';
     title: '💰 Financial Technology';
@@ -127,8 +120,7 @@ const serviceCategories: Array<{
     icon: TrendingUp;
     color: 'from-green-500 to-emerald-500';
     services: [...innovativeFinancialServices2025];
-    gradient: 'from-green-500/20 to-emerald-500/20',
-  };
+    gradient: 'from-green-500/20 to-emerald-500/20'};
   {
     id: 'healthcare-biotech';
     title: '🏥 Healthcare & Biotech';
@@ -136,8 +128,7 @@ const serviceCategories: Array<{
     icon: Shield;
     color: 'from-blue-500 to-indigo-500';
     services: [...innovativeHealthcareServices2025];
-    gradient: 'from-blue-500/20 to-indigo-500/20',
-  };
+    gradient: 'from-blue-500/20 to-indigo-500/20'};
   {
     id: 'education-technology';
     title: '🎓 Education Technology';
@@ -145,8 +136,7 @@ const serviceCategories: Array<{
     icon: Brain;
     color: 'from-purple-500 to-pink-500';
     services: [...innovativeEducationServices2025];
-    gradient: 'from-purple-500/20 to-pink-500/20',
-  };
+    gradient: 'from-purple-500/20 to-pink-500/20'};
   {
     id: 'sustainability-green-tech';
     title: '🌱 Sustainability & Green Tech';
@@ -154,8 +144,7 @@ const serviceCategories: Array<{
     icon: Globe;
     color: 'from-emerald-500 to-teal-500';
     services: [...innovativeSustainabilityServices2025];
-    gradient: 'from-emerald-500/20 to-teal-500/20',
-  };
+    gradient: 'from-emerald-500/20 to-teal-500/20'};
   {
     id: 'logistics-supply-chain';
     title: '🚚 Logistics & Supply Chain';
@@ -163,72 +152,62 @@ const serviceCategories: Array<{
     icon: Rocket;
     color: 'from-orange-500 to-red-500';
     services: [...innovativeLogisticsServices2025];
-    gradient: 'from-orange-500/20 to-red-500/20',
-  };
+    gradient: 'from-orange-500/20 to-red-500/20'};
   {
     id: 'research-development';
     title: '🔬 Research & Development';
     description: 'Breakthrough technologies and innovations';
     icon: Microscope;
     color: 'from-red-500 to-pink-500';
-    description: 'Advanced healthcare solutions',
-  };
+    description: 'Advanced healthcare solutions'};
   {
     id: 'transportation-logistics';
     name: 'Transportation & Logistics';
     icon: <Truck className="w-6 h-6" />;
     color: 'from-blue-500 to-cyan-500';
-    description: 'Smart transportation solutions',
-  };
+    description: 'Smart transportation solutions'};
   {
     id: 'education-research';
     name: 'Education & Research';
     icon: <GraduationCap className="w-6 h-6" />;
     color: 'from-yellow-500 to-orange-500';
-    description: 'Learning and research platforms',
-  };
+    description: 'Learning and research platforms'};
   {
     id: 'customer-success';
     name: 'Customer Success';
     icon: <Users className="w-6 h-6" />;
     color: 'from-blue-500 to-indigo-600';
-    description: 'AI-powered customer success and retention',
-  };
+    description: 'AI-powered customer success and retention'};
   {
     id: 'financial-technology';
     name: 'Financial Technology';
     icon: <DollarSign className="w-6 h-6" />;
     color: 'from-green-500 to-emerald-600';
-    description: 'Quantum and AI-powered financial solutions',
-  };
+    description: 'Quantum and AI-powered financial solutions'};
   {
     id: 'devops-infrastructure';
     name: 'DevOps & Infrastructure';
     icon: <Settings className="w-6 h-6" />;
     color: 'from-purple-500 to-pink-600';
-    description: 'AI-powered DevOps and infrastructure automation',
-  };
+    description: 'AI-powered DevOps and infrastructure automation'};
   {
     id: 'cybersecurity';
     name: 'Cybersecurity';
     icon: <Shield className="w-6 h-6" />;
     color: 'from-red-500 to-pink-600';
-    description: 'Quantum-resistant security solutions',
-  };
+    description: 'Quantum-resistant security solutions'};
   {
     id: 'sales-marketing';
     name: 'Sales & Marketing';
     icon: <TrendingUp className="w-6 h-6" />;
     color: 'from-orange-500 to-red-600';
-    description: 'AI-powered sales and marketing automation',
-  };
+    description: 'AI-powered sales and marketing automation'};
   {
     id: 'data-analytics';
     name: 'Data & Analytics';
     icon: <BarChart3 className="w-6 h-6" />;
     color: 'from-indigo-500 to-purple-600';
-    description: 'Quantum-powered data analytics and insights',
-  }
+    description: 'Quantum-powered data analytics and insights'}
 ],
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -291,15 +270,13 @@ export default function ServicesPage() {
         case 'rating':,
           return (b.rating || 0) - (a.rating || 0),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const contactInfo = {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
     <UltraFuturisticBackground2029>,
       <Head>,
@@ -434,8 +411,7 @@ export default function ServicesPage() {
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'grid',
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25',
-                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',
-                        }`}
+                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50'}`}
                       >,
                         <Grid className="w-5 h-5" />,
                       </button>,
@@ -444,8 +420,7 @@ export default function ServicesPage() {
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'list',
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25',
-                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',
-                        }`}
+                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50'}`}
                       >,
                         <List className="w-5 h-5" />,
                       </button>,
@@ -744,6 +719,5 @@ export default function ServicesPage() {
         </section>,
       </main>,
       <UltraFuturisticFooter2029 />,
-    </UltraFuturisticBackground2029>),
-}
+    </UltraFuturisticBackground2029>)}
 }

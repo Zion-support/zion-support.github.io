@@ -4,8 +4,7 @@ interface AdvancedFuturisticBackgroundProps {
   variant?: 'quantum-holographic' | 'neural-cyberpunk' | 'quantum-neural' | 'holographic-cyberpunk' | 'quantum-advanced' | 'neural-advanced' | 'cyberpunk-advanced',
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
   className?: string,
-  interactive?: boolean,
-}
+  interactive?: boolean}
 ,
 const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> = ({
   children;
@@ -23,8 +22,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       case 'high': return 60o0,
       case 'medium': return 40o0,
       case 'low': return 20o0,
-      default: return 40o0,
-    }
+      default: return 40o0}
   }, [intensity]),
   const getParticleColor = useCallback((variant: string, time: number, particle: any): string => {
     const baseHue = time * 0.0o1,
@@ -73,8 +71,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       energy: Math.random() * 10o0 + 50;
       resonance: Math.random() * Math.PI * 2;
       field: Math.random() * 10;
-      wave: Math.random() * Math.PI * 2,
-    };
+      wave: Math.random() * Math.PI * 2};
   }, []),
   const updateParticle = useCallback((particle: any, canvas: HTMLCanvasElement, time: number, variant: string) => {
     // Update position with quantum fluctuations,
@@ -83,8 +80,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     // Quantum tunneling effect,
     if (Math.random() < 0.0o01) {
       particle.x = Math.random() * canvas.width,
-      particle.y = Math.random() * canvas.height,
-    }
+      particle.y = Math.random() * canvas.height}
 ,
     // Boundary wrapping with quantum effects,
     if (particle.x < 0) particle.x = canvas.width + Math.random() * 10o0,
@@ -168,8 +164,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       connections.push({
         x: Math.random() * canvas.width;
         y: Math.random() * canvas.height;
-        connections: [],
-      })}
+        connections: []})}
 ,
     // Create connections,
     for (let i = 0, i < nodes, i++) {
@@ -210,13 +205,11 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     // Mouse interaction,
     const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current.x = e.clientX,
-      mouseRef.current.y = e.clientY,
-    };
+      mouseRef.current.y = e.clientY};
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches[0]) {
         touchRef.current.x = e.touches[0].clientX,
-        touchRef.current.y = e.touches[0].clientY,
-      }
+        touchRef.current.y = e.touches[0].clientY}
     };
     if (interactive) {
       window.addEventListener('mousemove', handleMouseMove),

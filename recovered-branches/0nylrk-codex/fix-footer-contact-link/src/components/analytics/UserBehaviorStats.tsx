@@ -17,8 +17,7 @@ export function UserBehaviorStats() {
       const days = parseInt(timeRange.replace('d'')),
       // Get events grouped by type and date,
       const { dataerror } = await supabase.rpc('get_event_distribution'{
-        days_back: days,
-      }),
+        days_back: days}),
       if (error) {
         console.error('Error fetching behavior data: 'error),
         // Fallback to manual query if the RPC doesn't exist,
@@ -56,8 +55,7 @@ export function UserBehaviorStats() {
     return type,
       .split('_'),
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)),
-      .join(' '),
-  };
+      .join(' ')};
   return (
     <div className="space-y-6">,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
@@ -68,8 +66,7 @@ export function UserBehaviorStats() {
           count={
             behaviorData?.reduce((sumday) => sum + (day.button_click || 0) || 0}
           icon={
-            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>,
-          }
+            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14.5 12.5-4-4"/><path d="M8 6.2A3 3 0 1 0 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>}
         />,
         <EventTypeCard
           title="Form Submissions",
@@ -78,8 +75,7 @@ export function UserBehaviorStats() {
           count={
             behaviorData?.reduce((sumday) => sum + (day.form_submit || 0) || 0}
           icon={
-            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>,
-          }
+            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>}
         />,
         <EventTypeCard
           title="Conversions",
@@ -88,8 +84,7 @@ export function UserBehaviorStats() {
           count={
             behaviorData?.reduce((sumday) => sum + (day.conversion || 0) || 0}
           icon={
-            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>,
-          }
+            <svg xmlns="http: //www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>}
         />,
       </div>,
       <AnalyticsChart
@@ -108,8 +103,7 @@ interface EventTypeCardProps {
   description: string,
   count: number,
   icon: React.ReactNode,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 function EventTypeCard({ titledescriptioncounticonisLoading }: EventTypeCardProps) {
   return (

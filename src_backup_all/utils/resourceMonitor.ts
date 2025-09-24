@@ -2,8 +2,7 @@ interface ResourceError {
   url: string,
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other',
   error: string,
-  timestamp: number,
-}
+  timestamp: number}
 ,
 class ResourceMonitor {
   private errors: ResourceError[] = [],
@@ -16,11 +15,11 @@ class ResourceMonitor {
     this.setupErrorListeners(),
     this.setupResourceObservers(),
     this.monitorCriticalResources(),
-    // console.log('🔍 Resource Monitor started')}
+    // // console.log('🔍 Resource Monitor started')}
 ,
   stop() {
     this.isMonitoring = false,
-    // console.log('🔍 Resource Monitor stopped')}
+    // // console.log('🔍 Resource Monitor stopped')}
 ,
   private setupErrorListeners() {
     // Listen for script loading errors,
@@ -55,8 +54,7 @@ class ResourceMonitor {
   private monitorElement(element: HTMLElement) {
     // Monitor scripts,
     if (element.tagName === 'SCRIPT' && element.src) {
-      this.monitorScript(element as HTMLScriptElement),
-    }
+      this.monitorScript(element as HTMLScriptElement)}
 ,
     // Monitor stylesheets,
     if (element.tagName === 'LINK' && element.rel === 'stylesheet') {
@@ -108,8 +106,7 @@ class ResourceMonitor {
       url;
       type;
       error;
-      timestamp: Date.now(),
-    };
+      timestamp: Date.now()};
     this.errors.push(resourceError),
     console.error('🚨 Resource Error:', resourceError),
     // Attempt to retry loading,
@@ -128,7 +125,7 @@ class ResourceMonitor {
       this.retryResource(url, type)}, Math.pow(2, attempts) * 10o00), // Exponential backoff}
 ,
   private retryResource(url: string, type: ResourceError['type']) {
-    // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`),
+    // // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`),
     if (type === 'script') {
       this.loadScript(url)} else if (type === 'stylesheet') {
       this.loadStylesheet(url)}
@@ -139,7 +136,7 @@ class ResourceMonitor {
     script.src = src,
     script.async = true,
     script.onload = () => {
-      // console.log(`✅ Script loaded successfully: ${src}`),
+      // // console.log(`✅ Script loaded successfully: ${src}`),
       this.retryAttempts.delete(src)};
     script.onerror = () => {
       console.error(`❌ Script retry failed: ${src}`)};
@@ -150,7 +147,7 @@ class ResourceMonitor {
     link.rel = 'stylesheet',
     link.href = href,
     link.onload = () => {
-      // console.log(`✅ Stylesheet loaded successfully: ${href}`),
+      // // console.log(`✅ Stylesheet loaded successfully: ${href}`),
       this.retryAttempts.delete(href)};
     link.onerror = () => {
       console.error(`❌ Stylesheet retry failed: ${href}`)};
@@ -160,7 +157,7 @@ class ResourceMonitor {
     // In production, send to monitoring service,
     if (process.env.NODE_ENV === 'production') {
       // Example: Sentry, LogRocket, etc.,
-      // console.log('📊 Reporting error to monitoring service:', error)}
+      // // console.log('📊 Reporting error to monitoring service:', error)}
   }
 ,
   private getResourceType(element: HTMLElement): ResourceError['type'] {
@@ -168,8 +165,7 @@ class ResourceMonitor {
     if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'stylesheet') return 'stylesheet',
     if (element.tagName === 'IMG') return 'image',
     if (element.tagName === 'LINK' && (element as HTMLLinkElement).rel === 'preload') return 'font',
-    return 'other',
-  }
+    return 'other'}
 ,
   getErrors(): ResourceError[] {
     return [...this.errors]}
@@ -182,8 +178,7 @@ class ResourceMonitor {
     const summary ={
       total: this.errors.length;
       byType: {} as Record<string number>;
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute,
-    };
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute};
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}),
     return summary}

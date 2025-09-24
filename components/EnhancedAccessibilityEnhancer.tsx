@@ -13,8 +13,7 @@ interface AccessibilitySettings {
   reducedMotion: boolean,
   highSaturation: boolean,
   focusIndicator: boolean,
-  screenReader: boolean,
-}
+  screenReader: boolean}
 ,
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),

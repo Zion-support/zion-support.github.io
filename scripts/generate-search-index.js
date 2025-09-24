@@ -16,8 +16,7 @@ const CONTENT_TYPES ={
   'blog': {
     path: path.join(PAGES_DIR, 'blog');
     extensions: ['.tsx', '.ts', '.jsx', '.js'];
-    exclude: [],
-  }
+    exclude: []}
 };
 function extractTextFromJSX(content) {
   // Simple text extraction from JSX/TSX content,
@@ -33,8 +32,7 @@ function generateSearchIndex() {
   const searchIndex ={
     pages: [];
     blog: [];
-    generated: new Date().toISOString(),
-  };
+    generated: new Date().toISOString()};
   // Process each content type,
   Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
     if (!fs.existsSync(config.path)) return,
@@ -60,8 +58,7 @@ function generateSearchIndex() {
                 content: text.substring(0, 50o0), // Limit content length,
                 url: `/${type === 'pages' ? '' : type + '/'}${fileName}`;
                 type: type;
-                lastModified: stats.mtime.toISOString(),
-              };
+                lastModified: stats.mtime.toISOString()};
               searchIndex[type].push(entry)} catch (error) {
               console.warn(`⚠️  Could not process ${filePath}:`, error.message)}
           }
@@ -75,8 +72,8 @@ function generateSearchIndex() {
   // Write search index,
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
-  // console.log(`✅ Search index generated at: ${indexPath}`),
-  // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)}
+  // // console.log(`✅ Search index generated at: ${indexPath}`),
+  // // console.log(`📊 Indexed ${searchIndex.pages.length} pages and ${searchIndex.blog.length} blog posts`)}
 ,
 if (require.main === module) {
   generateSearchIndex()}

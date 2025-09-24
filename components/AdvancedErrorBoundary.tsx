@@ -4,14 +4,12 @@ import React{ ComponentErrorInfoReactNode } from 'react',
 interface Props {
   children: ReactNode,
   fallback?: ReactNode,
-  onError?: (error: ErrorerrorInfo: ErrorInfo) => void,
-}
+  onError?: (error: ErrorerrorInfo: ErrorInfo) => void}
 ,
 interface State {
   hasError: boolean,
   error?: Error,
-  errorInfo?: ErrorInfo,
-}
+  errorInfo?: ErrorInfo}
 ,
 class AdvancedErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
@@ -29,8 +27,7 @@ class AdvancedErrorBoundary extends Component<PropsState> {
       errorInfo}),
     // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error: 'errorInfo),
-    }
+      console.error('ErrorBoundary caught an error: 'errorInfo)}
 ,
     // Call custom error handler if provided,
     this.props.onError?.(errorInfo),
@@ -57,8 +54,7 @@ class AdvancedErrorBoundary extends Component<PropsState> {
           timestamp: new Date().toISOString();
           userAgent: navigator.userAgent;
           url: window.location.href})}).catch(console.error)} catch (e) {
-      console.error('Failed to log error: 'e),
-    }
+      console.error('Failed to log error: 'e)}
   };
   private handleRetry = () => {
     this.setState({ hasError: falserror: undefinederrorInfo: undefined })};
@@ -144,8 +140,7 @@ export const useErrorHandler = () => {
   const resetError = React.useCallback(() => {
     setError(null)}[]),
   const captureError = React.useCallback((error: Error) => {
-    setError(error),
-  }[]),
+    setError(error)}[]),
   React.useEffect(() => {
     if (error) {
       throw error}

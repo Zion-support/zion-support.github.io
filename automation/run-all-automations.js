@@ -10,10 +10,10 @@ const path = require('path'),
 const { spawn, execSync } = require('child_process'),
 // Simple logger,
 const logger ={
-  info: (msg) => // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
+  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
   error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`);
   warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`);
-  success: (msg) => // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
+  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
 class AutomationRunner {
   constructor(config ={}) {
     this.config ={
@@ -50,8 +50,7 @@ class AutomationRunner {
       const duration = this.endTime - this.startTime,
       logger.success(`✅ Automation run completed in ${duration}ms`),
       logger.info(`📊 Results: ${this.getSuccessCount()}/${this.config.tasks.length} tasks successful`),
-      return this.results,
-} catch (error) {
+      return this.results} catch (error) {
       logger.error('❌ Automation run failed:', error),
       throw error}
   }
@@ -132,8 +131,7 @@ class AutomationRunner {
             stdout;
             stderr;
             exitCode: code;
-            duration: Date.now() - this.startTime,
-          })} else {
+            duration: Date.now() - this.startTime})} else {
           reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`))}
       }),
       taskProcess.on('error', (error) => {
@@ -149,11 +147,9 @@ class AutomationRunner {
         totalTasks: this.config.tasks.length;
         successfulTasks: this.getSuccessCount();
         failedTasks: this.getFailedCount();
-        successRate: (this.getSuccessCount() / this.config.tasks.length) * 10o0,
-      };
+        successRate: (this.getSuccessCount() / this.config.tasks.length) * 10o0};
       tasks: Object.fromEntries(this.results);
-      recommendations: this.generateRecommendations(),
-    };
+      recommendations: this.generateRecommendations()};
     // Save report,
     const reportPath = path.join(process.cwd(), 'automation-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -161,8 +157,7 @@ class AutomationRunner {
     const logsPath = path.join(process.cwd(), 'automation-logs.json'),
     fs.writeFileSync(logsPath, JSON.stringify({
       timestamp: new Date().toISOString();
-      results: Object.fromEntries(this.results),
-    }, null, 2)),
+      results: Object.fromEntries(this.results)}, null, 2)),
     logger.info(`📄 Report saved to ${reportPath}`),
     logger.info(`📄 Logs saved to ${logsPath}`),
     // Print summary,
@@ -191,27 +186,27 @@ class AutomationRunner {
     return recommendations}
 ,
   printSummary(report) {
-    // console.log('\n' + '='.repeat(60)),
-    // console.log('🤖 AUTOMATION RUN SUMMARY'),
-    // console.log('='.repeat(60)),
-    // console.log(`📅 Timestamp: ${report.timestamp}`),
-    // console.log(`⏱️  Duration: ${report.duration}ms`),
-    // console.log(`📊 Success Rate: ${report.summary.successRate.toFixed(1)}%`),
-    // console.log(`✅ Successful: ${report.summary.successfulTasks}/${report.summary.totalTasks}`),
-    // console.log(`❌ Failed: ${report.summary.failedTasks}/${report.summary.totalTasks}`),
+    // // console.log('\n' + '='.repeat(60)),
+    // // console.log('🤖 AUTOMATION RUN SUMMARY'),
+    // // console.log('='.repeat(60)),
+    // // console.log(`📅 Timestamp: ${report.timestamp}`),
+    // // console.log(`⏱️  Duration: ${report.duration}ms`),
+    // // console.log(`📊 Success Rate: ${report.summary.successRate.toFixed(1)}%`),
+    // // console.log(`✅ Successful: ${report.summary.successfulTasks}/${report.summary.totalTasks}`),
+    // // console.log(`❌ Failed: ${report.summary.failedTasks}/${report.summary.totalTasks}`),
     if (report.recommendations.length > 0) {
-      // console.log('\n📋 Recommendations: '),
+      // // console.log('\n📋 Recommendations: '),
       report.recommendations.forEach((rec, index) => {
-        // console.log(`  ${index + 1}. ${rec}`)})}
+        // // console.log(`  ${index + 1}. ${rec}`)})}
 ,
-    // console.log('='.repeat(60) + '\n')}
+    // // console.log('='.repeat(60) + '\n')}
 }
 ,
 // CLI support,
 if (require.main === module) {
   const args = process.argv.slice(2),
   if (args.includes('--help') || args.includes('-h')) {
-    // console.log(`,
+    // // console.log(`,
 🤖 Comprehensive Automation Runner,
 Usage: node run-all-automations.js [options],
 Options:,
@@ -233,8 +228,7 @@ Available Tasks: ,
   - StaleCleaner,
   - AIEnhancer,
     `),
-    process.exit(0),
-  }
+    process.exit(0)}
 ,
   // Parse arguments,
   const config ={};

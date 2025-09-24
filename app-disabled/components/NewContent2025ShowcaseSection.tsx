@@ -21,12 +21,10 @@ interface ContentItem {
     savings: string,
     efficiency?: string,
     accuracy?: string,
-    timeframe?: string,
-  };
+    timeframe?: string};
   readingTime: string,
   tags: string[],
-  description: string,
-}
+  description: string}
 ,
 const NewContent20o25ShowcaseSection: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('all'),
@@ -147,8 +145,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
       case 'resource':,
         return <Star className='w-5 h-5' />,
       default:,
-        return <TrendingUp className='w-5 h-5' />,
-    }
+        return <TrendingUp className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -159,8 +156,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -171,8 +167,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
       case 'resource':,
         return 'Resource Guide',
       default:,
-        return type,
-    }
+        return type}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
@@ -218,8 +213,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedType === 'all',
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50'}`}
             >,
               All Content,
             </button>,
@@ -228,8 +222,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedType === 'blog',
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50'}`}
             >,
               Blog Posts,
             </button>,
@@ -238,8 +231,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedType === 'case-study',
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50'}`}
             >,
               Case Studies,
             </button>,
@@ -248,8 +240,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedType === 'resource',
                   ? 'bg-blue-60o0 text-white',
-                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50',
-              }`}
+                  : 'bg-white text-gray-70o0 border border-gray-30o0 hover: bg-gray-50'}`}
             >,
               Resources,
             </button>,
@@ -365,6 +356,5 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o25ShowcaseSection;

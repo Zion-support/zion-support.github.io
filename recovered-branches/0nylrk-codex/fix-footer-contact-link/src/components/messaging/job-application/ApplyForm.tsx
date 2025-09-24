@@ -33,12 +33,10 @@ import { Job } from './types',
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
-  onApplySuccess?: (jobId: string) => Promise<void>,
-}
+  onApplySuccess?: (jobId: string) => Promise<void>}
 ,
 interface ApplyFormProps {
-  onApplySuccess?: (jobId: string) => Promise<void>,
-}
+  onApplySuccess?: (jobId: string) => Promise<void>}
 ,
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
@@ -60,8 +58,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume),
-    setSelectedResumeId(resume.id),
-  }
+    setSelectedResumeId(resume.id)}
   };
   const handleApply = async () => {
     if (!message.trim()) {
@@ -77,8 +74,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Message required";
         description: "Please enter a message before applying.";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 });
       return}
@@ -106,8 +102,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 interface ApplyFormProps {
   job: Job;
   onClose: () => void;
-  onApplySuccess?: (jobId: string) => Promise<void>,
-}
+  onApplySuccess?: (jobId: string) => Promise<void>}
 ,
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
@@ -127,8 +122,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Message required";
         description: "Please enter a message before applying.";
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return}
 ,
     try {
@@ -144,8 +138,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       // Format message with proposal link if provided,
       let fullMessage = message;
       if (proposalLink) {
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`,
-}
+        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`}
       // Add info about attached resume if available,
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`}
@@ -157,8 +150,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         attachedResume: selectedResume ? {
           id: selectedResume.id,
           title: selectedResume.title,
-          type: selectedResume.type,
-        } : null}
+          type: selectedResume.type} : null}
       // Create conversation with the job client,
       await createConversation(
         job.client_id,
@@ -188,8 +180,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         attachedResume: selectedResume ? {
           id: selectedResume && selectedResume.id;
           title: selectedResume && selectedResume.title;
-          type: selectedResume && selectedResume.type,
-        } : null};
+          type: selectedResume && selectedResume.type} : null};
       // Create conversation with the job client,
       await createConversation(
         job && job.client_id,
@@ -207,8 +198,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         attachedResume: selectedResume ? {
           id: selectedResume.id;
           title: selectedResume.title;
-          type: selectedResume.type,
-        } : null};
+          type: selectedResume.type} : null};
       // Create conversation with the job client,
       await createConversation(
         job.client_id;
@@ -218,8 +208,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         contextData);
       // Call onApplySuccess to update job status in the UI,
       if (onApplySuccess) {
-        await onApplySuccess(job.id),
-}
+        await onApplySuccess(job.id)}
 ,
       toast({
         title: "Application sent",
@@ -229,8 +218,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Application failed",
         description: "There was an error sending your application. Please try again.",
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting(false)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   return (
@@ -247,7 +235,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         <TabsContent value="message">,
           <MessageTab
           <MessageTab
-,
       toast({
         title: "Application sent";
         description: `Your application for "${job && job.title}" has been sent.`});
@@ -256,10 +243,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Application failed";
         description: "There was an error sending your application. Please try again.";
-        variant: "destructive",
-      })} finally {
-      setIsSubmitting(false),
-}
+        variant: "destructive"})} finally {
+      setIsSubmitting(false)}
   }
 ,
   return (
@@ -278,8 +263,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
 interface ApplyFormProps {
   job: Job;
   on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>,
-}
+  onApplySuccess?: (job_id: string) => Promise < void>}
 export /**,
  * ApplyForm - Function description,
  */,
@@ -303,8 +287,7 @@ function ApplyForm() {
       toast ({
         title: "Message required";
         description: "Please enter a message before applying.";
-        variant: "destructive",
-      }),
+        variant: "destructive"}),
       return}
     try {
       setIsSubmitting (true),
@@ -335,8 +318,7 @@ if ( {) {
         attached_resume: selected_resume ? {
           id: selected_resume.id;
           title: selected_resume.title;
-          type: selected_resume.type,
-        } : null}
+          type: selected_resume.type} : null}
 ,
       // Create conversation with the job client,
       await create_conversation (
@@ -358,8 +340,7 @@ if ( {) {
       toast ({
         title: "Application failed";
         description: "There was an error sending your application. Please try again.";
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting (false)}
   }
 ,

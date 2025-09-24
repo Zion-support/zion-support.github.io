@@ -108,8 +108,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully autonomous cloud orchestration platform with multi-cloud support, real-time optimization, automated scaling, and comprehensive analytics.';
@@ -190,8 +189,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully functional AI-powered DevOps platform with intelligent automation, predictive analytics, comprehensive testing, and team collaboration tools.';
@@ -272,8 +270,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully autonomous data center optimization platform with quantum AI, real-time monitoring, predictive maintenance, and comprehensive analytics.';
@@ -352,8 +349,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully functional AI-powered network security platform with intelligent threat detection, autonomous response, comprehensive monitoring, and regulatory compliance.';
@@ -433,8 +429,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully autonomous storage optimization platform with quantum AI, intelligent data management, predictive analytics, and comprehensive monitoring.';
@@ -513,8 +508,7 @@ reviews: number,export const innovativeITServices: InnovativeITService[] = [{
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Fully functional AI-powered disaster recovery platform with intelligent automation, predictive analytics, comprehensive testing, and regulatory compliance.';

@@ -6,8 +6,7 @@ export default function OrgGrid({
   showPhotos;
 }: {
   data: OrgData,
-  showPhotos: boolean,
-}) {
+  showPhotos: boolean}) {
   return (
     <div className='grid grid-cols-1 gap-8'>,
       <Section title='Founders'>,
@@ -43,8 +42,7 @@ function Section({
   children;
 }: {
   title: string,
-  children: React.ReactNode,
-}) {
+  children: React.ReactNode}) {
   return (
     <section>,
       <h3 className='text-lg font-semibold mb-3'>{title}</h3>,

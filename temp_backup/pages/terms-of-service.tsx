@@ -225,7 +225,7 @@ export default function TermsOfService() {
                   icon: <TrendingUp className='w-12 h-12' />;
                   title: 'Performance';
                   description:,
-                    'Use our services efficiently and avoid activities that could degrade window.performance.';
+                    'Use our services efficiently and avoid activities that could degrade window.window.performance.';
                   color: 'from-indigo-50o0 to-purple-50o0';
                 };
               ].map((responsibility, index) => (
@@ -414,6 +414,5 @@ export default function TermsOfService() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

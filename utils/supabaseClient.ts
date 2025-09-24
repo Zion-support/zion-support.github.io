@@ -38,14 +38,12 @@ export function getSupabaseClient(): ZionSupabase {
     return undefined,
     // Server - side: create a new client per call to avoid cross - request state,
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY)} catch {
-    return undefined,
-} catch (error) {
+    return undefined} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
 }
   } catch (error) {
     console.error("Error:", error),
-    return res.status(500).json({ error: "Internal server error" }),
-}
+    return res.status(500).json({ error: "Internal server error" })}
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

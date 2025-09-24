@@ -106,8 +106,7 @@ const AdvancedAutomationContentShowcase20o25 = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -118,8 +117,7 @@ const AdvancedAutomationContentShowcase20o25 = () => {
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -146,8 +144,7 @@ const AdvancedAutomationContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -158,8 +155,7 @@ const AdvancedAutomationContentShowcase20o25 = () => {
             <div
               key={item.id}
               className={`bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured Badge */}
               {item.featured && (
@@ -286,6 +282,5 @@ const AdvancedAutomationContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AdvancedAutomationContentShowcase20o25;

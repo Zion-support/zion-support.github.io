@@ -175,6 +175,5 @@ export default function InteractiveContentDiscoveryWidget20o26() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

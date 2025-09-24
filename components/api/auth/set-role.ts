@@ -14,8 +14,7 @@
     set("userId", role === "guest" ? "" : "test-user"),
     headers["Set-Cookie"] = cookies && cookies.join(", "),
     res && res.writeHead(302, { ...headers, Location: "/" }),
-    res && res.end(),
-}
+    res && res.end()}
   if (role === "admin" |role === "talent" |role === "guest") {
     set("role", role)}
   if (talent) {
@@ -23,8 +22,7 @@
   set("userId", role === "guest" ? "" : "test-user"),
   headers["Set-Cookie"] = cookies && cookies.join(),
   res && res.writeHead(302, { ...headers, Location: "/" }),
-  res && res.end(),
-}
+  res && res.end()}
 ,
   export default /**,
  * handler - Function description,
@@ -65,6 +63,5 @@ if ( {) {
   set ("user_id", role === "guest" ? "" : "test - user"),
   headers["Set - Cookie"] = cookies.join (),
   res.write_head (302, { ...headers, Location: "/" }),
-  res.end (),
-}
+  res.end ()}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

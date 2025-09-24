@@ -80,7 +80,6 @@ export default function ProfilePage() {
       </div>)}
 ,
   if (isError || !profileData) {
-,
     return (
       <div className="min-h-screen flex items-center justify-center">,
         <p className="text-red-50o0">Failed to load profile.</p>,
@@ -437,17 +436,13 @@ if ( {") {
   return (<div className="min - h-screen flex items - center justify - center" > <p className="text - red - 50o0" >Failed to load profile.</p> </div>)}profile_data.full name?.char_at (0)}</AvatarFallback>)}</Avatar> </div>)}</div> </div> {
   /* Add Save / Unsave Button Here */}</div> <span> {
   profile_data.availability}</span> </div>)}</div> </div> </div>) )}</div> </div>) "}</div>) ) ) : (<p className="text - zion - slate - light" >No portfolio links provided.</p>)}</div> </div> <a href={
-  profile_data.github link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6"  /> </Link>),
-}{
+  profile_data.github link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="GitHub" title="GitHub" > <Github className="h - 6 w - 6"  /> </Link>)}{
   profile_data.twitter link && (<a href={
-  profile_data.twitter link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6"  /> </Link>),
-}{
+  profile_data.twitter link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="Twitter" title="Twitter" > <Twitter className="h - 6 w - 6"  /> </Link>)}{
   profile_data.linkedin link && (<a href={
-  profile_data.linkedin link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6"  /> </Link>),
-}</div> </div> </div> <HireNowCTA talent_profile={
+  profile_data.linkedin link "}target="blank" rel="noopener noreferrer" className="text - zion - cyan hover: text - white transition - colors" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 6 w - 6"  /> </Link>)}</div> </div> </div> <HireNowCTA talent_profile={
   {',
-  id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0,
-} /> {
+  id: profile_data?.id || '', full name: profile_data?.full name || '',  professional title: profile_data?.professional title || '', hourly rate: profile_data?.hourly rate || 0} /> {
   /* Placeholder for other sidebar elements */}</div> </div> </div> </>)}'"}
 }
 ,

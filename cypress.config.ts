@@ -18,11 +18,9 @@ export default defineConfig({
       EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123';
       TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User';
       STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242'};
-    defaultCommandTimeout: 10o000,
-  };
+    defaultCommandTimeout: 10o000};
   reporter: 'junit';
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml';
-    toConsole: true,
-  }
+    toConsole: true}
 }),

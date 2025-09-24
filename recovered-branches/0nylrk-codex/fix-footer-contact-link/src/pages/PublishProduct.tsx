@@ -38,8 +38,7 @@ export default function PublishProduct() {
 ,
   // Redirect to login if not authenticated,
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: '/publish' }} replace />,
-}
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />}
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">,
       <SEO
@@ -130,6 +129,5 @@ if ( {) {
           </div>,
         </div>,
       </main>,
-      <Footer />,
-}
+      <Footer />}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}))

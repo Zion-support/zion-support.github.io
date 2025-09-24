@@ -1,8 +1,6 @@
 
 export async function rewardOnboarding(...args: any[]): any {
-,
 export async function rewardOnboarding(...args: any[]): any {
-,
 export async function rewardOnboarding(..."args": any[]): any {
 export async function rewardOnboarding(
   userId: string;
@@ -19,7 +17,6 @@ export async function earnTokensForPurchase(
   await apiClient('/functions/v1/token-manager/earn', {
     "method": 'POST';
     "body": JSON.stringify({
-,
       userId;
       "action": 'purchase';
       "amount": purchaseAmount;
@@ -30,7 +27,6 @@ export async function earnTokensForReferral(
   await apiClient('/functions/v1/token-manager/earn', {
     "method": 'POST';
     "body": JSON.stringify({
-,
       userId;
       "action": 'referral';
       referredUserId;

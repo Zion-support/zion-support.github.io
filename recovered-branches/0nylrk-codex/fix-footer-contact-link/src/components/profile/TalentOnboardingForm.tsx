@@ -92,8 +92,7 @@ export function TalentOnboardingForm() {
     // Preview the image,
     const reader = new FileReader(),
     reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string),
-    };
+      setProfilePictureUrl(reader.result as string)};
     reader.readAsDataURL(file),
     // Store the file in the form data,
     form.setValue("basicInfo.profilePicture"file)};
@@ -105,8 +104,7 @@ export function TalentOnboardingForm() {
       .upload(fileNamefile),
     if (cvError) {
       console.error("Error uploading CV: "cvError),
-      throw new Error("Failed to upload CV"),
-    }
+      throw new Error("Failed to upload CV")}
 ,
     // Get the public URL,
     const { data: { publicUrl } } = supabase.storage,

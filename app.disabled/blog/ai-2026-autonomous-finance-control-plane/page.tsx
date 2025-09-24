@@ -44,6 +44,5 @@ export default function AutonomousFinanceControlPlanePage() {
           </Link>,
         </div>,
       </article>,
-    </main>),
-}
+    </main>)}
 ,

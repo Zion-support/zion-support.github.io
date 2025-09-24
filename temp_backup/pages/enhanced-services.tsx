@@ -15,6 +15,5 @@ export default function EnhancedServicesPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

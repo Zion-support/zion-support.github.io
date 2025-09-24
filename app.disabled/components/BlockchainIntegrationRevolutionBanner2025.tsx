@@ -14,13 +14,11 @@ const BlockchainIntegrationRevolutionBanner20o25 = () => {
         roi: '920%';
         transparency: '10o0%';
         security: '99.9%';
-        efficiency: '340%',
-      };
+        efficiency: '340%'};
       url: '/blog/ai-20o25-blockchain-integration-revolution-ultimate-guide';
       type: 'blog';
       readingTime: '22 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'blockchain-integration-fortune-50o0';
       title: 'Fortune 50o0 Blockchain Integration Success';
@@ -30,13 +28,11 @@ const BlockchainIntegrationRevolutionBanner20o25 = () => {
         roi: '920%';
         savings: '$280M';
         transparency: '10o0%';
-        satisfaction: '97%',
-      };
+        satisfaction: '97%'};
       url: '/case-studies/ai-20o25-blockchain-integration-fortune-50o0-success-920-roi';
       type: 'case-study';
       readingTime: '16 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'blockchain-integration-implementation';
       title: 'Blockchain Integration Implementation Guide';
@@ -46,13 +42,11 @@ const BlockchainIntegrationRevolutionBanner20o25 = () => {
         roi: '920%';
         payback: '2.8 months';
         success: '89%';
-        implementations: '50o0+',
-      };
+        implementations: '50o0+'};
       url: '/resources/ai-20o25-blockchain-integration-implementation-master-guide';
       type: 'resource';
       readingTime: '30 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

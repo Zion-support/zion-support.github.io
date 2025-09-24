@@ -68,7 +68,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'green-it';
     excerpt:,
       'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.';
-    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.performance.</p>,
+    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.performance.</p>,
 <h2>Energy-Efficient Hardware Selection</h2>,
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>,
 <h2>Optimizing Cooling Systems</h2>,

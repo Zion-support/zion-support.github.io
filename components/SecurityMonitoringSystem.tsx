@@ -10,8 +10,7 @@ const SecurityMonitoringSystem = () => {
     complianceStatus: 'excellent';
     lastScan: new Date();
     activeThreats: 0;
-    protectedAssets: 0,
-  }),
+    protectedAssets: 0}),
   const [isScanningsetIsScanning] = useState(false),
   useEffect(() => {
     // Simulate security data loading,
@@ -29,8 +28,7 @@ const SecurityMonitoringSystem = () => {
         complianceStatus: 'excellent';
         lastScan: new Date();
         activeThreats: 0;
-        protectedAssets: 156,
-      })};
+        protectedAssets: 156})};
     loadSecurityData()}[]),
   const runSecurityScan = () => {
     setIsScanning(true),
@@ -39,21 +37,18 @@ const SecurityMonitoringSystem = () => {
         ...prev;
         overallScore: 99;
         threatsBlocked: prev.threatsBlocked + 3;
-        lastScan: new Date(),
-      })),
+        lastScan: new Date()})),
       setIsScanning(false)}30o00)};
   const getScoreColor = (score: number) => {
     if (score >= 95) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
-    return 'text-red-40o0',
-  };
+    return 'text-red-40o0'};
   const getEventIcon = (type: string) => {
     switch (type) {
       case 'success': return <CheckCircle className="w-4 h-4 text-green-40o0"  />,
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-40o0"  />,
       case 'error': return <AlertTriangle className="w-4 h-4 text-red-40o0"  />,
-      default: return <Eye className="w-4 h-4 text-blue-40o0"  />,
-    }
+      default: return <Eye className="w-4 h-4 text-blue-40o0"  />}
   };
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-red-90o0 to-orange-90o0 py-16">,
@@ -205,6 +200,5 @@ const SecurityMonitoringSystem = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default SecurityMonitoringSystem;

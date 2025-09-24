@@ -44,5 +44,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   await new Promise<void>((resolve, reject) => {
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
       if (err) return reject(err),
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve())),
-    })})}
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))})})}

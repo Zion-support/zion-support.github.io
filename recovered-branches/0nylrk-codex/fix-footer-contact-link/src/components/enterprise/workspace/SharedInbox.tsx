@@ -79,6 +79,5 @@ export function SharedInbox() {
           </button>,
         </div>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

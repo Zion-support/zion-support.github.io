@@ -218,6 +218,5 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default QuantumNeuralFusionShowcase;

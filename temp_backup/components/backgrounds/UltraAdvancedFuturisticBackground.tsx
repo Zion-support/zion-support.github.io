@@ -8,8 +8,7 @@ interface UltraAdvancedFuturisticBackgroundProps {
   particleCount?: number,
   animationSpeed?: number,
   enableHolographic?: boolean,
-  enableQuantumEffects?: boolean,
-}
+  enableQuantumEffects?: boolean}
 ,
 export default function UltraAdvancedFuturisticBackground({
   children,
@@ -40,8 +39,7 @@ export default function UltraAdvancedFuturisticBackground({
       life: number,
       maxLife: number,
       rotation: number,
-      rotationSpeed: number,
-    }> = [],
+      rotationSpeed: number}> = [],
     const colors ={
       quantum: ['#0o0ffff'#ff0o0ff'#ffff0o0'#0o0ff0o0'#ff0o080'#80o00ff'#0o0ffff'];
       neon: ['#ff0o066'#0o0ffff'#ff660o0'#990o0ff'#0o0ff99'#ff1493'#0o0bfff'];
@@ -68,8 +66,7 @@ export default function UltraAdvancedFuturisticBackground({
           life: Math.random() * 10o0;
           maxLife: 10o0 + Math.random() * 10o0;
           rotation: Math.random() * Math.PI * 2;
-          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed,
-        })}
+          rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed})}
     };
     // Enhanced animation loop with quantum effects,
     const animate = () => {

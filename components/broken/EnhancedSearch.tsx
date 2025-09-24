@@ -13,8 +13,7 @@ interface SearchResult {
   features?: string[],
   pricing?: {
     starter?: string,
-    enterprise?: string,
-  };
+    enterprise?: string};
 }
 ,
 interface SearchProps {
@@ -22,8 +21,7 @@ interface SearchProps {
   onResultSelect: (result: SearchResult) => void,
   placeholder?: string,
   className?: string,
-  showFilters?: boolean,
-}
+  showFilters?: boolean}
 ,
 const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
@@ -93,8 +91,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         if (searchQuery.trim().length < 2) {
           setResults([]),
           setShowResults(false),
-          return,
-        }
+          return}
 ,
         setIsSearching(true),
         // Simulate API call delay,
@@ -123,15 +120,13 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     setQuery(value),
     if (value.trim().length === 0) {
       setShowResults(false),
-      setResults([]),
-    }
+      setResults([])}
   }[suggestionselectedIndexqueryhandleSearch]),
   // Close search on outside click,
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false),
-      }
+        setIsOpen(false)}
     };
   // Handle search submission,
   const handleSearch = (e: React.FormEvent) => {
@@ -139,14 +134,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     if (query.trim()) {
       onSearch(query),
       addToSearchHistory(query),
-      setShowResults(false),
-    }
+      setShowResults(false)}
   }[routerhandleSearch]),
   // Handle quick action click,
   const handleQuickAction = useCallback((action: string) => {
     router.push(action),
-    setIsOpen(false),
-  }[router]),
+    setIsOpen(false)}[router]),
   // Add search to history,
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
@@ -158,8 +151,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))} catch (error) {
-        console.error('Failed to parse search history: 'error),
-      }
+        console.error('Failed to parse search history: 'error)}
     }
   }[]),
   // Handle filter toggle,
@@ -167,8 +159,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     setSelectedFilters(prev =>,
       prev.includes(filterId),
         ? prev.filter(id => id !== filterId),
-        : [...prevfilterId]),
-  };
+        : [...prevfilterId])};
   // Handle result selection,
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result),
@@ -234,8 +225,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                         selectedFilters.includes(category.id),
                           ? `bg-gradient-to-r ${category.color} text-white`,
-                          : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50',
-                      }`}
+                          : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50'}`}
                     >,
                       <category.icon className="w-3 h-3" />,
                       {category.name}
@@ -381,8 +371,7 @@ function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args)wait),
-  };
+    timeout = setTimeout(() => func(...args)wait)};
 }
 ,
 export default EnhancedSearch}

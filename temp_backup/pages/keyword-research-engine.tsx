@@ -20,6 +20,5 @@ export default function KeywordResearchEngine() {
       ]}
       industries={['Content Publishers', 'E-commerce', 'Agencies', 'SMBs']}
       canonical='https: //ziontechgroup.com/keyword-research-engine',
-    />),
-}
+    />)}
 ,

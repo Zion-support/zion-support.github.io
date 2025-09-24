@@ -3,8 +3,7 @@ export interface WarningEmailPayload {
   toUserId: string,
   toAddress?: string | null,
   subject: string,
-  body: string,
-}
+  body: string}
 ,
 export async function sendWarningEmail(
   payload: WarningEmailPayload): Promise<void> {

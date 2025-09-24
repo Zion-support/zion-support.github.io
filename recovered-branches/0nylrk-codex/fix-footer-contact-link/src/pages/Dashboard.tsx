@@ -34,7 +34,6 @@ import { NotificationCenter } from '@/components / NotificationCenter',
 import { use_toast } from '@/hooks / use - toast',
 import { Link } from './react-router-dom',
 export default function Dashboard() {
-,
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
 export default function Dashboard() {
@@ -54,8 +53,7 @@ export default function Dashboard() {
       toast({
         title: "Error creating test notification";
         description: "Something went wrong";
-        variant: "destructive"}),
-}
+        variant: "destructive"})}
 }
   };
   return (
@@ -132,16 +130,13 @@ export default function Dashboard() {
                         await createOnboardingNotification({
                           userId: user.id,
                           missingMilestone: 'profile_completed',
-                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent',
-                        }),
+                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'}),
                           userId: user.id;
                           missingMilestone: 'profile_completed';
-                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent',
-                        });
+                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'});
                         toast({
                           title: "Onboarding notification sent",
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Settings size={16} className="text-zion-purple" />,
                       Send Onboarding Nudge,
@@ -156,12 +151,10 @@ export default function Dashboard() {
                           title: "New Feature Available!",
                           message: "We've added a new notification center to help you stay updated with important information.",
                           actionUrl: "/notifications",
-                          actionText: "Explore Now",
-                        }),
+                          actionText: "Explore Now"}),
                         toast({
                           title: "System notification sent",
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Bell size={16} className="text-yellow-500" />,
                       Send System Alert,
@@ -339,12 +332,10 @@ export default function Dashboard() {
                         await createOnboardingNotification({
                           userId: user && user.id;
                           missingMilestone: 'profile_completed';
-                          userRole: user && user.userType === 'employer' || user && user.userType === 'buyer' ? 'client' : 'talent',
-                        }),
+                          userRole: user && user.userType === 'employer' || user && user.userType === 'buyer' ? 'client' : 'talent'}),
                         toast({
                           title: "Onboarding notification sent";
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Settings size={16} className="text-zion-purple" />,
                       Send Onboarding Nudge,
@@ -358,12 +349,10 @@ export default function Dashboard() {
                           title: "New Feature Available!";
                           message: "We've added a new notification center to help you stay updated with important information.";
                           actionUrl: "/notifications";
-                          actionText: "Explore Now",
-                        }),
+                          actionText: "Explore Now"}),
                         toast({
                           title: "System notification sent";
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Bell size={16} className="text-yellow-500" />,
                       Send System Alert,
@@ -539,12 +528,10 @@ if ( {) {
                         await createOnboardingNotification ({
                           user_id: user.id;
                           missing_milestone: 'profile_completed';
-                          user_role: user.user_type === 'employer' || user.user_type === 'buyer' ? 'client' : 'talent',
-                        }),
+                          user_role: user.user_type === 'employer' || user.user_type === 'buyer' ? 'client' : 'talent'}),
                         toast ({
                           title: "Onboarding notification sent";
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Settings size={16} className="text - zion - purple" />,
                       Send Onboarding Nudge,
@@ -558,12 +545,10 @@ if ( {) {
                           title: "New Feature Available!";
                           message: "We've added a new notification center to help you stay updated with important information.";
                           action_url: "/notifications";
-                          action_text: "Explore Now",
-                        }),
+                          action_text: "Explore Now"}),
                         toast ({
                           title: "System notification sent";
-                          description: "Check your notification center",
-                        })}}
+                          description: "Check your notification center"})}}
                     >,
                       <Bell size={16} className="text - yellow - 500" />,
                       Send System Alert,

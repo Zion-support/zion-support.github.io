@@ -22,8 +22,7 @@ interface Metric {
   bgColor: string,
   trend?: {
     direction: 'up' | 'down' | 'stable',
-    value: string,
-  };
+    value: string};
 }
 ,
 const SuccessMetricsShowcase20o26: React.FC = () => {
@@ -110,8 +109,7 @@ const SuccessMetricsShowcase20o26: React.FC = () => {
       case 'down':,
         return <TrendingUp className='w-3 h-3 text-red-60o0 rotate-180' />,
       default:,
-        return <BarChart3 className='w-3 h-3 text-gray-60o0' />,
-    }
+        return <BarChart3 className='w-3 h-3 text-gray-60o0' />}
   };
   const getTrendColor = (direction: string) => {
     switch (direction) {
@@ -120,8 +118,7 @@ const SuccessMetricsShowcase20o26: React.FC = () => {
       case 'down':,
         return 'text-red-60o0',
       default:,
-        return 'text-gray-60o0',
-    }
+        return 'text-gray-60o0'}
   };
   return (
     <div className='bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 py-20'>,
@@ -310,6 +307,5 @@ const SuccessMetricsShowcase20o26: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default SuccessMetricsShowcase20o26;

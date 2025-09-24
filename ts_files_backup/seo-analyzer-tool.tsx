@@ -44,8 +44,7 @@ export default function SEOAnalyzerToolPage() {
         'Internal linking structure';
         'Image optimization (alt tags)'];
       icon: '📝';
-      color: 'text-green-400',
-    };
+      color: 'text-green-400'};
     {
       category: 'Technical SEO';
       factors: [
@@ -56,8 +55,7 @@ export default function SEOAnalyzerToolPage() {
         'SSL certificate';
         'Core Web Vitals'];
       icon: '⚙️';
-      color: 'text-blue-400',
-    };
+      color: 'text-blue-400'};
     {
       category: 'Content SEO';
       factors: [
@@ -68,8 +66,7 @@ export default function SEOAnalyzerToolPage() {
         'Multimedia optimization';
         'Schema markup'];
       icon: '📊';
-      color: 'text-purple-400',
-    };
+      color: 'text-purple-400'};
     {
       category: 'Local SEO';
       factors: [
@@ -80,8 +77,7 @@ export default function SEOAnalyzerToolPage() {
         'Location-based content';
         'Local link building'];
       icon: '📍';
-      color: 'text-orange-400',
-    }
+      color: 'text-orange-400'}
   ],
   const pricing = [
     {
@@ -96,8 +92,7 @@ export default function SEOAnalyzerToolPage() {
         'On-page SEO analysis';
         'Email support';
         'Basic reporting'];
-      popular: false,
-    };
+      popular: false};
     {
       name: 'Professional';
       price: '$89';
@@ -112,8 +107,7 @@ export default function SEOAnalyzerToolPage() {
         'Advanced reporting';
         'API access';
         'Team collaboration'];
-      popular: true,
-    };
+      popular: true};
     {
       name: 'Enterprise';
       price: '$249';
@@ -128,8 +122,7 @@ export default function SEOAnalyzerToolPage() {
         'Custom reporting';
         'White-label options';
         'Custom integrations'];
-      popular: false,
-    }
+      popular: false}
   ],
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return,
@@ -490,6 +483,5 @@ export default function SEOAnalyzerToolPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

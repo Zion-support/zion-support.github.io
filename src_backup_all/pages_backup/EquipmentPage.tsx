@@ -45,8 +45,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.9;
     reviewCount: 27;
     location: "Santa Clara, CA";
-    availability: "In Stock",
-  };
+    availability: "In Stock"};
   {
     id: "dell-poweredge-r750";
     title: "Dell PowerEdge R750 Server";
@@ -63,8 +62,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7;
     reviewCount: 34;
     location: "Austin, TX";
-    availability: "In Stock",
-  };
+    availability: "In Stock"};
   {
     id: "cisco-nexus-9k";
     title: "Cisco Nexus 90o00 Switch";
@@ -81,8 +79,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.8;
     reviewCount: 19;
     location: "San Jose, CA";
-    availability: "In Stock",
-  };
+    availability: "In Stock"};
   {
     id: "hpe-proliant-dl380";
     title: "HPE ProLiant DL380 Gen10";
@@ -99,8 +96,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.6;
     reviewCount: 21;
     location: "Houston, TX";
-    availability: "In Stock",
-  };
+    availability: "In Stock"};
   {
     id: "netapp-aff-a250";
     title: "NetApp AFF A250 All-Flash Array";
@@ -117,8 +113,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7;
     reviewCount: 18;
     location: "Chicago, IL";
-    availability: "2-3 Weeks",
-  };
+    availability: "2-3 Weeks"};
   {
     id: "arista-70o50x";
     title: "Arista 70o50X Series Switch";
@@ -135,8 +130,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.5;
     reviewCount: 16;
     location: "Sunnyvale, CA";
-    availability: "In Stock",
-  }
+    availability: "In Stock"}
 ];
 // Market insights component,
 const EquipmentMarketInsights = ({ stats }: { stats: any }) => (

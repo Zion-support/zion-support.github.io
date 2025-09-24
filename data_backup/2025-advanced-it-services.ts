@@ -171,7 +171,7 @@ export const advancedITServices20o25 = [{
     "id": 'ai-powered-devops-platform;
     name:;
   DevOps AI Pro';
-    "description": Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.performance.';
+    "description": Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.performance.';
     features['AI-powered CI/CD automation';
   'Intelligent deployment optimization';
   'Automated testing and quality assurance';

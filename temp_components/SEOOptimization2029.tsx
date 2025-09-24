@@ -109,8 +109,7 @@ const SEOOptimization20o29 = () => {
       difficulty: 'Medium';
       trend: 'up';
       change: '+2';
-      icon: Star,
-    };
+      icon: Star};
     {
       keyword: 'quantum computing';
       position: 7;
@@ -118,8 +117,7 @@ const SEOOptimization20o29 = () => {
       difficulty: 'High';
       trend: 'up';
       change: '+1';
-      icon: Zap,
-    };
+      icon: Zap};
     {
       keyword: 'machine learning';
       position: 2;
@@ -127,8 +125,7 @@ const SEOOptimization20o29 = () => {
       difficulty: 'Medium';
       trend: 'up';
       change: '+3';
-      icon: Brain,
-    };
+      icon: Brain};
     {
       keyword: 'artificial intelligence';
       position: 5;
@@ -136,8 +133,7 @@ const SEOOptimization20o29 = () => {
       difficulty: 'High';
       trend: 'down';
       change: '-1';
-      icon: Cpu,
-    }
+      icon: Cpu}
   ],
   const seoFeatures = [
     {
@@ -145,29 +141,25 @@ const SEOOptimization20o29 = () => {
       description: 'Advanced AI algorithms analyze your content and provide optimization recommendations';
       icon: Brain;
       status: 'Active';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       title: 'Real-time Ranking Tracking';
       description: 'Monitor your search rankings across multiple search engines in real-time';
       icon: Target;
       status: 'Deployed';
-      impact: 'Critical',
-    };
+      impact: 'Critical'};
     {
       title: 'Content Optimization';
       description: 'Automated content analysis and optimization suggestions';
       icon: BookOpen;
       status: 'Beta';
-      impact: 'Medium',
-    };
+      impact: 'Medium'};
     {
       title: 'Technical SEO Audit';
       description: 'Comprehensive technical SEO analysis and fix recommendations';
       icon: Settings;
       status: 'Active';
-      impact: 'High',
-    }
+      impact: 'High'}
   ],
   const realTimeData = [
     { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' };
@@ -293,8 +285,7 @@ const SEOOptimization20o29 = () => {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeMetric === key,
                     ? 'bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
               >,
                 <metric.icon className="inline-block mr-2"  />,
                 {metric.title}
@@ -478,8 +469,7 @@ const SEOOptimization20o29 = () => {
                     feature.status === 'Active' ? 'bg-green-50o0/20 text-green-40o0' :,
                     feature.status === 'Deployed' ? 'bg-blue-50o0/20 text-blue-40o0' :,
                     feature.status === 'Beta' ? 'bg-yellow-50o0/20 text-yellow-40o0' :,
-                    'bg-gray-50o0/20 text-gray-40o0',
-                  }`}>,
+                    'bg-gray-50o0/20 text-gray-40o0'}`}>,
                     {feature.status}
                   </span>,
                 </div>,
@@ -517,6 +507,5 @@ const SEOOptimization20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default SEOOptimization20o29;

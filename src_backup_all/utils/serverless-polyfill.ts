@@ -23,16 +23,14 @@ declare global {
   var __assign: any,
   var __rest: any,
   var __decorate: any,
-  var __awaiter: any,
-}
+  var __awaiter: any}
 ,
 // CRITICAL: Self polyfill - must be first,
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global,
     if (typeof globalThis !== 'undefined') {
-      (globalThis as any).self = global,
-    }
+      (globalThis as any).self = global}
   } else if (typeof globalThis !== 'undefined') {
     (globalThis as any).self = globalThis} else if (typeof window !== 'undefined') {
     (window as any).self = window} else {
@@ -48,8 +46,7 @@ const selfRef: any = typeof self !== 'undefined' ? self :,
                     typeof window !== 'undefined' ? window : {};
 // CRITICAL: Webpack chunk array polyfill,
 if (!selfRef.webpackChunk_N_E) {
-  selfRef.webpackChunk_N_E = [],
-}
+  selfRef.webpackChunk_N_E = []}
 ,
 // Ensure webpack chunk array is properly initialized,
 if (typeof webpackChunk_N_E === 'undefined') {
@@ -60,7 +57,7 @@ const tsHelpers ={
   __extends: function(d: any, b: any) {
     if (typeof b !== "function" && b !== null),
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
-    function __extends_helper(this: any) { this.constructor = d, }
+    function __extends_helper(this: any) { this.constructor = d}
     d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())};
   __assign: function() {
     return Object.assign || function (t: any) {
@@ -88,10 +85,10 @@ const tsHelpers ={
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r};
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value), })}
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value)})}
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
-      function fulfilled(value: any) { try { step(generator.next(value)), } catch (e) { reject(e)} }
-      function rejected(value: any) { try { step(generator["throw"](value)), } catch (e) { reject(e)} }
+      function fulfilled(value: any) { try { step(generator.next(value))} catch (e) { reject(e)} }
+      function rejected(value: any) { try { step(generator["throw"](value))} catch (e) { reject(e)} }
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected)}
       step((generator = generator.apply(thisArg, _arguments || [])).next())})}
 };
@@ -173,9 +170,8 @@ export const verifyPolyfills = () => {
     selfDefined: typeof self !== 'undefined';
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined');
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined';
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null,
-  };
-  // console.log('Serverless polyfill verification:', checks),
+    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null};
+  // // console.log('Serverless polyfill verification:', checks),
   return Object.values(checks).every(Boolean)};
 // Auto-verify in development,
 if (process.env.NODE_ENV === 'development') {

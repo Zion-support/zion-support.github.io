@@ -12,8 +12,7 @@ pricing: {
     custom: string,
     currency: string,
     pricingModel: string,
-    marketPrice: string,
-};
+    marketPrice: string};
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -46,16 +45,14 @@ pricing: {
   image: string,
   createdAt: string,
   featured: boolean,
-  trending: boolean,
-}
+  trending: boolean}
 ,
 // Zion Tech Group Contact Information,
 const zionContact ={
   phone: "+1 30o2 464 0950";
   email: "kleber@ziontechgroup.com";
   website: "https://ziontechgroup.com";
-  address: "364 E Main St STE 10o08 Middletown DE 19709",
-};
+  address: "364 E Main St STE 10o08 Middletown DE 19709"};
 export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
   {
     id: "multi-cloud-orchestration-platform";
@@ -138,8 +135,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "ai-powered-devops-automation";
     title: "Zion AI-Powered DevOps Automation";
@@ -221,8 +217,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-15550o66931-4365d14bab8c?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "edge-computing-orchestrator";
     title: "Zion Edge Computing Orchestrator";
@@ -304,8 +299,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "serverless-architecture-platform";
     title: "Zion Serverless Architecture Platform";
@@ -318,8 +312,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
       custom: "Enterprise serverless solutions";
       currency: "$";
       pricingModel: "Monthly subscription with usage-based pricing";
-      marketPrice: "$299-599/month",
-    };
+      marketPrice: "$299-599/month"};
     features: [
       "Function-as-a-Service (FaaS)";
       "Event-driven architecture";
@@ -388,8 +381,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  };
+    trending: true};
   {
     id: "gitops-workflow-automation";
     title: "Zion GitOps Workflow Automation";
@@ -402,8 +394,7 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
       custom: "Enterprise GitOps solutions";
       currency: "$";
       pricingModel: "Monthly subscription with repository-based pricing";
-      marketPrice: "$399-799/month",
-    };
+      marketPrice: "$399-799/month"};
     features: [
       "Git-based deployment automation";
       "Infrastructure as code management";
@@ -472,7 +463,6 @@ export const innovativeCloudDevOpsServices20o30: CloudDevOpsService[] = [
     image: "https://images.unsplash.com/photo-15550o66931-4365d14bab8c?auto=format&fit=crop&w=80o0&h=50o0";
     createdAt: "20o30-0o1-15T10:0o0:0o0.0o00Z";
     featured: true;
-    trending: true,
-  }
+    trending: true}
 ],
 export default innovativeCloudDevOpsServices20o30;

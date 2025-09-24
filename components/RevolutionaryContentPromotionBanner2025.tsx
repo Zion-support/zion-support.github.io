@@ -28,8 +28,7 @@ export default function RevolutionaryContentPromotionBanner20o25({
       bgColor: "bg-gradient-to-r from-purple-50o0 to-pink-50o0";
       textColor: "text-white";
       buttonText: "Read More";
-      buttonHref: "/case-studies/ai-20o25-global-enterprise-transformation-ultimate-success",
-    };
+      buttonHref: "/case-studies/ai-20o25-global-enterprise-transformation-ultimate-success"};
     hero: {
       title: "🌟 The AI Revolution is Here";
       subtitle: "Transform Your Business with Cutting-Edge AI Solutions";
@@ -39,8 +38,7 @@ export default function RevolutionaryContentPromotionBanner20o25({
       buttonText: "Start Your Journey";
       buttonHref: "/contact";
       secondaryButtonText: "View Success Stories";
-      secondaryButtonHref: "/case-studies",
-    }
+      secondaryButtonHref: "/case-studies"}
   };
   const currentContent = content[variant],
   if (variant === 'hero') {

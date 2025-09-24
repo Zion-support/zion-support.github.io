@@ -11,8 +11,7 @@ interface UseHireRequestFormProps {
   userDetails?: {
     name?: string,
     email?: string,
-    id?: string,
-  };
+    id?: string};
 }
 ,
 export interface FormValues {
@@ -21,8 +20,7 @@ export interface FormValues {
   projectOverview: string,
   timeline: string,
   budgetMin: number,
-  budgetMax: number,
-}
+  budgetMax: number}
 ,
 export function useHireRequestForm({
   talent;

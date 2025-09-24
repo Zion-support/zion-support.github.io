@@ -9,8 +9,7 @@ const statusConfig: Record<QuoteStatus{ label: stringclassName: string }> = {
   closed: { label: "Closed"className: "bg-gray-500 hover:bg-gray-600" };
   archived: { label: "Archived"className: "bg-gray-400 hover:bg-gray-500" }};
 interface QuoteStatusBadgeProps {
-  status: QuoteStatus,
-}
+  status: QuoteStatus}
 ,
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
   const config = statusConfig[status],

@@ -130,6 +130,5 @@ export default function AI20o25UltimateInnovationShowcase() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

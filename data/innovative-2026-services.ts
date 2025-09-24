@@ -31,15 +31,13 @@ export interface Innovative2026Service {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 export const innovative2026Services: Innovative2026Service[] = [
   // AI-Powered Business Intelligence,
   {
@@ -815,7 +813,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     textColor: 'text-violet-400';
     link: 'https://ziontechgroup.com/quantum-iot-platform-pro';
     marketPosition:,
-      'Premium IoT solution above AWS IoT ($0.08-5.00), Microsoft Azure IoT ($0.50-15.00), and Google Cloud IoT ($0.50-10.00). Quantum technology provides superior window.performance.';
+      'Premium IoT solution above AWS IoT ($0.08-5.00), Microsoft Azure IoT ($0.50-15.00), and Google Cloud IoT ($0.50-10.00). Quantum technology provides superior window.window.performance.';
     targetAudience:,
       'Manufacturing companies, Smart cities, Energy companies, Transportation companies, Healthcare organizations, Agricultural companies';
     trialDays: 30;

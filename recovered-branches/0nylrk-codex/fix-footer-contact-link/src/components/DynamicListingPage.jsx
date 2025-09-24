@@ -66,8 +66,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                             id: listing.id;
                             title: listing.title;
                             category: listing.category;
-                            image: listing.images?.[0],
-                        }
+                            image: listing.images?.[0]}
                     }
                 })}
         }, 50o0)};
@@ -90,7 +89,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Category,
                 </label>,
                 <Select value={selectedCategory} onValueChange={(value) => {
-            // console.log("Category selected:", value),
+            // // console.log("Category selected:", value),
             setSelectedCategory(value)}}>,
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">,
                     <SelectValue placeholder="Select Category" />,
@@ -121,7 +120,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </label>,
                 <div className="flex flex-wrap gap-2">,
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                // console.log("Rating selected:", rating),
+                // // console.log("Rating selected:", rating),
                 setSelectedRating(rating)}} aria-pressed={selectedRating === rating} className={`${selectedRating === rating,
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple",
                 : "border-zion-blue-light text-zion-slate-light"} focus-visible: ring-zion-purple`}>,
@@ -133,7 +132,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </div>,
               </div>,
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10" onClick={() => {
-            // console.log("Resetting filters"),
+            // // console.log("Resetting filters"),
             setSearchQuery(""),
             setSelectedCategory("all"),
             setCurrentPriceFilter([0, priceRange.max]),
@@ -148,7 +147,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <div className="relative flex-grow">,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />,
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-            // console.log("Search query:", e.target.value),
+            // // console.log("Search query:", e.target.value),
             setSearchQuery(e.target.value)}} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>,
                 </div>,
                 <div className="flex items-center gap-2 ml-auto">,

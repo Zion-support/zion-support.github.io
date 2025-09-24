@@ -1,8 +1,7 @@
 'use client',
 import React, { useState } from 'react',
 interface LayoutProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false),

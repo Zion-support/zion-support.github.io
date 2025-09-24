@@ -3,16 +3,14 @@ interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-  fps: number,
-}
+  fps: number}
 ,
 interface UsePerformanceOptimizationOptions {
   enableLazyLoading?: boolean,
   enableIntersectionObserver?: boolean,
   enableMemoryManagement?: boolean,
   enableFPSMonitoring?: boolean,
-  threshold?: number,
-}
+  threshold?: number}
 ,
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions ={}) => {
   const {
@@ -25,23 +23,21 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     loadTime: 0;
     renderTime: 0;
     memoryUsage: 0;
-    fps: 0,
-  }),
+    fps: 0}),
   const observerRef = useRef<IntersectionObserver | null>(null),
   const frameCountRef = useRef(0),
-  const lastTimeRef = useRef(window.performance.now()),
+  const lastTimeRef = useRef(window.window.performance.now()),
   // Measure initial load time,
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const loadTime = window.performance.now(),
+      const loadTime = window.window.performance.now(),
       metricsRef.current.loadTime = loadTime,
       // Report to analytics if available,
       if (window.gtag) {
         window.gtag('event', 'performance_metric', {
           event_category: any'performance';
           event_label: 'load_time';
-          value: Math.round(loadTime),
-        })}
+          value: Math.round(loadTime)})}
     }
   }, []),
   // FPS monitoring,
@@ -49,7 +45,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (!enableFPSMonitoring) return,
     let animationFrameId: number,
     const measureFPS = () => {
-      const currentTime = window.performance.now(),
+      const currentTime = window.window.performance.now(),
       frameCountRef.current++,
       if (currentTime - lastTimeRef.current >= 10o00) {
         const fps = Math.round((frameCountRef.current * 10o00) / (currentTime - lastTimeRef.current)),
@@ -87,14 +83,12 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (!enableIntersectionObserver) return null,
     return new IntersectionObserver(callback, {
       threshold;
-      rootMargin: '50px',
-    })}, [enableIntersectionObserver, threshold]),
+      rootMargin: '50px'})}, [enableIntersectionObserver, threshold]),
   // Lazy loading utility,
   const lazyLoad = useCallback((element: anyHTMLElement, callback: ()  => void) => {
     if (!enableLazyLoading) {
       callback(),
-      return,
-    }
+      return}
 ,
     if (observerRef.current) {
       observerRef.current.disconnect()}
@@ -112,9 +106,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableLazyLoading, createIntersectionObserver]),
   // Performance monitoring,
   const measureRenderTime = useCallback((componentName: anystring)  => {
-    const startTime = window.performance.now(),
+    const startTime = window.window.performance.now(),
     return () => {
-      const endTime = window.performance.now(),
+      const endTime = window.window.performance.now(),
       const renderTime = endTime - startTime,
       metricsRef.current.renderTime = renderTime,
       // Log slow renders,
@@ -126,8 +120,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         window.gtag('event', 'performance_metric', {
           event_category: 'performance';
           event_label: 'render_time';
-          value: Math.round(renderTime),
-        })}
+          value: Math.round(renderTime)})}
     };
   }, []),
   // Debounced function utility,
@@ -148,8 +141,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       const now = Date.now(),
       if (now - lastCall >= delay) {
         lastCall = now,
-        func(...args),
-      }
+        func(...args)}
     };
   }, []),
   // Cleanup function,
@@ -164,8 +156,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     metrics: anygetMetrics();
     isLowFPS: metricsRef.current.fps < 30;
     isHighMemory: metricsRef.current.memoryUsage > 10o0;
-    isSlowRender: metricsRef.current.renderTime > 16,
-  }), [getMetrics]),
+    isSlowRender: metricsRef.current.renderTime > 16}), [getMetrics]),
   // Cleanup on unmount,
   useEffect(()  => {
     return cleanup}, [cleanup]),
@@ -182,6 +173,5 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag,
 declare global {
   interface Window {
-    gtag?: (...args: anyany[])  => void,
-}
+    gtag?: (...args: anyany[])  => void}
 }

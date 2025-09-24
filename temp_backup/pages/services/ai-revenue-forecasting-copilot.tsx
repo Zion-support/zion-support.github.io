@@ -301,6 +301,5 @@ export default function AIRevenueForecastingCopilot() {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

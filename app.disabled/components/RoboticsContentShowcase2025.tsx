@@ -111,8 +111,7 @@ const RoboticsContentShowcase20o25 = () => {
       case 'Resource':,
         return <Download className='w-4 h-4' />,
       default:,
-        return <BookOpen className='w-4 h-4' />,
-    }
+        return <BookOpen className='w-4 h-4' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -123,8 +122,7 @@ const RoboticsContentShowcase20o25 = () => {
       case 'Resource':,
         return 'bg-purple-50o0',
       default:,
-        return 'bg-gray-50o0',
-    }
+        return 'bg-gray-50o0'}
   };
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -210,8 +208,7 @@ const RoboticsContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -345,6 +342,5 @@ const RoboticsContentShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RoboticsContentShowcase20o25;

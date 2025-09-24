@@ -11,11 +11,9 @@ interface ContentItem {
   featured: boolean,
   metrics?: {
     roi?: string,
-    savings?: string,
-  };
+    savings?: string};
   tags: string[],
-  url: string,
-}
+  url: string}
 ,
 interface ContentManagerProps {
   showFilters?: boolean,
@@ -104,8 +102,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === cat.id,
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                }`}
+                    : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
               >,
                 {cat.name} ({cat.count}),
               </button>))}

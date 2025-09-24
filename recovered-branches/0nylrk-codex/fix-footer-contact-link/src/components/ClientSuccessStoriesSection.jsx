@@ -562,8 +562,7 @@ export function ClientSuccessStoriesSection() {
                   className='h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover: border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer',
                   onClick={() =>,
                     setSelectedStory(
-                      selectedStory === story.id ? null : story.id),
-                  }
+                      selectedStory === story.id ? null : story.id)}
                 >,
                   {/* Header */}
                   <div className='flex items-center justify-between mb-4'>,
@@ -747,6 +746,5 @@ export function ClientSuccessStoriesSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

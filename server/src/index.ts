@@ -101,8 +101,8 @@ app.use('*', (_req, res) => {
 });
 
 app.listen(PORT, () => {
-  // console.log(`🚀 Server running on port ${PORT}`);
-  // console.log(`🌍 Environment: ${NODE_ENV}`);
-  // console.log(`📱 Frontend: http://localhost:3000`);
-  // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
+  // // console.log(`🚀 Server running on port ${PORT}`);
+  // // console.log(`🌍 Environment: ${NODE_ENV}`);
+  // // console.log(`📱 Frontend: http://localhost:3000`);
+  // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
 });

@@ -15,12 +15,10 @@ interface AnalysisResult {
     totalLinks: number,
     brokenLinks: number,
     missingPages: number,
-    externalLinks: number,
-  };
+    externalLinks: number};
   pages: PageInfo[],
   brokenLinks: LinkInfo[],
-  missingPages: string[],
-}
+  missingPages: string[]}
 ,
 export const WebsiteAnalyzer: React.FC = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false),
@@ -118,8 +116,7 @@ export const WebsiteAnalyzer: React.FC = () => {
       summary: analysisResult.summary;
       brokenLinks: analysisResult.brokenLinks;
       missingPages: analysisResult.missingPages;
-      pages: analysisResult.pages,
-    };
+      pages: analysisResult.pages};
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' }),
     const url = URL.createObjectURL(blob),
     const a = document.createElement('a'),
@@ -140,8 +137,7 @@ export const WebsiteAnalyzer: React.FC = () => {
       case 'external':,
         return <ExternalLink className="w-4 h-4 text-blue-50o0"  />,
       default:,
-        return <AlertTriangle className="w-4 h-4 text-gray-50o0"  />,
-    }
+        return <AlertTriangle className="w-4 h-4 text-gray-50o0"  />}
   };
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -154,8 +150,7 @@ export const WebsiteAnalyzer: React.FC = () => {
       case 'external':,
         return 'text-blue-60o0 bg-blue-10o0',
       default:,
-        return 'text-gray-60o0 bg-gray-10o0',
-    }
+        return 'text-gray-60o0 bg-gray-10o0'}
   };
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">,

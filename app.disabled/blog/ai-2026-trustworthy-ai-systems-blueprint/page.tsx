@@ -63,6 +63,5 @@ export default function TrustworthyAISystemsBlueprintPage() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

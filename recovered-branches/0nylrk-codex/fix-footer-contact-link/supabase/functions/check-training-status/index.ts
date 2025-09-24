@@ -75,8 +75,7 @@ serve(async req => {
         status = 'running',
         break,
       default: ,
-        status = 'queued',
-    }
+        status = 'queued'}
 ,
     return new Response(
       JSON.stringify({

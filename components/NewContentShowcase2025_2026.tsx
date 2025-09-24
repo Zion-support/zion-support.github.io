@@ -135,6 +135,5 @@ export default function NewContentShowcase20o25_20o26() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

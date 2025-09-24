@@ -7,8 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from 'lucide-react',
 interface GeneratedDescriptionDisplayProps {
   description:string;
-  onSave: (editedDescription:string) => void,
-}
+  onSave: (editedDescription:string) => void}
 ,
 export function GeneratedDescriptionDisplay({
   description,
@@ -21,8 +20,7 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false);
     toast({
       title:"Description Saved";
-      description: "Your edited description has been saved.",
-    });
+      description: "Your edited description has been saved."});
   };
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">,
@@ -71,8 +69,7 @@ export function GeneratedDescriptionDisplay({
   {
   Check, Pencil }from 'lucide-react' interface GeneratedDescriptionDisplayProps {
   description: string,
-onSave: (editedDescription: string) => void ,
-}export function GeneratedDescriptionDisplay ({
+onSave: (editedDescription: string) => void }export function GeneratedDescriptionDisplay ({
   description,
 onSave }: GeneratedDescriptionDisplayProps) {
   const {
@@ -87,7 +84,5 @@ toast ({
   isEditing ? (<> <Check className="h-4 w-4 mr-1"  /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1"  /> Edit </>) }</Button> </CardTitle> </CardHeader> <CardContent> {
   isEditing ? (<Textarea value={
   editedDescription }</div>) }</CardContent> {
-,
   isEditing && (<CardFooter> <Button onClick={
-  handleSave "}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ,
-}</Card>) }'"}}
+  handleSave "}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) }</Card>) }'"}}

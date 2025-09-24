@@ -52,7 +52,7 @@ class ZionAnalytics {
 ,
         // Log to console in development,
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            // console.log('Analytics Event:', event)}
+            // // console.log('Analytics Event:', event)}
     }
 ,
     trackPageView() {
@@ -63,8 +63,7 @@ class ZionAnalytics {
         this.trackEvent('view', {
             path: path;
             title: title;
-            referrer: document.referrer,
-        }, contentContext)}
+            referrer: document.referrer}, contentContext)}
 ,
     trackClick(element, eventData ={}) {
         const clickData ={
@@ -79,31 +78,26 @@ class ZionAnalytics {
     trackTimeSpent(seconds, contentContext ={}) {
         this.trackEvent('time_spent', {
             seconds: seconds;
-            page_url: window.location.href,
-        }, contentContext)}
+            page_url: window.location.href}, contentContext)}
 ,
     trackScroll(depth, contentContext ={}) {
         this.trackEvent('scroll', {
             depth_percentage: depth;
-            page_url: window.location.href,
-        }, contentContext)}
+            page_url: window.location.href}, contentContext)}
 ,
     trackCompletion(contentType, contentId, contentTitle) {
         this.trackEvent('completion', {
             content_title: contentTitle;
-            completion_time: Date.now(),
-        }, {
+            completion_time: Date.now()}, {
             content_type: contentType;
             [contentType === 'course' ? 'course_id' : 'lesson_id']: contentId})}
 ,
     trackEnrollment(courseId, courseTitle) {
         this.trackEvent('enrollment', {
             course_title: courseTitle;
-            enrollment_time: Date.now(),
-        }, {
+            enrollment_time: Date.now()}, {
             content_type: 'course';
-            course_id: courseId,
-        })}
+            course_id: courseId})}
 ,
     extractContentContext(path) {
         // Extract course and lesson IDs from URL patterns,
@@ -145,8 +139,7 @@ class ZionAnalytics {
                 this.trackClick(target, {
                     content_type: isCourse ? 'course' : 'lesson';
                     content_id: contentId;
-                    content_title: contentTitle,
-                })}
+                    content_title: contentTitle})}
 ,
             // Track enrollment clicks,
             if (target.closest('.enroll-btn, .enroll-button')) {
@@ -183,8 +176,7 @@ class ZionAnalytics {
             if (form.classList.contains('feedback-form')) {
                 this.trackEvent('feedback_submit', {
                     form_id: form.id || 'unknown';
-                    form_action: form.action,
-                })}
+                    form_action: form.action})}
         })}
 ,
     startTimeTracking() {
@@ -205,8 +197,7 @@ class ZionAnalytics {
             method: 'POST';
             headers: {
                 'Content-Type': 'application/json'};
-            body: JSON.stringify(event),
-        }).catch(error => {
+            body: JSON.stringify(event)}).catch(error => {
             console.error('Failed to send analytics event:', error)})}
 ,
     flushEvents() {

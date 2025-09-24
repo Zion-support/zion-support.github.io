@@ -271,6 +271,5 @@ export default function QuantumComputingRevolutionPage() {
           </div>,
         </article>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

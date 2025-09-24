@@ -10,7 +10,6 @@ export default function Sidebar(): any ({
   visibilityFilter;
   onChangeVisibility;
 }: SidebarProps) {
-,
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>,
       <div>,
@@ -37,8 +36,7 @@ export default function Sidebar({
   selectedVersion,
   onChangeVersion,
   visibilityFilter,
-  onChangeVisibility,
-}: SidebarProps) {
+  onChangeVisibility}: SidebarProps) {
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>,
       <div>,
@@ -60,8 +58,7 @@ interface SidebarProps {
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
-  onChangeVisibility: (v: Visibility | 'all') => void,
-}
+  onChangeVisibility: (v: Visibility | 'all') => void}
 export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
   return (
     <aside className="w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary">,

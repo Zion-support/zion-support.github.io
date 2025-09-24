@@ -8,8 +8,7 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true,
   if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
   if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
-  return true,
-}
+  return true}
 ,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(40o5).json({ error: "Method not allowed" }),

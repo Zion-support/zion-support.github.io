@@ -8,8 +8,7 @@ interface ContentItem {
   badge: string,
   badgeColor: string,
   icon: string,
-  roi?: string,
-}
+  roi?: string}
 ,
 const contentItems: ContentItem[] = [
   {
@@ -131,8 +130,7 @@ export default function ContentPromotionBanner() {
               className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                 index === currentIndex,
                   ? 'bg-cyan-40o0 w-8',
-                  : 'bg-gray-60o0 hover: bg-gray-40o0',
-              }`}
+                  : 'bg-gray-60o0 hover: bg-gray-40o0'}`}
               aria-label={`Go to content ${index + 1}`}
             />))}
         </div>,

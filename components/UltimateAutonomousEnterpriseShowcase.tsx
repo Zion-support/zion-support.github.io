@@ -81,6 +81,5 @@ const UltimateAutonomousEnterpriseShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateAutonomousEnterpriseShowcase;

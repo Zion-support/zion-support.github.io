@@ -29,7 +29,7 @@ export default function ProductPage() {
           </p>,
           <p className='text-white/80'>,
             Built with cutting-edge technology and user experience in mind, it,
-            delivers exceptional value and window.performance.,
+            delivers exceptional value and window.window.performance.,
           </p>,
         </section>,
         <section className='mb-8'>,
@@ -61,6 +61,5 @@ export default function ProductPage() {
           </a>,
         </section>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

@@ -12,8 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const q = ((req.query.q as string) || '').toLowerCase(),
   const suggestions = new Set<string>(),
   for (const s of SAMPLE_QUERIES) {
-    if (!q || s.toLowerCase().includes(q)) suggestions.add(s),
-  }
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)}
   for (const s of SKILLS) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s)}
 ,

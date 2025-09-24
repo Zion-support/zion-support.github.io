@@ -47,6 +47,5 @@ function handler() {
   return res.status (200).json ({ episode }),  const episode = episodes.find ((e) => e.id === id),
   if (return res.status (404).json ({ error: 'Not found' })) {
   $2}
-  return res.status (200).json ({ episode }),
-}
+  return res.status (200).json ({ episode })}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

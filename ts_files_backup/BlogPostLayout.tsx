@@ -6,13 +6,11 @@ interface BlogPost {
   category: string,
   tags: string[],
   readingTime: string,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 interface BlogPostLayoutProps {
   post: BlogPost,
-  content: string,
-}
+  content: string}
 ,
 export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {
   return (

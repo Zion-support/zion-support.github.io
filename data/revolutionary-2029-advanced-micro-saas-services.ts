@@ -29,16 +29,14 @@ export interface RevolutionaryService20o29 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
   reviews: number,
-  popular?: boolean,
-}
+  popular?: boolean}
 ,
 export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryService20o29[] = [
   {
@@ -89,8 +87,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 45;
     rating: 4.9;
     reviews: 127;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'quantum-ai-hybrid-platform';
     name: 'Quantum AI Hybrid Platform';
@@ -138,8 +135,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 12;
     rating: 4.8;
     reviews: 34;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-cybersecurity-platform';
     name: 'AI-Powered Cybersecurity Platform';
@@ -187,8 +183,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 89;
     rating: 4.9;
     reviews: 156;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-content-marketing-suite';
     name: 'AI Content Marketing Suite';
@@ -236,8 +231,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 234;
     rating: 4.8;
     reviews: 89;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-sales-copilot';
     name: 'AI Sales Copilot';
@@ -285,8 +279,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 156;
     rating: 4.7;
     reviews: 20o3;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-customer-support-platform';
     name: 'AI Customer Support Platform';
@@ -334,8 +327,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 189;
     rating: 4.8;
     reviews: 167;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-data-analytics-bi';
     name: 'AI Data Analytics & BI Platform';
@@ -383,8 +375,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 134;
     rating: 4.9;
     reviews: 134;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'cloud-devops-platform';
     name: 'Cloud Infrastructure & DevOps Platform';
@@ -432,8 +423,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 145;
     rating: 4.8;
     reviews: 145;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'quantum-financial-trading';
     name: 'Quantum Financial Trading Platform';
@@ -481,8 +471,7 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 8;
     rating: 4.9;
     reviews: 23;
-    popular: true,
-  };
+    popular: true};
   {
     id: 'ai-healthcare-analytics';
     name: 'AI Healthcare Analytics Platform';
@@ -530,12 +519,10 @@ export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServ
     customers: 67;
     rating: 4.8;
     reviews: 89;
-    popular: true,
-  }
+    popular: true}
 ],
 export const getServicesByCategory = (category: string) => {
-  return revolutionaryServices20o29.filter(service => service.category === category),
-};
+  return revolutionaryServices20o29.filter(service => service.category === category)};
 export const getPopularServices = () => {
   return revolutionaryServices20o29.filter(service => service.isPopular)};
 export const getNewServices = () => {

@@ -9,8 +9,7 @@ export default function AboutPage() {
 		mobile: '+1 302 464 0950';
 		email: 'kleber@ziontechgroup.com';
 		address: '364 E Main St STE 1008 Middletown DE 19709';
-		website: 'https://ziontechgroup.com',
-	};
+		website: 'https://ziontechgroup.com'};
 	const pillars = [
 		{ title: 'AI-first 'Engineering', 'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' };
 		{ title: 'Platform and 'SRE', 'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' };
@@ -131,8 +130,7 @@ export default function AboutPage() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   return (
       {/* Mission & Vision */}
     <>,

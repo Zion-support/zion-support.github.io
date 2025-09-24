@@ -15,8 +15,7 @@ const UltimateContentRevolution20o25Banner = () => {
         savings: '$50o0B+';
         engagement: '99.9%';
         production: '3,0o00%'};
-      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results',
-    };
+      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results'};
     {
       id: 'fortune-50o0-content-success';
       title: 'Fortune 50o0 Ultimate Content Revolution: $50o0B Annual Savings - 25,0o00% ROI Success';
@@ -27,8 +26,7 @@ const UltimateContentRevolution20o25Banner = () => {
         savings: '$50o0B';
         engagement: '99.9%';
         production: '5,0o00%'};
-      description: 'How a global technology leader achieved unprecedented results with AI content strategies',
-    };
+      description: 'How a global technology leader achieved unprecedented results with AI content strategies'};
     {
       id: 'content-revolution-implementation';
       title: 'Ultimate Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI';
@@ -38,10 +36,8 @@ const UltimateContentRevolution20o25Banner = () => {
         roi: '25,0o00%';
         timeline: '12 months';
         success: '99.7%';
-        guide: 'Complete',
-      };
-      description: 'The definitive guide to transforming your content operations with revolutionary AI strategies',
-    }
+        guide: 'Complete'};
+      description: 'The definitive guide to transforming your content operations with revolutionary AI strategies'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -143,8 +139,7 @@ const UltimateContentRevolution20o25Banner = () => {
                     className={`p-3 rounded-lg cursor-pointer transition-all ${
                       index === currentSlide,
                         ? 'bg-white/20 border-2 border-white/30',
-                        : 'bg-white/5 hover: bg-white/10',
-                    }`}
+                        : 'bg-white/5 hover: bg-white/10'}`}
                     onClick={() => setCurrentSlide(index)}
                   >,
                     <div className="flex items-center justify-between mb-2">,

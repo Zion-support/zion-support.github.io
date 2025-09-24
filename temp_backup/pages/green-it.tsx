@@ -15,6 +15,5 @@ export default function GreenItPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

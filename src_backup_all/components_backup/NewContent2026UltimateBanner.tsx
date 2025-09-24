@@ -103,6 +103,5 @@ const NewContent20o26UltimateBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default NewContent20o26UltimateBanner;

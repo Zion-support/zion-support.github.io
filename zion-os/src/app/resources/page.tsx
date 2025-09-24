@@ -596,6 +596,5 @@ export default function ResourcesPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

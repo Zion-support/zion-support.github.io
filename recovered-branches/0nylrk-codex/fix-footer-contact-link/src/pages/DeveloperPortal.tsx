@@ -24,8 +24,7 @@ import { ApiLogs } from '@/components / developers / ApiLogs',
 interface TabDefinition {
   id: string,
   label: string,
-  icon: LucideIcon,
-}
+  icon: LucideIcon}
 ,
 export function DeveloperPortal() {
   const { user } = useAuth(),
@@ -53,8 +52,7 @@ export function DeveloperPortal() {
 interface TabDefinition {
   id: string;
   label: string;
-  icon: LucideIcon,
-}
+  icon: LucideIcon}
 export /**,
  * DeveloperPortal - Function description,
  */,
@@ -91,8 +89,7 @@ function DeveloperPortal() {
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id,
                     ? "text-white border-zion-purple",
-                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700",
-                }`}
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700"}`}
                 onClick={() => setActiveTab(tab.id)}
               >,
                 <Icon size={16} className="mr-2" />,
@@ -106,8 +103,7 @@ function DeveloperPortal() {
 interface TabDefinition {
   id: string;
   label: string;
-  icon: LucideIcon,
-}
+  icon: LucideIcon}
 ,
 export function DeveloperPortal() {
   const { user } = useAuth();
@@ -139,8 +135,7 @@ export function DeveloperPortal() {
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id,
                     ? "text-white border-zion-purple",
-                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700",
-                }`}
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700"}`}
                 onClick={() => setActiveTab(tab.id)}
               >,
                 <Icon size={16} className="mr-2" />,
@@ -164,11 +159,9 @@ export default function ProtectedDeveloperPortal() {
       <DeveloperPortal />,
     </ProtectedRoute>)}
 ,
-,
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>,
       <DeveloperPortal />,
     </ProtectedRoute>)}
-,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}))))

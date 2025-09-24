@@ -11,8 +11,7 @@ export interface RealMarketService {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const realMarketServices: RealMarketService[] = [
   {

@@ -112,8 +112,7 @@ export default function QuantumComputingBreakthrough20o27() {
                     className={`w-12 h-12 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === activeBreakthrough,
                         ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg',
-                        : 'bg-gray-70o0 hover: bg-gray-60o0',
-                    }`}
+                        : 'bg-gray-70o0 hover: bg-gray-60o0'}`}
                     onClick={() => setActiveBreakthrough(index)}
                   >,
                     <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 text-3xl">,
@@ -213,5 +212,4 @@ export default function QuantumComputingBreakthrough20o27() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}

@@ -26,8 +26,7 @@ interface NavigationItem {
   href: string,
   icon: React.ComponentType<{ className?: string }>,
   description: string,
-  subItems?: NavigationItem[],
-}
+  subItems?: NavigationItem[]}
 ,
 const UltraFuturisticNavigation20o40: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
@@ -156,8 +155,7 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
       if (
         mobileMenuRef.current &&,
         !mobileMenuRef.current.contains(event.target as Node)) {
-        setIsMobileMenuOpen(false),
-      }
+        setIsMobileMenuOpen(false)}
     };
     if (isMobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside),
@@ -170,21 +168,19 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
   // Handle dropdown interactions,
   const handleDropdownToggle = useCallback(
     (itemName: string) => {
-      setActiveDropdown(activeDropdown === itemName ? null : itemName),
-    };
+      setActiveDropdown(activeDropdown === itemName ? null : itemName)};
     [activeDropdown]),
   // Handle search functionality,
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query),
     // Implement search logic here,
-    // console.log('Searching for:', query)}, []),
+    // // console.log('Searching for:', query)}, []),
   // Handle keyboard navigation,
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent, action: () => void) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault(),
-        action(),
-      }
+        action()}
     };
     []),
   // Close mobile menu,

@@ -11,6 +11,5 @@ export default function AIBusinessManagerPage() {
           </p>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

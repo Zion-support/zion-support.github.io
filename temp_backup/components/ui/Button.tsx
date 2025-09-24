@@ -9,8 +9,7 @@ interface ButtonProps {
   onClick?: () => void,
   disabled?: boolean,
   className?: string,
-  type?: 'button' | 'submit' | 'reset',
-}
+  type?: 'button' | 'submit' | 'reset'}
 ,
 export default function Button({
   children;

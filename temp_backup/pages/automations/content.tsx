@@ -5,8 +5,7 @@ type Item = {
   title: string,
   url: string,
   tags?: string[],
-  score?: number,
-};
+  score?: number};
 export default function TechContentCurator() {
   const items = (content.items as Item[]) || [],
   return (

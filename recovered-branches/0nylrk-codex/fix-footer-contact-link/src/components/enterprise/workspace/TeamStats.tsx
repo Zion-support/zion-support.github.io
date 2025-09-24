@@ -45,6 +45,5 @@ export function TeamStats() {
           </button>,
         </div>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

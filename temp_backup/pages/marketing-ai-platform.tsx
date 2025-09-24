@@ -47,8 +47,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export default function MarketingAIPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -121,7 +120,7 @@ export default function MarketingAIPlatform() {
               </div>,
               <h3 className="text-xl font-semibold mb-3">Automated Optimization</h3>,
               <p className="text-gray-40o0">,
-                Machine learning algorithms that continuously optimize campaigns for maximum window.performance.,
+                Machine learning algorithms that continuously optimize campaigns for maximum window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-pink-90o0/20 to-red-90o0/20 border border-pink-50o0/20">,
@@ -504,6 +503,5 @@ export default function MarketingAIPlatform() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

@@ -52,26 +52,22 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       title: 'Overview';
       subtitle: 'Complete business intelligence overview';
       icon: BarChart3;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     users: {
       title: 'Users';
       subtitle: 'User behavior and engagement analytics';
       icon: Users;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     performance: {
       title: 'Performance';
       subtitle: 'System performance and optimization metrics';
       icon: Zap;
-      color: 'from-yellow-50o0 to-orange-50o0',
-    };
+      color: 'from-yellow-50o0 to-orange-50o0'};
     revenue: {
       title: 'Revenue';
       subtitle: 'Financial metrics and conversion tracking';
       icon: TrendingUp;
-      color: 'from-purple-50o0 to-pink-50o0',
-    }
+      color: 'from-purple-50o0 to-pink-50o0'}
   };
   const realTimeMetrics = [
     {
@@ -80,32 +76,28 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       change: '+12%';
       trend: 'up';
       icon: Users;
-      color: 'text-green-40o0',
-    };
+      color: 'text-green-40o0'};
     {
       label: 'Page Views';
       value: '45.2M';
       change: '+8%';
       trend: 'up';
       icon: Eye;
-      color: 'text-blue-40o0',
-    };
+      color: 'text-blue-40o0'};
     {
       label: 'Conversion Rate';
       value: '3.8%';
       change: '+0.5%';
       trend: 'up';
       icon: Target;
-      color: 'text-purple-40o0',
-    };
+      color: 'text-purple-40o0'};
     {
       label: 'Revenue';
       value: '$2.1M';
       change: '+15%';
       trend: 'up';
       icon: TrendingUp;
-      color: 'text-yellow-40o0',
-    }
+      color: 'text-yellow-40o0'}
   ],
   const userInsights = [
     {
@@ -115,8 +107,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       trend: 'up';
       change: '+12%';
       icon: Clock;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       title: 'Mobile Usage Surge';
       description: 'Mobile traffic increased by 25% this week';
@@ -124,8 +115,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       trend: 'up';
       change: '+25%';
       icon: Smartphone;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       title: 'AI Recommendations';
       description: 'AI-powered recommendations driving 40% of conversions';
@@ -133,8 +123,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       trend: 'up';
       change: '+8%';
       icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       title: 'Performance Score';
       description: 'Website performance score improved significantly';
@@ -142,8 +131,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       trend: 'up';
       change: '+6 points';
       icon: Zap;
-      color: 'from-yellow-50o0 to-orange-50o0',
-    }
+      color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const performanceData = [
     {
@@ -153,8 +141,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       unit: 's';
       improvement: 33;
       icon: Clock;
-      status: 'Good',
-    };
+      status: 'Good'};
     {
       metric: 'First Contentful Paint';
       current: 0.8;
@@ -162,8 +149,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       unit: 's';
       improvement: 37;
       icon: Eye;
-      status: 'Excellent',
-    };
+      status: 'Excellent'};
     {
       metric: 'Largest Contentful Paint';
       current: 2.1;
@@ -171,8 +157,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       unit: 's';
       improvement: 28;
       icon: Maximize;
-      status: 'Good',
-    };
+      status: 'Good'};
     {
       metric: 'Cumulative Layout Shift';
       current: 0.0o5;
@@ -180,8 +165,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       unit: '';
       improvement: 50;
       icon: Activity;
-      status: 'Excellent',
-    }
+      status: 'Excellent'}
   ],
   const aiFeatures = [
     {
@@ -189,49 +173,42 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
       description: 'AI predicts user behavior and trends with 94% accuracy';
       icon: Brain;
       status: 'Active';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       title: 'Automated Insights';
       description: 'AI automatically generates actionable business insights';
       icon: Sparkles;
       status: 'Active';
-      impact: 'Critical',
-    };
+      impact: 'Critical'};
     {
       title: 'Real-time Optimization';
       description: 'AI continuously optimizes user experience in real-time';
       icon: Zap;
       status: 'Beta';
-      impact: 'High',
-    };
+      impact: 'High'};
     {
       title: 'Anomaly Detection';
       description: 'AI detects unusual patterns and potential issues';
       icon: AlertTriangle;
       status: 'Active';
-      impact: 'Medium',
-    }
+      impact: 'Medium'}
   ],
   const charts = [
     {
       title: 'User Growth Over Time';
       type: 'line';
       data: [120o0190o030005000750012000180o0023000];
-      labels: ['Jan'Feb'Mar'Apr'May'Jun'Jul'Aug'],
-    };
+      labels: ['Jan'Feb'Mar'Apr'May'Jun'Jul'Aug']};
     {
       title: 'Revenue by Source';
       type: 'pie';
       data: [452520o10];
-      labels: ['Organic'Paid'Social'Direct'],
-    };
+      labels: ['Organic'Paid'Social'Direct']};
     {
       title: 'Page Performance';
       type: 'bar';
       data: [8592789688949087];
-      labels: ['Home'About'Services'Products'Blog'Contact'Pricing'Support'],
-    }
+      labels: ['Home'About'Services'Products'Blog'Contact'Pricing'Support']}
   ],
   useEffect(() => {
     if (isAnalyzing) {
@@ -355,8 +332,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeTab === key,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                }`}
+                    : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0'}`}
               >,
                 <tab.icon className="inline-block mr-2"  />,
                 {tab.title}
@@ -471,8 +447,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     feature.status === 'Active' ? 'bg-green-50o0/20 text-green-40o0' :,
                     feature.status === 'Beta' ? 'bg-yellow-50o0/20 text-yellow-40o0' :,
-                    'bg-gray-50o0/20 text-gray-40o0',
-                  }`}>,
+                    'bg-gray-50o0/20 text-gray-40o0'}`}>,
                     {feature.status}
                   </span>,
                 </div>,
@@ -536,6 +511,5 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AIAdvancedAnalyticsDashboard20o30;

@@ -1,8 +1,7 @@
 interface AnimatedCounterProps {
   value: number,
   duration?: number,
-  className?: string,
-}
+  className?: string}
 ,
 export default function AnimatedCounter({ value, duration = 20o00, className = '' }: AnimatedCounterProps) {
   return (

@@ -9,8 +9,7 @@ interface AccessibilitySettings {
   reducedMotion: boolean,
   screenReader: boolean,
   keyboardNavigation: boolean,
-  zoomLevel: number,
-}
+  zoomLevel: number}
 ,
 const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -20,8 +19,7 @@ const EnhancedAccessibility: React.FC = () => {
     reducedMotion: false;
     screenReader: false;
     keyboardNavigation: false;
-    zoomLevel: 10o0,
-  }),
+    zoomLevel: 10o0}),
   useEffect(() => {
     // Load saved settings from localStorage,
     const savedSettings = localStorage.getItem('accessibility-settings'),
@@ -34,8 +32,7 @@ const EnhancedAccessibility: React.FC = () => {
     const root = document.documentElement,
     // High contrast,
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast'),
-    } else {
+      root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
 ,
     // Large text,
@@ -63,8 +60,7 @@ const EnhancedAccessibility: React.FC = () => {
       reducedMotion: false;
       screenReader: false;
       keyboardNavigation: false;
-      zoomLevel: 10o0,
-    };
+      zoomLevel: 10o0};
     setSettings(defaultSettings),
     applyAccessibilitySettings(defaultSettings)};
   const togglePanel = () => {

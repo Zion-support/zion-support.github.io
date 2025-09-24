@@ -136,6 +136,5 @@ export function TeamExpertiseSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

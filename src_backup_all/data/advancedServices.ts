@@ -2,8 +2,7 @@ export type PricingTier = {
   id: string,
   name: string,
   priceLabel: string,
-  features: string[],
-};
+  features: string[]};
 export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'basic';
@@ -30,8 +29,7 @@ export type AdvancedService = {
   category: string,
   pricingTier: PricingTier['id'],
   description: string,
-  link?: string,
-};
+  link?: string};
 export const ADVANCED_SERVICES: AdvancedService[] = [
   {
     id: 'ai-business-intelligence';

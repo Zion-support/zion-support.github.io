@@ -370,6 +370,5 @@ export default function AIAutomationServices20o26() {
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>),
-}
+    </ErrorBoundary>)}
 ,

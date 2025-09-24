@@ -25,16 +25,14 @@ author: {
     name: string,
     id: string,
     avatarUrl?: string,
-    verified: boolean,
-};
+    verified: boolean};
   images: string[],
   createdAt: string,
   technologyStack: string[],
   useCases: string[],
   integrations: string[],
   compliance: string[],
-  support: string[],
-}
+  support: string[]}
 ,
 export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
   // Blockchain & DeFi Platform,
@@ -77,8 +75,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Solidity", "Rust", "JavaScript", "Python", "Web3.js"];
@@ -126,8 +123,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Python", "Node.js", "Kubernetes", "Docker", "MQTT"];
@@ -175,8 +171,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["ROS", "Python", "C++", "TensorFlow", "Computer Vision"];
@@ -224,8 +219,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"];
@@ -273,8 +267,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"];
@@ -322,8 +315,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"];
@@ -371,8 +363,7 @@ export const EMERGING_TECH_SERVICES_20o27: EmergingTechService20o27[] = [
       name: "Zion Tech Group";
       id: "zion-tech-group";
       avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0";
-      verified: true,
-    };
+      verified: true};
     images: ["https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0"];
     createdAt: "20o27-0o1-15T10:0o0:0o0.0o00Z";
     technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"];

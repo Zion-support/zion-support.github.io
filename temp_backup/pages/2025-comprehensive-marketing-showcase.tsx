@@ -15,5 +15,4 @@ export default function 20o25ComprehensiveMarketingShowcasePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}

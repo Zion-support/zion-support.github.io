@@ -31,6 +31,5 @@ export default function NewContent20o25AdvancedAutomationBanner() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

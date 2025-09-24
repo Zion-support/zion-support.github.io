@@ -40,8 +40,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
     if (selectedPlan === 'starter') return service.pricing.starter || 'Contact for pricing',
     if (selectedPlan === 'professional') return service.pricing.professional || 'Contact for pricing',
     if (selectedPlan === 'enterprise') return service.pricing.enterprise || 'Contact for pricing',
-    return service.pricing.custom || 'Contact for pricing',
-  };
+    return service.pricing.custom || 'Contact for pricing'};
   // Get plan features,
   const getPlanFeatures = (plan: string) => {
     const features ={
@@ -98,8 +97,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 transform hover: scale-10o5 ${
                   selectedPlan === plan,
                     ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white shadow-lg shadow-cyan-50o0/25',
-                    : 'border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black',
-                }`}
+                    : 'border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black'}`}
               >,
                 {plan.charAt(0).toUpperCase() + plan.slice(1)}
               </button>))}
@@ -122,8 +120,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 transform hover: scale-10o5 ${
                   selectedCategory === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                    : 'bg-white/5 text-gray-30o0 hover: bg-white/10 border border-white/10',
-                }`}
+                    : 'bg-white/5 text-gray-30o0 hover: bg-white/10 border border-white/10'}`}
               >,
                 {category.icon}
                 {category.name}

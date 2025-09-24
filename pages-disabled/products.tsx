@@ -294,8 +294,7 @@ const Products: NextPage = () => {
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                   activeCategory === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-10o5`,
-                    : 'bg-white/10 text-white hover: bg-white/20 backdrop-blur-sm',
-                }`}
+                    : 'bg-white/10 text-white hover: bg-white/20 backdrop-blur-sm'}`}
               >,
                 <IconComponent className='w-5 h-5' />,
                 <span>{category.name}</span>,
@@ -373,8 +372,7 @@ const Products: NextPage = () => {
                     💰 View Pricing,
                   </a>,
                 </div>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* Enterprise Solutions */}
         <div className='mt-20'>,
@@ -586,6 +584,5 @@ const Products: NextPage = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default Products;

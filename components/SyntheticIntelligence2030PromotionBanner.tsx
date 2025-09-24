@@ -149,6 +149,5 @@ const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default SyntheticIntelligence20o30PromotionBanner;

@@ -2,13 +2,11 @@ type Manifesto = {
   title: string,
   videoProvider: 'youtube' | 'ipfs',
   videoIdOrCid: string,
-  text: string,
-};
+  text: string};
 export default function WelcomeManifesto({
   manifesto;
 }: {
-  manifesto: Manifesto,
-}) {
+  manifesto: Manifesto}) {
   return (
     <section className='grid md: grid-cols-2 gap-6 items-start'>,
       <div className='aspect-video w-full rounded-lg overflow-hidden border'>,

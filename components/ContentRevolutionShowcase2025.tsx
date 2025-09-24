@@ -140,6 +140,5 @@ export default function ContentRevolutionShowcase20o25() {
           </Link>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

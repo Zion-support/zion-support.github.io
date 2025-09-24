@@ -49,32 +49,28 @@ const pricingTiers = [
     description: 'Perfect for small businesses and startups';
     features: ['Basic AI features', 'Email support', 'Standard integrations', 'Basic analytics'];
     color: 'from-green-50o0 to-emerald-50o0';
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Professional';
     price: '$599';
     description: 'Ideal for growing businesses';
     features: ['Advanced AI capabilities', 'Priority support', 'Advanced integrations', 'Custom workflows', 'Performance analytics'];
     color: 'from-blue-50o0 to-cyan-50o0';
-    popular: true,
-  };
+    popular: true};
   {
     name: 'Enterprise';
     price: '$1,999';
     description: 'For large organizations';
     features: ['Full AI suite', '24/7 dedicated support', 'Custom development', 'Advanced security', 'SLA guarantees', 'On-premise options'];
     color: 'from-purple-50o0 to-pink-50o0';
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Quantum';
     price: '$4,999';
     description: 'Cutting-edge quantum solutions';
     features: ['Quantum computing access', 'AI research collaboration', 'Custom algorithms', 'Dedicated infrastructure', 'White-label options'];
     color: 'from-indigo-50o0 to-purple-50o0';
-    popular: false,
-  }
+    popular: false}
 ],
 export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All'),
@@ -119,8 +115,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
         break,
       default: ,
         aValue = a.name.toLowerCase(),
-        bValue = b.name.toLowerCase(),
-    }
+        bValue = b.name.toLowerCase()}
 ,
     if (sortOrder === 'asc') {
       return aValue > bValue ? 1 : -1} else {
@@ -129,8 +124,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
   const contactInfo ={
     phone: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 10o08 Middletown DE 19709'};
   const getPriceColor = (price: string) => {
     const priceNum = parseInt(price.replace(/[^0-9]/g, '')),
     if (priceNum < 50o0) return 'text-green-60o0',
@@ -230,8 +224,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 transition-all duration-30o0 hover: scale-10o5 ${
                   tier.popular,
                     ? 'border-zion-cyan/50 shadow-2xl shadow-zion-cyan/20',
-                    : 'border-zion-cyan/20 hover:border-zion-cyan/40',
-                }`}
+                    : 'border-zion-cyan/20 hover:border-zion-cyan/40'}`}
               >,
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">,
@@ -257,8 +250,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
                   className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-30o0 ${
                     tier.popular,
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover: from-zion-purple hover:to-zion-cyan',
-                      : 'bg-white/10 text-zion-cyan border border-zion-cyan/30 hover:bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-zion-cyan border border-zion-cyan/30 hover:bg-white/20'}`}
                 >,
                   {tier.popular ? 'Get Started' : 'Learn More'}
                 </button>,
@@ -284,8 +276,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                       isSelected,
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg',
-                        : 'bg-white/10 backdrop-blur-sm text-zion-gray-light hover: bg-white/20 hover:text-white',
-                    }`}
+                        : 'bg-white/10 backdrop-blur-sm text-zion-gray-light hover: bg-white/20 hover:text-white'}`}
                   >,
                     <Icon className="w-4 h-4"  />,
                     {category}
@@ -398,8 +389,7 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
                     </a>,
                   </div>,
                 </div>,
-              </motion.div>),
-          })}
+              </motion.div>)})}
         </motion.div>,
         {/* Call to Action Section */}
         <motion.div,
@@ -449,6 +439,5 @@ export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ComprehensivePricingGuide20o29;

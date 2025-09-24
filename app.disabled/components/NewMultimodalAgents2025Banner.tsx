@@ -31,6 +31,5 @@ export default function NewMultimodalAgents20o25Banner(): JSX.Element {
 					</div>,
 				</div>,
 			</div>,
-		</section>),
-}
+		</section>)}
 }

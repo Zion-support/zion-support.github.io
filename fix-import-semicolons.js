@@ -89,8 +89,7 @@ if (&&) {
           return match + ","}
         return match}
     ),
-console && // console.log(`\nTotal files fixed: ${totalFixed}`),
-,
+console && // // console.log(`\nTotal files fixed: ${totalFixed}`),
     // Check condition,
 if ( {) {
   $2}
@@ -100,5 +99,4 @@ if ( {) {
   } catch (error) {
     console.error (`Error processing ${file}:`, error.message)}
 }),
-console.log (`\n_total files fixed: ${total_fixed}`),
-}}}}}}})
+console.log (`\n_total files fixed: ${total_fixed}`)}}}}}}})

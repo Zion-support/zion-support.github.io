@@ -12,7 +12,6 @@ import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturis
 import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028',
 import { futuristic2028Services } from '../data / 2028 - futuristic - innovations',
 import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services',
-,
   CheckCircle;
   ArrowRight;
   Star;
@@ -46,7 +45,6 @@ import { emergingTech2028Services } from '../data / 2028 - emerging - tech - ser
   Clock;
   Globe2;} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-,
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
@@ -103,13 +101,11 @@ class ErrorBoundary extends React.Component {
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2,
-,
 const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const pricingTiers = [
   {
     name: 'Starter',
@@ -150,7 +146,6 @@ const pricingTiers = [
   Clock;
   Globe2;} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-,
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
@@ -159,8 +154,7 @@ const contact_info = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com',
-}
+  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'}
 ,
 const pricing_tiers = [
   {
@@ -184,8 +178,7 @@ const pricing_tiers = [
     popular: false,
     color: 'from-blue-600 to-cyan-600',
     cta: 'Get Started',
-    href: '/contact',
-  }
+    href: '/contact'}
     name: 'Professional',
     price: '$999',
     period: '/month',
@@ -202,13 +195,11 @@ const pricing_tiers = [
     popular: true,
     color: 'from-purple-600 to-pink-600',
     cta: 'Start Free Trial',
-    href: '/contact',
-  },  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'],
+    href: '/contact'},  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'],
     popular: true,
     color: 'from-purple-600 to-pink-600',
     cta: 'Start Free Trial',
-    href: '/contact',
-  }
+    href: '/contact'}
     name: 'Enterprise',
     price: 'Custom',
     period: '',
@@ -232,14 +223,12 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com',
-};
+  website: 'https://ziontechgroup && ziontechgroup.com',  website: 'https://ziontechgroup && ziontechgroup.com'};
       'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'],
     popular: false,
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
-    href: '/contact',
-  }
+    href: '/contact'}
 ,
     name: 'Professional';
     price: '$999';
@@ -263,8 +252,7 @@ const contactInfo = {
     popular: true;
     color: 'from - purple - 600 to - pink - 600';
     cta: 'Start Free Trial';
-    href: '/contact',
-  }
+    href: '/contact'}
 ,
     name: 'Enterprise';
     price: 'Custom';
@@ -291,8 +279,7 @@ const contactInfo = {
     popular: false;
     color: 'from - indigo - 600 to - purple - 600';
     cta: 'Contact Sales';
-    href: '/contact',
-  }
+    href: '/contact'}
 ,
 const pricingTiers = [
   {
@@ -316,8 +303,7 @@ const pricingTiers = [
     popular: false;
     color: 'from-blue-600 to-cyan-600';
     cta: 'Get Started';
-    href: '/contact',
-  };
+    href: '/contact'};
   {
     category: ' 2028 Futuristic Innovations',
     services: futuristic2028Services.slice(0, 6)}
@@ -385,8 +371,7 @@ const service_pricing = [
     popular: false;
     color: 'from-indigo-600 to-purple-600';
     cta: 'Contact Sales';
-    href: '/contact',
-  }
+    href: '/contact'}
 const servicePricing = [
   {
     category: '🚀 2028 Futuristic Innovations';
@@ -420,8 +405,7 @@ const servicePricing = [
     services: futuristic2028Services && futuristic2028Services.filter(s => s && s.category.includes('Quantum')).slice(0, 4)};
   {
     category: '🤖 AI & Machine Learning';
-    services: emergingTech2028Services && emergingTech2028Services.filter(s => s && s.category.includes('AI')).slice(0, 4),
-}
+    services: emergingTech2028Services && emergingTech2028Services.filter(s => s && s.category.includes('AI')).slice(0, 4)}
 ],
 export default function Revolutionary2028Pricing() {
   return (
@@ -1057,8 +1041,7 @@ export default function Revolutionary2028Pricing() {
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />)),
-    </>),
-}
+    </>)}
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>,
               Join hundreds of companies already leveraging our futuristic,
               services to gain competitive advantages and drive innovation.,

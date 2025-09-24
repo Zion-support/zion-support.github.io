@@ -11,8 +11,7 @@ export interface PracticalBusinessSolution20o28 {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {

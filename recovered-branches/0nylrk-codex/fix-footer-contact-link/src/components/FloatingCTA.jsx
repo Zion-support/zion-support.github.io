@@ -21,8 +21,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':,
                 return 'top-6 left-6',
             default: ,
-                return 'bottom-6 right-6',
-        }
+                return 'bottom-6 right-6'}
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -33,8 +32,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':,
                 return 'top-6 left-6',
             default: ,
-                return 'bottom-6 right-6',
-        }
+                return 'bottom-6 right-6'}
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>,

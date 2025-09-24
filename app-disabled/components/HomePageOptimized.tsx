@@ -41,15 +41,13 @@ export const metadata ={
         url: 'https://zion.app/images/zion-tech-group-og.jpg';
         width: 120o0;
         height: 630;
-        alt: 'Zion Tech Group - AI Solutions',
-      }
+        alt: 'Zion Tech Group - AI Solutions'}
     ]};
   twitter: {
     card: 'summary_large_image';
     title: 'Zion Tech Group - AI & Technology Solutions';
     description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.';
-    images: ['https://zion.app/images/zion-tech-group-twitter.jpg'],
-  }
+    images: ['https://zion.app/images/zion-tech-group-twitter.jpg']}
 };
 const HomePageOptimized = () => {
   return (
@@ -142,7 +140,7 @@ const HomePageOptimized = () => {
                 <h3 className="text-xl font-bold text-gray-90o0 mb-4">Cloud Infrastructure</h3>,
                 <p className="text-gray-60o0 mb-4">,
                   Scalable, secure cloud solutions designed to support your business growth and digital transformation.,
-                  <strong>Reduce costs by 60% while improving window.performance.</strong>,
+                  <strong>Reduce costs by 60% while improving window.window.performance.</strong>,
                 </p>,
                 <div className="mb-4 text-sm text-green-60o0 font-semibold">,
                   ✓ Scalable architecture ✓ Enhanced security ✓ Cost optimization,
@@ -221,8 +219,7 @@ const HomePageOptimized = () => {
               logo: "https://zion.app/images/zion-tech-group-logo.png";
               sameAs: [
                 "https://twitter.com/ZionTechGroup";
-                "https: //linkedin.com/company/zion-tech-group"],
-            }} ,
+                "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",

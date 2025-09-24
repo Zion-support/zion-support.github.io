@@ -35,8 +35,7 @@ interface ReportData {
   author: string,
   views: number,
   downloads: number,
-  rating: number,
-}
+  rating: number}
 ,
 interface ReportMetrics {
   totalReports: number,
@@ -91,8 +90,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         author: 'Sarah Johnson';
         views: 245;
         downloads: 89;
-        rating: 4.8,
-      };
+        rating: 4.8};
       {
         id: '2';
         title: 'AI Services Performance Metrics';
@@ -112,8 +110,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         author: 'Michael Chen';
         views: 189;
         downloads: 67;
-        rating: 4.9,
-      };
+        rating: 4.9};
       {
         id: '3';
         title: 'Cybersecurity Threat Assessment';
@@ -133,8 +130,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         author: 'David Kim';
         views: 312;
         downloads: 134;
-        rating: 4.7,
-      };
+        rating: 4.7};
       {
         id: '4';
         title: 'Cloud Infrastructure Utilization';
@@ -154,8 +150,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         author: 'Lisa Thompson';
         views: 167;
         downloads: 56;
-        rating: 4.5,
-      };
+        rating: 4.5};
       {
         id: '5';
         title: 'Customer Satisfaction Survey Results';
@@ -175,8 +170,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         author: 'Alex Wong';
         views: 20o3;
         downloads: 78;
-        rating: 4.6,
-      }
+        rating: 4.6}
     ],
     setReports(sampleReports),
     setFilteredReports(sampleReports)}, []),
@@ -225,8 +219,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break,
         default: ,
           aValue = 0,
-          bValue = 0,
-      }
+          bValue = 0}
 ,
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1} else {
@@ -248,8 +241,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         .map(([name, count]) => ({
           name;
           count;
-          percentage: (count / reports.length) * 10o0,
-        })),
+          percentage: (count / reports.length) * 10o0})),
         .sort((a, b) => b.count - a.count),
         .slice(0, 5)})();
     recentActivity: [
@@ -277,8 +269,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20',
       case 'critical': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Get status color,
   const getStatusColor = (status: string) => {
@@ -286,8 +277,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       case 'active': return 'text-green-40o0 bg-green-40o0/20',
       case 'archived': return 'text-zinc-40o0 bg-zinc-40o0/20',
       case 'draft': return 'text-yellow-40o0 bg-yellow-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    }
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
   // Handle report actions,
   const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {
@@ -300,21 +290,21 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break,
         case 'download':,
           // Simulate download,
-          // console.log(`Downloading ${report.title}`),
+          // // console.log(`Downloading ${report.title}`),
           break,
         case 'share':,
           // Simulate share,
-          // console.log(`Sharing ${report.title}`),
+          // // console.log(`Sharing ${report.title}`),
           break,
         case 'print':,
           // Simulate print,
-          // console.log(`Printing ${report.title}`),
+          // // console.log(`Printing ${report.title}`),
           break}
     }
   };
   // Export report data,
   const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
-    // console.log(`Exporting ${report.title} as ${format}`),
+    // // console.log(`Exporting ${report.title} as ${format}`),
     // In a real implementation, this would generate and download the file};
   return (
     <div className="w-full max-w-7xl mx-auto p-6">,
@@ -338,8 +328,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
                   viewMode === mode.id,
                     ? 'bg-zion-cyan text-white',
-                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50',
-                }`}
+                    : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50'}`}
               >,
                 {mode.icon}
                 {mode.label}

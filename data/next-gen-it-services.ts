@@ -31,15 +31,13 @@ export interface NextGenITService {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const nextGenITServices: NextGenITService[] = [
   // Advanced IT Infrastructure Services,
@@ -189,7 +187,7 @@ export const nextGenITServices: NextGenITService[] = [
       'Industrial automation';
       'Smart city infrastructure';
     ];
-    roi: 'Average customer achieves 350% ROI within 5 months through reduced latency and improved window.performance.';
+    roi: 'Average customer achieves 350% ROI within 5 months through reduced latency and improved window.window.performance.';
     competitors: [
       'AWS Outposts';
       'Azure Stack Edge';
@@ -442,7 +440,7 @@ export const nextGenITServices: NextGenITService[] = [
       'Predictive maintenance';
       'Network automation';
     ];
-    roi: 'Average enterprise achieves 450% ROI within 4 months through reduced downtime and improved network window.performance.';
+    roi: 'Average enterprise achieves 450% ROI within 4 months through reduced downtime and improved network window.window.performance.';
     competitors: [
       'Cisco DNA Center';
       'Aruba Central';

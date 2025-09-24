@@ -14,8 +14,7 @@ interface ServiceCardProps {
       currency: string,
       trialDays: number,
       setupTime: string,
-      enterprise?: number,
-    };
+      enterprise?: number};
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -38,10 +37,8 @@ interface ServiceCardProps {
     rating: number,
     reviews: number,
     marketSize?: string,
-    growthRate?: string,
-  };
-  index: number,
-}
+    growthRate?: string};
+  index: number}
 ,
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex }) => {
   const getCategoryIcon = (category: string) => {
@@ -57,13 +54,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
       case 'micro saas':,
         return <TrendingUp className="w-5 h-5" />,
       default:,
-        return <Zap className="w-5 h-5" />,
-    }
+        return <Zap className="w-5 h-5" />}
   };
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
-      return color,
-    }
+      return color}
     return 'from-cyan-500 to-blue-500'};
   return (
     <motion.div,
@@ -72,8 +67,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
       transition={{
         duration: 0.6;
         delay: index * 0.1;
-        ease: [0.250.460.450.94],
-      }}
+        ease: [0.250.460.450.94]}}
       whileHover={{
         y: -10;
         scale: 1.02;

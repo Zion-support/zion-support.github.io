@@ -140,6 +140,5 @@ export default function EvidenceDrivenAIOperations20o26Page() {
           </div>,
         </div>,
       </section>,
-    </main>),
-}
+    </main>)}
 ,

@@ -32,6 +32,5 @@ export default function ZeroTrustPage() {
         industries={['Enterprise IT', 'Finance', 'Healthcare', 'SaaS']}
         url='https: //ziontechgroup.com/zero-trust-network-architecture',
       />,
-    </>),
-}
+    </>)}
 ,

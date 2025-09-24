@@ -1,8 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react',
 interface TabsContextType {
   value: string,
-  onValueChange: (value: string) => void,
-}
+  onValueChange: (value: string) => void}
 ,
 const TabsContext = createContext<TabsContextType | undefined>(undefined),
 interface TabsProps {
@@ -10,8 +9,7 @@ interface TabsProps {
   defaultValue?: string,
   value?: string,
   onValueChange?: (value: string) => void,
-  className?: string,
-}
+  className?: string}
 ,
 export function Tabs({
   children;
@@ -24,8 +22,7 @@ export function Tabs({
   const currentValue = value !== undefined ? value : internalValue,
   const handleValueChange = (newValue: string) => {
     if (onValueChange) {
-      onValueChange(newValue),
-    } else {
+      onValueChange(newValue)} else {
       setInternalValue(newValue)}
   };
   return (
@@ -37,8 +34,7 @@ export function Tabs({
 ,
 interface TabsListProps {
   children: ReactNode,
-  className?: string,
-}
+  className?: string}
 ,
 export function TabsList({ children, className = '' }: TabsListProps) {
   return (
@@ -51,8 +47,7 @@ export function TabsList({ children, className = '' }: TabsListProps) {
 interface TabsTriggerProps {
   children: ReactNode,
   value: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function TabsTrigger({
   children;
@@ -67,8 +62,7 @@ export function TabsTrigger({
       className={`inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 ${
         isActive,
           ? 'bg-background text-foreground shadow-sm',
-          : 'text-muted-foreground hover:text-foreground',
-      } ${className}`}
+          : 'text-muted-foreground hover:text-foreground'} ${className}`}
       onClick={() => context.onValueChange(value)}
     >,
       {children}
@@ -77,8 +71,7 @@ export function TabsTrigger({
 interface TabsContentProps {
   children: ReactNode,
   value: string,
-  className?: string,
-}
+  className?: string}
 ,
 export function TabsContent({
   children;

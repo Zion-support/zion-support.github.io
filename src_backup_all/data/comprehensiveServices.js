@@ -30,8 +30,7 @@ export const comprehensiveServices = [
     popular: true;
     icon: '🏗️';
     responseTime: '4 hours';
-    sla: '99.9% uptime',
-  };
+    sla: '99.9% uptime'};
   {
     id: 2;
     name: 'Cybersecurity Services';
@@ -63,8 +62,7 @@ export const comprehensiveServices = [
     popular: false;
     icon: '🛡️';
     responseTime: '2 hours';
-    sla: '99.95% threat detection',
-  };
+    sla: '99.95% threat detection'};
   {
     id: 3;
     name: 'Cloud Solutions';
@@ -96,8 +94,7 @@ export const comprehensiveServices = [
     popular: false;
     icon: '☁️';
     responseTime: '8 hours';
-    sla: '99.9% availability',
-  };
+    sla: '99.9% availability'};
   {
     id: 4;
     name: 'Data Management';
@@ -129,8 +126,7 @@ export const comprehensiveServices = [
     popular: false;
     icon: '💾';
     responseTime: '6 hours';
-    sla: '99.99% data integrity',
-  };
+    sla: '99.99% data integrity'};
   {
     id: 5;
     name: 'Network Services';
@@ -162,8 +158,7 @@ export const comprehensiveServices = [
     popular: true;
     icon: '🌐';
     responseTime: '4 hours';
-    sla: '99.9% network uptime',
-  };
+    sla: '99.9% network uptime'};
   {
     id: 6;
     name: 'Help Desk Support';
@@ -195,46 +190,39 @@ export const comprehensiveServices = [
     popular: false;
     icon: '🎧';
     responseTime: '2 hours';
-    sla: '95% first-call resolution',
-  }
+    sla: '95% first-call resolution'}
 ],
 export const serviceCategories = [
   {
     name: 'Infrastructure';
     description: 'Core IT infrastructure services';
     icon: '🏗️';
-    services: comprehensiveServices.filter(s => s.category === 'Infrastructure'),
-  };
+    services: comprehensiveServices.filter(s => s.category === 'Infrastructure')};
   {
     name: 'Security';
     description: 'Cybersecurity and compliance services';
     icon: '🛡️';
-    services: comprehensiveServices.filter(s => s.category === 'Security'),
-  };
+    services: comprehensiveServices.filter(s => s.category === 'Security')};
   {
     name: 'Cloud';
     description: 'Cloud computing and migration services';
     icon: '☁️';
-    services: comprehensiveServices.filter(s => s.category === 'Cloud'),
-  };
+    services: comprehensiveServices.filter(s => s.category === 'Cloud')};
   {
     name: 'Data';
     description: 'Data management and recovery services';
     icon: '💾';
-    services: comprehensiveServices.filter(s => s.category === 'Data'),
-  };
+    services: comprehensiveServices.filter(s => s.category === 'Data')};
   {
     name: 'Networking';
     description: 'Network infrastructure services';
     icon: '🌐';
-    services: comprehensiveServices.filter(s => s.category === 'Networking'),
-  };
+    services: comprehensiveServices.filter(s => s.category === 'Networking')};
   {
     name: 'Support';
     description: 'Help desk and user support services';
     icon: '🎧';
-    services: comprehensiveServices.filter(s => s.category === 'Support'),
-  }
+    services: comprehensiveServices.filter(s => s.category === 'Support')}
 ],
 export const pricingTiers = [
   {

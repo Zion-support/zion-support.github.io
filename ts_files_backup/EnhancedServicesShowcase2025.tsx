@@ -37,19 +37,16 @@ interface Service {
   pricing: {
     starter: number,
     professional: number,
-    enterprise: number,
-  };
+    enterprise: number};
   technologies: string[],
-  benefits: string[],
-}
+  benefits: string[]}
 ,
 interface ServiceCategory {
   id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
-  color: string,
-}
+  color: string}
 ,
 const serviceCategories: ServiceCategory[] = [
   {
@@ -57,43 +54,37 @@ const serviceCategories: ServiceCategory[] = [
     name: 'AI & Machine Learning';
     description: 'Cutting-edge artificial intelligence and machine learning solutions';
     icon: <FaBrain className="w-8 h-8" />;
-    color: 'from-purple-500 to-pink-500',
-  };
+    color: 'from-purple-500 to-pink-500'};
   {
     id: 'cloud';
     name: 'Cloud & DevOps';
     description: 'Scalable cloud infrastructure and development operations';
     icon: <FaCloud className="w-8 h-8" />;
-    color: 'from-blue-500 to-cyan-500',
-  };
+    color: 'from-blue-500 to-cyan-500'};
   {
     id: 'security';
     name: 'Cybersecurity';
     description: 'Advanced security solutions for modern threats';
     icon: <FaShieldAlt className="w-8 h-8" />;
-    color: 'from-red-500 to-orange-500',
-  };
+    color: 'from-red-500 to-orange-500'};
   {
     id: 'data';
     name: 'Data & Analytics';
     description: 'Comprehensive data management and analytics platforms';
     icon: <FaDatabase className="w-8 h-8" />;
-    color: 'from-green-500 to-emerald-500',
-  };
+    color: 'from-green-500 to-emerald-500'};
   {
     id: 'iot';
     name: 'IoT & Edge Computing';
     description: 'Internet of Things and edge computing solutions';
     icon: <FaNetworkWired className="w-8 h-8" />;
-    color: 'from-indigo-500 to-purple-500',
-  };
+    color: 'from-indigo-500 to-purple-500'};
   {
     id: 'automation';
     name: 'Process Automation';
     description: 'Intelligent automation for business processes';
     icon: <FaRobot className="w-8 h-8" />;
-    color: 'from-yellow-500 to-orange-500',
-  }
+    color: 'from-yellow-500 to-orange-500'}
 ],
 const services: Service[] = [
   {
@@ -112,8 +103,7 @@ const services: Service[] = [
     pricing: {
       starter: 299;
       professional: 799;
-      enterprise: 1999,
-    };
+      enterprise: 1999};
     technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'];
     benefits: [
       'Reduce manual tasks by 80%';
@@ -136,8 +126,7 @@ const services: Service[] = [
     pricing: {
       starter: 999;
       professional: 2499;
-      enterprise: 4999,
-    };
+      enterprise: 4999};
     technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'Python'C++'CUDA'];
     benefits: [
       'Solve previously impossible problems';
@@ -160,8 +149,7 @@ const services: Service[] = [
     pricing: {
       starter: 199;
       professional: 599;
-      enterprise: 1499,
-    };
+      enterprise: 1499};
     technologies: ['TensorFlow 'Lite', 'ONNX 'Runtime', 'Edge 'TPU', 'Raspberry 'Pi', 'Arduino'];
     benefits: [
       'Reduced latency by 90%';
@@ -184,8 +172,7 @@ const services: Service[] = [
     pricing: {
       starter: 399;
       professional: 999;
-      enterprise: 2499,
-    };
+      enterprise: 2499};
     technologies: ['NIST 'PQC', 'QKD 'protocols', 'Zero 'Trust', 'SIEM'SOAR'];
     benefits: [
       'Future-proof security';
@@ -208,8 +195,7 @@ const services: Service[] = [
     pricing: {
       starter: 299;
       professional: 799;
-      enterprise: 1999,
-    };
+      enterprise: 1999};
     technologies: ['Apache 'Kafka', 'Apache 'Spark', 'Snowflake', 'Databricks', 'Airflow'];
     benefits: [
       'Unified data view';
@@ -232,8 +218,7 @@ const services: Service[] = [
     pricing: {
       starter: 199;
       professional: 599;
-      enterprise: 1499,
-    };
+      enterprise: 1499};
     technologies: [', 'Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'];
     benefits: [
       'Faster deployment';
@@ -249,8 +234,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const filteredServices = useMemo(() => {
     let filtered = services,
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory),
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 ,
     if (searchTerm) {
       filtered = filtered.filter(service =>,
@@ -265,12 +249,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         case 'category':,
           return a.category.localeCompare(b.category),
         default: ,
-          return a.title.localeCompare(b.title),
-      }
+          return a.title.localeCompare(b.title)}
     })}[selectedCategorysearchTermsortBy]),
   const handleServiceSelect = (service: Service) => {
-    setSelectedService(service),
-  };
+    setSelectedService(service)};
   const closeModal = () => {
     setSelectedService(null)};
   return (
@@ -329,8 +311,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === 'all',
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg',
-                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20',
-              }`}
+                  : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20'}`}
             >,
               All Services,
             </button>,
@@ -341,8 +322,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === category.id,
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover: bg-white/20'}`}
               >,
                 {category.icon}
                 {category.name}

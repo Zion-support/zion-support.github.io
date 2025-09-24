@@ -48,8 +48,7 @@ export default defineConfig(({ command, mode }) => {
           safari10: true}};
       rollupOptions: {
         input: {
-          main: './index.html',
-        };
+          main: './index.html'};
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom'];
@@ -68,8 +67,7 @@ export default defineConfig(({ command, mode }) => {
             const info = assetInfo.name.split('.'),
             const ext = info[info.length - 1],
             if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-              return `images/[name]-[hash][extname]`,
-            }
+              return `images/[name]-[hash][extname]`}
             if (/css/i.test(ext)) {
               return `css/[name]-[hash][extname]`}
             return `assets/[name]-[hash][extname]`}};

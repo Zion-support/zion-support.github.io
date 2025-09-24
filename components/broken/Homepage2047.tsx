@@ -88,8 +88,7 @@ const Homepage2047: React.FC = () => {
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   return (

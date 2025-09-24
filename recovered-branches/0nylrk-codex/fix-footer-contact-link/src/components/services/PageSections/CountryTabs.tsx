@@ -26,8 +26,7 @@ interface CountryTabsProps {
   filteredCountries: CountryPricing[],
   handleCountrySelect: (country: CountryPricing) => void,
   searchQuery: string,
-  setSearchQuery: (query: string) => void,
-}
+  setSearchQuery: (query: string) => void}
 ,
 export function CountryTabs({
   popularCountries,
@@ -71,8 +70,7 @@ interface CountryTabsProps {
   filteredCountries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   searchQuery: string;
-  setSearchQuery: (query: string) => void,
-}
+  setSearchQuery: (query: string) => void}
 ,
 export function CountryTabs(): any ({
   popularCountries,
@@ -154,8 +152,7 @@ interface CountryTabsProps {
   filtered_countries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   search_query: string;
-  setSearchQuery: (query: string) => void,
-}
+  setSearchQuery: (query: string) => void}
 export /**,
  * CountryTabs - Function description,
  */,

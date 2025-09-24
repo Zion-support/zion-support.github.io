@@ -28,8 +28,7 @@ export default function EnhancedServicesShowcase() {
     mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   // Combine all services for comprehensive showcase,
   const allServices = [
     ...nextGenerationAIServices;
@@ -92,8 +91,7 @@ export default function EnhancedServicesShowcase() {
         filtered.sort((ab) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
         break,
       default: ,
-        break,
-    }
+        break}
 ,
     return filtered}[allServiceselectedCategorysearchTermsortBy]),
   const containerVariants = {
@@ -102,8 +100,7 @@ export default function EnhancedServicesShowcase() {
       opacity: 1;
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const itemVariants = {
@@ -113,8 +110,7 @@ export default function EnhancedServicesShowcase() {
       y: 0;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const featuredServices = [
@@ -122,20 +118,17 @@ export default function EnhancedServicesShowcase() {
       title: '🚀 ArrowRight-Generation AI Services';
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible';
       services: nextGenerationAIServices.slice(03);
-      color: 'from-purple-500 to-pink-600',
-    };
+      color: 'from-purple-500 to-pink-600'};
     {
       title: '⚡ Cutting-Edge IT Infrastructure';
       description: 'Advanced infrastructure solutions for the modern enterprise';
       services: cuttingEdgeITServices.slice(03);
-      color: 'from-blue-500 to-cyan-600',
-    };
+      color: 'from-blue-500 to-cyan-600'};
     {
       title: '💻 Innovative Micro SaaS Solutions';
       description: 'Creative and practical SaaS tools for every business need';
       services: innovativeMicroSaasV2Services.slice(03);
-      color: 'from-green-500 to-emerald-600',
-    }
+      color: 'from-green-500 to-emerald-600'}
   ],
   return (
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">,
@@ -287,8 +280,7 @@ export default function EnhancedServicesShowcase() {
                       className={`p-2 rounded-md transition-colors ${
                         viewMode === 'grid',
                           ? 'bg-cyan-500 text-white',
-                          : 'text-gray-400 hover: text-white',
-                      }`}
+                          : 'text-gray-400 hover: text-white'}`}
                     >,
                       <Grid className="w-5 h-5" />,
                     </button>,
@@ -297,8 +289,7 @@ export default function EnhancedServicesShowcase() {
                       className={`p-2 rounded-md transition-colors ${
                         viewMode === 'list',
                           ? 'bg-cyan-500 text-white',
-                          : 'text-gray-400 hover: text-white',
-                      }`}
+                          : 'text-gray-400 hover: text-white'}`}
                     >,
                       <List className="w-5 h-5" />,
                     </button>,
@@ -317,8 +308,7 @@ export default function EnhancedServicesShowcase() {
               animate="visible",
               className={viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                : 'space-y-6',
-              }
+                : 'space-y-6'}
             >,
               {filteredServices.map((serviceindex) => (
                 <motion.div,
@@ -503,8 +493,7 @@ export default function EnhancedServicesShowcase() {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticMatrixBackground>),
-}
+    </UltraAdvancedFuturisticMatrixBackground>)}
 ,
 // Button component (if not imported),
 const Button = ({
@@ -519,18 +508,15 @@ const Button = ({
   size?: 'sm' | 'md' | 'lg',
   className?: string,
   children: React.ReactNode,
-  onClick?: () => void,
-}) => {
+  onClick?: () => void}) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500';
-    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500',
-  };
+    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'};
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm';
     md: 'px-6 py-3 text-base';
-    lg: 'px-8 py-4 text-lg',
-  };
+    lg: 'px-8 py-4 text-lg'};
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
   if (href) {
     return (

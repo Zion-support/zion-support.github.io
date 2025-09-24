@@ -7,8 +7,7 @@ interface PerformanceMetrics {
   loadTime: number,
   networkLatency: number,
   cpuUsage: number,
-  timestamp: number,
-}
+  timestamp: number}
 ,
 interface PerformanceAlert {
   id: string,
@@ -16,8 +15,7 @@ interface PerformanceAlert {
   message: string,
   metric: string,
   value: number,
-  timestamp: number,
-}
+  timestamp: number}
 ,
 export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
@@ -26,18 +24,17 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
     loadTime: 0;
     networkLatency: 0;
     cpuUsage: 0;
-    timestamp: Date.now(),
-  }),
+    timestamp: Date.now()}),
   const [alerts, setAlerts] = useState<any>([]),
   const [isVisible, setIsVisible] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
   // FPS monitoring,
   const measureFPS = useCallback(() => {
     let frameCount = 0,
-    let lastTime = window.performance.now(),
+    let lastTime = window.window.performance.now(),
     const countFrames = () => {
       frameCount++,
-      const currentTime = window.performance.now(),
+      const currentTime = window.window.performance.now(),
       if (currentTime - lastTime >= 10o00) {
         const fps = Math.round((frameCount * 10o00) / (currentTime - lastTime)),
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() })),
@@ -56,7 +53,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   // Load time monitoring,
   const measureLoadTime = useCallback(() => {
     if (typeof window !== 'undefined') {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
         setMetrics(prev => ({ ...prev, loadTime }))}
@@ -65,9 +62,9 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   // Network latency monitoring,
   const measureNetworkLatency = useCallback(async () => {
     try {
-      const start = window.performance.now(),
+      const start = window.window.performance.now(),
       await fetch('/api/health', { method: 'HEAD' }),
-      const end = window.performance.now(),
+      const end = window.window.performance.now(),
       const latency = end - start,
       setMetrics(prev => ({ ...prev, networkLatency: anylatency }))} catch (error) {
       // If health check fails, use a default value,
@@ -75,11 +72,11 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   }, []),
   // CPU usage estimation,
   const estimateCPUUsage = useCallback(() => {
-    let lastTime = window.performance.now(),
+    let lastTime = window.window.performance.now(),
     let frameCount = 0,
     const measureFrame = () => {
       frameCount++,
-      const currentTime = window.performance.now(),
+      const currentTime = window.window.performance.now(),
       if (currentTime - lastTime >= 10o00) {
         const cpuUsage = Math.min(10o0, (frameCount / 60) * 10o0),
         setMetrics(prev => ({ ...prev, cpuUsage })),
@@ -98,16 +95,14 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         message: `Low FPS detected: ${metrics.fps}`;
         metric: 'fps';
         value: metrics.fps;
-        timestamp: Date.now(),
-      })} else if (metrics.fps < 50) {
+        timestamp: Date.now()})} else if (metrics.fps < 50) {
       newAlerts.push({
         id: `fps-${Date.now()}`;
         type: 'warning';
         message: `FPS below optimal: ${metrics.fps}`;
         metric: 'fps';
         value: metrics.fps;
-        timestamp: Date.now(),
-      })}
+        timestamp: Date.now()})}
 ,
     if (metrics.memory > 10o0) {
       newAlerts.push({
@@ -116,8 +111,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         message: `High memory usage: ${metrics.memory.toFixed(1)}MB`;
         metric: 'memory';
         value: metrics.memory;
-        timestamp: Date.now(),
-      })}
+        timestamp: Date.now()})}
 ,
     if (metrics.loadTime > 30o00) {
       newAlerts.push({
@@ -126,8 +120,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         message: `Slow load time: ${metrics.loadTime.toFixed(0)}ms`;
         metric: 'loadTime';
         value: metrics.loadTime;
-        timestamp: Date.now(),
-      })}
+        timestamp: Date.now()})}
 ,
     if (metrics.networkLatency > 10o00) {
       newAlerts.push({
@@ -136,8 +129,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         message: `High network latency: ${metrics.networkLatency.toFixed(0)}ms`;
         metric: 'networkLatency';
         value: metrics.networkLatency;
-        timestamp: Date.now(),
-      })}
+        timestamp: Date.now()})}
 ,
     if (newAlerts.length > 0) {
       setAlerts(prev  => [...prev, ...newAlerts])}
@@ -174,13 +166,11 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   const getScoreColor = (score: anynumber)  => {
     if (score >= 80) return 'text-green-40o0',
     if (score >= 60) return 'text-yellow-40o0',
-    return 'text-red-40o0',
-  };
+    return 'text-red-40o0'};
   const getScoreIcon = (score: anynumber)  => {
     if (score >= 80) return <CheckCircle className="w-4 h-4"  />,
     if (score >= 60) return <AlertTriangle className="w-4 h-4"  />,
-    return <XCircle className="w-4 h-4"  />,
-  };
+    return <XCircle className="w-4 h-4"  />};
   if (!isVisible) {
     return (
       <motion.button,

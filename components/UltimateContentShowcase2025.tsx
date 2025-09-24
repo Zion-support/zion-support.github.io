@@ -85,8 +85,7 @@ const UltimateContentShowcase2025: React.FC = () => {
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-200 ${
                 activeCategory === category.id,
                   ? 'bg-blue-600 text-white shadow-lg',
-                  : 'bg-white text-gray-700 hover: bg-blue-50 border border-gray-200',
-              }`}
+                  : 'bg-white text-gray-700 hover: bg-blue-50 border border-gray-200'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -106,8 +105,7 @@ const UltimateContentShowcase2025: React.FC = () => {
                         ? 'bg-blue-100 text-blue-800',
                         : item.type === 'case-study',
                           ? 'bg-green-100 text-green-800',
-                          : 'bg-purple-100 text-purple-800',
-                    }`}
+                          : 'bg-purple-100 text-purple-800'}`}
                   >,
                     {item.type === 'blog',
                       ? '📝 Blog',

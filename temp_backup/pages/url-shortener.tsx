@@ -35,15 +35,13 @@ export default function URLShortenerPage() {
       result += chars.charAt(Math.floor(Math.random() * chars.length))}
     return result};
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-  };
+    navigator.clipboard.writeText(text)};
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>,
       prev.map(url =>,
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url))};
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id)),
-  };
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))};
   const getTotalClicks = () => {
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)};
   const getTotalUrls = () => {
@@ -450,5 +448,4 @@ export default function URLShortenerPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}

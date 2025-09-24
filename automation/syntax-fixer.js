@@ -19,7 +19,6 @@ export default SyntaxFixer})}
         let content = fs.readFileSync (file, "utf8"),
         let modified = false,
         // Fix import statements,
-,
 // Main execution,
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer()fixer.run().catch(console.error)}
 export default SyntaxFixer})}
@@ -72,8 +71,7 @@ export default SyntaxFixer})modified = true},if (modified) {fs.writeFileSync(fil
     try {
       await this.fixSyntaxErrors (),
       this.log ("=" * 50),
-      this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`),
-}
+      this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`)}
   async fixExportIssues() {
     const files = this.getSourceFiles(),
     files.forEach(file => {
@@ -137,7 +135,6 @@ this.log("=" * 50);
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")}
   }
 ursor/fix-lint-push-and-merge-to-main-28da,
-,
 })};;
   async fixImportIssues() {;
     const files = this.getSourceFiles();

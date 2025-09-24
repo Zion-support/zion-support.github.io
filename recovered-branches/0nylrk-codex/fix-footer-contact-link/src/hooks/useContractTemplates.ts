@@ -19,8 +19,7 @@ export function useContractTemplates() {
     queryKey: ['contractTemplates', user?.id];
     queryFn: async () => {
       if (!isAuthenticated || !user) {
-        return [],
-      }
+        return []}
 ,
       const { data, error } = await supabase,
         .from('contract_templates'),
@@ -42,8 +41,7 @@ export function useContractTemplates() {
     }: {
       title: string,
       templateData: ContractFormValues,
-      isDefault?: boolean,
-    }) => {
+      isDefault?: boolean}) => {
       if (!user) throw new Error('User not authenticated'),
       setIsLoading(true),
       try {
@@ -97,8 +95,7 @@ export function useContractTemplates() {
       templateId: string,
       title: string,
       templateData: ContractFormValues,
-      isDefault?: boolean,
-    }) => {
+      isDefault?: boolean}) => {
       if (!user) throw new Error('User not authenticated'),
       setIsLoading(true),
       try {

@@ -17,8 +17,7 @@ const NewContent20o25DataRevolutionBanner = () => {
         accuracy: '99.7%';
         speed: '1,20o0%'};
       url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-case-study';
       title: 'Fortune 50o0 Data Transformation Success';
@@ -29,11 +28,9 @@ const NewContent20o25DataRevolutionBanner = () => {
         roi: '50o0%';
         savings: '$45M';
         accuracy: '99.7%';
-        timeline: '8 months',
-      };
+        timeline: '8 months'};
       url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'AI Data Transformation Implementation Guide';
@@ -44,11 +41,9 @@ const NewContent20o25DataRevolutionBanner = () => {
         success: '98%';
         roi: '50o0%';
         projects: '50o0+';
-        timeline: '12 months',
-      };
+        timeline: '12 months'};
       url: '/resources/ai-data-transformation-implementation-guide-20o25';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -139,8 +134,7 @@ const NewContent20o25DataRevolutionBanner = () => {
                       className={`p-4 rounded-lg transition-all duration-30o0 cursor-pointer ${
                         index === currentSlide,
                           ? 'bg-white/20 border-2 border-white/30',
-                          : 'bg-white/5 hover: bg-white/10',
-                      }`}
+                          : 'bg-white/5 hover: bg-white/10'}`}
                       onClick={() => setCurrentSlide(index)}
                     >,
                       <div className="flex items-center justify-between mb-2">,

@@ -8,7 +8,7 @@ function nowIso() {
 ,
 function log(message) {
   const line = `[${nowIso()}] [REDUNDANCY-FAILOVER-CONTROLLER] ${message}`,
-  // console.log(line)}
+  // // console.log(line)}
 ,
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
@@ -17,14 +17,13 @@ function run(command, args, options ={}) {
     env: process.env;
     shell: false;
     encoding: "utf8";
-    maxBuffer: 10o24 * 10o24 * 20,
-  }),
+    maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
   const status = typeof result.status === "number" ? result.status : 0,
   if (options.verbose) {
     log(`$ ${command} ${args.join(" ")}`),
-    if (stdout) // console.log(stdout),
+    if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
   return { status, stdout, stderr };
 }
@@ -50,23 +49,20 @@ function checkGitHubActionsStatus() {
         return {
           available: true;
           workflowCount: workflowFiles.length;
-          workflows: workflowFiles,
-        };
+          workflows: workflowFiles};
       } else {
         log("No workflow files found in .github/workflows"),
         return {
           available: false;
           workflowCount: 0;
-          workflows: [],
-        };
+          workflows: []};
       }
     } else {
       log(".github/workflows directory not found"),
       return {
         available: false;
         workflowCount: 0;
-        workflows: [],
-      };
+        workflows: []};
     }
   } catch (err) {
     log(`GitHub Actions status check error: ${String(err)}`),
@@ -74,8 +70,7 @@ function checkGitHubActionsStatus() {
       available: false;
       workflowCount: 0;
       workflows: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -96,8 +91,7 @@ function checkPm2RedundancyStatus() {
         available: true;
         processCount: redundancyProcesses.length;
         runningCount: runningProcesses.length;
-        processes: redundancyProcesses,
-      };
+        processes: redundancyProcesses};
     } else {
       log(`PM2 status check failed: ${pm2Status.stderr}`),
       return {
@@ -105,8 +99,7 @@ function checkPm2RedundancyStatus() {
         processCount: 0;
         runningCount: 0;
         processes: [];
-        error: pm2Status.stderr,
-      };
+        error: pm2Status.stderr};
     }
   } catch (err) {
     log(`PM2 redundancy status check error: ${String(err)}`),
@@ -115,8 +108,7 @@ function checkPm2RedundancyStatus() {
       processCount: 0;
       runningCount: 0;
       processes: [];
-      error: String(err),
-    };
+      error: String(err)};
   }
 }
 ,
@@ -133,15 +125,13 @@ function checkNetlifyFunctionsStatus() {
       return {
         available: true;
         functionCount: functionDirs.length;
-        functions: functionDirs.map(d => d.name),
-      };
+        functions: functionDirs.map(d => d.name)};
     } else {
       log("netlify/functions directory not found"),
       return {
         available: false;
         functionCount: 0;
-        functions: [],
-      };
+        functions: []};
     }
   } catch (err) {
     log(`Netlify functions status check error: ${String(err)}`),
@@ -149,8 +139,7 @@ function checkNetlifyFunctionsStatus() {
       available: false;
         functionCount: 0;
         functions: [];
-        error: String(err),
-    };
+        error: String(err)};
   }
 }
 ,
@@ -160,8 +149,7 @@ function determineFailoverStrategy(githubActions, pm2Redundancy, netlifyFunction
     primary: null;
     secondary: null;
     tertiary: null;
-    recommendations: [],
-  };
+    recommendations: []};
   // Determine primary system based on availability and health,
   if (pm2Redundancy.available && pm2Redundancy.runningCount > 0) {
     strategy.primary = "pm2-redundancy",
@@ -218,14 +206,12 @@ function executeFailoverActions(strategy) {
           actions.push({
             action: "start-pm2-redundancy";
             success: true;
-            output: startResult.stdout,
-          }),
+            output: startResult.stdout}),
           log("PM2 redundancy system started successfully")} else {
           actions.push({
             action: "start-pm2-redundancy";
             success: false;
-            error: startResult.stderr,
-          }),
+            error: startResult.stderr}),
           log(`Failed to start PM2 redundancy: ${startResult.stderr}`)}
       }
     }
@@ -238,8 +224,7 @@ function executeFailoverActions(strategy) {
         fs.mkdirSync(workflowsDir, { recursive: true }),
         actions.push({
           action: "create-workflows-directory";
-          success: true,
-        })}
+          success: true})}
     }
 ,
     // If Netlify functions is primary but functions are missing, create basic ones,
@@ -250,8 +235,7 @@ function executeFailoverActions(strategy) {
         fs.mkdirSync(netlifyDir, { recursive: true }),
         actions.push({
           action: "create-netlify-directory";
-          success: true,
-        })}
+          success: true})}
     }
 ,
     log(`Executed ${actions.length} failover actions`),
@@ -260,8 +244,7 @@ function executeFailoverActions(strategy) {
     return [{
       action: "failover-execution";
       success: false;
-      error: String(err),
-    }]}
+      error: String(err)}]}
 }
 ,
 function generateFailoverReport(githubActions, pm2Redundancy, netlifyFunctions, strategy, actions) {
@@ -271,14 +254,12 @@ function generateFailoverReport(githubActions, pm2Redundancy, netlifyFunctions, 
     systemStatus: {
       githubActions: githubActions;
       pm2Redundancy: pm2Redundancy;
-      netlifyFunctions: netlifyFunctions,
-    };
+      netlifyFunctions: netlifyFunctions};
     failoverStrategy: strategy;
     executedActions: actions;
     summary: {
       overallHealth: "healthy";
-      issues: [],
-    }
+      issues: []}
   };
   // Determine overall health,
   if (!strategy.primary) report.summary.issues.push("no-primary-system"),

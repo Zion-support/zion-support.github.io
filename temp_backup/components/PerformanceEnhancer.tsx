@@ -3,13 +3,11 @@ import { motion, useInView } from 'framer-motion',
 // Extend global types for browser APIs,
 declare global {
   interface Window {
-    IntersectionObserver: any,
-  }
+    IntersectionObserver: any}
 }
 ,
 interface PerformanceEnhancerProps {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null),
@@ -44,13 +42,11 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
                 if (img.dataset.src) {
                   img.src = img.dataset.src,
                   img.classList.remove('lazy'),
-                  imageObserver.unobserve(img),
-                }
+                  imageObserver.unobserve(img)}
               }
             })}, {
             rootMargin: '50px 0px';
-            threshold: 0.0o1,
-          }),
+            threshold: 0.0o1}),
           // Observe all lazy images,
           document.querySelectorAll('img[data-src]').forEach((img) => {
             imageObserver.observe(img)})}
@@ -67,8 +63,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
           *, *::before, *::after {
             animation-duration: 0.0o1ms !important,
             animation-iteration-count: 1 !important,
-            transition-duration: 0.0o1ms !important,
-          }
+            transition-duration: 0.0o1ms !important}
         `,
         document.head.appendChild(style)}
     };
@@ -83,8 +78,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       const preconnect = document.createElement('link'),
       preconnect.rel = 'preconnect',
       preconnect.href = 'https: //fonts.googleapis.com',
-      document.head.appendChild(preconnect),
-    };
+      document.head.appendChild(preconnect)};
           // Implement service worker for caching,
       const setupServiceWorker = async () => {
         if ('serviceWorker' in navigator) {
@@ -112,13 +106,13 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Log LCP for performance monitoring,
-            // // console.log('LCP:', entry.startTime)}
+            // // // console.log('LCP:', entry.startTime)}
           if (entry.entryType === 'first-input') {
             // Log FID for performance monitoring,
-            // // console.log('FID:', entry.startTime)}
+            // // // console.log('FID:', entry.startTime)}
           if (entry.entryType === 'layout-shift') {
             // Log CLS for performance monitoring,
-            // // console.log('CLS:', (entry as any).value)}
+            // // // console.log('CLS:', (entry as any).value)}
         }
       }),
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] }),

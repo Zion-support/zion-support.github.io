@@ -112,8 +112,7 @@ reviews: number,export const revolutionary20o26EmergingTechServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete holographic metaverse platform with 3D rendering, AI content generation, and real-time collaboration capabilities.';
@@ -195,8 +194,7 @@ reviews: number,export const revolutionary20o26EmergingTechServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete space debris management platform with AI prediction, real-time monitoring, and comprehensive safety systems.';
@@ -278,8 +276,7 @@ reviews: number,export const revolutionary20o26EmergingTechServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete climate prediction platform with AI accuracy, global coverage, and comprehensive policy insights.';
@@ -361,8 +358,7 @@ reviews: number,export const revolutionary20o26EmergingTechServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous manufacturing platform with AI intelligence, self-optimization, and comprehensive monitoring capabilities.';
@@ -444,8 +440,7 @@ reviews: number,export const revolutionary20o26EmergingTechServices: Revolutiona
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete quantum internet infrastructure platform with quantum entanglement, cryptography, and networking capabilities.';

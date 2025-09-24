@@ -12,8 +12,7 @@ interface RevolutionaryHeroProps {
     value: string,
     label: string,
     color: string,
-    icon: React.ReactNode,
-  }>}
+    icon: React.ReactNode}>}
 ,
 const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
   title = "Revolutionary Micro SAAS Services";
@@ -35,8 +34,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
       opacity: 1;
       transition: {
         staggerChildren: 0.2;
-        delayChildren: 0.3,
-      }
+        delayChildren: 0.3}
     }
   };
   const itemVariants ={
@@ -46,8 +44,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
       y: 0;
       transition: {
         duration: 0.8;
-        ease: "easeOut",
-      }
+        ease: "easeOut"}
     }
   };
   const floatingVariants ={
@@ -56,8 +53,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut",
-      }
+        ease: "easeInOut"}
     }
   };
   return (
@@ -81,8 +77,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
             transition={{
               duration: Math.random() * 5 + 5;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />))}
       </div>,
       {/* Main content */}
@@ -208,8 +203,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
                 duration: 3;
                 repeat: Infinity;
                 delay: i * 0.5;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
              />))}
         </svg>,
       </div>,
@@ -221,8 +215,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut",
-        }}
+          ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-cyan-40o0/50 rounded-full flex justify-center">,
           <motion.div,
@@ -232,8 +225,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
             transition={{
               duration: 2;
               repeat: Infinity;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
            />,
         </div>,
       </motion.div>,

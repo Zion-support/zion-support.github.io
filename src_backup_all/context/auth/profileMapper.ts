@@ -3,8 +3,7 @@ interface SupabaseUser {
   email?: string,
 user_metadata?: {
     full_name?: string,
-    avatar_url?: string,
-};
+    avatar_url?: string};
   created_at?: string,
   updated_at?: string}
 ,
@@ -15,8 +14,7 @@ interface Profile {
   role?: string,
   is_email_verified?: boolean,
   created_at?: string,
-  updated_at?: string,
-}
+  updated_at?: string}
 ,
 interface MappedUser {
   id: string,
@@ -26,8 +24,7 @@ interface MappedUser {
   role?: string,
   isEmailVerified?: boolean,
   createdAt?: string,
-  updatedAt?: string,
-}
+  updatedAt?: string}
 ,
 export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile): MappedUser  => {
   return {
@@ -38,6 +35,5 @@ export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile
     role: profile.role;
     isEmailVerified: profile.is_email_verified || false;
     createdAt: profile.created_at || supabaseUser.created_at;
-    updatedAt: profile.updated_at || supabaseUser.updated_at,
-  };
+    updatedAt: profile.updated_at || supabaseUser.updated_at};
 };

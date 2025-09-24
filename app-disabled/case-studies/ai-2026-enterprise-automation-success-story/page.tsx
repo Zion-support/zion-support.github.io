@@ -329,6 +329,5 @@ export default function AI20o26EnterpriseAutomationCaseStudy() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

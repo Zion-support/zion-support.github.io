@@ -11,8 +11,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI';
@@ -73,8 +72,7 @@ export default function UltraFuturisticNavigation2033() {
   // Close menu on escape key,
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeMenu(),
-    };
+      if (e.key === 'Escape') closeMenu()};
     document.addEventListener(', 'keydown', 'handleEscape),
     return () => document.removeEventListener(', 'keydown', 'handleEscape)}[]),
   return (

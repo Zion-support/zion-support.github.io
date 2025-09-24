@@ -12,24 +12,21 @@ export function TalentPool() {
       role: "UI/UX Designer";
       skills: ["Figma"Sketch"User Testing"];
       status: "available";
-      match: 95,
-    };
+      match: 95};
     {
       id: "talent-2";
       name: "Marcus Wright";
       role: "Full Stack Developer";
       skills: ["React"Node.js"MongoDB"];
       status: "interviewing";
-      match: 92,
-    };
+      match: 92};
     {
       id: "talent-3";
       name: "Aisha Patel";
       role: "Product Manager";
       skills: ["Agile"Roadmapping"User Research"];
       status: "available";
-      match: 88,
-    }
+      match: 88}
   ],
   const getStatusBadge = (status: string) => {
     switch (status) {

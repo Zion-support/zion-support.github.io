@@ -44,8 +44,7 @@ const EnhancedHomepage20o25: React.FC = () => {
         (entries: any[]) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id),
-            }
+              setActiveSection(entry.target.id)}
           })};
         { threshold: 0.3, rootMargin: '-10o0px' }
       ),
@@ -62,8 +61,7 @@ const EnhancedHomepage20o25: React.FC = () => {
     animate: {
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const backgroundVariants ={
@@ -202,8 +200,7 @@ const EnhancedHomepage20o25: React.FC = () => {
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                       selectedCategory === category,
                         ? 'bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-white shadow-lg shadow-cyan-50o0/25',
-                        : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0',
-                    }`}
+                        : 'bg-gray-80o0/50 text-gray-30o0 hover: bg-gray-70o0/50 border border-gray-70o0'}`}
                   >,
                     {category}
                   </button>))}
@@ -302,23 +299,19 @@ const EnhancedHomepage20o25: React.FC = () => {
                 {
                   icon: Shield;
                   title: "Enterprise Security";
-                  description: "Bank-grade security protocols and compliance standards protect your business and data",
-                };
+                  description: "Bank-grade security protocols and compliance standards protect your business and data"};
                 {
                   icon: Zap;
                   title: "Lightning Fast";
-                  description: "Optimized performance and rapid deployment ensure your solutions are always ahead of the curve",
-                };
+                  description: "Optimized performance and rapid deployment ensure your solutions are always ahead of the curve"};
                 {
                   icon: Users;
                   title: "Expert Team";
-                  description: "Our specialists bring decades of combined experience in cutting-edge technology implementation",
-                };
+                  description: "Our specialists bring decades of combined experience in cutting-edge technology implementation"};
                 {
                   icon: Globe;
                   title: "Global Reach";
-                  description: "24/7 support and worldwide deployment capabilities to serve your business anywhere",
-                };
+                  description: "24/7 support and worldwide deployment capabilities to serve your business anywhere"};
                 {
                   icon: Heart;
                   title: "Customer Success";
@@ -372,6 +365,5 @@ const EnhancedHomepage20o25: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default EnhancedHomepage20o25;

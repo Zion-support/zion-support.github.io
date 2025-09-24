@@ -13,7 +13,7 @@ export function TalentGrid({
   const handleBookInternal = talent => {
     if (handleBook) {
       handleBook(talent)} else {
-      // console.log('Book talent:', talent.id)}
+      // // console.log('Book talent:', talent.id)}
   };
   const handleMessageInternal = talent => {
     if (handleMessage) {

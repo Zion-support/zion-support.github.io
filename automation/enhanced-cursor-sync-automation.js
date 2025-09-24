@@ -109,7 +109,7 @@ class EnhancedCursorSyncAutomation {
     if (level === 'error') {
       console.error(`❌ [${this.computerId}] ${message}`)} else if (level === 'warn') {
       console.warn(`⚠️ [${this.computerId}] ${message}`)} else {
-      // console.log(`ℹ️ [${this.computerId}] ${message}`)}
+      // // console.log(`ℹ️ [${this.computerId}] ${message}`)}
   }
 ,
   getLastSyncTime() {
@@ -127,8 +127,7 @@ class EnhancedCursorSyncAutomation {
     const data ={
       lastSync: new Date().toISOString();
       computerId: this.computerId;
-      branch: this.config.branch,
-    };
+      branch: this.config.branch};
     fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2))}
 ,
   async executeCommand(command, options ={}) {
@@ -402,8 +401,7 @@ class EnhancedCursorSyncAutomation {
       this.log(`✅ Enhanced cursor sync completed successfully in ${duration}ms`),
       this.updateLastSyncTime(),
       this.updateMetrics(true, duration, filteredFiles.length),
-      return true,
-} catch (error) {
+      return true} catch (error) {
       const duration = Date.now() - startTime,
       this.log(`❌ Enhanced cursor sync failed after ${duration}ms: ${error.message}`, 'error'),
       this.updateMetrics(false, duration, 0),
@@ -454,8 +452,7 @@ class EnhancedCursorSyncAutomation {
           totalSyncs: 0;
           successfulSyncs: 0;
           failedSyncs: 0;
-          lastSync: null,
-        };
+          lastSync: null};
       }
 ,
       metrics.computerStats[this.computerId].totalSyncs++,
@@ -471,8 +468,7 @@ class EnhancedCursorSyncAutomation {
           successfulSyncs: 0;
           failedSyncs: 0;
           totalFiles: 0;
-          totalDuration: 0,
-        };
+          totalDuration: 0};
       }
 ,
       metrics.dailyStats[today].syncs++,
@@ -542,8 +538,7 @@ if (require.main === module) {
     sync.startContinuousSync()} else {
     // Default: run once,
     sync.runOnce().then(success => {
-      process.exit(success ? 0 : 1),
-    })}
+      process.exit(success ? 0 : 1)})}
 }
 ,
 module.exports = EnhancedCursorSyncAutomation,

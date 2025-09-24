@@ -71,6 +71,5 @@ export default function MobileWebSolutionsLanding() {
           </a>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

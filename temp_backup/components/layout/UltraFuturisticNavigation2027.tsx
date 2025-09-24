@@ -12,8 +12,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const serviceCategories = [
   {
     title: '🚀 20o28 Cutting-Edge Innovations';
@@ -127,35 +126,30 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/services/ai-consciousness-platform';
           description: 'Advanced AI consciousness simulation';
           price: '$5,999/month';
-          icon: '🧠',
-        };
+          icon: '🧠'};
         {
           name: 'Quantum Machine Learning';
           href: '/services/quantum-machine-learning';
           description: 'Quantum-powered ML platform';
           price: '$12,999/month';
-          icon: '⚛️',
-        };
+          icon: '⚛️'};
         {
           name: 'Autonomous AI Agents';
           href: '/services/autonomous-ai-agents';
           description: 'Self-operating AI systems';
           price: '$4,999/month';
-          icon: '🤖',
-        };
+          icon: '🤖'};
         {
           name: 'AI Content Factory';
           href: '/services/ai-content-factory';
           description: 'Automated content creation';
           price: '$299/month';
-          icon: '📝',
-        };
+          icon: '📝'};
         {
           name: 'View All AI Services';
           href: '/services?category=AI%20%26%20Machine%20Learning';
           description: 'Explore 20o0+ AI solutions';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Quantum Technology';
@@ -169,35 +163,30 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/services/quantum-neural-interface';
           description: 'Quantum + Neural Networks';
           price: '$8,999/month';
-          icon: '⚛️',
-        };
+          icon: '⚛️'};
         {
           name: 'Quantum Financial Trading';
           href: '/services/quantum-financial-trading';
           description: 'Quantum-powered trading';
           price: '$9,999/month';
-          icon: '💰',
-        };
+          icon: '💰'};
         {
           name: 'Quantum Internet Protocol';
           href: '/services/quantum-internet-protocol';
           description: 'Quantum communication network';
           price: '$7,999/month';
-          icon: '🌐',
-        };
+          icon: '🌐'};
         {
           name: 'Quantum Sensors Network';
           href: '/services/quantum-sensors-network';
           description: 'Ultra-precise quantum sensors';
           price: '$9,999/month';
-          icon: '📡',
-        };
+          icon: '📡'};
         {
           name: 'View All Quantum Services';
           href: '/services?category=Quantum%20Computing';
           description: 'Explore quantum solutions';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Emerging Tech';
@@ -211,35 +200,30 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/services/holographic-metaverse-platform';
           description: '3D immersive experiences';
           price: '$3,999/month';
-          icon: '🎭',
-        };
+          icon: '🎭'};
         {
           name: 'Neuromorphic Computing';
           href: '/services/neuromorphic-computing';
           description: 'Brain-inspired computing';
           price: '$8,999/month';
-          icon: '🧠',
-        };
+          icon: '🧠'};
         {
           name: 'Synthetic Biology';
           href: '/services/synthetic-biology-platform';
           description: 'AI-powered bioengineering';
           price: '$15,999/month';
-          icon: '🧬',
-        };
+          icon: '🧬'};
         {
           name: 'Brain-Computer Interface';
           href: '/services/brain-computer-interface';
           description: 'Direct brain communication';
           price: '$19,999/month';
-          icon: '💻',
-        };
+          icon: '💻'};
         {
           name: 'View All Emerging Tech';
           href: '/services?category=Emerging%20Technology';
           description: 'Explore future solutions';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Business Solutions';
@@ -253,35 +237,30 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/services/smart-inventory-manager';
           description: 'AI-powered inventory optimization';
           price: '$199/month';
-          icon: '📦',
-        };
+          icon: '📦'};
         {
           name: 'Customer Success Automation';
           href: '/services/customer-success-automation';
           description: 'Automated customer retention';
           price: '$399/month';
-          icon: '🎯',
-        };
+          icon: '🎯'};
         {
           name: 'AI Sales Coach';
           href: '/services/ai-sales-coach';
           description: 'Intelligent sales training';
           price: '$249/month';
-          icon: '📞',
-        };
+          icon: '📞'};
         {
           name: 'Smart HR Assistant';
           href: '/services/smart-hr-assistant';
           description: 'AI-powered HR automation';
           price: '$349/month';
-          icon: '👥',
-        };
+          icon: '👥'};
         {
           name: 'View All Business Solutions';
           href: '/services?category=Business%20Operations';
           description: 'Explore business tools';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Cybersecurity';
@@ -295,35 +274,30 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/services/cyber-physical-security';
           description: 'Digital + Physical protection';
           price: '$6,999/month';
-          icon: '🛡️',
-        };
+          icon: '🛡️'};
         {
           name: 'Quantum Internet Security';
           href: '/services/quantum-internet-security';
           description: 'Unhackable quantum security';
           price: '$7,999/month';
-          icon: '🔐',
-        };
+          icon: '🔐'};
         {
           name: 'Zero Trust Architecture';
           href: '/services/zero-trust-network-architecture';
           description: 'Continuous verification';
           price: '$4,999/month';
-          icon: '✅',
-        };
+          icon: '✅'};
         {
           name: 'AI Threat Detection';
           href: '/services/ai-threat-detection';
           description: 'Intelligent security monitoring';
           price: '$3,999/month';
-          icon: '👁️',
-        };
+          icon: '👁️'};
         {
           name: 'View All Security Solutions';
           href: '/services?category=Cybersecurity';
           description: 'Explore security tools';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]};
     {
       name: 'Enterprise IT';
@@ -337,43 +311,37 @@ export default function UltraFuturisticNavigation20o27() {
           href: '/cloud-platform';
           description: 'Scalable cloud infrastructure';
           price: 'Custom';
-          icon: '☁️',
-        };
+          icon: '☁️'};
         {
           name: 'Edge Computing Orchestration';
           href: '/services/edge-computing-orchestration';
           description: 'Distributed edge management';
           price: '$3,499/month';
-          icon: '🌐',
-        };
+          icon: '🌐'};
         {
           name: 'AI Operations Center';
           href: '/services/enterprise-ai-operations-center';
           description: 'Centralized AI management';
           price: '$8,999/month';
-          icon: '🏢',
-        };
+          icon: '🏢'};
         {
           name: 'Infrastructure Drift Detection';
           href: '/services/infrastructure-drift-detector';
           description: 'Automated infrastructure monitoring';
           price: '$2,999/month';
-          icon: '🔍',
-        };
+          icon: '🔍'};
         {
           name: 'View All Enterprise Solutions';
           href: '/services?category=Enterprise%20IT';
           description: 'Explore enterprise tools';
-          icon: '🚀',
-        }
+          icon: '🚀'}
       ]}
   ],
   const contactInfo ={
     mobile: '+1 30o2 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'};
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4"  /> };
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4"  /> };

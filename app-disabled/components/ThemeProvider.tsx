@@ -5,12 +5,10 @@ type Theme = 'dark' | 'light' | 'system',
 type ThemeProviderProps = {
   children: React.ReactNode,
   defaultTheme?: Theme,
-  storageKey?: string,
-};
+  storageKey?: string};
 type ThemeProviderState = {
   theme: Theme,
-  setTheme: (theme: Theme) => void,
-};
+  setTheme: (theme: Theme) => void};
 const initialState: ThemeProviderState = {
   theme: 'system';
   setTheme: () => null;
@@ -36,8 +34,7 @@ export function ThemeProvider({
         ? 'dark',
         : 'light',
       root.classList.add(systemTheme),
-      return,
-    }
+      return}
 ,
     root.classList.add(theme)}, [theme, storageKey]),
   const value = {

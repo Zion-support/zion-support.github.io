@@ -18,8 +18,7 @@ import Link from 'next/link',
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface JobsListProps {
   filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string) => void,
-}
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
 ,
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth(),
@@ -74,8 +73,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       case 'closed':,
         return 'bg-gray-10o0 text-gray-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    }
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
   return (
     <div className='grid gap-6 md: grid-cols-2'>,
@@ -83,8 +81,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         <Card
           key={job.id}
           className={`overflow-hidden cursor-pointer transition-shadow hover: shadow-md ${
-            onSelectJob ? 'cursor-pointer' : '',
-          }`}
+            onSelectJob ? 'cursor-pointer' : ''}`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >,
           <CardHeader className='p-4'>,

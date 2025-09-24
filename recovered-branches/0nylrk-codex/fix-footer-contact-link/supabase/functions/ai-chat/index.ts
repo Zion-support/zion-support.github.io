@@ -8,12 +8,10 @@ const corsHeaders = {
 };
 interface Message {
   role: string,
-  content: string,
-}
+  content: string}
 ,
 interface RequestBody {
-  messages: Message[],
-}
+  messages: Message[]}
 ,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -50,7 +48,7 @@ serve(async req => {
     const assistantMessage = data.choices[0].message.content,
     // Log this interaction for analytics (in a real implementation),
     // This would track common questions, successful interactions, etc.,
-    // console.log('AI chat interaction logged'),
+    // // console.log('AI chat interaction logged'),
     return new Response(JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' };
     })} catch (error) {

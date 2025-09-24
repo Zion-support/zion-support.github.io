@@ -2,8 +2,7 @@ import React, { useState, KeyboardEvent } from 'react',
 export type TagInputProps = {
   value: string[],
   onChange: (next: string[]) => void,
-  placeholder?: string,
-};
+  placeholder?: string};
 export default function TagInput({
   value;
   onChange;

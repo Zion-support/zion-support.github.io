@@ -10,8 +10,7 @@ interface PerformanceMetrics {
   cls: number | null, // Cumulative Layout Shift,
   ttfb: number | null, // Time to First Byte,
   domLoad: number | null, // DOM Content Loaded,
-  windowLoad: number | null, // Window Load,
-}
+  windowLoad: number | null, // Window Load}
 ,
 interface ResourceMetrics {
   totalRequests: number,
@@ -19,8 +18,7 @@ interface ResourceMetrics {
   cachedRequests: number,
   imageOptimization: boolean,
   compressionEnabled: boolean,
-  cdnEnabled: boolean,
-}
+  cdnEnabled: boolean}
 ,
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -30,16 +28,14 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     cls: null;
     ttfb: null;
     domLoad: null;
-    windowLoad: null,
-  }),
+    windowLoad: null}),
   const [resourceMetrics, setResourceMetrics] = useState<ResourceMetrics>({
     totalRequests: 0;
     totalSize: 0;
     cachedRequests: 0;
     imageOptimization: false;
     compressionEnabled: false;
-    cdnEnabled: false,
-  }),
+    cdnEnabled: false}),
   const [isVisible, setIsVisible] = useState(false),
   const [showDetails, setShowDetails] = useState(false),
   const [optimizationStatus, setOptimizationStatus] = useState<'idle' | 'optimizing' | 'completed' | 'error'>('idle'),
@@ -98,8 +94,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           let clsValue = 0,
           list.getEntries().forEach((entry: any) => {
             if (!entry.hadRecentInput) {
-              clsValue += entry.value,
-            }
+              clsValue += entry.value}
           }),
           setMetrics(prev => ({ ...prev, cls: clsValue }))}),
         clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
@@ -115,29 +110,26 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           let cachedCount = 0,
           entries.forEach((entry: any) => {
             if (entry.transferSize === 0 && entry.decodedBodySize > 0) {
-              cachedCount++,
-            }
+              cachedCount++}
             totalSize += entry.transferSize || 0}),
           setResourceMetrics(prev => ({
             ...prev;
             totalRequests: entries.length;
             totalSize;
-            cachedRequests: cachedCount,
-          }))}),
+            cachedRequests: cachedCount}))}),
         resourceObserver.observe({ entryTypes: ['resource'] })} catch (error) {
         console.warn('Resource observer failed:', error)}
     }
   }, []),
   const checkInitialPerformance = useCallback(() => {
     if (typeof performance !== 'undefined') {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as any,
+      const navigation = window.window.performance.getEntriesByType('navigation')[0] as any,
       if (navigation) {
         setMetrics(prev => ({
           ...prev;
           ttfb: navigation.responseStart - navigation.requestStart;
           domLoad: navigation.domContentLoadedEventEnd - navigation.navigationStart;
-          windowLoad: navigation.loadEventEnd - navigation.navigationStart,
-        }))}
+          windowLoad: navigation.loadEventEnd - navigation.navigationStart}))}
     }
   }, []),
   const runOptimizations = useCallback(async () => {
@@ -192,8 +184,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       ...prev;
       compressionEnabled: true;
       imageOptimization: true;
-      cdnEnabled: true,
-    }))};
+      cdnEnabled: true}))};
   const getPerformanceScore = () => {
     let score = 10o0,
     if (metrics.fcp && metrics.fcp > 180o0) score -= 20,
@@ -351,8 +342,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
               </div>,
               <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
                 <div className={`p-3 rounded-lg border ${
-                  resourceMetrics.imageOptimization ? 'border-green-50o0/50 bg-green-50o0/10' : 'border-gray-60o0 bg-gray-80o0',
-                }`}>,
+                  resourceMetrics.imageOptimization ? 'border-green-50o0/50 bg-green-50o0/10' : 'border-gray-60o0 bg-gray-80o0'}`}>,
                   <div className="flex items-center gap-2">,
                     {resourceMetrics.imageOptimization ? (
                       <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (

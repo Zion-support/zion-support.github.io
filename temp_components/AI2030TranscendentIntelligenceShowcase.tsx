@@ -6,26 +6,22 @@ const AI20o30TranscendentIntelligenceShowcase: React.FC = () => {
       title: "Universal Consciousness Interface";
       description: "Direct neural-AI communication enabling thought-to-computation translation";
       icon: "🧠";
-      impact: "Revolutionary",
-    };
+      impact: "Revolutionary"};
     {
       title: "Quantum Emotional Intelligence";
       description: "AI systems that understand and respond to human emotions at quantum levels";
       icon: "💫";
-      impact: "Breakthrough",
-    };
+      impact: "Breakthrough"};
     {
       title: "Temporal Prediction Engine";
       description: "Predict future events with 99.7% accuracy across multiple timelines";
       icon: "⏰";
-      impact: "Transcendent",
-    };
+      impact: "Transcendent"};
     {
       title: "Omniversal Knowledge Synthesis";
       description: "AI that processes information across infinite dimensions simultaneously";
       icon: "🌌";
-      impact: "Infinite",
-    }
+      impact: "Infinite"}
   ],
   const breakthroughStats = [
     { metric: "15,0o00x"label: "Processing Speed Increase" };
@@ -118,6 +114,5 @@ const AI20o30TranscendentIntelligenceShowcase: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o30TranscendentIntelligenceShowcase;

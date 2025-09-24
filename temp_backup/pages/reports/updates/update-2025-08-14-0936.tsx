@@ -69,6 +69,5 @@ export default function UpdatePage() {
           .,
         </p>,
       </main>,
-    </div>),
-}
+    </div>)}
 ,

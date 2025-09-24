@@ -65,8 +65,7 @@ export default function UltraFuturisticHero2027() {
     {
       icon: Brain,
       text: 'AI Consciousness Evolution',
-      color: 'from-purple-400 to-pink-400',
-    }
+      color: 'from-purple-400 to-pink-400'}
 ,
   const stats = [
     return this.props.children}
@@ -199,8 +198,7 @@ function UltraFuturisticHero2027() {
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],            y: [0, 20, 0],
             scale: [1, 1 && 1.3, 1],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
 ,
         />,
         <motion&& motion.div,
@@ -227,8 +225,7 @@ function UltraFuturisticHero2027() {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         <motion.div,
           className='absolute top - 40 right - 20 w - 24 h - 24 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl',
@@ -262,15 +259,13 @@ function UltraFuturisticHero2027() {
           transition={{
           animate={{
             coordinate_y: [0, -30, 0],
-            scale: [1, 1.1, 1],
-}}
+            scale: [1, 1.1, 1]}}
           transition={{
             duration: 12,
             repeat: Infinity,
             duration: 12;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Grid Pattern */}
 ,
@@ -316,8 +311,7 @@ function UltraFuturisticHero2027() {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
           {/* Subtitle */}
           <motion.p,
@@ -457,8 +451,7 @@ function UltraFuturisticHero2027() {
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: 'easeInOut',            ease: "easeInOut",
-          }}
+            ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Grid Pattern */}
         <div className='absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size: 50px_50px]' />,
@@ -701,8 +694,7 @@ function UltraFuturisticHero2027() {
       {/* Bottom Glow */}
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />,
     </section>),      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />,
-    </section>),
-}
+    </section>)}
 ,
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none" />,
     </section>)}

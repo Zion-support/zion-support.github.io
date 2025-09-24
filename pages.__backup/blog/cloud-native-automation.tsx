@@ -217,7 +217,7 @@ export default function CloudNativeAutomation() {
                   Comprehensive monitoring and observability are crucial for,
                   maintaining and optimizing cloud-native automation systems. We,
                   implement multiple layers of monitoring to ensure system,
-                  health and window.performance.,
+                  health and window.window.performance.,
                 </p>,
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>,
                   <div className='bg-white/5 rounded-xl p-4'>,
@@ -421,6 +421,5 @@ export default function CloudNativeAutomation() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

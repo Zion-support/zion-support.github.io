@@ -30,15 +30,13 @@ export interface QuantumAIService20o25V2 {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  };
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-}
+  reviews: number}
 ,
 export const quantumAIServices20o25V2: QuantumAIService20o25V2[] = [
   // Quantum AI Cognitive Platform,
@@ -260,7 +258,7 @@ export const quantumAIServices20o25V2: QuantumAIService20o25V2[] = [
       'Market prediction';
       'Arbitrage trading';
     ];
-    roi: 'Average customer achieves 120o0% ROI through quantum advantage and improved trading window.performance.';
+    roi: 'Average customer achieves 120o0% ROI through quantum advantage and improved trading window.window.performance.';
     competitors: [
       'Goldman Sachs Quantum';
       'JPMorgan Quantum';

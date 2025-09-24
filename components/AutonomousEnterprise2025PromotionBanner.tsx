@@ -9,8 +9,7 @@ interface ContentItem {
   roi: string,
   savings: string,
   readingTime: string,
-  featured: boolean,
-}
+  featured: boolean}
 ,
 const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0),
@@ -25,8 +24,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
       roi: '40,0o00%';
       savings: '$750B+';
       readingTime: '35 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-autonomous-success';
       title: 'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story';
@@ -35,8 +33,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
       roi: '40,0o00%';
       savings: '$750B';
       readingTime: '25 min read';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'autonomous-enterprise-implementation-guide';
       title: 'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI';
@@ -45,8 +42,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
       roi: '40,0o00%';
       savings: '$750B+';
       readingTime: '60 min read';
-      featured: true,
-    }
+      featured: true}
   ],
   // Check if banner was previously dismissed,
   useEffect(() => {
@@ -74,8 +70,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    }
+        return '📄'}
   };
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -86,8 +81,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
       case 'resource':,
         return 'Implementation Guide',
       default:,
-        return 'Content',
-    }
+        return 'Content'}
   };
   if (!isVisible || isDismissed) {
     return null}
@@ -189,8 +183,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentIndex,
                   ? 'bg-white scale-125',
-                  : 'bg-white bg-opacity-40 hover: bg-opacity-60',
-              }`}
+                  : 'bg-white bg-opacity-40 hover: bg-opacity-60'}`}
               aria-label={`Go to content ${index + 1}`}
             />))}
         </div>,

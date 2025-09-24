@@ -7,7 +7,6 @@ import React, { useEffect } from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
 "use client",
-,
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
@@ -25,29 +24,26 @@ class ErrorBoundary extends React.Component {
 }
 ,
 export type EnhancedLayoutProps = {
-  children: React.ReactNode,}
+  children: React.ReactNode}
 export type EnhancedLayoutProps = {
   children: React.ReactNode,
 export type EnhancedLayoutProps = {
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
     const lng = i18n.resolvedLanguage |i18n.language,
 export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
-  children: React.ReactNode,};
+  children: React.ReactNode};
 export type EnhancedLayoutProps = {
   children: React.ReactNode,
 export type EnhancedLayoutProps = {
-  children: React.ReactNode,
-};
+  children: React.ReactNode};
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
     const lng = i18n.resolvedLanguage || i18n.language,
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
-    document.documentElement.setAttribute('lang', lng),
-}, []),
+    document.documentElement.setAttribute('lang', lng)}, []),
   return (
     <div className='min-h-screen flex flex-col'>      <header>,
         <EnhancedNavigation />,
@@ -85,9 +81,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <footer>,
         <EnhancedFooter />,
       </footer>,
-    </div>),
+    </div>)}
 }
-}
-  ),
-}
+  )}
 ,

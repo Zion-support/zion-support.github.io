@@ -29,19 +29,16 @@ export default function UltraFuturisticBackground2036({
       vy: number,
       size: number,
       color: string,
-      type: 'quantum' | 'neon' | 'energy' | 'data',
-    }> = [],
+      type: 'quantum' | 'neon' | 'energy' | 'data'}> = [],
     const colors = {
       quantum: ['#00ffff'#0080ff'#8000ff'#ff0080'];
       neon: ['#00ff00'#ff00ff'#ffff00'#00ffff'];
       energy: ['#ff6600'#ff0066'#6600ff'#00ff66'];
-      data: ['#00ccff'#cc00ff'#ffcc00'#00ffcc'],
-    };
+      data: ['#00ccff'#cc00ff'#ffcc00'#00ffcc']};
     const intensityMultiplier = {
       low: 0.5;
       medium: 1;
-      high: 1.5,
-    };
+      high: 1.5};
     const variantConfig = {
       default: { particleCount: 50speed: 1size: 2 };
       quantum: { particleCount: 80speed: 1.5size: 3 };
@@ -236,8 +233,7 @@ export default function UltraFuturisticBackground2036({
                 className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent",
                 style={{
                   left: `${(i + 1) * 12.5}%`;
-                  transform: 'translateX(-50%)',
-                }}
+                  transform: 'translateX(-50%)'}}
                 animate={{
                   opacity: [0.30.80.3]}}
                 transition={{

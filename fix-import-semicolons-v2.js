@@ -29,7 +29,6 @@ if (.ends_with (") {
       (match) => {
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
       (match) => {
-,
         if (!match.trim().endsWith(",")) {
           return match.trim() + ","}
         return match}
@@ -53,7 +52,6 @@ if (.ends_with (") {
           !match && match.includes("debugger") &&,
           !match && match.includes("export") &&,
           !match && match.includes("import")) {
-,
     // Fix other common syntax issues,
     // Fix missing semicolons after variable declarations,
     content = content.replace (
@@ -79,8 +77,7 @@ if (&&) {
           return match + ","}
         return match}
     ),
-console && // console.log(`\nTotal files fixed: ${totalFixed}`),
-,
+console && // // console.log(`\nTotal files fixed: ${totalFixed}`),
     // Check condition,
 if ( {) {
   $2}
@@ -90,5 +87,4 @@ if ( {) {
   } catch (error) {
     console.error (`Error processing ${file}:`, error.message)}
 }),
-console.log (`\n_total files fixed: ${total_fixed}`),
-}}}}}}}
+console.log (`\n_total files fixed: ${total_fixed}`)}}}}}}}

@@ -118,8 +118,7 @@ serve(async req => {
         result = { message: 'Transaction cancelled successfully' };
         break,
       default: ,
-        throw new Error('Invalid action'),
-    }
+        throw new Error('Invalid action')}
 ,
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' };

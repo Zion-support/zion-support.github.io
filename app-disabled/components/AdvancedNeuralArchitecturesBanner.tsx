@@ -29,8 +29,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
       icon: CpuChipIcon;
       metrics: "450% ROI • 99.2% Accuracy • 67% Cost Reduction";
       link: "/blog/ai-20o25-advanced-neural-architectures-enterprise-breakthrough";
-      color: "from-purple-60o0 to-indigo-60o0",
-    };
+      color: "from-purple-60o0 to-indigo-60o0"};
     {
       title: "Enterprise Automation Success";
       subtitle: "50o0% ROI in 18 Months";
@@ -38,8 +37,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
       icon: ChartBarIcon;
       metrics: "50o0% ROI • $140M Savings • 85% Efficiency Gain";
       link: "/case-studies/ai-20o25-enterprise-automation-50o0-percent-roi-success-story";
-      color: "from-blue-60o0 to-cyan-60o0",
-    };
+      color: "from-blue-60o0 to-cyan-60o0"};
     {
       title: "Ultimate Success Framework";
       subtitle: "94% Implementation Success Rate";
@@ -47,8 +45,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
       icon: SparklesIcon;
       metrics: "94% Success Rate • 50o0%+ ROI • 67% Faster Implementation";
       link: "/resources/ai-20o25-implementation-ultimate-success-framework";
-      color: "from-emerald-60o0 to-teal-60o0",
-    }
+      color: "from-emerald-60o0 to-teal-60o0"}
   ],
   if (!isVisible) return null,
   return (
@@ -112,8 +109,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                       <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />,
                     </div>,
                   </div>,
-                </div>),
-            })}
+                </div>)})}
           </div>,
           {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 mb-6">,
@@ -124,8 +120,7 @@ const AdvancedNeuralArchitecturesBanner = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-white scale-125',
-                    : 'bg-white/40 hover: bg-white/60',
-                }`}
+                    : 'bg-white/40 hover: bg-white/60'}`}
               />))}
           </div>,
           {/* Call to Action */}
@@ -153,6 +148,5 @@ const AdvancedNeuralArchitecturesBanner = () => {
           <XMarkIcon className="w-6 h-6"  />,
         </button>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AdvancedNeuralArchitecturesBanner;

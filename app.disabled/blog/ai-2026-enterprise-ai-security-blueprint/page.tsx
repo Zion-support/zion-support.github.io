@@ -91,6 +91,5 @@ const EnterpriseAISecurityBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default EnterpriseAISecurityBlueprint20o26;

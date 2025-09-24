@@ -15,6 +15,5 @@ export default function NewsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -4,8 +4,7 @@ import { X } from 'lucide-react',
 type ChatMessage ={
   role: 'user' | 'assistant' | 'system',
   content: string,
-  timestamp?: number,
-};
+  timestamp?: number};
 function generateSessionId(): string {
   return Math.random().toString(36).slice(2) + Date.now().toString(36)}
 ,
@@ -149,8 +148,7 @@ export default function ChatWidget() {
                   className={
                     m.role === 'assistant',
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-10o0 dark: bg-gray-80o0',
-                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-60o0 text-white',
-                  }
+                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-60o0 text-white'}
                 >,
                   {m.content}
                 </div>,
@@ -190,8 +188,7 @@ export default function ChatWidget() {
                   }}
                   placeholder='Ask a question…',
                   className='flex-1 rounded-xl border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0',
-                      onSend(),
-                    }
+                      onSend()}
                   }}
                   placeholder="Ask a question…",
                   className="flex-1 rounded-xl border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-50o0",

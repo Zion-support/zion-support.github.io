@@ -652,6 +652,5 @@ export default function DocumentationPage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

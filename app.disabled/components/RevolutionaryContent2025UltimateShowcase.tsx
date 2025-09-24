@@ -267,8 +267,7 @@ const RevolutionaryContent20o25UltimateShowcase = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 shadow-md',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 shadow-md'}`}
             >,
               {category.label} ({category.count}),
             </button>))}
@@ -346,6 +345,5 @@ const RevolutionaryContent20o25UltimateShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default RevolutionaryContent20o25UltimateShowcase;

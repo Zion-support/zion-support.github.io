@@ -1,7 +1,6 @@
 
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {
-,
   id: string,
   userId: string,
   name: string,
@@ -14,8 +13,7 @@ export interface InvestmentPortfolio {
   last_rebalanced: Date,
   performance: PortfolioPerformance,
   created_at: Date;
-  updated_at: Date,
-}
+  updated_at: Date}
 ,
   id: string,
   symbol: string,
@@ -32,8 +30,7 @@ export interface InvestmentPortfolio {
     weekly_return: number,
     monthly_return: number,
     yearly_return: number;
-    total_return: number,
-  }
+    total_return: number}
 }
 ,
   totalReturn: number,
@@ -45,8 +42,7 @@ export interface InvestmentPortfolio {
   alpha: number,
   tracking_error: number,
   information_ratio: number;
-  sortino_ratio: number,
-}
+  sortino_ratio: number}
 ,
   id: string,
   user_id: string,
@@ -55,8 +51,7 @@ export interface InvestmentPortfolio {
     symbol: string,
     name: string,
     type: string;
-    current_price: number,
-  }
+    current_price: number}
   confidence: number,
   reasoning: string[],
   expected_return: number,
@@ -64,8 +59,7 @@ export interface InvestmentPortfolio {
   time_horizon: number, // in months,
   alternatives: string[],
   created_at: Date;
-  expires_at: Date,
-}
+  expires_at: Date}
 ,
   id: string,
   user_id: string,
@@ -80,8 +74,7 @@ export interface InvestmentPortfolio {
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive';
   progress: number, // percentage,
   created_at: Date;
-  updated_at: Date,
-}
+  updated_at: Date}
 ,
   id: string,
   market: string,
@@ -93,8 +86,7 @@ export interface InvestmentPortfolio {
   recommendations: string[],
   confidence: number,
   last_updated: Date;
-  next_update: Date,
-}
+  next_update: Date}
 ,
   id: string,
   user_id: string,
@@ -104,36 +96,30 @@ export interface InvestmentPortfolio {
   investment_strategy: {
     asset_allocation: Record < string, number>,
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually';
-    risk_management: string[],
-  }
+    risk_management: string[]}
   cash_flow: {
     monthly_income: number,
     monthly_expenses: number,
     savings_rate: number;
-    emergency_fund: number,
-  }
+    emergency_fund: number}
   insurance: {
     life: boolean,
     health: boolean,
     disability: boolean,
     property: boolean;
-    recommendations: string[],
-  }
+    recommendations: string[]}
   tax: {
     estimatedTaxLiability: number,
     taxOptimizationStrategies: string[];
-    deductions: string[],
-  }
+    deductions: string[]}
   retirement: {
     target_age: number,
     estimated_needs: number,
     current_savings: number,
     monthly_contribution: number;
-    projected_value: number,
-  }
+    projected_value: number}
   created_at: Date;
-  updated_at: Date,
-}
+  updated_at: Date}
 ,
   userId: string,
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
@@ -148,14 +134,11 @@ export interface InvestmentPortfolio {
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey;
     this && this.baseUrl = baseUrl,
-  estimatedFees: number,
-}
+  estimatedFees: number}
 ,
 export class AIFinancialAdvisorService {
 export class AIFinancialAdvisorService {
-,
-  private apiKey: string,
-  }
+  private apiKey: string}
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
@@ -234,11 +217,9 @@ export class AIFinancialAdvisorService {
       action: 'buy' | 'sell',
       symbol: string,
       quantity: number,
-      estimatedCost: number,
-    }>,
+      estimatedCost: number}>,
     estimatedFees: number,
-    expectedImpact: string,
-  }> {
+    expectedImpact: string}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST';
@@ -259,8 +240,7 @@ export class AIFinancialAdvisorService {
     monthlyContribution: number,
     projectedValue: number,
     assumptions: Record<string any>,
-    recommendations: string[],
-  }> {
+    recommendations: string[]}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST';
@@ -282,8 +262,7 @@ export class AIFinancialAdvisorService {
   insights: string[],
   next_steps: string[],
   risk_warnings: string[];
-  estimated_fees: number,
-}
+  estimated_fees: number}
 export class AIFinancialAdvisorService {
   private api_key: string,
   private base_url: string;
@@ -373,11 +352,9 @@ if ( {) {
       action: 'buy' | 'sell',
       symbol: string,
       quantity: number;
-      estimated_cost: number,
-    }>,
+      estimated_cost: number}>,
     estimated_fees: number;
-    expected_impact: string,
-  }> {
+    expected_impact: string}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/rebalance`, {
         method: 'POST';
@@ -399,8 +376,7 @@ if ( {) {
     monthly_contribution: number,
     projected_value: number;
     assumptions: Record < string, any>,
-    recommendations: string[],
-  }> {
+    recommendations: string[]}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / retirement - calculator`, {
         method: 'POST';
@@ -441,8 +417,7 @@ if ( {) {
     summary: string,
     keyMetrics: Record<string any>,
     recommendations: string[],
-    nextSteps: string[],
-  }> {
+    nextSteps: string[]}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST';
@@ -472,8 +447,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
   lastRebalanced: Date;
   performance: PortfolioPerformance;
   createdAt: Date;
-  updatedAt: Date,
-}
+  updatedAt: Date}
         throw new Error (`HTTP error! status: ${response.status}`)}
       const data = await response.json (),
       return data.optimization} catch (error) {
@@ -486,8 +460,7 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
     summary: string;
     key_metrics: Record < string, any>,
     recommendations: string[];
-    next_steps: string[],
-  }> {
+    next_steps: string[]}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / report`, {
         method: 'POST';
@@ -506,5 +479,4 @@ if ( {) {
   }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key'),
-,
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key')>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

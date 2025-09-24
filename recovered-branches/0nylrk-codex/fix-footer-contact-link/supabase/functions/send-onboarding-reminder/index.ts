@@ -12,8 +12,7 @@ const corsHeaders = {
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
-  role: string,
-}
+  role: string}
 ,
 serve(async (req: Request) => {
   // Handle CORS,

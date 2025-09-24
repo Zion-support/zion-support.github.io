@@ -1,7 +1,6 @@
 export type AdminSession ={
   username: string,
-  issuedAt: number,
-};
+  issuedAt: number};
 import crypto from 'crypto',
 import type { NextApiRequest, NextApiResponse } from 'next',
 const COOKIE_NAME = 'admin_session',

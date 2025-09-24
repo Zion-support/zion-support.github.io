@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 import { Sun, Moon, Monitor } from 'lucide-react',
 interface ThemeToggleProps {
   currentTheme: 'dark' | 'light',
-  onThemeChange: (theme: 'dark' | 'light') => void,
-}
+  onThemeChange: (theme: 'dark' | 'light') => void}
 ,
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
   currentTheme;
@@ -40,8 +39,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
                     ? 'bg-gradient-to-br ' +,
                       theme.color +,
                       ' text-white shadow-lg',
-                    : 'text-gray-40o0 hover: text-white hover:bg-white/10',
-                }`}
+                    : 'text-gray-40o0 hover: text-white hover:bg-white/10'}`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 title={theme.label}

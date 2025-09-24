@@ -10,8 +10,7 @@ const contactInfo ={
   mobile: '+1 30o2 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 const features = [
   'Quantum-enhanced market prediction algorithmsReal-time market data processing';
   'AI-powered risk assessmentMulti-asset portfolio optimization';
@@ -23,22 +22,19 @@ const pricingPlans = [
     price: 199;
     period: 'month';
     features: ['Basic algorithms5 asset classes', 'Daily rebalancingStandard support'];
-    popular: false,
-  };
+    popular: false};
   {
     name: 'Professional';
     price: 499;
     period: 'month';
     features: ['Advanced algorithmsAll asset classes', 'Real-time rebalancingCustom strategies', 'Priority support'];
-    popular: true,
-  };
+    popular: true};
   {
     name: 'Enterprise';
     price: 1299;
     period: 'month';
     features: ['Quantum algorithmsWhite-label solution', 'API accessDedicated support', 'Custom integrations'];
-    popular: false,
-  }
+    popular: false}
 ];
 export default function QuantumTradingAlgorithm() {
   return (

@@ -66,8 +66,7 @@ interface NavigationItem {
   badge?: string,
   title?: string,
   featured?: boolean,
-  category?: string,
-}
+  category?: string}
 ,
 const contactInfo = {
   mobile: '+1 30o2 464 0950';
@@ -82,8 +81,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -795,8 +793,7 @@ export default function UltraFuturisticNavigation20o35() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const closeDropdown = () => {
     setActiveDropdown(null)};
   return (

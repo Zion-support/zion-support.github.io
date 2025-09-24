@@ -13,15 +13,13 @@ import {
 interface Props {
   children: ReactNode,
   fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void,
-}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void}
 ,
 interface State {
   hasError: boolean,
   error: Error | null,
   errorInfo: ErrorInfo | null,
-  errorId: string,
-}
+  errorId: string}
 ,
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -81,7 +79,7 @@ class ErrorBoundary extends Component<Props State> {
       //   headers: { 'Content-Type': 'application/json' };
       //   body: JSON.stringify(errorData),
       // }),
-      // console.log('Error logged:', errorData)} catch (logError) {
+      // // console.log('Error logged:', errorData)} catch (logError) {
       console.warn('Failed to log error:', logError)}
   };
   private handleRetry = () => {

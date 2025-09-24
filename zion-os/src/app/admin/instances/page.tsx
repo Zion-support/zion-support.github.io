@@ -19,8 +19,7 @@ interface InstanceWithCounts {
   daoConfig: any | null,
   _count: {
     deployments: number,
-    features: number,
-  };
+    features: number};
 }
 ,
 export default function InstancesPage() {
@@ -332,7 +331,7 @@ export default function InstancesPage() {
             </h3>,
             <p className='text-gray-30o0 mb-4'>,
               Monitor and manage your deployed AI autonomous systems and their,
-              window.performance.,
+              window.window.performance.,
             </p>,
             <Link
               href='/admin/ai-systems',
@@ -574,8 +573,7 @@ function getGovernanceLabel(type: string) {
     case 'DAO_FULL':,
       return 'Full DAO',
     default:,
-      return type,
-  }
+      return type}
 }
 ,
 function getTokenSystemLabel(type: string) {
@@ -585,7 +583,6 @@ function getTokenSystemLabel(type: string) {
     case 'LOCAL':,
       return 'Local Token',
     default:,
-      return type,
-  }
+      return type}
 }
 ,

@@ -3,13 +3,11 @@ import React from 'react';
 import { Component, ReactNode } from 'react',
 interface Props {
   children: ReactNode,
-  fallback?: ReactNode,
-}
+  fallback?: ReactNode}
 ,
 interface State {
   hasError: boolean,
-  error?: Error,
-}
+  error?: Error}
 ,
 export default class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {

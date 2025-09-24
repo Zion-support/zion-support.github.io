@@ -76,6 +76,5 @@ const AgenticSalesPlaybooks20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default AgenticSalesPlaybooks20o25;

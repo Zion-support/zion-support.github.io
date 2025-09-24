@@ -23,5 +23,4 @@ export type DisputeMessage = {
   updatedAt: string,
 export type UserSummary = {
   id: string,
-  name: string,
-}}}
+  name: string}}}

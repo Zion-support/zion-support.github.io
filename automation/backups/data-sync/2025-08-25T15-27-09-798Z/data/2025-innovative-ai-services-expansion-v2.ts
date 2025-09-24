@@ -40,15 +40,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Consciousness algorithms, emotional intelligence, cognitive evolution, ethical decision making.';
     launchDate: '20o25-0o1-0o5';
     customers: 45;
     rating: 4.9;
-    reviews: 34,
-  };
+    reviews: 34};
   // Quantum AI Neural Network Platform,
   {
     id: 'quantum-ai-neural-network-platform';
@@ -89,15 +87,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Quantum neural networks, consciousness integration, superintelligent learning, quantum optimization.';
     launchDate: '20o25-0o1-15';
     customers: 67;
     rating: 4.9;
-    reviews: 52,
-  };
+    reviews: 52};
   // Autonomous AI Research Assistant,
   {
     id: 'autonomous-ai-research-assistant';
@@ -138,15 +134,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Autonomous research, hypothesis generation, experimental design, scientific discovery.';
     launchDate: '20o25-0o2-0o1';
     customers: 89;
     rating: 4.8;
-    reviews: 67,
-  };
+    reviews: 67};
   // Emotional AI Intelligence Platform,
   {
     id: 'emotional-ai-intelligence-platform';
@@ -187,15 +181,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Emotional understanding, empathy development, social intelligence, therapeutic applications.';
     launchDate: '20o25-0o1-20';
     customers: 156;
     rating: 4.8;
-    reviews: 123,
-  };
+    reviews: 123};
   // Quantum AI Metaverse Platform,
   {
     id: 'quantum-ai-metaverse-platform';
@@ -236,15 +228,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Quantum metaverse creation, AI consciousness integration, immersive experiences, quantum rendering.';
     launchDate: '20o25-0o2-10';
     customers: 234;
     rating: 4.9;
-    reviews: 189,
-  };
+    reviews: 189};
   // AI Autonomous Business Intelligence,
   {
     id: 'ai-autonomous-business-intelligence';
@@ -285,15 +275,13 @@ export const innovativeAIServices20o25ExpansionV2 = [
       mobile: '+1 30o2 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    };
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Autonomous analysis, strategic decision making, business insights, predictive analytics.';
     launchDate: '20o25-0o1-30';
     customers: 178;
     rating: 4.8;
-    reviews: 145,
-  };
+    reviews: 145};
   {
     id: 'ai-powered-predictive-maintenance-platform';
     name: 'AI-Powered Predictive Maintenance Platform';
@@ -305,8 +293,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 7990;
       currency: 'USD';
       trialDays: 30;
-      setupTime: '2-3 weeks',
-    };
+      setupTime: '2-3 weeks'};
     features: [
       'AI-powered failure prediction';
       'Real-time equipment monitoring';
@@ -352,8 +339,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-12-0o1';
     customers: 750;
     rating: 4.9;
-    reviews: 89,
-  };
+    reviews: 89};
   {
     id: 'ai-powered-cybersecurity-threat-detection';
     name: 'AI-Powered Cybersecurity Threat Detection';
@@ -365,8 +351,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 5990;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '1-2 weeks',
-    };
+      setupTime: '1-2 weeks'};
     features: [
       'AI-powered threat detection';
       'Behavioral analysis';
@@ -412,8 +397,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-11-15';
     customers: 120o0;
     rating: 4.8;
-    reviews: 156,
-  };
+    reviews: 156};
   {
     id: 'ai-powered-customer-service-automation';
     name: 'AI-Powered Customer Service Automation';
@@ -425,8 +409,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 3990;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '3-5 days',
-    };
+      setupTime: '3-5 days'};
     features: [
       'AI-powered chatbots';
       'Natural language processing';
@@ -472,8 +455,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-10-0o1';
     customers: 210o0;
     rating: 4.8;
-    reviews: 178,
-  };
+    reviews: 178};
   {
     id: 'ai-powered-sales-intelligence-platform';
     name: 'AI-Powered Sales Intelligence Platform';
@@ -485,8 +467,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 4490;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '3-5 days',
-    };
+      setupTime: '3-5 days'};
     features: [
       'AI-powered lead scoring';
       'Prospect identification';
@@ -532,8 +513,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-09-15';
     customers: 180o0;
     rating: 4.9;
-    reviews: 145,
-  };
+    reviews: 145};
   {
     id: 'ai-powered-marketing-automation-suite';
     name: 'AI-Powered Marketing Automation Suite';
@@ -545,8 +525,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 3490;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '3-5 days',
-    };
+      setupTime: '3-5 days'};
     features: [
       'AI-powered campaign optimization';
       'Personalized content delivery';
@@ -592,8 +571,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-08-0o1';
     customers: 240o0;
     rating: 4.8;
-    reviews: 189,
-  };
+    reviews: 189};
   {
     id: 'ai-powered-data-analytics-platform';
     name: 'AI-Powered Data Analytics Platform';
@@ -605,8 +583,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 4990;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '1-2 weeks',
-    };
+      setupTime: '1-2 weeks'};
     features: [
       'AI-powered data analysis';
       'Predictive analytics';
@@ -652,8 +629,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-0o7-15';
     customers: 950;
     rating: 4.7;
-    reviews: 78,
-  };
+    reviews: 78};
   {
     id: 'ai-powered-healthcare-diagnostics';
     name: 'AI-Powered Healthcare Diagnostics';
@@ -665,8 +641,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 8990;
       currency: 'USD';
       trialDays: 30;
-      setupTime: '2-3 weeks',
-    };
+      setupTime: '2-3 weeks'};
     features: [
       'AI-powered image analysis';
       'Disease detection';
@@ -712,8 +687,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-0o6-0o1';
     customers: 320;
     rating: 4.9;
-    reviews: 45,
-  };
+    reviews: 45};
   {
     id: 'ai-powered-legal-document-analysis';
     name: 'AI-Powered Legal Document Analysis';
@@ -725,8 +699,7 @@ export const innovativeAIServices20o25ExpansionV2 = [
       yearly: 2990;
       currency: 'USD';
       trialDays: 21;
-      setupTime: '1-2 weeks',
-    };
+      setupTime: '1-2 weeks'};
     features: [
       'AI-powered document analysis';
       'Contract review automation';
@@ -772,6 +745,5 @@ export const innovativeAIServices20o25ExpansionV2 = [
     launchDate: '20o24-0o5-15';
     customers: 480;
         rating: 4.8;
-    reviews: 67,
-  }
+    reviews: 67}
 ],

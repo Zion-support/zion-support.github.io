@@ -15,6 +15,5 @@ export default function Index20o41Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

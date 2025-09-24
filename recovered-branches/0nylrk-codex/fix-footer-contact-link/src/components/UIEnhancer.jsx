@@ -51,8 +51,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
     const scrollToTop = () => {
         window.scrollTo({
             top: 0;
-            behavior: 'smooth',
-        })};
+            behavior: 'smooth'})};
     const toggleParticleMode = () => {
         setIsParticleMode(!isParticleMode)};
     return (<>,
@@ -94,15 +93,13 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-40o0/30 rounded-full" initial={{
                     x: Math.random() * window.innerWidth;
                     y: Math.random() * window.innerHeight;
-                    scale: 0,
-                }} animate={{
+                    scale: 0}} animate={{
                     x: Math.random() * window.innerWidth;
                     y: Math.random() * window.innerHeight;
                     scale: [0, 1, 0]}} transition={{
                     duration: Math.random() * 10 + 10;
                     repeat: Infinity;
-                    ease: "linear",
-                }} />))}
+                    ease: "linear"}} />))}
           </div>,
         </div>)}
 ,

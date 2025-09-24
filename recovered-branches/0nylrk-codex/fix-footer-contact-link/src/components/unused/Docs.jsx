@@ -324,6 +324,5 @@ const Docs = () => {
           </div>,
         </div>,
       </section>,
-    </div>),
-};
+    </div>)};
 export default Docs;

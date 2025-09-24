@@ -106,8 +106,7 @@ reviews: number,export const revolutionaryAIServices20o26: RevolutionaryAIServic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced multimodal AI platform with real-time processing, fusion algorithms, and comprehensive integration capabilities.';
@@ -183,8 +182,7 @@ reviews: number,export const revolutionaryAIServices20o26: RevolutionaryAIServic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Complete autonomous business platform with AI decision-making, process automation, and comprehensive business management capabilities.';
@@ -261,8 +259,7 @@ reviews: number,export const revolutionaryAIServices20o26: RevolutionaryAIServic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced creative AI platform with unlimited content generation, style customization, and comprehensive creative tools.';
@@ -338,8 +335,7 @@ reviews: number,export const revolutionaryAIServices20o26: RevolutionaryAIServic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced healthcare AI platform with 24/7 support, personalized monitoring, and comprehensive healthcare capabilities.';
@@ -416,8 +412,7 @@ reviews: number,export const revolutionaryAIServices20o26: RevolutionaryAIServic
       "email": 'kleber@ziontechgroup.com;
       address:;
   364 E Main St STE 10o08 Middletown DE 19709';
-      "website": 'https: //ziontechgroup.com,
-    };
+      "website": 'https: //ziontechgroup.com};
     "realImplementation": true;
     implementationDetails:;
   Advanced quantum logistics platform with optimization algorithms, real-time processing, and comprehensive logistics management capabilities.';

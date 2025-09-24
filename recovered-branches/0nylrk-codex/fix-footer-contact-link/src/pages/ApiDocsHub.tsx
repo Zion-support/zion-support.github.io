@@ -101,8 +101,7 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
           </Link>,
         </div>,
       </div>,
-    </ApiDocsLayout>),
-}
+    </ApiDocsLayout>)}
 export default ApiDocsHub;
 import React from "react";;
 import { Link } from "react-router-dom";
@@ -194,10 +193,8 @@ export function ApiDocsHub() {
           </Link>,
         </div>,
       </div>,
-    </ApiDocsLayout>),
-}
+    </ApiDocsLayout>)}
 export default ApiDocsHub;
-,
           {sections.map((section) => (
             <Link
               key={section.path} >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))))

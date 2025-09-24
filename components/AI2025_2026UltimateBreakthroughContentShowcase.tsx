@@ -74,8 +74,7 @@ const AI20o25_20o26UltimateBreakthroughContentShowcase = () => {
             <div
               key={index}
               className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              }`}
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {item.featured && (
                 <div className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-center py-2 text-sm font-bold'>,
@@ -107,6 +106,5 @@ const AI20o25_20o26UltimateBreakthroughContentShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25_20o26UltimateBreakthroughContentShowcase;

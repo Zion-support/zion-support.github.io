@@ -114,8 +114,7 @@ export default function NewServicesShowcase20o25() {
                     <ArrowRight className='w-4 h-4 ml-2 group-hover/btn: translate-x-1 transition-transform' />,
                   </Link>,
                 </div>,
-              </div>),
-          })}
+              </div>)})}
         </div>,
         {/* Success Metrics */}
         <div className='bg-white rounded-2xl shadow-lg p-8 mb-12'>,
@@ -181,6 +180,5 @@ export default function NewServicesShowcase20o25() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

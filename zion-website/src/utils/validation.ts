@@ -20,8 +20,7 @@ export const validateRequest = (schema: z.ZodSchema) => {
     try {
       const validatedData = schema.parse(req.body),
       req.validatedData = validatedData,
-      next(),
-    } catch (error) {
+      next()} catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({
           error: 'Validation failed';

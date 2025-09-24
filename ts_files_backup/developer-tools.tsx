@@ -33,8 +33,7 @@ export default function DeveloperToolsPage() {
       textColor: 'text-gray-400';
       gradient: 'from-gray-400 to-black';
       popular: true;
-      category: 'Code Generation',
-    };
+      category: 'Code Generation'};
     {
       icon: <GitBranch className="w-8 h-8 text-white" />;
       title: 'GitHub Pro';
@@ -52,8 +51,7 @@ export default function DeveloperToolsPage() {
       textColor: 'text-green-400';
       gradient: 'from-green-400 to-emerald-500';
       popular: true;
-      category: 'Version Control',
-    };
+      category: 'Version Control'};
     {
       icon: <Database className="w-8 h-8 text-white" />;
       title: 'MongoDB Atlas';
@@ -71,8 +69,7 @@ export default function DeveloperToolsPage() {
       textColor: 'text-green-400';
       gradient: 'from-green-400 to-blue-500';
       popular: false;
-      category: 'Database',
-    };
+      category: 'Database'};
     {
       icon: <Cloud className="w-8 h-8 text-white" />;
       title: 'Vercel Pro';
@@ -90,8 +87,7 @@ export default function DeveloperToolsPage() {
       textColor: 'text-gray-400';
       gradient: 'from-black to-gray-500';
       popular: false;
-      category: 'Deployment',
-    };
+      category: 'Deployment'};
     {
       icon: <Shield className="w-8 h-8 text-white" />;
       title: 'Snyk';
@@ -109,8 +105,7 @@ export default function DeveloperToolsPage() {
       textColor: 'text-red-400';
       gradient: 'from-red-400 to-pink-500';
       popular: false;
-      category: 'Security',
-    };
+      category: 'Security'};
     {
       icon: <Zap className="w-8 h-8 text-white" />;
       title: 'Postman';
@@ -128,94 +123,79 @@ export default function DeveloperToolsPage() {
       textColor: 'text-orange-400';
       gradient: 'from-orange-400 to-red-500';
       popular: false;
-      category: 'API Development',
-    }
+      category: 'API Development'}
   ],
   const devMarketStats = [
     {
       title: 'Dev Tools Market';
       value: '$8.2B';
       growth: '+24% YoY';
-      description: 'Global developer tools market size',
-    };
+      description: 'Global developer tools market size'};
     {
       title: 'AI Code Tools';
       value: '$2.1B';
       growth: '+45% YoY';
-      description: 'AI-powered development tools market',
-    };
+      description: 'AI-powered development tools market'};
     {
       title: 'Cloud Dev Tools';
       value: '$4.8B';
       growth: '+32% YoY';
-      description: 'Cloud-based development platforms',
-    };
+      description: 'Cloud-based development platforms'};
     {
       title: 'Dev Productivity';
       value: '35%';
       growth: '+18% YoY';
-      description: 'Average productivity improvement',
-    }
+      description: 'Average productivity improvement'}
   ],
   const devCategories = [
     {
       name: 'Code Generation';
       description: 'AI-powered coding assistants and code completion tools';
       tools: 1;
-      avgPrice: '$10/month',
-    };
+      avgPrice: '$10/month'};
     {
       name: 'Version Control';
       description: 'Git platforms and collaboration tools for code management';
       tools: 1;
-      avgPrice: '$4/month',
-    };
+      avgPrice: '$4/month'};
     {
       name: 'Database';
       description: 'Managed database services and database tools';
       tools: 1;
-      avgPrice: '$33/month',
-    };
+      avgPrice: '$33/month'};
     {
       name: 'Deployment';
       description: 'Platforms for deploying and hosting applications';
       tools: 1;
-      avgPrice: '$20/month',
-    };
+      avgPrice: '$20/month'};
     {
       name: 'Security';
       description: 'Security scanning and vulnerability detection tools';
       tools: 1;
-      avgPrice: '$62/month',
-    };
+      avgPrice: '$62/month'};
     {
       name: 'API Development';
       description: 'Tools for buildingtestingand managing APIs';
       tools: 1;
-      avgPrice: '$55/month',
-    }
+      avgPrice: '$55/month'}
   ],
   const devWorkflow = [
     {
       phase: 'Development';
       tools: ['GitHub 'Copilot', 'VS 'Code', 'Git'];
-      description: 'Write and manage code with AI assistance',
-    };
+      description: 'Write and manage code with AI assistance'};
     {
       phase: 'Testing';
       tools: [', 'Jest', 'Cypress'Postman'];
-      description: 'Test code quality and API functionality',
-    };
+      description: 'Test code quality and API functionality'};
     {
       phase: 'Security';
       tools: [', 'Snyk', 'GitHub Advanced Security'];
-      description: 'Scan for vulnerabilities and security issues',
-    };
+      description: 'Scan for vulnerabilities and security issues'};
     {
       phase: 'Deployment';
       tools: [', 'Vercel', 'GitHub 'Actions', 'Docker'];
-      description: 'Deploy and host applications',
-    }
+      description: 'Deploy and host applications'}
   ],
   return (
     <>,
@@ -450,6 +430,5 @@ export default function DeveloperToolsPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

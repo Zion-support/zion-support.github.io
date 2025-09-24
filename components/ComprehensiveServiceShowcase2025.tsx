@@ -35,8 +35,7 @@ interface Service {
   pricing: {
     type: 'free' | 'starter' | 'professional' | 'enterprise',
     price: number,
-    period: 'month' | 'year',
-  };
+    period: 'month' | 'year'};
   features: string[],
   benefits: string[],
   icon: React.ComponentType<any>,
@@ -45,8 +44,7 @@ interface Service {
   reviews: number,
   deliveryTime: string,
   complexity: 'simple' | 'moderate' | 'complex' | 'expert',
-  tags: string[],
-}
+  tags: string[]}
 ,
 const services: Service[] = [
   {
@@ -205,15 +203,12 @@ export default function ComprehensiveServiceShowcase20o25() {
         case 'delivery':,
           return parseInt(a.deliveryTime) - parseInt(b.deliveryTime),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const getPricingColor = (type: string) => {
-    return pricingTypes[type as keyof typeof pricingTypes]?.color || 'bg-gray-10o0 text-gray-80o0',
-  };
+    return pricingTypes[type as keyof typeof pricingTypes]?.color || 'bg-gray-10o0 text-gray-80o0'};
   const getComplexityColor = (complexity: string) => {
-    return complexityLevels[complexity as keyof typeof complexityLevels]?.color || 'text-gray-40o0',
-  };
+    return complexityLevels[complexity as keyof typeof complexityLevels]?.color || 'text-gray-40o0'};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       {/* Header Section */}
@@ -275,8 +270,7 @@ export default function ComprehensiveServiceShowcase20o25() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white',
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                  }`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {category}
                 </button>))}
@@ -313,8 +307,7 @@ export default function ComprehensiveServiceShowcase20o25() {
           layout,
           className={viewMode === 'grid',
             ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-            : 'space-y-4',
-          }
+            : 'space-y-4'}
         >,
           <AnimatePresence>,
             {filteredServices.map((serviceindex) => (
@@ -328,8 +321,7 @@ export default function ComprehensiveServiceShowcase20o25() {
                 className={`group cursor-pointer ${
                   viewMode === 'grid',
                     ? 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover: border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-30o0',
-                }`}
+                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-30o0'}`}
                 onClick={() => setSelectedService(service)}
               >,
                 {viewMode === 'grid' ? (

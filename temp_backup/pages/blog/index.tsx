@@ -54,6 +54,5 @@ export default function BlogIndexPage() {
           </Link>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>),
-}
+    </UltraFuturisticBackground>)}
 ,

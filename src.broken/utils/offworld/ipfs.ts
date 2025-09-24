@@ -8,8 +8,7 @@ async function lazyLoadDeps() {
   try {
     const web3 = await import('web3.storage'),
     Web3Storage = web3.Web3Storage,
-    getFilesFromPath = (web3 as any).getFilesFromPath,
-  } catch {}
+    getFilesFromPath = (web3 as any).getFilesFromPath} catch {}
   try {
     const ipfsHttp = await import('ipfs-http-client'),
     createIpfsClient = (ipfsHttp as any).create || ipfsHttp} catch {}
@@ -21,19 +20,16 @@ async function lazyLoadDeps() {
 export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs',
 export interface IpfsResult {
   cid: string,
-  provider: IpfsClientChoice | 'none',
-}
+  provider: IpfsClientChoice | 'none'}
 ,
 function env(name: string): string | undefined {
-  return process.env[name] || process.env[name.toLowerCase()],
-}
+  return process.env[name] || process.env[name.toLowerCase()]}
 ,
 function bufferToStream(buffer: Buffer): Readable {
   const stream = new Readable(),
   stream.push(buffer),
   stream.push(null),
-  return stream,
-}
+  return stream}
 ,
 export async function addJSON(content: unknown): Promise<IpfsResult> {
   const json = Buffer.from(JSON.stringify(content, null, 2)),

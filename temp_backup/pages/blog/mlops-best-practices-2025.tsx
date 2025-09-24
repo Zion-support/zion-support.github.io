@@ -255,7 +255,7 @@ export default function MLOpsBestPractices20o25() {
                   <strong>Cost Optimization:</strong> Implement strategies like,
                   model quantization, pruning, and knowledge distillation to,
                   reduce computational requirements while maintaining,
-                  window.performance.,
+                  window.window.performance.,
                 </p>,
               </section>,
               <section className='mb-12'>,
@@ -361,6 +361,5 @@ export default function MLOpsBestPractices20o25() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

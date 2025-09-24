@@ -20,6 +20,5 @@ export default function AutonomousNetworkManagement20o45Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

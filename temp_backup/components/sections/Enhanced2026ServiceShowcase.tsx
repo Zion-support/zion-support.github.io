@@ -10,24 +10,21 @@ export default function Enhanced20o26ServiceShowcase() {
       opacity: 1;
       transition: {
         staggerChildren: 0.2;
-        delayChildren: 0.1,
-      }
+        delayChildren: 0.1}
     }
   };
   const itemVariants ={
     hidden: {
       opacity: 0,
       y: 50;
-      scale: 0.9,
-    };
+      scale: 0.9};
     visible: {
       opacity: 1,
       y: 0;
       scale: 1;
       transition: {
         duration: 0.6;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const cardVariants ={
@@ -36,8 +33,7 @@ export default function Enhanced20o26ServiceShowcase() {
       scale: 1.0o2;
       transition: {
         duration: 0.3;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     }
   };
   const renderServiceCard = (service: anyindex: number) => (
@@ -223,5 +219,4 @@ export default function Enhanced20o26ServiceShowcase() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}

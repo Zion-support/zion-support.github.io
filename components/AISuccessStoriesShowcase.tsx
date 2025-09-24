@@ -29,14 +29,12 @@ const AISuccessStoriesShowcase = () => {
         efficiency: '95%';
         costReduction: '60%';
         timeSaved: '20o00 hours/month';
-        revenue: '+$2.5M',
-      };
+        revenue: '+$2.5M'};
       testimonial: 'AI transformed our entire operation. We went from manual processes to fully automated systems in just 6 months.';
       author: 'Sarah Johnson';
       position: 'CEOTechCorp Global';
       icon: Building;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    };
+      color: 'from-blue-50o0 to-cyan-50o0'};
     {
       id: 'financeai-automation';
       company: 'FinanceAI Solutions';
@@ -47,14 +45,12 @@ const AISuccessStoriesShowcase = () => {
         efficiency: '99.7%';
         costReduction: '45%';
         timeSaved: '150o0 hours/month';
-        revenue: '+$5.2M',
-      };
+        revenue: '+$5.2M'};
       testimonial: 'Our fraud detection accuracy improved to 99.7%. We prevented millions in potential losses.';
       author: 'Michael Chen';
       position: 'CTOFinanceAI Solutions';
       icon: Shield;
-      color: 'from-green-50o0 to-emerald-50o0',
-    };
+      color: 'from-green-50o0 to-emerald-50o0'};
     {
       id: 'retailai-personalization';
       company: 'RetailAI Network';
@@ -65,14 +61,12 @@ const AISuccessStoriesShowcase = () => {
         efficiency: '88%';
         costReduction: '35%';
         timeSaved: '30o00 hours/month';
-        revenue: '+$8.7M',
-      };
+        revenue: '+$8.7M'};
       testimonial: 'AI personalization increased our conversion rates by 30o0%. Customer satisfaction is at an all-time high.';
       author: 'Emily Rodriguez';
       position: 'VP MarketingRetailAI Network';
       icon: Globe;
-      color: 'from-purple-50o0 to-pink-50o0',
-    };
+      color: 'from-purple-50o0 to-pink-50o0'};
     {
       id: 'healthai-diagnostics';
       company: 'HealthAI Medical';
@@ -83,14 +77,12 @@ const AISuccessStoriesShowcase = () => {
         efficiency: '92%';
         costReduction: '50%';
         timeSaved: '40o00 hours/month';
-        revenue: '+$12.1M',
-      };
+        revenue: '+$12.1M'};
       testimonial: 'AI diagnostics reduced diagnosis time by 80% while improving accuracy. We can help more patients faster.';
       author: 'Dr. James Wilson';
       position: 'Chief Medical OfficerHealthAI Medical';
       icon: Brain;
-      color: 'from-orange-50o0 to-red-50o0',
-    }
+      color: 'from-orange-50o0 to-red-50o0'}
   ],
   const metrics = [
     { label: 'Average Efficiency 'Gain', 'value: '93.5%'icon: TrendingUp };
@@ -156,8 +148,7 @@ const AISuccessStoriesShowcase = () => {
                 className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeStory === index,
                     ? 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white shadow-lg',
-                    : 'bg-white text-gray-60o0 hover: bg-gray-50 shadow-sm',
-                }`}
+                    : 'bg-white text-gray-60o0 hover: bg-gray-50 shadow-sm'}`}
               >,
                 <Icon className="w-5 h-5 mr-2"  />,
                 {story.company}
@@ -260,6 +251,5 @@ const AISuccessStoriesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AISuccessStoriesShowcase;

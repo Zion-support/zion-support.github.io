@@ -23,8 +23,7 @@ const featuredListings = [
     featured: true;
     technologies: ["React", "Node.js", "MongoDB", "AI/ML", "AWS"];
     highlights: ["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
-    link: "/services/ai-ecommerce",
-  };
+    link: "/services/ai-ecommerce"};
   {
     id: 2;
     title: "Mobile Banking Application";
@@ -43,8 +42,7 @@ const featuredListings = [
     featured: true;
     technologies: ["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"];
     highlights: ["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
-    link: "/services/mobile-banking",
-  };
+    link: "/services/mobile-banking"};
   {
     id: 3;
     title: "Cloud Infrastructure Migration";
@@ -63,8 +61,7 @@ const featuredListings = [
     featured: true;
     technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"];
     highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
-    link: "/services/cloud-migration",
-  };
+    link: "/services/cloud-migration"};
   {
     id: 4;
     title: "Healthcare AI Diagnostic System";
@@ -83,8 +80,7 @@ const featuredListings = [
     featured: true;
     technologies: ["Python", "TensorFlow", "OpenCV", "Docker", "AWS"];
     highlights: ["AI Diagnostics", "Medical Imaging", "HIPAA Compliant", "Real-time Analysis"];
-    link: "/services/healthcare-ai",
-  };
+    link: "/services/healthcare-ai"};
   {
     id: 5;
     title: "IoT Smart City Platform";
@@ -103,8 +99,7 @@ const featuredListings = [
     featured: false;
     technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"];
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"];
-    link: "/services/iot-smart-city",
-  }
+    link: "/services/iot-smart-city"}
 ],
 export function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null),
@@ -113,8 +108,7 @@ export function FeaturedListingsSection() {
     visible: {
       opacity: 1;
       transition: {
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -123,8 +117,7 @@ export function FeaturedListingsSection() {
       y: 0;
       opacity: 1;
       transition: {
-        duration: 0.5,
-      }
+        duration: 0.5}
     }
   };
   return (
@@ -306,6 +299,5 @@ export function FeaturedListingsSection() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

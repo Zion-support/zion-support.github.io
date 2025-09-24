@@ -322,6 +322,5 @@ export default function Fortune50o0AITransformation() {
           </div>,
         </section>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

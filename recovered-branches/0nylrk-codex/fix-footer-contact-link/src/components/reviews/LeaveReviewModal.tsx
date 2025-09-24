@@ -16,8 +16,7 @@ interface LeaveReviewModalProps {
   revieweeId: string,
   revieweeName: string,
   isOpen: boolean,
-  onClose: () => void,
-}
+  onClose: () => void}
 ,
 export function LeaveReviewModal({
   projectId;
@@ -32,8 +31,7 @@ export function LeaveReviewModal({
   const handleOpenChange = (open: boolean) => {
     setOpen(open),
     if (!open) {
-      onClose(),
-    }
+      onClose()}
   };
   const handleSubmit = async (formValues: any) => {
     if (userReview) {

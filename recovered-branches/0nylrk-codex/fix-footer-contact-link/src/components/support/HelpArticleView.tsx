@@ -7,12 +7,10 @@ import { ThumbsUp, ThumbsDown  } from './lucide-react',
 import { toast  } from '@/components / ui / use - toast',
 import { HELP_CATEGORIES  } from './help - content',
 interface HelpArticleViewProps {
-  article_id: string,
-}
+  article_id: string}
 ,
 interface HelpArticleViewProps {
-  articleId: string,
-}
+  articleId: string}
 ,
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
@@ -32,9 +30,7 @@ import { ThumbsUp, ThumbsDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-,
-  articleId: string,
-}
+  articleId: string}
 ,
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<,
@@ -51,8 +47,7 @@ import {ThumbsUp, ThumbsDown} from "lucide-react",
 import {toast} from "@/components/ui/use-toast",
 import {HELP_CATEGORIES} from "./help-content",
 interface HelpArticleViewProps {
-  articleId: string,
-}
+  articleId: string}
 ,
       article = found,
       break>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
@@ -68,8 +63,7 @@ interface HelpArticleViewProps {
         description:,
           type === "helpful",
             ? "We're glad this article was helpful.",
-            : "We'll work on improving this article.",
-      }))}
+            : "We'll work on improving this article."}))}
 ,
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type);
@@ -102,8 +96,7 @@ interface HelpArticleViewProps {
                 size="sm",
   // Check condition,
 if ( {) {
-  $2,
-}
+  $2}
     return <div > Article not found</div>}
   const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
     (setFeedbackGiven (type);
@@ -139,8 +132,7 @@ if ( {) {
                 className={
                   feedback_given === "helpful",
                     ? "bg - green - 100 dark:bg - green - 900 / 30",
-                    : "",
-                }
+                    : ""}
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >,
@@ -153,8 +145,7 @@ if ( {) {
                 className={
                   feedbackGiven === "not-helpful",
                     ? "bg-red-100 dark: bg-red-900/30",
-                    : "",
-                }
+                    : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
               >,
@@ -216,8 +207,7 @@ if ( {) {
                 className={
                   feedback_given === "not - helpful",
                     ? "bg - red - 100 dark: bg - red - 900 / 30",
-                    : "",
-                }
+                    : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
 >,
@@ -247,14 +237,12 @@ function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
-  })}
+    day: "numeric"})}
 })})}
 ,
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
-  })}
+    day: "numeric"})}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

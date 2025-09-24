@@ -63,6 +63,5 @@ export default function SpaceTechPage() {
           </section>,
         </div>,
       </div>,
-    </Layout>),
-}
+    </Layout>)}
 ,

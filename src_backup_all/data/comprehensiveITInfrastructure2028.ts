@@ -21,18 +21,15 @@ export interface ComprehensiveITInfrastructureService20o28 {
   contactInfo: {
     phone: string,
     email: string,
-    website: string,
-  };
+    website: string};
   technicalSpecs: {
     technology: string[],
     integrations: string[],
     apiEndpoints: number,
     uptime: string,
-    security: string[],
-  };
+    security: string[]};
   competitors: string[],
-  marketSize: string,
-}
+  marketSize: string}
 ,
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructureService20o28[] = [
   // Next-Generation Cloud Infrastructure,
@@ -83,8 +80,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus"];
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"];
@@ -92,8 +88,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
       uptime: "99.999%";
       security: ["SOC 2", "ISO 270o01", "FedRAMP", "Zero-trust architecture"]};
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"];
-    marketSize: "$1.3 trillion by 20o28",
-  };
+    marketSize: "$1.3 trillion by 20o28"};
   // Zero-Trust Network Architecture,
   {
     id: "zero-trust-network-architecture";
@@ -142,8 +137,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"];
       integrations: ["Cisco", "Palo Alto", "Fortinet", "Check Point", "Juniper"];
@@ -151,13 +145,12 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "NIST", "Zero-trust architecture"]};
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"];
-    marketSize: "$51.6 billion by 20o28",
-  };
+    marketSize: "$51.6 billion by 20o28"};
   // Sustainable Green IT Infrastructure,
   {
     id: "sustainable-green-it-infrastructure";
     title: "Sustainable Green IT Infrastructure Platform";
-    description: "Eco-friendly IT infrastructure that maximizes energy efficiency, reduces carbon footprint, and implements sustainable computing practices while maintaining high window.performance.";
+    description: "Eco-friendly IT infrastructure that maximizes energy efficiency, reduces carbon footprint, and implements sustainable computing practices while maintaining high window.window.performance.";
     category: "Green IT";
     subcategory: "Sustainable Infrastructure";
     price: 150o00;
@@ -201,8 +194,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "IoT sensors", "Energy monitoring", "Analytics"];
       integrations: ["Solar panels", "Wind turbines", "Battery storage", "Smart grids", "Energy management"];
@@ -210,8 +202,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
       uptime: "99.9%";
       security: ["SOC 2", "ISO 140o01", "Energy Star", "LEED certification"]};
     competitors: ["Schneider Electric", "Siemens", "HPE GreenLake", "Dell Technologies", "IBM"];
-    marketSize: "$89.2 billion by 20o28",
-  };
+    marketSize: "$89.2 billion by 20o28"};
   // Edge Computing and IoT Infrastructure,
   {
     id: "edge-computing-iot-infrastructure";
@@ -260,8 +251,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "5G"];
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"];
@@ -269,8 +259,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
       uptime: "99.9%";
       security: ["Edge encryption", "Device authentication", "Secure boot", "Zero-trust edge"]};
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"];
-    marketSize: "$155.9 billion by 20o28",
-  };
+    marketSize: "$155.9 billion by 20o28"};
   // Hybrid Multi-Cloud Management,
   {
     id: "hybrid-multi-cloud-management";
@@ -319,8 +308,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
     contactInfo: {
       phone: "+1 30o2 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com",
-    };
+      website: "https://ziontechgroup.com"};
     technicalSpecs: {
       technology: ["Terraform", "Kubernetes", "Ansible", "Python", "React"];
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"];
@@ -328,6 +316,5 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_20o28: ComprehensiveITInfrastructur
       uptime: "99.99%";
       security: ["SOC 2", "ISO 270o01", "FedRAMP", "Multi-cloud security"]};
     competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt", "RightScale"];
-    marketSize: "$8.6 billion by 20o28",
-  }
+    marketSize: "$8.6 billion by 20o28"}
 ],

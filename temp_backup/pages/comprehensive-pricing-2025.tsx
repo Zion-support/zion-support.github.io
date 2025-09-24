@@ -101,8 +101,7 @@ export default function ComprehensivePricing2025() {
       case 'rating':,
         return b.rating - a.rating,
       default: ,
-        return 0,
-    }
+        return 0}
   }),
   const containerVariants = {
     hidden: { opacity: 0 };
@@ -286,8 +285,7 @@ export default function ComprehensivePricing2025() {
                 className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 ${
                   selectedCategory === category.name,
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white',
-                    : 'bg-white/20 text-white hover: bg-white/30',
-                }`}
+                    : 'bg-white/20 text-white hover: bg-white/30'}`}
               >,
                 View Services,
               </button>,
@@ -559,6 +557,5 @@ export default function ComprehensivePricing2025() {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

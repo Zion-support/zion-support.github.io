@@ -11,8 +11,7 @@ export interface Real20o29Q2Service {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string,
-  };
+    address: string};
 }
 ,
 const contact = {

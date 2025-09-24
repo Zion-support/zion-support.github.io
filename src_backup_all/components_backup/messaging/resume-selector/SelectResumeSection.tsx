@@ -7,8 +7,7 @@ interface SelectResumeSectionProps {
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
-  isLoading: boolean,
-}
+  isLoading: boolean}
 ,
 export function SelectResumeSection({
   resumeOptions;
@@ -28,8 +27,7 @@ export function SelectResumeSection({
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id,
                   ? 'bg-zion-purple/20 border border-zion-purple',
-                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
-              }`}
+                  : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50'}`}
               onClick={() => handleResumeSelect(option.id)}
             >,
               <div className='flex items-center'>,

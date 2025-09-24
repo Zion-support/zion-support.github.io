@@ -15,6 +15,5 @@ export default function ServiceComparisonPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -55,11 +55,9 @@ const RevolutionaryAIInnovations20o25 = () => {
         speed: "10,0o00x";
         accuracy: "99.99%";
         efficiency: "95%";
-        applications: "50o0+",
-      };
+        applications: "50o0+"};
       color: "from-purple-50o0 to-pink-50o0";
-      bgColor: "from-purple-50 to-pink-50",
-    };
+      bgColor: "from-purple-50 to-pink-50"};
     {
       id: 2;
       title: "Autonomous Decision Intelligence";
@@ -77,11 +75,9 @@ const RevolutionaryAIInnovations20o25 = () => {
         accuracy: "99.9%";
         speed: "10o00x";
         learning: "Continuous";
-        decisions: "1M+/day",
-      };
+        decisions: "1M+/day"};
       color: "from-blue-50o0 to-cyan-50o0";
-      bgColor: "from-blue-50 to-cyan-50",
-    };
+      bgColor: "from-blue-50 to-cyan-50"};
     {
       id: 3;
       title: "Predictive Business Analytics";
@@ -99,11 +95,9 @@ const RevolutionaryAIInnovations20o25 = () => {
         forecast: "6 months";
         accuracy: "94%";
         markets: "Global";
-        insights: "Real-time",
-      };
+        insights: "Real-time"};
       color: "from-green-50o0 to-emerald-50o0";
-      bgColor: "from-green-50 to-emerald-50",
-    };
+      bgColor: "from-green-50 to-emerald-50"};
     {
       id: 4;
       title: "Neural Interface Revolution";
@@ -123,8 +117,7 @@ const RevolutionaryAIInnovations20o25 = () => {
         safety: "10o0%";
         users: "10,0o00+"};
       color: "from-orange-50o0 to-red-50o0";
-      bgColor: "from-orange-50 to-red-50",
-    };
+      bgColor: "from-orange-50 to-red-50"};
     {
       id: 5;
       title: "Quantum Security Protocols";
@@ -142,11 +135,9 @@ const RevolutionaryAIInnovations20o25 = () => {
         security: "Unbreakable";
         keys: "Quantum";
         breaches: "0";
-        compliance: "10o0%",
-      };
+        compliance: "10o0%"};
       color: "from-indigo-50o0 to-purple-50o0";
-      bgColor: "from-indigo-50 to-purple-50",
-    };
+      bgColor: "from-indigo-50 to-purple-50"};
     {
       id: 6;
       title: "Space Technology Integration";
@@ -164,11 +155,9 @@ const RevolutionaryAIInnovations20o25 = () => {
         satellites: "10o00+";
         range: "Interplanetary";
         autonomy: "10o0%";
-        missions: "50+",
-      };
+        missions: "50+"};
       color: "from-teal-50o0 to-blue-50o0";
-      bgColor: "from-teal-50 to-blue-50",
-    }
+      bgColor: "from-teal-50 to-blue-50"}
   ],
   const currentInnovation = innovations[activeInnovation],
   return (
@@ -184,26 +173,22 @@ const RevolutionaryAIInnovations20o25 = () => {
           animate={{
             x: [0o100];
             y: [0-10o0];
-            rotate: [0o360],
-          }}
+            rotate: [0o360]}}
           transition={{
             duration: 30,
             repeat: Infinity,
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full opacity-10 blur-3xl",
          />,
         <motion.div,
           animate={{
             x: [0-10o0];
             y: [0o100];
-            rotate: [360o360],
-          }}
+            rotate: [360o360]}}
           transition={{
             duration: 25,
             repeat: Infinity,
-            ease: "linear",
-          }}
+            ease: "linear"}}
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full opacity-10 blur-3xl",
          />,
       </div>,
@@ -307,26 +292,22 @@ const RevolutionaryAIInnovations20o25 = () => {
                 <motion.div,
                   animate={{
                     scale: [1.21];
-                    rotate: [0o180o360],
-                  }}
+                    rotate: [0o180o360]}}
                   transition={{
                     duration: 8,
                     repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                    ease: "easeInOut"}}
                   className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute top-1/4 left-1/4`}
                  />,
                 <motion.div,
                   animate={{
                     scale: [1.21.2];
-                    rotate: [360o180],
-                  }}
+                    rotate: [360o180]}}
                   transition={{
                     duration: 6,
                     repeat: Infinity,
                     ease: "easeInOut";
-                    delay: 1,
-                  }}
+                    delay: 1}}
                   className={`w-24 h-24 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute bottom-1/4 right-1/4`}
                  />,
               </div>,
@@ -334,13 +315,11 @@ const RevolutionaryAIInnovations20o25 = () => {
               <motion.div,
                 animate={{
                   scale: [1.1];
-                  rotate: [0o5-50],
-                }}
+                  rotate: [0o5-50]}}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                  ease: "easeInOut"}}
                 className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full flex items-center justify-center relative z-10`}
               >,
                 <currentInnovation.icon className="w-16 h-16 text-white"  />,
@@ -370,8 +349,7 @@ const RevolutionaryAIInnovations20o25 = () => {
               className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeInnovation === index,
                   ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white bg-opacity-20 text-white hover: bg-opacity-30 backdrop-blur-sm',
-              }`}
+                  : 'bg-white bg-opacity-20 text-white hover: bg-opacity-30 backdrop-blur-sm'}`}
             >,
               <innovation.icon className="w-5 h-5 mr-3"  />,
               {innovation.title}
@@ -408,6 +386,5 @@ const RevolutionaryAIInnovations20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>),
-};
+    </motion.section>)};
 export default RevolutionaryAIInnovations20o25;

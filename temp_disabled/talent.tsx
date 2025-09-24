@@ -81,55 +81,45 @@ const benefits = [
   {
     title: 'Competitive Compensation';
     description: 'Above-market salaries with performance bonuses';
-    icon: Award,
-  };
+    icon: Award};
   {
     title: 'Health & Wellness';
     description: 'Comprehensive healthdentaland vision coverage';
-    icon: CheckCircle,
-  };
+    icon: CheckCircle};
   {
     title: 'Remote Work';
     description: 'Flexible remote work options with home office stipend';
-    icon: Globe,
-  };
+    icon: Globe};
   {
     title: 'Professional Growth';
     description: 'Learning budgetconferencesand career development';
-    icon: Target,
-  };
+    icon: Target};
   {
     title: 'Work-Life Balance';
     description: 'Flexible hoursunlimited PTOand mental health support';
-    icon: Clock,
-  };
+    icon: Clock};
   {
     title: 'Team Culture';
     description: 'Collaborative environment with regular team events';
-    icon: Users,
-  }
+    icon: Users}
 ],
 const values = [
   {
     title: 'Innovation';
     description: 'We encourage creative thinking and cutting-edge solutions';
-    icon: Star,
-  };
+    icon: Star};
   {
     title: 'Collaboration';
     description: 'We believe in the power of teamwork and shared success';
-    icon: Users,
-  };
+    icon: Users};
   {
     title: 'Excellence';
     description: 'We strive for the highest quality in everything we do';
-    icon: Award,
-  };
+    icon: Award};
   {
     title: 'Growth';
     description: 'We invest in our people and their professional development';
-    icon: Target,
-  }
+    icon: Target}
 ],
 export default function TalentPage() {
   return (

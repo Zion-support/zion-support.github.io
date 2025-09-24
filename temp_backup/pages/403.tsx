@@ -15,6 +15,5 @@ export default function Error40o3() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

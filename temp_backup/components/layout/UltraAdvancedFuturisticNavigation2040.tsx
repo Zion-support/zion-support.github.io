@@ -61,8 +61,7 @@ interface NavigationItem {
   children?: NavigationItem[],
   badge?: string,
   featured?: boolean,
-  color?: string,
-}
+  color?: string}
 ,
 const navigationItems: NavigationItem[] = [
   {
@@ -300,21 +299,18 @@ const UltraAdvancedFuturisticNavigation20o40: React.FC = () => {
       if (
         dropdownRef.current &&,
         !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label),
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)};
   const closeMobileMenu = () => {
     setIsOpen(false),
     setActiveDropdown(null)};
   const handleNavigation = (href: string) => {
     closeMobileMenu(),
-    router.push(href),
-  };
+    router.push(href)};
   return (
     <>,
       {/* Enhanced Top Contact Bar */}

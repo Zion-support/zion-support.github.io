@@ -79,8 +79,7 @@ export const ServiceCardSkeleton: React.FC = () => (
 interface TableSkeletonProps {
   rows?: number,
   columns?: number,
-  className?: string,
-}
+  className?: string}
 ,
 export function TableSkeleton({
   rows = 5;

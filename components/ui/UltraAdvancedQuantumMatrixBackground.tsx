@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface UltraAdvancedQuantumMatrixBackgroundProps {
   intensity?: number,
   variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'matrix' | 'quantum-holographic',
-  children: React.ReactNode,
-}
+  children: React.ReactNode}
 ,
 const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixBackgroundProps> = ({
   intensity = 1.0;
@@ -28,8 +27,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       size: number,
       opacity: number,
       color: string,
-      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk',
-    }> = [],
+      type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}> = [],
     // Initialize particles based on variant,
     const initParticles = () => {
       particles.length = 0,

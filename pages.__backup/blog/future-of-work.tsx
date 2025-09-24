@@ -417,6 +417,5 @@ export default function FutureOfWork() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

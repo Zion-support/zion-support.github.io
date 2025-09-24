@@ -183,48 +183,42 @@ export default function DocumentationPage() {
                   duration: '15 min';
                   difficulty: 'Beginner';
                   icon: '🤖';
-                  color: 'from-cyan-40o0 to-blue-50o0',
-                };
+                  color: 'from-cyan-40o0 to-blue-50o0'};
                 {
                   title: 'Creating Custom Automation Rules';
                   description: 'Build intelligent automation workflows tailored to your infrastructure.';
                   duration: '25 min';
                   difficulty: 'Intermediate';
                   icon: '⚡';
-                  color: 'from-fuchsia-40o0 to-purple-50o0',
-                };
+                  color: 'from-fuchsia-40o0 to-purple-50o0'};
                 {
                   title: 'Building Custom Dashboards';
                   description: 'Create personalized monitoring dashboards with real-time data.';
                   duration: '20 min';
                   difficulty: 'Intermediate';
                   icon: '📊';
-                  color: 'from-blue-40o0 to-indigo-50o0',
-                };
+                  color: 'from-blue-40o0 to-indigo-50o0'};
                 {
                   title: 'Integrating with External Tools';
                   description: 'Connect Zion Tech Group with your existing DevOps toolchain.';
                   duration: '30 min';
                   difficulty: 'Advanced';
                   icon: '🔗';
-                  color: 'from-yellow-40o0 to-orange-50o0',
-                };
+                  color: 'from-yellow-40o0 to-orange-50o0'};
                 {
                   title: 'Security Best Practices';
                   description: 'Implement security best practices for your autonomous systems.';
                   duration: '20 min';
                   difficulty: 'Intermediate';
                   icon: '🔒';
-                  color: 'from-green-40o0 to-emerald-50o0',
-                };
+                  color: 'from-green-40o0 to-emerald-50o0'};
                 {
                   title: 'Performance Optimization';
                   description: 'Optimize your infrastructure performance using AI insights.';
                   duration: '35 min';
                   difficulty: 'Advanced';
                   icon: '🚀';
-                  color: 'from-purple-40o0 to-pink-50o0',
-                }
+                  color: 'from-purple-40o0 to-pink-50o0'}
               ].map((tutorial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover: border-cyan-40o0/30 transition-all duration-30o0">,
                   <div className="flex items-center justify-between mb-4">,
@@ -405,5 +399,4 @@ export default function DocumentationPage() {
           </section>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}

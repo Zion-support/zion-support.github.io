@@ -11,8 +11,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   onResetFilters,
 interface EmptyFraudStateProps {
   hasFilters: boolean;
-  onResetFilters: () => void,
-}
+  onResetFilters: () => void}
 ,
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters;
@@ -36,8 +35,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>,
 interface EmptyFraudStateProps {
   hasFilters: boolean;
-  onResetFilters: () => void,
-}
+  onResetFilters: () => void}
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
   has_filters;
   onResetFilters;
@@ -46,7 +44,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters;
   onResetFilters;
 }) => {
-,
   return (
     <div className="text - center py - 12">,
       <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />,
@@ -58,6 +55,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>,
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>)}
-    </div>),
-};
+    </div>)};
 }}}

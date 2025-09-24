@@ -42,6 +42,5 @@ const ContactSection: React.FC<ContactSectionProps> = ({ className }) => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default ContactSection;

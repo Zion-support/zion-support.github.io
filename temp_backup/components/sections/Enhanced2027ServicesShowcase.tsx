@@ -38,8 +38,7 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
         case 'roi':,
           return parseFloat(a.roi.replace(/[^0-9.]/g'')) - parseFloat(b.roi.replace(/[^0-9.]/g'')),
         default: ,
-          return 0,
-      }
+          return 0}
     }),
   const getCategoryColor = (category: string) => {
     const colors ={
@@ -147,8 +146,7 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
                     className={`p-2 rounded-lg transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-cyan-50o0/20 text-cyan-40o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    }`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <Grid className="w-5 h-5"  />,
                   </button>,
@@ -157,8 +155,7 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
                     className={`p-2 rounded-lg transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-cyan-50o0/20 text-cyan-40o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    }`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <List className="w-5 h-5"  />,
                   </button>,
@@ -359,6 +356,5 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default Enhanced20o27ServicesShowcase;

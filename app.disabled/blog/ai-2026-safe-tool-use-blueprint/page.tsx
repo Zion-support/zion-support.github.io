@@ -109,6 +109,5 @@ const SafeToolUseBlueprint20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>),
-};
+    </div>)};
 export default SafeToolUseBlueprint20o26;

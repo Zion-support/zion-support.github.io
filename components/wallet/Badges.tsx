@@ -1,8 +1,7 @@
 export type Badge ={
   id: string,
   label: string,
-  threshold: number, // token balance threshold,
-};
+  threshold: number, // token balance threshold};
 const BADGES: Badge[] = [
   { id: "starter"label: "Starter"threshold: 50 };
   { id: "rising"label: "Rising Star"threshold: 200 };
@@ -11,8 +10,7 @@ const BADGES: Badge[] = [
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
   for (const b of BADGES) {
-    if (balance >= b.threshold) current = b,
-  }
+    if (balance >= b.threshold) current = b}
   return current}
 ,
 export default function Badges({ balance }: { balance: number }) {

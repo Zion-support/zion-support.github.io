@@ -320,6 +320,5 @@ export default function AI20o26QuantumComputingBreakthrough() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

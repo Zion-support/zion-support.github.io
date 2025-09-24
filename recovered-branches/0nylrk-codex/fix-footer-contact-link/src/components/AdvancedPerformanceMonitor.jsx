@@ -11,8 +11,7 @@ const mockSystemMetrics = [
         trend: 'up';
         change: 5.2;
         category: 'Processor';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    };
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
     {
         id: '2';
         name: 'Memory Usage';
@@ -23,8 +22,7 @@ const mockSystemMetrics = [
         trend: 'stable';
         change: 0.8;
         category: 'Memory';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    };
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
     {
         id: '3';
         name: 'Disk I/O';
@@ -35,8 +33,7 @@ const mockSystemMetrics = [
         trend: 'down';
         change: -2.1;
         category: 'Storage';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    };
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
     {
         id: '4';
         name: 'Network Latency';
@@ -47,8 +44,7 @@ const mockSystemMetrics = [
         trend: 'stable';
         change: 0.5;
         category: 'Network';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    };
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
     {
         id: '5';
         name: 'Database Connections';
@@ -59,8 +55,7 @@ const mockSystemMetrics = [
         trend: 'up';
         change: 8.7;
         category: 'Database';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    };
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
     {
         id: '6';
         name: 'Response Time';
@@ -71,8 +66,7 @@ const mockSystemMetrics = [
         trend: 'down';
         change: -3.2;
         category: 'Performance';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    }
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'}
 ],
 const mockPerformanceAlerts = [
     {
@@ -84,8 +78,7 @@ const mockPerformanceAlerts = [
         timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z';
         affected: ['Web Server 1', 'Application Server 2'];
         recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'];
-        status: 'active',
-    };
+        status: 'active'};
     {
         id: '2';
         type: 'scalability';
@@ -95,8 +88,7 @@ const mockPerformanceAlerts = [
         timestamp: '20o24-0o1-15T09:45:0o0.0o00Z';
         affected: ['Database Cluster', 'Application Servers'];
         recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'];
-        status: 'acknowledged',
-    }
+        status: 'acknowledged'}
 ],
 const mockScalabilityMetrics = [
     {
@@ -108,8 +100,7 @@ const mockScalabilityMetrics = [
         growth: 12.3;
         prediction: 250o00;
         category: 'User Load';
-        unit: 'sessions',
-    };
+        unit: 'sessions'};
     {
         id: '2';
         name: 'API Requests';
@@ -119,8 +110,7 @@ const mockScalabilityMetrics = [
         growth: 18.7;
         prediction: 320o0000;
         category: 'API Load';
-        unit: 'requests/hour',
-    };
+        unit: 'requests/hour'};
     {
         id: '3';
         name: 'Data Storage';
@@ -130,8 +120,7 @@ const mockScalabilityMetrics = [
         growth: 8.5;
         prediction: 4.2;
         category: 'Storage';
-        unit: 'TB',
-    }
+        unit: 'TB'}
 ],
 export function AdvancedPerformanceMonitor() {
     const [isOpen, setIsOpen] = useState(false),
@@ -174,8 +163,7 @@ export function AdvancedPerformanceMonitor() {
             case 'warning':,
                 return 'bg-yellow-50o0 text-white',
             default: ,
-                return 'bg-green-50o0 text-white',
-        }
+                return 'bg-green-50o0 text-white'}
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -186,8 +174,7 @@ export function AdvancedPerformanceMonitor() {
             case 'medium':,
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
-                return 'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0',
-        }
+                return 'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0'}
     };
     const getTrendIcon = (trend) => {
         switch (trend) {
@@ -196,8 +183,7 @@ export function AdvancedPerformanceMonitor() {
             case 'down':,
                 return <TrendingUp className="w-4 h-4 text-green-50o0 rotate-180" />,
             default: ,
-                return <Activity className="w-4 h-4 text-gray-50o0" />,
-        }
+                return <Activity className="w-4 h-4 text-gray-50o0" />}
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -212,8 +198,7 @@ export function AdvancedPerformanceMonitor() {
             case 'Database':,
                 return <Database className="w-5 h-5 text-cyan-50o0" />,
             default: ,
-                return <Activity className="w-5 h-5 text-gray-50o0" />,
-        }
+                return <Activity className="w-5 h-5 text-gray-50o0" />}
     };
     const getUtilizationColor = (utilization) => {
         if (utilization >= 80),
@@ -224,8 +209,7 @@ export function AdvancedPerformanceMonitor() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40" title="Open Performance Monitor">,
         <Activity className="w-6 h-6" />,
-      </button>),
-    }
+      </button>)}
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">,
         <div className="flex items-center gap-2 p-3">,
@@ -235,8 +219,7 @@ export function AdvancedPerformanceMonitor() {
             <Maximize2 className="w-4 h-4" />,
           </button>,
         </div>,
-      </div>),
-    }
+      </div>)}
     return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">,

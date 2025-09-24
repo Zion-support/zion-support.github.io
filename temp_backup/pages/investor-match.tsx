@@ -11,8 +11,7 @@ type Investor = {
   notable_investments: string[],
   location_focus?: string[],
   stages?: string[],
-  type?: string,
-};
+  type?: string};
 export default function InvestorMatchPage() {
   const [session, setSession] = useState<boolean>(false), // TODO: replace with real auth check,
   const [startupName, setStartupName] = useState(''),
@@ -63,8 +62,7 @@ export default function InvestorMatchPage() {
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
       setInvestors(data.investors || [])} catch (err: any) {
-      setError(err.message || 'Something went wrong'),
-    } finally {
+      setError(err.message || 'Something went wrong')} finally {
       setLoading(false)}
   };
   const toggleFavorite = (name: string) => {
@@ -96,8 +94,7 @@ export default function InvestorMatchPage() {
       a.download = `intro-${inv.name.replace(/\s+/g, '-').toLowerCase()}.md`,
       a.click(),
       URL.revokeObjectURL(url)} catch (e: any) {
-      alert(e.message || 'Failed to generate email'),
-    }
+      alert(e.message || 'Failed to generate email')}
   };
   return (
     <EnhancedLayout>,

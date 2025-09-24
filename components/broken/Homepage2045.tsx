@@ -36,8 +36,7 @@ const Homepage2045: React.FC = () => {
     // Simulate content loading with better timing,
     const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
-    }800),
+      setIsVisible(true)}800),
     return () => clearTimeout(timer)}[]),
   // Intersection Observer for better performance,
   useEffect(() => {
@@ -46,8 +45,7 @@ const Homepage2045: React.FC = () => {
         (entries: any[]) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id),
-            }
+              setActiveSection(entry.target.id)}
           })};
         { threshold: 0.3rootMargin: '-100px' }
       ),
@@ -64,8 +62,7 @@ const Homepage2045: React.FC = () => {
     animate: {
       transition: {
         staggerChildren: 0.1;
-        delayChildren: 0.2,
-      }
+        delayChildren: 0.2}
     }
   };
   const backgroundVariants = {
@@ -107,8 +104,7 @@ const Homepage2045: React.FC = () => {
               transition={{
                 duration: 8;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />,
             <motion.div,
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full",
@@ -119,8 +115,7 @@ const Homepage2045: React.FC = () => {
               transition={{
                 duration: 6;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />,
             <motion.div,
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45",
@@ -131,8 +126,7 @@ const Homepage2045: React.FC = () => {
               transition={{
                 duration: 10;
                 repeat: Infinity;
-                ease: "easeInOut",
-              }}
+                ease: "easeInOut"}}
             />,
           </div>,
           {/* Hero Content */}
@@ -223,43 +217,37 @@ const Homepage2045: React.FC = () => {
                   title: "AI & Consciousness";
                   description: "Revolutionary AI platforms with emotional intelligence and autonomous operations";
                   color: "from-cyan-400 to-blue-500";
-                  href: "/ai-services",
-                };
+                  href: "/ai-services"};
                 {
                   icon: <Atom className="w-12 h-12" />;
                   title: "Quantum Technology";
                   description: "Breakthrough quantum computing solutions for next-generation applications";
                   color: "from-purple-400 to-pink-500";
-                  href: "/quantum-services",
-                };
+                  href: "/quantum-services"};
                 {
                   icon: <Rocket className="w-12 h-12" />;
                   title: "Space Technology";
                   description: "Advanced space exploration and resource management platforms";
                   color: "from-emerald-400 to-teal-500";
-                  href: "/space-technology",
-                };
+                  href: "/space-technology"};
                 {
                   icon: <Shield className="w-12 h-12" />;
                   title: "Enterprise Solutions";
                   description: "Advanced infrastructure and security solutions for modern enterprises";
                   color: "from-orange-400 to-red-500";
-                  href: "/enterprise-solutions",
-                };
+                  href: "/enterprise-solutions"};
                 {
                   icon: <Target className="w-12 h-12" />;
                   title: "Micro SAAS";
                   description: "Innovative business solutions that drive growth and efficiency";
                   color: "from-indigo-400 to-purple-500";
-                  href: "/micro-saas",
-                };
+                  href: "/micro-saas"};
                 {
                   icon: <Sparkles className="w-12 h-12" />;
                   title: "Emerging Tech";
                   description: "Cutting-edge technologies that define the future of innovation";
                   color: "from-yellow-400 to-orange-500";
-                  href: "/emerging-tech",
-                }
+                  href: "/emerging-tech"}
               ].map((serviceindex) => (
                 <motion.div,
                   key={service.title}
@@ -386,6 +374,5 @@ const Homepage2045: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>),
-};
+    </Layout>)};
 export default Homepage2045;

@@ -537,6 +537,5 @@ export default function AIRevolutionImplementationGuide() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

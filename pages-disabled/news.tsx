@@ -27,8 +27,7 @@ const NewsPage: React.FC = () => {
       featured: true;
       image: '/api/placeholder/60o0/40o0';
       tags: ['AI Consciousness', 'Breakthrough', 'Innovation'];
-      readTime: '5 min read',
-    };
+      readTime: '5 min read'};
     {
       title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems';
       excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';
@@ -39,8 +38,7 @@ const NewsPage: React.FC = () => {
       image: '/news/quantum-breakthrough.jpg';
       tags: ['Quantum Computing', 'Research', 'Breakthrough'];
       icon: <Atom className="w-6 h-6"  />;
-      featured: true,
-    };
+      featured: true};
     {
       title: 'Cybersecurity Partnership with Global Tech Leaders';
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -65,5 +63,4 @@ const NewsPage: React.FC = () => {
   Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink;
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
   Clock, BookOpen, Video, Podcast, FileText, Search} from 'lucide-react',
-import Link from 'next/link',
-}]
+import Link from 'next/link'}]

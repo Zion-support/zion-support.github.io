@@ -4,8 +4,7 @@ import { useNavigationContext } from '../hooks/useNavigation',
 import { NavigationItem } from '../types/navigation',
 interface SidebarItemProps {
   item: NavigationItem,
-  level?: number,
-}
+  level?: number}
 ,
 const SidebarItem: React.FC<SidebarItemProps> = ({ item, level = 0 }) => {
   const [isExpanded, setIsExpanded] = useState(false),
@@ -18,8 +17,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ item, level = 0 }) => {
           className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors ${
             level === 0,
               ? 'text-white/80 hover: text-white hover:bg-white/10',
-              : 'text-white/60 hover:text-white hover:bg-white/5 ml-4',
-          }`}
+              : 'text-white/60 hover:text-white hover:bg-white/5 ml-4'}`}
         >,
           {item.icon && <span>{item.icon}</span>}
           <span className='truncate'>{item.label}</span>,
@@ -61,8 +59,7 @@ interface SmartSidebarProps {
     | 'explore',
   currentService?: string,
   currentCategory?: string,
-  className?: string,
-}
+  className?: string}
 ,
 export default function SmartSidebar({
   pageType;
@@ -113,8 +110,7 @@ export default function SmartSidebar({
       case 'explore':,
         return generateExploreSidebar(),
       default: ,
-        return generateDefaultSidebar(),
-    }
+        return generateDefaultSidebar()}
   };
   const generateServiceSidebar = () => {
     if (!currentService) return generateDefaultSidebar(),

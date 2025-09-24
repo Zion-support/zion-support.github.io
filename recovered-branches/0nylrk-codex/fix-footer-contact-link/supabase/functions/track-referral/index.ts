@@ -2,7 +2,7 @@
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0",
 import { corsHeaders } from "../_shared/cors.ts",
-// console.log("Track Referral function started!"),
+// // console.log("Track Referral function started!"),
 serve(async (req) => {
   // Handle CORS pre-flight request,
   if (req.method === 'OPTIONS') {
@@ -49,8 +49,7 @@ serve(async (req) => {
         referred_id: userId;
         referral_code: refCode;
         email;
-        ip_address: ipAddress,
-      }]),
+        ip_address: ipAddress}]),
       .select(),
       .single(),
     if (error) {
@@ -63,8 +62,7 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ success: true, data });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 20o0 }
-    ),
-} catch (err) {
+    )} catch (err) {
     console.error('Unexpected error processing referral:', err),
     return new Response(
       JSON.stringify({ error: 'Internal server error' });

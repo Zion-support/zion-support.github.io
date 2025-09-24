@@ -125,6 +125,5 @@ const NotFound: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};
 export default NotFound;

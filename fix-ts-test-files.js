@@ -54,15 +54,15 @@ function fixTsTestFile(filePath) {
       if (trimmed.includes('{')) indentLevel++}
 ,
     fs.writeFileSync(filePath, formatted.join('\n') + '\n'),
-    // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
 ,
 // Get all TypeScript test files,
 const testDir = path.join(__dirname, '__tests__'),
 const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.ts') || file.endsWith('.test.tsx')),
-// console.log(`Found ${files.length} TypeScript test files to fix`),
+// // console.log(`Found ${files.length} TypeScript test files to fix`),
 files.forEach(file => {
   const filePath = path.join(testDir, file),
   fixTsTestFile(filePath)}),
-// console.log('TypeScript test file fixing completed!')}}}}}}}}}}}}}))))))))))))))))
+// // console.log('TypeScript test file fixing completed!')}}}}}}}}}}}}}))))))))))))))))

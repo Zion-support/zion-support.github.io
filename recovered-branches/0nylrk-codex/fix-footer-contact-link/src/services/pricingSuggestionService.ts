@@ -5,22 +5,19 @@ export interface PricingSuggestion {
   minRate: number,
   maxRate: number,
   confidence: "High" | "Medium" | "Low",
-  explanation: string,
-}
+  explanation: string}
 ,
 export interface ClientBudgetParams {
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
-  experienceLevel?: string,
-}
+  experienceLevel?: string}
 ,
 export interface TalentRateParams {
   skills: string[],
   yearsExperience: number,
-  location?: string,
-}
+  location?: string}
 ,
 // Mock function to generate suggestions,
 // In production, this would call an AI service or API,
@@ -38,8 +35,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     if (category === "development") {
       minRate = 40,
       maxRate = 80,
-      confidence = "High",
-    } else if (category === "design") {
+      confidence = "High"} else if (category === "design") {
       minRate = 35,
       maxRate = 70,
       confidence = "High"} else if (category === "marketing") {
@@ -76,8 +72,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate: 30;
       maxRate: 60;
       confidence: "Low";
-      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.",
-    };
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."};
   }
 }
 ,
@@ -111,8 +106,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     // Determine confidence,
     let confidence: "High" | "Medium" | "Low" = "Medium",
     if (yearsExperience > 3 && hasInDemandSkills && location) {
-      confidence = "High",
-    } else if (!location || yearsExperience < 1) {
+      confidence = "High"} else if (!location || yearsExperience < 1) {
       confidence = "Low"}
 ,
     // Generate explanation,
@@ -135,8 +129,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       minRate: 25;
       maxRate: 50;
       confidence: "Low";
-      explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages.",
-    };
+      explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."};
   }
 }
 ,
@@ -147,18 +140,16 @@ export async function trackPricingSuggestion(data: {
   suggestedMin: number,
   suggestedMax: number,
   actualValue?: number,
-  accepted: boolean,
-}) {
+  accepted: boolean}) {
   try {
     // In a real implementation, this would save to the database,
     // For now, we'll just log it,
-    // console.log("Tracking pricing suggestion:", data),
+    // // console.log("Tracking pricing suggestion:", data),
     // In a real implementation with Supabase: ,
     // await supabase,
     //  .from('pricing_suggestions'),
     //  .insert([data]),
-    return true,
-  } catch (error) {
+    return true} catch (error) {
     console.error("Error tracking pricing suggestion:", error),
     return false}
 }

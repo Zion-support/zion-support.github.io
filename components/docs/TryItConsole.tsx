@@ -4,8 +4,7 @@
 export default function TryItConsole({
   method,
   path,
-  requiresAuth,
-}: TryItProps) {
+  requiresAuth}: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   method;
   path;
@@ -13,8 +12,7 @@ export default function TryItConsole({
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string, // full URL or relative,
-  requiresAuth: boolean,
-}
+  requiresAuth: boolean}
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
@@ -27,15 +25,13 @@ export default function TryItConsole(): any ({
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string, // full URL or relative,
-  requiresAuth: boolean,
-}
+  requiresAuth: boolean}
 ,
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os');
   const [body, setBody] = useState(''),
   const [response, setResponse] = useState<string>('');
-  const [loading, setLoading] = useState(false),
-}, [baseUrl, path]),
+  const [loading, setLoading] = useState(false)}, [baseUrl, path]),
   async function onSend() {
     setLoading(true),
     setResponse(', '),
@@ -52,11 +48,8 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
             : body || undefined;
 }),
       const text = await res && res.text(),
-      setResponse(text),
-} catch (e: any) {
-      setResponse(String(e?.message || e)),
-    } finally {
-,
+      setResponse(text)} catch (e: any) {
+      setResponse(String(e?.message || e))} finally {
       setLoading(false)}
   }
   return (
@@ -68,10 +61,8 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});
       const text = await res && res.text(),
       setResponse(text)} catch (e: any) {
-      setResponse(String(e?.message || e)),
-    } finally {
-      setLoading(false),
-}
+      setResponse(String(e?.message || e))} finally {
+      setLoading(false)}
   }
   return (
     <div className='space-y-2'>,

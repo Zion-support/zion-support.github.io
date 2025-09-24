@@ -52,7 +52,6 @@ function badgeLabel(b: string) {
     case 'answer_hero':,
       return 'Answer Hero',
     default:,
-      return b,
-  }
+      return b}
 }
 ,

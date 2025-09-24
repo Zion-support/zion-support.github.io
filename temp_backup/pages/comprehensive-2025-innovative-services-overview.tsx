@@ -22,6 +22,5 @@ export default function Comprehensive20o25InnovativeServicesOverviewPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

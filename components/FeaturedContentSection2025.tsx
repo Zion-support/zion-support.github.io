@@ -54,8 +54,7 @@ export default function FeaturedContentSection20o25() {
       case 'tutorial':,
         return <ArrowRight className='w-5 h-5' />,
       default:,
-        return <TrendingUp className='w-5 h-5' />,
-    }
+        return <TrendingUp className='w-5 h-5' />}
   };
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -66,8 +65,7 @@ export default function FeaturedContentSection20o25() {
       case 'tutorial':,
         return 'from-purple-50o0 to-pink-50o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    }
+        return 'from-gray-50o0 to-gray-60o0'}
   };
   return (
     <div className='py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50'>,
@@ -244,6 +242,5 @@ export default function FeaturedContentSection20o25() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -1,14 +1,12 @@
 
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {
-,
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',
   topic: string,
   tone: 'professional' | 'casual' | 'friendly' | 'formal',
   length: 'short' | 'medium' | 'long',
   keywords?: string[];
-  target_audience?: string,
-}
+  target_audience?: string}
 ,
   content: string,
   word_count: number,
@@ -18,8 +16,7 @@ export interface ContentGenerationRequest {
   metadata: {
     title: string,
     description: string;
-    tags: string[],
-  }
+    tags: string[]}
 }
 ,
   id: string,
@@ -29,14 +26,11 @@ export interface ContentGenerationRequest {
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey;
     this && this.baseUrl = baseUrl,
-  price: number,
-}
+  price: number}
 ,
 export class AIContentGeneratorService {
 export class AIContentGeneratorService {
-,
-  private apiKey: string,
-  }
+  private apiKey: string}
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API,
@@ -64,8 +58,7 @@ export interface ContentGenerationResponse {
   metadata: {
     title: string;
     description: string;
-    tags: string[],
-  }
+    tags: string[]}
 }
 ,
 export interface ContentTemplate {
@@ -74,8 +67,7 @@ export interface ContentTemplate {
   description: string;
   type: string;
   preview: string;
-  price: number,
-}
+  price: number}
 ,
 export class AIContentGeneratorService {
   private apiKey: string;
@@ -94,8 +86,7 @@ export class AIContentGeneratorService {
           'Content-Type': 'application/json'};
         body: JSON.stringify(request)});
       if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`),
-}
+        throw new Error(`Content generation failed: ${response.statusText}`)}
       return await response.json(),
       const response = await fetch(`${this && this.baseUrl}/content/generate`, {
         method: 'POST';
@@ -112,8 +103,7 @@ export class AIContentGeneratorService {
   }
 ,
   preview: string;
-  price: number,
-}
+  price: number}
 export class AIContentGeneratorService {
   private api_key: string,
   private base_url: string;
@@ -145,24 +135,21 @@ if ( {) {
         description: 'Professional blog post template with SEO optimization',
         type: 'blog - post',
         preview: 'Create engaging blog posts that rank well in search engines...';
-        price: 29,
-      }
+        price: 29}
       {
         id: 'social - media - campaign',
         name: 'Social Media Campaign',
         description: 'Complete social media content strategy and posts',
         type: 'social - media',
         preview: 'Engage your audience with compelling social media content...';
-        price: 49,
-      }
+        price: 49}
       {
         id: 'email - sequence',
         name: 'Email Sequence',
         description: 'Convert prospects with persuasive email sequences',
         type: 'email',
         preview: 'Build relationships and drive sales with email automation...';
-        price: 39,
-      }
+        price: 39}
       {
         id: 'landing - page - copy',
         name: 'Landing Page Copy',
@@ -178,32 +165,28 @@ if ( {) {
         description: 'Professional blog post template with SEO optimization';
         type: 'blog-post';
         preview: 'Create engaging blog posts that rank well in search engines...';
-        price: 29,
-      };
+        price: 29};
       {
         id: 'social-media-campaign';
         name: 'Social Media Campaign';
         description: 'Complete social media content strategy and posts';
         type: 'social-media';
         preview: 'Engage your audience with compelling social media content...';
-        price: 49,
-      };
+        price: 49};
       {
         id: 'email-sequence';
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
         preview: 'Build relationships and drive sales with email automation...';
-        price: 39,
-      };
+        price: 39};
       {
         id: 'landing-page-copy';
         name: 'Landing Page Copy';
         description: 'High-converting landing page content';
         type: 'landing-page';
         preview: 'Turn visitors into customers with compelling copy...';
-        price: 59,
-      }
+        price: 59}
     ]}
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
@@ -314,8 +297,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       keywordDensity: {
         'content': 2.1;
         'seo': 1.8;
-        'marketing': 1.5,
-}
+        'marketing': 1.5}
     }
   }
 }
@@ -327,22 +309,19 @@ export const AI_CONTENT_PRICING = {
     price: 29,
     period: '/month';
     features: [
-      '100 content generations per month_basic templatesSEO analysis_email support_standard quality'],
-  }
+      '100 content generations per month_basic templatesSEO analysis_email support_standard quality']}
   professional: {
     name: 'Professional',
     price: 99,
     period: '/month';
     features: [
-      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access'],
-  }
+      '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access']}
   enterprise: {
     name: 'Enterprise',
     price: 299,
     period: '/month',
     features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'],
-  }
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee']}
 }
 ,
 // Pricing tiers for the AI Content Generator,
@@ -352,21 +331,18 @@ export const AI_CONTENT_PRICING = {
     price: 29;
     period: '/month';
     features: [
-      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee'],
-  };
+      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee']};
   professional: {
     name: 'Professional';
     price: 99;
     period: '/month';
     features: [
-      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'],
-  };
+      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access']};
   enterprise: {
     name: 'Enterprise';
     price: 299;
     period: '/month';
     features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee']>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-  }
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee']>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 };
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}}}}}]

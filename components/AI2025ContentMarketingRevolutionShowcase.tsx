@@ -230,8 +230,7 @@ const AI20o25ContentMarketingRevolutionShowcase = () => {
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   selectedCategory === category.id,
                     ? 'bg-purple-60o0 text-white',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
               >,
                 {category.name} ({category.count}),
               </button>))}
@@ -251,8 +250,7 @@ const AI20o25ContentMarketingRevolutionShowcase = () => {
                         ? 'bg-blue-10o0 text-blue-80o0',
                         : item.type === 'Case Study',
                           ? 'bg-green-10o0 text-green-80o0',
-                          : 'bg-orange-10o0 text-orange-80o0',
-                    }`}
+                          : 'bg-orange-10o0 text-orange-80o0'}`}
                   >,
                     {item.type}
                   </span>,
@@ -321,6 +319,5 @@ const AI20o25ContentMarketingRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default AI20o25ContentMarketingRevolutionShowcase;

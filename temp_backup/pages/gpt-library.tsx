@@ -15,6 +15,5 @@ export default function GptLibraryPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

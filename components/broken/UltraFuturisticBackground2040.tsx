@@ -20,8 +20,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
       vy: number,
       size: number,
       color: string,
-      opacity: number,
-    }> = [],
+      opacity: number}> = [],
     // Initialize particles,
     for (let i = 0, i < 100, i++) {
       particles.push({
@@ -31,8 +30,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
         vy: (Math.random() - 0.5) * 0.5;
         size: Math.random() * 2 + 1;
         color: ['#06b6d4'#3b82f6'#8b5cf6'#ec4899'][Math.floor(Math.random() * 4)];
-        opacity: Math.random() * 0.5 + 0.1,
-      })}
+        opacity: Math.random() * 0.5 + 0.1})}
 ,
     const animate = () => {
       time += 0.01,
@@ -169,8 +167,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
               linear-gradient(90degrgba(6182120.1) 1pxtransparent 1px),
             `;
             backgroundSize: '50px 50px';
-            animation: 'gridMove 20s linear infinite',
-          }} />,
+            animation: 'gridMove 20s linear infinite'}} />,
         </div>,
         {/* Floating Geometric Elements */}
         <motion.div,
@@ -178,40 +175,34 @@ const UltraFuturisticBackground2040: React.FC = () => {
           animate={{
             rotate: [0360];
             scale: [1.1];
-            opacity: [0.20.40.2],
-          }}
+            opacity: [0.20.40.2]}}
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full",
           animate={{
             rotate: [360];
             scale: [1.21];
-            opacity: [0.20.50.2],
-          }}
+            opacity: [0.20.50.2]}}
 ,
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45",
           animate={{
             rotate: [45405];
             scale: [1.151];
-            opacity: [0.20.30.2],
-          }}
+            opacity: [0.20.30.2]}}
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         {/* Additional Floating Elements */}
         <motion.div,
@@ -219,94 +210,78 @@ const UltraFuturisticBackground2040: React.FC = () => {
           animate={{
             rotate: [12372];
             scale: [1.1];
-            opacity: [0.150.250.15],
-          }}
+            opacity: [0.150.250.15]}}
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         <motion.div,
           className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full",
           animate={{
             rotate: [0360];
             scale: [1.21];
-            opacity: [0.150.30.15],
-          }}
+            opacity: [0.150.30.15]}}
           transition={{
             duration: 18;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
         />,
         {/* Particle Effects */}
         <motion.div,
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full",
           animate={{
             y: [0-20];
-            opacity: [0.40.80.4],
-          }}
+            opacity: [0.40.80.4]}}
           transition={{
             duration: 3;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full",
           animate={{
             y: [0-150];
-            opacity: [0.40.70.4],
-          }}
+            opacity: [0.40.70.4]}}
           transition={{
             duration: 4;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
         />,
         <motion.div,
           className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full",
           animate={{
             y: [0-250];
-            opacity: [0.40.90.4],
-          }}
+            opacity: [0.40.90.4]}}
           transition={{
             duration: 5;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
         />,
       </div>,
       {/* CSS Animations */}
       <style jsx>{`,
         @keyframes gridMove {
           0% {
-            transform: translate(0),
-          }
+            transform: translate(0)}
           100% {
-            transform: translate(50px),
-          }
+            transform: translate(50px)}
         }
 ,
         @keyframes float {
           0%100% {
-            transform: translateY(0px),
-          }
+            transform: translateY(0px)}
           50% {
-            transform: translateY(-20px),
-          }
+            transform: translateY(-20px)}
         }
 ,
         @keyframes pulse {
           0%100% {
-            opacity: 0.2,
-          }
+            opacity: 0.2}
           50% {
-            opacity: 0.5,
-          }
+            opacity: 0.5}
         }
       `}</style>,
     </div>)};

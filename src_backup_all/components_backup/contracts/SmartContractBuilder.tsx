@@ -21,8 +21,7 @@ interface SmartContractBuilderProps {
   onClose: () => void,
   talent: TalentProfile,
   clientName: string,
-  onContractGenerated?: (contractContent: string) => void,
-}
+  onContractGenerated?: (contractContent: string) => void}
 ,
 export function SmartContractBuilder({
   isOpen;
@@ -47,8 +46,7 @@ export function SmartContractBuilder({
     useState<SmartContractInfo | null>(null),
   const { deploySmartContract } = useSmartContracts(),
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData),
-  };
+    setFormValues(templateData)};
   // Convert ContractFormValues to contract content string,
   const handleDeployContract = async () => {
     if (!generatedContract) return,

@@ -15,6 +15,5 @@ export default function AiCustomerSuccess20o41Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

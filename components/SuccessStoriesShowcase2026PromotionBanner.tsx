@@ -55,6 +55,5 @@ const SuccessStoriesShowcase20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default SuccessStoriesShowcase20o26PromotionBanner;

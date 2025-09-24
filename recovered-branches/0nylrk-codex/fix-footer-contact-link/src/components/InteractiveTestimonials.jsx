@@ -9,12 +9,11 @@ const testimonials = [
         company: 'TechFlow Solutions';
         avatar: 'SC';
         rating: 5;
-        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model window.performance.';
+        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model window.window.performance.';
         category: 'AI Infrastructure';
         date: '2 weeks ago';
         likes: 127;
-        verified: true,
-    };
+        verified: true};
     {
         id: '2';
         name: 'Marcus Rodriguez';
@@ -26,8 +25,7 @@ const testimonials = [
         category: 'Talent Matching';
         date: '1 month ago';
         likes: 89;
-        verified: true,
-    };
+        verified: true};
     {
         id: '3';
         name: 'Dr. Emily Watson';
@@ -39,8 +37,7 @@ const testimonials = [
         category: 'Research & Development';
         date: '3 weeks ago';
         likes: 156;
-        verified: true,
-    };
+        verified: true};
     {
         id: '4';
         name: 'Alex Thompson';
@@ -52,8 +49,7 @@ const testimonials = [
         category: 'Startup Solutions';
         date: '1 week ago';
         likes: 73;
-        verified: true,
-    };
+        verified: true};
     {
         id: '5';
         name: 'Lisa Park';
@@ -65,8 +61,7 @@ const testimonials = [
         category: 'Global Operations';
         date: '2 months ago';
         likes: 94;
-        verified: true,
-    }
+        verified: true}
 ],
 const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'],
 export function InteractiveTestimonials() {
@@ -103,8 +98,7 @@ export function InteractiveTestimonials() {
             opacity: 1;
             transition: {
                 staggerChildren: 0.1;
-                delayChildren: 0.2,
-            }
+                delayChildren: 0.2}
         }
     };
     const itemVariants ={
@@ -115,8 +109,7 @@ export function InteractiveTestimonials() {
             scale: 1;
             transition: {
                 duration: 0.5;
-                ease: "easeOut",
-            }
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">,
@@ -290,6 +283,5 @@ export function InteractiveTestimonials() {
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

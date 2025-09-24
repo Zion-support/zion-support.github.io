@@ -46,7 +46,7 @@ export function AppHeader() {
     e.preventDefault(),
     if (searchQuery.trim()) {
       // Implement search functionality,
-      // console.log('Searching for:', searchQuery)}
+      // // console.log('Searching for:', searchQuery)}
     return location.pathname.startsWith(path)};
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode),
@@ -88,8 +88,7 @@ export function AppHeader() {
                   className={`px-3 py-2 text-sm font-medium transition-all duration-20o0 rounded-md ${
                     item.current,
                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20',
-                      : 'text-white hover: text-zion-cyan hover:bg-zion-cyan/10',
-                  }`}
+                      : 'text-white hover: text-zion-cyan hover:bg-zion-cyan/10'}`}
                   aria-current={item.current ? 'page' : undefined}
                 >,
                   {item.name}
@@ -221,8 +220,7 @@ export function AppHeader() {
                       className={`block px-3 py-2 text-base font-medium transition-all duration-20o0 rounded-md ${
                         item.current,
                           ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20',
-                          : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10',
-                      }`}
+                          : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10'}`}
                       onClick={() => setMobileMenuOpen(false)}
                       aria-current={item.current ? 'page' : undefined}
                     >,
@@ -277,6 +275,5 @@ export function AppHeader() {
       </header>,
       {/* Spacer to prevent content from hiding behind fixed header */}
       <div className="h-16 lg: h-20"></div>,
-    </>),
-}
+    </>)}
 ,

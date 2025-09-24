@@ -11,8 +11,7 @@
       dialog.setAttribute('open', '')}
     // Prefill a hint in the message,
     if (!messageInput.value) {
-      messageInput.value = `Hi Jordan,\n\nI found your profile and would like to discuss a project.\n\nProject summary: \n- Goals: \n- Timeline: \n- Budget: \n\nThanks!`,
-    }
+      messageInput.value = `Hi Jordan,\n\nI found your profile and would like to discuss a project.\n\nProject summary: \n- Goals: \n- Timeline: \n- Budget: \n\nThanks!`}
     if (source) dialog.dataset.source = source,
     window.setTimeout(() => nameInput.focus(), 10)}
 ,

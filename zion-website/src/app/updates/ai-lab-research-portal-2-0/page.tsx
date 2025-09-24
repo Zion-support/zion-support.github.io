@@ -38,6 +38,5 @@ export default function ResearchPortal20Page() {
           </a>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

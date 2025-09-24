@@ -46,8 +46,7 @@ exports.handler = async function(event, context) {
         withHead: report.filter(r => r.hasHead).length;
         withTitle: report.filter(r => r.hasTitle).length;
         withMetaDesc: report.filter(r => r.hasMetaDesc).length};
-      issues: report.filter(r => !(r.hasHead && r.hasTitle && r.hasMetaDesc)),
-    };
+      issues: report.filter(r => !(r.hasHead && r.hasTitle && r.hasMetaDesc))};
     const path = 'data/seo-audit.json',
     const b64 = Buffer.from(JSON.stringify(summary, null, 2), 'utf8').toString('base64'),
     // Fetch existing sha,

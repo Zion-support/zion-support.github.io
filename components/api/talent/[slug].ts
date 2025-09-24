@@ -4,8 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
     return res && res.status(500).json({ error: e && e.message })}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'GET') {
-    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed'),
-  }
+    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed')}
 ,
   const { slug, lang } = req && req.query as { slug: string, lang?: string };
   try {

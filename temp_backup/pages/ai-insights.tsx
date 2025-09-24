@@ -320,6 +320,5 @@ export default function AIInsightsPage() {
           </div>,
         </main>,
       </div>,
-    </>),
-}
+    </>)}
 ,

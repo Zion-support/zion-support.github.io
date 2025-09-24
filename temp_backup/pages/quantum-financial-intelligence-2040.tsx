@@ -20,6 +20,5 @@ export default function QuantumFinancialIntelligence20o40Page() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

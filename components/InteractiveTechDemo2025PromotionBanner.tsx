@@ -57,32 +57,28 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
       description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.";
       icon: Brain;
       color: "from-purple-50o0 to-pink-50o0";
-      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index",
-    };
+      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"};
     {
       title: "Quantum Neural Fusion";
       subtitle: "Witness Quantum Computing Power";
       description: "See the first successful integration of quantum computing with neural networksachieving 10o00x processing speed.";
       icon: Atom;
       color: "from-indigo-50o0 to-purple-50o0";
-      metrics: "10o00x Speed • 99.8% Qubit Coherence",
-    };
+      metrics: "10o00x Speed • 99.8% Qubit Coherence"};
     {
       title: "Brain-Computer Interface";
       subtitle: "Direct Neural Communication";
       description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.";
       icon: Cpu;
       color: "from-green-50o0 to-teal-50o0";
-      metrics: "99.9% Accuracy • 12ms Response Time",
-    };
+      metrics: "99.9% Accuracy • 12ms Response Time"};
     {
       title: "Edge AI Processing";
       subtitle: "Real-Time Distributed Intelligence";
       description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,0o00+ processing nodes.";
       icon: Network;
       color: "from-blue-50o0 to-cyan-50o0";
-      metrics: "95% Latency Reduction • 10K+ Nodes",
-    }
+      metrics: "95% Latency Reduction • 10K+ Nodes"}
   ],
   const features = [
     { icon: Playtext: "Interactive Demos" };
@@ -195,13 +191,11 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
                                 key={i}
                                 animate={{
                                   scale: isPlaying ? [1.21] : 1;
-                                  opacity: isPlaying ? [0.510.5] : 0.7,
-                                }}
+                                  opacity: isPlaying ? [0.510.5] : 0.7}}
                                 transition={{
                                   duration: 2;
                                   repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.1,
-                                }}
+                                  delay: i * 0.1}}
                                 className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0",
                                />))}
                           </div>)}
@@ -213,13 +207,11 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
                                 key={i}
                                 animate={{
                                   rotate: isPlaying ? 360 : 0;
-                                  scale: isPlaying ? [1.1] : 1,
-                                }}
+                                  scale: isPlaying ? [1.1] : 1}}
                                 transition={{
                                   duration: 3;
                                   repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.2,
-                                }}
+                                  delay: i * 0.2}}
                                 className="absolute w-8 h-8 border-2 border-indigo-40o0 rounded-full",
                                 style={{
                                   left: `${Math.cos(i * Math.PI / 2) * 20}px`;
@@ -234,18 +226,15 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
                                 key={i}
                                 animate={{
                                   scaleY: isPlaying ? [121] : 1;
-                                  opacity: isPlaying ? [0.510.5] : 0.7,
-                                }}
+                                  opacity: isPlaying ? [0.510.5] : 0.7}}
                                 transition={{
                                   duration: 1.5;
                                   repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.2,
-                                }}
+                                  delay: i * 0.2}}
                                 className="absolute w-1 bg-gradient-to-t from-green-50o0 to-teal-50o0 rounded-full",
                                 style={{
                                   left: `${30 + i * 20}%`;
-                                  height: '10o0%',
-                                }}
+                                  height: '10o0%'}}
                                />))}
                           </div>)}
 ,
@@ -256,13 +245,11 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
                                 key={i}
                                 animate={{
                                   scale: isPlaying ? [1.31] : 1;
-                                  opacity: isPlaying ? [0.610.6] : 0.8,
-                                }}
+                                  opacity: isPlaying ? [0.610.6] : 0.8}}
                                 transition={{
                                   duration: 2;
                                   repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.1,
-                                }}
+                                  delay: i * 0.1}}
                                 className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0",
                                />))}
                           </div>)}
@@ -308,8 +295,7 @@ const InteractiveTechDemo20o25PromotionBanner = () => {
                   className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                     index === currentDemo,
                       ? 'bg-white w-8',
-                      : 'bg-white/30 hover: bg-white/50',
-                  }`}
+                      : 'bg-white/30 hover: bg-white/50'}`}
                 />))}
             </div>,
           </div>,

@@ -15,6 +15,5 @@ export default function IntegratePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

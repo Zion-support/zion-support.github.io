@@ -503,6 +503,5 @@ export default function ZeroTrustNetworkArchitecture20o29() {
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>),
-}
+    </>)}
 ,

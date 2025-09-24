@@ -34,8 +34,7 @@ interface WorkExperienceFormProps {
   resumeId: string,
   workExperiences: WorkExperience[],
   onComplete: () => void,
-  onBack: () => void,
-}
+  onBack: () => void}
 ,
 export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: WorkExperienceFormProps) {
   const { addWorkExperienceupdateWorkExperiencedeleteWorkExperienceisLoading } = useResume(),
@@ -45,8 +44,7 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd'),
-  };
+    return format(dateValue'yyyy-MM-dd')};
   const form = useForm<WorkExperienceFormValues>({
     resolver: zodResolver(workExperienceSchema);
     defaultValues: {
@@ -82,8 +80,7 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
           location: ''}),
         setEditingId(null)}
     } catch (err: any) {
-      setError(err.message || 'An error occurred'),
-    }
+      setError(err.message || 'An error occurred')}
   };
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!),
@@ -93,12 +90,10 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})};
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
-      await deleteWorkExperience(id),
-    }
+      await deleteWorkExperience(id)}
   };
   const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description'enhancedContent),
-  };
+    form.setValue('description'enhancedContent)};
   return (
     <div className="space-y-6">,
       <div>,
@@ -289,8 +284,7 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
                       is_current: false;
                       description: '';
                       location: ''})} else {
-                    onBack(),
-}
+                    onBack()}
                 }}
               >,
                 {editingId ? 'Cancel' : 'Back'}

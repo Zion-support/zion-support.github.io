@@ -10,16 +10,14 @@ interface ContentItem {
   engagementScore: number,
   roiPotential: number,
   lastUpdated: string,
-  href: string,
-}
+  href: string}
 ,
 const AI20o25IntelligentContentRecommendationEngine = () => {
   const [userProfile, setUserProfile] = useState({
     interests: [] as string[];
     experienceLevel: 'Intermediate' as 'Beginner' | 'Intermediate' | 'Advanced';
     goals: [] as string[];
-    timeAvailable: 30,
-  }),
+    timeAvailable: 30}),
   const [recommendations, setRecommendations] = useState<ContentItem[]>([]),
   const [isAnalyzing, setIsAnalyzing] = useState(false),
   const [analysisComplete, setAnalysisComplete] = useState(false),
@@ -35,8 +33,7 @@ const AI20o25IntelligentContentRecommendationEngine = () => {
       engagementScore: 98;
       roiPotential: 50o000;
       lastUpdated: '20o25-0o1-14';
-      href: '/blog/ai-20o25-ultimate-content-revolution-breakthrough',
-    };
+      href: '/blog/ai-20o25-ultimate-content-revolution-breakthrough'};
     {
       id: 'neural-superintelligence-breakthrough';
       title: 'Neural Superintelligence Breakthrough 20o25: The Future is Here';
@@ -48,8 +45,7 @@ const AI20o25IntelligentContentRecommendationEngine = () => {
       engagementScore: 95;
       roiPotential: 750o00;
       lastUpdated: '20o25-0o1-14';
-      href: '/blog/neural-superintelligence-breakthrough-20o25',
-    };
+      href: '/blog/neural-superintelligence-breakthrough-20o25'};
     {
       id: 'quantum-machine-learning';
       title: 'Quantum Machine Learning Revolution: Next-Gen AI';
@@ -61,8 +57,7 @@ const AI20o25IntelligentContentRecommendationEngine = () => {
       engagementScore: 92;
       roiPotential: 10o0000;
       lastUpdated: '20o25-0o1-14';
-      href: '/blog/quantum-machine-learning-revolution',
-    };
+      href: '/blog/quantum-machine-learning-revolution'};
     {
       id: 'ai-automation-guide';
       title: 'Complete AI Automation Guide for Business Transformation';
@@ -74,8 +69,7 @@ const AI20o25IntelligentContentRecommendationEngine = () => {
       engagementScore: 88;
       roiPotential: 250o00;
       lastUpdated: '20o25-0o1-14';
-      href: '/blog/ai-automation-complete-guide',
-    };
+      href: '/blog/ai-automation-complete-guide'};
     {
       id: 'fortune-50o0-case-study';
       title: 'Fortune 50o0 AI Transformation: 50,0o00% ROI Success Story';
@@ -87,8 +81,7 @@ const AI20o25IntelligentContentRecommendationEngine = () => {
       engagementScore: 94;
       roiPotential: 50o000;
       lastUpdated: '20o25-0o1-14';
-      href: '/case-studies/fortune-50o0-ai-transformation-50o000-roi',
-    }
+      href: '/case-studies/fortune-50o0-ai-transformation-50o000-roi'}
   ],
   const analyzeUserProfile = async () => {
     setIsAnalyzing(true),

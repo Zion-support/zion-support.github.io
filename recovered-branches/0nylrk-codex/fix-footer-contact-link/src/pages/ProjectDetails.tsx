@@ -173,8 +173,7 @@ if ( {) {
       // Check condition,
 if (throw error) {
   $2}
-      set_notes (data || []),
-} catch (err) {
+      set_notes (data || [])} catch (err) {
       console.error ("Error fetching project notes:", err)}
   }
 ,
@@ -203,8 +202,7 @@ if (throw error) {
       toast ({
         title: "Failed to add note";
         description: err.message || "An error occurred while adding your note.";
-        variant: "destructive"}),
-} finally {
+        variant: "destructive"})} finally {
       setIsSubmittingNote (false)}
   }
 ,
@@ -236,14 +234,12 @@ if ( {) {
       if (projectData) {
         setProject(projectData),
         // Now fetch notes,
-        fetchProjectNotes(projectId),
-      } else {
+        fetchProjectNotes(projectId)} else {
         toast({
           title: "Project not found";
           description: "The requested project could not be found.";
           variant: "destructive"});
-        navigate("/dashboard"),
-}
+        navigate("/dashboard")}
 ,
       setIsLoading(false)}
 ,
@@ -347,7 +343,6 @@ if ( {) {
         return <Badge variant="outline">{status}</Badge>}
   };
   if (isLoading) {
-,
     return (
       <div className="container mx-auto py-8">,
         <div className="flex justify-center items-center h-64">,
@@ -359,7 +354,6 @@ if ( {) {
       </div>)}
 ,
   if (!project) {
-,
     return (
       <div className="container mx-auto py-8">,
         <Card>,
@@ -1539,8 +1533,7 @@ export default function ProjectDetails() {
         </div>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
             </Card>,
           </div>,
         </div>,

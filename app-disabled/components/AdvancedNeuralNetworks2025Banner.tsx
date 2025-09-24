@@ -17,11 +17,9 @@ const AdvancedNeuralNetworks20o25Banner = () => {
         roi: '450%';
         accuracy: '99.7%';
         savings: '$2.8B';
-        speed: '340%',
-      };
+        speed: '340%'};
       icon: Brain;
-      gradient: 'from-purple-60o0 via-blue-60o0 to-indigo-60o0',
-    };
+      gradient: 'from-purple-60o0 via-blue-60o0 to-indigo-60o0'};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 Success: $2.8B Annual Savings with Neural Networks';
@@ -32,11 +30,9 @@ const AdvancedNeuralNetworks20o25Banner = () => {
         savings: '$2.8B';
         roi: '567%';
         efficiency: '340%';
-        satisfaction: '99.2%',
-      };
+        satisfaction: '99.2%'};
       icon: Award;
-      gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
-    };
+      gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0'};
     {
       id: 'implementation-guide';
       title: 'Complete Implementation Guide: Advanced Neural Networks 20o25';
@@ -47,11 +43,9 @@ const AdvancedNeuralNetworks20o25Banner = () => {
         roi: '450%';
         timeline: '18 months';
         success: '98%';
-        projects: '50o0+',
-      };
+        projects: '50o0+'};
       icon: TrendingUp;
-      gradient: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
-    };
+      gradient: 'from-orange-60o0 via-red-60o0 to-pink-60o0'};
     {
       id: 'edge-computing-revolution';
       title: 'AI 20o25 Edge Computing Revolution: Enterprise Breakthrough';
@@ -62,11 +56,9 @@ const AdvancedNeuralNetworks20o25Banner = () => {
         speed: '340%';
         uptime: '99.9%';
         savings: '$1.8B';
-        efficiency: '67%',
-      };
+        efficiency: '67%'};
       icon: Zap;
-      gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0',
-    }
+      gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0'}
   ],
   useEffect(() => {
     const timer = setInterval(() => {

@@ -119,6 +119,5 @@ export default function AICodeReview() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

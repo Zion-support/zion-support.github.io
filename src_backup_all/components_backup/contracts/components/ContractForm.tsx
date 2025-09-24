@@ -38,8 +38,7 @@ interface ContractFormProps {
   clientName: string,
   initialValues?: ContractFormValues,
   onFormValuesChange?: (values: ContractFormValues) => void,
-  onContractGenerated: (contractContent: string) => void,
-}
+  onContractGenerated: (contractContent: string) => void}
 ,
 export function ContractForm({
   talent;

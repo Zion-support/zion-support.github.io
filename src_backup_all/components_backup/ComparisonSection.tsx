@@ -107,6 +107,5 @@ export function ComparisonSection() {
           </div>,
         </div>,
       </div>,
-    </section>),
-}
+    </section>)}
 ,

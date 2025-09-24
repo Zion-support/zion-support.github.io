@@ -8,16 +8,14 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 interface ApiErrorBoundaryProps {
   children: ReactNode,
   queryClient?: QueryClient,
-  fallback?: ReactNode,
-}
+  fallback?: ReactNode}
 ,
 interface ApiErrorBoundaryState {
   hasError: boolean,
   error: Error | null,
   errorInfo: any,
   isRetrying: boolean,
-  isOnline: boolean,
-}
+  isOnline: boolean}
 ,
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBoundaryState> {
   private retryTimeoutId: NodeJS.Timeout | null = null,

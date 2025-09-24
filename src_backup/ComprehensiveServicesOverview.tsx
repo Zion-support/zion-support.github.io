@@ -227,8 +227,7 @@ export default function ComprehensiveServicesOverview() {
                         <div className="flex items-start justify-between mb-4">,
                           <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-50o0 to-gray-60o0'}`}>,
                             {React.createElement(categoryIcons[service.category] || Settings, {
-                    className: "h-6 w-6 text-white",
-                })}
+                    className: "h-6 w-6 text-white"})}
                           </div>,
                           <div className="text-right">,
                             {service.supportLevel && (<Badge className={`${supportLevelColors[service.supportLevel] || 'bg-gray-50o0'} text-white mb-2`}>,
@@ -349,6 +348,5 @@ export default function ComprehensiveServicesOverview() {
           </div>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -15,6 +15,5 @@ const About: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </>),
-};
+    </>)};
 export default About;

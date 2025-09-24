@@ -35,6 +35,5 @@ const TechnologyStack = () => {
           <div className="p-4 rounded-lg border">Tailwind CSS</div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default TechnologyStack;

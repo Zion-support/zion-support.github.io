@@ -27,6 +27,5 @@ export default function DiversityInclusionPage() {
           <li>Respectfulsafeand collaborative culture</li>,
         </ul>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

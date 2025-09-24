@@ -77,8 +77,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["GPT-4", "React", "Node.js", "MongoDB", "OpenAI API"];
       "integrations": ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Canva"];
@@ -88,8 +87,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Jasper", "Copy.ai", "Writesonic", "Rytr"];
     "marketSize": "$7.74B by 20o29";
     "demoUrl": "https://ziontechgroup.com/demo/ai-content";
-    "documentationUrl": "https: //ziontechgroup.com/docs/ai-content",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/ai-content"};
   // Intelligent Customer Support Hub,
   {
     "id": "intelligent-customer-support-hub";
@@ -134,8 +132,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["React", "Node.js", "MongoDB", "NLP", "Machine Learning"];
       "integrations": ["Slack", "Salesforce", "HubSpot", "Zendesk", "Intercom"];
@@ -145,8 +142,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Zendesk", "Freshdesk", "Help Scout", "Intercom"];
     "marketSize": "$8.2B by 20o26";
     "demoUrl": "https://ziontechgroup.com/demo/customer-support";
-    "documentationUrl": "https: //ziontechgroup.com/docs/customer-support",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/customer-support"};
   // Advanced Affiliate Marketing Tracker,
   {
     "id": "advanced-affiliate-marketing-tracker";
@@ -191,8 +187,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["React", "Node.js", "PostgreSQL", "Redis", "Machine Learning"];
       "integrations": ["Shopify", "WooCommerce", "PayPal", "Stripe", "ClickBank"];
@@ -202,8 +197,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Post Affiliate Pro", "ReferralCandy", "Impact", "ShareASale"];
     "marketSize": "$17.5B by 20o25";
     "demoUrl": "https://ziontechgroup.com/demo/affiliate-tracker";
-    "documentationUrl": "https: //ziontechgroup.com/docs/affiliate-tracker",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/affiliate-tracker"};
   // AI-Powered Employee Scheduling Platform,
   {
     "id": "ai-employee-scheduling-platform";
@@ -248,8 +242,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["React", "Node.js", "MongoDB", "Machine Learning", "Mobile SDK"];
       "integrations": ["ADP", "BambooHR", "QuickBooks", "Slack", "Microsoft Teams"];
@@ -259,8 +252,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["When I Work", "Deputy", "Shiftboard", "Kronos"];
     "marketSize": "$4.3B by 20o26";
     "demoUrl": "https://ziontechgroup.com/demo/employee-scheduling";
-    "documentationUrl": "https: //ziontechgroup.com/docs/employee-scheduling",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/employee-scheduling"};
   // Smart Event Management Dashboard,
   {
     "id": "smart-event-management-dashboard";
@@ -305,8 +297,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["React", "Node.js", "PostgreSQL", "Stripe API", "Zoom SDK"];
       "integrations": ["Eventbrite", "Mailchimp", "Zoom", "Teams", "PayPal"];
@@ -316,8 +307,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Eventbrite", "Cvent", "Bizzabo", "Hopin"];
     "marketSize": "$11.2B by 20o26";
     "demoUrl": "https://ziontechgroup.com/demo/event-management";
-    "documentationUrl": "https: //ziontechgroup.com/docs/event-management",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/event-management"};
   // Intelligent Learning Management System,
   {
     "id": "intelligent-learning-management-system";
@@ -362,8 +352,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["React", "Node.js", "MongoDB", "Machine Learning", "WebRTC"];
       "integrations": ["Zoom", "Teams", "Salesforce", "SCORM", "xAPI"];
@@ -373,8 +362,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Moodle", "Canvas", "Blackboard", "TalentLMS"];
     "marketSize": "$25.7B by 20o25";
     "demoUrl": "https://ziontechgroup.com/demo/lms";
-    "documentationUrl": "https: //ziontechgroup.com/docs/lms",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/lms"};
   // Advanced Cybersecurity Operations Center,
   {
     "id": "advanced-cybersecurity-operations-center";
@@ -419,8 +407,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["Python", "Machine Learning", "React", "Elasticsearch", "Kafka"];
       "integrations": ["SIEM platforms", "Firewalls", "EDR tools", "Threat feeds", "Cloud services"];
@@ -430,8 +417,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Splunk", "CrowdStrike", "Palo Alto Networks", "FireEye"];
     "marketSize": "$345.4B by 20o26";
     "demoUrl": "https://ziontechgroup.com/demo/cybersecurity-soc";
-    "documentationUrl": "https: //ziontechgroup.com/docs/cybersecurity-soc",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/cybersecurity-soc"};
   // Quantum-Safe Encryption Service,
   {
     "id": "quantum-safe-encryption-service";
@@ -476,8 +462,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["Post-quantum algorithms", "PKI", "HSM", "React", "Node.js"];
       "integrations": ["PKI systems", "Identity management", "Cloud services", "Enterprise applications"];
@@ -487,8 +472,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"];
     "marketSize": "$2.8B by 20o25";
     "demoUrl": "https://ziontechgroup.com/demo/quantum-safe";
-    "documentationUrl": "https: //ziontechgroup.com/docs/quantum-safe",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/quantum-safe"};
   // AI-Powered Healthcare Diagnostics Platform,
   {
     "id": "ai-healthcare-diagnostics-platform";
@@ -533,8 +517,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "React"];
       "integrations": ["Epic", "Cerner", "PACS systems", "EHR platforms", "DICOM viewers"];
@@ -544,8 +527,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["Zebra Medical", "Aidoc", "Butterfly Network", "PathAI"];
     "marketSize": "$45.2B by 20o25";
     "demoUrl": "https://ziontechgroup.com/demo/healthcare-ai";
-    "documentationUrl": "https: //ziontechgroup.com/docs/healthcare-ai",
-  };
+    "documentationUrl": "https: //ziontechgroup.com/docs/healthcare-ai"};
   // Edge AI Computing Platform,
   {
     "id": "edge-ai-computing-platform";
@@ -590,8 +572,7 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "contactInfo": {
       phone: "+1 30o2 464 0950";
       "email": "kleber@ziontechgroup.com";
-      "website": "https: //ziontechgroup.com",
-    };
+      "website": "https: //ziontechgroup.com"};
     "technicalSpecs": {
       technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "Kubernetes", "Docker"];
       "integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols"];
@@ -601,16 +582,14 @@ export const "ENHANCED_ZION_SERVICES_20o25": InnovativeMicroSaasService[] = [// 
     "competitors": ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"];
     "marketSize": "$12.3B by 20o25";
     "demoUrl": "https://ziontechgroup.com/demo/edge-ai";
-    "documentationUrl": "https: //ziontechgroup.com/docs/edge-ai",
-  }
+    "documentationUrl": "https: //ziontechgroup.com/docs/edge-ai"}
 ],
 // Contact information for all services,
 export const ZION_CONTACT_INFO ={
   "phone": "+1 30o2 464 0950";
   "email": "kleber@ziontechgroup.com";
   "address": "364 E Main St STE 10o08 Middletown DE 19709";
-  "website": "https: //ziontechgroup.com",
-};
+  "website": "https: //ziontechgroup.com"};
 // Service categories for navigation,
 export const SERVICE_CATEGORIES = ["AI & Content Marketing";
   "Customer Experience";

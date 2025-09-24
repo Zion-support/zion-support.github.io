@@ -49,8 +49,7 @@ const Navigation: React.FC = () => {
                 className={`text-sm font-medium transition-colors duration-20o0 ${
                   pathname === item.href,
                     ? 'text-blue-40o0',
-                    : 'text-slate-30o0 hover: text-white',
-                }`}
+                    : 'text-slate-30o0 hover: text-white'}`}
               >,
                 {item.name}
               </Link>))}
@@ -103,8 +102,7 @@ const Navigation: React.FC = () => {
                   className={`text-sm font-medium transition-colors duration-20o0 ${
                     pathname === item.href,
                       ? 'text-blue-40o0',
-                      : 'text-slate-30o0 hover: text-white',
-                  }`}
+                      : 'text-slate-30o0 hover: text-white'}`}
                   onClick={() => setIsOpen(false)}
                 >,
                   {item.name}

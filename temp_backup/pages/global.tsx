@@ -15,6 +15,5 @@ export default function GlobalPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

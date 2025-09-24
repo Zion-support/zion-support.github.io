@@ -33,8 +33,7 @@ const formSchema = z.object({
   targetAudience: z.string()});
 type FormData = z.infer<typeof formSchema>;
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void,
-}
+  onDescriptionGenerated: (description: string) => void}
 ,
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const form = useForm<FormData>({
@@ -53,8 +52,7 @@ const formSchema = z.object({
   targetAudience: z.string()});
 type FormData = z.infer<typeof formSchema>;
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void,
-}
+  onDescriptionGenerated: (description: string) => void}
 ,
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast();
@@ -72,12 +70,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         body: {
           title: data.title;
           keyFeatures: data.keyFeatures;
-          targetAudience: data.targetAudience,
-        }
+          targetAudience: data.targetAudience}
       });
       if (error) {
-        throw new Error(error.message),
-}
+        throw new Error(error.message)}
       if (response.error) {
         throw new Error(response.error)}
 ,
@@ -85,14 +81,12 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       onDescriptionGenerated(response.description);
       toast({
         title: "Description Generated",
-        description: "Your professional service description has been created.",
-      })} catch (error) {
+        description: "Your professional service description has been created."})} catch (error) {
       console.error("Error generating description:", error),
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsLoading(false),
 const formSchema = z && z.object({
   title: z && z.string().min(3, "Title must be at least 3 characters"),
@@ -100,8 +94,7 @@ const formSchema = z && z.object({
   targetAudience: z && z.string()});
 type FormData = z && z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
-  onDescriptionGenerated: (description: string) => void,
-}
+  onDescriptionGenerated: (description: string) => void}
 ,
 export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast(),
@@ -119,8 +112,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
         body: {
           title: data && data.title,
           keyFeatures: data && data.keyFeatures,
-          targetAudience: data && data.targetAudience ,
-        }
+          targetAudience: data && data.targetAudience }
       }),
       if (error) {
         throw new Error(error && error.message)}
@@ -131,16 +123,13 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
       onDescriptionGenerated(response && response.description),
       toast({
         title: "Description Generated";
-        description: "Your professional service description has been created.",
-      })} catch (error) {
+        description: "Your professional service description has been created."})} catch (error) {
       console && console.error("Error generating description:", error),
       toast({
         title: "Generation Failed";
         description: error instanceof Error ? error && error.message : "Failed to generate description. Please try again.";
-        variant: "destructive",
-      })} finally {
-      setIsLoading(false),
-}
+        variant: "destructive"})} finally {
+      setIsLoading(false)}
 }
   };
   return (
@@ -182,14 +171,12 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
       onDescriptionGenerated(response.description);
       toast({
         title: "Description Generated";
-        description: "Your professional service description has been created.",
-      })} catch (error) {
+        description: "Your professional service description has been created."})} catch (error) {
       console.error("Error generating description:", error);
       toast({
         title: "Generation Failed";
         description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
-        variant: "destructive",
-      })} finally {
+        variant: "destructive"})} finally {
       setIsLoading(false)}
   };
   return (

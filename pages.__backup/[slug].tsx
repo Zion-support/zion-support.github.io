@@ -34,6 +34,5 @@ export default function ServiceFallbackPage() {
 					</Link>,
 				</div>,
 			</div>,
-		</UltraFuturisticBackground>),
-}
+		</UltraFuturisticBackground>)}
 ,

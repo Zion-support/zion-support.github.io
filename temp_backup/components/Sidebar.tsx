@@ -2,8 +2,7 @@ import Link from 'next/link',
 import { useMemo } from 'react',
 interface NavLink {
   href: string,
-  label: string,
-}
+  label: string}
 ,
 export default function Sidebar() {
   const pageLinks: NavLink[] = useMemo(

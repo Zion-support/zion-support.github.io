@@ -10,8 +10,7 @@ export interface TalentGridProps {
   isAuthenticated: boolean,
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
-  handleRequestHire?: (talent: TalentProfile) => void,
-}
+  handleRequestHire?: (talent: TalentProfile) => void}
 ,
 export function TalentGrid({
   talents,
@@ -25,16 +24,13 @@ export function TalentGrid({
   handleRequestHire}: TalentGridProps) {
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
-      handleRequestHire(talent),
-    } else {
+      handleRequestHire(talent)} else {
       // Default implementation,
-      // console.log("Request to hire: "talent.id),
-    }
+      // // console.log("Request to hire: "talent.id)}
   };
   const handleViewProfile = (id: string) => {
     if (viewProfile) {
-      viewProfile(id),
-    } else {
+      viewProfile(id)} else {
       onTalentClick(id)}
   };
   if (isLoading) {

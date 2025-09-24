@@ -19,7 +19,7 @@ const AI20o25AutonomousOperationsPromotionBanner = () => {
           </h2>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
             Experience the future of enterprise management with AI-powered autonomous business operations.,
-            Self-managing systems that make independent decisions and continuously optimize window.performance.,
+            Self-managing systems that make independent decisions and continuously optimize window.window.performance.,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">,
@@ -96,6 +96,5 @@ const AI20o25AutonomousOperationsPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>),
-};
+    </section>)};
 export default AI20o25AutonomousOperationsPromotionBanner;

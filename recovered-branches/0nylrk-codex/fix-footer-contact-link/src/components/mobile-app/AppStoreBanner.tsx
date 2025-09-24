@@ -10,8 +10,7 @@ export const AppStoreBanner: React.FC = () => {
     if (isMobile && !localStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds,
       const timer = setTimeout(() => {
-        setIsVisible(true),
-      }2000),
+        setIsVisible(true)}2000),
       return () => clearTimeout(timer)}
   }[isMobile]),
   const dismissBanner = () => {

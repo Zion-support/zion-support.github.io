@@ -35,29 +35,25 @@ const UltimateContentRevolution20o25 = () => {
           description: "Breakthrough integration of quantum computing with neural networks achieving 10,0o00x processing speed";
           icon: Brain;
           metrics: "99.9% Accuracy";
-          color: "from-purple-50o0 to-pink-50o0",
-        };
+          color: "from-purple-50o0 to-pink-50o0"};
         {
           title: "Autonomous Business Operations";
           description: "Self-managing systems that reduce operational costs by 85% while increasing efficiency";
           icon: Zap;
           metrics: "85% Cost Reduction";
-          color: "from-blue-50o0 to-cyan-50o0",
-        };
+          color: "from-blue-50o0 to-cyan-50o0"};
         {
           title: "Consciousness-Level AI";
           description: "AI systems with human-like reasoning and emotional intelligence capabilities";
           icon: Lightbulb;
           metrics: "Human-Level IQ";
-          color: "from-green-50o0 to-emerald-50o0",
-        };
+          color: "from-green-50o0 to-emerald-50o0"};
         {
           title: "Predictive Reality Modeling";
           description: "AI that can predict and model future scenarios with 95% accuracy";
           icon: Target;
           metrics: "95% Accuracy";
-          color: "from-orange-50o0 to-red-50o0",
-        }
+          color: "from-orange-50o0 to-red-50o0"}
       ]};
     solutions: {
       title: "Enterprise AI Solutions";
@@ -68,29 +64,25 @@ const UltimateContentRevolution20o25 = () => {
           description: "Automated tradingrisk assessmentand fraud detection systems";
           icon: BarChart3;
           metrics: "2,50o0% ROI";
-          color: "from-green-50o0 to-teal-50o0",
-        };
+          color: "from-green-50o0 to-teal-50o0"};
         {
           title: "Manufacturing Automation";
           description: "Smart factories with predictive maintenance and quality control";
           icon: Cpu;
           metrics: "60% Efficiency Gain";
-          color: "from-blue-50o0 to-indigo-50o0",
-        };
+          color: "from-blue-50o0 to-indigo-50o0"};
         {
           title: "Healthcare Diagnostics";
           description: "AI-powered medical imaging and diagnostic systems";
           icon: Shield;
           metrics: "99.7% Accuracy";
-          color: "from-red-50o0 to-pink-50o0",
-        };
+          color: "from-red-50o0 to-pink-50o0"};
         {
           title: "Retail Personalization";
           description: "Dynamic pricing and personalized customer experiences";
           icon: Users;
           metrics: "40% Sales Increase";
-          color: "from-purple-50o0 to-violet-50o0",
-        }
+          color: "from-purple-50o0 to-violet-50o0"}
       ]};
     predictions: {
       title: "Future Technology Predictions";
@@ -101,29 +93,25 @@ const UltimateContentRevolution20o25 = () => {
           description: "Quantum computers solving problems impossible for classical computers";
           icon: Rocket;
           metrics: "10^15 Speedup";
-          color: "from-indigo-50o0 to-purple-50o0",
-        };
+          color: "from-indigo-50o0 to-purple-50o0"};
         {
           title: "20o27: Neural Interfaces";
           description: "Direct brain-computer interfaces for enhanced human capabilities";
           icon: Brain;
           metrics: "10o00x Processing";
-          color: "from-cyan-50o0 to-blue-50o0",
-        };
+          color: "from-cyan-50o0 to-blue-50o0"};
         {
           title: "20o28: Space Technology";
           description: "AI-powered space exploration and resource mining systems";
           icon: Globe;
           metrics: "Mars Mission Ready";
-          color: "from-orange-50o0 to-yellow-50o0",
-        };
+          color: "from-orange-50o0 to-yellow-50o0"};
         {
           title: "20o30: Transcendent AI";
           description: "AI systems surpassing human intelligence in all domains";
           icon: Award;
           metrics: "Superintelligence";
-          color: "from-pink-50o0 to-rose-50o0",
-        }
+          color: "from-pink-50o0 to-rose-50o0"}
       ]}
   };
   const testimonials = [
@@ -132,22 +120,19 @@ const UltimateContentRevolution20o25 = () => {
       role: "CTOFortune 50o0 Company";
       content: "Zion 'Tech', 's AI solutions increased our operational efficiency by 30o0% and reduced costs by $50M annually.";
       avatar: "SC";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Michael Rodriguez";
       role: "CEOGlobal Manufacturing";
       content: "The quantum-neural fusion technology revolutionized our production line. ROI exceeded 2,50o0% in the first year.";
       avatar: "MR";
-      rating: 5,
-    };
+      rating: 5};
     {
       name: "Dr. Emily Watson";
       role: "Chief Medical Officer";
       content: "Our diagnostic accuracy improved to 99.7% with 'Zion', 's AI healthcare solutions. Patient outcomes are remarkable.";
       avatar: "EW";
-      rating: 5,
-    }
+      rating: 5}
   ],
   const stats = [
     { label: "Enterprise Clients"value: "50o0+"icon: Users };
@@ -237,8 +222,7 @@ const UltimateContentRevolution20o25 = () => {
                 className={`px-6 py-3 mx-2 mb-2 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === tab,
                     ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white',
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>))}
@@ -344,6 +328,5 @@ const UltimateContentRevolution20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateContentRevolution20o25;

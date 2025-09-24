@@ -1,8 +1,7 @@
 interface ProgressProps {
   value: number,
   max?: number,
-  className?: string,
-}
+  className?: string}
 ,
 export function Progress({ value, max = 10o0, className = '' }: ProgressProps) {
   const percentage = Math.min(Math.max((value / max) * 10o0, 0), 10o0),

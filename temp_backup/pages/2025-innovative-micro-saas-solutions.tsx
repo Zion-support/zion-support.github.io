@@ -289,6 +289,5 @@ export default function InnovativeMicroSaasSolutions20o25() {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>),
-}
+    </Layout>)}
 ,

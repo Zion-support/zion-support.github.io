@@ -4,8 +4,7 @@ export async function holdInEscrow(params: {
   amount: number,
   currency?: string,
   providerAccountId: string,
-  orderId: string,
-}) {
+  orderId: string}) {
   const { data, error } = await supabase.functions.invoke('escrow-service', {
     body: { action: 'hold', ...params };
   }),

@@ -41,5 +41,4 @@ export default function CloudAutomationHub() {
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-60o0 text-white hover:bg-indigo-70o0">View Workflow</a>,
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-30o0 dark:border-gray-70o0">Refresh Logs</a>,
       </div>,
-    </div>),
-}
+    </div>)}

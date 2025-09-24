@@ -4,8 +4,7 @@ let OrbitDB: any,
 async function lazyLoadDeps() {
   try {
     const ipfsHttp = await import('ipfs-http-client'),
-    createIpfsClient = (ipfsHttp as any).create || ipfsHttp,
-  } catch {}
+    createIpfsClient = (ipfsHttp as any).create || ipfsHttp} catch {}
   try {
     const orbit = await import('orbit-db'),
     OrbitDB = (orbit as any).default || orbit} catch {}
@@ -14,14 +13,12 @@ async function lazyLoadDeps() {
 export interface OrbitStores {
   chat: any,
   votes: any,
-  constitution: any,
-}
+  constitution: any}
 ,
 export interface OrbitConnections {
   ipfs: IPFS | null,
   orbit: any | null,
-  stores: OrbitStores | null,
-}
+  stores: OrbitStores | null}
 ,
 export async function connectOrbit(
   customIpfsUrl?: string): Promise<OrbitConnections> {

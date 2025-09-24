@@ -3,8 +3,7 @@ import { motion } from 'framer-motion',
 interface UltraFuturisticBackground20o34Props {
   children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high',
-  theme?: 'quantum' | 'neural' | 'holographic' | 'cyberpunk',
-}
+  theme?: 'quantum' | 'neural' | 'holographic' | 'cyberpunk'}
 ,
 const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Props> = ({
   children;
@@ -32,8 +31,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       size: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     const getThemeColors = () => {
       switch (theme) {
         case 'quantum':,
@@ -79,8 +77,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
         size: Math.random() * 3 * intensityMultiplier + 1;
         color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
         life: Math.random() * 10o0 + 50;
-        maxLife: Math.random() * 10o0 + 50,
-      };
+        maxLife: Math.random() * 10o0 + 50};
     };
     // Initialize particles,
     const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 150 : 10o0,
@@ -206,8 +203,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
         className="fixed inset-0 pointer-events-none z-10",
         style={{
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 10o0%)`;
-          zIndex: 10,
-        }}
+          zIndex: 10}}
        />,
       {/* Floating geometric shapes */}
       <div className="fixed inset-0 pointer-events-none z-20" style={{ zIndex: 20 }}>,
@@ -220,8 +216,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
@@ -232,8 +227,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 6;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-green-40o0/30 transform rotate-45",
@@ -244,8 +238,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 12;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-pink-40o0/30 transform rotate-12",
@@ -256,8 +249,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {/* Quantum energy waves */}
@@ -273,8 +265,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
       {/* Content */}

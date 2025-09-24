@@ -375,6 +375,5 @@ export default function AutonomousBusinessRevolutionGuidePage() {
           </div>,
         </div>,
       </section>,
-    </div>),
-}
+    </div>)}
 ,

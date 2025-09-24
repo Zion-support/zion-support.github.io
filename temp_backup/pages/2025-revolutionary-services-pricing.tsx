@@ -114,8 +114,7 @@ const ServicePricingCard = ({
   tier;
 }: {
   service: any,
-  tier: string,
-}) => {
+  tier: string}) => {
   const getPricing = (tier: string) => {
     switch (tier) {
       case 'Starter':,
@@ -130,8 +129,7 @@ const ServicePricingCard = ({
       case 'Custom':,
         return service.pricing.custom || 'Contact for pricing',
       default:,
-        return service.pricing.starter,
-    }
+        return service.pricing.starter}
   };
   const getFeatures = (tier: string) => {
     const baseFeatures = service.features.slice(0, 4),
@@ -147,8 +145,7 @@ const ServicePricingCard = ({
       case 'Custom':,
         return service.features,
       default: ,
-        return baseFeatures,
-    }
+        return baseFeatures}
   };
   return (
     <motion.div,
@@ -190,8 +187,7 @@ const ServicePricingCard = ({
         Learn More,
         <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />,
       </button>,
-    </motion.div>),
-};
+    </motion.div>)};
 const PricingTierCard = ({
   tier;
   isSelected;
@@ -199,13 +195,11 @@ const PricingTierCard = ({
 }: {
   tier: any,
   isSelected: boolean,
-  onSelect: () => void,
-}) => {
+  onSelect: () => void}) => {
   return (
     <motion.div,
       className={`relative cursor-pointer transition-all duration-30o0 ${
-        isSelected ? 'scale-10o5' : 'hover: scale-10o2',
-      }`}
+        isSelected ? 'scale-10o5' : 'hover: scale-10o2'}`}
       onClick={onSelect}
       whileHover={{ y: -4 }}
     >,
@@ -299,8 +293,7 @@ export default function RevolutionaryServicesPricing() {
       case 'specialized-enterprise':,
         return specializedEnterpriseSolutions20o25,
       default: ,
-        return allRevolutionaryServices,
-    }
+        return allRevolutionaryServices}
   };
   const filteredServices = getFilteredServices(),
   return (
@@ -398,8 +391,7 @@ export default function RevolutionaryServicesPricing() {
                     className={`px-4 py-2 rounded-lg transition-all duration-30o0 ${
                       selectedCategory === category.id,
                         ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                    }`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                   >,
                     {category.name} ({category.count}),
                   </button>))}
@@ -476,6 +468,5 @@ export default function RevolutionaryServicesPricing() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

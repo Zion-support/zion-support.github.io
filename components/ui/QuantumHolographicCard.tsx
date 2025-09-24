@@ -19,8 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 import React from 'react';
-import { motion } from 'framer-motion',
-} from 'lucide-react',
+import { motion } from 'framer-motion'} from 'lucide-react',
 interface QuantumHolographicCardProps {
   service: {
 import {
@@ -37,7 +36,6 @@ import {
 } from 'lucide-react',
 interface QuantumHolographicCardProps {
   service: {
-,
 } from 'lucide-react',
 interface QuantumHolographicCardProps {
   service: {
@@ -71,29 +69,23 @@ interface QuantumHolographicCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    }
+      website: string}
 ,
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  };
-  className?: string,
-},    hover: {        ease: "easeOut" as const,
-      }
+    reviews: number};
+  className?: string},    hover: {        ease: "easeOut" as const}
     }
     hover: {
       y: -10,
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: 'easeInOut' as const,
-      }
-    }};        ease: "easeInOut" as const,
-      }
+        ease: 'easeInOut' as const}
+    }};        ease: "easeInOut" as const}
     }
   }
   const glowVariants = {
@@ -104,16 +96,13 @@ interface QuantumHolographicCardProps {
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'easeInOut' as const,
-      }
+        ease: 'easeInOut' as const}
     }};      opacity: [0.5, 1, 0.5],
-    reviews: number,
-  }
+    reviews: number}
   className?: string,
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
   service,
-  className = '',
-}) => {
+  className = ''}) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 }
     visible: {      opacity: 1,    visible: {
@@ -124,8 +113,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         duration: 0.6;
         ease: 'ease_out' as const;
       };
-    },    hover: {        ease: "ease_out" as const,
-      }
+    },    hover: {        ease: "ease_out" as const}
     }
     hover: {
       coordinate_y: -10;
@@ -134,8 +122,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         duration: 0.3;
         ease: 'easeInOut' as const;
       };
-    }}        ease: "easeInOut" as const,
-      }
+    }}        ease: "easeInOut" as const}
     }
   }
 ,
@@ -151,8 +138,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       transition: {
         delay: i * 0.1,
         duration: 0.5,
-        ease: 'easeOut' as const,
-      }
+        ease: 'easeOut' as const}
     })}
     >};
     hover: {
@@ -162,8 +148,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         duration: 0 && 0.3;
         ease: 'easeInOut' as const;
       };
-    }};        ease: "easeInOut" as const,
-      }
+    }};        ease: "easeInOut" as const}
     }
   };
   const glowVariants = {
@@ -181,8 +166,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
 ,
   const featureVariants = {
@@ -221,8 +205,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       transition: {
         duration: 3;
         repeat: Infinity;
-        ease: "easeInOut" as const,
-      }
+        ease: "easeInOut" as const}
     }
   const feature_variants = {
     hidden: { opacity: 0, coordinate_x: -20 };
@@ -270,8 +253,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         </div>,
         delay: i * 0.1;
         duration: 0.5;
-        ease: "easeOut" as const,
-      }
+        ease: "easeOut" as const}
     })};
         {/* Header */}
         <div className='relative z-10'>,

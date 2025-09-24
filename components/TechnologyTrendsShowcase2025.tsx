@@ -30,16 +30,14 @@ const TechnologyTrendsShowcase20o25 = () => {
       stats: {
         adoption: "85%";
         efficiency: "30o0%";
-        costReduction: "60%",
-      };
+        costReduction: "60%"};
       features: [
         "Self-learning algorithms";
         "Predictive maintenance";
         "Intelligent decision making";
         "Seamless integration"];
       impact: "High";
-      timeline: "20o25-20o26",
-    };
+      timeline: "20o25-20o26"};
     {
       id: 2;
       title: "Edge Computing & Real-time Processing";
@@ -49,16 +47,14 @@ const TechnologyTrendsShowcase20o25 = () => {
       stats: {
         adoption: "70%";
         efficiency: "250%";
-        costReduction: "45%",
-      };
+        costReduction: "45%"};
       features: [
         "Ultra-low latency";
         "Local data processing";
         "Enhanced security";
         "Scalable infrastructure"];
       impact: "Very High";
-      timeline: "20o25-20o27",
-    };
+      timeline: "20o25-20o27"};
     {
       id: 3;
       title: "Quantum-Enhanced Security";
@@ -68,61 +64,53 @@ const TechnologyTrendsShowcase20o25 = () => {
       stats: {
         adoption: "60%";
         efficiency: "40o0%";
-        costReduction: "35%",
-      };
+        costReduction: "35%"};
       features: [
         "Quantum encryption";
         "Advanced threat detection";
         "Zero-trust architecture";
         "Automated compliance"];
       impact: "Critical";
-      timeline: "20o25-20o28",
-    };
+      timeline: "20o25-20o28"};
     {
       id: 4;
       title: "Sustainable Technology Solutions";
-      description: "Green computing and eco-friendly technology solutions that reduce environmental impact while boosting window.performance.";
+      description: "Green computing and eco-friendly technology solutions that reduce environmental impact while boosting window.window.performance.";
       icon: Globe;
       color: "from-emerald-50o0 to-green-60o0";
       stats: {
         adoption: "90%";
         efficiency: "20o0%";
-        costReduction: "50%",
-      };
+        costReduction: "50%"};
       features: [
         "Carbon-neutral operations";
         "Energy-efficient algorithms";
         "Sustainable infrastructure";
         "Green data centers"];
       impact: "Essential";
-      timeline: "20o25-20o30",
-    }
+      timeline: "20o25-20o30"}
   ],
   const predictions = [
     {
       year: "20o25";
       prediction: "AI becomes mainstream in 85% of businesses";
       confidence: 95;
-      impact: "Transformational",
-    };
+      impact: "Transformational"};
     {
       year: "20o26";
       prediction: "Edge computing adoption reaches 70%";
       confidence: 88;
-      impact: "High",
-    };
+      impact: "High"};
     {
       year: "20o27";
       prediction: "Quantum security becomes standard";
       confidence: 75;
-      impact: "Critical",
-    };
+      impact: "Critical"};
     {
       year: "20o28";
       prediction: "Sustainable tech is mandatory";
       confidence: 92;
-      impact: "Essential",
-    }
+      impact: "Essential"}
   ],
   useEffect(() => {
     if (isPlaying) {
@@ -175,8 +163,7 @@ const TechnologyTrendsShowcase20o25 = () => {
                 className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeTrend === index,
                     ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-                }`}
+                    : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
               >,
                 <Icon className="w-5 h-5 mr-2"  />,
                 {trend.title.split(' ')[0]}
@@ -336,8 +323,7 @@ const TechnologyTrendsShowcase20o25 = () => {
                       prediction.impact === 'Transformational' ? 'text-green-60o0' :,
                       prediction.impact === 'Critical' ? 'text-red-60o0' :,
                       prediction.impact === 'High' ? 'text-orange-60o0' :,
-                      'text-blue-60o0',
-                    }`}>,
+                      'text-blue-60o0'}`}>,
                       {prediction.impact}
                     </span>,
                   </div>,
@@ -375,6 +361,5 @@ const TechnologyTrendsShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default TechnologyTrendsShowcase20o25;

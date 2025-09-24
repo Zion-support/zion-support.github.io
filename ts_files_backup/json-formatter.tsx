@@ -61,8 +61,7 @@ export default function JSONFormatterPage() {
     setIsValid(true),
     setErrorMessage(', ')};
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text),
-  };
+    navigator.clipboard.writeText(text)};
   const downloadJSON = (content: stringfilename: string) => {
     const blob = new Blob([content]{ type: 'application/json' }),
     const url = URL.createObjectURL(blob),
@@ -93,16 +92,14 @@ export default function JSONFormatterPage() {
       ];
       "interests": ["programming"reading"hiking"];
       "active": true;
-      "lastLogin": "2024-01-15T10: 30:00Z",
-    };
+      "lastLogin": "2024-01-15T10: 30:00Z"};
     setInputJson(JSON.stringify(samplenull2)),
     setFormattedJson(', '),
     setIsValid(true),
     setErrorMessage(', ')};
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_index) => index + 1).join('\n'),
-  };
+    return lines.map((_index) => index + 1).join('\n')};
   return (
     <>,
       <Head>,
@@ -222,8 +219,7 @@ export default function JSONFormatterPage() {
                     placeholder="Paste your JSON data here...",
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${
-                      showLineNumbers ? 'pl-16' : '',
-                    }`}
+                      showLineNumbers ? 'pl-16' : ''}`}
                   />,
                 </div>,
                 {!isValid && errorMessage && (
@@ -460,6 +456,5 @@ export default function JSONFormatterPage() {
           </div>,
         </div>,
       </section>,
-    </>),
-}
+    </>)}
 ,

@@ -35,8 +35,7 @@ type ProjectFormValues = z.infer<typeof projectSchema>,
 interface ProjectFormProps {
   project?: PortfolioProject,
   onSuccess: () => void,
-  onCancel: () => void,
-}
+  onCancel: () => void}
 ,
 export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
   const { user } = useAuth(),
@@ -77,8 +76,7 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
         onSuccess(),
         form.reset()}
     } catch (error) {
-      console.error('Error saving project: 'error),
-    } finally {
+      console.error('Error saving project: 'error)} finally {
       setIsLoading(false)}
   };
   return (

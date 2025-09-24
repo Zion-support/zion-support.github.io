@@ -80,8 +80,7 @@ interface NavigationItem {
   color?: string,
   price?: string,
   rating?: number,
-  reviews?: number,
-}
+  reviews?: number}
 ,
 interface UltraAdvancedFuturisticNavigation20o41Props {
   onMenuToggle?: () => void,
@@ -94,8 +93,7 @@ function normalizeHref(href: string): string {
     href.startsWith('https://') ||,
     href.startsWith('mailto:') ||,
     href.startsWith('tel:')) {
-    return href,
-  }
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
@@ -592,8 +590,7 @@ export default function UltraAdvancedFuturisticNavigation20o41({
       if (
         activeDropdown &&,
         !(event.target as Element).closest('.dropdown-container')) {
-        setActiveDropdown(null),
-      }
+        setActiveDropdown(null)}
     };
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [activeDropdown]),
@@ -602,18 +599,16 @@ export default function UltraAdvancedFuturisticNavigation20o41({
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setActiveDropdown(null),
-        setIsSearchOpen(false),
-      }
+        setIsSearchOpen(false)}
     };
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name),
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)};
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     // Implement search functionality,
-    // console.log('Searching for:', searchQuery),
+    // // console.log('Searching for:', searchQuery),
     setIsSearchOpen(false),
     setSearchQuery('')};
   return (
@@ -692,8 +687,7 @@ export default function UltraAdvancedFuturisticNavigation20o41({
                 <button
                   onClick={() => toggleDropdown(item.name)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-30o0 hover: text-white hover:bg-white/10 transition-all duration-20o0 group ${
-                    activeDropdown === item.name ? 'text-white bg-white/10' : '',
-                  }`}
+                    activeDropdown === item.name ? 'text-white bg-white/10' : ''}`}
                   aria-expanded={activeDropdown === item.name}
                   aria-haspopup='true'>,
                   {item.icon}
@@ -845,6 +839,5 @@ export default function UltraAdvancedFuturisticNavigation20o41({
           </div>,
         </div>,
       </div>,
-    </nav>),
-}
+    </nav>)}
 ,

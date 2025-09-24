@@ -58,8 +58,7 @@ export function listServicesByCategory(
         s &&,
         typeof s.category === 'string' &&,
         s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
-        results.push(s),
-      }
+        results.push(s)}
     }
   }
   // Deduplicate by id or link,

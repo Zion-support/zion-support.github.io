@@ -15,6 +15,5 @@ export default function EnterprisePage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

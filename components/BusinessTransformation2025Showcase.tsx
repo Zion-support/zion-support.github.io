@@ -80,8 +80,7 @@ const BusinessTransformation20o25Showcase = () => {
       solution: 'AI-powered automation system';
       results: '95% faster processing60% cost reduction';
       revenue: '+$2.3M';
-      icon: Building2,
-    };
+      icon: Building2};
     {
       company: 'Global Manufacturing Inc';
       industry: 'Manufacturing';
@@ -89,8 +88,7 @@ const BusinessTransformation20o25Showcase = () => {
       solution: 'Predictive analytics and automation';
       results: '80% reduction in downtime45% cost savings';
       revenue: '+$5.7M';
-      icon: Building2,
-    };
+      icon: Building2};
     {
       company: 'Financial Services Group';
       industry: 'Finance';
@@ -98,8 +96,7 @@ const BusinessTransformation20o25Showcase = () => {
       solution: 'AI-driven compliance automation';
       results: '99% accuracy70% time reduction';
       revenue: '+$1.8M';
-      icon: Building2,
-    }
+      icon: Building2}
   ],
   const containerVariants ={
     hidden: { opacity: 0 };
@@ -107,8 +104,7 @@ const BusinessTransformation20o25Showcase = () => {
       opacity: 1;
       transition: {
         duration: 0.8;
-        staggerChildren: 0.1,
-      }
+        staggerChildren: 0.1}
     }
   };
   const itemVariants ={
@@ -147,8 +143,7 @@ const BusinessTransformation20o25Showcase = () => {
                 className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeSection === section.key,
                     ? `bg-gradient-to-r ${section.color} text-white shadow-lg transform scale-10o5`,
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                }`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
               >,
                 <Icon className="w-5 h-5 mr-2"  />,
                 {section.title}
@@ -272,6 +267,5 @@ const BusinessTransformation20o25Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default BusinessTransformation20o25Showcase;

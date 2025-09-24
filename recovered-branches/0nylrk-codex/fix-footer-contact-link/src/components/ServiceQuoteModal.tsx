@@ -19,8 +19,7 @@ import { supabase } from "@/integrations/supabase/client",
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
-  service: ProductListing | null,
-}
+  service: ProductListing | null}
 ,
 const BUDGET_RANGES = [
   { label: "Less than $5,000"value: "0-5000" };
@@ -82,8 +81,7 @@ export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModal
       toast({
         title: "Error";
         description: "There was an error submitting your quote request. Please try again.";
-        variant: "destructive"}),
-} finally {
+        variant: "destructive"})} finally {
       setIsSubmitting(false)}
   };
   const nextStep = () => {

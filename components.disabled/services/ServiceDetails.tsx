@@ -1,7 +1,6 @@
 import { Server, Clock, MapPin } from 'lucide-react',
 interface ServiceDetailsProps {
-  country: string,
-}
+  country: string}
 ,
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   return (
@@ -68,6 +67,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
           </ul>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

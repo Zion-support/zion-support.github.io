@@ -14,13 +14,11 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
         roi: '5,0o00%';
         savings: '$18.7B';
         accuracy: '99.8%';
-        speed: '450%',
-      };
+        speed: '450%'};
       cta: 'Discover the Ultimate Guide';
       url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
       type: 'blog';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'fortune-50o0-success';
       title: 'Fortune 50o0 AI Business Intelligence Success Story';
@@ -30,13 +28,11 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
         roi: '5,0o00%';
         savings: '$18.7B';
         timeframe: '12 months';
-        accuracy: '99.8%',
-      };
+        accuracy: '99.8%'};
       cta: 'Read Success Story';
       url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story';
       type: 'case-study';
-      featured: true,
-    };
+      featured: true};
     {
       id: 'implementation-guide';
       title: 'AI Business Intelligence Implementation Ultimate Guide';
@@ -46,13 +42,11 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
         roi: '5,0o00%';
         guide: 'Complete';
         success: '99.7%';
-        timeline: '12 months',
-      };
+        timeline: '12 months'};
       cta: 'Get Implementation Guide';
       url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25';
       type: 'resource';
-      featured: true,
-    }
+      featured: true}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -168,8 +162,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30 hover: bg-white/50',
-              }`}
+                index === currentSlide ? 'bg-white' : 'bg-white/30 hover: bg-white/50'}`}
               aria-label={`Go to slide ${index + 1}`}
             />))}
         </div>,

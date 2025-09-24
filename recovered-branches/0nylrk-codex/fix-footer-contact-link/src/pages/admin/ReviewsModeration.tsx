@@ -28,7 +28,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card',
 import { Star, AlertTriangle } from './lucide-react',
 import { toast } from '@/components / ui / use - toast',
-,
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -196,8 +195,7 @@ function ReviewsModerationContent() {
         </Card>,
       </main>,
       <Footer />,
-    </>),
-}
+    </>)}
 ,
 export default function ReviewsModeration() {
   return (

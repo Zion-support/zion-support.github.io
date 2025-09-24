@@ -7,7 +7,6 @@ function ensure() {
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8'),  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')}
 ,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-,
   if (req.method !== 'POST') return res.status(405).end(),
   ensure(),
   const { url, title, network, utm } = req.body |{}
@@ -17,8 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     network,
     utm,
     ts: new Date().toISOString(),
-    ua: req.headers['user-agent'] |'',
-  }
+    ua: req.headers['user-agent'] |''}
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8')),
   list.push(entry),
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8'),
@@ -44,7 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8')),
   list.push (entry),
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8'),
-  res.status (200).json ({ ok: true }),
-}
+  res.status (200).json ({ ok: true })}
 ,
   res.status(200).json({ ok: true })>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

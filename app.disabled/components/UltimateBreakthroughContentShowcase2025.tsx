@@ -109,8 +109,7 @@ const UltimateBreakthroughContentShowcase20o25 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0',
-              }`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
             </button>))}
@@ -237,6 +236,5 @@ const UltimateBreakthroughContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>),
-};
+    </div>)};
 export default UltimateBreakthroughContentShowcase20o25;

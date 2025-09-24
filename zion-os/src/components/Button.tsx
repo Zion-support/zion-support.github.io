@@ -15,8 +15,7 @@ interface ButtonProps {
   className?: string,
   type?: 'button' | 'submit' | 'reset',
   fullWidth?: boolean,
-  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full',
-}
+  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full'}
 ,
 const Button = forwardRef<HTMLButtonElement ButtonProps>(
   (

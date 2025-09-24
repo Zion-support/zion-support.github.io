@@ -15,6 +15,5 @@ export default function ConstitutionPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

@@ -9,8 +9,7 @@ export interface Message {
   sender_name?: string,
   sender_avatar?: string,
   attachment_url?: string,
-  attachment_name?: string,
-}
+  attachment_name?: string}
 ,
 // Define the shape of a conversation,
 export interface Conversation {
@@ -20,20 +19,17 @@ export interface Conversation {
     id: string,
     name: string,
     avatar_url?: string,
-    user_type?: string,
-  };
+    user_type?: string};
   name: string,
   avatar_url?: string,
   last_message?: {
     content: string,
-    created_at: string,
-  };
+    created_at: string};
   updated_at: string,
   unread_count: number,
   context_type?: 'job' | 'talent' | 'general',
   context_id?: string,
-  context_data?: ConversationContextData,
-}
+  context_data?: ConversationContextData}
 ,
 // Context data for creating a conversation,
 export interface ConversationContextData {
@@ -63,6 +59,5 @@ export interface MessagingContextType {
    */,
   setActiveConversation: (value: Conversation | null) => void,
   fetchConversations: () => Promise<void>,
-  loadMessages: (conversationId: string) => Promise<void>,
-}
+  loadMessages: (conversationId: string) => Promise<void>}
 ,

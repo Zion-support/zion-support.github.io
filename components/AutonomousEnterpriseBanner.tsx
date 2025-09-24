@@ -210,6 +210,5 @@ export default function AutonomousEnterpriseBanner() {
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

@@ -232,6 +232,5 @@ export default function SitemapPage() {
         </main>,
         <Footer />,
       </div>,
-    </>),
-}
+    </>)}
 ,

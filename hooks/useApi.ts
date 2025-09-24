@@ -2,8 +2,7 @@ import { useCallback, useEffect, useState } from 'react',
 export interface UseApiOptions<T = unknown> {
   immediate?: boolean,
   onSuccess?: (data: T) => void,
-  onError?: (error: Error) => void,
-}
+  onError?: (error: Error) => void}
 ,
 export function useApi<T = unknown>(
   apiFunction: (...args: unknown[]) => Promise<T>;
@@ -20,8 +19,7 @@ export function useApi<T = unknown>(
         const result = await apiFunction(...args),
         setData(result),
         options.onSuccess?.(result),
-        return result,
-      } catch (err) {
+        return result} catch (err) {
         const normalized = err instanceof Error ? err : new Error(String(err)),
         setError(normalized),
         options.onError?.(normalized),

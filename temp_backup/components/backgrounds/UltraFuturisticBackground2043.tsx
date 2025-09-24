@@ -10,8 +10,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -24,8 +23,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
       opacity: number,
       color: string,
       life: number,
-      maxLife: number,
-    }> = [],
+      maxLife: number}> = [],
     // Create particles,
     const createParticle = () => {
       const colors = [
@@ -116,8 +114,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
           transition={{
             duration: 8;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Secondary orb */}
         <motion.div,
@@ -129,8 +126,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
             duration: 10;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
         {/* Tertiary orb */}
         <motion.div,
@@ -142,8 +138,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
             duration: 12;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 4,
-          }}
+            delay: 4}}
          />,
         {/* Additional orbs */}
         <motion.div,
@@ -155,8 +150,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
             duration: 9;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 1,
-          }}
+            delay: 1}}
          />,
         <motion.div,
           className="absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-50o0/10 to-pink-50o0/10 rounded-full blur-3xl",
@@ -167,8 +161,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
             duration: 11;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 3,
-          }}
+            delay: 3}}
          />,
       </div>,
       {/* Enhanced grid pattern */}
@@ -180,8 +173,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             `;
-            backgroundSize: '50px 50px',
-          }}
+            backgroundSize: '50px 50px'}}
          />,
       </div>,
       {/* Floating geometric shapes */}
@@ -195,8 +187,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
           transition={{
             duration: 20;
             repeat: Infinity;
-            ease: "linear",
-          }}
+            ease: "linear"}}
          />,
         {/* Square */}
         <motion.div,
@@ -207,8 +198,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
           transition={{
             duration: 15;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
         {/* Circle */}
         <motion.div,
@@ -220,8 +210,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
             duration: 8;
             repeat: Infinity;
             ease: "easeInOut";
-            delay: 2,
-          }}
+            delay: 2}}
          />,
       </div>,
       {/* Energy waves */}
@@ -237,8 +226,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
               duration: 6;
               repeat: Infinity;
               ease: "easeOut";
-              delay: i * 2,
-            }}
+              delay: i * 2}}
            />))}
       </div>,
       {/* Quantum particles */}
@@ -256,8 +244,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
               duration: 4 + Math.random() * 4;
               repeat: Infinity;
               delay: Math.random() * 4;
-              ease: "easeInOut",
-            }}
+              ease: "easeInOut"}}
             style={{
               left: `${Math.random() * 10o0}%`;
               top: `${Math.random() * 10o0}%`}}
@@ -272,8 +259,7 @@ const UltraFuturisticBackground20o43: React.FC = () => {
           transition={{
             duration: 10;
             repeat: Infinity;
-            ease: "easeInOut",
-          }}
+            ease: "easeInOut"}}
          />,
       </div>,
     </div>)};

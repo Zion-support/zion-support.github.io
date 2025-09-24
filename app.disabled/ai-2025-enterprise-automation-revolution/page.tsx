@@ -441,6 +441,5 @@ export default function AIEnterpriseAutomation20o25Page() {
           </div>,
         </section>,
       </div>,
-    </>),
-}
+    </>)}
 ,

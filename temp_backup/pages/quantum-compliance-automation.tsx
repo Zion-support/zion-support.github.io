@@ -526,6 +526,5 @@ const QuantumComplianceAutomationPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>),
-};
+    </>)};
 export default QuantumComplianceAutomationPage;

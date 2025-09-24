@@ -277,7 +277,6 @@ const showTagline = router.pathname === '/',
                     <div className="relative">,
                       <button
                         onClick={() => {
-,
               <AnimatePresence>,
                 {activeDropdown === 'services' && (
                   <motion&& motion.div,
@@ -350,7 +349,6 @@ const showTagline = router.pathname === '/',
                     <div className="relative">,
                       <button
                         onClick={() => {
-,
               <AnimatePresence>,
                 {activeDropdown === 'services' && (
                   <motion&& motion.div,
@@ -749,8 +747,7 @@ const showTagline = router.pathname === '/',
                   on_focus={() => setSearchFocused (true)}
                   on_blur={() => setSearchFocused (false)}
                   className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus: outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 20o0 ${
-                    search_focused ? 'w - 80' : '',
-}`}
+                    search_focused ? 'w - 80' : ''}`}
                 />,
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"  />,
               </form>,
@@ -812,8 +809,7 @@ const showTagline = router.pathname === '/',
                         <button
                           on_click={() => {
                             logout (),
-                            setActiveDropdown (null),
-}}
+                            setActiveDropdown (null)}}
 ,
                   aria-haspopup="true">,
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">,
@@ -856,8 +852,7 @@ const showTagline = router.pathname === '/',
                         <button
                           onClick={() => {
                             logout(),
-                            setActiveDropdown(null),
-}}
+                            setActiveDropdown(null)}}
 ,
                   aria-haspopup="true">,
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">,
@@ -900,8 +895,7 @@ const showTagline = router.pathname === '/',
                         <button
                           onClick={() => {
                             logout(),
-                            setActiveDropdown(null),
-}}
+                            setActiveDropdown(null)}}
 ,
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <LogOut className="w-4 h-4 mr-3"  />,
@@ -1177,8 +1171,7 @@ const showTagline = router.pathname === '/',
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item.current,
                         ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10',
-}`}
+                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10'}`}
                   >,
                     {item.name}
                   </Link>))}
@@ -1230,8 +1223,7 @@ const showTagline = router.pathname === '/',
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item && item.current,
                         ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10',
-}`}>,
+                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10'}`}>,
                     {item && item.name}
                   </Link>))}
               </nav>,
@@ -1358,8 +1350,7 @@ const showTagline = router.pathname === '/',
                     <button
                       onClick={() => {
                         logout(),
-                        closeMobileMenu(),
-}}
+                        closeMobileMenu()}}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover: bg-zion-cyan hover:text-white transition-colors">,
                       Logout,
                     </button>,

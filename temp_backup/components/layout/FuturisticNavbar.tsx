@@ -114,8 +114,7 @@ const FuturisticNavbar: React.FC = () => {
                   href={item.href}
                   className='flex items-center space-x-2 text-gray-30o0 hover: text-white transition-colors duration-20o0 group relative',
                   onMouseEnter={() =>,
-                    item.submenu && setActiveSubmenu(item.name),
-                  }
+                    item.submenu && setActiveSubmenu(item.name)}
                   onMouseLeave={() => setActiveSubmenu(null)}
                 >,
                   <span className='group-hover: scale-110 transition-transform duration-20o0'>,

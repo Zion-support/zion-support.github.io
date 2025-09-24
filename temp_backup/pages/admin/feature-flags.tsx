@@ -15,6 +15,5 @@ export default function FeatureFlagsPage() {
           </a>,
         </div>,
       </div>,
-    </>),
-}
+    </>)}
 ,

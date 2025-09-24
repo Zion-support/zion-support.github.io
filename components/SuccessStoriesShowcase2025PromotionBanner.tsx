@@ -99,8 +99,7 @@ const SuccessStoriesShowcase20o25PromotionBanner = () => {
                     key={index}
                     animate={{
                       scale: currentStat === index ? 1.1 : 1;
-                      opacity: currentStat === index ? 1 : 0.7,
-                    }}
+                      opacity: currentStat === index ? 1 : 0.7}}
                     transition={{ duration: 0.3 }}
                     className="text-center">,
                     <Icon className="w-8 h-8 mx-auto mb-2"  />,

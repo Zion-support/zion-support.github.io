@@ -45,8 +45,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     if (!user) {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
-      return,
-    }
+      return}
 ,
       const jobData = {
         ...values;

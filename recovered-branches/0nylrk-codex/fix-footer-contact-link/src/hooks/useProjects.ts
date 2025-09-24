@@ -48,8 +48,7 @@ export function useProjects() {
       setError(null)} catch (err: any) {
       console.error('Error fetching projects:', err),
       setError('Failed to fetch projects: ' + err.message),
-      toast.error('Failed to fetch projects'),
-    } finally {
+      toast.error('Failed to fetch projects')} finally {
       setIsLoading(false)}
   };
   const getProjectById = async (projectId: string): Promise<Project | null> => {
