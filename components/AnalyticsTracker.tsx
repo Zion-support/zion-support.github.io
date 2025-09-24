@@ -1,6 +1,6 @@
-"use client";
-import Head from "next/head";
-import React, { useEffect } from "react";
+'use client';
+import Head from 'next/head';
+import React, { useEffect } from 'react';
 
 interface AnalyticsTrackerProps {
   pageName?: string;
@@ -15,15 +15,21 @@ interface AnalyticsTrackerProps {
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   pageName,
-  customEvents = []}) => {
+  customEvents = [],
+}) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Track page view
     if (pageName && typeof (window as any).gtag !== 'undefined') {
-      (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID || '', {
-        page_title: pageName,
-        page_location: window.location.href});
+      (window as any).gtag(
+        'config',
+        process.env.NEXT_PUBLIC_GA_TRACKING_ID || '',
+        {
+          page_title: pageName,
+          page_location: window.location.href,
+        }
+      );
     }
 
     // Track custom events
@@ -33,7 +39,8 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           event_category: category,
           event_action: action,
           event_label: label,
-          value: value});
+          value: value,
+        });
       }
     });
   }, [pageName, customEvents]);

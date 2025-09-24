@@ -6,8 +6,14 @@ jest.mock('@/hooks/useAuth');
 
 describe('LoginForm error handling', () => {
   it('shows inline error message when login fails', async () => {
-    const loginMock = jest.fn().mockResolvedValue({ error: 'Invalid email or password' });
-    (useAuth as jest.Mock).mockReturnValue({ isLoading: false, login: loginMock, user: null });
+    const loginMock = jest
+      .fn()
+      .mockResolvedValue({ error: 'Invalid email or password' });
+    (useAuth as jest.Mock).mockReturnValue({
+      isLoading: false,
+      login: loginMock,
+      user: null,
+    });
 
     render(<LoginForm />);
 
@@ -21,7 +27,9 @@ describe('LoginForm error handling', () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByRole('alert')).toHaveTextContent('Invalid email or password');
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Invalid email or password'
+      );
     });
   });
 });

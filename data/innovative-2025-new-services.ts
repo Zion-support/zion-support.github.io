@@ -49,7 +49,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Transform content creation with AI-powered intelligence',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive AI-powered content creation, optimization, and analytics platform that helps businesses create engaging content at scale while maintaining brand voice and SEO optimization.',
+    description:
+      'Comprehensive AI-powered content creation, optimization, and analytics platform that helps businesses create engaging content at scale while maintaining brand voice and SEO optimization.',
     features: [
       'AI-powered content generation with brand voice training',
       'Multi-language content creation and localization',
@@ -60,22 +61,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Social media content optimization',
       'Content calendar and workflow management',
       'Team collaboration and approval workflows',
-      'API integration for existing tools'
+      'API integration for existing tools',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-blue-50o0 to-purple-60o0',
     textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/ai-content-intelligence-suite',
-    marketPosition: 'Leading AI content creation platform with advanced brand voice training and SEO optimization capabilities.',
-    targetAudience: 'Marketing agencies, Content creators, E-commerce businesses, SaaS companies, Educational institutions',
+    marketPosition:
+      'Leading AI content creation platform with advanced brand voice training and SEO optimization capabilities.',
+    targetAudience:
+      'Marketing agencies, Content creators, E-commerce businesses, SaaS companies, Educational institutions',
     trialDays: 14,
     setupTime: '2-4 hours',
     category: 'AI Micro SAAS',
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Gemini, Python, React, Node.js, PostgreSQL'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, Google Analytics'],
-    useCases: ['Blog content creation, Social media marketing, Email campaigns, Product descriptions, Educational content'],
+    technology: [
+      'OpenAI GPT-4, Claude, Gemini, Python, React, Node.js, PostgreSQL',
+    ],
+    integrations: [
+      'WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, Google Analytics',
+    ],
+    useCases: [
+      'Blog content creation, Social media marketing, Email campaigns, Product descriptions, Educational content',
+    ],
     roi: 'Businesses report 30o0%+ ROI through increased content output and improved SEO rankings.',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'],
     marketSize: '$15B+ content creation market',
@@ -85,14 +94,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Full-stack AI content platform with advanced NLP, brand voice training, and comprehensive analytics dashboard.',
+    implementationDetails:
+      'Full-stack AI content platform with advanced NLP, brand voice training, and comprehensive analytics dashboard.',
     launchDate: '20o25-0o1-15',
     customers: 45,
     rating: 4.8,
-    reviews: 23
+    reviews: 23,
   },
 
   // Quantum-Enhanced Cybersecurity
@@ -102,7 +112,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Next-generation cybersecurity powered by quantum computing',
     price: '$1,999',
     period: '/month',
-    description: 'Revolutionary cybersecurity platform that leverages quantum computing principles to provide unbreakable encryption, advanced threat detection, and real-time security monitoring for enterprise networks.',
+    description:
+      'Revolutionary cybersecurity platform that leverages quantum computing principles to provide unbreakable encryption, advanced threat detection, and real-time security monitoring for enterprise networks.',
     features: [
       'Quantum-resistant encryption algorithms',
       'Real-time threat detection with AI analysis',
@@ -113,22 +124,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Security posture assessment',
       'Compliance reporting (SOC2, ISO270o01)',
       '24/7 security operations center',
-      'Custom security policy management'
+      'Custom security policy management',
     ],
     popular: true,
     icon: '🔒',
     color: 'from-green-50o0 to-emerald-60o0',
     textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/quantum-cyber-defense-platform',
-    marketPosition: 'First-to-market quantum-enhanced cybersecurity platform with AI-powered threat detection.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Fortune 50o0 companies, Critical infrastructure',
+    marketPosition:
+      'First-to-market quantum-enhanced cybersecurity platform with AI-powered threat detection.',
+    targetAudience:
+      'Financial institutions, Healthcare organizations, Government agencies, Fortune 50o0 companies, Critical infrastructure',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum algorithms, AI/ML, Python, Rust, Kubernetes, Blockchain'],
-    integrations: ['SIEM systems, EDR platforms, Cloud providers, Identity providers, Network monitoring tools'],
-    useCases: ['Network security, Data protection, Compliance management, Threat hunting, Incident response'],
+    technology: [
+      'Quantum algorithms, AI/ML, Python, Rust, Kubernetes, Blockchain',
+    ],
+    integrations: [
+      'SIEM systems, EDR platforms, Cloud providers, Identity providers, Network monitoring tools',
+    ],
+    useCases: [
+      'Network security, Data protection, Compliance management, Threat hunting, Incident response',
+    ],
     roi: 'Enterprises report 50o0%+ ROI through prevented breaches and reduced security incidents.',
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point'],
     marketSize: '$20o0B+ cybersecurity market',
@@ -138,14 +157,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Quantum-enhanced cybersecurity platform with AI threat detection, zero-trust architecture, and comprehensive compliance features.',
+    implementationDetails:
+      'Quantum-enhanced cybersecurity platform with AI threat detection, zero-trust architecture, and comprehensive compliance features.',
     launchDate: '20o25-0o1-20',
     customers: 12,
     rating: 5.0,
-    reviews: 8
+    reviews: 8,
   },
 
   // Autonomous Business Intelligence
@@ -155,7 +175,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Self-driving analytics that discover insights automatically',
     price: '$599',
     period: '/month',
-    description: 'Revolutionary BI platform that automatically discovers insights, generates reports, and provides actionable recommendations without human intervention, powered by advanced AI and machine learning.',
+    description:
+      'Revolutionary BI platform that automatically discovers insights, generates reports, and provides actionable recommendations without human intervention, powered by advanced AI and machine learning.',
     features: [
       'Automatic data discovery and analysis',
       'AI-powered insight generation',
@@ -166,22 +187,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Anomaly detection and alerting',
       'Data storytelling and visualization',
       'Multi-source data integration',
-      'Custom metric and KPI tracking'
+      'Custom metric and KPI tracking',
     ],
     popular: true,
     icon: '📊',
     color: 'from-purple-50o0 to-pink-60o0',
     textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/autonomous-business-intelligence',
-    marketPosition: 'Leading autonomous BI platform with AI-powered insight discovery and natural language analytics.',
-    targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams, Operations managers',
+    marketPosition:
+      'Leading autonomous BI platform with AI-powered insight discovery and natural language analytics.',
+    targetAudience:
+      'Business analysts, Data scientists, Executives, Marketing teams, Operations managers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI Business Intelligence',
     realService: true,
-    technology: ['Machine Learning, Natural Language Processing, Python, React, Node.js, PostgreSQL'],
-    integrations: ['Salesforce, HubSpot, Google Analytics, AWS, Azure, Google Cloud, Database systems'],
-    useCases: ['Sales analytics, Marketing performance, Operational insights, Financial reporting, Customer behavior analysis'],
+    technology: [
+      'Machine Learning, Natural Language Processing, Python, React, Node.js, PostgreSQL',
+    ],
+    integrations: [
+      'Salesforce, HubSpot, Google Analytics, AWS, Azure, Google Cloud, Database systems',
+    ],
+    useCases: [
+      'Sales analytics, Marketing performance, Operational insights, Financial reporting, Customer behavior analysis',
+    ],
     roi: 'Companies report 40o0%+ ROI through faster insights and improved decision-making.',
     competitors: ['Tableau, Power BI, Looker, Qlik'],
     marketSize: '$30B+ business intelligence market',
@@ -191,14 +220,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Autonomous BI platform with AI-powered analytics, natural language processing, and automated insight generation.',
+    implementationDetails:
+      'Autonomous BI platform with AI-powered analytics, natural language processing, and automated insight generation.',
     launchDate: '20o25-0o1-25',
     customers: 28,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
 
   // Edge Computing Orchestration
@@ -208,7 +238,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Intelligent edge computing management and optimization',
     price: '$799',
     period: '/month',
-    description: 'Advanced edge computing platform that intelligently manages distributed computing resources, optimizes performance, and provides real-time analytics at the edge for IoT and mobile applications.',
+    description:
+      'Advanced edge computing platform that intelligently manages distributed computing resources, optimizes performance, and provides real-time analytics at the edge for IoT and mobile applications.',
     features: [
       'Intelligent workload distribution',
       'Real-time performance optimization',
@@ -219,22 +250,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Performance monitoring and analytics',
       'Automated scaling and load balancing',
       'Edge-to-cloud synchronization',
-      'Custom edge application deployment'
+      'Custom edge application deployment',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-cyan-50o0 to-blue-60o0',
     textColor: 'text-cyan-40o0',
     link: 'https://ziontechgroup.com/edge-computing-orchestrator',
-    marketPosition: 'Leading edge computing orchestration platform with AI-powered optimization and multi-cloud management.',
-    targetAudience: 'IoT companies, Mobile app developers, Cloud providers, Telecommunications, Manufacturing',
+    marketPosition:
+      'Leading edge computing orchestration platform with AI-powered optimization and multi-cloud management.',
+    targetAudience:
+      'IoT companies, Mobile app developers, Cloud providers, Telecommunications, Manufacturing',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Kubernetes, Docker, AI/ML, Python, Go, Rust, Edge computing frameworks'],
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes, Docker, MQTT, CoAP'],
-    useCases: ['IoT device management, Mobile app optimization, Edge AI deployment, Real-time analytics, Content delivery'],
+    technology: [
+      'Kubernetes, Docker, AI/ML, Python, Go, Rust, Edge computing frameworks',
+    ],
+    integrations: [
+      'AWS IoT, Azure IoT, Google Cloud IoT, Kubernetes, Docker, MQTT, CoAP',
+    ],
+    useCases: [
+      'IoT device management, Mobile app optimization, Edge AI deployment, Real-time analytics, Content delivery',
+    ],
     roi: 'Organizations report 350%+ ROI through improved performance and reduced latency.',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'],
     marketSize: '$50B+ edge computing market',
@@ -244,14 +283,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Edge computing orchestration platform with AI optimization, multi-cloud management, and IoT device orchestration.',
+    implementationDetails:
+      'Edge computing orchestration platform with AI optimization, multi-cloud management, and IoT device orchestration.',
     launchDate: '20o25-0o2-0o1',
     customers: 18,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
 
   // Blockchain Identity Management
@@ -261,7 +301,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Decentralized identity verification and management',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary identity management platform built on blockchain technology that provides secure, decentralized identity verification, authentication, and access management for individuals and organizations.',
+    description:
+      'Revolutionary identity management platform built on blockchain technology that provides secure, decentralized identity verification, authentication, and access management for individuals and organizations.',
     features: [
       'Decentralized identity verification',
       'Zero-knowledge proof authentication',
@@ -272,22 +313,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Compliance with identity standards',
       'API integration for developers',
       'Custom identity verification flows',
-      'Audit trail and compliance reporting'
+      'Audit trail and compliance reporting',
     ],
     popular: false,
     icon: '🆔',
     color: 'from-orange-50o0 to-red-60o0',
     textColor: 'text-orange-40o0',
     link: 'https://ziontechgroup.com/blockchain-identity-management',
-    marketPosition: 'Leading blockchain-based identity management platform with privacy-preserving verification.',
-    targetAudience: 'Financial services, Healthcare, Government, E-commerce, Educational institutions',
+    marketPosition:
+      'Leading blockchain-based identity management platform with privacy-preserving verification.',
+    targetAudience:
+      'Financial services, Healthcare, Government, E-commerce, Educational institutions',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Blockchain Identity',
     realService: true,
-    technology: ['Blockchain, Zero-knowledge proofs, Smart contracts, Solidity, Web3, React, Node.js'],
-    integrations: ['Ethereum, Polygon, Solana, Web3 wallets, OAuth providers, SAML, OIDC'],
-    useCases: ['KYC/AML verification, Access management, Digital identity, Compliance, Authentication'],
+    technology: [
+      'Blockchain, Zero-knowledge proofs, Smart contracts, Solidity, Web3, React, Node.js',
+    ],
+    integrations: [
+      'Ethereum, Polygon, Solana, Web3 wallets, OAuth providers, SAML, OIDC',
+    ],
+    useCases: [
+      'KYC/AML verification, Access management, Digital identity, Compliance, Authentication',
+    ],
     roi: 'Organizations report 40o0%+ ROI through reduced fraud and improved compliance.',
     competitors: ['Microsoft Identity, Okta, Auth0, Onfido'],
     marketSize: '$25B+ identity management market',
@@ -297,14 +346,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Blockchain identity platform with zero-knowledge proofs, privacy-preserving verification, and compliance features.',
+    implementationDetails:
+      'Blockchain identity platform with zero-knowledge proofs, privacy-preserving verification, and compliance features.',
     launchDate: '20o25-0o2-0o5',
     customers: 22,
     rating: 4.8,
-    reviews: 12
+    reviews: 12,
   },
 
   // AI-Powered DevOps Automation
@@ -314,7 +364,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
     price: '$899',
     period: '/month',
-    description: 'Advanced DevOps platform that uses artificial intelligence to automate deployment, testing, monitoring, and optimization processes, reducing manual work and improving software delivery efficiency.',
+    description:
+      'Advanced DevOps platform that uses artificial intelligence to automate deployment, testing, monitoring, and optimization processes, reducing manual work and improving software delivery efficiency.',
     features: [
       'AI-powered CI/CD pipeline optimization',
       'Automated testing and quality assurance',
@@ -325,22 +376,28 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Cost optimization recommendations',
       'Team collaboration and workflow management',
       'Multi-cloud deployment support',
-      'Custom automation workflows'
+      'Custom automation workflows',
     ],
     popular: true,
     icon: '⚡',
     color: 'from-yellow-50o0 to-orange-60o0',
     textColor: 'text-yellow-40o0',
     link: 'https://ziontechgroup.com/ai-devops-automation',
-    marketPosition: 'Leading AI-powered DevOps platform with intelligent automation and optimization.',
-    targetAudience: 'Software development teams, DevOps engineers, IT operations, Cloud engineers, Startups',
+    marketPosition:
+      'Leading AI-powered DevOps platform with intelligent automation and optimization.',
+    targetAudience:
+      'Software development teams, DevOps engineers, IT operations, Cloud engineers, Startups',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI DevOps',
     realService: true,
     technology: ['AI/ML, Kubernetes, Docker, Python, Go, Terraform, Ansible'],
-    integrations: ['GitHub, GitLab, Jenkins, AWS, Azure, Google Cloud, Kubernetes, Docker'],
-    useCases: ['Continuous integration/deployment, Automated testing, Infrastructure management, Performance monitoring, Security automation'],
+    integrations: [
+      'GitHub, GitLab, Jenkins, AWS, Azure, Google Cloud, Kubernetes, Docker',
+    ],
+    useCases: [
+      'Continuous integration/deployment, Automated testing, Infrastructure management, Performance monitoring, Security automation',
+    ],
     roi: 'Development teams report 450%+ ROI through faster deployments and reduced manual work.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'],
     marketSize: '$40B+ DevOps market',
@@ -350,14 +407,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'AI-powered DevOps platform with intelligent automation, CI/CD optimization, and multi-cloud deployment support.',
+    implementationDetails:
+      'AI-powered DevOps platform with intelligent automation, CI/CD optimization, and multi-cloud deployment support.',
     launchDate: '20o25-0o2-10',
     customers: 35,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
 
   // Quantum Machine Learning Platform
@@ -367,7 +425,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Accelerate ML with quantum computing power',
     price: '$2,499',
     period: '/month',
-    description: 'Revolutionary machine learning platform that leverages quantum computing to accelerate training, improve model accuracy, and solve complex optimization problems that are impossible with classical computing.',
+    description:
+      'Revolutionary machine learning platform that leverages quantum computing to accelerate training, improve model accuracy, and solve complex optimization problems that are impossible with classical computing.',
     features: [
       'Quantum-enhanced ML algorithms',
       'Hybrid quantum-classical training',
@@ -378,22 +437,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Custom quantum circuit design',
       'Performance benchmarking tools',
       'API access for developers',
-      'Enterprise security and compliance'
+      'Enterprise security and compliance',
     ],
     popular: true,
     icon: '🧮',
     color: 'from-indigo-50o0 to-purple-60o0',
     textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/quantum-machine-learning',
-    marketPosition: 'First-to-market quantum machine learning platform with hybrid quantum-classical algorithms.',
-    targetAudience: 'AI research labs, Pharmaceutical companies, Financial institutions, Government agencies, Universities',
+    marketPosition:
+      'First-to-market quantum machine learning platform with hybrid quantum-classical algorithms.',
+    targetAudience:
+      'AI research labs, Pharmaceutical companies, Financial institutions, Government agencies, Universities',
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Quantum AI',
     realService: true,
-    technology: ['Quantum computing, Machine learning, Python, Qiskit, Cirq, TensorFlow, PyTorch'],
-    integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Classical ML frameworks'],
-    useCases: ['Drug discovery, Financial modeling, Optimization problems, Scientific research, AI model training'],
+    technology: [
+      'Quantum computing, Machine learning, Python, Qiskit, Cirq, TensorFlow, PyTorch',
+    ],
+    integrations: [
+      'IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Classical ML frameworks',
+    ],
+    useCases: [
+      'Drug discovery, Financial modeling, Optimization problems, Scientific research, AI model training',
+    ],
     roi: 'Research institutions report 10o00%+ ROI through breakthrough discoveries and accelerated research.',
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti'],
     marketSize: '$10o0B+ quantum computing market',
@@ -403,14 +470,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Quantum ML platform with hybrid algorithms, quantum circuit design, and enterprise-grade security.',
+    implementationDetails:
+      'Quantum ML platform with hybrid algorithms, quantum circuit design, and enterprise-grade security.',
     launchDate: '20o25-0o2-15',
     customers: 8,
     rating: 5.0,
-    reviews: 5
+    reviews: 5,
   },
 
   // Autonomous Customer Service AI
@@ -420,7 +488,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Self-learning customer service that never sleeps',
     price: '$499',
     period: '/month',
-    description: 'Intelligent customer service platform that autonomously handles customer inquiries, learns from interactions, and provides personalized support 24/7 without human intervention.',
+    description:
+      'Intelligent customer service platform that autonomously handles customer inquiries, learns from interactions, and provides personalized support 24/7 without human intervention.',
     features: [
       'Natural language understanding',
       'Multi-channel support (chat, email, voice)',
@@ -431,22 +500,30 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Custom knowledge base management',
       'Multi-language support',
       'Escalation to human agents',
-      'Performance optimization tools'
+      'Performance optimization tools',
     ],
     popular: true,
     icon: '💬',
     color: 'from-teal-50o0 to-green-60o0',
     textColor: 'text-teal-40o0',
     link: 'https://ziontechgroup.com/autonomous-customer-service-ai',
-    marketPosition: 'Leading autonomous customer service platform with advanced AI and learning capabilities.',
-    targetAudience: 'E-commerce businesses, SaaS companies, Customer support teams, Retail, Healthcare',
+    marketPosition:
+      'Leading autonomous customer service platform with advanced AI and learning capabilities.',
+    targetAudience:
+      'E-commerce businesses, SaaS companies, Customer support teams, Retail, Healthcare',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'AI Customer Service',
     realService: true,
-    technology: ['Natural Language Processing, Machine Learning, Python, React, Node.js, PostgreSQL'],
-    integrations: ['Zendesk, Salesforce, HubSpot, Intercom, Slack, Microsoft Teams'],
-    useCases: ['Customer support, Sales assistance, Product recommendations, FAQ handling, Order tracking'],
+    technology: [
+      'Natural Language Processing, Machine Learning, Python, React, Node.js, PostgreSQL',
+    ],
+    integrations: [
+      'Zendesk, Salesforce, HubSpot, Intercom, Slack, Microsoft Teams',
+    ],
+    useCases: [
+      'Customer support, Sales assistance, Product recommendations, FAQ handling, Order tracking',
+    ],
     roi: 'Businesses report 30o0%+ ROI through improved customer satisfaction and reduced support costs.',
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],
     marketSize: '$35B+ customer service market',
@@ -456,14 +533,15 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Autonomous customer service AI with natural language processing, multi-channel support, and learning capabilities.',
+    implementationDetails:
+      'Autonomous customer service AI with natural language processing, multi-channel support, and learning capabilities.',
     launchDate: '20o25-0o2-20',
     customers: 52,
     rating: 4.8,
-    reviews: 25
+    reviews: 25,
   },
 
   // Space Technology Analytics Platform
@@ -473,7 +551,8 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
     tagline: 'Advanced analytics for space missions and satellite operations',
     price: '$3,999',
     period: '/month',
-    description: 'Comprehensive space technology platform that provides advanced analytics, mission planning, satellite monitoring, and space data processing for aerospace companies and research institutions.',
+    description:
+      'Comprehensive space technology platform that provides advanced analytics, mission planning, satellite monitoring, and space data processing for aerospace companies and research institutions.',
     features: [
       'Satellite orbit optimization',
       'Mission planning and simulation',
@@ -484,24 +563,34 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       'Space debris tracking',
       'Astronomical data analysis',
       'Custom space mission planning',
-      'API access for developers'
+      'API access for developers',
     ],
     popular: false,
     icon: '🚀',
     color: 'from-red-50o0 to-pink-60o0',
     textColor: 'text-red-40o0',
     link: 'https://ziontechgroup.com/space-technology-analytics',
-    marketPosition: 'Leading space technology analytics platform with comprehensive mission planning and satellite operations.',
-    targetAudience: 'Aerospace companies, Satellite operators, Space agencies, Research institutions, Defense contractors',
+    marketPosition:
+      'Leading space technology analytics platform with comprehensive mission planning and satellite operations.',
+    targetAudience:
+      'Aerospace companies, Satellite operators, Space agencies, Research institutions, Defense contractors',
     trialDays: 30,
     setupTime: '6-8 weeks',
     category: 'Space Technology',
     realService: true,
-    technology: ['Orbital mechanics, AI/ML, Python, C++, Satellite communication, Space data processing'],
-    integrations: ['NASA APIs, ESA data, Satellite ground stations, Launch providers, Space weather services'],
-    useCases: ['Satellite operations, Mission planning, Space research, Earth observation, Launch optimization'],
+    technology: [
+      'Orbital mechanics, AI/ML, Python, C++, Satellite communication, Space data processing',
+    ],
+    integrations: [
+      'NASA APIs, ESA data, Satellite ground stations, Launch providers, Space weather services',
+    ],
+    useCases: [
+      'Satellite operations, Mission planning, Space research, Earth observation, Launch optimization',
+    ],
     roi: 'Space companies report 80o0%+ ROI through improved mission success and operational efficiency.',
-    competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Lockheed Martin'],
+    competitors: [
+      'Maxar, Planet Labs, Airbus Defence and Space, Lockheed Martin',
+    ],
     marketSize: '$40o0B+ space economy',
     growthRate: '60o0%+ annual growth',
     variant: 'space-futuristic',
@@ -509,13 +598,14 @@ export const innovative20o25NewServices: Innovative20o25Service[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Space technology platform with orbital mechanics, mission planning, satellite monitoring, and space data analytics.',
+    implementationDetails:
+      'Space technology platform with orbital mechanics, mission planning, satellite monitoring, and space data analytics.',
     launchDate: '20o25-0o2-25',
     customers: 6,
     rating: 5.0,
-    reviews: 3
-  }
+    reviews: 3,
+  },
 ];

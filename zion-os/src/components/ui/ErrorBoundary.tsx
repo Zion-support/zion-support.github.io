@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Component, ReactNode } from 'react';
 
@@ -15,7 +15,7 @@ interface State {
 export default class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state ={ hasError: false };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -33,16 +33,19 @@ export default class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black">
-          <div className="card max-w-md mx-auto text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-white/70 mb-6">
-              An unexpected error occurred. Please try refreshing the page or contact support if the problem persists.
+        <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black'>
+          <div className='card max-w-md mx-auto text-center'>
+            <div className='text-6xl mb-4'>⚠️</div>
+            <h1 className='text-2xl font-bold text-white mb-4'>
+              Something went wrong
+            </h1>
+            <p className='text-white/70 mb-6'>
+              An unexpected error occurred. Please try refreshing the page or
+              contact support if the problem persists.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="btn-primary"
+              className='btn-primary'
             >
               Refresh Page
             </button>

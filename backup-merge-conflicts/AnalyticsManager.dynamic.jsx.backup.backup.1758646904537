@@ -1,7 +1,5 @@
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD;,
-=======
 ;,
 import dynamic from 'next/dynamic';';,
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
@@ -12,7 +10,6 @@ export default AnalyticsManager;,
 =======
 =======
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-eafe;
 =======

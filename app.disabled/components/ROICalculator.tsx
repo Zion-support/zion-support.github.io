@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-import React from 'react';
-
-export default function ROICalculator() {
-  return (
-    <div className="p-6 rounded-lg bg-white/10 text-white">
-      <h3 className="text-xl font-semibold mb-4">ROI Calculator</h3>
-      <div className="space-y-4">
-        <div className="flex justify-between">
-          <span>Investment</span>
-          <span className="text-blue-400">$50K</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Returns</span>
-          <span className="text-green-400">$170K</span>
-        </div>
-        <div className="flex justify-between">
-          <span>ROI</span>
-          <span className="text-purple-400">340%</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
-=======
 "use client";
 
 export default function ROICalculator() {
@@ -37,9 +8,3 @@ export default function ROICalculator() {
 		</div>
 	);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
-=======
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

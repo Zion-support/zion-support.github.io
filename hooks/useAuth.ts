@@ -16,7 +16,7 @@ export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     loading: true,
-    isAuthenticated: false
+    isAuthenticated: false,
   });
 
   useEffect(() => {
@@ -27,13 +27,13 @@ export function useAuth() {
       setAuthState({
         user: { id: '1', email: 'user@example.com' },
         loading: false,
-        isAuthenticated: true
+        isAuthenticated: true,
       });
     } else {
       setAuthState({
         user: null,
         loading: false,
-        isAuthenticated: false
+        isAuthenticated: false,
       });
     }
   }, []);
@@ -42,13 +42,13 @@ export function useAuth() {
     setAuthState(prev => ({ ...prev, loading: true }));
     try {
       // In a real app, you'd make an API call here
-      const mockUser ={ id: '1', email };
+      const mockUser = { id: '1', email };
       localStorage.setItem('authToken', 'mock-token');
-      
+
       setAuthState({
         user: mockUser,
         loading: false,
-        isAuthenticated: true
+        isAuthenticated: true,
       });
       return { success: true };
     } catch {
@@ -62,14 +62,14 @@ export function useAuth() {
     setAuthState({
       user: null,
       loading: false,
-      isAuthenticated: false
+      isAuthenticated: false,
     });
   };
 
   return {
     ...authState,
     login,
-    logout
+    logout,
   };
 }
 // useAuth hook module

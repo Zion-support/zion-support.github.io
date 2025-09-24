@@ -10,8 +10,6 @@ export const Steps = (props: any) => {
                     isCompleted: index < currentStep,
                 }
     );
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export const Steps = (props) => {
@@ -22,7 +20,6 @@ export const Steps = (props) => {
                 return React.cloneElement(child, {
                     "isActive": index === currentStep,
                     "isCompleted": index < currentStep};);
->>>>>>> main
             }
             return child;
         })}

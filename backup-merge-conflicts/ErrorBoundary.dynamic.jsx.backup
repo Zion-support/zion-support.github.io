@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled_full/ErrorBoundary.dynamic.jsx
 const ErrorBoundary = dynamic(() => import(\"./ErrorBoundary\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ErrorBoundary\' ,
-=======
 =======
 const ErrorBoundary = dynamic(() => import("./ErrorBoundary"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ErrorBoundary' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

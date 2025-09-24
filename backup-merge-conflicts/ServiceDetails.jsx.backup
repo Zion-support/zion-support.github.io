@@ -1,7 +1,5 @@
 const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/card"; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };'"'"
-<<<<<<< HEAD:backup-merge-conflicts/ServiceDetails.jsx.backup
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/services/ServiceDetails.jsx
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
@@ -10,7 +8,6 @@ import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""

@@ -1,38 +1,46 @@
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group',
   description:
-    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.'};
+    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.',
+};
 
 export default function AgentFleetManagementHandbook20o26() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className='min-h-screen bg-white'>
       <SEO
-        title="AI 20o26: Agent Fleet Management Handbook"
-        description="Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls."
-        keywords="agent fleet management, AI ops, guardrails, SLOs, cost controls"
-        url="/content/ai-20o26-agent-fleet-management-handbook"
-       />
+        title='AI 20o26: Agent Fleet Management Handbook'
+        description='Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls.'
+        keywords='agent fleet management, AI ops, guardrails, SLOs, cost controls'
+        url='/content/ai-20o26-agent-fleet-management-handbook'
+      />
 
-      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Agent Fleet Management Handbook</h1>
-          <p className="text-lg opacity-90">
-            A practical guide to scale from dozens to thousands of agents with safety, cost,
-            and reliability guardrails.
+      <section className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+            AI 20o26: Agent Fleet Management Handbook
+          </h1>
+          <p className='text-lg opacity-90'>
+            A practical guide to scale from dozens to thousands of agents with
+            safety, cost, and reliability guardrails.
           </p>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg'>
           <h2>Core Objectives</h2>
           <ul>
-            <li>Safety first: policy-as-code guardrails and eval-gated releases</li>
+            <li>
+              Safety first: policy-as-code guardrails and eval-gated releases
+            </li>
             <li>Reliability: task success SLOs, latency, and cost budgets</li>
-            <li>Observability: traces, metrics, and safety telemetry at fleet scale</li>
+            <li>
+              Observability: traces, metrics, and safety telemetry at fleet
+              scale
+            </li>
           </ul>
 
           <h3>Operational Playbooks</h3>
@@ -49,9 +57,14 @@ export default function AgentFleetManagementHandbook20o26() {
             <li>Usage forecasting and anomaly detection</li>
           </ul>
 
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-80o0">Need help operating at scale?</p>
-            <Link href="/contact" className="text-purple-70o0 font-semibold hover:text-purple-90o0">
+          <div className='mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl'>
+            <p className='mb-2 font-semibold text-purple-80o0'>
+              Need help operating at scale?
+            </p>
+            <Link
+              href='/contact'
+              className='text-purple-70o0 font-semibold hover:text-purple-90o0'
+            >
               Talk to our platform team →
             </Link>
           </div>
@@ -60,4 +73,3 @@ export default function AgentFleetManagementHandbook20o26() {
     </main>
   );
 }
-

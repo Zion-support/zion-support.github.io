@@ -198,7 +198,6 @@
     />;
   )};
 // Specialized skeleton components;
-<<<<<<< HEAD
 export const CardSkeleton: Reac t.FC<{ className?: string }> = { className }: unknown (
   <div className = {';
 ';';
@@ -229,12 +228,10 @@ export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; classNa
     {/* Header */}"
     <div className="flex space-x-4">
       {Array.from({ length: column s }).map((_, index)  => ("
-=======
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (;
 =======
 export const "CardSkeleton": "React.FC<{ className?: string "}> = { className }: "unknown (;
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
   <div className = {;
   cn('p-6 space-y-4'",;
   className);
@@ -310,7 +307,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
     ))};
   </div>;
 );
-<<<<<<< HEAD
 
 export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = ({
 
@@ -330,8 +326,6 @@ export const ListSkeleton: Reac t.FC<{ items?: number; className?: string }> = (
           <Skeleton variant="rectangular" height={16} width="80%"   />;"
 =======
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
 ;
 export const "ListSkeleton": "React.FC<{ items?: number; className?: string "}> = ({;
   items = 5,;

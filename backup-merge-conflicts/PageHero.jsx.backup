@@ -1,7 +1,5 @@
 "import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({" title,subtitle,description,features = [],ctaText = "Get Started"," ctaLink = "#contact",backgroundImage = null," stats = []"}) => { )}"";"""";"""
-<<<<<<< HEAD:backup-merge-conflicts/PageHero.jsx.backup
 'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/services/PageSections/PageHero.jsx
 'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
@@ -10,7 +8,6 @@
 'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""

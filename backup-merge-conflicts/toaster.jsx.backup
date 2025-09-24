@@ -1,9 +1,7 @@
 const * as React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster($1) {return (<HotToaster position="top-right" />)} export default toaster;""
 import _React from 'react';,
-<<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/toaster.jsx.backup
 =======
 import * as React from "react";
@@ -12,7 +10,6 @@ export function Toaster("props": "any) {return (<HotToaster position="top-right"
 ;
 
 export default toaster;
->>>>>>> main
 =======
 import * as _React from "react"; import {Toaster as HotToaster} from "react-hot-toast"; export function Toaster(_) {return (<HotToaster position="top-right" />)} export default toaster;
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/toaster.jsx

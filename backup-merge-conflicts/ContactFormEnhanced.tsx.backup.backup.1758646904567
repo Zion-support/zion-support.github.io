@@ -6,7 +6,6 @@ import {
   AlertCircle,
   User,
   Mail,
-<<<<<<< HEAD:backup-merge-conflicts/ContactFormEnhanced.tsx.backup
 <<<<<<< HEAD
   MessageSquare,
 } from 'lucide-react';
@@ -17,7 +16,6 @@ const ContactFormEnhanced: React.FC = () => {
     subject: '',
     message: '',
   });
-=======
 =======
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
@@ -32,7 +30,6 @@ const "ContactFormEnhanced": React.FC = () => {
   >('idle');
 =======
   const handleSubmit = async ("e": React.FormEvent) => {
->>>>>>> pr-11914:backup-merge-conflicts/ContactFormEnhanced.tsx.backup
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise(resolve => setTimeout(resolve, 2000));

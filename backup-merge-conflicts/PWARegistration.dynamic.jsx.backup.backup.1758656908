@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/PWARegistration.dynamic.jsx
 const PWARegistration = dynamic(() => import(\"./PWARegistration\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PWARegistration\' ,
 =======
 =======
->>>>>>> pr-11935
 const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
-<<<<<<< HEAD:backup-merge-conflicts/PWARegistration.dynamic.jsx.backup
 </p>'
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/PWARegistration.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

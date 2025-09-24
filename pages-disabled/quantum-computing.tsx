@@ -9,14 +9,29 @@ export default function QuantumComputing() {
     <>
       <Head>
         <title>Quantum Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge quantum computing services including algorithm development and optimization."  />
-        <link rel="canonical" href={`${site}/quantum-computing`}  />
+        <meta
+          name='description'
+          content='Cutting-edge quantum computing services including algorithm development and optimization.'
+        />
+        <link rel='canonical' href={`${site}/quantum-computing`} />
       </Head>
-      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-70o0 text-white py-20 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Quantum Computing Services</h1>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-white text-purple-70o0 px-8 py-3 rounded-lg font-semibold">Get Started</Link>
-          <a href={`tel:${phone.replace(/[^\d+]/g,'')}`} className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold">Call {phone}</a>
+      <section className='bg-gradient-to-r from-purple-60o0 to-indigo-70o0 text-white py-20 text-center'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-6'>
+          Quantum Computing Services
+        </h1>
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <Link
+            href='/contact'
+            className='bg-white text-purple-70o0 px-8 py-3 rounded-lg font-semibold'
+          >
+            Get Started
+          </Link>
+          <a
+            href={`tel:${phone.replace(/[^\d+]/g, '')}`}
+            className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold'
+          >
+            Call {phone}
+          </a>
         </div>
       </section>
     </>

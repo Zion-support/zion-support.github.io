@@ -33,35 +33,37 @@ export default function ServiceFallbackPage() {
 
   const service = useMemo(() => {
     if (!slug) return undefined;
-    const all: any[] = ([] as any[])
-      .concat(
-        enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new20o25Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices20o25 as any,
-        realImplementationServices20o25 as any
-      );
+    const all: any[] = ([] as any[]).concat(
+      enhancedRealMicroSaasServices as any,
+      extraServices as any,
+      additionalEnhancedServices as any,
+      innovativeAIServices as any,
+      quantumSpaceServices as any,
+      enterpriseITServices as any,
+      newRealServices as any,
+      marketReadyServices as any,
+      realMarketServices as any,
+      new20o25Services as any,
+      newRealInnovations as any,
+      emergingTechnologyServices as any,
+      comprehensiveITSolutions as any,
+      marketValidatedServices as any,
+      curatedMarketServices as any,
+      cuttingEdgeITServices as any,
+      nextGenerationAIServices as any,
+      nextGenAIServices as any,
+      industryRealServices as any,
+      professionalServices as any,
+      realEnterpriseServices20o25 as any,
+      realImplementationServices20o25 as any
+    );
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+        return (
+          url.pathname.replace(/^\/+|\/+$/g, '') ===
+          slug.replace(/^\/+|\/+$/g, '')
+        );
       } catch {
         return false;
       }
@@ -70,17 +72,19 @@ export default function ServiceFallbackPage() {
 
     const normalized = slug.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     return all.find(s => {
-      const idMatch = (s.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized;
-      const nameMatch = (s.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized;
+      const idMatch =
+        (s.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized;
+      const nameMatch =
+        (s.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized;
       return idMatch || nameMatch;
     });
   }, [slug]);
 
-  const contactInfo ={
+  const contactInfo = {
     mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 10o08 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
   };
 
   if (!service) {
@@ -88,12 +92,22 @@ export default function ServiceFallbackPage() {
       <UltraFuturisticBackground>
         <Head>
           <title>Service Not Found | Zion Tech Group</title>
-          <meta name="robots" content="noindex"  />
+          <meta name='robots' content='noindex' />
         </Head>
-        <div className="container mx-auto px-4 py-24 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-30o0 mb-8">This service link is no longer available. Explore our full catalog of services.</p>
-          <Button href="/services" className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl">Browse Services</Button>
+        <div className='container mx-auto px-4 py-24 text-center'>
+          <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
+            Service Not Found
+          </h1>
+          <p className='text-gray-30o0 mb-8'>
+            This service link is no longer available. Explore our full catalog
+            of services.
+          </p>
+          <Button
+            href='/services'
+            className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl'
+          >
+            Browse Services
+          </Button>
         </div>
       </UltraFuturisticBackground>
     );
@@ -103,39 +117,40 @@ export default function ServiceFallbackPage() {
     <Layout>
       <Head>
         <title>Service Not Found | Zion Tech Group</title>
-        <meta name="robots" content="noindex"  />
+        <meta name='robots' content='noindex' />
       </Head>
-      
-      <div className="container mx-auto px-4 py-24 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-4">
+
+      <div className='container mx-auto px-4 py-24 text-center'>
+        <div className='max-w-2xl mx-auto'>
+          <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-4'>
             Service Not Found
           </h1>
-          <p className="text-gray-30o0 mb-8 text-lg">
-            This service link is no longer available. Explore our full catalog of innovative services and solutions.
+          <p className='text-gray-30o0 mb-8 text-lg'>
+            This service link is no longer available. Explore our full catalog
+            of innovative services and solutions.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/services" 
-              className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold"
+
+          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+            <Link
+              href='/services'
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold'
             >
               Browse Services
             </Link>
-            <Link 
-              href="/contact" 
-              className="border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold"
+            <Link
+              href='/contact'
+              className='border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold'
             >
               Contact Us
             </Link>
           </div>
-          
-          <div className="mt-12 text-left">
-            <Link 
-              href="/" 
-              className="inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors"
+
+          <div className='mt-12 text-left'>
+            <Link
+              href='/'
+              className='inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors'
             >
-              <ArrowLeft className="w-4 h-4"  />
+              <ArrowLeft className='w-4 h-4' />
               Back to Home
             </Link>
           </div>
@@ -146,30 +161,32 @@ export default function ServiceFallbackPage() {
 }
 
 // Static export support: generate root-level pages for service slugs
-type Svc = typeof enhancedRealMicroSaasServices[number];
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
 
 function collectAllServices(): Svc[] {
-  return enhancedRealMicroSaasServices
-    .concat(
-      extraServices as Svc[],
-      additionalEnhancedServices as Svc[],
-      innovativeAIServices as Svc[],
-      quantumSpaceServices as Svc[],
-      enterpriseITServices as Svc[],
-      newRealServices as Svc[],
-      marketReadyServices as Svc[],
-      nextGenerationAIServices as Svc[],
-      emergingTechnologyServices as Svc[],
-      comprehensiveITSolutions as Svc[],
-      marketValidatedServices as Svc[],
-      newRealInnovations as Svc[],
-      realMarketServices as Svc[],
-      realImplementationServices20o25 as unknown as Svc[]
-    );
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[],
+    additionalEnhancedServices as Svc[],
+    innovativeAIServices as Svc[],
+    quantumSpaceServices as Svc[],
+    enterpriseITServices as Svc[],
+    newRealServices as Svc[],
+    marketReadyServices as Svc[],
+    nextGenerationAIServices as Svc[],
+    emergingTechnologyServices as Svc[],
+    comprehensiveITSolutions as Svc[],
+    marketValidatedServices as Svc[],
+    newRealInnovations as Svc[],
+    realMarketServices as Svc[],
+    realImplementationServices20o25 as unknown as Svc[]
+  );
 }
 
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
 function extractRootSlugFromLink(link?: string): string | null {
@@ -242,11 +259,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 
   const existingRootPages = getExistingRootPageSlugs();
-  const filtered = Array.from(candidateSlugs).filter((slug) => !existingRootPages.has(slug));
+  const filtered = Array.from(candidateSlugs).filter(
+    slug => !existingRootPages.has(slug)
+  );
 
   return {
-    paths: filtered.map((slug) => ({ params: { slug } })),
-    fallback: true
+    paths: filtered.map(slug => ({ params: { slug } })),
+    fallback: true,
   };
 };
 

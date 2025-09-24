@@ -44,9 +44,9 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         // Get the current hostname, fallback to localhost if not available
         const hostname = window.location.hostname || 'localhost';
         const functionName = 'tenant-detector';
-        
+
         // Build the query parameters
-        const params = externalSubdomain 
+        const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
 
@@ -54,12 +54,16 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`,
           {
             headers: {
-              'Content-Type': 'application/json'}}
+              'Content-Type': 'application/json',
+            },
+          }
         );
 
         if (functionError) {
           console.error('Edge Function error:', functionError);
-          setError('Failed to load tenant configuration. Please try again later.');
+          setError(
+            'Failed to load tenant configuration. Please try again later.'
+          );
           setTenant(null);
           return;
         }
@@ -77,13 +81,16 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         }
       } catch (err: any) {
         console.error('Error loading tenant:', err);
-        let message = err.message || 'An unexpected error occurred while loading tenant configuration';
+        let message =
+          err.message ||
+          'An unexpected error occurred while loading tenant configuration';
         if (
           message.includes('Failed to send a request to the Edge Function') ||
           message.includes('Failed to connect to Supabase') ||
           message.includes('No internet connection')
         ) {
-          message = 'Unable to reach the server. Please check your internet connection and try again.';
+          message =
+            'Unable to reach the server. Please check your internet connection and try again.';
         }
         setError(message);
         setTenant(null);
@@ -112,7 +119,8 @@ export function useTenantAdminStatus(tenantId?: string) {
       }
 
       try {
-        const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
+        const { data: sessionData, error: sessionError } =
+          await supabase.auth.getSession();
         if (sessionError || !sessionData.session) {
           setIsAdmin(false);
           return;

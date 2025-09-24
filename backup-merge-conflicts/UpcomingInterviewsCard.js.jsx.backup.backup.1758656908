@@ -4,14 +4,11 @@
 =======
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/interviews/UpcomingInterviewsCard.js.jsx
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
-=======
 ' \' \' \' \' \"export\": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()\'';\"";
 <<<<<<< HEAD:backup-merge-conflicts/UpcomingInterviewsCard.js.jsx.backup
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
->>>>>>> pr-11914:backup-merge-conflicts/UpcomingInterviewsCard.js.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

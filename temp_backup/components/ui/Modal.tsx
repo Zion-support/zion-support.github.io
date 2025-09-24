@@ -35,44 +35,50 @@ export const Modal: React.FC<ModalProps> = ({
   overlayClassName = '',
   contentClassName = '',
   'aria-label': ariaLabel,
-  'aria-describedby': ariaDescribedby
+  'aria-describedby': ariaDescribedby,
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
 
-  const sizeClasses ={
+  const sizeClasses = {
     sm: 'max-w-md',
     md: 'max-w-lg',
     lg: 'max-w-2xl',
     xl: 'max-w-4xl',
-    full: 'max-w-none w-full h-full'
+    full: 'max-w-none w-full h-full',
   };
 
-  const variantClasses ={
+  const variantClasses = {
     default: 'mx-4 my-8',
     centered: 'mx-4 my-8',
     sidebar: 'ml-auto h-full my-0',
-    fullscreen: 'm-0 w-full h-full'
+    fullscreen: 'm-0 w-full h-full',
   };
 
-  const handleOverlayClick = useCallback((e: React.MouseEvent) => {
-    if (closeOnOverlayClick && e.target === e.currentTarget) {
-      onClose();
-    }
-  }, [closeOnOverlayClick, onClose]);
+  const handleOverlayClick = useCallback(
+    (e: React.MouseEvent) => {
+      if (closeOnOverlayClick && e.target === e.currentTarget) {
+        onClose();
+      }
+    },
+    [closeOnOverlayClick, onClose]
+  );
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (closeOnEscape && e.key === 'Escape') {
-      onClose();
-    }
-  }, [closeOnEscape, onClose]);
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (closeOnEscape && e.key === 'Escape') {
+        onClose();
+      }
+    },
+    [closeOnEscape, onClose]
+  );
 
   // Focus management
   useEffect(() => {
     if (isOpen) {
       // Store the currently focused element
       previousFocusRef.current = document.activeElement as HTMLElement;
-      
+
       // Focus the modal
       if (modalRef.current) {
         modalRef.current.focus();
@@ -98,7 +104,9 @@ export const Modal: React.FC<ModalProps> = ({
         if (!focusableElements || focusableElements.length === 0) return;
 
         const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+        const lastElement = focusableElements[
+          focusableElements.length - 1
+        ] as HTMLElement;
 
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -142,14 +150,14 @@ export const Modal: React.FC<ModalProps> = ({
         ${overlayClassName}
       `}
       onClick={handleOverlayClick}
-      role="dialog"
-      aria-modal="true"
+      role='dialog'
+      aria-modal='true'
       aria-label={ariaLabel || title}
       aria-describedby={ariaDescribedby}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"  />
-      
+      <div className='absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm' />
+
       {/* Modal Content */}
       <div
         ref={modalRef}
@@ -167,24 +175,26 @@ export const Modal: React.FC<ModalProps> = ({
       >
         {/* Header */}
         {(title || showCloseButton) && (
-          <div className="flex items-center justify-between p-6 border-b border-gray-20o0">
+          <div className='flex items-center justify-between p-6 border-b border-gray-20o0'>
             {title && (
-              <h2 className="text-xl font-semibold text-gray-90o0">
-                {title}
-              </h2>
+              <h2 className='text-xl font-semibold text-gray-90o0'>{title}</h2>
             )}
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 text-gray-40o0 hover:text-gray-60o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 rounded-lg"
-                aria-label="Close modal"
+                className='p-2 text-gray-40o0 hover:text-gray-60o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 rounded-lg'
+                aria-label='Close modal'
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  className='w-5 h-5'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
                   <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 0o11.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 0o1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0o1-1.414-1.414L8.586 10 4.293 5.70o7a1 1 0 0o10-1.414z"
-                    clipRule="evenodd"
-                   />
+                    fillRule='evenodd'
+                    d='M4.293 4.293a1 1 0 0o11.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 0o1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0o1-1.414-1.414L8.586 10 4.293 5.70o7a1 1 0 0o10-1.414z'
+                    clipRule='evenodd'
+                  />
                 </svg>
               </button>
             )}
@@ -192,10 +202,10 @@ export const Modal: React.FC<ModalProps> = ({
         )}
 
         {/* Body */}
-        <div className="p-6">
+        <div className='p-6'>
           {loading ? (
-            <div className="flex items-center justify-center py-12">
-              <LoadingSpinner size="lg" text="Loading..."  />
+            <div className='flex items-center justify-center py-12'>
+              <LoadingSpinner size='lg' text='Loading...' />
             </div>
           ) : (
             children
@@ -230,21 +240,22 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
   confirmText = 'Confirm',
   cancelText = 'Cancel',
   variant = 'info',
-  loading = false
+  loading = false,
 }) => {
-  const variantStyles ={
+  const variantStyles = {
     danger: {
       confirmButton: 'bg-red-60o0 hover:bg-red-70o0 focus:ring-red-50o0',
-      icon: 'text-red-60o0'
+      icon: 'text-red-60o0',
     },
     warning: {
-      confirmButton: 'bg-yellow-60o0 hover:bg-yellow-70o0 focus:ring-yellow-50o0',
-      icon: 'text-yellow-60o0'
+      confirmButton:
+        'bg-yellow-60o0 hover:bg-yellow-70o0 focus:ring-yellow-50o0',
+      icon: 'text-yellow-60o0',
     },
     info: {
       confirmButton: 'bg-blue-60o0 hover:bg-blue-70o0 focus:ring-blue-50o0',
-      icon: 'text-blue-60o0'
-    }
+      icon: 'text-blue-60o0',
+    },
   };
 
   const styles = variantStyles[variant];
@@ -259,59 +270,83 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
       isOpen={isOpen}
       onClose={onClose}
       title={title}
-      size="sm"
+      size='sm'
       closeOnOverlayClick={false}
       closeOnEscape={!loading}
       showCloseButton={!loading}
     >
-      <div className="text-center">
-        <div className={`mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-gray-10o0 ${styles.icon}`}>
+      <div className='text-center'>
+        <div
+          className={`mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-gray-10o0 ${styles.icon}`}
+        >
           {variant === 'danger' && (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"  />
+            <svg
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z'
+              />
             </svg>
           )}
           {variant === 'warning' && (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"  />
+            <svg
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z'
+              />
             </svg>
           )}
           {variant === 'info' && (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.0o1M21 12a9 9 0 11-18 0 9 9 0 0o118 0z"  />
+            <svg
+              className='h-6 w-6'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M13 16h-1v-4h-1m1-4h.0o1M21 12a9 9 0 11-18 0 9 9 0 0o118 0z'
+              />
             </svg>
           )}
         </div>
-        
-        <h3 className="mt-4 text-lg font-medium text-gray-90o0">
-          {title}
-        </h3>
-        
-        <p className="mt-2 text-sm text-gray-50o0">
-          {message}
-        </p>
-        
-        <div className="mt-6 flex justify-center space-x-3">
+
+        <h3 className='mt-4 text-lg font-medium text-gray-90o0'>{title}</h3>
+
+        <p className='mt-2 text-sm text-gray-50o0'>{message}</p>
+
+        <div className='mt-6 flex justify-center space-x-3'>
           <button
-            type="button"
+            type='button'
             onClick={onClose}
             disabled={loading}
-            className="px-4 py-2 text-sm font-medium text-gray-70o0 bg-white border border-gray-30o0 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className='px-4 py-2 text-sm font-medium text-gray-70o0 bg-white border border-gray-30o0 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed'
           >
             {cancelText}
           </button>
-          
+
           <button
-            type="button"
+            type='button'
             onClick={handleConfirm}
             disabled={loading}
             className={`px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 ${styles.confirmButton} disabled:opacity-50 disabled:cursor-not-allowed`}
           >
-            {loading ? (
-              <LoadingSpinner size="sm" color="white"  />
-            ) : (
-              confirmText
-            )}
+            {loading ? <LoadingSpinner size='sm' color='white' /> : confirmText}
           </button>
         </div>
       </div>
@@ -345,27 +380,23 @@ export const FormModal: React.FC<FormModalProps> = ({
     <Modal {...modalProps} closeOnOverlayClick={false} closeOnEscape={!loading}>
       <form onSubmit={handleSubmit}>
         {children}
-        
-        <div className="mt-6 flex justify-end space-x-3">
+
+        <div className='mt-6 flex justify-end space-x-3'>
           <button
-            type="button"
+            type='button'
             onClick={modalProps.onClose}
             disabled={loading}
-            className="px-4 py-2 text-sm font-medium text-gray-70o0 bg-white border border-gray-30o0 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className='px-4 py-2 text-sm font-medium text-gray-70o0 bg-white border border-gray-30o0 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed'
           >
             {cancelText}
           </button>
-          
+
           <button
-            type="submit"
+            type='submit'
             disabled={loading}
-            className="px-4 py-2 text-sm font-medium text-white bg-blue-60o0 border border-transparent rounded-md hover:bg-blue-70o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed"
+            className='px-4 py-2 text-sm font-medium text-white bg-blue-60o0 border border-transparent rounded-md hover:bg-blue-70o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 disabled:opacity-50 disabled:cursor-not-allowed'
           >
-            {loading ? (
-              <LoadingSpinner size="sm" color="white"  />
-            ) : (
-              submitText
-            )}
+            {loading ? <LoadingSpinner size='sm' color='white' /> : submitText}
           </button>
         </div>
       </form>

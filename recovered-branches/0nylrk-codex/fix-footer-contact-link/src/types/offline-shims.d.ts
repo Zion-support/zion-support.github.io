@@ -4,7 +4,9 @@ declare module 'react' {
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
+  export function useRef<T = undefined>(
+    initialValue?: T
+  ): { current: T | undefined };
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S);
@@ -17,7 +19,7 @@ declare module 'react' {
   export const useCallback: any;
   export function useId(): string;
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
-  export function forwardRef<T, P ={}>(
+  export function forwardRef<T, P = {}>(
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
   export const Fragment: any;
@@ -25,8 +27,8 @@ declare module 'react' {
   export const cloneElement: any;
   export type ReactNode = any;
   export type ReactElement = any;
-  export type ComponentType<P ={}> = (props: P) => any;
-  export type FC<P ={}> = (props: P) => any;
+  export type ComponentType<P = {}> = (props: P) => any;
+  export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
   export type PropsWithoutRef<T = any> = any;

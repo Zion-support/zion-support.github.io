@@ -1,10 +1,19 @@
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'Resources - Zion Tech Group',
-  description: 'Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.',
-  keywords: ['resources', 'AI guides', 'case studies', 'whitepapers', 'technical resources', 'downloads']};
+  description:
+    'Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.',
+  keywords: [
+    'resources',
+    'AI guides',
+    'case studies',
+    'whitepapers',
+    'technical resources',
+    'downloads',
+  ],
+};
 
 export default function ResourcesPage() {
   const resources = [
@@ -13,175 +22,192 @@ export default function ResourcesPage() {
       items: [
         {
           title: 'Fortune 50o0 AI Transformation: 80o0% ROI Success Story',
-          description: 'How a leading manufacturing company achieved unprecedented returns through AI transformation.',
+          description:
+            'How a leading manufacturing company achieved unprecedented returns through AI transformation.',
           type: 'Case Study',
           link: '/blog/ai-20o25-ultimate-business-transformation-success-story',
-          featured: true
+          featured: true,
         },
         {
           title: 'Neural Interface Implementation: 50o0% Productivity Increase',
-          description: 'Revolutionary neural interface technology delivering massive productivity gains.',
+          description:
+            'Revolutionary neural interface technology delivering massive productivity gains.',
           type: 'Case Study',
           link: '/case-studies/neural-interface-enterprise-implementation-success',
-          featured: true
-        }
-      ]
+          featured: true,
+        },
+      ],
     },
     {
       category: 'Technology Guides',
       items: [
         {
-          title: 'Quantum Computing 20o25: Ultimate Business Breakthrough Guide',
-          description: 'Comprehensive guide to quantum computing applications and business implementation.',
+          title:
+            'Quantum Computing 20o25: Ultimate Business Breakthrough Guide',
+          description:
+            'Comprehensive guide to quantum computing applications and business implementation.',
           type: 'Guide',
           link: '/blog/quantum-computing-20o25-business-breakthrough-ultimate-guide',
-          featured: true
+          featured: true,
         },
         {
           title: 'AI 20o26 Enterprise Multimodal Agents Blueprint',
-          description: 'Architecture, runbooks, SLAs, and governance for multimodal agent platforms.',
+          description:
+            'Architecture, runbooks, SLAs, and governance for multimodal agent platforms.',
           type: 'Guide',
           link: '/resources/ai-20o26-enterprise-multimodal-agents-blueprint',
-          featured: true
+          featured: true,
         },
         {
           title: 'AI 20o25-20o26 Ultimate Business Intelligence Revolution',
-          description: 'Complete guide to AI transformation and business intelligence implementation.',
+          description:
+            'Complete guide to AI transformation and business intelligence implementation.',
           type: 'Guide',
           link: '/blog/ai-20o25-20o26-ultimate-business-intelligence-revolution',
-          featured: false
-        }
-      ]
+          featured: false,
+        },
+      ],
     },
     {
       category: 'Technical Resources',
       items: [
         {
           title: 'AI Implementation Framework 20o25',
-          description: 'Step-by-step framework for successful AI implementation in enterprise environments.',
+          description:
+            'Step-by-step framework for successful AI implementation in enterprise environments.',
           type: 'Framework',
           link: '/resources/ai-implementation-framework-20o25',
-          featured: false
+          featured: false,
         },
         {
           title: 'Quantum Computing Readiness Assessment',
-          description: 'Comprehensive assessment tool to evaluate your organization\'s quantum computing readiness.',
+          description:
+            "Comprehensive assessment tool to evaluate your organization's quantum computing readiness.",
           type: 'Tool',
           link: '/resources/quantum-computing-readiness-assessment',
-          featured: false
-        }
-      ]
+          featured: false,
+        },
+      ],
     },
     {
       category: 'Industry Reports',
       items: [
         {
           title: 'AI Trends 20o25-20o30: Future Predictions Report',
-          description: 'Comprehensive analysis of AI trends and predictions for the next decade.',
+          description:
+            'Comprehensive analysis of AI trends and predictions for the next decade.',
           type: 'Report',
           link: '/resources/ai-trends-20o25-20o30-report',
-          featured: false
+          featured: false,
         },
         {
           title: 'Neural Interface Technology Market Analysis',
-          description: 'In-depth market analysis of neural interface technology and business applications.',
+          description:
+            'In-depth market analysis of neural interface technology and business applications.',
           type: 'Report',
           link: '/resources/neural-interface-market-analysis',
-          featured: false
-        }
-      ]
-    }
+          featured: false,
+        },
+      ],
+    },
   ];
 
   return (
     <div>
       <SEO
-        title="Resources - Zion Tech Group"
-        description="Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources."
-        keywords="resources, AI guides, case studies, whitepapers, technical resources, downloads"
-        url="/resources"
-       />
-      
-      <div className="min-h-screen bg-white">
+        title='Resources - Zion Tech Group'
+        description='Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.'
+        keywords='resources, AI guides, case studies, whitepapers, technical resources, downloads'
+        url='/resources'
+      />
+
+      <div className='min-h-screen bg-white'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Resources
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Access our comprehensive library of guides, case studies, 
-              and technical resources to accelerate your transformation.
+        <section className='bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white py-20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>Resources</h1>
+            <p className='text-xl md:text-2xl opacity-90 mb-8'>
+              Access our comprehensive library of guides, case studies, and
+              technical resources to accelerate your transformation.
             </p>
           </div>
         </section>
 
         {/* Featured Resources */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
+        <section className='py-16 bg-gray-50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
               Featured Resources
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {resources.flatMap(cat => cat.items).filter(item => item.featured).map((resource, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <span className="bg-blue-10o0 text-blue-80o0 text-sm font-medium px-3 py-1 rounded-full">
-                      {resource.type}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">
-                    {resource.title}
-                  </h3>
-                  <p className="text-gray-60o0 mb-6">
-                    {resource.description}
-                  </p>
-                  <Link
-                    href={resource.link}
-                    className="inline-block bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              {resources
+                .flatMap(cat => cat.items)
+                .filter(item => item.featured)
+                .map((resource, index) => (
+                  <div
+                    key={index}
+                    className='bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow'
                   >
-                    Access Resource →
-                  </Link>
-                </div>
-              ))}
+                    <div className='flex items-center mb-4'>
+                      <span className='bg-blue-10o0 text-blue-80o0 text-sm font-medium px-3 py-1 rounded-full'>
+                        {resource.type}
+                      </span>
+                    </div>
+                    <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                      {resource.title}
+                    </h3>
+                    <p className='text-gray-60o0 mb-6'>
+                      {resource.description}
+                    </p>
+                    <Link
+                      href={resource.link}
+                      className='inline-block bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'
+                    >
+                      Access Resource →
+                    </Link>
+                  </div>
+                ))}
             </div>
           </div>
         </section>
 
         {/* All Resources by Category */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-90o0 mb-12 text-center">
+        <section className='py-16'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>
               All Resources
             </h2>
-            <div className="space-y-16">
+            <div className='space-y-16'>
               {resources.map((category, categoryIndex) => (
                 <div key={categoryIndex}>
-                  <h3 className="text-2xl font-bold text-gray-90o0 mb-8 border-b-2 border-purple-60o0 pb-2">
+                  <h3 className='text-2xl font-bold text-gray-90o0 mb-8 border-b-2 border-purple-60o0 pb-2'>
                     {category.category}
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {category.items.map((resource, resourceIndex) => (
-                      <div key={resourceIndex} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="bg-gray-10o0 text-gray-80o0 text-sm font-medium px-3 py-1 rounded-full">
+                      <div
+                        key={resourceIndex}
+                        className='bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow'
+                      >
+                        <div className='flex items-center justify-between mb-4'>
+                          <span className='bg-gray-10o0 text-gray-80o0 text-sm font-medium px-3 py-1 rounded-full'>
                             {resource.type}
                           </span>
                           {resource.featured && (
-                            <span className="bg-yellow-10o0 text-yellow-80o0 text-sm font-medium px-3 py-1 rounded-full">
+                            <span className='bg-yellow-10o0 text-yellow-80o0 text-sm font-medium px-3 py-1 rounded-full'>
                               Featured
                             </span>
                           )}
                         </div>
-                        <h4 className="text-lg font-bold text-gray-90o0 mb-3">
+                        <h4 className='text-lg font-bold text-gray-90o0 mb-3'>
                           {resource.title}
                         </h4>
-                        <p className="text-gray-60o0 mb-4 text-sm">
+                        <p className='text-gray-60o0 mb-4 text-sm'>
                           {resource.description}
                         </p>
                         <Link
                           href={resource.link}
-                          className="text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors"
+                          className='text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors'
                         >
                           Read More →
                         </Link>
@@ -195,22 +221,22 @@ export default function ResourcesPage() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="bg-purple-60o0 py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+        <section className='bg-purple-60o0 py-16'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
               Stay Updated with Latest Resources
             </h2>
-            <p className="text-xl text-purple-10o0 mb-8">
-              Get access to our latest guides, case studies, and industry insights 
-              delivered directly to your inbox.
+            <p className='text-xl text-purple-10o0 mb-8'>
+              Get access to our latest guides, case studies, and industry
+              insights delivered directly to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto'>
               <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-90o0 focus:outline-none focus:ring-2 focus:ring-purple-30o0"
-               />
-              <button className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
+                type='email'
+                placeholder='Enter your email'
+                className='flex-1 px-4 py-3 rounded-lg text-gray-90o0 focus:outline-none focus:ring-2 focus:ring-purple-30o0'
+              />
+              <button className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>
                 Subscribe
               </button>
             </div>
@@ -218,18 +244,18 @@ export default function ResourcesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gray-50 py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
+        <section className='bg-gray-50 py-16'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>
               Need Custom Resources?
             </h2>
-            <p className="text-xl text-gray-60o0 mb-8">
-              Our experts can create custom guides, assessments, and frameworks 
+            <p className='text-xl text-gray-60o0 mb-8'>
+              Our experts can create custom guides, assessments, and frameworks
               tailored to your specific business needs.
             </p>
             <Link
-              href="/contact"
-              className="bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors"
+              href='/contact'
+              className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'
             >
               Request Custom Resources
             </Link>

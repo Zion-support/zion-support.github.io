@@ -403,7 +403,6 @@ class FileIntegrityMonitor {
         }
       }
 
-<<<<<<< HEAD
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {
@@ -505,7 +504,6 @@ class FileIntegrityMonitor {
       'Updating file checksums...');
     try {
 
-=======
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -658,4 +656,3 @@ switch (command) {
     break;
 }
 module.exports = FileIntegrityMonitor;
->>>>>>> main

@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/PerformanceOptimizer.dynamic.jsx
 const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default PerformanceOptimizer\' ,
 =======
 =======
->>>>>>> pr-11935
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizer.dynamic.jsx.backup
 </p>'
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/PerformanceOptimizer.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -4,14 +4,11 @@ const { useState,useEffect,useCallback } from "react"; export const useAccessibi
 =======
 const { useState,useEffect,useCallback } from "react"; export const useAccessibility = () => {; const [preferences,setPreferences] = useState({; highContrast: "false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true"}); const [settings,setSettings] = useState();");,return <div>Component></div> }} "export default ComponentName;"'"'"
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/hooks/useAccessibility.js.jsx
 const { useState,useEffect,useCallback } from "react"; export const useAccessibility = () => {; const [preferences,setPreferences] = useState({; highContrast: "false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true"}); const [settings,setSettings] = useState();");,return <div>Component></div> }} "export default ComponentName;"'"'"
-=======
 import { useState,useEffect,useCallback } from \"react\"; export const useAccessibility = () => {; const [preferences,setPreferences] = useState({; \"highContrast\": \'false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true\'}); const [settings,setSettings] = useState();\");,return <div>Component></div> }} \"export default ComponentName;\"
 <<<<<<< HEAD:backup-merge-conflicts/useAccessibility.js.jsx.backup
 const { useState,useEffect,useCallback } from "react"; export const useAccessibility = () => {; const [preferences,setPreferences] = useState({; highContrast: "false largeText: false reducedMotion: false focusIndicator: true screenReader: false keyboardNavigation: true"}); const [settings,setSettings] = useState();");,return <div>Component></div> }} "export default ComponentName;"'"'"
->>>>>>> pr-11914:backup-merge-conflicts/useAccessibility.js.jsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======

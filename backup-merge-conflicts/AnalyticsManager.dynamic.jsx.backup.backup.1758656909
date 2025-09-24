@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD;,
 =======
 ;,
@@ -15,17 +13,13 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
 });
 export default AnalyticsManager;
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import dynamic from 'next/dynamic';';,
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
   "loading": () => null,",
 ;  "ssr": 'false'});',
 export default AnalyticsManager;,
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======
@@ -40,13 +34,10 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   "ssr": 'false'});
 export default AnalyticsManager;
 <<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.dynamic.jsx.backup
-=======
 <<<<<<< HEAD:components.disabled_full/AnalyticsManager.dynamic.jsx
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 <<<<<<< HEAD
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======
@@ -54,10 +45,7 @@ import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => impor
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled_full/AnalyticsManager.dynamic.jsx
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:components.disabled_full/AnalyticsManager.dynamic.jsx
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

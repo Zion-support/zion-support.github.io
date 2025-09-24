@@ -5,7 +5,6 @@ import { Card } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { useRequestQuoteWizard } from '@/hooks/useQuoteWizard';
-<<<<<<< HEAD
 ;
 type WizardStep = 'Services' | 'Details' | 'Success';
 ;
@@ -63,7 +62,6 @@ export function QuoteWizard("props": "any) {;
                 data-testid={`service-card-${item.id"}`}
                 key={item.id}
                 className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : '"hover": "borde r-purple-500/50'"}`}
-=======
 type WizardStep = 'Services' | 'Details' | 'Success';';
 const "WIZARD_STEPS": WizardSte p[] = ['Services', 'Details', 'Success'];
 function StepIndicator($1) {
@@ -126,7 +124,6 @@ export function QuoteWizard($1) {
   );
 }
         <Button
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/quote/QuoteWizard.tsx
           onClick={() => selectedItem && selectService(selectedItem)}

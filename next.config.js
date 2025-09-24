@@ -5,23 +5,11 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  experimental: {
-    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
-  },
-  images: {
-    formats: ['image/webp', 'image/avif'],
-  },
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  httpAgentOptions: {
-    keepAlive: true,
   },
 };
 

@@ -22,20 +22,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.19"
-      ],
-      "artifacts": [
-        "GovernanceExecutor"
-      ]
+      "versionPragmas": ["^0.8.19"],
+      "artifacts": ["GovernanceExecutor"]
     },
     "/workspace/token/multichain/contracts/VoteRelay.sol": {
       "lastModificationDate": 1758637029382,
@@ -58,21 +52,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.19"
-      ],
-      "artifacts": [
-        "ILayerZeroEndpoint",
-        "VoteRelay"
-      ]
+      "versionPragmas": ["^0.8.19"],
+      "artifacts": ["ILayerZeroEndpoint", "VoteRelay"]
     },
     "/workspace/token/multichain/contracts/ZIONDollar.sol": {
       "lastModificationDate": 1758637489025,
@@ -95,9 +82,7 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
@@ -106,13 +91,8 @@
         "@openzeppelin/contracts/token/ERC20/ERC20.sol",
         "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ILayerZeroEndpoint",
-        "ZIONDollar"
-      ]
+      "versionPragmas": ["^0.8.20"],
+      "artifacts": ["ILayerZeroEndpoint", "ZIONDollar"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
       "lastModificationDate": 1758637371277,
@@ -135,9 +115,7 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
@@ -148,12 +126,8 @@
         "../../utils/Context.sol",
         "../../interfaces/draft-IERC6093.sol"
       ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC20"
-      ]
+      "versionPragmas": ["^0.8.20"],
+      "artifacts": ["ERC20"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
       "lastModificationDate": 1758637371277,
@@ -176,23 +150,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "../ERC20.sol",
-        "../../../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC20Burnable"
-      ]
+      "imports": ["../ERC20.sol", "../../../utils/Context.sol"],
+      "versionPragmas": ["^0.8.20"],
+      "artifacts": ["ERC20Burnable"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
       "lastModificationDate": 1758637371269,
@@ -215,22 +180,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.8.4"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
+      "versionPragmas": [">=0.8.4"],
+      "artifacts": ["IERC1155Errors", "IERC20Errors", "IERC721Errors"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1758637371269,
@@ -253,20 +210,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Context"
-      ]
+      "versionPragmas": ["^0.8.20"],
+      "artifacts": ["Context"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1758637371289,
@@ -289,20 +240,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
       "imports": [],
-      "versionPragmas": [
-        ">=0.4.16"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
+      "versionPragmas": [">=0.4.16"],
+      "artifacts": ["IERC20"]
     },
     "/workspace/token/multichain/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
       "lastModificationDate": 1758637371289,
@@ -325,22 +270,14 @@
                 "evm.methodIdentifiers",
                 "metadata"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           }
         }
       },
-      "imports": [
-        "../IERC20.sol"
-      ],
-      "versionPragmas": [
-        ">=0.6.2"
-      ],
-      "artifacts": [
-        "IERC20Metadata"
-      ]
+      "imports": ["../IERC20.sol"],
+      "versionPragmas": [">=0.6.2"],
+      "artifacts": ["IERC20Metadata"]
     }
   }
 }

@@ -4,8 +4,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -13,7 +11,6 @@ export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data En
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
 
->>>>>>> origin/merged-prs
 
 export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
 export interface MilestoneSuggestionInput {scopeOfWork: string;
@@ -24,10 +21,7 @@ export interface MilestoneSuggestionInput {;
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
-<<<<<<< HEAD
 =======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -41,8 +35,6 @@ export interface MilestoneSuggestionInput {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -50,7 +42,6 @@ export interface SuggestedMilestoneItem {
   title: string,
   description: string,
 
->>>>>>> origin/merged-prs
 
 export interface SuggestedMilestoneItem {title: string;
   description: string;
@@ -59,9 +50,6 @@ export interface SuggestedMilestoneItem {;
   title: string,;
   description: string,;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -100,8 +88,6 @@ export interface MilestoneSuggestionResponse {
 }
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -121,7 +107,6 @@ export interface MilestoneSuggestionResponse {;
 }
 <<<<<<< HEAD
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======

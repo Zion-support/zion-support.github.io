@@ -251,7 +251,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (selectedSort) {
       case 'newest':
@@ -337,7 +336,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
             Ultimate Content Discovery
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Powered by AI 2026
-=======
   const sortedContent = [...filteredContent].sort((a, b) => {
     switch (sortBy) {
       case 'trending':
@@ -382,7 +380,6 @@ const UltimateContentDiscoveryWidget2026 = () => {
         {/* Search and Filter Interface */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
             {/* Search Bar */}
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -636,180 +633,3 @@ const UltimateContentDiscoveryWidget2026 = () => {
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-
-            {/* Sort Options */}
-            <div className="relative">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              >
-                <option value="trending" className="bg-slate-800">Trending</option>
-                <option value="rating" className="bg-slate-800">Highest Rated</option>
-                <option value="views" className="bg-slate-800">Most Viewed</option>
-                <option value="newest" className="bg-slate-800">Newest</option>
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-            </div>
-
-            {/* View Mode Toggle */}
-            <div className="flex bg-white/10 rounded-xl p-1">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                <Grid className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                <List className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mt-4">
-            {categories.map(category => {
-              const Icon = category.icon;
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  <Icon className="w-4 h-4" />
-                  {category.name}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-  );
-};
-
-        {/* Results Count */}
-        <div className="flex items-center justify-between mb-6">
-          <p className="text-gray-300">
-            Showing {sortedContent.length} of {contentItems.length} results
-          </p>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <TrendingUp className="w-4 h-4" />
-            <span>Real-time updates</span>
-          </div>
-        </div>
-
-        {/* Content Grid */}
-        <div className={`grid gap-6 ${
-          viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-1'
-        }`}>
-          {sortedContent.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Thumbnail */}
-              <div className="relative h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-white/60" />
-                </div>
-                <div className="absolute top-4 left-4">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
-                    {item.type}
-                  </span>
-                </div>
-                <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs">
-                  {item.duration}
-                </div>
-                {item.trending && (
-                  <div className="absolute bottom-4 left-4 bg-red-500 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" />
-                    Trending
-                  </div>
-                )}
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-medium">{item.rating}</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>{item.views}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{item.duration}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4 line-clamp-2">
-                  {item.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {item.tags.length > 3 && (
-                    <span className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs">
-                      +{item.tags.length - 3} more
-                    </span>
-                  )}
-                </div>
-
-                {/* Action Button */}
-                <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-                  Explore Content
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Load More */}
-        {sortedContent.length > 0 && (
-          <div className="text-center mt-12">
-            <button className="bg-white/10 text-white px-8 py-4 rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 flex items-center gap-2 mx-auto">
-              Load More Content
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        )}
-      </div>
-    </section>
->>>>>>> 40caa684d731039eacbf2a57ff90b1b5728aba9d
-  );
-};
-
-export default UltimateContentDiscoveryWidget2026;

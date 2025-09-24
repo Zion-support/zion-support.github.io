@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompWorkspace} from "@/hooks/useCompWorkspace";
@@ -19,7 +17,6 @@ export function AdminHeader($1) {
         <div className="space-y-4">
 =======
     <div className="min-h-screen bg-white">
->>>>>>> main
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1>

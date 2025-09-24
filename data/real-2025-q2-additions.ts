@@ -15,8 +15,8 @@ export const real20o25Q2Additions: Real20o25Q2Addition[] = [
       'Auto-transcription with speaker labels',
       'Decision and action item extraction',
       'Email and Slack follow‑ups',
-      'Workspace search'
-    ]
+      'Workspace search',
+    ],
   },
   {
     id: 'uptime-sla-reporter',
@@ -27,7 +27,7 @@ export const real20o25Q2Additions: Real20o25Q2Addition[] = [
       'Global checks and alerting',
       'SLA calculations per customer',
       'Incident timelines and labels',
-      'Hosted status pages'
-    ]
-  }
+      'Hosted status pages',
+    ],
+  },
 ];

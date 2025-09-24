@@ -5,9 +5,7 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
-<<<<<<< HEAD:backup-merge-conflicts/empty-state.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 }
 ';
@@ -31,7 +29,6 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
 =======
 "}
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/empty-state.tsx
 ;
 const "EmptyState": "React.FC<EmptyStateProps> = ({;
   title = 'No data available'",;

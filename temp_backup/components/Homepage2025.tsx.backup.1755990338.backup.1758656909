@@ -269,7 +269,6 @@ const Homepage2025: React.FC = () => {
                     <span className="flex items-center gap-2">
                       Get Started
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-<<<<<<< HEAD
 >>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                     </span>
                   </button>
@@ -468,7 +467,6 @@ const Homepage2025: React.FC = () => {
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                     Request Demo
                     Request Demo
-=======
 
         {/* Enhanced Company Stats */}
         <section 
@@ -938,7 +936,6 @@ const Homepage2025: React.FC = () => {
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                     Book Free Consultation
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                   </button>
                 </Link>
               </div>

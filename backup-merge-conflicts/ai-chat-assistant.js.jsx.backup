@@ -64,7 +64,6 @@ export function AIChatAssistant("props": "any) {;
                     "confidence": 0.85 + Math.random() * 0.1",;
   "suggestions": "randomResponse.suggestions;
                 ;
-<<<<<<< HEAD:backup-merge-conflicts/ai-chat-assistant.js.jsx.backup
 
 "}
 }
@@ -108,9 +107,7 @@ export function AIChatAssistant("props": "any) {;
     if (!enabled);
         return null;
 =======
-=======
     return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>;
->>>>>>> pr-11935
     return (
         <div className={`fixed bottom-4 right-4 z-40 ${className}`}>
 >>>>>>> main

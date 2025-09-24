@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/PageLoader.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 export const "PageLoader": "React.FC = ("props": any) => {;
   return (;
@@ -18,7 +16,6 @@ export const "PageLoader": "React.FC = ("props": any) => {;
 export const "PageLoader": React.FC = (props) => {
   return (
     <div className="min-h-screen bg-white">
->>>>>>> main:src_backup_temp/components/PageLoader.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/PageLoader.tsx
       <div className="text-center">

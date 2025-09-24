@@ -6,7 +6,9 @@
  */
 
 console.log('🔌 MCP Client Integration - Placeholder');
-console.log('This system is not yet implemented but will provide MCP client integration.');
+console.log(
+  'This system is not yet implemented but will provide MCP client integration.'
+);
 
 // Placeholder functionality
 class MCPClientIntegration {

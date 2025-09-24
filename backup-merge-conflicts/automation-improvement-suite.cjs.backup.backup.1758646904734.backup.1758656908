@@ -24,7 +24,6 @@ class AutomationImprovementSuite {}
     this.log(`🚀 "Starting": ${description}`);
     try {
       const result = execSync(command, {
-<<<<<<< HEAD
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 60000, // 1 minute timeout
@@ -164,7 +163,6 @@ class PerformanceMonitor {
         'Optimize bundle size with tree shaking',
         'Use dynamic imports for heavy components'
       ]
-=======
     this.logFile = path.join(this.reportsDir, 'automation-improvement.log');
     
     // Ensure reports directory exists;
@@ -406,4 +404,3 @@ if (require.main === module) {}
   suite.run();
 };
 module.exports = AutomationImprovementSuite;
->>>>>>> main

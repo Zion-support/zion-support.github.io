@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
@@ -6,13 +6,13 @@ import * as React from "react"
  * a small fallback that mimics the API using `useRef`.
  */
 export function useReactId(): string {
-  if (typeof (React as any).useId === "function") {
-    return (React as any).useId()
+  if (typeof (React as any).useId === 'function') {
+    return (React as any).useId();
   }
 
-  const idRef = React.useRef<string | null>(null)
+  const idRef = React.useRef<string | null>(null);
   if (idRef.current === null) {
-    idRef.current = Math.random().toString(36).slice(2)
+    idRef.current = Math.random().toString(36).slice(2);
   }
-  return idRef.current
+  return idRef.current;
 }

@@ -1,7 +1,10 @@
-
 import { MilestonesList } from '../MilestonesList';
 import { PaymentSummary } from '../PaymentSummary';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
+import {
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,
+} from '@/hooks/useMilestones';
 import { useEnqueueSnackbar } from '@/context';
 
 interface MilestoneManagerProps {
@@ -14,7 +17,11 @@ interface MilestoneManagerProps {
   paymentTerms?: string;
   isSubmitting: boolean;
   onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onUpdateStatus: (
+    id: string,
+    status: MilestoneStatus,
+    comment?: string
+  ) => Promise<boolean>;
   onDeleteMilestone: (id: string) => Promise<boolean>;
   onUploadDeliverable: (id: string, file: File) => Promise<any>;
   refetch: () => Promise<void>;
@@ -33,35 +40,39 @@ export function MilestoneManager({
   onUpdateStatus,
   onDeleteMilestone,
   onUploadDeliverable,
-  refetch
+  refetch,
 }: MilestoneManagerProps) {
   const enqueueSnackbar = useEnqueueSnackbar();
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
-      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
-      enqueueSnackbar("Milestone approved", { variant: 'success' });
+      await onUpdateStatus(milestoneId, 'completed' as MilestoneStatus);
+      enqueueSnackbar('Milestone approved', { variant: 'success' });
       await refetch();
     } catch (error: any) {
-      console.error("Error approving milestone:", error);
-      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
+      console.error('Error approving milestone:', error);
+      enqueueSnackbar(error?.response?.data?.message || error.message, {
+        variant: 'error',
+      });
     }
   };
-  
+
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
-      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
-      enqueueSnackbar("Milestone rejected", { variant: 'success' });
+      await onUpdateStatus(milestoneId, 'rejected' as MilestoneStatus);
+      enqueueSnackbar('Milestone rejected', { variant: 'success' });
       await refetch();
     } catch (error: any) {
-      console.error("Error rejecting milestone:", error);
-      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' });
+      console.error('Error rejecting milestone:', error);
+      enqueueSnackbar(error?.response?.data?.message || error.message, {
+        variant: 'error',
+      });
     }
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2">
-        <MilestonesList 
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+      <div className='lg:col-span-2'>
+        <MilestonesList
           milestones={milestones}
           activities={activities}
           isLoading={isLoading}
@@ -73,13 +84,13 @@ export function MilestoneManager({
           isSubmitting={isSubmitting}
           onApprove={isClient ? handleMilestoneApproved : undefined}
           onReject={isClient ? handleMilestoneRejected : undefined}
-         />
+        />
       </div>
       <div>
-        <PaymentSummary 
-          milestones={milestones} 
+        <PaymentSummary
+          milestones={milestones}
           paymentTerms={paymentTerms ?? null}
-         />
+        />
       </div>
     </div>
   );

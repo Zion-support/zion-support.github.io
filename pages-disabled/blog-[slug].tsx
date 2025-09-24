@@ -12,7 +12,7 @@ const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
     return <div>Article not found</div>;
   }
   return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+    <main className='prose dark:prose-invert max-w-3xl mx-auto py-8'>
       <h1>{post.title}</h1>
       <ReactMarkdown>{post.content}</ReactMarkdown>
     </main>
@@ -20,13 +20,13 @@ const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = BLOG_POSTS.map((p) => ({ params: { slug: p.slug } }));
+  const paths = BLOG_POSTS.map(p => ({ params: { slug: p.slug } }));
   return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
   const slug = params?.slug as string;
-  const post = BLOG_POSTS.find((p) => p.slug === slug) || null;
+  const post = BLOG_POSTS.find(p => p.slug === slug) || null;
 
   if (!post) {
     return { notFound: true };
@@ -36,4 +36,3 @@ export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
 };
 
 export default BlogPostPage;
-

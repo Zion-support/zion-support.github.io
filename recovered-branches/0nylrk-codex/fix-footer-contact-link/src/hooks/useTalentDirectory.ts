@@ -1,23 +1,15 @@
-
-import { useAuthStatus } from "./talent/useAuthStatus";
-import { useTalentData } from "./talent/useTalentData";
-import { useFilterTalents } from "./talent/useFilterTalents";
-import { useUIState } from "./talent/useUIState";
+import { useAuthStatus } from './talent/useAuthStatus';
+import { useTalentData } from './talent/useTalentData';
+import { useFilterTalents } from './talent/useFilterTalents';
+import { useUIState } from './talent/useUIState';
 
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
-  const { 
-    isAuthenticated, 
-    userDetails, 
-    savedTalents, 
-    handleToggleSave 
-  } = useAuthStatus();
+  const { isAuthenticated, userDetails, savedTalents, handleToggleSave } =
+    useAuthStatus();
 
   // Fetch talent data
-  const { 
-    talents, 
-    isLoading 
-  } = useTalentData();
+  const { talents, isLoading } = useTalentData();
 
   // Apply filters and sorting
   const {
@@ -36,7 +28,7 @@ export function useTalentDirectory() {
     toggleSkill,
     toggleAvailability,
     toggleRegion,
-    clearFilters
+    clearFilters,
   } = useFilterTalents(talents);
 
   // Manage UI state
@@ -48,7 +40,7 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    toggleSection
+    toggleSection,
   } = useUIState();
 
   return {
@@ -56,7 +48,7 @@ export function useTalentDirectory() {
     talents,
     filteredTalents,
     isLoading,
-    
+
     // Search and filter state
     searchTerm,
     setSearchTerm,
@@ -69,7 +61,7 @@ export function useTalentDirectory() {
     setExperienceRange,
     sortOption,
     setSortOption,
-    
+
     // UI state
     isMobileFilterOpen,
     setIsMobileFilterOpen,
@@ -78,18 +70,18 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    
+
     // Auth and user state
     isAuthenticated,
     userDetails,
     savedTalents,
-    
+
     // Actions
     toggleSkill,
     toggleAvailability,
     toggleRegion,
     clearFilters,
     toggleSection,
-    handleToggleSave
+    handleToggleSave,
   };
 }

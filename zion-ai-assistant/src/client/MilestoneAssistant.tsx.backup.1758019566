@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useMemo, useState } from "react";
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
 =======
@@ -10,7 +8,6 @@ import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } fr
 
 export interface MilestoneAssistantProps {
   scopeOfWork: string;
->>>>>>> origin/auto/autonomy-17186719616
   startDateIso: string;
   endDateIso: string;
   projectType: ProjectType;
@@ -58,20 +55,15 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         </label>;
       </div>;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/merged-prs
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 
 ;
 
 
-<<<<<<< HEAD
-=======
 ;
 
 
@@ -86,7 +78,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
 ;
 =======
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -96,8 +87,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
         )}
         {items.map((item, idx) => (;
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -113,7 +102,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
 =======
 =======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -122,9 +110,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
-<<<<<<< HEAD
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,7 +129,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
 
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
@@ -190,8 +175,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                     min={1}
                     value={item.estimatedEffortHours}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -206,7 +189,6 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 =======
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -219,9 +201,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {
               </div>)}
           </div>))}
       </div>;
-<<<<<<< HEAD
 export default MilestoneAssistant;
-=======
 <<<<<<< HEAD
     </div>);
 }
@@ -395,7 +375,6 @@ export default MilestoneAssistant;
 export default MilestoneAssistant;
 =======
 export default MilestoneAssistant;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  ArrowRight, 
-  ExternalLink, 
-  CheckCircle, 
-  Zap, 
-  Star, 
-  TrendingUp, 
-  Users, 
+import {
+  Brain,
+  ArrowRight,
+  ExternalLink,
+  CheckCircle,
+  Zap,
+  Star,
+  TrendingUp,
+  Users,
   Award,
   Clock,
   Shield,
@@ -16,7 +16,7 @@ import {
   Globe,
   Cpu,
   Atom,
-  Target
+  Target,
 } from 'lucide-react';
 
 interface ServiceFeature {
@@ -62,31 +62,46 @@ interface ServiceCardProps {
 
 const getCategoryIcon = (category: string) => {
   const categoryLower = category.toLowerCase();
-  if (categoryLower.includes('ai') || categoryLower.includes('machine learning')) return Brain;
+  if (
+    categoryLower.includes('ai') ||
+    categoryLower.includes('machine learning')
+  )
+    return Brain;
   if (categoryLower.includes('quantum')) return Atom;
-  if (categoryLower.includes('security') || categoryLower.includes('cyber')) return Shield;
+  if (categoryLower.includes('security') || categoryLower.includes('cyber'))
+    return Shield;
   if (categoryLower.includes('space')) return Rocket;
   if (categoryLower.includes('business')) return Target;
-  if (categoryLower.includes('it') || categoryLower.includes('infrastructure')) return Cpu;
-  if (categoryLower.includes('global') || categoryLower.includes('worldwide')) return Globe;
+  if (categoryLower.includes('it') || categoryLower.includes('infrastructure'))
+    return Cpu;
+  if (categoryLower.includes('global') || categoryLower.includes('worldwide'))
+    return Globe;
   return Star;
 };
 
 const getPriorityColor = (priority: string) => {
   switch (priority) {
-    case 'high': return 'from-red-50o0 to-orange-50o0';
-    case 'medium': return 'from-yellow-50o0 to-orange-50o0';
-    case 'low': return 'from-green-50o0 to-teal-50o0';
-    default: return 'from-cyan-50o0 to-purple-50o0';
+    case 'high':
+      return 'from-red-50o0 to-orange-50o0';
+    case 'medium':
+      return 'from-yellow-50o0 to-orange-50o0';
+    case 'low':
+      return 'from-green-50o0 to-teal-50o0';
+    default:
+      return 'from-cyan-50o0 to-purple-50o0';
   }
 };
 
 const getPriorityLabel = (priority: string) => {
   switch (priority) {
-    case 'high': return 'High Priority';
-    case 'medium': return 'Medium Priority';
-    case 'low': return 'Low Priority';
-    default: return 'Standard';
+    case 'high':
+      return 'High Priority';
+    case 'medium':
+      return 'Medium Priority';
+    case 'low':
+      return 'Low Priority';
+    default:
+      return 'Standard';
   }
 };
 
@@ -109,11 +124,11 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
   priority = 'medium',
   technology = [],
   compliance = [],
-  onCardClick
+  onCardClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  
+
   const CategoryIcon = getCategoryIcon(category);
   const priorityColor = getPriorityColor(priority);
   const priorityLabel = getPriorityLabel(priority);
@@ -139,81 +154,86 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={handleCardClick}
-      className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-full transition-all duration-50o0 hover:border-cyan-40o0/50 hover:shadow-2xl hover:shadow-cyan-50o0/25 cursor-pointer overflow-hidden"
+      className='group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-full transition-all duration-50o0 hover:border-cyan-40o0/50 hover:shadow-2xl hover:shadow-cyan-50o0/25 cursor-pointer overflow-hidden'
     >
       {/* Background Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0"  />
-      
+      <div className='absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0' />
+
       {/* Priority Badge */}
-      <div className="absolute top-4 right-4 z-10">
-        <div className={`text-xs bg-gradient-to-r ${priorityColor} text-white px-3 py-1 rounded-full font-medium shadow-lg`}>
+      <div className='absolute top-4 right-4 z-10'>
+        <div
+          className={`text-xs bg-gradient-to-r ${priorityColor} text-white px-3 py-1 rounded-full font-medium shadow-lg`}
+        >
           {priorityLabel}
         </div>
       </div>
 
       {/* Featured Badge */}
       {featured && (
-        <div className="absolute top-4 left-4 z-10">
-          <div className="text-xs bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full font-medium shadow-lg flex items-center gap-1">
-            <Star className="w-3 h-3"  />
+        <div className='absolute top-4 left-4 z-10'>
+          <div className='text-xs bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full font-medium shadow-lg flex items-center gap-1'>
+            <Star className='w-3 h-3' />
             Featured
           </div>
         </div>
       )}
 
       {/* Header Section */}
-      <div className="relative z-10 mb-6">
-        <div className="flex items-start justify-between mb-4">
-          <div className={`w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 rounded-xl flex items-center justify-center shadow-lg`}>
-            <CategoryIcon className="w-6 h-6 text-white"  />
+      <div className='relative z-10 mb-6'>
+        <div className='flex items-start justify-between mb-4'>
+          <div
+            className={`w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 rounded-xl flex items-center justify-center shadow-lg`}
+          >
+            <CategoryIcon className='w-6 h-6 text-white' />
           </div>
-          <div className="text-xs bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full font-medium">
+          <div className='text-xs bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full font-medium'>
             {type}
           </div>
         </div>
-        
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors duration-30o0 line-clamp-2">
+
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors duration-30o0 line-clamp-2'>
           {name}
         </h3>
-        
-        <p className="text-sm text-cyan-40o0 font-medium mb-2">
-          {tagline}
-        </p>
-        
-        <p className="text-white/70 text-sm leading-relaxed line-clamp-3">
+
+        <p className='text-sm text-cyan-40o0 font-medium mb-2'>{tagline}</p>
+
+        <p className='text-white/70 text-sm leading-relaxed line-clamp-3'>
           {description}
         </p>
       </div>
 
       {/* Quick Stats */}
-      <div className="relative z-10 mb-6">
-        <div className="grid grid-cols-2 gap-3">
-          <div className="flex items-center gap-2 text-xs text-white/70">
-            <Users className="w-3 h-3 text-cyan-40o0"  />
-            <span className="truncate">{targetAudience.split(',')[0]}</span>
+      <div className='relative z-10 mb-6'>
+        <div className='grid grid-cols-2 gap-3'>
+          <div className='flex items-center gap-2 text-xs text-white/70'>
+            <Users className='w-3 h-3 text-cyan-40o0' />
+            <span className='truncate'>{targetAudience.split(',')[0]}</span>
           </div>
-          <div className="flex items-center gap-2 text-xs text-white/70">
-            <TrendingUp className="w-3 h-3 text-yellow-40o0"  />
-            <span className="truncate">{marketSize}</span>
+          <div className='flex items-center gap-2 text-xs text-white/70'>
+            <TrendingUp className='w-3 h-3 text-yellow-40o0' />
+            <span className='truncate'>{marketSize}</span>
           </div>
         </div>
       </div>
 
       {/* Features Preview */}
-      <div className="relative z-10 mb-6">
-        <h4 className="text-sm font-semibold text-white/90 mb-3 flex items-center gap-2">
-          <CheckCircle className="w-4 h-4 text-cyan-40o0"  />
+      <div className='relative z-10 mb-6'>
+        <h4 className='text-sm font-semibold text-white/90 mb-3 flex items-center gap-2'>
+          <CheckCircle className='w-4 h-4 text-cyan-40o0' />
           Key Features
         </h4>
-        <div className="space-y-2">
+        <div className='space-y-2'>
           {features.slice(0, 3).map((feature, index) => (
-            <div key={index} className="flex items-center gap-2 text-sm text-white/70">
-              <div className="w-1.5 h-1.5 bg-cyan-40o0 rounded-full flex-shrink-0"  />
-              <span className="truncate">{feature}</span>
+            <div
+              key={index}
+              className='flex items-center gap-2 text-sm text-white/70'
+            >
+              <div className='w-1.5 h-1.5 bg-cyan-40o0 rounded-full flex-shrink-0' />
+              <span className='truncate'>{feature}</span>
             </div>
           ))}
           {features.length > 3 && (
-            <div className="text-xs text-cyan-40o0">
+            <div className='text-xs text-cyan-40o0'>
               +{features.length - 3} more features
             </div>
           )}
@@ -221,16 +241,19 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       {/* Benefits Preview */}
-      <div className="relative z-10 mb-6">
-        <h4 className="text-sm font-semibold text-white/90 mb-3 flex items-center gap-2">
-          <Zap className="w-4 h-4 text-yellow-40o0"  />
+      <div className='relative z-10 mb-6'>
+        <h4 className='text-sm font-semibold text-white/90 mb-3 flex items-center gap-2'>
+          <Zap className='w-4 h-4 text-yellow-40o0' />
           Key Benefits
         </h4>
-        <div className="space-y-2">
+        <div className='space-y-2'>
           {benefits.slice(0, 2).map((benefit, index) => (
-            <div key={index} className="flex items-center gap-2 text-sm text-white/70">
-              <div className="w-1.5 h-1.5 bg-yellow-40o0 rounded-full flex-shrink-0"  />
-              <span className="truncate">{benefit}</span>
+            <div
+              key={index}
+              className='flex items-center gap-2 text-sm text-white/70'
+            >
+              <div className='w-1.5 h-1.5 bg-yellow-40o0 rounded-full flex-shrink-0' />
+              <span className='truncate'>{benefit}</span>
             </div>
           ))}
         </div>
@@ -238,15 +261,21 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Technology & Compliance Tags */}
       {(technology.length > 0 || compliance.length > 0) && (
-        <div className="relative z-10 mb-6">
-          <div className="flex flex-wrap gap-2">
+        <div className='relative z-10 mb-6'>
+          <div className='flex flex-wrap gap-2'>
             {technology.slice(0, 3).map((tech, index) => (
-              <span key={index} className="text-xs bg-blue-50o0/20 text-blue-40o0 px-2 py-1 rounded-full">
+              <span
+                key={index}
+                className='text-xs bg-blue-50o0/20 text-blue-40o0 px-2 py-1 rounded-full'
+              >
                 {tech}
               </span>
             ))}
             {compliance.slice(0, 2).map((comp, index) => (
-              <span key={index} className="text-xs bg-green-50o0/20 text-green-40o0 px-2 py-1 rounded-full">
+              <span
+                key={index}
+                className='text-xs bg-green-50o0/20 text-green-40o0 px-2 py-1 rounded-full'
+              >
                 {comp}
               </span>
             ))}
@@ -255,42 +284,40 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
       )}
 
       {/* Pricing & CTA */}
-      <div className="relative z-10 mt-auto">
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-2xl font-bold text-cyan-40o0">
+      <div className='relative z-10 mt-auto'>
+        <div className='flex items-center justify-between mb-4'>
+          <div className='text-2xl font-bold text-cyan-40o0'>
             {pricing.starter}
           </div>
-          <div className="text-xs text-white/50">
-            Starting from
-          </div>
+          <div className='text-xs text-white/50'>Starting from</div>
         </div>
-        
-        <div className="flex gap-2">
+
+        <div className='flex gap-2'>
           <button
             onClick={handleLearnMore}
-            className="flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 text-cyan-40o0 font-medium rounded-xl transition-all duration-30o0 hover:from-cyan-50o0/30 hover:to-purple-50o0/30 hover:border-cyan-40o0/50 hover:scale-10o5"
+            className='flex-1 group/btn relative px-4 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 text-cyan-40o0 font-medium rounded-xl transition-all duration-30o0 hover:from-cyan-50o0/30 hover:to-purple-50o0/30 hover:border-cyan-40o0/50 hover:scale-10o5'
           >
-            <span className="flex items-center justify-center gap-2">
+            <span className='flex items-center justify-center gap-2'>
               Learn More
-              <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-30o0"  />
+              <ExternalLink className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-30o0' />
             </span>
           </button>
-          
+
           <button
             onClick={handleLearnMore}
-            className="px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-medium rounded-xl transition-all duration-30o0 hover:from-cyan-60o0 hover:to-purple-60o0 hover:scale-10o5"
+            className='px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-medium rounded-xl transition-all duration-30o0 hover:from-cyan-60o0 hover:to-purple-60o0 hover:scale-10o5'
           >
-            <ArrowRight className="w-4 h-4"  />
+            <ArrowRight className='w-4 h-4' />
           </button>
         </div>
       </div>
 
       {/* Hover Effect Overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 rounded-2xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 pointer-events-none"
+        className='absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 rounded-2xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 pointer-events-none'
         initial={false}
         animate={{ opacity: isHovered ? 1 : 0 }}
-       />
+      />
 
       {/* Expandable Details */}
       <AnimatePresence>
@@ -300,23 +327,30 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="mt-6 pt-6 border-t border-white/10"
+            className='mt-6 pt-6 border-t border-white/10'
           >
-            <div className="space-y-4">
+            <div className='space-y-4'>
               <div>
-                <h5 className="text-sm font-semibold text-white/90 mb-2">Use Cases</h5>
-                <div className="flex flex-wrap gap-2">
+                <h5 className='text-sm font-semibold text-white/90 mb-2'>
+                  Use Cases
+                </h5>
+                <div className='flex flex-wrap gap-2'>
                   {useCases.slice(0, 4).map((useCase, index) => (
-                    <span key={index} className="text-xs bg-white/10 text-white/70 px-2 py-1 rounded-full">
+                    <span
+                      key={index}
+                      className='text-xs bg-white/10 text-white/70 px-2 py-1 rounded-full'
+                    >
                       {useCase}
                     </span>
                   ))}
                 </div>
               </div>
-              
+
               <div>
-                <h5 className="text-sm font-semibold text-white/90 mb-2">Competitive Advantage</h5>
-                <p className="text-sm text-white/70">{competitiveAdvantage}</p>
+                <h5 className='text-sm font-semibold text-white/90 mb-2'>
+                  Competitive Advantage
+                </h5>
+                <p className='text-sm text-white/70'>{competitiveAdvantage}</p>
               </div>
             </div>
           </motion.div>
@@ -325,11 +359,11 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Expand/Collapse Button */}
       <button
-        onClick={(e) => {
+        onClick={e => {
           e.stopPropagation();
           setShowDetails(!showDetails);
         }}
-        className="absolute bottom-4 right-4 text-xs text-white/50 hover:text-white transition-colors duration-20o0"
+        className='absolute bottom-4 right-4 text-xs text-white/50 hover:text-white transition-colors duration-20o0'
       >
         {showDetails ? 'Show Less' : 'Show More'}
       </button>

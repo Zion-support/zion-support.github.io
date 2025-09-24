@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:backup-merge-conflicts/ultimateComprehensiveServices2025.ts.backup
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';
@@ -41,7 +40,6 @@ export interface UltimateComprehensiveService2025 {;
 import { ADVANCED_MICRO_SAAS_SERVICES_2025, AdvancedMicroSaasService2025 } from './advancedMicroSaasServices2025';
 import { ADVANCED_IT_SERVICES_2025, AdvancedITService2025 } from './advancedITServices2025';
 import { ADVANCED_AI_SERVICES_2025, AdvancedAIService2025 } from './advancedAIServices2025';
-=======
 export interface UltimateComprehensiveService2025 {
   "id": string;
   title: string;
@@ -300,7 +298,6 @@ export const getUltimateServiceStats = () => {
     "pricingTiers": ULTIMATE_PRICING_TIERS.map(tier => ({
       ...tier,
       "count": ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service => {
->>>>>>> pr-11935
         if (tier.id === 'budget') return service.price >= 1000 && service.price < 3000;
         if (tier.id === 'mid-range') return service.price >= 3000 && service.price < 7000;
         if (tier.id === 'enterprise') return service.price >= 7000;

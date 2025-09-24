@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export { default } from "../../components/AI2026UltimateShowcaseBanner";
 "use client";
 
@@ -16,7 +15,6 @@ const AI2026UltimateShowcaseBanner: React.FC = () => {
 
 export default AI2026UltimateShowcaseBanner;
 
-=======
 'use client';
 
 export default function AI2026UltimateShowcaseBanner() {
@@ -27,4 +25,3 @@ export default function AI2026UltimateShowcaseBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026UltimateShowcaseBanner.tsx

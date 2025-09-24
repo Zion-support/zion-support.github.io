@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PricingSuggestionBox from '@/components/monetization/PricingSuggestionBox';
 import axios from 'axios';
 
-export type ClientBudgetRecommenderProps ={
+export type ClientBudgetRecommenderProps = {
   // Integrate into Job Post Form
   title: string;
   category: string;
@@ -12,7 +12,9 @@ export type ClientBudgetRecommenderProps ={
   onApplySuggestion?: (min: number, max: number) => void;
 };
 
-export default function ClientBudgetRecommender(props: ClientBudgetRecommenderProps) {
+export default function ClientBudgetRecommender(
+  props: ClientBudgetRecommenderProps
+) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [suggestion, setSuggestion] = useState<{
@@ -31,10 +33,16 @@ export default function ClientBudgetRecommender(props: ClientBudgetRecommenderPr
         category: props.category,
         timelineWeeks: props.timelineWeeks,
         scope: props.scope,
-        experienceLevel: props.experienceLevel});
+        experienceLevel: props.experienceLevel,
+      });
       const s = res.data?.suggestion;
       if (s) {
-        setSuggestion({ min: s.min, max: s.max, confidence: s.confidence, rationale: s.rationale });
+        setSuggestion({
+          min: s.min,
+          max: s.max,
+          confidence: s.confidence,
+          rationale: s.rationale,
+        });
       }
     } catch (e) {
       setError('Could not get suggestion');
@@ -44,29 +52,37 @@ export default function ClientBudgetRecommender(props: ClientBudgetRecommenderPr
   }
 
   function formatUSD(n: number) {
-    return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    return n.toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
   }
 
-  const rangeText = suggestion ? `${formatUSD(suggestion.min)}–${formatUSD(suggestion.max)}` : '';
+  const rangeText = suggestion
+    ? `${formatUSD(suggestion.min)}–${formatUSD(suggestion.max)}`
+    : '';
 
   return (
-    <div className="space-y-3">
+    <div className='space-y-3'>
       <button
-        type="button"
+        type='button'
         onClick={fetchSuggestion}
         disabled={loading}
-        className="inline-flex items-center rounded-md bg-gray-90o0 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50"
+        className='inline-flex items-center rounded-md bg-gray-90o0 px-3 py-1.5 text-sm font-medium text-white hover:bg-black disabled:opacity-50'
       >
         {loading ? 'Generating…' : 'Suggest Budget with AI'}
       </button>
-      {error && <div className="text-sm text-red-60o0">{error}</div>}
+      {error && <div className='text-sm text-red-60o0'>{error}</div>}
       {suggestion && (
         <PricingSuggestionBox
-          type="client"
+          type='client'
           rangeText={rangeText}
           confidence={suggestion.confidence}
           rationale={suggestion.rationale}
-          onApply={() => props.onApplySuggestion?.(suggestion.min, suggestion.max)}
+          onApply={() =>
+            props.onApplySuggestion?.(suggestion.min, suggestion.max)
+          }
         />
       )}
     </div>

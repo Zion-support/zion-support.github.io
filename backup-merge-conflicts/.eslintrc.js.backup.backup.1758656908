@@ -1,6 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
 export default {
-=======
 =======
 <<<<<<< HEAD:.eslintrc.js
 <<<<<<< HEAD
@@ -84,9 +82,7 @@ export default {
 module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
 =======
 =======
->>>>>>> pr-11935
 module.exports = {
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
     'no-useless-escape': 'warn'
   extends: [
     'next/core-web-vitals',
@@ -98,8 +94,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
 <<<<<<< HEAD
 <<<<<<< HEAD:.eslintrc.js
-=======
->>>>>>> pr-11935
     '@typescript-eslint/no-explicit-any': 'warn',
     'no-console': 'off',
     'react/no-unescaped-entities': 'warn',
@@ -123,7 +117,6 @@ module.exports = {
 =======
 =======
 =======
-<<<<<<< HEAD:.eslintrc.js
     es2021: true,
   },
 <<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
@@ -134,7 +127,6 @@ module.exports = {
     dom: true
   },
 <<<<<<< HEAD:backup-merge-conflicts/.eslintrc.js.backup
-=======
 <<<<<<< HEAD:.eslintrc.js
   globals: {
     KeyboardEvent: 'readonly',
@@ -190,7 +182,6 @@ module.exports = {
 };
 =======
 };
->>>>>>> main
 >>>>>>> main
 >>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.js.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

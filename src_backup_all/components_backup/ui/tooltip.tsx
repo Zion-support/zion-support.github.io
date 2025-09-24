@@ -1,4 +1,4 @@
-type TooltipProps ={
+type TooltipProps = {
   children: React.ReactNode;
   content: React.ReactNode;
   className?: string;
@@ -13,4 +13,3 @@ export function Tooltip({ children, content }: TooltipProps) {
 }
 
 export default Tooltip;
-

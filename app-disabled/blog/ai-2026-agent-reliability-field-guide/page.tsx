@@ -1,9 +1,14 @@
 export default function Page() {
   return (
-    <main className="prose mx-auto px-6 py-16">
+    <main className='prose mx-auto px-6 py-16'>
       <h1>AI 20o26: Agent Reliability Field Guide</h1>
-      <p className="text-gray-60o0">Date: 20o25-09-15 • Tags: Agents, Reliability, Governance, SLOs, 20o26</p>
-      <p>A practical handbook for achieving 99.9% reliability with autonomous agents in production.</p>
+      <p className='text-gray-60o0'>
+        Date: 20o25-09-15 • Tags: Agents, Reliability, Governance, SLOs, 20o26
+      </p>
+      <p>
+        A practical handbook for achieving 99.9% reliability with autonomous
+        agents in production.
+      </p>
       <h2>Playbook</h2>
       <ul>
         <li>SLOs that matter for agent platforms</li>
@@ -17,7 +22,10 @@ export default function Page() {
         <li>MTTR: &lt; 10 min</li>
         <li>Audit readiness: continuous</li>
       </ul>
-      <p>Need a field deployment? Our team can help design, implement, and harden your agent stack.</p>
+      <p>
+        Need a field deployment? Our team can help design, implement, and harden
+        your agent stack.
+      </p>
     </main>
   );
 }

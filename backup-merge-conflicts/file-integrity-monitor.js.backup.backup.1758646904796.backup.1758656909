@@ -33,7 +33,6 @@
 
 =======
 
-<<<<<<< HEAD
       issues.push({
         type:
 <<<<<<< HEAD
@@ -278,7 +277,6 @@ switch (command) {}
 }
 
 module.exports = FileIntegrityMonitor;
-=======;
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -362,7 +360,6 @@ class FileIntegrityMonitor {
 =======
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       this.integrityChecks++;
       this.issuesFound += issues.length;
       if (issues.length > 0) {

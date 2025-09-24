@@ -1,10 +1,32 @@
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  Monitor,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,
 } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
@@ -28,11 +50,27 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Search, Grid, List,
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
-  Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
+import {
+  Search,
+  Grid,
+  List,
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Rocket,
+  ArrowRight,
+  Check,
+  Palette,
+  Heart,
+  Truck,
+  GraduationCap,
+  Users,
+  DollarSign,
+  Settings,
+  TrendingUp,
+  BarChart3,
+  ChevronDown,
 } from 'lucide-react';
 import UltraFuturisticBackground20o29 from '../components/backgrounds/UltraFuturisticBackground20o29';
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29';
@@ -65,14 +103,14 @@ const allServices = [
   ...innovativeITServices20o25,
   ...emergingTechServices20o25,
   ...additionalRealServices20o25,
-  ...newInnovativeAIServices
+  ...newInnovativeAIServices,
 ];
 
-const contactInfo ={
+const contactInfo = {
   mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 10o08 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 const serviceCategories: Array<{
@@ -87,11 +125,12 @@ const serviceCategories: Array<{
   {
     id: 'ai-consciousness',
     title: '🧠 AI & Consciousness',
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    description:
+      'Revolutionary AI consciousness and emotional intelligence platforms',
     icon: Brain,
     color: 'from-violet-50o0 to-purple-50o0',
     services: [...innovativeAIServices20o25],
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20',
   },
   {
     id: 'quantum-emerging',
@@ -100,7 +139,7 @@ const serviceCategories: Array<{
     icon: Atom,
     color: 'from-indigo-50o0 to-blue-50o0',
     services: [...emergingTechServices20o25],
-    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20'
+    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20',
   },
   {
     id: 'enterprise-it',
@@ -109,7 +148,7 @@ const serviceCategories: Array<{
     icon: Shield,
     color: 'from-blue-50o0 to-cyan-50o0',
     services: [...innovativeITServices20o25],
-    gradient: 'from-blue-50o0/20 to-teal-50o0/20'
+    gradient: 'from-blue-50o0/20 to-teal-50o0/20',
   },
   {
     id: 'space-metaverse',
@@ -118,7 +157,7 @@ const serviceCategories: Array<{
     icon: Rocket,
     color: 'from-teal-50o0 to-emerald-50o0',
     services: [...quantumSpaceServices],
-    gradient: 'from-teal-50o0/20 to-green-50o0/20'
+    gradient: 'from-teal-50o0/20 to-green-50o0/20',
   },
   {
     id: 'micro-saas',
@@ -127,7 +166,7 @@ const serviceCategories: Array<{
     icon: Target,
     color: 'from-green-50o0 to-yellow-50o0',
     services: [...realMicroSaasServices20o25, ...enhancedRealMicroSaasServices],
-    gradient: 'from-green-50o0/20 to-orange-50o0/20'
+    gradient: 'from-green-50o0/20 to-orange-50o0/20',
   },
   {
     id: 'financial-technology',
@@ -136,7 +175,7 @@ const serviceCategories: Array<{
     icon: TrendingUp,
     color: 'from-green-50o0 to-emerald-50o0',
     services: [...innovativeFinancialServices20o25],
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20'
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
   },
   {
     id: 'healthcare-biotech',
@@ -145,7 +184,7 @@ const serviceCategories: Array<{
     icon: Shield,
     color: 'from-blue-50o0 to-indigo-50o0',
     services: [...innovativeHealthcareServices20o25],
-    gradient: 'from-blue-50o0/20 to-indigo-50o0/20'
+    gradient: 'from-blue-50o0/20 to-indigo-50o0/20',
   },
   {
     id: 'education-technology',
@@ -154,7 +193,7 @@ const serviceCategories: Array<{
     icon: Brain,
     color: 'from-purple-50o0 to-pink-50o0',
     services: [...innovativeEducationServices20o25],
-    gradient: 'from-purple-50o0/20 to-pink-50o0/20'
+    gradient: 'from-purple-50o0/20 to-pink-50o0/20',
   },
   {
     id: 'sustainability-green-tech',
@@ -163,7 +202,7 @@ const serviceCategories: Array<{
     icon: Globe,
     color: 'from-emerald-50o0 to-teal-50o0',
     services: [...innovativeSustainabilityServices20o25],
-    gradient: 'from-emerald-50o0/20 to-teal-50o0/20'
+    gradient: 'from-emerald-50o0/20 to-teal-50o0/20',
   },
   {
     id: 'logistics-supply-chain',
@@ -172,7 +211,7 @@ const serviceCategories: Array<{
     icon: Rocket,
     color: 'from-orange-50o0 to-red-50o0',
     services: [...innovativeLogisticsServices20o25],
-    gradient: 'from-orange-50o0/20 to-red-50o0/20'
+    gradient: 'from-orange-50o0/20 to-red-50o0/20',
   },
   {
     id: 'research-development',
@@ -180,62 +219,62 @@ const serviceCategories: Array<{
     description: 'Breakthrough technologies and innovations',
     icon: Microscope,
     color: 'from-red-50o0 to-pink-50o0',
-    description: 'Advanced healthcare solutions'
+    description: 'Advanced healthcare solutions',
   },
   {
     id: 'transportation-logistics',
     name: 'Transportation & Logistics',
-    icon: <Truck className="w-6 h-6"  />,
+    icon: <Truck className='w-6 h-6' />,
     color: 'from-blue-50o0 to-cyan-50o0',
-    description: 'Smart transportation solutions'
+    description: 'Smart transportation solutions',
   },
   {
     id: 'education-research',
     name: 'Education & Research',
-    icon: <GraduationCap className="w-6 h-6"  />,
+    icon: <GraduationCap className='w-6 h-6' />,
     color: 'from-yellow-50o0 to-orange-50o0',
-    description: 'Learning and research platforms'
+    description: 'Learning and research platforms',
   },
   {
     id: 'customer-success',
     name: 'Customer Success',
-    icon: <Users className="w-6 h-6"  />,
+    icon: <Users className='w-6 h-6' />,
     color: 'from-blue-50o0 to-indigo-60o0',
-    description: 'AI-powered customer success and retention'
+    description: 'AI-powered customer success and retention',
   },
   {
     id: 'financial-technology',
     name: 'Financial Technology',
-    icon: <DollarSign className="w-6 h-6"  />,
+    icon: <DollarSign className='w-6 h-6' />,
     color: 'from-green-50o0 to-emerald-60o0',
-    description: 'Quantum and AI-powered financial solutions'
+    description: 'Quantum and AI-powered financial solutions',
   },
   {
     id: 'devops-infrastructure',
     name: 'DevOps & Infrastructure',
-    icon: <Settings className="w-6 h-6"  />,
+    icon: <Settings className='w-6 h-6' />,
     color: 'from-purple-50o0 to-pink-60o0',
-    description: 'AI-powered DevOps and infrastructure automation'
+    description: 'AI-powered DevOps and infrastructure automation',
   },
   {
     id: 'cybersecurity',
     name: 'Cybersecurity',
-    icon: <Shield className="w-6 h-6"  />,
+    icon: <Shield className='w-6 h-6' />,
     color: 'from-red-50o0 to-pink-60o0',
-    description: 'Quantum-resistant security solutions'
+    description: 'Quantum-resistant security solutions',
   },
   {
     id: 'sales-marketing',
     name: 'Sales & Marketing',
-    icon: <TrendingUp className="w-6 h-6"  />,
+    icon: <TrendingUp className='w-6 h-6' />,
     color: 'from-orange-50o0 to-red-60o0',
-    description: 'AI-powered sales and marketing automation'
+    description: 'AI-powered sales and marketing automation',
   },
   {
     id: 'data-analytics',
     name: 'Data & Analytics',
-    icon: <BarChart3 className="w-6 h-6"  />,
+    icon: <BarChart3 className='w-6 h-6' />,
     color: 'from-indigo-50o0 to-purple-60o0',
-    description: 'Quantum-powered data analytics and insights'
-  }
+    description: 'Quantum-powered data analytics and insights',
+  },
 ];

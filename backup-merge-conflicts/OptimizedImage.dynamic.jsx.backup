@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled_full/OptimizedImage.dynamic.jsx
 const OptimizedImage = dynamic(() => import(\"./OptimizedImage\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default OptimizedImage\' ,
-=======
 =======
 const OptimizedImage = dynamic(() => import("./OptimizedImage"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default OptimizedImage' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

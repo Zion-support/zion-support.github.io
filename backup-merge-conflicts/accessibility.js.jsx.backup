@@ -138,7 +138,6 @@ export function AccessibilityPanel(props: any) {
                 </button>;
               </div>;
 
-<<<<<<< HEAD
               {/* Visual Settings */"}
               <div className="space-y-4">;
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>;
@@ -151,9 +150,7 @@ export function AccessibilityPanel(props: any) {
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual
                 
-=======
                 
->>>>>>> pr-11935
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">;
                   <div className="flex items-center gap-3">;

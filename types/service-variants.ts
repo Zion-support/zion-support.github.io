@@ -1,10 +1,9 @@
-export type ServiceVariant = 
+export type ServiceVariant =
   | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
   | 'neural'
-
   | 'quantum-advanced'
   | 'holographic-advanced'
   | 'neural-quantum'
@@ -50,7 +49,6 @@ export type ServiceVariant =
   | 'autonomous-futuristic'
   | 'enterprise-futuristic'
   | 'holographic-futuristic'
-
   | 'ai-revolutionary'
   | 'quantum-revolutionary'
   | 'ai-quantum-revolutionary'
@@ -77,5 +75,4 @@ export type ServiceVariant =
   | 'integration-futuristic'
   | 'monitoring-futuristic'
   | 'backup-futuristic'
-  | 'analytics-futuristic'
-
+  | 'analytics-futuristic';

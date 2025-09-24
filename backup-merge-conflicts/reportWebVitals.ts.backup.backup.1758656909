@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src/reportWebVitals.ts
 <<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
 =======
->>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -28,7 +25,6 @@ function defaultReporter($1): void {
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
 =======
-<<<<<<< HEAD
   .rating,
   }
     );
@@ -65,8 +61,6 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
 }
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
       try { onCLS && onCLS(reporter)} catch {}
       try { onFID && onFID(reporter)} catch {}
       try { onFCP && onFCP(reporter)} catch {}
@@ -75,9 +69,6 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     })';
     .catch(() => {
       // ignore if web-vitals isn't available
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-=======
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

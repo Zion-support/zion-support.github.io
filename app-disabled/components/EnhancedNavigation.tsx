@@ -29,7 +29,7 @@ const EnhancedNavigation: React.FC = () => {
       label: 'Home',
       href: '/',
       icon: '🏠',
-      description: 'AI Innovation Hub'
+      description: 'AI Innovation Hub',
     },
     {
       id: 'content',
@@ -44,23 +44,23 @@ const EnhancedNavigation: React.FC = () => {
           label: 'Blog Posts',
           href: '/blog',
           description: 'Latest AI insights and breakthroughs',
-          metrics: { count: 25, roi: '5,0o00%' }
+          metrics: { count: 25, roi: '5,0o00%' },
         },
         {
           id: 'case-studies',
           label: 'Case Studies',
           href: '/case-studies',
           description: 'Real-world success stories',
-          metrics: { count: 15, roi: '15,0o00%' }
+          metrics: { count: 15, roi: '15,0o00%' },
         },
         {
           id: 'resources',
           label: 'Resources',
           href: '/resources',
           description: 'Implementation guides and tools',
-          metrics: { count: 20, roi: '25,0o00%' }
-        }
-      ]
+          metrics: { count: 20, roi: '25,0o00%' },
+        },
+      ],
     },
     {
       id: 'services',
@@ -74,23 +74,23 @@ const EnhancedNavigation: React.FC = () => {
           label: 'Business Intelligence',
           href: '/services/business-intelligence',
           description: '15,0o00% ROI BI Solutions',
-          metrics: { roi: '15,0o00%' }
+          metrics: { roi: '15,0o00%' },
         },
         {
           id: 'automation',
           label: 'Process Automation',
           href: '/services/automation',
           description: '5,0o00% ROI Automation',
-          metrics: { roi: '5,0o00%' }
+          metrics: { roi: '5,0o00%' },
         },
         {
           id: 'quantum-ai',
           label: 'Quantum AI',
           href: '/services/quantum-ai',
           description: '25,0o00% ROI Quantum Solutions',
-          metrics: { roi: '25,0o00%' }
-        }
-      ]
+          metrics: { roi: '25,0o00%' },
+        },
+      ],
     },
     {
       id: 'calculator',
@@ -98,15 +98,15 @@ const EnhancedNavigation: React.FC = () => {
       href: '/calculator',
       icon: '🧮',
       description: 'Calculate Your AI ROI',
-      featured: true
+      featured: true,
     },
     {
       id: 'about',
       label: 'About',
       href: '/about',
       icon: 'ℹ️',
-      description: 'Our Mission & Vision'
-    }
+      description: 'Our Mission & Vision',
+    },
   ];
 
   const isActive = (href: string) => {
@@ -127,7 +127,10 @@ const EnhancedNavigation: React.FC = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (isOpen && !(event.target as Element).closest('.navigation-container')) {
+      if (
+        isOpen &&
+        !(event.target as Element).closest('.navigation-container')
+      ) {
         setIsOpen(false);
         setActiveDropdown(null);
       }
@@ -138,25 +141,29 @@ const EnhancedNavigation: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 navigation-container">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className='bg-white shadow-lg sticky top-0 z-50 navigation-container'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={handleLinkClick}>
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
+          <Link
+            href='/'
+            className='flex items-center space-x-2'
+            onClick={handleLinkClick}
+          >
+            <div className='text-2xl font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent'>
               AI Innovation Hub
             </div>
-            <div className="px-2 py-1 bg-green-10o0 text-green-80o0 text-xs font-medium rounded-full">
+            <div className='px-2 py-1 bg-green-10o0 text-green-80o0 text-xs font-medium rounded-full'>
               20o25
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.id} className="relative group">
+          <div className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.map(item => (
+              <div key={item.id} className='relative group'>
                 {item.children ? (
-                  <div className="relative">
+                  <div className='relative'>
                     <button
                       onClick={() => handleDropdownToggle(item.id)}
                       className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -168,41 +175,63 @@ const EnhancedNavigation: React.FC = () => {
                       <span>{item.icon}</span>
                       <span>{item.label}</span>
                       {item.featured && (
-                        <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
+                        <span className='px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full'>
                           New
                         </span>
                       )}
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
+                      <svg
+                        className='h-4 w-4'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M19 9l-7 7-7-7'
+                        />
                       </svg>
                     </button>
 
                     {/* Dropdown */}
                     {activeDropdown === item.id && (
-                      <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-20o0 py-2 z-50">
-                        <div className="px-4 py-2 border-b border-gray-10o0">
-                          <h3 className="font-semibold text-gray-90o0">{item.label}</h3>
-                          <p className="text-sm text-gray-60o0">{item.description}</p>
+                      <div className='absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-20o0 py-2 z-50'>
+                        <div className='px-4 py-2 border-b border-gray-10o0'>
+                          <h3 className='font-semibold text-gray-90o0'>
+                            {item.label}
+                          </h3>
+                          <p className='text-sm text-gray-60o0'>
+                            {item.description}
+                          </p>
                         </div>
-                        <div className="py-2">
-                          {item.children.map((child) => (
+                        <div className='py-2'>
+                          {item.children.map(child => (
                             <Link
                               key={child.id}
                               href={child.href}
                               onClick={handleLinkClick}
-                              className="flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors"
+                              className='flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors'
                             >
                               <div>
-                                <div className="font-medium text-gray-90o0">{child.label}</div>
-                                <div className="text-sm text-gray-60o0">{child.description}</div>
+                                <div className='font-medium text-gray-90o0'>
+                                  {child.label}
+                                </div>
+                                <div className='text-sm text-gray-60o0'>
+                                  {child.description}
+                                </div>
                               </div>
                               {child.metrics && (
-                                <div className="text-right">
+                                <div className='text-right'>
                                   {child.metrics.count && (
-                                    <div className="text-xs text-gray-50o0">{child.metrics.count} items</div>
+                                    <div className='text-xs text-gray-50o0'>
+                                      {child.metrics.count} items
+                                    </div>
                                   )}
                                   {child.metrics.roi && (
-                                    <div className="text-xs font-medium text-green-60o0">{child.metrics.roi} ROI</div>
+                                    <div className='text-xs font-medium text-green-60o0'>
+                                      {child.metrics.roi} ROI
+                                    </div>
                                   )}
                                 </div>
                               )}
@@ -225,7 +254,7 @@ const EnhancedNavigation: React.FC = () => {
                     <span>{item.icon}</span>
                     <span>{item.label}</span>
                     {item.featured && (
-                      <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
+                      <span className='px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full'>
                         New
                       </span>
                     )}
@@ -236,10 +265,10 @@ const EnhancedNavigation: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className='hidden lg:flex items-center space-x-4'>
             <Link
-              href="/contact"
-              className="px-4 py-2 bg-blue-60o0 text-white text-sm font-medium rounded-lg hover:bg-blue-70o0 transition-colors"
+              href='/contact'
+              className='px-4 py-2 bg-blue-60o0 text-white text-sm font-medium rounded-lg hover:bg-blue-70o0 transition-colors'
             >
               Get Started
             </Link>
@@ -248,47 +277,67 @@ const EnhancedNavigation: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50"
+            className='lg:hidden p-2 rounded-lg text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50'
           >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />
+            <svg
+              className='h-6 w-6'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M4 6h16M4 12h16M4 18h16'
+              />
             </svg>
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-gray-20o0 py-4">
-            <div className="space-y-2">
-              {navigationItems.map((item) => (
+          <div className='lg:hidden border-t border-gray-20o0 py-4'>
+            <div className='space-y-2'>
+              {navigationItems.map(item => (
                 <div key={item.id}>
                   {item.children ? (
                     <div>
                       <button
                         onClick={() => handleDropdownToggle(item.id)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
+                        className='flex items-center justify-between w-full px-3 py-2 text-left text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg'
                       >
-                        <div className="flex items-center space-x-2">
+                        <div className='flex items-center space-x-2'>
                           <span>{item.icon}</span>
                           <span>{item.label}</span>
                           {item.featured && (
-                            <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
+                            <span className='px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full'>
                               New
                             </span>
                           )}
                         </div>
-                        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />
+                        <svg
+                          className='h-4 w-4'
+                          fill='none'
+                          stroke='currentColor'
+                          viewBox='0 0 24 24'
+                        >
+                          <path
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            strokeWidth={2}
+                            d='M19 9l-7 7-7-7'
+                          />
                         </svg>
                       </button>
                       {activeDropdown === item.id && (
-                        <div className="ml-6 mt-2 space-y-1">
-                          {item.children.map((child) => (
+                        <div className='ml-6 mt-2 space-y-1'>
+                          {item.children.map(child => (
                             <Link
                               key={child.id}
                               href={child.href}
                               onClick={handleLinkClick}
-                              className="block px-3 py-2 text-sm text-gray-60o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
+                              className='block px-3 py-2 text-sm text-gray-60o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg'
                             >
                               {child.label}
                             </Link>
@@ -300,12 +349,12 @@ const EnhancedNavigation: React.FC = () => {
                     <Link
                       href={item.href}
                       onClick={handleLinkClick}
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg"
+                      className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-70o0 hover:text-blue-60o0 hover:bg-gray-50 rounded-lg'
                     >
                       <span>{item.icon}</span>
                       <span>{item.label}</span>
                       {item.featured && (
-                        <span className="px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full">
+                        <span className='px-1.5 py-0.5 bg-yellow-10o0 text-yellow-80o0 text-xs rounded-full'>
                           New
                         </span>
                       )}
@@ -314,11 +363,11 @@ const EnhancedNavigation: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-20o0">
+            <div className='mt-4 pt-4 border-t border-gray-20o0'>
               <Link
-                href="/contact"
+                href='/contact'
                 onClick={handleLinkClick}
-                className="block w-full px-4 py-2 bg-blue-60o0 text-white text-sm font-medium text-center rounded-lg hover:bg-blue-70o0 transition-colors"
+                className='block w-full px-4 py-2 bg-blue-60o0 text-white text-sm font-medium text-center rounded-lg hover:bg-blue-70o0 transition-colors'
               >
                 Get Started
               </Link>

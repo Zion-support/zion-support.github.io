@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/SEOHead.dynamic.jsx
 const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOHead\' ,
 =======
 =======
->>>>>>> pr-11935
 const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
-<<<<<<< HEAD:backup-merge-conflicts/SEOHead.dynamic.jsx.backup
 </p>'
 <<<<<<< HEAD
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/SEOHead.dynamic.jsx
 =======
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

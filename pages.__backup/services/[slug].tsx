@@ -2,4 +2,4 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-CheckMailMapPinPhoneExternalLink
+CheckMailMapPinPhoneExternalLink;

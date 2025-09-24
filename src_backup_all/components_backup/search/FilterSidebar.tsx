@@ -3,15 +3,11 @@ interface FilterSidebarProps {
   children?: React.ReactNode;
 }
 
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   className,
-  children 
+  children,
 }) => {
-  return (
-    <div className={`filter-sidebar ${className || ''}`}>
-      {children}
-    </div>
-  );
+  return <div className={`filter-sidebar ${className || ''}`}>{children}</div>;
 };
 
 export default FilterSidebar;

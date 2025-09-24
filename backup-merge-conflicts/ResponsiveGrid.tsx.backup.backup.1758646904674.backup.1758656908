@@ -1,10 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/ResponsiveGrid.tsx.backup
 <<<<<<< HEAD
 ;
 interface ResponsiveGridProps {;
   "children": "React.ReactNode;
-=======
 =======
 interface ResponsiveGridProps {
   "children": React.ReactNode;
@@ -12,7 +10,6 @@ interface ResponsiveGridProps {
 ;
 interface ResponsiveGridProps {;
   "children": "React.ReactNode;
->>>>>>> pr-11913:src_backup_temp/components/ResponsiveGrid.tsx
   className?: string;
   cols?: {;
     sm?: number;

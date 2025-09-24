@@ -12,6 +12,8 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
+      'components/**',
+      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -30,8 +32,8 @@ export default [
       'components/20o25-comprehensive-services-showcase-v2.tsx',
       'components/AI20o25AdvancedAutomationShowcase.tsx',
       'components/AI20o25AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js'
-    ]
+      '**/*.min.js',
+    ],
   },
   eslintJs.configs.recommended,
   ...tsEslintPlugin.configs.recommended,
@@ -39,19 +41,26 @@ export default [
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}'
+      'src/**/*.{js,jsx,ts,tsx}',
     ],
     languageOptions: {
+      parser: tseslint.parser,
       ecmaVersion: 2021,
-      sourceType: 'module'
+      sourceType: 'module',
     },
-    plugins: { react, 'react-hooks': reactHooks },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin,
+    },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'no-console': 'warn',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
-    }
-  }
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' },
+      ],
+    },
+  },
 ];
-

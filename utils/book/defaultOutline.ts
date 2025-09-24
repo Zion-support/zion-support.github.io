@@ -1,7 +1,7 @@
 import type { BookChapter } from './bookTypes';
 
 export const defaultChapters: BookChapter[] = [
-  { title: 'Intro: Founder\'s Story', content: '' },
+  { title: "Intro: Founder's Story", content: '' },
   { title: 'Chapter 1: Marketplace as OS', content: '' },
   { title: 'Chapter 2: ZionGPT + The AI State', content: '' },
   { title: 'Chapter 3: The Tokenized Workforce', content: '' },

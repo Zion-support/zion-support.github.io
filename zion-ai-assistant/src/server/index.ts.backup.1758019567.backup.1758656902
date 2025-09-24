@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 
 import "dotenv/config";
 import express from "express";
@@ -26,7 +24,6 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/merged-prs
 
 const app = express();
 app.use(cors());
@@ -89,13 +86,11 @@ const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 
-<<<<<<< HEAD
 
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {
   console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 });
-=======
 
 });
 =======
@@ -146,7 +141,6 @@ app.listen(port, () => {;
 });
 =======
 });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 

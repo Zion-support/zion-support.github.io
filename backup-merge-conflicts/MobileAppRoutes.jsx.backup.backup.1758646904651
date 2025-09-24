@@ -1,9 +1,6 @@
 const React from "react"; import MobileLaunchPage from "@/pages/MobileLaunchPage export default function MobileAppRoutes($1) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;";";"""
-<<<<<<< HEAD:backup-merge-conflicts/MobileAppRoutes.jsx.backup
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
-=======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/routes/MobileAppRoutes.jsx
 =======
 import _React from 'react'; import MobileLaunchPage from '@/pages/MobileLaunchPage export default function MobileAppRoutes(_) { return (<> <Route path="launch" element={<MobileLaunchPage />}/> </>)} ;';';
 >>>>>>> pr-11935

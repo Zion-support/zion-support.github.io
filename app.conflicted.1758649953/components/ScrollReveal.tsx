@@ -1,4 +1,4 @@
-"use client";
+'use client';
 type ScrollRevealProps = React.PropsWithChildren<{
   origin?: 'bottom' | 'top' | 'left' | 'right';
   delay?: number;

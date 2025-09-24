@@ -55,7 +55,8 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     id: 'ai-quantum-fusion-2025',
     name: 'AI-Quantum Fusion Platform',
     tagline: 'Revolutionary AI-Quantum Computing Integration',
-    description: 'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',
+    description:
+      'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',
     price: '$2,999',
     period: 'monthly',
     features: [
@@ -63,32 +64,38 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
       'Real-time quantum simulation',
       'Advanced machine learning models',
       'Quantum cryptography integration',
-      'Scalable quantum processing units'
+      'Scalable quantum processing units',
     ],
     category: 'AI & Quantum Computing',
     marketSize: '$15.2B',
-    targetAudience: ['Research institutions', 'Tech companies', 'Financial services', 'Healthcare organizations'],
-    competitiveAdvantage: 'First-to-market AI-quantum fusion technology with proprietary algorithms',
+    targetAudience: [
+      'Research institutions',
+      'Tech companies',
+      'Financial services',
+      'Healthcare organizations',
+    ],
+    competitiveAdvantage:
+      'First-to-market AI-quantum fusion technology with proprietary algorithms',
     useCases: [
       'Drug discovery and molecular modeling',
       'Financial risk assessment',
       'Climate change modeling',
       'Cryptographic security',
-      'Complex optimization problems'
+      'Complex optimization problems',
     ],
     integrations: [
       'AWS Quantum',
       'IBM Quantum',
       'Google Quantum AI',
       'Microsoft Azure Quantum',
-      'Custom API endpoints'
+      'Custom API endpoints',
     ],
     compliance: ['ISO 27001', 'SOC 2 Type II', 'GDPR', 'HIPAA'],
     website: 'https://ziontechgroup.com/ai-quantum-fusion',
     contact: {
       phone: '+1-800-ZION-TECH',
       email: 'ai-quantum@ziontechgroup.com',
-      address: 'Zion Tech Group, Innovation District, Tech City'
+      address: 'Zion Tech Group, Innovation District, Tech City',
     },
     trialDays: 30,
     setupTime: '2-4 weeks',
@@ -98,7 +105,13 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     customers: 150,
     rating: 4.8,
     reviews: 89,
-    technologyStack: ['Python', 'Qiskit', 'TensorFlow', 'Quantum Assembly', 'Rust'],
+    technologyStack: [
+      'Python',
+      'Qiskit',
+      'TensorFlow',
+      'Quantum Assembly',
+      'Rust',
+    ],
     innovationLevel: 'Breakthrough',
     futureProofing: 'Quantum-ready architecture with AI evolution paths',
     researchPartnerships: ['MIT Quantum Lab', 'Stanford AI Research', 'CERN'],
@@ -110,6 +123,6 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     marketPosition: 'Market Leader',
     technology: ['AI', 'Quantum Computing', 'Machine Learning'],
     growthRate: '45% YoY',
-    variant: 'premium'
-  }
+    variant: 'premium',
+  },
 ];

@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:backup-merge-conflicts/useQuoteWizard.ts.backup
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
 import { useState } from 'react';
@@ -54,7 +53,6 @@ export function useQuoteWizard(;
 import useSWR from 'swr';
 import { captureException } from '@/utils/sentry';
 import { useState } from 'react';
-=======
   const params = new URLSearchParams({ page: Strin g(page) }
     );
 export interface ServiceItem {
@@ -91,7 +89,6 @@ export function useQuoteWizard(
     );
 =======
   const params = new URLSearchParams({ "page": Strin g(page) };);
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/useQuoteWizard.ts
 >>>>>>> pr-11935
   if (search) params.set('q', search);
   return useSWR<WizardResponse>(`/api/${category}?${params.toString()}`, fetcher, {
@@ -99,7 +96,6 @@ export function useQuoteWizard(
       if (retryCount >= 1) return;
       const timeout = Math.pow(2, retryCount) * 1000; // 1s, 2s, 4s
 =======
-<<<<<<< HEAD:backup-merge-conflicts/useQuoteWizard.ts.backup
       setTimeout(() => revalidate({ retryCount: retryCoun t + 1 }), timeout);
     },
     dedupingInterval: 60000 0,
@@ -136,14 +132,12 @@ export function useRequestQuoteWizard() {;
     resetWizard;
   };
 }
-=======
 
 =======
 <<<<<<< HEAD:backup-merge-conflicts/useQuoteWizard.ts.backup
       setTimeout(() => revalidate({ "retryCount": retryCoun t + 1 }), timeout)},
     "dedupingInterval": 60000 0})}
 type WizardStep = 'Services' | 'Details' | 'Success
->>>>>>> main:src_backup_temp/hooks/useQuoteWizard.ts
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

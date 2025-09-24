@@ -1,5 +1,4 @@
-
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from '@/integrations/supabase/client';
 
 /**
  * Checks if the profiles table exists and creates it if it doesn't
@@ -8,19 +7,22 @@ import { supabase } from "@/integrations/supabase/client";
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
-    const { error } = await supabase.rpc('exec', { 
+    const { error } = await supabase.rpc('exec', {
       sql: `SELECT EXISTS (
         SELECT FROM information_schema.tables 
         WHERE table_schema = 'public' 
         AND table_name = 'profiles'
-      );`
+      );`,
     });
-    
+
     // If there's an error, log it and proceed with table creation
     if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error);
+      console.warn(
+        'Error checking if profiles table exists, attempting to create it:',
+        error
+      );
     }
-    
+
     // Attempt to create the table and related objects
     const createTableQuery = `
       CREATE TABLE IF NOT EXISTS public.profiles (
@@ -91,10 +93,12 @@ export const ensureProfilesTableExists = async () => {
       END
       $$;
     `;
-    
+
     // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery });
-    
+    const { error: createError } = await supabase.rpc('exec', {
+      sql: createTableQuery,
+    });
+
     if (createError) {
       console.error('Error creating profiles table:', createError);
     } else {

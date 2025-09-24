@@ -1,6 +1,5 @@
 =======
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
 interface PerformanceMetrics {;
@@ -16,7 +15,6 @@ interface PerformanceOptions {;
   enableRealUserMonitoring?: "boolean;
 import React, { useState } from 'react';
 import { useEffect, useRef, useState } from 'react';
-=======
 interface PerformanceMetrics {
   "fcp": number | null; // First Contentful Paint
   lcp: number | null; // Largest Contentful Paint
@@ -113,7 +111,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
     );
 
 =======
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
@@ -144,7 +141,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
         if (!layoutShiftEntry.hadRecentInput) {;
           clsValue += layoutShiftEntry.value;
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 ;
       setMetrics(prev => ({ ...prev, "cls": "clsValue "}));
     });
@@ -156,7 +152,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       clsObserver.observe({ "entryTypes": "['layout-shift'] "});
     } catch (error) {;
       // // // // // // // ;
-=======
 
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }
@@ -183,7 +178,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       fidObserver.observe({ "entryTypes": ['first-input'] });';';
       clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (error) {
       // // // // // // //
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
@@ -429,7 +423,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
 >>>>>>> pr-11935
         getNavigationTiming();
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
         getResourceTiming();
       }
     );
@@ -455,12 +448,10 @@ export function usePerformance("options": PerformanceOptions = {}) {
       lcpObserverRef.current = null;
     }
     if (clsObserverRef.current) {;
-=======
 
 =======
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
         getResourceTiming()})}
->>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
@@ -651,7 +642,6 @@ export function useRenderTime() {
     const time = renderEnd - renderStart.current;
     setRenderTime(time);
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
     renderStart.current = renderEnd;
   }
     );
@@ -691,12 +681,10 @@ export function useAPIPerformance() {;
       const newMap = new Map(prev);
       const existing = newMap.get(endpoint) || [];
       newMap.set(endpoint", [...existing, duration]);
-=======
 
 =======
     renderStart.current = renderEnd});
   return renderTime}
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 >>>>>>> pr-11935
 // Hook for monitoring specific component performance
@@ -767,11 +755,8 @@ export function useAPIPerformance() {
       const average = times.reduce((sum, time) => sum + time, 0) / times.length;
       if (average > threshold) {
 =======
-<<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
         slowAPIs.push({ endpoint, average }
     );
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/hooks/usePerformance.ts
 >>>>>>> pr-11935
       }
     }
