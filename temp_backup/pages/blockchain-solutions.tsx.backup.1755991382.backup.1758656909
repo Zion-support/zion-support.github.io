@@ -1,8 +1,0 @@
-export default function BlockchainSolutions(){
-  return <div style={{padding:20}}>Blockchain Solutions</div>
-}
-  return <div className="max-w-3xl mx-auto p-6">Blockchain Solutions</div>;
-}
-=======
-export default function BlockchainSolutionsPage() { return null }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
