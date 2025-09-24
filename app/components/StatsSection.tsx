@@ -1,13 +1,13 @@
-'use client',
+'use client';
 
-import AnimatedCounter from './AnimatedCounter',
+import AnimatedCounter from './AnimatedCounter';
 
 interface StatItem {
-  label: string,
-  value: number,
-  prefix?: string,
-  suffix?: string,
-  description?: string
+  label: string;
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  description?: string;
 }
 
 const stats: StatItem[] = [
@@ -15,22 +15,27 @@ const stats: StatItem[] = [
     label: 'Projects Completed',
     value: 150,
     suffix: '+',
-    description: 'Successful AI implementations'},
+    description: 'Successful AI implementations'
+  },
   {
     label: 'Client Satisfaction',
     value: 98,
     suffix: '%',
-    description: 'Average client rating'},
+    description: 'Average client rating'
+  },
   {
     label: 'Cost Reduction',
     value: 45,
     suffix: '%',
-    description: 'Average operational savings'},
+    description: 'Average operational savings'
+  },
   {
     label: 'Response Time',
     value: 99.9,
     suffix: '%',
-    description: 'System uptime guarantee'}],
+    description: 'System uptime guarantee'
+  }
+];
 
 export default function StatsSection() {
   return (
@@ -73,5 +78,5 @@ export default function StatsSection() {
         </div>
       </div>
     </div>
-  ),
+  );
 }
