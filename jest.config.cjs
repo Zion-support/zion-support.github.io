@@ -1,11 +1,22 @@
-const nextJest = require('next/jest')
-
-const createJestConfig = nextJest({ dir: './' })
-
-const customJestConfig = {
-  testEnvironment: 'node',
-  // Keep setup but it won't affect our minimal smoke tests
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+/** @type {import('jest').Config} */
+module.exports = {
+  testEnvironment: 'jsdom',
+  roots: ['<rootDir>/__safe_tests__'],
+  testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          ['@babel/preset-env', { targets: { node: 'current' } }],
+          ['@babel/preset-react', { runtime: 'automatic' }],
+          '@babel/preset-typescript'
+        ]
+      }
+    ]
+  },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
