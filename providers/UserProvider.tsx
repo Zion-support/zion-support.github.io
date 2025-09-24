@@ -1,3 +1,4 @@
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
 export type UserRole = 'client' | 'talent'
 
@@ -22,6 +23,10 @@ const DEFAULT_USER: User = {
   id: 'u_001',
   name: 'Jordan Lee',
   role: 'client',
+  onboardingCompleted: false}
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     try {
@@ -34,11 +39,23 @@ const DEFAULT_USER: User = {
     } catch {
       setUser(DEFAULT_USER)
     }
+  }, [])
+
+  useEffect(() => {
+    try {
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user))
+      else localStorage.removeItem('zion.user')
+    } catch {
+      // Intentionally ignoring storage write errors (e.g., private mode)
+      // to avoid disrupting app state updates.
+    }
+  }, [user])
 
   const value = useMemo<UserContextValue>(() => ({
     user,
     setUser,
     logout: () => setUser(null),
+    completeOnboarding: () => setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev))}), [user])
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

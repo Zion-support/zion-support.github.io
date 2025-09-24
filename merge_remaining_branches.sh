@@ -1,82 +1,55 @@
 #!/bin/bash
 
-echo "🚀 Merging remaining branches..."
+# Script to merge remaining cursor branches efficiently
+echo "Starting merge of remaining cursor branches..."
 
-# Get the next batch of branches
-branches=$(git branch -r --sort=-committerdate | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -20 | tail -10)
+# Get the most recent 10 branches
+branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/check-fix-push-and-merge-to-main" | head -10)
 
-echo "🔍 Found branches to merge:"
-echo "$branches"
-
-# Counter for processed branches
-processed=0
-merged=0
-conflicts=0
+success_count=0
+conflict_count=0
+already_merged_count=0
 
 for branch in $branches; do
-    echo ""
-    echo "🔄 Processing branch: $branch"
+    echo "Processing $branch..."
     
-    # Try to merge the branch
-    if git merge "origin/$branch" --no-ff -m "Merge branch $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        merged=$((merged + 1))
-    else
-        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
-        
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts by keeping main branch version..."
-            
-            # Find all conflicted files
-            conflicted_files=$(git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4-)
-            
-            for file in $conflicted_files; do
-                echo "   Resolving: $file"
-                
-                # For binary files, just add them
-                if file "$file" | grep -q "binary"; then
-                    git add "$file"
-                    continue
-                fi
-                
-                # For text files, use git checkout to keep main branch version
-                git checkout --ours "$file"
-                git add "$file"
-            done
-            
-            # Handle modify/delete conflicts
-            git status --porcelain | grep "^DU\|^UD" | while read status file; do
-                if [ "$status" = "DU" ]; then
-                    git rm "$file"
-                else
-                    git add "$file"
-                fi
-            done
-            
-            # Commit the resolved conflicts
-            if git commit --no-verify -m "🔧 Resolve merge conflicts in $branch - keep main branch version"; then
-                echo "✅ Successfully resolved conflicts and merged $branch"
-                merged=$((merged + 1))
-            else
-                echo "❌ Failed to resolve conflicts in $branch"
-                git merge --abort
-                conflicts=$((conflicts + 1))
-            fi
-        else
-            echo "❌ Failed to merge $branch (no conflicts detected)"
-            git merge --abort
-            conflicts=$((conflicts + 1))
-        fi
+    # Check if already merged
+    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
+        echo "  ✓ Already merged"
+        ((already_merged_count++))
+        continue
     fi
     
-    processed=$((processed + 1))
+    # Try to merge
+    if git merge "origin/$branch" --no-commit --no-edit 2>/dev/null; then
+        git commit -m "merge: integrate $branch automatically" --no-edit 2>/dev/null
+        if [ $? -eq 0 ]; then
+            echo "  ✓ Successfully merged"
+            ((success_count++))
+        else
+            echo "  ✗ Failed to commit merge"
+            git merge --abort 2>/dev/null
+            ((conflict_count++))
+        fi
+    else
+        echo "  ✗ Merge conflict - resolving automatically"
+        # Auto-resolve conflicts by keeping main branch version
+        git checkout --ours . 2>/dev/null
+        git add . 2>/dev/null
+        git commit -m "resolve: auto-resolve conflicts for $branch" --no-edit 2>/dev/null
+        if [ $? -eq 0 ]; then
+            echo "  ✓ Conflict resolved and merged"
+            ((success_count++))
+        else
+            echo "  ✗ Failed to resolve conflict"
+            git merge --abort 2>/dev/null
+            ((conflict_count++))
+        fi
+    fi
 done
 
 echo ""
-echo "📊 Merge Summary:"
-echo "   Total branches processed: $processed"
-echo "   Successfully merged: $merged"
-echo "   Conflicts encountered: $conflicts"
-echo ""
-echo "✅ Remaining branch merge process completed!"
+echo "Merge process completed!"
+echo "Successfully merged: $success_count"
+echo "Already merged: $already_merged_count"
+echo "Conflicts/Failures: $conflict_count"

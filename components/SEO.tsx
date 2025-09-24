@@ -1,42 +1,70 @@
 import React from 'react';
-import Head from 'next/head';
-
-export type SEOProps = {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-};
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
-  image = '/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website'
-}) => {
+import Head from 'next/head',
+import type { ReactNode } from 'react',
+interface SEOHeadProps {
+  title?: string,
+  description?: string,
+  keywords?: string[],
+  canonical?: string,
+  ogImage?: string,
+  ogType?: string,
+  twitterCard?: string,
+  noIndex?: boolean,
+  structuredData?: object,
+  children?: ReactNode}
+,
+export default function SEOHead({
+  title = 'Zion Tech Group - Advanced AI and Technology Solutions';
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.';
+  keywords = [
+    'AI';
+    'artificial intelligence';
+    'cloud services';
+    'cybersecurity';
+    'technology solutions';
+    'enterprise software';
+    'digital transformation';
+  ];
+  canonical;
+  ogImage = '/og-image.jpg';
+  ogType = 'website';
+  twitterCard = 'summary_large_image';
+  noIndex = false;
+  structuredData;
+  children;
+}: SEOHeadProps) {
+  const fullTitle = title.includes('Zion Tech Group'),
+    ? title,
+    : `${title} | Zion Tech Group`,
+  const canonicalUrl =,
+    canonical || (typeof window !== 'undefined' ? window.location.href : ''),
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </Head>
-  );
-};
-
-export default SEO;
-
+    <Head>,
+      <title>{fullTitle}</title>,
+      <meta name='description' content={description} />,
+      <meta name='keywords' content={keywords.join(', ')} />,
+      {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
+      {noIndex && <meta name='robots' content='noindex,nofollow' />}
+,
+      {/* Open Graph */}
+      <meta property='og: title' content={fullTitle} />,
+      <meta property='og: description' content={description} />,
+      <meta property='og: type' content={ogType} />,
+      <meta property='og: image' content={ogImage} />,
+      {canonicalUrl && <meta property='og: url' content={canonicalUrl} />}
+,
+      {/* Twitter */}
+      <meta name='twitter: card' content={twitterCard} />,
+      <meta name='twitter: title' content={fullTitle} />,
+      <meta name='twitter: description' content={description} />,
+      <meta name='twitter: image' content={ogImage} />,
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type='application/ld+json',
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />)}
+,
+      {children}
+    </Head>)}
+,

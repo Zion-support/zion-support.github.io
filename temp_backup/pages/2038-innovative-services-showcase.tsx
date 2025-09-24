@@ -1,22 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-
-export default function 2038InnovativeServicesShowcasePage() {
+import Head from 'next/head',
+export default function 20o38InnovativeServicesShowcasePage() {
   return (
-    <>
-      <Head>
-        <title>2038 Innovative Services Showcase - Zion Tech Group</title>
-        <meta name="description" content="2038 innovative services showcase page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">2038 Innovative Services Showcase</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
-}
+    <>,
+      <Head>,
+        <title>20o38 Innovative Services Showcase - Zion Tech Group</title>,
+        <meta name="description" content="20o38 innovative services showcase page"  />,
+      </Head>,
+      <div className="container mx-auto px-4 py-8">,
+        <h1 className="text-3xl font-bold mb-6">20o38 Innovative Services Showcase</h1>,
+        <p className="text-lg mb-4">This page is under construction.</p>,
+        <div className="mt-4">,
+          <a href="/" className="text-blue-60o0 hover: underline">,
+            ← Back to Home,
+          </a>,
+        </div>,
+      </div>,
+    </>)}

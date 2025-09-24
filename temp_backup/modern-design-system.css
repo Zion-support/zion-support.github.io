@@ -10,19 +10,25 @@
   --neon-orange: #f59e0b;
   --neon-red: #ef4444;
   --neon-yellow: #eab308;
-  
+
   /* Neutral Colors with Enhanced Contrast */
   --cyber-dark: #0a0a1a;
   --cyber-darker: #0f0f23;
   --cyber-dark-blue: #1a1a2e;
   --cyber-blue: #16213e;
-  
+
   /* Enhanced Gradients */
-  --holographic-gradient: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981);
+  --holographic-gradient: linear-gradient(
+    45deg,
+    #00d4ff,
+    #8b5cf6,
+    #ec4899,
+    #10b981
+  );
   --cyber-gradient: linear-gradient(135deg, #0a0a1a, #0f0f23, #1a1a2e, #16213e);
   --neon-gradient: linear-gradient(135deg, #00d4ff, #8b5cf6);
   --sunset-gradient: linear-gradient(135deg, #ec4899, #f59e0b);
-  
+
   /* Enhanced Shadows with Better Contrast */
   --neon-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
   --glow-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
@@ -31,7 +37,7 @@
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.8);
-  
+
   /* Enhanced Spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -40,7 +46,7 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
-  
+
   /* Enhanced Border Radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
@@ -48,7 +54,7 @@
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
   --radius-full: 9999px;
-  
+
   /* Enhanced Focus States */
   --focus-ring: rgba(0, 212, 255, 0.6);
   --focus-ring-success: rgba(16, 185, 129, 0.6);
@@ -58,62 +64,107 @@
 
 /* Enhanced Animations with Better Performance */
 @keyframes neon-pulse {
-  0%, 100% { 
-    box-shadow: 0 0 5px rgba(0, 212, 255, 0.5),
-                0 0 10px rgba(0, 212, 255, 0.3),
-                0 0 15px rgba(0, 212, 255, 0.1);
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px rgba(0, 212, 255, 0.5),
+      0 0 10px rgba(0, 212, 255, 0.3),
+      0 0 15px rgba(0, 212, 255, 0.1);
   }
-  50% { 
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.8),
-                0 0 20px rgba(0, 212, 255, 0.5),
-                0 0 30px rgba(0, 212, 255, 0.3);
+  50% {
+    box-shadow:
+      0 0 10px rgba(0, 212, 255, 0.8),
+      0 0 20px rgba(0, 212, 255, 0.5),
+      0 0 30px rgba(0, 212, 255, 0.3);
   }
 }
 
 @keyframes holographic-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes cyber-float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-10px) rotate(1deg); }
-  50% { transform: translateY(-20px) rotate(0deg); }
-  75% { transform: translateY(-10px) rotate(-1deg); }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
 }
 
 @keyframes particle-drift {
-  0% { transform: translateX(-100px) translateY(0px); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateX(calc(100vw + 100px)) translateY(-100px); opacity: 0; }
+  0% {
+    transform: translateX(-100px) translateY(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(-100px);
+    opacity: 0;
+  }
 }
 
 @keyframes matrix-rain {
-  0% { transform: translateY(-100vh); opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
 @keyframes neon-text-glow {
-  0%, 100% { 
-    text-shadow: 0 0 5px currentColor,
-                 0 0 10px currentColor,
-                 0 0 15px currentColor;
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor;
   }
-  50% { 
-    text-shadow: 0 0 10px currentColor,
-                 0 0 20px currentColor,
-                 0 0 30px currentColor,
-                 0 0 40px currentColor;
+  50% {
+    text-shadow:
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px currentColor;
   }
 }
 
 @keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
 @keyframes fade-in-up {
@@ -213,7 +264,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 212, 255, 0.1),
+    transparent
+  );
   animation: scan-line 3s linear infinite;
 }
 
@@ -538,7 +594,7 @@
   .hover-responsive {
     transition: all 0.3s ease;
   }
-  
+
   .hover-responsive:hover {
     transform: translateY(-2px);
     box-shadow: var(--cyber-shadow);
@@ -550,7 +606,7 @@
   .print-hidden {
     display: none !important;
   }
-  
+
   .print-visible {
     display: block !important;
   }
@@ -561,11 +617,11 @@
   .mobile-only {
     display: none;
   }
-  
+
   .tablet-up {
     display: block;
   }
-  
+
   .mobile-tablet {
     display: block;
   }
@@ -575,15 +631,15 @@
   .tablet-up {
     display: block;
   }
-  
+
   .desktop-up {
     display: block;
   }
-  
+
   .mobile-tablet {
     display: none;
   }
-  
+
   .tablet-desktop {
     display: block;
   }
@@ -619,7 +675,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   animation: loading-shimmer 1.5s infinite;
 }
 
@@ -796,4 +857,4 @@
 .status-indicator.info {
   background-color: var(--neon-blue);
   box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-} 
+}

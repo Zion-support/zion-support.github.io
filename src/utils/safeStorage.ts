@@ -1,6 +1,0 @@
->>>>>>> main
-    }
-  }
-};
-
-export default safeStorage;

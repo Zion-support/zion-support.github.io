@@ -1,0 +1,4 @@
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

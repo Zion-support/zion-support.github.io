@@ -1,10 +1,9 @@
-export default function Page() {
+export default function MicroSaasServicesPage() {
   return (
-    <div className="min-h-screen px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Services Micro Saas Page</h1>
-        <p className="text-white/70">Content coming soon.</p>
-      </div>
-    </div>
-  );
-}
+    <main className='min-h-screen py-20 px-4'>,
+      <div className='max-w-5xl mx-auto'>,
+        <h1 className='text-3xl font-bold mb-4'>Micro-SaaS Services</h1>,
+        <p className='text-zinc-500'>Details coming soon.</p>,
+      </div>,
+    </main>)}
+,

@@ -22,7 +22,7 @@ async function mergePRs() {
     console.log('Merging PR #11703 via GitHub API...');
 
     const mergePR11703 = `curl -X PUT \
-      -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+      -H "Authorization: token ${GITHUB_TOKEN}" \
       -H "Accept: application/vnd.github.v3+json" \
       "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
       -d '{"commit_title":"Merge PR #11703: Enhance and expand ziontechgroup.com services and site","merge_method":"merge"}'`;
@@ -33,7 +33,7 @@ async function mergePRs() {
     } catch (error) {
       console.log('PR #11703 merge failed, trying with squash method...');
       const squashPR11703 = `curl -X PUT \
-        -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+        -H "Authorization: token ${GITHUB_TOKEN}" \
         -H "Accept: application/vnd.github.v3+json" \
         "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
         -d '{"commit_title":"Merge PR #11703: Enhance and expand ziontechgroup.com services and site","merge_method":"squash"}'`;
@@ -46,7 +46,7 @@ async function mergePRs() {
     console.log('Merging PR #11702 via GitHub API...');
 
     const mergePR11702 = `curl -X PUT \
-      -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+      -H "Authorization: token ${GITHUB_TOKEN}" \
       -H "Accept: application/vnd.github.v3+json" \
       "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
       -d '{"commit_title":"Merge PR #11702: Website audit and update with deployment","merge_method":"merge"}'`;
@@ -57,7 +57,7 @@ async function mergePRs() {
     } catch (error) {
       console.log('PR #11702 merge failed, trying with squash method...');
       const squashPR11702 = `curl -X PUT \
-        -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+        -H "Authorization: token ${GITHUB_TOKEN}" \
         -H "Accept: application/vnd.github.v3+json" \
         "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
         -d '{"commit_title":"Merge PR #11702: Website audit and update with deployment","merge_method":"squash"}'`;

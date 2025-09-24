@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -451,36 +450,6 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
-=======
-<<<<<<< HEAD
-  "name": "zion-multichain-suite",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Secure, modular smart contracts and deploy scripts for ZION$ multichain (zkSync, Starknet relay, L2s)",
-  "license": "MIT",
-  "scripts": {
-=======
-  "name": "zion-ai-assistant",
-  "version": "1.0.0",
-  "description": "AI-powered chat assistant widget for the Zion AI Marketplace",
-  "type": "module",
-  "scripts": {
-    "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
-    "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
-    "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
-    "pm2:status": "pm2 status",
-    "pm2:logs": "pm2 logs --lines 200",
-    "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
-    "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
-    "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
-    "pm2:cron:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.cron.local.cjs --update-env",
-    "pm2:cron:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.cron.local.cjs || pm2 start ecosystem.cron.local.cjs --update-env)",
-    "pm2:cron:stop": "pm2 stop ecosystem.cron.local.cjs || true",
-    "pm2:bootstrap:logrotate": "pm2 install pm2-logrotate || true && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 set pm2-logrotate:workerInterval 60 && pm2 set pm2-logrotate:rotateInterval '0 0 * * *'",
-    "functions:run": "node scripts/run-netlify-functions-locally.cjs",
-    "functions:run:execute": "node scripts/run-netlify-functions-locally.cjs --execute",
-    "front:advertise": "node automation/front-index-advertiser.cjs",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -491,32 +460,7 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
-<<<<<<< HEAD
     "prepare": "husky install",
-=======
-    "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true && node fix_typescript_syntax_errors.cjs || true && node fix_all_typescript_errors.cjs || true && node final_fix.cjs || true",
-    "build:heal": "npm run build || (npm run fix:all && npm run build)",
-    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
-    "build:health-check": "node automation/pre-build-health-check.cjs",
-    "build:validate": "node automation/nextjs-page-validator.cjs",
-    "build:recovery": "node automation/build-failure-recovery.cjs",
-    "build:smart": "npm run build:health-check && npm run build:auto-fix",
-    "build:auto-fix": "npm run build || (npm run build:recovery && npm run build)",
-    "build:monitor": "node automation/continuous-build-monitor.cjs",
-    "build:guardian": "node automation/build-guardian.cjs",
-    "build:orchestrator": "node automation/master-build-orchestrator.cjs",
-    "build:orchestrator:start": "node automation/master-build-orchestrator.cjs",
-    "build:orchestrator:status": "node -e \"const {MasterBuildOrchestrator} = require('./automation/master-build-orchestrator.cjs'); const o = new MasterBuildOrchestrator(); console.log(JSON.stringify(o.getStatus(), null, 2));\"",
-    "build:smart:full": "node automation/master-build-orchestrator.cjs runSmartBuild",
-    "security:scan": "node automation/security-scanner.cjs || true && (npm audit --audit-level=high || true)",
-    "auto:intel": "node automation/intelligent-orchestrator.cjs run intelligent",
-    "netlify:check": "node automation/netlify-monitor.cjs check",
-    "netlify:fix": "node automation/netlify-monitor.cjs fix-if-failing",
-    "netlify:cron:start": "bash automation/netlify-monitor-cron.sh start",
-    "netlify:cron:stop": "bash automation/netlify-monitor-cron.sh stop",
-    "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -569,11 +513,6 @@
     "autonomous:orchestrator": "node automation/autonomous-automation-orchestrator.js",
     "autonomous:cron": "bash automation/autonomous-error-cron-system.sh run",
     "autonomous:cron:start": "bash automation/autonomous-error-cron-system.sh start",
-<<<<<<< HEAD
-=======
-    "autonomous:cloud": "node automation/intelligent-autonomous-orchestrator.cjs",
-    "autonomous:curate": "node automation/ai-content-curator.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "autonomous:cron:stop": "bash automation/autonomous-error-cron-system.sh stop",
     "autonomous:cron:status": "bash automation/autonomous-error-cron-system.sh status",
     "autonomous:cron:fix": "bash automation/autonomous-error-cron-system.sh fix",
@@ -636,16 +575,6 @@
     "saas:cron:start": "bash automation/saas-services-cron.sh",
     "saas:analyze": "node automation/saas-services-analyzer.cjs && node automation/saas-services-factory.cjs",
     "homepage-promo:start": "node automation/homepage-promo-orchestrator.cjs",
-<<<<<<< HEAD
-=======
-    "innovation:digest": "node automation/autonomous-innovation-digest.cjs",
-    "tech-radar:digest": "node automation/autonomous-tech-radar.cjs",
-    "security:audit": "node automation/autonomous-security-audit.cjs",
-    "repo:health": "node automation/autonomous-repo-health.cjs",
-    "content:map": "node automation/autonomous-content-map.cjs",
-    "site:validate": "node automation/autonomous-site-validator.cjs",
-    "knowledge:graph": "node automation/autonomous-knowledge-graph.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "homepage-promo:cron:start": "bash automation/homepage-promo-cron.sh",
     "homepage-promo:analyze": "node automation/homepage-promo-analyzer.cjs && node automation/homepage-promo-factory.cjs",
     "feature-marketing:start": "node automation/feature-marketing-orchestrator.cjs",
@@ -659,11 +588,7 @@
     "cursor:chat:analyze": "node automation/cursor-chat-analyzer.cjs && node automation/cursor-chat-factory.cjs",
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
-<<<<<<< HEAD
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",
-=======
-    "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "promo:start": "node automation/site-promo-orchestrator.cjs",
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
@@ -698,18 +623,6 @@
     "meta:factory": "node automation/autonomous-meta-factory.cjs",
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
-    "admin:dashboard:watch": "node automation/admin-dashboard-updater.cjs --watch",
-    "admin:insights": "node automation/admin-insights-researcher.cjs",
-    "admin:insights:watch": "node automation/admin-insights-researcher.cjs --watch",
-    "admin:cron:start": "bash automation/admin-dashboard-cron.sh start",
-    "admin:cron:stop": "bash automation/admin-dashboard-cron.sh stop",
-    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -720,15 +633,11 @@
     "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-<<<<<<< HEAD
     "git:sync": "node automation/advanced-git-sync.cjs",
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "git:pull": "node automation/git-pull-rebase.cjs",
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
-<<<<<<< HEAD
     "sync-health:run": "node automation/sync-health-check.cjs --fix",
     "sync-health:cron:start": "bash automation/sync-health-cron.sh start",
     "sync-health:cron:stop": "bash automation/sync-health-cron.sh stop",
@@ -743,20 +652,6 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-<<<<<<< HEAD
-    "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
-  },
-  "bin": {
-    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"
-=======
-    "cloud:autonomy": "node scripts/zion-cloud-autonomy.cjs",
-    "cloud:chains": "node scripts/zion-chain-tuner.cjs",
-    "cloud:stuck": "node scripts/zion-stuck-users-scan.cjs",
-    "cloud:daily": "node scripts/zion-daily-report.cjs",
-    "cloud:benchmark": "node scripts/zion-prompt-benchmark.cjs",
-    "cloud:governance": "node scripts/zion-governance-digest.cjs"
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
-=======
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -844,7 +739,6 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
   "dependencies": {
@@ -855,37 +749,25 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
     "@pinata/sdk": "^2.1.0",
     "@spruceid/didkit-wasm-node": "^0.2.1",
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
-<<<<<<< HEAD
-=======
-    "chart.js": "^4.5.0",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
     "ethers": "^6.13.4",
     "events": "^3.3.0",
     "formidable": "^3.5.4",
-=======
-    "events": "^3.3.0",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
-<<<<<<< HEAD
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "ipfs-http-client": "^60.0.0",
@@ -917,14 +799,6 @@
     "@nomicfoundation/hardhat-verify": "^2.1.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "12.1.5",
-=======
-    "html2canvas": "^1.4.1",
-    "https": "^1.0.0",
-    "import-fresh": "^3.3.1",
-<<<<<<< HEAD
-    "jspdf": "^3.0.1",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "lucide-react": "^0.536.0",
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
@@ -932,16 +806,12 @@
     "path": "^0.12.7",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
-<<<<<<< HEAD
     "react-chartjs-2": "^5.3.0",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
     "@nomicfoundation/hardhat-ethers": "^3.1.0",
     "@nomicfoundation/hardhat-ignition": "^0.15.13",
@@ -955,81 +825,6 @@
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.20",
     "@types/mocha": "^10.0.10",
-<<<<<<< HEAD
-    "@types/node": "^24.2.0",
-=======
-=======
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.32.0",
-    "@netlify/plugin-nextjs": "4.41.3",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "12.1.5",
-    "@types/node": "^24.2.1",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^17.0.34",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-<<<<<<< HEAD
-    "dotenv": "^17.2.1",
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.0.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-<<<<<<< HEAD
-    "hardhat": "^2.26.2",
-    "hardhat-gas-reporter": "^2.3.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
-    "postcss": "^8.4.32",
-    "solidity-coverage": "^0.8.16",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typechain": "^8.3.2",
-    "typescript": "^5.6.3"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
-  "name": "zion-sdk-monorepo",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Monorepo for Zion OS SDKs and CLI scaffolder",
-  "workspaces": [
-    "packages/*"
-  ],
-  "engines": {
-    "node": ">=18.18.0"
-  },
-  "scripts": {
-    "build": "npm -w @zion/sdk run build && npm -w create-zion-instance run build",
-    "lint": "npm -w @zion/sdk run lint || true",
-    "test": "npm -w @zion/sdk run test || true",
-    "clean": "rimraf node_modules packages/*/node_modules packages/*/dist"
-  },
-  "devDependencies": {
-    "rimraf": "^6.0.1"
-  }
-=======
-  },
-  "type": "module"
-=======
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
-  },
-  "type": "module"
-=======
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
@@ -1048,5 +843,4 @@
   "dependencies": {
     "js-yaml": "^4.1.0"
   }
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 }

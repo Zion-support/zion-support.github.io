@@ -1,17 +1,17 @@
 import express from 'express';
+import path from 'path';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
-import path from 'path';
 import { config } from 'dotenv';
 
 // Load environment variables
 config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = Number(process.env.PORT) || 5000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Rate limiting
@@ -21,23 +21,31 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.'
 });
 
-// Middleware
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
-      imgSrc: ["'self'", "data:", "https:"],
-    },
-  },
-}));
-app.use(cors({
-  origin: NODE_ENV === 'development' 
-    ? ['http://localhost:3000', 'http://localhost:5000'] 
-    : process.env.FRONTEND_URL || 'http://localhost:3000',
-  credentials: true
-}));
+// Security headers
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'"],
+        imgSrc: ["'self'", 'data:', 'https:']
+      }
+    }
+  })
+);
+
+// CORS
+app.use(
+  cors({
+    origin:
+      NODE_ENV === 'development'
+        ? ['http://localhost:3000', 'http://localhost:5000']
+        : (process.env.FRONTEND_URL as string) || 'http://localhost:3000',
+    credentials: true
+  })
+);
+
 app.use(compression());
 app.use(morgan('combined'));
 app.use(limiter);
@@ -47,10 +55,10 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Import API routes
 import apiRoutes from './routes/api';
 
-// API Routes
+// Health route
 app.use('/api/health', (_req, res) => {
-  res.json({ 
-    status: 'OK', 
+  res.json({
+    status: 'OK',
     timestamp: new Date().toISOString(),
     environment: NODE_ENV,
     uptime: process.uptime()
@@ -60,11 +68,10 @@ app.use('/api/health', (_req, res) => {
 // Mount API routes
 app.use('/api', apiRoutes);
 
-// Serve static files from the built Vite frontend
+// Serve static files from the built frontend
 if (NODE_ENV === 'production') {
   const frontendPath = path.join(__dirname, '../../dist');
   app.use(express.static(frontendPath));
-  
   // Handle client-side routing
   app.get('*', (_req, res) => {
     res.sendFile(path.join(frontendPath, 'index.html'));
@@ -72,13 +79,21 @@ if (NODE_ENV === 'production') {
 }
 
 // Error handling middleware
-app.use((err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  console.error(err.stack);
-  res.status(500).json({ 
-    error: 'Something went wrong!',
-    message: NODE_ENV === 'development' ? err.message : 'Internal server error'
-  });
-});
+app.use(
+  (
+    err: Error,
+    _req: express.Request,
+    res: express.Response,
+    _next: express.NextFunction
+  ) => {
+    // eslint-disable-next-line no-console
+    console.error(err.stack);
+    res.status(500).json({
+      error: 'Something went wrong!',
+      message: NODE_ENV === 'development' ? err.message : 'Internal server error'
+    });
+  }
+);
 
 // 404 handler
 app.use('*', (_req, res) => {
@@ -86,8 +101,8 @@ app.use('*', (_req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌍 Environment: ${NODE_ENV}`);
-  console.log(`📱 Frontend: http://localhost:3000`);
-  console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
+  // // console.log(`🚀 Server running on port ${PORT}`);
+  // // console.log(`🌍 Environment: ${NODE_ENV}`);
+  // // console.log(`📱 Frontend: http://localhost:3000`);
+  // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
 });
