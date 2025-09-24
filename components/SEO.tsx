@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 interface SEOHeadProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string | string[];
   canonical?: string;
   ogImage?: string;
   ogType?: string;
@@ -12,6 +12,7 @@ interface SEOHeadProps {
   noIndex?: boolean;
   structuredData?: object;
   children?: ReactNode;
+  url?: string;
 }
 
 export default function SEOHead({
@@ -33,18 +34,18 @@ export default function SEOHead({
   noIndex = false,
   structuredData,
   children,
+  url,
 }: SEOHeadProps) {
   const fullTitle = title.includes('Zion Tech Group')
     ? title
     : `${title} | Zion Tech Group`;
-  const canonicalUrl =
-    canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const canonicalUrl = canonical || url || (typeof window !== 'undefined' ? window.location.href : '');
 
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name='description' content={description} />
-      <meta name='keywords' content={keywords.join(', ')} />
+      <meta name='keywords' content={(Array.isArray(keywords) ? keywords : [keywords]).join(', ')} />
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
       {noIndex && <meta name='robots' content='noindex,nofollow' />}
 

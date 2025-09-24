@@ -3,7 +3,7 @@ import React from 'react'
 interface SEOProps {
   title?: string
   description?: string
-  keywords?: string
+  keywords?: string | string[]
   image?: string
   url?: string
 }

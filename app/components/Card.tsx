@@ -4,10 +4,14 @@ interface CardProps {
   children: React.ReactNode
   className?: string
   hover?: boolean
+  variant?: 'default' | 'glass'
 }
 
-const Card: React.FC<CardProps> = ({ children, className = '', hover = false }) => {
-  const baseClasses = 'bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700'
+const Card: React.FC<CardProps> = ({ children, className = '', hover = false, variant = 'default' }) => {
+  const isGlass = variant === 'glass'
+  const baseClasses = isGlass
+    ? 'bg-white/10 backdrop-blur-md dark:bg-gray-800/30 rounded-lg shadow-md border border-white/20'
+    : 'bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700'
   const hoverClasses = hover ? 'hover:shadow-lg transition-shadow duration-200' : ''
   
   return (

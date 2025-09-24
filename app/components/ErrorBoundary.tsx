@@ -1,6 +1,6 @@
 'use client';
 
-import { Component, ReactNode } from 'react'
+import React, { Component, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw } from 'lucide-react'
 
 import Button from './Button'

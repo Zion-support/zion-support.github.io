@@ -2,4 +2,7 @@ aiohttp==3.10.10
 aiodns==3.2.0
 beautifulsoup4==4.12.3
 yarl>=1.12.0,<2.0
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.36
 urllib3==2.2.2
