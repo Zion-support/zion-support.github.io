@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-09-22T20:13:17.563Z",
+  "buildDirectory": "/workspace/.next",
+  "totalSizeBytes": 12764109,
+  "totalSizeHuman": "12.17 MB",
+  "recommendations": [
+    "Bundle is larger than 10MB. Consider code splitting and dynamic imports.",
+    "Audit large dependencies and remove unused ones.",
+    "Enable image optimization and ensure modern formats (AVIF/WebP)."
+  ]
+}

@@ -1,0 +1,12 @@
+export type ServiceVariant =
+  | 'default'
+  | 'holographic'
+  | 'quantum'
+  | 'cyberpunk'
+  | 'neural'
+  | 'enterprise'
+  | 'ai-futuristic'
+  | 'quantum-futuristic'
+  | 'security-futuristic'
+  | 'integration-futuristic'
+  | 'analytics-futuristic'
