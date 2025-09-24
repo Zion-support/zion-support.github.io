@@ -5,6 +5,7 @@ interface SEOProps {
   description?: string;
   keywords?: string;
   canonical?: string;
+  url?: string;
   noindex?: boolean;
 }
 
@@ -13,6 +14,7 @@ export default function SEO({
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
   keywords,
   canonical,
+  url,
   noindex = false
 }: SEOProps) {
   return (
@@ -21,6 +23,7 @@ export default function SEO({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
+      {url && <meta property="og:url" content={url} />}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
