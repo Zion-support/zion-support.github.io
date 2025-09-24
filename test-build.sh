@@ -11,31 +11,14 @@ rm -rf dist
 
 # Clean yarn cache completely
 echo "Cleaning yarn cache..."
-yarn cache clean --all || true
+yarn cache clean --all
 
 # Install dependencies
 echo "Installing dependencies..."
-if [ -f package.json ]; then
-  # Compatible flags for Yarn Berry/Classic without unsupported options
-  if [ -f yarn.lock ]; then
-    yarn install --immutable --inline-builds || yarn install || true
-  else
-    yarn install || true
-  fi
-else
-  echo "No package.json found, skipping install"
-fi
+yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines --ignore-platform --force
 
 # Build the project
 echo "Building project..."
-if [ -f package.json ]; then
-  if yarn run | grep -qE "^\s*build"; then
-    yarn build || { echo "Build failed"; exit 1; }
-  else
-    echo "No build script, skipping build"
-  fi
-else
-  echo "No package.json found, skipping build"
-fi
+yarn build
 
 echo "Build test completed successfully!"

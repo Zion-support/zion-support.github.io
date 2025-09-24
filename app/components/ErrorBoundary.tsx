@@ -1,30 +1,29 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from 'react';
 
 interface ErrorBoundaryState {
-	hasError: boolean
-	error?: Error | undefined
-	errorInfo?: React.ErrorInfo | undefined
+	/** Whether an error has been caught */
+	hasError: boolean;
+	/** The error instance if available */
+	error?: Error | undefined;
+	/** Additional error info captured by React */
+	errorInfo?: React.ErrorInfo | undefined;
 }
 
 interface ErrorBoundaryProps {
-	children: React.ReactNode
-	fallback?: React.ComponentType<{ error: Error; resetError: () => void }>
+	children: React.ReactNode;
+	fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
 }
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
 	constructor(props: ErrorBoundaryProps) {
-		super(props)
-		this.state = { hasError: false, error: undefined, errorInfo: undefined }
+		super(props);
+		this.state = { hasError: false, error: undefined, errorInfo: undefined };
 	}
 
 	static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-		return {
-			hasError: true,
-			error,
-			errorInfo: undefined,
-		}
+		return { hasError: true, error, errorInfo: undefined };
 	}
 
 	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
@@ -35,52 +34,42 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 			timestamp: new Date().toISOString(),
 			userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
 			url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-		}
+		};
 
 		if (process.env.NODE_ENV === 'development') {
-			console.group('🚨 Error Boundary Caught Error')
-			console.error('Error:', error)
-			console.error('Error Info:', errorInfo)
-			console.error('Full Details:', errorDetails)
-			console.groupEnd()
+			// eslint-disable-next-line no-console
+			console.group('🚨 Error Boundary Caught Error');
+			// eslint-disable-next-line no-console
+			console.error('Error:', error);
+			// eslint-disable-next-line no-console
+			console.error('Error Info:', errorInfo);
+			// eslint-disable-next-line no-console
+			console.error('Full Details:', errorDetails);
+			// eslint-disable-next-line no-console
+			console.groupEnd();
 		}
 
 		if (typeof window !== 'undefined') {
 			const maybeGtag = (window as unknown as {
-				gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void,
-			}).gtag
+				gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
+			}).gtag;
 			if (typeof maybeGtag === 'function') {
-				maybeGtag('event', 'exception', {
-					description: error.message,
-					fatal: true,
-				})
+				maybeGtag('event', 'exception', { description: error.message, fatal: true });
 			}
 		}
 
-		if (typeof window !== 'undefined') {
-			 
-			// // console.log('Error would be sent to error tracking service:', errorDetails),
-		}
-		this.setState({
-			error,
-			errorInfo,
-		})
+		this.setState({ error, errorInfo });
 	}
 
 	resetError = () => {
-		this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-	}
+		this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+	};
 
 	render() {
 		if (this.state.hasError) {
 			if (this.props.fallback) {
-				const FallbackComponent = this.props.fallback
-				return (
-					<FallbackComponent
-						error={this.state.error!}
-						resetError={this.resetError}
-					/>
-				)
+				const FallbackComponent = this.props.fallback;
+				return <FallbackComponent error={this.state.error!} resetError={this.resetError} />;
 			}
 
 			return (
@@ -123,11 +112,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 						)}
 					</div>
 				</div>
-			)
+			);
 		}
 
-		return this.props.children
+		return this.props.children;
 	}
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;
