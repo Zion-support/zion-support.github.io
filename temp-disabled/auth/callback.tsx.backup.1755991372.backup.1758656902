@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default function AuthCallbackPage() {
+  return <div>Auth Callback</div>;
+}
+export default function AuthCallback() {
+  return <div className="py-10">Auth Callback</div>;
+}
+=======
+export default function AuthCallback() { return <div>Auth callback…</div>; }
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
