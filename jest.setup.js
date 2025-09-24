@@ -5,13 +5,18 @@ try {
   // optional in minimal runs
 }
 
-// Mock Next.js Image to a simple function component without JSX here
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: function MockImage() {
-    return null
-  }
-}))
+// Mock Next.js Image only if Next is installed
+try {
+  require.resolve('next/image')
+  jest.mock('next/image', () => ({
+    __esModule: true,
+    default: function MockImage() {
+      return null
+    }
+  }))
+} catch (err) {
+  // next/image not present; skip
+}
 
 // matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
@@ -34,6 +39,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 }
+
 global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
