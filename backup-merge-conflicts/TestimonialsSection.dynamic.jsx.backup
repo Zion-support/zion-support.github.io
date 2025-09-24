@@ -1,8 +1,0 @@
-const TestimonialsSection = dynamic(() => import(\"./TestimonialsSection\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default TestimonialsSection\' ,
-=======
-const TestimonialsSection = dynamic(() => import("./TestimonialsSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default TestimonialsSection' ,'
-</p>'
->>>>>>> main
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
