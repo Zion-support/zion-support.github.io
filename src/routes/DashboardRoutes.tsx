@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Route, Routes } from "react-router-dom"
 import { ProtectedRoute } from "@/components/ProtectedRoute"
@@ -222,3 +223,12 @@ const DashboardRoutes = () => {
 }
 
 export default DashboardRoutes
+=======
+export function DashboardRoutes() {
+  return (
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,
+>>>>>>> origin/main

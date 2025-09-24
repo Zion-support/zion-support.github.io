@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Route, Routes, Navigate } from "react-router-dom"
 import Home from "@/pages/Home"
@@ -80,3 +81,12 @@ const ContentRoutes = () => {
 }
 
 export default ContentRoutes
+=======
+export function ContentRoutes() {
+  return (
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,
+>>>>>>> origin/main
