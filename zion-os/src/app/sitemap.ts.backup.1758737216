@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { MetadataRoute } from 'next',
-export default function sitemap(): MetadataRoute.Sitemap {,
-  const baseUrl = 'https: //ziontechgroup.com',
-  const routes = ['//services', '/pricing/privacy'],
-  return routes.map(route => ({
-    url: `${baseUrl}${route},
-    lastModified: new Date(),
-  }))}
-,`,
-=======
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -162,4 +151,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }))
 }
->>>>>>> origin/aggressive-merge-backup-20250924-085711

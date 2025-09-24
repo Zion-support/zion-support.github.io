@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Notifications utility for handling browser notifications
 
 export const notifications = {
@@ -66,7 +64,6 @@ export const notifications = {
       body: message,
       icon: '/favicon.ico'
     });
->>>>>>> cursor/create-and-deploy-new-content-d9c7
   }
 };
 

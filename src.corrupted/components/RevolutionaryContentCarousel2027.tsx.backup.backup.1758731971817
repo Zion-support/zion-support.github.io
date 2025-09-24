@@ -3,13 +3,10 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
@@ -133,11 +130,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
@@ -148,13 +142,10 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
 
   useEffect(() => {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
@@ -339,11 +330,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                           </ul>
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
@@ -355,13 +343,10 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   </div>
                 </div>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
               </div>
@@ -470,11 +455,8 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
           ))}
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9

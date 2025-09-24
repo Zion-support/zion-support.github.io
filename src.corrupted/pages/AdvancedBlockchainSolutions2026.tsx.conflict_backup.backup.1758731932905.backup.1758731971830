@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -239,7 +237,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Solidity</h3>
               <p className="text-gray-600">Smart contract language</p>
->>>>>>> cursor/create-and-deploy-new-content-c963
 import { Helmet } from 'react-helmet-async';
 
 const AdvancedBlockchainSolutions2026: React.FC = () => {
@@ -332,10 +329,7 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
                   Learn More
                 </button>
               </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-c963
               <div className="text-5xl font-bold text-orange-400 mb-2">$0</div>
               <div className="text-white font-semibold mb-1">Transaction Fees</div>
               <div className="text-gray-400 text-sm">Zero-cost transactions</div>
@@ -446,8 +440,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -469,7 +461,6 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
       </main>
       <Footer />
     </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
                 Discover the cutting-edge blockchain technologies that are reshaping 
                 the digital economy and decentralized systems
@@ -615,6 +606,5 @@ const AdvancedBlockchainSolutions2026: React.FC = () => {
     </div>
   );
 };
-
 
 export default AdvancedBlockchainSolutions2026;

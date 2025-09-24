@@ -7,15 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   // Ignore everything by default; we will opt-in only app and safe test files
   {
-    ignores: ['**/*']
-  },
-  // Apply recommended base only to selected app/test files
-  {
-    ...js.configs.recommended,
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
-  },
-  {
-    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',

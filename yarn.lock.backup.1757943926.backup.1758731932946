@@ -1788,15 +1788,9 @@
   integrity sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==
 
 "@jridgewell/trace-mapping@^0.3.24", "@jridgewell/trace-mapping@^0.3.25", "@jridgewell/trace-mapping@^0.3.28":
-<<<<<<< HEAD
-  version "0.3.31"
-  resolved "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz"
-  integrity sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==
-=======
   version "0.3.30"
   resolved "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.30.tgz"
   integrity sha512-GQ7Nw5G2lTu/BtHTKfXhKHok2WGetd4XYcVKGx00SjAk8GMwgJM3zr6zORiPGuOE+/vkc90KtTosSSvaCjKb2Q==
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
   dependencies:
@@ -3018,16 +3012,10 @@
   dependencies:
     "@types/node" "*"
 
-<<<<<<< HEAD
-  version "20.19.14"
-  resolved "https://registry.npmjs.org/@types/node/-/node-20.19.14.tgz"
-  integrity sha512-gqiKWld3YIkmtrrg9zDvg9jfksZCcPywXVN7IauUGhilwGV/yOyeUsvpR796m/Jye0zUzMXPKe8Ct1B79A7N5Q==
-=======
 =======
   version "20.19.11"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.19.11.tgz"
   integrity sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==
->>>>>>> origin/content/autonomous-enterprise-it-2025
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   dependencies:
     undici-types "~6.21.0"
@@ -3440,14 +3428,6 @@ balanced-match@^1.0.0:
   resolved "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-<<<<<<< HEAD
-baseline-browser-mapping@^2.8.2:
-  version "2.8.3"
-  resolved "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.3.tgz"
-  integrity sha512-mcE+Wr2CAhHNWxXN/DdTI+n4gsPc5QpXpWnyCQWiQYIYZX+ZMJ8juXZgjRa/0/YPJo/NSsgW15/YgmI4nbysYw==
-
-=======
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
 bignumber.js@^9.0.0:
@@ -3572,14 +3552,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-<<<<<<< HEAD
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001741:
-  version "1.0.30001741"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001741.tgz"
-  integrity sha512-QGUGitqsc8ARjLdgAfxETDhRbJ0REsP6O3I96TAth/mVjh2cYzN2u+3AzPP3aVSm2FehEItaJw1xd+IGBXWeSw==
 =======
-=======
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001579, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001735:
   version "1.0.30001737"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001737.tgz"
@@ -3861,11 +3834,7 @@ csso@^5.0.5:
   dependencies:
     css-tree "~2.2.0"
 
-<<<<<<< HEAD
-csstype@^3.0.2, csstype@^3.1.3:
-=======
 csstype@^3.0.2:
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   version "3.1.3"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
@@ -4325,11 +4294,7 @@ es-to-primitive@^1.3.0:
 
 es-toolkit@^1.39.3:
   version "1.39.10"
-<<<<<<< HEAD
-esbuild@^0.25.0, esbuild@0.25.9:
-=======
 esbuild@^0.25.0, esbuild@^0.25.9:
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
   version "0.25.9"
@@ -4869,11 +4834,7 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-<<<<<<< HEAD
-goober@^2.0.33, goober@^2.1.16:
-=======
 goober@^2.0.33:
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   version "2.1.16"
   resolved "https://registry.npmjs.org/goober/-/goober-2.1.16.tgz"
 =======
@@ -5462,11 +5423,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-<<<<<<< HEAD
-json5@^2.2.0, json5@^2.2.3:
-=======
 json5@^2.2.0:
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
   version "2.2.3"
@@ -5693,12 +5650,8 @@ minimatch@^8.0.2:
   dependencies:
     brace-expansion "^2.0.1"
 
-<<<<<<< HEAD
-minimatch@^9.0.0, minimatch@^9.0.4:
-=======
 =======
 minimatch@^9.0.0:
->>>>>>> origin/content/autonomous-enterprise-it-2025
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   version "9.0.5"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz"
@@ -5706,13 +5659,6 @@ minimatch@^9.0.0:
   dependencies:
     brace-expansion "^2.0.1"
 
-<<<<<<< HEAD
-minipass@^4.2.4:
-  version "4.2.8"
-  resolved "https://registry.npmjs.org/minipass/-/minipass-4.2.8.tgz"
-  integrity sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==
-
-=======
 minimatch@9.0.3:
   version "9.0.3"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz"
@@ -5725,7 +5671,6 @@ minipass@^4.2.4:
   resolved "https://registry.npmjs.org/minipass/-/minipass-4.2.8.tgz"
   integrity sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==
 
->>>>>>> origin/content/autonomous-enterprise-it-2025
 =======
 =======
 minipass@^4.2.4:
@@ -6147,12 +6092,8 @@ picocolors@^1.0.0, picocolors@^1.1.1:
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
 
-<<<<<<< HEAD
-picomatch@^2.0.4:
-=======
 =======
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.3.1:
->>>>>>> origin/content/autonomous-enterprise-it-2025
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   version "2.3.1"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
@@ -6382,28 +6323,17 @@ postcss-selector-parser@^6.1.1, postcss-selector-parser@^6.1.2:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-<<<<<<< HEAD
-postcss-selector-parser@^6.1.2:
-  version "6.1.2"
-  resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz"
-  integrity sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==
-=======
 postcss-selector-parser@^7.0.0:
   version "7.1.0"
   resolved "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-7.1.0.tgz"
   integrity sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-<<<<<<< HEAD
-postcss-selector-parser@^7.0.0, postcss-selector-parser@^7.1.0:
-=======
 postcss-selector-parser@^7.1.0:
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
   version "7.1.0"
@@ -6568,17 +6498,6 @@ react-hook-form@^7.62.0:
   version "7.62.0"
   integrity sha512-7KWFejc98xqG/F4bAxpL41NB3o1nnvQO1RWZT3TqRZYL8RryQETGfEdVnJN2fy1crCiBLLjkRBVK05j24FxJGA==
 
-<<<<<<< HEAD
-react-hot-toast@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.npmjs.org/react-hot-toast/-/react-hot-toast-2.6.0.tgz"
-  integrity sha512-bH+2EBMZ4sdyou/DPrfgIouFpcRLCJ+HoCA32UoAYHn6T3Ur5yfcDCeSr5mwldl6pFOsiocmrXMuoCJ1vV8bWg==
-  dependencies:
-    csstype "^3.1.3"
-    goober "^2.1.16"
-
-=======
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 react-i18next@^14.1.3:
   version "14.1.3"
   integrity sha512-wZnpfunU6UIAiJ+bxwOiTmBOAaB14ha97MjOEnLGac2RJ+h/maIYXZuTHlmyqQVX1UVHmU1YDTQ5vxLmwfXTjw==
@@ -6731,11 +6650,6 @@ resolve-from@^4.0.0:
   resolved "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
-<<<<<<< HEAD
-resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.8, resolve@1.22.8:
-  version "1.22.8"
-  resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.8.tgz"
-=======
   integrity sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==
   dependencies:
     is-core-module "^2.13.0"
@@ -6744,7 +6658,6 @@ resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.8, resolve@1.22.8:
 
 =======
 resolve@^1.1.7, resolve@^1.22.1, resolve@^1.22.10, resolve@^1.22.8:
->>>>>>> origin/content/autonomous-enterprise-it-2025
 >>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
   version "1.22.10"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.10.tgz"
@@ -6763,8 +6676,6 @@ resolve@^2.0.0-next.5:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
-<<<<<<< HEAD
-=======
 resolve@1.22.8:
   version "1.22.8"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.8.tgz"
@@ -6774,7 +6685,6 @@ resolve@1.22.8:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
->>>>>>> ee64b5776a3adf3d3ef5acf6ed43fa66e53b3b5f:yarn.lock.backup.1757943926
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76:yarn.lock.backup.1757921690
 restructure@^2.0.1:
@@ -6918,9 +6828,6 @@ semver@^6.3.1:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-<<<<<<< HEAD
-semver@^7.5.2:
-=======
 semver@^7.5.2, semver@^7.5.4:
   version "7.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-7.7.2.tgz"
@@ -6929,7 +6836,6 @@ semver@^7.5.2, semver@^7.5.4:
 =======
 =======
 semver@^7.5.2, semver@^7.5.4, semver@^7.7.2:
->>>>>>> origin/cursor/create-and-deploy-new-content-ddfc
   version "7.7.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==

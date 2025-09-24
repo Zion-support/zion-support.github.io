@@ -169,9 +169,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
       
       <Footer />
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
 
 const AdvancedQuantumComputing2026: React.FC = () => {

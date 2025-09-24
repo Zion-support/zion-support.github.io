@@ -191,11 +191,6 @@ export default function Header() {,
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </header>)}
-,
-=======
     </header>
   );
 }
->>>>>>> origin/aggressive-merge-backup-20250923-155532

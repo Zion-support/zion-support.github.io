@@ -11,8 +11,6 @@ export const useAnalytics = () => {
 };
 
 export const AnalyticsProvider = ({ children }) => {
-<<<<<<< HEAD
-=======
   const [analytics, setAnalytics] = useState({
     pageViews: 0,
     events: [],
@@ -36,16 +34,12 @@ export const AnalyticsProvider = ({ children }) => {
       ...prev,
       pageViews: prev.pageViews + 1,
     }));
->>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   const value = {
     analytics,
     trackEvent,
-<<<<<<< HEAD
-=======
     trackPageView,
->>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (

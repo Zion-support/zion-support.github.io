@@ -4,9 +4,6 @@ import { getPostById } from '../../../data/blog';
 
 type Params = { params: { id: string } };
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -30,15 +27,12 @@ type Params = { params: { id: string } };
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-5863
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
@@ -433,11 +427,6 @@ export default function BlogPostPage({ params }: Params) {
   );
 <<<<<<< HEAD
 }
-
-=======
-<<<<<<< HEAD
-}
 =======
 }
->>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-5863

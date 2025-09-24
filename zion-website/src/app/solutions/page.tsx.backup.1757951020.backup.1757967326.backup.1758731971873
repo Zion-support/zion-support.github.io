@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-e453
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
@@ -17,8 +14,6 @@ const solutions = [
   { name: 'Quantum Neural Networks', description: 'Breakthrough quantum computing for next-generation AI.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
   { name: 'Autonomous Business Operations', description: 'Self-optimizing processes with predictive intelligence.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization.', icon: ShieldCheckIcon, href: '/solutions/it-asset-management' }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
 import { 
@@ -149,14 +144,8 @@ const solutions = [
   { title: 'AI Research Assistant', desc: 'Autonomous research to accelerate discovery.', icon: LightBulbIcon, href: '/solutions/ai-autonomous-research' },
   { title: 'Quantum Neural Networks', desc: 'Hybrid quantum-classical ML systems.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
   { title: 'Autonomous Business Ops', desc: 'Automate processes with multi-agent AI.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
->>>>>>> origin/backup-main-20250915-074228
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720
 ]
 
@@ -164,8 +153,6 @@ export default function SolutionsPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
     <div className="bg-black">
@@ -190,12 +177,6 @@ export default function SolutionsPage() {
       {/* Flagship Solutions */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
 =======
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
@@ -219,9 +200,6 @@ export default function SolutionsPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 }
 =======
@@ -246,11 +224,5 @@ export default function SolutionsPage() {
 }
 =======
 }
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
 }
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720

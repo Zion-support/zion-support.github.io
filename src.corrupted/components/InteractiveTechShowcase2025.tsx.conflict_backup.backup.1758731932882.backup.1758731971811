@@ -64,33 +64,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 mb-12">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🎮 INTERACTIVE TECH SHOWCASE 2025 • LIVE DEMOS
-        </div>
-        <h2 className="text-5xl font-bold text-white mb-6">
-          Experience the <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Future</span> Live
-        </h2>
-        <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-          Interact with our revolutionary technologies through live demonstrations and see the future in action.
-        </p>
-      </div>
-
-      {/* Demo Navigation */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {demos.map((demo, index) => (
-          <button
-            key={demo.id}
-            onClick={() => handleDemoClick(index)}
-            className={`flex items-center space-x-3 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-              activeDemo === index
-                ? `bg-gradient-to-r ${demo.color} text-white shadow-lg scale-105`
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-            }`}
-=======
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
@@ -110,7 +83,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <motion.h2 
             variants={itemVariants}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
->>>>>>> cursor/create-and-deploy-new-content-c963
           >
             <span className="text-2xl">{demo.icon}</span>
             <span>{demo.title}</span>

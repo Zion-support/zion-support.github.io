@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
@@ -16,7 +14,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             </div>
             <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Quantum Computing Revolution
->>>>>>> cursor/create-and-deploy-new-content-c963
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -229,26 +226,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
-            <p className="text-cyan-100 mb-6 text-center">
-              Achieve computational tasks impossible for classical computers with our 1000+ qubit quantum processors
-            </p>
-            <ul className="text-cyan-200 space-y-2 text-sm">
-              <li>• 1000+ logical qubits</li>
-              <li>• 99.9% quantum fidelity</li>
-              <li>• Sub-millisecond gate operations</li>
-              <li>• Error correction algorithms</li>
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
-            <div className="text-5xl mb-4 text-center">🧬</div>
-=======
           </div>
         </div>
 
@@ -282,7 +259,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
           
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
->>>>>>> cursor/create-and-deploy-new-content-c963
             <h3 className="text-2xl font-bold mb-4 text-center">Molecular Simulation</h3>
             <p className="text-purple-100 mb-6 text-center">
               Simulate complex molecular structures and chemical reactions with quantum precision
@@ -295,8 +271,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
             </ul>
           </motion.div>
 
-<<<<<<< HEAD
-=======
         {/* Quantum Applications */}
         <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -367,7 +341,6 @@ const AdvancedQuantumComputing2026: React.FC = () => {
                 📚 Learn More
               </button>
             </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
           </div>
         </div>
       </div>
@@ -382,6 +355,5 @@ const AdvancedQuantumComputing2026: React.FC = () => {
     </div>
   );
 };
-
 
 export default AdvancedQuantumComputing2026;

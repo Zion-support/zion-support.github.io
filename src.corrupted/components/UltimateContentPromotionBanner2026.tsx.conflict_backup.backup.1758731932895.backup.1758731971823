@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentPromotionBanner2026: React.FC = () => {
@@ -27,25 +25,19 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
       link: "/pages/AdvancedCloudSolutions2026",
       gradient: "from-cyan-600 via-blue-600 to-cyan-600",
       icon: "🚀"
->>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
-=======
       setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [promotionalContent.length]);
->>>>>>> cursor/create-and-deploy-new-content-c963
 
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-=======
     <div className="relative overflow-hidden">
       {/* Main Promotion Banner */}
       <div className={`bg-gradient-to-r ${promotionalContent[currentSlide].gradient} text-white p-8 mb-8 rounded-2xl relative overflow-hidden`}>
@@ -59,13 +51,10 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
->>>>>>> cursor/create-and-deploy-new-content-c963
               }}
             />
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
         {/* Floating Icons */}
         <div className="absolute top-4 right-4 text-6xl animate-bounce opacity-50">
@@ -201,9 +190,7 @@ const UltimateContentPromotionBanner2026: React.FC = () => {
         ×
       </button>
     </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
   );
 };
-
 
 export default UltimateContentPromotionBanner2026;

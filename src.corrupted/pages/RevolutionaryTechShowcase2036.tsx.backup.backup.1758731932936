@@ -15,8 +15,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary technology showcase featuring conscious AI, quantum consciousness, and interdimensional computing
           </p>
-<<<<<<< HEAD
-=======
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore Showcase →
@@ -25,7 +23,6 @@ const RevolutionaryTechShowcase2036: React.FC = () => {
               Interactive Demo
             </button>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-99e3
         </div>
 
         {/* Interactive Technology Grid */}
