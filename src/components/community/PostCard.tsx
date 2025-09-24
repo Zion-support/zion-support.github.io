@@ -1,22 +1,7 @@
-
-import React from 'react';
-
-const PostCardComponent: React.FC = () => {
+export function PostCard() {
   return (
-    <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-blue-light/30">
-      <div className="text-center">
-        <h3 className="text-xl font-semibold text-white mb-4">
-          Post Card
-        </h3>
-        <p className="text-zion-slate-light">
-          Coming soon - post cards will be displayed here.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
-
-export default PostCard;
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
+,
