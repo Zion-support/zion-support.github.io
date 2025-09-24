@@ -1,0 +1,8 @@
+"export function TalentResults({\" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className=\"flex-1\">\" {}\" <ActiveFilters {...activeFiltersProps} /> {} \";\"
+=======
+"export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
+</div>"
+>>>>>>> main
+</div>"
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

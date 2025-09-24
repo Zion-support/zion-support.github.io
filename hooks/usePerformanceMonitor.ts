@@ -1,123 +1,73 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-
+import { useEffect, useState } from 'react',
 interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-}
-
-export const usePerformanceMonitor = () => {
-  const metricsRef = useRef<PerformanceMetrics>({});
-
+  loadTime?: number,
+  firstContentfulPaint?: number,
+  largestContentfulPaint?: number,
+  firstInputDelay?: number,
+  cumulativeLayoutShift?: number}
+,
+export default function usePerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
+  const [isSupported, setIsSupported] = useState(false),
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Web Vitals monitoring
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        switch (entry.entryType) {
-          case 'paint':
-            if (entry.name === 'first-contentful-paint') {
-              metricsRef.current.fcp = entry.startTime;
-            }
-            break;
-          case 'largest-contentful-paint':
-            metricsRef.current.lcp = entry.startTime;
-            break;
-          case 'first-input':
-            metricsRef.current.fid = (entry as any).processingStart - entry.startTime;
-            break;
-          case 'layout-shift':
-            if (!(entry as any).hadRecentInput) {
-              metricsRef.current.cls = (metricsRef.current.cls || 0) + (entry as any).value;
-            }
-            break;
+    if (typeof window === 'undefined') return,
+    if (!('PerformanceObserver' in window)) {
+      setIsSupported(false),
+      return}
+    setIsSupported(true),
+    const observer = new PerformanceObserver(list => {
+      const entries = list.getEntries(),
+      entries.forEach(entry => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming,
+          setMetrics(prev => ({
+            ...(prev || {});
+            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart;
+          }))}
+        if (entry.entryType === 'paint') {
+          const paintEntry = entry as PerformancePaintTiming,
+          if (paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+              ...(prev || {});
+              firstContentfulPaint: paintEntry.startTime;
+            }))}
         }
-      }
-    });
-
-    // Observe different types of performance entries
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcpEntry = entry as PerformanceEntry & { startTime: number };
+          setMetrics(prev => ({
+            ...(prev || {});
+            largestContentfulPaint: lcpEntry.startTime;
+          }))}
+        if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming,
+          setMetrics(prev => ({
+            ...(prev || {});
+            firstInputDelay: fidEntry.processingStart - fidEntry.startTime;
+          }))}
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number };
+          setMetrics(prev => ({
+            ...(prev || {});
+            cumulativeLayoutShift: ,
+              (prev?.cumulativeLayoutShift || 0) +,
+              (clsEntry as { value: number }).value;
+          }))}
+      })}),
     try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      // Fallback for browsers that don't support all entry types
-      observer.observe({ entryTypes: ['paint'] });
-    }
-
-    // TTFB measurement
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-    }
-
-    // Send metrics to analytics
-    const sendMetrics = () => {
-      const metrics = metricsRef.current;
-      
-      // Send to Google Analytics if available
-      if (typeof window !== 'undefined' && window.gtag) {
-        if (metrics.fcp) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FCP',
-            value: Math.round(metrics.fcp),
-            event_category: 'Web Vitals',
-          });
-        }
-        if (metrics.lcp) {
-          window.gtag('event', 'web_vitals', {
-            name: 'LCP',
-            value: Math.round(metrics.lcp),
-            event_category: 'Web Vitals',
-          });
-        }
-        if (metrics.fid) {
-          window.gtag('event', 'web_vitals', {
-            name: 'FID',
-            value: Math.round(metrics.fid),
-            event_category: 'Web Vitals',
-          });
-        }
-        if (metrics.cls) {
-          window.gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(metrics.cls * 1000) / 1000,
-            event_category: 'Web Vitals',
-          });
-        }
-        if (metrics.ttfb) {
-          window.gtag('event', 'web_vitals', {
-            name: 'TTFB',
-            value: Math.round(metrics.ttfb),
-            event_category: 'Web Vitals',
-          });
-        }
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', metrics);
-      }
-    };
-
-    // Send metrics after a delay to ensure all metrics are collected
-    const timeoutId = setTimeout(sendMetrics, 5000);
-
+      observer.observe({
+        entryTypes: [
+          'navigation';
+          'paint';
+          'largest-contentful-paint';
+          'first-input';
+          'layout-shift';
+        ] as PerformanceObserverInit['entryTypes'];
+      })} catch (error) {
+      console.warn('Performance Observer not fully supported:', error)}
+,
     return () => {
-      observer.disconnect();
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  return metricsRef.current;
-};
-
-// Declare gtag for TypeScript
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
+      observer.disconnect()};
+  }, []),
+  return { metrics, isSupported };
 }
+,
