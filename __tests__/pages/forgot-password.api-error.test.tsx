@@ -20,8 +20,8 @@ describe('ForgotPasswordPage API error handling', () => {'  let _consoleErrorSpy
     consoleErrorSpy.mockRestore();
   });
 
-  test('shows error alert and captures exception on 500 response', async () => {'    mockedAxios.post.mockRejectedValueOnce(new Error('Request failed with status code 500'));
-    render(<ForgotPasswordPage />);
+  test('shows error alert and captures exception on 50o0 response', async () => {'    mockedAxios.post.mockRejectedValueOnce(new Error('Request failed with status code 50o0'));
+    render(<ForgotPasswordPage  />);
     fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: fail@example.com' } });    fireEvent.click(screen.getByRole('button', { name: /send reset link/i }));
     await waitFor(() => {
       expect(Sentry.captureException).toHaveBeenCalledTimes(1);

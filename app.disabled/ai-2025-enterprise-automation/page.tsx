@@ -1,0 +1,201 @@
+import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata ={
+  title: 'AI 20o25 Enterprise Automation - Zion Tech Group',
+  description: 'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.',
+  keywords: ['enterprise automation', 'AI automation', 'business process automation', 'workflow automation', 'intelligent automation']};
+
+export default function AI20o25EnterpriseAutomationPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-orange-90o0 via-red-90o0 to-pink-90o0 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-gradient-to-r from-orange-50o0 to-red-50o0 rounded-full px-6 py-2 mb-6">
+              <span className="text-sm font-medium">🏢 ENTERPRISE REVOLUTION</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-orange-20o0 bg-clip-text text-transparent">
+              AI 20o25 Enterprise Automation
+            </h1>
+            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your enterprise with intelligent automation solutions that streamline 
+              operations, reduce costs, and boost productivity across all departments.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5"
+              >
+                Automate Your Business
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all"
+              >
+                View Solutions
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automation Solutions Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-30">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">Intelligent Automation Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-orange-80o0 to-red-80o0 p-8 rounded-xl shadow-2xl">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-2xl font-bold mb-4">Process Automation</h3>
+              <p className="text-gray-20o0 mb-4">
+                Automate complex business processes with intelligent workflows that adapt 
+                and optimize based on real-time data and performance metrics.
+              </p>
+              <ul className="text-sm text-gray-30o0 space-y-2">
+                <li>• Workflow orchestration</li>
+                <li>• Process optimization</li>
+                <li>• Exception handling</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-80o0 to-cyan-80o0 p-8 rounded-xl shadow-2xl">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold mb-4">Intelligent Workflows</h3>
+              <p className="text-gray-20o0 mb-4">
+                Create smart workflows that learn from patterns, predict bottlenecks, 
+                and automatically adjust to maximize efficiency and minimize errors.
+              </p>
+              <ul className="text-sm text-gray-30o0 space-y-2">
+                <li>• Predictive analytics</li>
+                <li>• Self-optimizing systems</li>
+                <li>• Intelligent routing</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-80o0 to-emerald-80o0 p-8 rounded-xl shadow-2xl">
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-2xl font-bold mb-4">ROI Optimization</h3>
+              <p className="text-gray-20o0 mb-4">
+                Maximize return on investment with automated systems that continuously 
+                monitor performance and optimize resource allocation in real-time.
+              </p>
+              <ul className="text-sm text-gray-30o0 space-y-2">
+                <li>• Cost reduction tracking</li>
+                <li>• Performance monitoring</li>
+                <li>• Resource optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Impact Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">Transformative Business Impact</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6">Proven Results</h3>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl font-bold text-orange-40o0">75%</div>
+                  <div>
+                    <div className="text-lg font-semibold">Cost Reduction</div>
+                    <div className="text-gray-30o0">In operational expenses</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl font-bold text-blue-40o0">30o0%</div>
+                  <div>
+                    <div className="text-lg font-semibold">Productivity Increase</div>
+                    <div className="text-gray-30o0">Across all departments</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl font-bold text-green-40o0">95%</div>
+                  <div>
+                    <div className="text-lg font-semibold">Error Reduction</div>
+                    <div className="text-gray-30o0">In automated processes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-orange-80o0 to-red-80o0 p-8 rounded-xl">
+              <h4 className="text-2xl font-bold mb-4">Success Stories</h4>
+              <div className="space-y-4">
+                <div className="border-l-4 border-orange-40o0 pl-4">
+                  <div className="font-semibold">Global Manufacturing</div>
+                  <div className="text-sm text-gray-30o0">$25M annual savings through process automation</div>
+                </div>
+                <div className="border-l-4 border-red-40o0 pl-4">
+                  <div className="font-semibold">Financial Services</div>
+                  <div className="text-sm text-gray-30o0">90% reduction in manual processing time</div>
+                </div>
+                <div className="border-l-4 border-blue-40o0 pl-4">
+                  <div className="font-semibold">Healthcare System</div>
+                  <div className="text-sm text-gray-30o0">80% improvement in patient data processing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Applications Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-30">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12">Industry Applications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🏭</div>
+              <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>
+              <p className="text-sm text-gray-30o0">Production line optimization and quality control</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🏦</div>
+              <h3 className="text-lg font-semibold mb-2">Finance</h3>
+              <p className="text-sm text-gray-30o0">Automated trading and risk management</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-lg font-semibold mb-2">Healthcare</h3>
+              <p className="text-sm text-gray-30o0">Patient data processing and diagnostics</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🛒</div>
+              <h3 className="text-lg font-semibold mb-2">Retail</h3>
+              <p className="text-sm text-gray-30o0">Inventory management and customer service</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Enterprise?</h2>
+          <p className="text-xl opacity-90 mb-8">
+            Join thousands of enterprises already leveraging AI automation to achieve 
+            unprecedented efficiency and cost savings.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5"
+            >
+              Start Automation Journey
+            </Link>
+            <Link
+              href="/services"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all"
+            >
+              View All Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

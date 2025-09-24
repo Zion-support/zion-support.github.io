@@ -43,9 +43,7 @@ class EnhancedGitAutomation {
           smartGrouping: true,
           conflictResolution: true,
           performanceOptimization: true,
-          ...config.git,
-        },
-      };
+          ...config.git}};
     }
     return {
       git: {
@@ -57,9 +55,7 @@ class EnhancedGitAutomation {
         autoFixEnabled: true,
         smartGrouping: true,
         conflictResolution: true,
-        performanceOptimization: true,
-      },
-    };
+        performanceOptimization: true}};
   }
 
   ensureDirectories() {
@@ -71,7 +67,7 @@ class EnhancedGitAutomation {
 
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
-      const initialStatus = {
+      const initialStatus ={
         lastCommit: null,
         lastPush: null,
         totalCommits: 0,
@@ -79,9 +75,7 @@ class EnhancedGitAutomation {
         errors: [],
         performance: {
           averageCommitTime: 0,
-          averagePushTime: 0,
-        },
-      };
+          averagePushTime: 0}};
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
     }
   }
@@ -109,21 +103,19 @@ class EnhancedGitAutomation {
     }
   }
 
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
         encoding: 'utf8',
         stdio: options.stdio || 'pipe',
         cwd: this.projectRoot,
-        ...options,
-      });
+        ...options});
       return { success: true, output: result };
     } catch (error) {
       return {
         success: false,
         error: error.message,
-        output: error.stdout || '',
-      };
+        output: error.stdout || ''};
     }
   }
 
@@ -214,15 +206,14 @@ class EnhancedGitAutomation {
       return [files];
     }
 
-    const groups = {
+    const groups ={
       typescript: [],
       javascript: [],
       styles: [],
       config: [],
       docs: [],
       tests: [],
-      other: [],
-    };
+      other: []};
 
     files.forEach((file) => {
       const ext = path.extname(file).toLowerCase();
@@ -282,8 +273,7 @@ class EnhancedGitAutomation {
     const message = descriptions.join(', ');
     return this.config.git.commitMessageTemplate.replace(
       '{description}',
-      message,
-    );
+      message);
   }
 
   async stageFiles(files) {
@@ -419,8 +409,7 @@ class EnhancedGitAutomation {
     const totalTime = Date.now() - startTime;
     this.log(
       `✅ Enhanced git automation completed in ${totalTime}ms. ${successCount} commits made.`,
-      'success',
-    );
+      'success');
 
     return successCount > 0;
   }
@@ -441,12 +430,10 @@ class EnhancedGitAutomation {
       {
         ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/,
         persistent: true,
-        ignoreInitial: true,
-      },
-    );
+        ignoreInitial: true});
 
     let commitTimeout;
-    const commitDelay = 3000; // 3 seconds delay
+    const commitDelay = 30o00; // 3 seconds delay
 
     watcher.on('change', (filePath) => {
       this.log(`File changed: ${filePath}`);
@@ -467,8 +454,7 @@ class EnhancedGitAutomation {
     });
 
     this.log(
-      '✅ Enhanced file watcher started. Changes will be auto-committed after 3 seconds of inactivity.',
-    );
+      '✅ Enhanced file watcher started. Changes will be auto-committed after 3 seconds of inactivity.');
   }
 
   async getStatus() {
@@ -502,8 +488,7 @@ switch (command) {
     const status = gitAutomation.getStatus();
     console.log(
       'Enhanced Git Automation Status:',
-      JSON.stringify(status, null, 2),
-    );
+      JSON.stringify(status, null, 2));
     break;
   case 'fix':
     gitAutomation.autoFix().catch((error) => {

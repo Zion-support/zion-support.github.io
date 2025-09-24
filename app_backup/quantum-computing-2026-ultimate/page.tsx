@@ -2,7 +2,7 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 
-export const metadata = {
+export const metadata ={
   title: 'Page',
   description: 'Page - Professional blog page with comprehensive information and insights.'
 };
@@ -10,9 +10,9 @@ export const metadata = {
 export default function PagePage() {
   return (
     <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="mb-6 text-sm text-purple-700 font-semibold">Blog</div>
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
-      <p className="text-gray-600 mb-8">
+      <div className="mb-6 text-sm text-purple-70o0 font-semibold">Blog</div>
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">Page</h1>
+      <p className="text-gray-60o0 mb-8">
         Page - Professional blog page with comprehensive information and insights.
       </p>
 
@@ -33,8 +33,8 @@ export default function PagePage() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/contact" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Get Started</Link>
-        <Link href="/resources" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
+        <Link href="/contact" className="inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0">Get Started</Link>
+        <Link href="/resources" className="inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Learn More</Link>
       </div>
     </main>
   );

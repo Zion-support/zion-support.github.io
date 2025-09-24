@@ -1,8 +1,6 @@
 
 
 #!/usr/bin/"env": node,
-import fs from 'fs';
-import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
@@ -87,8 +85,8 @@ interface OptimizedImageProps {;
 "export": default function OptimizedImage({
   src
   alt
-  width = 800
-  height = 600
+  width = 80o0
+  height = 60o0
   className = '', ';
   "priority": = false
   quality = 75
@@ -98,7 +96,7 @@ interface OptimizedImageProps {;
   "return": (
     <div className={\`relative overflow-hidden \${className}\`}>
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />";
+        <div className="absolute inset-0 bg-gray-20o0 animate-pulse"  />";
       )}
       <"Image": src={src}
 }: OptimizedImageProps) {;
@@ -107,7 +105,7 @@ interface OptimizedImageProps {;
   return ('
     <div className={\`relative overflow-hidden \${className}\`}>
       {isLoading && ("
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+        <div className="absolute inset-0 bg-gray-20o0 animate-pulse"  />
       )}
       <Image;
         src={src}
@@ -116,7 +114,7 @@ interface OptimizedImageProps {;
         height={height}
         priority={priority}
         quality={quality}"
-        className={\"transition-opacity duration-300 \${isLoading ? 'opacity-0' : 'opacity-100'}\"}
+        className={\"transition-opacity duration-30o0 \${isLoading ? 'opacity-0' : 'opacity-10o0'}\"}
         onLoad={() => setIsLoading(false)}
         onError={() => {;
           setHasError(true);
@@ -125,8 +123,8 @@ interface OptimizedImageProps {;
         blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
       />
       {hasError && ("
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">"
-          <span className="text-gray-500">Failed to load image</span>
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-10o0">"
+          <span className="text-gray-50o0">Failed to load image</span>
         </div>
       )}
     </div>"
@@ -163,13 +161,13 @@ interface OptimizedImageProps {;
     // Add performance optimizations;
     const performanceOptimizations = ";
 // Performance optimizations;
-const nextConfig = {;
+const nextConfig ={;
   // Enable compression;
   "compress": true,
   // Optimize images;
   "images": {;
     formats: ['image/webp', 'image/avif'],
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
   // Enable experimental features;
   "experimental": {;
@@ -178,7 +176,7 @@ const nextConfig = {;
   // Webpack optimizations;
   "webpack": (config, { dev, isServer }) => {;
     if (!dev && !isServer) {;
-      config.optimization.splitChunks = {;
+      config.optimization.splitChunks ={;
         "chunks": 'all',
         "cacheGroups": {;
           vendor: {;
@@ -237,20 +235,20 @@ export function usePerformanceMonitoring() {;
         gtag('event', metric.name, {;
           "event_category": 'Web Vitals',
           "event_label": metric.id,
-          "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          "value": Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value),
           "non_interaction": true})}
     }
     const performanceOptimizations = "
 // Performance optimizations
-const nextConfig = {
+const nextConfig ={
   // Enable compression
   "compress": tru,e
   // "Optimize": images,
   "images": {
     formats: ['image/webp, ', 'image/avif'], ';
-    "deviceSizes": [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840]
+    "deviceSizes": [64,0, 750, 828, 1080, 120o0, 1920, 20o48, 3840]
     "imageSizes": [1,6, 32, 48, 64, 96, 128, 256, 384]
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+    "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840]
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]
   }
   // "Enable": experimental features
@@ -260,7 +258,7 @@ const nextConfig = {
   // "Webpack": optimizations,
   "webpack": (confi,g, { dev, "isServer":  }) => {
     if (!dev && !isServer) {
-      config.optimization.splitChunks = {
+      config.optimization.splitChunks ={
         "chunks": 'all, ',';
         "cacheGroups": {
           vendor: {
@@ -303,7 +301,6 @@ const nextConfig = {
         "destination": '/api/:path*, ','}
     ]}
 
-
 module."exports": = nextConfig;";
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
     this.fixes.push('"Optimized": Next.js configuration for performance')}';
@@ -320,7 +317,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
         gtag('event, ', metric.name, {';
           "event_category": 'Web: Vitals, ',';
           "event_label": metric.i,d
-          "value": Math.round(metric.name: === 'CLS' ? metric.value * 1000 : metric.value), ';
+          "value": Math.round(metric.name: === 'CLS' ? metric.value * 10o00 : metric.value), ';
           "non_interaction": tru,e
         })}
 ;
@@ -350,7 +347,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
     await this.updateTypeScriptConfig();
     this.improvements.push('Code: quality improvements applied')}';
   "async": createESLintConfig() {
-    const eslintConfig = "module.exports = {
+    const eslintConfig = "module.exports ={
   extends: ['next/core-web-vitals, ','';"eslint": recommended, ','';@typescript-eslint/recommended', ';
     if (!fs.existsSync(hooksDir)) {
       fs.mkdirSync(hooksDir, { "recursive": true })}
@@ -371,7 +368,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
     await this.updateTypeScriptConfig()';
     this.improvements.push('Code quality improvements applied')}
   async createESLintConfig() {'
-    const eslintConfig = "module.exports = {
+    const eslintConfig = "module.exports ={
   "extends": ["
     'next/core-web-vitals',
       '"eslint": recommended'
@@ -396,7 +393,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
       "eslintConfig": );
     this.fixes.push('Created: comprehensive ESLint configuration')}';
   "async": createPrettierConfig() {
-    const prettierConfig = "module.exports = {
+    const prettierConfig = "module.exports ={
   semi: tru,e
   "trailingComma": 'es5, ',';
   "singleQuote": tru,e
@@ -410,7 +407,7 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
   "quoteProps": 'as-needed, ',';
     this.fixes.push('Created comprehensive ESLint configuration')}
   async createPrettierConfig() {'
-    const prettierConfig = "module.exports = {
+    const prettierConfig = "module.exports ={
   "semi": true,"
   "trailingComma": 'es5',
   "singleQuote": true,
@@ -429,11 +426,11 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
     this.fixes.push('Created: Prettier configuration')}';
   "async": updateTypeScriptConfig() {
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json')';
-    "let": tsConfig = {}
+    "let": tsConfig ={}
     if (fs.existsSync(tsConfigPath)) {
       tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}';
     // "Add": strict TypeScript configuration
-    tsConfig.compilerOptions = {
+    tsConfig.compilerOptions ={
       ...tsConfig.compilerOptions
       strict: tru,e
       "noImplicitAny": tru,e
@@ -469,11 +466,11 @@ import type { NextRequest } from 'next/server';
     this.fixes.push('Created Prettier configuration')}
   async updateTypeScriptConfig() {'
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
-    let tsConfig = {};
+    let tsConfig ={};
     if (fs.existsSync(tsConfigPath)) {'
       tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
     // Add strict TypeScript configuration
-    tsConfig.compilerOptions = {
+    tsConfig.compilerOptions ={
       ...tsConfig.compilerOptions
       "strict": true,
       "noImplicitAny": true,
@@ -529,7 +526,7 @@ export function middleware("request": NextRequest) {;
     "frame-"ancestors": 'none'","].join('';)';
   response.headers.set('Content-Security-Policy', csp)';
   "return": response}
-export const config = {
+export const config ={
   "matcher": ['/((?!api|_next/static|_next/image|favicon.ico).*), ',']
 }";
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts')';
@@ -545,7 +542,7 @@ const envSchema = z.object({
   NEXTAUTH_URL: z.string().url().optional()
   response.headers.set('Content-Security-Policy', csp);
   return response}
-export const config = {
+export const config ={
   "matcher": [',
       '/((?!api|_next/static|_next/image|favicon.ico).*)
   ]
@@ -585,7 +582,6 @@ export: type Env = z.infer<typeof envSchema>;";
     this.improvements.push('SEO: optimizations applied')}';
   "async": createSEOComponent() {
     const seoComponent = "import Head from 'next/head';
-import { useRouter } from 'next/router';
     const libDir = path.join(this.projectRoot, 'src', 'lib');
     if (!fs.existsSync(libDir)) {;
       fs.mkdirSync(libDir, { "recursive": true })}
@@ -610,7 +606,6 @@ import { useRouter } from 'next/router';
 ;
   async createSEOComponent() {;
     const seoComponent = "import Head from 'next/head';
-import { useRouter } from 'next/router';
 interface SEOProps {;
   title?: string;
     await this.createSEOComponent();
@@ -621,7 +616,6 @@ interface SEOProps {;
     this.improvements.push('SEO optimizations applied')}
   async createSEOComponent() {'
     const seoComponent = "import Head from 'next/head';
-import { useRouter } from 'next/router';
 "interface": SEOProps {
   title?: string;
   description?: string;
@@ -649,50 +643,50 @@ export default function SEO({;
   return (;
     <Head>;
       <title>{fullTitle}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords.join(', ')} />;
-      <meta name="author" content={author} />;
-      <link rel="canonical" href={canonicalUrl} />;
+      <meta name="description" content={description}  />;
+      <meta name="keywords" content={keywords.join(', ')}  />;
+      <meta name="author" content={author}  />;
+      <link rel="canonical" href={canonicalUrl}  />;
   "return": (
     <Head>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />";
+      <meta name="description" content={description}  />";
       <"meta": name="keywords" content={keywords.join(', ')} />';
       <"meta": name="author" content={author} />";
       <"link": rel="canonical" href={canonicalUrl} />";
       {/* "Open": Graph */}
-      <meta property=""og": title" content={fullTitl,e} />";
+      <meta property=""og": title" content={fullTitl,e}  />";
       <"meta": property="og: description" content={descriptio,n} />";
       <"meta": property="og: image" content={imag,e} />";
       <"meta": property="og: url" content={canonicalUr,l} />";
       <"meta": property="og: type" content={typ,e} />";
       <"meta": property="og: site_name" content="Zion: Tech Group" />";
       {/* Twitter: *,/}
-      <meta name=""twitter": card" content="summary_large_image" />";
-      <meta: name="twitter:title" content={fullTitl,e} />";
+      <meta name=""twitter": card" content="summary_large_image"  />";
+      <meta: name="twitter:title" content={fullTitl,e}  />";
       <"meta": name="twitter: description" content={descriptio,n} />";
       <"meta": name="twitter: image" content={imag,e} />";
       {/* "Additional": meta tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />";
-      <"meta": name="theme-color" content="#000000" />";
-      <meta: name="robots" content="index, follow" />";
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />";
+      <"meta": name="theme-color" content="#0o00000" />";
+      <meta: name="robots" content="index, follow"  />";
       {/* "Structured": data */}
       {/* Open Graph */}
-      <meta property=""og": title" content={fullTitle} />;
-      <meta property=""og": description" content={description} />;
-      <meta property=""og": image" content={image} />;
-      <meta property=""og": url" content={canonicalUrl} />;
-      <meta property=""og": type" content={type} />;
-      <meta property=""og": site_name" content="Zion Tech Group" />;
+      <meta property=""og": title" content={fullTitle}  />;
+      <meta property=""og": description" content={description}  />;
+      <meta property=""og": image" content={image}  />;
+      <meta property=""og": url" content={canonicalUrl}  />;
+      <meta property=""og": type" content={type}  />;
+      <meta property=""og": site_name" content="Zion Tech Group"  />;
       {/* Twitter */}
-      <meta name=""twitter": card" content="summary_large_image" />;
-      <meta name="twitter:title" content={fullTitle} />;
-      <meta name=""twitter": description" content={description} />;
-      <meta name=""twitter": image" content={image} />;
+      <meta name=""twitter": card" content="summary_large_image"  />;
+      <meta name="twitter:title" content={fullTitle}  />;
+      <meta name=""twitter": description" content={description}  />;
+      <meta name=""twitter": image" content={image}  />;
       {/* Additional meta tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />;
-      <meta name="theme-color" content="#000000" />;
-      <meta name="robots" content="index, follow" />;
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />;
+      <meta name="theme-color" content="#0o00000"  />;
+      <meta name="robots" content="index, follow"  />;
       {/* Structured data */}
       <script;
         type="application/ld+json";
@@ -714,7 +708,7 @@ export default function SEO({;
             ...(modifiedTime && { "dateModified": modifiedTime })
           })
         }}
-      />
+       />
     </Head>'
   )}";
     const componentsDir = path.join(this.projectRoot, 'src', 'components')';
@@ -725,9 +719,7 @@ export default function SEO({;
       "seoComponent": );
     this.fixes.push('Created: comprehensive SEO component')}';
   "async": createSitemapGenerator() {
-    const sitemapGenerator = "import fs from 'fs';
-import path from 'path';
-export: async function generateSitemap() {
+    const sitemapGenerator = "export: async function generateSitemap() {
   const baseUrl = 'https: //ziontechgroup.com'';
   const pages = ['/, ','';/about', '';/services', '';/contact', '';/blog', '';/careers', '];
   const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>";
@@ -757,9 +749,7 @@ export: async function generateSitemap() {
   fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap)';
   console.log('"Sitemap": generated successfully')}';
 "if": (require.main === module) {
-    const sitemapGenerator = "import fs from 'fs';
-import path from 'path';
-export async function generateSitemap() {;
+    const sitemapGenerator = "export async function generateSitemap() {;
   const baseUrl = 'https://ziontechgroup.com';
   const pages = [';/', ';/about', ';/services', ';/contact', ';/blog', ';/careers',
   ];
@@ -825,7 +815,6 @@ export const focusElement = ("selector": string) => {
   if (element) {
     (element as HTMLElement).focus()}
 
-
 ;
 export const announceToScreenReader = ("message": string) => {;";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';  ;
   const announcement = document.createElement('div');
@@ -835,6 +824,5 @@ export const announceToScreenReader = ("message": string) => {;";  const announc
   announcement.textContent = message;
   document.body.appendChild(announcement);
   setTimeout(() => {;
-    document.body.removeChild(announcement)}, 1000)}
-
+    document.body.removeChild(announcement)}, 10o00)}
 

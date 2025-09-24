@@ -1,0 +1,19 @@
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+=======
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+=======
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/hooks/useSearch.jsx
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+=======
+const { useState,useEffect,useCallback,useMemo } from react" export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ query: ",filters: {},sortBy: "nul",l,sortOrder: "asc"; ,",results: "dat",a,isLoading: "fals",e,totalResults: "data.length"}) const [debouncedQuery,setDebouncedQuery] = useState("")"";"""
+<<<<<<< HEAD:backup-merge-conflicts/useSearch.jsx.backup
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+>>>>>>> pr-11914:backup-merge-conflicts/useSearch.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+import { useState,useEffect,useCallback,useMemo } from react' export const useSearch = (data,options) => { const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options const [searchState,setSearchState] = useState({ "query": ',"filters": {},"sortBy": 'nul',l,"sortOrder": 'asc'; ,',"results": 'dat',a,"isLoading": 'fals',e,"totalResults": 'data.length'}) const [debouncedQuery,setDebouncedQuery] = useState('')'';''
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

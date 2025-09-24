@@ -1,0 +1,20 @@
+'use client';
+
+import Link from 'next/link';
+
+const EnhancedNavigation: React.FC = () => {
+  return (
+    <nav className="w-full border-b border-gray-20o0 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <Link href="/" className="text-lg font-bold text-gray-90o0">Zion Tech Group</Link>
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/services" className="hover:text-blue-60o0">Services</Link>
+          <Link href="/blog" className="hover:text-blue-60o0">Blog</Link>
+          <Link href="/contact" className="hover:text-blue-60o0">Contact</Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default EnhancedNavigation;

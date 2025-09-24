@@ -31,7 +31,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 
@@ -93,7 +92,6 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

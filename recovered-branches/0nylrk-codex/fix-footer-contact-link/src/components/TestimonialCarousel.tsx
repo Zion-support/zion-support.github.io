@@ -1,134 +1,39 @@
 
-
-
-import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
-import {Card, CardContent} from "@/components/ui/card";
-import {Avatar} from "@/components/ui/avatar";
-import {Quote} from "lucide-react";
-const testimonials = [
-
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';'
-import { Card, CardContent } from '@/components / ui / card';'
-import { Avatar } from '@/components / ui / avatar';'
-import { Quote } from './lucide-react';
-const testimonials = [;
-  {
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
-    author: "Sarah Chen"
-
-  {"
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!""
-    author: "Sarah Chen""
-    role: "CTO, DataMind Solutions";
-"
-    avatar: "https://i.pravatar.cc / 150?img = 32","
-    company: "DataMind"},
-  {"
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24 / 7 support is unmatched in the industry.","
-    author: "Michael Rodriguez","
-    role: "IT Director, GlobalTech";"
-    avatar: "https://i.pravatar.cc / 150?img = 12","
-    company: "GlobalTech"},
-  {"
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game - changer.";"
-    author: "Aanya Patel","
-    role: "Independent AI Consultant","
-    avatar: "https://i.pravatar.cc / 150?img = 28","
-    company: "AI Systems"},
-
-
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
-import { Card, CardContent } from '@/components / ui / card';
-import { Avatar } from '@/components / ui / avatar';
-import { Quote } from './lucide-react';
-const testimonials = [;
-
-  {
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
-    author: "Sarah Chen"
-    role: "CTO, DataMind Solutions";
-
-    avatar: "https://i.pravatar.cc / 150?img = 32",
-    company: "DataMind"},
-  {
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24 / 7 support is unmatched in the industry.",
-    author: "Michael Rodriguez",
-    role: "IT Director, GlobalTech";
-    avatar: "https://i.pravatar.cc / 150?img = 12",
-    company: "GlobalTech"},
-  {
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game - changer.";
-    author: "Aanya Patel",
-    role: "Independent AI Consultant",
-    avatar: "https://i.pravatar.cc / 150?img = 28",
-    company: "AI Systems"},
-
-  {
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
-    author: "Thomas Klein"
-    role: "Operations Manager, EcoTech Systems";
-    avatar: "https://i.pravatar.cc/150?img=67"
-    company: "EcoTech"}]
-import {
-
-  {"
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.""
-    author: "Thomas Klein""
-    role: "Operations Manager, EcoTech Systems";
-
-import {}
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,"
-  CarouselPrevious} from "@/components/ui/carousel","
-import { Card, CardContent } from "@/components/ui/card","
-import { Avatar } from "@/components/ui/avatar","
-import { Quote } from "lucide-react",
-
-
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Quote } from "lucide-react",
+  CarouselPrevious} from "@/components/ui/carousel";
+import { CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
     author: "Sarah Chen",
-    role: "CTO, DataMind Solutions",
+    role: "CTODataMind Solutions",
     avatar: "https://i.pravatar.cc/150?img=32",
-const testimonials = []
-  {"
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!","
-    author: "Sarah Chen","
-    role: "CTO, DataMind Solutions","
-    avatar: "https://i.pravatar.cc/150?img=32","
     company: "DataMind"},
-  {"
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.","
-    author: "Michael Rodriguez","
-    role: "IT Director, GlobalTech","
-    avatar: "https://i.pravatar.cc/150?img=12","
+  {
+    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",
+    author: "Michael Rodriguez",
+    role: "IT DirectorGlobalTech",
+    avatar: "https://i.pravatar.cc/150?img=12",
     company: "GlobalTech"},
-  {"
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.","
-    author: "Aanya Patel","
-    role: "Independent AI Consultant","
-    avatar: "https://i.pravatar.cc/150?img=28","
+  {
+    quote: "As an AI developerZion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",
+    author: "Aanya Patel",
+    role: "Independent AI Consultant",
+    avatar: "https://i.pravatar.cc/150?img=28",
     company: "AI Systems"},
-  {"
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.","
-    author: "Thomas Klein","
-    role: "Operations Manager, EcoTech Systems","
-    avatar: "https://i.pravatar.cc/150?img=67","
-    company: "EcoTech"}],
-
+  {
+    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",
+    author: "Thomas Klein",
+    role: "Operations ManagerEcoTech Systems",
+    avatar: "https://i.pravatar.cc/150?img=67",
+    company: "EcoTech"}];
 
 export function TestimonialCarousel() {
   return (
@@ -140,92 +45,16 @@ export function TestimonialCarousel() {
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
+        
         <div className="max-w-5xl mx-auto px-8">
-
-const testimonials = [;
-  {;"
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;"
-    author: "Sarah Chen",;"
-    role: "CTO, DataMind Solutions";"
-    avatar: "https://i && i.pravatar.cc/150?img=32",;"
-    company: "DataMind"},;
-  {;"
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",;"
-    author: "Michael Rodriguez",;"
-    role: "IT Director, GlobalTech";"
-    avatar: "https://i && i.pravatar.cc/150?img=12",;"
-    company: "GlobalTech"},;
-  {;"
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";"
-    author: "Aanya Patel",;"
-    role: "Independent AI Consultant",;"
-    avatar: "https://i && i.pravatar.cc/150?img=28",;"
-    company: "AI Systems"},;
-  {;"
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",;"
-    author: "Thomas Klein",;"
-    role: "Operations Manager, EcoTech Systems";"
-    avatar: "https://i && i.pravatar.cc/150?img=67",;"
-    company: "EcoTech"}],;
-
-"
-    <section className="py-20 bg-zion-blue-dark">;"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
-        <div className="text-center mb-12">;"
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;"
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
-            Discover how Zion is transforming the tech and AI marketplace ecosystem;
-          </p>;
-        </div>;
-
-<Carousel"
-    avatar: "https://i.pravatar.cc / 150?img = 67","
-    company: "EcoTech"}],
-export /**;
- * TestimonialCarousel - Function description;
- */
-function TestimonialCarousel() {}
-  return ("
-    <section className="py - 20 bg - zion - blue - dark">;"
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-        <div className="text - center mb - 12">;"
-          <h3 className="text - 3xl font - bold text - white mb - 3">What Our Users Say</h3>;"
-          <p className="text - zion - slate - light text - lg max - w-2xl mx - auto">;
-            Discover how Zion is transforming the tech and AI marketplace ecosystem;
-          </p>;
-        </div>;"
-        <div className="max - w-5xl mx - auto px - 8">;
-          <Carousel;
+          <Carousel
             opts={{
-              align: "start"
-
-              loop: true}}
-
+              align: "start",
               loop: true}}
             className="w-full"
           >
             <CarouselContent>
-              {testimonials.map((testimonial, index) => ("
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">"
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">"
-                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">"
-                      <div className="flex-shrink-0 flex flex-col items-center">"
-                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-                          <img src={testimonial.avatar} alt={testimonial.author} />
-                        </Avatar>"
-                        <div className="text-center md:text-left">"
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>"
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
-                        </div>
-                      </div>"
-                      <div className="flex-1">"
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />"
-
-              loop: true}}
-            className="w-full"
-          >
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonialindex) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6">
@@ -245,306 +74,15 @@ function TestimonialCarousel() {}
                     </CardContent>
                   </Card>
                 </CarouselItem>
-
-import {;
-  Carousel,;
-  CarouselContent,;
-  CarouselItem,;
-  CarouselNext,;"
-  CarouselPrevious} from "@/components/ui/carousel",;"
-import { Card, CardContent } from "@/components/ui/card",;"
-import { Avatar } from "@/components/ui/avatar",;"
-import { Quote } from "lucide-react",;
-const testimonials = [;
-  {;"
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;"
-    author: "Sarah Chen",;"
-    role: "CTO, DataMind Solutions",;"
-    avatar: "https://i.pravatar.cc/150?img=32",;"
-    company: "DataMind"},;
-  {;"
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",;"
-    author: "Michael Rodriguez",;"
-    role: "IT Director, GlobalTech",;"
-    avatar: "https://i.pravatar.cc/150?img=12",;"
-    company: "GlobalTech"},;
-  {;"
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",;"
-    author: "Aanya Patel",;"
-    role: "Independent AI Consultant",;"
-    avatar: "https://i.pravatar.cc/150?img=28",;"
-    company: "AI Systems"},;
-  {;"
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",;"
-    author: "Thomas Klein",;"
-    role: "Operations Manager, EcoTech Systems",;"
-    avatar: "https://i.pravatar.cc/150?img=67",;"
-    company: "EcoTech"}],;
-export function TestimonialCarousel() { return null; }
-              loop: true}}"
-            className="w-full";
-          >;
-            <CarouselContent>;
-              {testimonials && testimonials.map((testimonial, index) => (;"
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;"
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">;"
-                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">;"
-                      <div className="flex-shrink-0 flex flex-col items-center">;"
-                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
-                          <img src={testimonial && testimonial.avatar} alt={testimonial && testimonial.author} />;
-                        </Avatar>;"
-                        <div className="text-center md:text-left">;"
-                          <p className="font-bold text-zion-cyan">{testimonial && testimonial.author}</p>;"
-                          <p className="text-zion-slate-light text-sm">{testimonial && testimonial.role}</p>;
-                        </div>;
-                      </div>;"
-                      <div className="flex-1">;"
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;"
-                        <p className="text-white text-lg mb-6">"{testimonial && testimonial.quote}"</p>;
-                      </div>;
-                    </CardContent>;
-                  </Card>;
-                </CarouselItem>;
               ))}
-</CarouselContent>
+            </CarouselContent>
             <div className="flex justify-center mt-8 gap-2">
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
+              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
       </div>
     </section>
-  )
-
-            </CarouselContent>;"
-            <div className="flex justify-center mt-8 gap-2">;"
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;"
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-
-        ;"
-        <div className="max-w-5xl mx-auto px-8">;
-          <Carousel;
-            opts={{;"
-              align:"start",;
-              loop:true}}"
-            className="w-full";
-          >;
-            <CarouselContent>;
-              {testimonials.map((testimonial, index) => (;"
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;"
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">;"
-                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">;"
-                      <div className="flex-shrink-0 flex flex-col items-center">;"
-                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
-                          <img src={testimonial.avatar} alt={testimonial.author} />;
-                        </Avatar>;"
-                        <div className="text-center md:text-left">;"
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>;"
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>;
-                        </div>;
-                      </div>;"
-                      <div className="flex-1">;"
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;"
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>;
-                      </div>;
-                    </CardContent>;
-                  </Card>;
-                </CarouselItem>;
-              ))}
-</CarouselContent>;"
-            <div className="flex justify-center mt-8 gap-2">;"
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;"
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-            </div>;
-          </Carousel>;
-        </div>;
-      </div>;
-
-</section>);
-}
-;
-;
-
-    </section>);}
-;
-</section>;
-  );}
- const testimonials = [ {
-  quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!";
-author: "Sarah Chen";
-role: "CTO, DataMind Solutions";
-avatar: "https://i.pravatar.cc/150?img=32";
-company: "DataMind" 
-};
-{
-  quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.";
-author: "Michael Rodriguez";
-role: "IT Director, GlobalTech";
-avatar: "https://i.pravatar.cc/150?img=12";
-company: "GlobalTech" 
-};
-{
-  quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.";
-author: "Aanya Patel";
-role: "Independent AI Consultant";
-avatar: "https://i.pravatar.cc/150?img=28";
-company: "AI Systems" 
-};
-{
-  export function TestimonialCarousel () {
-  return (<section className="py-20 bg-zion-blue-dark" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <h3 className="text-3xl font-bold text-white mb-3" >What Our Users Say</h3> <p className="text-zion-slate-light text-lg max-w-2xl mx-auto" > max-w-5xl mx-auto px-8" > <Carousel opts= {
-  {
-  </div> </CardContent> </Card> </CarouselItem>) ) 
-}</CarouselContent> </div> </Carousel> </div> </div> </section>) 
-}
-    </section>;
   );
 }
-;
-        <div className="max-w-5xl mx-auto px-8">            </div>;
-            </CarouselContent>;
-            <div className="flex justify-center mt-8 gap-2">;
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-            </div>;
-          </Carousel>;
-        </div>;
-      </div>;
-
-    </section>);
-}
-;
-;
-}
-;
-
-'"
-}
-    </section>;
-  );
-}
-;
-;
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,"
-  CarouselPrevious} from "@/components/ui/carousel",""
-import { Card, CardContent } from "@/components/ui/card",""
-import { Avatar } from "@/components/ui/avatar",""
-import { Quote } from "lucide-react","
-const testimonials = [
-    quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",""
-    author: "Sarah Chen",""
-    role: "CTO, DataMind Solutions",""
-    avatar: "https://i.pravatar.cc/150?img=32",""
-    quote: "The IT equipment rentals saved us thousands compared to buying outright. Their 24/7 support is unmatched in the industry.",""
-    role: "IT Director, GlobalTech",""
-    avatar: "https://i.pravatar.cc/150?img=12",""
-    quote: "As an AI developer, Zion has become my primary platform for showcasing work and finding new clients. The free publishing is a game-changer.",""
-    avatar: "https://i.pravatar.cc/150?img=28",""
-    quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure.",""
-    author: "Thomas Klein",""
-    role: "Operations Manager, EcoTech Systems",""
-    avatar: "https://i.pravatar.cc/150?img=67","]"
-    company: "EcoTech"}],"
-export function TestimonialCarousel() {
-  return ("
-    <section className="py-20 bg-zion-blue-dark">"
-</section>"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
-</div>"
-        <div className="text-center mb-12">"
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>""
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">"
-</p>
-        <div className="max-w-5xl mx-auto px-8">"
-    <section className="py-20 bg-zion-blue-dark">;"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
-        <div className="text-center mb-12">;"
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;""
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;"
-          </p>;
-        </div>;"
-        <div className="max-w-5xl mx-auto px-8">;"
-</div>
-          <Carousel;"
-    avatar: "https://i.pravatar.cc / 150?img = 67",""
-export /**
- * TestimonialCarousel - Function description;
- */)
-function TestimonialCarousel() {
-    <section className="py - 20 bg - zion - blue - dark">;"
-"
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-        <div className="text - center mb - 12">;"
-          <h3 className="text - 3xl font - bold text - white mb - 3">What Our Users Say</h3>;""
-          <p className="text - zion - slate - light text - lg max - w-2xl mx - auto">;"
-        <div className="max - w-5xl mx - auto px - 8">;"
-          <Carousel;
-            opts={{"
-              align: "start"",
-  loop: true}}
-
-              loop: true}}"
-            className="w-full""
-          >
-
-            <CarouselContent>
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">"
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">"
-                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">"
-                      <div className="flex-shrink-0 flex flex-col items-center">"
-                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">"
-
-                          <img src={testimonial.avatar} alt={testimonial.author} />
-</img>
-                        <div className="text-center md:text-left">"
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>""
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>"
-                      <div className="flex-1">"
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />"
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>"
-            <div className="flex justify-center mt-8 gap-2">"
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />"
-
-            opts={{;"
-              align: "start";",
-            className="w-full";"
-          >;
-
-            <CarouselContent>;
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;"
-                  <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">;"
-                    <CardContent className="p-8 flex flex-col md:flex-row gap-6">;"
-                      <div className="flex-shrink-0 flex flex-col items-center">;"
-                        <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;"
-
-                          <img src={testimonial && testimonial.avatar} alt={testimonial && testimonial.author} />;
-                        ;"
-                        <div className="text-center md:text-left">;"
-                          <p className="font-bold text-zion-cyan">{testimonial && testimonial.author}</p>;""
-                          <p className="text-zion-slate-light text-sm">{testimonial && testimonial.role}</p>;"
-                        </div>;
-                      <div className="flex-1">;"
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;"
-                        <p className="text-white text-lg mb-6">"{testimonial && testimonial.quote}"</p>;"
-                    ;
-            <div className="flex justify-center mt-8 gap-2">;"
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;"
-              <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;"
-              align:"start",;"
-              loop:true}}"
-
-                          <img src={testimonial.avatar} alt={testimonial.author} />;
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>;""
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>;"
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>;"
-              <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;"
-
-      </div>;)
-    </section>);"
-pr-12325
-

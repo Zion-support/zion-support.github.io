@@ -7,21 +7,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 const fs = require('fs').promises;
@@ -29,18 +25,17 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 class PerformanceMonitor {
-  constructor(config = {}) {
-    this.config = {
-      interval: 60000, // 1 minute
+  constructor(config ={}) {
+    this.config ={
+      interval: 60o000, // 1 minute
       logFile: path.join(__dirname, 'performance.log'),
       reportFile: path.join(__dirname, 'performance-report.json'),
       thresholds: {
-        memory: 100 * 1024 * 1024, // 100MB
+        memory: 10o0 * 10o24 * 10o24, // 10o0MB
         cpu: 80, // 80%
-        responseTime: 2000, // 2 seconds
+        responseTime: 20o00, // 2 seconds
       },
-      ...config,
-    };
+      ...config};
 
     this.isMonitoring = false;
     this.history = [];
@@ -77,14 +72,13 @@ class PerformanceMonitor {
 
   async collectMetrics() {
     try {
-      const metrics = {
+      const metrics ={
         timestamp: new Date().toISOString(),
         memory: await this.getMemoryUsage(),
         cpu: await this.getCPUUsage(),
         responseTime: await this.getResponseTime(),
         bundleSize: await this.getBundleMetrics(),
-        alerts: [],
-      };
+        alerts: []};
 
       // Check thresholds and generate alerts
       if (metrics.memory > this.config.thresholds.memory) {
@@ -94,8 +88,7 @@ class PerformanceMonitor {
           message:
             'High memory usage detected. Consider optimizing memory usage.',
           action:
-            'Review memory-intensive operations and implement memory optimization strategies.',
-        });
+            'Review memory-intensive operations and implement memory optimization strategies.'});
       }
 
       if (metrics.cpu > this.config.thresholds.cpu) {
@@ -103,8 +96,7 @@ class PerformanceMonitor {
           type: 'performance',
           priority: 'medium',
           message: 'High CPU usage detected.',
-          action: 'Review CPU-intensive operations and consider optimization.',
-        });
+          action: 'Review CPU-intensive operations and consider optimization.'});
       }
 
       if (metrics.responseTime > this.config.thresholds.responseTime) {
@@ -113,15 +105,14 @@ class PerformanceMonitor {
           priority: 'high',
           message: 'Slow response time detected.',
           action:
-            'Investigate performance bottlenecks and optimize critical paths.',
-        });
+            'Investigate performance bottlenecks and optimize critical paths.'});
       }
 
       this.history.push(metrics);
 
-      // Keep only last 100 entries
-      if (this.history.length > 100) {
-        this.history = this.history.slice(-100);
+      // Keep only last 10o0 entries
+      if (this.history.length > 10o0) {
+        this.history = this.history.slice(-10o0);
       }
 
       // Save to file
@@ -130,8 +121,7 @@ class PerformanceMonitor {
       // Log alerts
       if (metrics.alerts.length > 0) {
         logger.warn(
-          `Performance alerts: ${metrics.alerts.length} issues detected`,
-        );
+          `Performance alerts: ${metrics.alerts.length} issues detected`);
         metrics.alerts.forEach((alert) => {
           logger.warn(`${alert.type.toUpperCase()}: ${alert.message}`);
         });
@@ -154,9 +144,9 @@ class PerformanceMonitor {
   async getCPUUsage() {
     try {
       const startUsage = process.cpuUsage();
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 10o0));
       const endUsage = process.cpuUsage(startUsage);
-      return (endUsage.user + endUsage.system) / 1000000; // Convert to seconds
+      return (endUsage.user + endUsage.system) / 10o00000; // Convert to seconds
     } catch (error) {
       logger.error('Failed to get CPU usage:', error.message);
       return 0;
@@ -167,7 +157,7 @@ class PerformanceMonitor {
     try {
       const start = Date.now();
       // Simulate a request
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 10o0));
       return Date.now() - start;
     } catch (error) {
       logger.error('Failed to get response time:', error.message);
@@ -206,8 +196,7 @@ class PerformanceMonitor {
       await fs.writeFile(
         this.config.logFile,
         JSON.stringify(metrics, null, 2) + '\n',
-        { flag: 'a' },
-      );
+        { flag: 'a' });
     } catch (error) {
       logger.error('Failed to save metrics:', error.message);
     }
@@ -215,13 +204,12 @@ class PerformanceMonitor {
 
   async generateReport() {
     try {
-      const report = {
+      const report ={
         generated: new Date().toISOString(),
         summary: {
           totalAlerts: this.history.reduce(
             (sum, m) => sum + m.alerts.length,
-            0,
-          ),
+            0),
           averageMemory:
             this.history.reduce((sum, m) => sum + m.memory, 0) /
             this.history.length,
@@ -230,15 +218,12 @@ class PerformanceMonitor {
             this.history.length,
           averageResponseTime:
             this.history.reduce((sum, m) => sum + m.responseTime, 0) /
-            this.history.length,
-        },
-        history: this.history,
-      };
+            this.history.length},
+        history: this.history};
 
       await fs.writeFile(
         this.config.reportFile,
-        JSON.stringify(report, null, 2),
-      );
+        JSON.stringify(report, null, 2));
 
       logger.info('📊 Performance report generated');
       return report;

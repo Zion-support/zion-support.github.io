@@ -21,7 +21,7 @@ const originalLog = console.log;
           // // require('/workspace/scripts/automation/console-error-fixer && fixer.cjs');
           setTimeout(() => {
             process && process.exit(0);
-          }, 5000);
+          }, 50o00);
         } catch (error) {
           console && console.error('Script error:', error && error.message);
           process && process.exit(1);

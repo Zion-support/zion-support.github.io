@@ -1,78 +1,40 @@
 // Integration connectors
 import { v4 as uuidv4 } from 'uuid';
-
 import { ProviderConnection, SyncLogEntry } from './types';
 
-async function mockProviderCall<T>(
+export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>
+  details: Record<string, unknown> ={}
 ): Promise<{ log: SyncLogEntry; result: T }> {
-  const log: SyncLogEntry = {
+  const log: SyncLogEntry ={
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
     level: 'info',
     action,
-    details,
-  };
-  
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T };
+    details};
+  return { log, result: { ok: true } as T };
 }
 
 // CRM actions
-export const crm = {
-  async syncContact(
-    connection: ProviderConnection,
-    contact: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
+export const crm ={
+  async syncContact(connection: ProviderConnection, contact: Record<string, unknown>) {
+    return simulateAction(connection, 'crm.syncContact', { contact });
   },
-  async addEmailTouchpoint(
-    connection: ProviderConnection,
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+  async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addProjectNote(
-    connection: ProviderConnection,
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-};
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  }};
 
 // ATS actions
-export const ats = {
-  async pushApplicant(
-    connection: ProviderConnection,
-    applicant: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "push_applicant", { applicant });
+export const ats ={
+  async updateStatus(connection: ProviderConnection, status: Record<string, unknown>) {
+    return simulateAction(connection, 'ats.updateStatus', { status });
   },
-  async uploadResume(
-    connection: ProviderConnection,
-    resume: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "upload_resume", {
-      resumeMeta: { name: resume?.name }
-    });
-  },
-  async updateStatus(
-    connection: ProviderConnection,
-    status: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "update_status", { status });
-  }
-};
+  async createCandidate(connection: ProviderConnection, candidate: Record<string, unknown>) {
+    return simulateAction(connection, 'ats.createCandidate', { candidate });
+  }};
 
-// Email actions
-export const email = {
-  async sendNotification(
-    connection: ProviderConnection,
-    notification: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "send_notification", { notification });
-  }
-};

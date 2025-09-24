@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+const React from "react"; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ amount: "threshold" }); useEffect(() => {}}}})'"'"
+<<<<<<< HEAD:backup-merge-conflicts/LazyWrapper.js.jsx.backup
+=======
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/src/components/LazyWrapper.js.jsx
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+=======
+import React from \'react\'; const LazyWrapper = ({ children,threshold = 0.1,className = \",loadingVariant = \"default\",loadingText = \"Loading...\",loadingSize = \"md\"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ \"amount\": \'threshold\' }); useEffect(() => {}}}})
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+=======
+import _React from 'react'; const LazyWrapper = ({ children,threshold = 0.1,className = ",loadingVariant = "default",loadingText = "Loading...",loadingSize = "md"}) => { const [isLoaded,setIsLoaded] = useState(false); const [isInView,setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref,{ "amount": 'threshold' }); useEffect(() => {}}}})
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/LazyWrapper.js.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

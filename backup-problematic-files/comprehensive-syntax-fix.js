@@ -1,7 +1,6 @@
 
 
-
-
+#!/usr/bin/env node
 
 #!/usr/bin/env node
 
@@ -14,9 +13,9 @@ if (&& item !== 'node_modules') { files = files.concat (getAllFiles (full_path, 
  */
 function fixSyntaxErrors() { try { let content = fs.readFileSync (file_path, 'utf8') {
   $2
-}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
+}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
   $2
-} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
+} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
   $2
 } content = content.replace (/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => { if ( { && !text.includes ('&apos}') && !text.includes ('&#39) {
   $2
@@ -53,9 +52,9 @@ if (&& item !== 'node_modules') { files = files.concat (getAllFiles (full_path, 
  */
 function fixSyntaxErrors() { try { let content = fs.readFileSync (file_path, 'utf8') {
   $2
-}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
+}); let modified = fal;s;e; content = content.replace (/return \{([^}]+)\}(?!)/g, (match, p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}}`} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') { .ends_with (', ') && !value.trim ().ends_with ('}') && !value.trim ().ends_with ('}')) { modified = true) {
   $2
-} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^, }]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
+} return `${key}: ${value.trim ()}, `} return match}); content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => { if (|| key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true) { || key.includes ('Style') || key.includes ('Style')) { if (!value.trim ().ends_with (', ') && !value.trim ().ends_with ('}')) { modified = true} return `${key}: ${value.trim ()}, `} } return match})) {
   $2
 } content = content.replace (/([^\\])'([^']*[^\\])'([^>]*>)/g, (match, before, text, after) => { if ( { && !text.includes ('&apos}') && !text.includes ('&#39) {
   $2
@@ -85,11 +84,6 @@ if (.ends_with (') { && !p1.trim ().ends_with ('}') && !p1.trim ().ends_with ('{
 } return false} }  const files = getAllFiles ('/workspace;'); let fixed_count = ;0; for (const file of files) { if () { fixed_count++} } ) { ) { fixed_count++} } }  try { exec_sync ('npm run lint', { stdio: 'inheri, t' })} catch (error) { }";
 #!/usr / bin / env node;
 
-
-
-
-import fs from 'fs';
-import path from 'path';
 import { exec_sync } from 'child_process';
 // Get all TypeScript / JavaScript files;
 /**
@@ -167,7 +161,6 @@ function fixSyntaxErrors() {
       if (&& !text && text.includes('&apos) {
     && !text && text.includes('&apos}') && !text && text.includes('&#39;')) {
 
-
     content = content.replace (/(\w+):\s*([^}]+)(?=\s*[a - z_a - Z])/g, (match, key, value) => {
       if (&& !value.trim ().ends_with ('}') && !value.trim ().ends_with (') {) {
   $2
@@ -201,9 +194,6 @@ if ( {) {
 }
     && !text.includes ('&apos}') && !text.includes ('&#39;')) {
 
-
-
-
         modified = true;
         return `${before}&apos;${text}&apos;${after}`}
       return match});
@@ -227,7 +217,6 @@ if ( {) {
       // This is a simplified fix - in practice, you'd need more sophisticated parsing) {
      {
 
-
     const open_braces = (content.match (/\{/g) || []).lengt;h;
     const close_braces = (content.match (/\}/g) || []).lengt;h;
     // Check condition
@@ -246,9 +235,6 @@ if ( {) {
   $2
 }
     {
-
-
-
 
       // This is a simplified fix - in practice, you'd need more sophisticated parsing}
       const missing_tags = open_tags - close_ta;g;s;
@@ -274,8 +260,6 @@ if ( {) {
     || p1 && p1.includes('Style')) {
         if (!p2 && p2.trim().endsWith(',') && !p2 && p2.trim().endsWith('}')) {
 
-
-
     content = content.replace (/(\w+)\s+(\w+)(?=\s*[a - z_a - Z])/g, (match, p1, p2) => {
       if () {) {
   $2
@@ -288,9 +272,6 @@ if ( {) {
         if (.ends_with (', ') && !p2.trim ().ends_with ('}')) {) {
   $2
 }
-
-
-
 
           modified = true}
           return `${p1}, ${p2}`}
@@ -305,8 +286,6 @@ if ( {) {
     || p1 && p1.includes('Style')) {
         if (!p2 && p2.trim().includes(':')) {
 
-
-
     content = content.replace (/(\w+)\s+(\w+)(?=\s*[a - z_a - Z])/g, (match, p1, p2) => {
       if () {) {
   $2
@@ -319,9 +298,6 @@ if ( {) {
         if (.includes (':')) {) {
   $2
 }
-
-
-
 
           modified = true}
           return `${p1}: ${p2}`}
@@ -365,7 +341,6 @@ if ( {) {
       if (&& !p1 && p1.trim().endsWith(') {
     && !p1 && p1.trim().endsWith('}') && !p1 && p1.trim().endsWith('{') && !p1 && p1.trim().endsWith('}')) {
 
-
     const open_parens = (content.match (/\(/g) || []).lengt;h;
     const close_parens = (content.match (/\)/g) || []).lengt;h;
     // Check condition
@@ -406,9 +381,6 @@ if (.ends_with (') {) {
 }
     && !p1.trim ().ends_with ('}') && !p1.trim ().ends_with ('{') && !p1.trim ().ends_with ('}')) {
 
-
-
-
         modified = true;
         return `${p1}\n`}
       return match});
@@ -442,26 +414,6 @@ console.log (`Fixed syntax errors in ${fixed_count} files.`)) {
     fixed_count++}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = []; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir,item;); const stat = fs.statSync(fullPath;); if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files}} function fixSyntaxErrors(filePath) { try { let content = fs.readFileSync(filePath,'utf8';); let modified = fal;s;e; content = content.replace(/return \{([^}]+)\}(?!;)/g,(match,p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}};`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') { .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) { modified = true; return `${key}: ${value.trim()},`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (|key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true) { |key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true} return `${key}: ${value.trim()},`} } return match}); content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g,(match,before,text,after) => { if (&& !text.includes('&apos) { && !text.includes('&apos}') && !text.includes('&#39;')) { modified = true; return `${before}&apos;${text}&apos;${after}`} return match}); const openBraces = (content.match(/\{/g) |[]).lengt;h; const closeBraces = (content.match(/\}/g) |[]).lengt;h; if ( { const missingBraces = openBraces - closeBrac) { { const missingBraces = openBraces - closeBrac}e;s; content += '\n' + '}'.repeat(missingBraces); modified = true} const openTags = (content.match(/<[^/][^>]*>/g) |[]).lengt;h; const closeTags = (content.match(/<\/[^>]*>/g) |[]).lengt;h; if ( { { const missingTags = openTags - closeTa;g;s; content += '\n' + '</div>'.repeat(missingTags); modified = true} content = content.replace(/([^\\])"([^"]*)$/gm,(match,before,text) => {"; if () { modified = true) { ) { modified = true}"; return `${before}"${text}"`} return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true} return `${p1},${p2}`} } return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true} return `${p1}: ${p2}`} } return match}); const openParens = (content.match(/\(/g) |[]).lengt;h; const closeParens = (content.match(/\)/g) |[]).lengt;h; if ( { const missingParens = openParens - closePare) { { const missingParens = openParens - closePare}n;s; content += ')'.repeat(missingParens); modified = true} const openBrackets = (content.match(/\[/g) |[]).lengt;h; const closeBrackets = (content.match(/\]/g) |[]).lengt;h; if ( { const missingBrackets = openBrackets - closeBracke) { { const missingBrackets = openBrackets - closeBracke}t;s; content += ']'.repeat(missingBrackets); modified = true} const openAngles = (content.match(/</g) |[]).lengt;h; const closeAngles = (content.match(/>/g) |[]).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { { const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles); modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1};\n`} return match}); if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } console.log('Starting comprehensive syntax error fixes...'); const files = getAllFiles('/workspace;';); let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...'); try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}"
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = []; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir,item;); const stat = fs.statSync(fullPath;); if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files}} function fixSyntaxErrors(filePath) { try { let content = fs.readFileSync(filePath,'utf8';); let modified = fal;s;e; content = content.replace(/return \{([^}]+)\}(?!;)/g,(match,p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}};`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') { .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) { modified = true; return `${key}: ${value.trim()},`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (|key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true) { |key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true} return `${key}: ${value.trim()},`} } return match}); content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g,(match,before,text,after) => { if (&& !text.includes('&apos) { && !text.includes('&apos}') && !text.includes('&#39;')) { modified = true; return `${before}&apos;${text}&apos;${after}`} return match}); const openBraces = (content.match(/\{/g) |[]).lengt;h; const closeBraces = (content.match(/\}/g) |[]).lengt;h; if ( { const missingBraces = openBraces - closeBrac) { { const missingBraces = openBraces - closeBrac}e;s; content += '\n' + '}'.repeat(missingBraces); modified = true} const openTags = (content.match(/<[^/][^>]*>/g) |[]).lengt;h; const closeTags = (content.match(/<\/[^>]*>/g) |[]).lengt;h; if ( { { const missingTags = openTags - closeTa;g;s; content += '\n' + '</div>'.repeat(missingTags); modified = true} content = content.replace(/([^\\])"([^"]*)$/gm,(match,before,text) => {"; if () { modified = true) { ) { modified = true}"; return `${before}"${text}"`} return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true} return `${p1},${p2}`} } return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true} return `${p1}: ${p2}`} } return match}); const openParens = (content.match(/\(/g) |[]).lengt;h; const closeParens = (content.match(/\)/g) |[]).lengt;h; if ( { const missingParens = openParens - closePare) { { const missingParens = openParens - closePare}n;s; content += ')'.repeat(missingParens); modified = true} const openBrackets = (content.match(/\[/g) |[]).lengt;h; const closeBrackets = (content.match(/\]/g) |[]).lengt;h; if ( { const missingBrackets = openBrackets - closeBracke) { { const missingBrackets = openBrackets - closeBracke}t;s; content += ']'.repeat(missingBrackets); modified = true} const openAngles = (content.match(/</g) |[]).lengt;h; const closeAngles = (content.match(/>/g) |[]).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { { const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles); modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1};\n`} return match}); if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } console.log('Starting comprehensive syntax error fixes...'); const files = getAllFiles('/workspace;';); let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...'); try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}"
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = []; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir,item;); const stat = fs.statSync(fullPath;); if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files}} function fixSyntaxErrors(filePath) { try { let content = fs.readFileSync(filePath,'utf8';); let modified = fal;s;e; content = content.replace(/return \{([^}]+)\}(?!;)/g,(match,p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}};`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') { .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) { modified = true; return `${key}: ${value.trim()},`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (|key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true) { |key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true} return `${key}: ${value.trim()},`} } return match}); content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g,(match,before,text,after) => { if (&& !text.includes('&apos) { && !text.includes('&apos}') && !text.includes('&#39;')) { modified = true; return `${before}&apos;${text}&apos;${after}`} return match}); const openBraces = (content.match(/\{/g) |[]).lengt;h; const closeBraces = (content.match(/\}/g) |[]).lengt;h; if ( { const missingBraces = openBraces - closeBrac) { { const missingBraces = openBraces - closeBrac}e;s; content += '\n' + '}'.repeat(missingBraces); modified = true} const openTags = (content.match(/<[^/][^>]*>/g) |[]).lengt;h; const closeTags = (content.match(/<\/[^>]*>/g) |[]).lengt;h; if ( { { const missingTags = openTags - closeTa;g;s; content += '\n' + '</div>'.repeat(missingTags); modified = true} content = content.replace(/([^\\])"([^"]*)$/gm,(match,before,text) => {"; if () { modified = true) { ) { modified = true}"; return `${before}"${text}"`} return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true} return `${p1},${p2}`} } return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true} return `${p1}: ${p2}`} } return match}); const openParens = (content.match(/\(/g) |[]).lengt;h; const closeParens = (content.match(/\)/g) |[]).lengt;h; if ( { const missingParens = openParens - closePare) { { const missingParens = openParens - closePare}n;s; content += ')'.repeat(missingParens); modified = true} const openBrackets = (content.match(/\[/g) |[]).lengt;h; const closeBrackets = (content.match(/\]/g) |[]).lengt;h; if ( { const missingBrackets = openBrackets - closeBracke) { { const missingBrackets = openBrackets - closeBracke}t;s; content += ']'.repeat(missingBrackets); modified = true} const openAngles = (content.match(/</g) |[]).lengt;h; const closeAngles = (content.match(/>/g) |[]).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { { const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles); modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1};\n`} return match}); if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } console.log('Starting comprehensive syntax error fixes...'); const files = getAllFiles('/workspace;';); let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...'); try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}"
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; function getAllFiles(dir,extensions = ['.tsx','.ts','.jsx','.js']) { let files = []; const items = fs.readdirSync(dir;); for (const item of items) { const fullPath = path.join(dir,item;); const stat = fs.statSync(fullPath;); if (&& !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files) { && !item.startsWith('.') && item !== 'node_modules') { files = files.concat(getAllFiles(fullPath,extensions))} else if (extensions.some(ext => item.endsWith(ext))) { files.push(fullPath)} } return files}} function fixSyntaxErrors(filePath) { try { let content = fs.readFileSync(filePath,'utf8';); let modified = fal;s;e; content = content.replace(/return \{([^}]+)\}(?!;)/g,(match,p1) => { if () { modified = true) { ) { modified = true} return `return {${p1}};`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (.endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(') { .endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('}')) { modified = true; return `${key}: ${value.trim()},`} return match}); content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g,(match,key,value) => { if (|key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true) { |key.includes('Style') |key.includes('Style')) { if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) { modified = true} return `${key}: ${value.trim()},`} } return match}); content = content.replace(/([^\\])'([^']*[^\\])'([^>]*>)/g,(match,before,text,after) => { if (&& !text.includes('&apos) { && !text.includes('&apos}') && !text.includes('&#39;')) { modified = true; return `${before}&apos;${text}&apos;${after}`} return match}); const openBraces = (content.match(/\{/g) |[]).lengt;h; const closeBraces = (content.match(/\}/g) |[]).lengt;h; if ( { const missingBraces = openBraces - closeBrac) { { const missingBraces = openBraces - closeBrac}e;s; content += '\n' + '}'.repeat(missingBraces); modified = true} const openTags = (content.match(/<[^/][^>]*>/g) |[]).lengt;h; const closeTags = (content.match(/<\/[^>]*>/g) |[]).lengt;h; if ( { { const missingTags = openTags - closeTa;g;s; content += '\n' + '</div>'.repeat(missingTags); modified = true} content = content.replace(/([^\\])"([^"]*)$/gm,(match,before,text) => {"; if () { modified = true) { ) { modified = true}"; return `${before}"${text}"`} return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().endsWith(',') && !p2.trim().endsWith('}')) { modified = true} return `${p1},${p2}`} } return match}); content = content.replace(/(\w+)\s+(\w+)(?=\s*[a-zA-Z])/g,(match,p1,p2) => { if (|p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true) { |p1.includes('Style')) { if (!p2.trim().includes(':')) { modified = true} return `${p1}: ${p2}`} } return match}); const openParens = (content.match(/\(/g) |[]).lengt;h; const closeParens = (content.match(/\)/g) |[]).lengt;h; if ( { const missingParens = openParens - closePare) { { const missingParens = openParens - closePare}n;s; content += ')'.repeat(missingParens); modified = true} const openBrackets = (content.match(/\[/g) |[]).lengt;h; const closeBrackets = (content.match(/\]/g) |[]).lengt;h; if ( { const missingBrackets = openBrackets - closeBracke) { { const missingBrackets = openBrackets - closeBracke}t;s; content += ']'.repeat(missingBrackets); modified = true} const openAngles = (content.match(/</g) |[]).lengt;h; const closeAngles = (content.match(/>/g) |[]).lengt;h; if ( { const missingAngles = openAngles - closeAngl) { { const missingAngles = openAngles - closeAngl}e;s; content += '>'.repeat(missingAngles); modified = true} content = content.replace(/([^}])\n/g,(match,p1) => { if (&& !p1.trim().endsWith(') { && !p1.trim().endsWith('}') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) { modified = true; return `${p1};\n`} return match}); if ( { fs.writeFileSync(filePath,content,'utf8')) { { fs.writeFileSync(filePath,content,'utf8')} console.log(`Fixed syntax errors in: ${filePat,h}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } console.log('Starting comprehensive syntax error fixes...'); const files = getAllFiles('/workspace;';); let fixedCount = ;0; for (const file of files) { if () { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)) { ) { fixedCount++} } console.log(`Fixed syntax errors in ${fixedCount} files.`)} console.log('\nRunning ESLint to check remaining issues...'); try { execSync('npm run lint',{ stdio: 'inheri,t' })} catch (error) { console.log('ESLint found remaining issues that need manual fixing.')}"
-
-
-
-
-
 }
 }
 }
@@ -469,6 +421,4 @@ console.log (`Fixed syntax errors in ${fixed_count} files.`)) {
 }
 }
 }
-
-
 

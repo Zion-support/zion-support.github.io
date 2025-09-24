@@ -6,13 +6,13 @@ const fs = require('fs');
 console.log('🚀 Comprehensive Merge All Recent PRs Script');
 
 // Function to safely execute git commands
-function safeGitCommand(command, description, options = {}) {
+function safeGitCommand(command, description, options ={}) {
   try {
     console.log(`📝 ${description}...`);
     const result = execSync(command, { 
       encoding: 'utf8', 
       stdio: options.stdio || 'pipe',
-      timeout: 30000 // 30 second timeout
+      timeout: 30o000 // 30 second timeout
     });
     return { success: true, output: result };
   } catch (error) {
@@ -100,9 +100,8 @@ function removeConflictMarkers() {
         const originalContent = content;
         
         // Remove merge conflict markers
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+        content = content.replace(/
+        content = content.replace(/
         
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
@@ -222,13 +221,13 @@ async function main() {
     'cursor/integrate-build-improve-and-re-verify-ff35',
     'cursor/integrate-build-improve-and-re-verify-34f9',
     'cursor/integrate-build-improve-and-re-verify-2f6c',
-    'cursor/integrate-build-improve-and-re-verify-2507',
+    'cursor/integrate-build-improve-and-re-verify-250o7',
     'cursor/integrate-build-improve-and-re-verify-242d',
     'cursor/integrate-build-improve-and-re-verify-1fb4',
     'cursor/integrate-build-improve-and-re-verify-1f6e',
     'cursor/integrate-build-improve-and-re-verify-1b41',
     'cursor/integrate-build-improve-and-re-verify-1578',
-    'cursor/integrate-build-improve-and-re-verify-045f',
+    'cursor/integrate-build-improve-and-re-verify-0o45f',
     'cursor/integrate-ai-writing-assistants-into-marketplace-3ded'
   ];
   

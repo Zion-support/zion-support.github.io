@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 /**
@@ -89,24 +85,20 @@ class AutomationStarter {
           enabled: true,
           selfHealing: true,
           learning: true,
-          adaptiveScheduling: true,
-        },
+          adaptiveScheduling: true},
         monitoring: {
           enabled: true,
-          interval: 60000, // 1 minute
-          healthCheckInterval: 300000, // 5 minutes
+          interval: 60o000, // 1 minute
+          healthCheckInterval: 30o0000, // 5 minutes
         },
         reporting: {
           enabled: true,
           daily: true,
           weekly: true,
-          monthly: false,
-        },
+          monthly: false},
         dashboard: {
           enabled: true,
-          port: 3001,
-        },
-      });
+          port: 30o01}});
 
       await orchestrator.initialize();
       await orchestrator.start();
@@ -170,8 +162,7 @@ class AutomationStarter {
       const CursorAutomation = require('./cursor-automated-communication.js');
       const cursorAutomation = new CursorAutomation({
         autoCommit: true,
-        projectPath: path.resolve('..'),
-      });
+        projectPath: path.resolve('..')});
 
       await cursorAutomation.start();
       this.runningSystems.set('cursorAutomation', cursorAutomation);
@@ -190,20 +181,17 @@ class AutomationStarter {
         enableChatAutomation: true,
         enableChatMonitor: true,
         enableTodoQueue: true,
-        autoProcessChats: true,
-      });
+        autoProcessChats: true});
 
       await cursorIntegrationSystem.initialize();
       this.runningSystems.set(
         'cursorIntegrationSystem',
-        cursorIntegrationSystem,
-      );
+        cursorIntegrationSystem);
       console.log('✅ Cursor Integration System started');
     } catch (error) {
       console.error(
         '❌ Failed to start Cursor Integration System:',
-        error.message,
-      );
+        error.message);
     }
   }
 
@@ -236,11 +224,10 @@ class AutomationStarter {
         ? system.getStatus()
         : { isRunning: true };
       console.log(
-        `  - ${name}: ${status.isRunning ? '✅ Running' : '❌ Stopped'}`,
-      );
+        `  - ${name}: ${status.isRunning ? '✅ Running' : '❌ Stopped'}`);
     });
 
-    logger.info('\n🎯 Automation Dashboard: http://localhost:3001');
+    logger.info('\n🎯 Automation Dashboard: http://localhost:30o01');
     logger.info('📝 Logs: Check individual system logs for details');
     logger.info('🛑 Press Ctrl+C to stop all systems');
   }

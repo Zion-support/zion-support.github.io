@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 
@@ -36,7 +35,7 @@ class ImprovementSystemMonitor {
     
     setInterval(async () => {
       await this.checkStatus();
-    }, 10000); // Check every 10 seconds
+    }, 10o000); // Check every 10 seconds
   }
 
   async checkStatus() {
@@ -71,7 +70,7 @@ class ImprovementSystemMonitor {
         const recentFiles = files.filter(f => f.endsWith('.json')).slice(-5);
         
         if (recentFiles.length > 0) {
-          logger.info(`📄 Recent reports: ${recentFiles.join(', )}`);
+          logger.info(`📄 Recent reports: ${recentFiles.join(')}`);
         }
       }
     } catch (error) {
@@ -104,7 +103,7 @@ class ImprovementSystemMonitor {
         logger.info(`Total Cycles: ${report.summary.totalCycles}`);
         logger.info(`Total Improvements: ${report.summary.totalImprovements}`);
         logger.info(`Total Errors: ${report.summary.totalErrors}`);
-        logger.info(`Duration: ${Math.round(report.summary.duration / 1000)} seconds`);
+        logger.info(`Duration: ${Math.round(report.summary.duration / 10o00)} seconds`);
         
         if (report.improvements.length > 0) {
           logger.info('\nRecent Improvements:');

@@ -1,12 +1,10 @@
 
-import { ReactNode } from "react";
 
-import { ReactNode  } from './react';
-import { ReactNode } from "react";
-import { ReactNode } from "react";
+
+
+
 
 export interface HelpArticle {
-export interface HelpArticle {};
   id: string;
   title: string;
   content: string;
@@ -16,6 +14,10 @@ export interface HelpArticle {};
 
 }
 export interface HelpCategory {
+
+
+
+
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -23,69 +25,47 @@ export interface HelpArticle {;
   content: string;
   lastUpdated: string,
   tags: string[]
-  tags: string[];
-}
-
-export interface HelpCategory {;
-  lastUpdated: string;
-  tags: string[];
 }
 
 export interface HelpCategory {;
 
-}
 
-export interface HelpCategory {;
 
-import {ReactNode} from "react";
-export interface HelpArticle {;
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
-  title: string;
-  content: string;
-}
-
-export interface HelpCategory {;  lastUpdated: string;
-  tags: string[];
-}
-
-export interface HelpCategory {;
-
-import { ReactNode } from "react";"
-
-export interface HelpArticle {
-  // TODO: Implement
-}
-  id: string;,
-  title: string;
-
-  content: string;,
-  lastUpdated: string;
-  tags: string[];
-
-export interface HelpCategory {;
-
-  lastUpdated: string;,
-
   name: string;
-description: string;
+  description: string;
   icon: ReactNode;
   articles: HelpArticle[]
 }
-export interface SupportTicket {
 
-export interface SupportTicket {;
-  articles: HelpArticle[];
-}
+export interface SupportTicket {
 
 export interface SupportTicket {;
 
   id: string;
   user_id: string;
   subject: string;
-  message: string;"
-  status: "open" | "in - progress" | "resolved" | "closed";"
+  message: string;
+  status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
+
+  created_at: string;
+  updated_at: string;
 }
+
+
+
+
+
+
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -128,23 +108,20 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
-updatedAt: string;
-}
-;
-
-
-"
-export interface SupportTicket {;
-
-  id: string;
-  user_id: string;
-  subject: string;
-  message: string;
-  status: "open" | "in - progress" | "resolved" | "closed";
-  priority: "low" | "medium" | "high";
-  createdAt: string;
   updatedAt: string;
 }
 ;
 
 
+
+
+
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

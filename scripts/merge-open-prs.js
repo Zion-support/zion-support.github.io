@@ -6,10 +6,10 @@
   - For each PR: fetch head -> merge into main (prefer PR changes) -> build -> keep or revert
 */
 
-const { execSync, spawnSync } = require('child_process');
-const https = require('https');
+import { execSync, spawnSync } from 'node:child_process';
+import https from 'node:https';
 
-function run(cmd, opts = {}) {
+function run(cmd, opts ={}) {
   try {
     const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'], encoding: 'utf8', ...opts });
     return out.trim();
@@ -39,9 +39,7 @@ function ghApi(path, token) {
         headers: {
           'User-Agent': 'merge-open-prs-script',
           Accept: 'application/vnd.github+json',
-          Authorization: `token ${token}`,
-        },
-      },
+          Authorization: `token ${token}`}},
       res => {
         let data = '';
         res.on('data', chunk => (data += chunk));

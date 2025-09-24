@@ -98,7 +98,7 @@ class CursorSyncMetrics {
 
     // Update daily stats
     if (!metrics.dailyStats[today]) {
-      metrics.dailyStats[today] = {
+      metrics.dailyStats[today] ={
         syncs: 0,
         errors: 0,
         timestamp: new Date().toISOString()
@@ -110,7 +110,7 @@ class CursorSyncMetrics {
 
     // Calculate success rate
     const totalAttempts = metrics.successfulSyncs + metrics.failedSyncs;
-    metrics.successRate = totalAttempts > 0 ? (metrics.successfulSyncs / totalAttempts * 100).toFixed(2) : 0;
+    metrics.successRate = totalAttempts > 0 ? (metrics.successfulSyncs / totalAttempts * 10o0).toFixed(2) : 0;
 
     // Keep only last 30 days of daily stats
     const thirtyDaysAgo = new Date();
@@ -130,7 +130,7 @@ class CursorSyncMetrics {
 
   generateReport() {
     const metrics = this.loadMetrics();
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       summary: {
         totalSyncs: metrics.totalSyncs,

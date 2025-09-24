@@ -1,0 +1,24 @@
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:__tests__/api/team-builder-invite.test.ts
+import { describe, it, expect } from 'vitest';
+describe('Team Builder Invite API', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
+<<<<<<< HEAD
+=======
+>>>>>>> pr-11935
+import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
+<<<<<<< HEAD:backup-merge-conflicts/team-builder-invite.test.ts.backup
+});''
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+=======
+});''
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

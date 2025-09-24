@@ -1,0 +1,13 @@
+=======
+<<<<<<< HEAD
+const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedNavigation" ,"""
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11935
+const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

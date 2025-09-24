@@ -1,20 +1,14 @@
 
 
-
 :components/ContentCategorizer.tsx
 import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
 
-
-
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
-
-
-
 
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
@@ -49,10 +43,8 @@ interface ContentItem {
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
 }
 interface ContentCategory {id: string;
@@ -64,8 +56,6 @@ interface ContentCategory {id: string;
   subcategories?: string[];
 }
 
-
-
 :components/ContentCategorizer.tsx
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -75,8 +65,6 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [selectedRelevance, setSelectedRelevance] = useState('all');
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-
-
 
 ;
 const ContentCategorizer: React.FC = () => {;
@@ -89,9 +77,6 @@ const ContentCategorizer: React.FC = () => {;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
 
-
-
-
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -101,24 +86,21 @@ const ContentCategorizer: React.FC = () => {;
       desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
       category: 'seo';
       subcategory: 'structured-data';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'high';
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
 
-
-
-
     },;
     {;
       id: '2',;
       title: 'Security Vulnerability Scan Results',;
-      href: '/reports/security-scan-2025-08-19',;
+      href: '/reports/security-scan-20o25-08-19',;
       desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',;
       category: 'security',;
       subcategory: 'vulnerability-scan',;
-      date: '2025-08-19',;
+      date: '20o25-08-19',;
       relevance: 'high',;
       tags: ['securityvulnerabilityscanremediation'],;
       source: 'security-scanner',;
@@ -127,11 +109,11 @@ const ContentCategorizer: React.FC = () => {;
     {;
       id: '3',;
       title: 'AI Model Performance Update',;
-      href: '/reports/ai-model-performance-2025-08-19',;
+      href: '/reports/ai-model-performance-20o25-08-19',;
       desc: 'Latest performance metrics and optimization insights for deployed AI models.',;
       category: 'ai',;
       subcategory: 'performance',;
-      date: '2025-08-19',;
+      date: '20o25-08-19',;
       relevance: 'high',;
       tags: ['aiperformanceoptimizationmetrics'],;
       source: 'ai-monitor',;
@@ -140,11 +122,11 @@ const ContentCategorizer: React.FC = () => {;
     {;
       id: '4',;
       title: 'Feature Deployment Summary',;
-      href: '/reports/feature-deployment-2025-08-19',;
+      href: '/reports/feature-deployment-20o25-08-19',;
       desc: 'Overview of newly deployed features and their impact on user experience.',;
       category: 'features',;
       subcategory: 'deployment',;
-      date: '2025-08-19',;
+      date: '20o25-08-19',;
       relevance: 'medium',;
       tags: ['featuresdeploymentuximpact'],;
       source: 'deployment-tracker',;
@@ -153,11 +135,11 @@ const ContentCategorizer: React.FC = () => {;
     {;
       id: '5',;
       title: 'System Health Dashboard',;
-      href: '/reports/system-health-2025-08-19',;
+      href: '/reports/system-health-20o25-08-19',;
       desc: 'Real-time system performance metrics and infrastructure health status.',;
       category: 'monitoring',;
       subcategory: 'system-health',;
-      date: '2025-08-19',;
+      date: '20o25-08-19',;
       relevance: 'medium',;
       tags: ['monitoringperformanceinfrastructurehealth'],;
       source: 'health-monitor',;
@@ -166,28 +148,24 @@ const ContentCategorizer: React.FC = () => {;
     {;
       id: '6',;
       title: 'User Behavior Insights',;
-      href: '/reports/user-behavior-2025-08-19',;
+      href: '/reports/user-behavior-20o25-08-19',;
       desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',;
       category: 'analytics',;
       subcategory: 'user-behavior',;
-      date: '2025-08-19',;
+      date: '20o25-08-19',;
       relevance: 'high',;
       tags: ['analyticsuser-behaviorengagementoptimization'],;
       source: 'behavior-analyzer',;
       type: 'insight';
 
-
-
-
-
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
+      href: '/reports/security-scan-20o25-08-19';
       desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
       category: 'security';
       subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];
       source: 'security-scanner';
@@ -195,11 +173,11 @@ const ContentCategorizer: React.FC = () => {;
     }
     {id: '3';
       title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';
+      href: '/reports/ai-model-performance-20o25-08-19';
       desc: 'Latest performance metrics and optimization insights for deployed AI models.';
       category: 'ai';
       subcategory: 'performance';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'high';
       tags: ['aiperformanceoptimizationmetrics'];
       source: 'ai-monitor';
@@ -207,11 +185,11 @@ const ContentCategorizer: React.FC = () => {;
     }
     {id: '4';
       title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';
+      href: '/reports/feature-deployment-20o25-08-19';
       desc: 'Overview of newly deployed features and their impact on user experience.';
       category: 'features';
       subcategory: 'deployment';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'medium';
       tags: ['featuresdeploymentuximpact'];
       source: 'deployment-tracker';
@@ -219,11 +197,11 @@ const ContentCategorizer: React.FC = () => {;
     }
     {id: '5';
       title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';
+      href: '/reports/system-health-20o25-08-19';
       desc: 'Real-time system performance metrics and infrastructure health status.';
       category: 'monitoring';
       subcategory: 'system-health';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'medium';
       tags: ['monitoringperformanceinfrastructurehealth'];
       source: 'health-monitor';
@@ -231,11 +209,11 @@ const ContentCategorizer: React.FC = () => {;
     }
     {id: '6';
       title: 'User Behavior Insights';
-      href: '/reports/user-behavior-2025-08-19';
+      href: '/reports/user-behavior-20o25-08-19';
       desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
       category: 'analytics';
       subcategory: 'user-behavior';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'high';
       tags: ['analyticsuser-behaviorengagementoptimization'];
       source: 'behavior-analyzer';
@@ -247,14 +225,14 @@ const ContentCategorizer: React.FC = () => {;
       name: 'All Content';
       icon: Globe;
       description: 'Complete collection of autonomous content';
-      color: 'from-blue-500 to-cyan-500';
+      color: 'from-blue-50o0 to-cyan-50o0';
       count: contentItems.length;
     }
     {id: 'seo';
       name: 'SEO & Analytics';
       icon: BarChart3;
       description: 'Search optimization and performance analytics';
-      color: 'from-green-500 to-emerald-500';
+      color: 'from-green-50o0 to-emerald-50o0';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
@@ -262,7 +240,7 @@ const ContentCategorizer: React.FC = () => {;
       name: 'Security & Compliance';
       icon: Shield;
       description: 'Security assessments and compliance reports';
-      color: 'from-red-500 to-orange-500';
+      color: 'from-red-50o0 to-orange-50o0';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
@@ -270,7 +248,7 @@ const ContentCategorizer: React.FC = () => {;
       name: 'AI & Machine Learning';
       icon: Brain;
       description: 'AI model performance and insights';
-      color: 'from-purple-500 to-pink-500';
+      color: 'from-purple-50o0 to-pink-50o0';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
@@ -278,7 +256,7 @@ const ContentCategorizer: React.FC = () => {;
       name: 'Feature Updates';
       icon: Zap;
       description: 'New features and system updates';
-      color: 'from-yellow-500 to-orange-500';
+      color: 'from-yellow-50o0 to-orange-50o0';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
@@ -286,7 +264,7 @@ const ContentCategorizer: React.FC = () => {;
       name: 'System Monitoring';
       icon: Cpu;
       description: 'Infrastructure and system health';
-      color: 'from-indigo-500 to-purple-500';
+      color: 'from-indigo-50o0 to-purple-50o0';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
@@ -294,7 +272,7 @@ const ContentCategorizer: React.FC = () => {;
       name: 'User Analytics';
       icon: TrendingUp;
       description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';
+      color: 'from-teal-50o0 to-cyan-50o0';
       count: contentItems.filter(item => item.category === 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
     }
@@ -316,12 +294,10 @@ const ContentCategorizer: React.FC = () => {;
     { id: 'quarter', name: 'This Quarter' }
   ];
   const relevanceLevels = [;
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
-    { id: 'high', name: 'High Priority', color: 'text-green-400' }
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-
-
+    { id: 'all', name: 'All Relevance', color: 'text-gray-40o0' }
+    { id: 'high', name: 'High Priority', color: 'text-green-40o0' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-40o0' }
+    { id: 'low', name: 'Low Priority', color: 'text-red-40o0' }
 
 :components/ContentCategorizer.tsx
   ];
@@ -334,8 +310,6 @@ const ContentCategorizer: React.FC = () => {;
       const matchesType = selectedType === 'all' |item.type === selectedType;
       const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
 
-
-
   ],;
   const filteredItems = useMemo(() => {;
     const filtered = contentItems.filter(item => {;
@@ -347,9 +321,6 @@ const ContentCategorizer: React.FC = () => {;
       const matchesType = selectedType === 'all' || item.type === selectedType,;
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
 
-
-
-
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -359,17 +330,13 @@ const ContentCategorizer: React.FC = () => {;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
 
-
-
         case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 }
+          const relevanceOrder ={ high: 3, medium: 2, low: 1 }
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
           break;
         case 'title':;
           comparison = a.title.localeCompare(b.title);
           break;
-
-
 
   ],
 
@@ -393,16 +360,14 @@ filtered.sort((a, b) => {
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
           break,
         case 'relevance':
-          const relevanceOrder = { high: 3, medium: 2, low: 1 },
+          const relevanceOrder ={ high: 3, medium: 2, low: 1 },
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
           break
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
       }
       return sortOrder === 'asc' ? comparison : -comparison;
@@ -413,10 +378,10 @@ filtered.sort((a, b) => {
     return cat ? cat.icon : Globe;
   }
   const getRelevanceColor = (relevance: string) => {switch (relevance) {;
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'high': return 'text-green-40o0';
+      case 'medium': return 'text-yellow-40o0';
+      case 'low': return 'text-red-40o0';
+      default: return 'text-gray-40o0';
     }
 }
   const getTypeIcon = (type: string) => {
@@ -437,13 +402,13 @@ filtered.sort((a, b) => {
       <div className=&quot;space-y-4&quot;>
         {/* Search Bar */}
         <div className=&quot;relative&quot;>
-          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
+          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot;  />
           <input,
 type=&quot;text&quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+            className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;
           />
         </div>
         {/* Advanced Filter Controls */}
@@ -451,18 +416,14 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 
-
-
 :components/ContentCategorizer.tsx
             <select
               value={selectedCategory}
               onChange={(e) => {setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
-className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;
             >
-
-
 
             <select,
 value={selectedCategory}
@@ -470,12 +431,10 @@ value={selectedCategory}
                 setSelectedCategory(e.target.value),
                 setSelectedSubcategory('all')
               }}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
-
+              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;            >
 
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
@@ -483,15 +442,11 @@ value={selectedCategory}
                 </option>
               ))}
 
-
-
 :components/ContentCategorizer.tsx
             </select>;
           </div>;
           {/* Subcategory Filter */}
 <div>
-
-
 
             </select>
           </div>
@@ -499,22 +454,18 @@ value={selectedCategory}
           {_/* Subcategory Filter */}
           <div>
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
+              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;
             >
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
-
-
 
 :components/ContentCategorizer.tsx
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
@@ -525,8 +476,6 @@ value={selectedSubcategory}
           {/* Content Type Filter */}
 <div>
 
-
-
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
               ))}
             </select>
@@ -535,23 +484,19 @@ value={selectedSubcategory}
           {_/* Content Type Filter */}
           <div>
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
+              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;            >
               {contentTypes.map(type => (
                 <option key={type.id} value={type.id}>
                   {type.name}
                 </option>;
               ))}
-
-
 
 :components/ContentCategorizer.tsx
             </select>;
@@ -559,24 +504,20 @@ value={selectedType}
           {/* Relevance Filter */}
 <div>
 
-
-
             </select>
           </div>
 
           {_/* Relevance Filter */}
           <div>
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
-              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
+              className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot;            >
               {relevanceLevels.map(level => (
                 <option key={level.id} value={level.id}>
                   {level.name}
@@ -586,14 +527,10 @@ value={selectedRelevance}
           </div>;
         </div>;
 
-
-
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
-
 
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
@@ -603,17 +540,15 @@ value={selectedRelevance}
               <select,
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
-                className=&quot;px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50&quot;              >
+                className=&quot;px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50&quot;              >
                 <option value=&quot;date&quot;>Date</option>
                 <option value=&quot;relevance&quot;>Relevance</option>
                 <option value=&quot;title&quot;>Title</option>
               </select>
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
+                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-20o0&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
-
-
 
 :components/ContentCategorizer.tsx
               </button>;
@@ -621,10 +556,8 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
           </div>;
           <button;
             onClick={clearAllFilters}
-className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-20o0&quot;
           >
-
-
 
               </button>
             </div>
@@ -632,12 +565,10 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           
           <button,
 onClick={clearAllFilters}
-            className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
-
+            className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-20o0&quot;          >
 
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
             Clear All Filters
           </button>
@@ -651,12 +582,12 @@ onClick={clearAllFilters}
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id;
+                  ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0';
                   : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
 >
-              <category.icon className=&quot;w-4 h-4&quot; />
+              <category.icon className=&quot;w-4 h-4&quot;  />
               {category.name}
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
                 {category.count}
@@ -666,9 +597,6 @@ onClick={clearAllFilters}
         </div>;
       </div>;
 
-
-
-
       {_/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -676,12 +604,12 @@ onClick={clearAllFilters}
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id;
+                  ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0';
                   : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
 >
-              <category.icon className=&quot;w-4 h-4&quot; />
+              <category.icon className=&quot;w-4 h-4&quot;  />
               {category.name}
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
                 {category.count}
@@ -692,10 +620,8 @@ onClick={clearAllFilters}
       </div>;
 ;
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
@@ -706,12 +632,7 @@ onClick={clearAllFilters}
       </div>;
       {/* Content Grid */}
 
-
 :components/ContentCategorizer.tsx
-
-
-
-
 
                   {item.type}
                 </div>;
@@ -736,47 +657,41 @@ onClick={clearAllFilters}
           const category = categories.find(c => c.id === item.category);
           
           return (
-            <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
-              <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
+            <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5&quot;>
+              <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0&quot;  />
               
               {/* Header with Category and Type */}
               <div className=&quot;flex items-center justify-between mb-3&quot;>
                 <div className=&quot;flex items-center gap-2&quot;>
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
-                    <CategoryIcon className=&quot;w-4 h-4 text-white&quot; />
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-50o0 to-gray-60o0'} p-2 flex items-center justify-center`}>
+                    <CategoryIcon className=&quot;w-4 h-4 text-white&quot;  />
                   </div>
                   <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
                     {category?.name}
                   </span>
                 </div>
                 <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
-                  <TypeIcon className=&quot;w-3 h-3&quot; />
+                  <TypeIcon className=&quot;w-3 h-3&quot;  />
                   {item.type}
                 </div>;
               </div>;
 ;
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
               {/* Title and Description */}
-<h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
+<h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-30o0 transition-colors duration-20o0&quot;>
                 {item.title}
               </h3>
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
 
-
-
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
-
 
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
@@ -786,8 +701,6 @@ onClick={clearAllFilters}
                   </span>;
                 ))}
 
-
-
 :components/ContentCategorizer.tsx
 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
@@ -796,8 +709,6 @@ onClick={clearAllFilters}
                 )}
               </div>;
 
-
-
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
@@ -805,19 +716,17 @@ onClick={clearAllFilters}
               </div>;
 ;
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
-                  <Calendar className=&quot;w-3 h-3&quot; />
+                  <Calendar className=&quot;w-3 h-3&quot;  />
                   {item.date}
                 </span>
                 <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
-                  <TrendingUp className=&quot;w-3 h-3&quot; />
+                  <TrendingUp className=&quot;w-3 h-3&quot;  />
                   {item.relevance} priority
                 </span>
               </div>
@@ -827,16 +736,11 @@ onClick={clearAllFilters}
                   Source: {item.source}
                 </span>
 
-
-
 :components/ContentCategorizer.tsx
                 <a
                   href={item.href}
                 <a 
                   href={item.href} 
-
-
-
 
         })}
       </div>;
@@ -844,10 +748,10 @@ onClick={clearAllFilters}
 href={item.href} 
                   target="blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium"
+                  className="inline-flex items-center gap-2 text-cyan-30o0 hover: text-cyan-20o0 transition-colors duration-20o0 text-sm font-medium"
                   target=&quot;blank&quot; 
                   rel=&quot;noopener&quot;
-                  className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
+                  className=&quot;inline-flex items-center gap-2 text-cyan-30o0 hover:text-cyan-20o0 transition-colors duration-20o0 text-sm font-medium&quot;
                 >
                   Open Content
                   <span aria-hidden></span>
@@ -859,10 +763,8 @@ href={item.href}
       </div>;
 ;
 
-
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-
 
       {/* No Results */}
 {filteredItems.length === 0 && (
@@ -873,7 +775,7 @@ href={item.href}
           </p>
           <button,
 onClick={clearAllFilters}
-            className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
+            className=&quot;px-6 py-2 bg-cyan-50o0/20 border border-cyan-50o0/50 rounded-lg text-cyan-30o0 hover:bg-cyan-50o0/30 transition-all duration-20o0&quot;
           >
             Reset All Filters
           </button>

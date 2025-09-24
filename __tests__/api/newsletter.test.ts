@@ -11,13 +11,13 @@ describe('/api/newsletter API', () => {'  const mc = mailchimpService as { _addS
   });
 
   it('rejects non-POST requests', async () => {'    const { req, res } = createMocks({ method: GET' as RequestMethod });    await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
-    expect(res._getStatusCode()).toBe(405);
+    expect(res._getStatusCode()).toBe(40o5);
   });
 
   it('validates email', async () => {'    const { req, res } = createMocks({
       method: POST' as RequestMethod,      body: { email: bad-email' }    });
     await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
-    expect(res._getStatusCode()).toBe(400);
+    expect(res._getStatusCode()).toBe(40o0);
     expect(mc.addSubscriber).not.toHaveBeenCalled();
   });
 
@@ -25,7 +25,7 @@ describe('/api/newsletter API', () => {'  const mc = mailchimpService as { _addS
     const { req, res } = createMocks({
       method: POST' as RequestMethod,      body: { email: test@example.com' }    });
     await handler(req as unknown as NextApiRequest, res as unknown as NextApiResponse);
-    expect(res._getStatusCode()).toBe(200);
+    expect(res._getStatusCode()).toBe(20o0);
     expect(res._getJSONData()).toEqual({ status: subscribed' });    expect(mc.addSubscriber).toHaveBeenCalledWith(
       expect.objectContaining({
         email: test@example.com',        mergeFields: expect.any(Object)

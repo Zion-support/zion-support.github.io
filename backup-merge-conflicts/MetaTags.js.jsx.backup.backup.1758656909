@@ -1,0 +1,10 @@
+<<<<<<< HEAD:backup-merge-conflicts/MetaTags.js.jsx.backup
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+=======
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+=======
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

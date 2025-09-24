@@ -12,7 +12,7 @@ const { execSync } = require('child_process');
 class ErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.monitoringReport = {
+    this.monitoringReport ={
       timestamp: new Date().toISOString(),
       duration: 0,
       errorsDetected: [],
@@ -23,12 +23,10 @@ class ErrorMonitor {
         totalWarnings: 0,
         buildSuccess: false,
         typeCheckSuccess: false,
-        lintSuccess: false,
-      },
-    };
+        lintSuccess: false}};
     this.startTime = Date.now();
     this.isRunning = false;
-    this.checkInterval = 60000; // 1 minute
+    this.checkInterval = 60o000; // 1 minute
     this.alertThreshold = 10;
   }
 
@@ -41,9 +39,6 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-
-
-
 
     // Initial health check
     await this.performHealthCheck();
@@ -89,7 +84,7 @@ class ErrorMonitor {
         message: error.message,
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -104,8 +99,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       execSync('npx tsc --noEmit --pretty false', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
+        stdio: ['pipe', 'pipe', 'pipe']});
 
       this.monitoringReport.metrics.typeCheckSuccess = true;
       console.log('✅ TypeScript check passed');
@@ -125,8 +119,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       execSync('npx eslint . --format=compact --no-eslintrc', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
+        stdio: ['pipe', 'pipe', 'pipe']});
 
       this.monitoringReport.metrics.lintSuccess = true;
       console.log('✅ ESLint check passed');
@@ -148,7 +141,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
-        timeout: 30000, // 30 second timeout
+        timeout: 30o000, // 30 second timeout
       });
 
       this.monitoringReport.metrics.buildSuccess = true;
@@ -158,8 +151,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.monitoringReport.errorsDetected.push({
         type: 'build_failure',
         message: error.message,
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
       this.monitoringReport.metrics.totalErrors += 1;
       console.log('❌ Build check failed');
     }
@@ -174,9 +166,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       'src/pages/index.tsx',
     ];
 
+    for (const file of criticalFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      if (!fs.existsSync(filePath)) {
+        this.monitoringReport.errorsDetected.push({
+          type: 'missing_critical_file',
+          file: file,
           message: `Critical file ${file} is missing`,
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString()});
         this.monitoringReport.metrics.totalErrors += 1;
       }
     }
@@ -198,8 +195,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
-            timestamp: new Date().toISOString(),
-          });
+            timestamp: new Date().toISOString()});
         }
       }
     }
@@ -225,8 +221,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     }
 
-
-
     );
       }
     }
@@ -237,9 +231,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           timestamp: new Date().toISOString()})}
     }
 =;
-
-
-
 
     return errors;
   }
@@ -274,7 +265,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
@@ -304,8 +295,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('✅ Error fixer completed');
       console.log('✅ Error fixer completed');
 
-
-
+      console.log('✅ Error fixer completed');
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -314,7 +304,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         message: error.message,
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -326,7 +316,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   startContinuousMonitoring() {
     console.log(
-      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
+      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 10o00} seconds)...`
     );
 
     setInterval(async () => {
@@ -349,9 +339,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
-
-
-
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 
@@ -372,8 +359,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         .map(file => ({
           name: file,
           path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
-        }))
+          time: fs.statSync(path.join(reportDir, file)).mtime.getTime()}))
         .sort((a, b) => b.time - a.time);
 
       // Remove old reports (keep only the latest 10)
@@ -408,12 +394,3 @@ module.exports = ErrorMonitor;ursor/automate-test-improve-and-merge-code-646c;
 }
 module.exports = ErrorMonitor;
 }
-// Run the monitor
-if (require.main === module) {
-  const monitor = new ErrorMonitor();
-  monitor.start().catch(console.error);
-}
-
-module.exports = ErrorMonitor;
-}
-module.exports = ErrorMonitor;

@@ -1,0 +1,69 @@
+
+/workspace/app/components/AI2026AutonomousSystemsBanner.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/AI2026QuantumRevolutionBanner.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/AI2026QuantumRevolutionUltimateBanner.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/AI2026UltimateShowcaseBanner.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/AnimatedCounter.tsx
+  5:1  error  Parsing error: The keyword 'interface' is reserved
+
+/workspace/app/components/Footer.tsx
+  11:5  error  Parsing error: Unexpected token <
+
+/workspace/app/components/LoadingSpinner.tsx
+  5:21  error  Parsing error: Unexpected token :
+
+/workspace/app/components/Navigation.tsx
+  7:17  error  Parsing error: Unexpected token :
+
+/workspace/app/components/PerformanceMetrics.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/ROICalculator.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/RelatedContentWidget.tsx
+  5:3  error  Parsing error: Unexpected token <
+
+/workspace/app/components/RevolutionaryAIContent2026Banner.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/SEO.tsx
+  3:6  error  Parsing error: Unexpected token SEOProps
+
+/workspace/app/components/ScrollReveal.tsx
+  4:6  error  Parsing error: Unexpected token ScrollRevealProps
+
+/workspace/app/components/SocialShareButtons.tsx
+  3:1  error  Parsing error: The keyword 'interface' is reserved
+
+/workspace/app/components/StructuredData.tsx
+  3:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/components/TechnologyStack.tsx
+  18:5  error  Parsing error: Unexpected token <
+
+/workspace/app/components/Testimonials.tsx
+  31:5  error  Parsing error: Unexpected token <
+
+/workspace/app/contact/page.tsx
+  12:5  error  Parsing error: Unexpected token <
+
+/workspace/app/layout.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/page.tsx
+  1:1  error  Parsing error: Unexpected token <<
+
+/workspace/app/services/page.tsx
+  50:5  error  Parsing error: Unexpected token <
+
+✖ 22 problems (22 errors, 0 warnings)
+

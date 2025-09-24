@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/store/wishlistSlice.tsx
 ;
 export default function Wishlistslice("props": "any) {;
   return (;
@@ -17,10 +13,6 @@ export default function Wishlistslice("props": "any) {;
     </div>;
   );
 "}
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/wishlistSlice.tsx
 
 export default function Wishlistslice(props: any) {
   return (
@@ -34,9 +26,5 @@ export default function Wishlistslice(props: any) {
     </div>
     );
 }
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/wishlistSlice.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/store/wishlistSlice.tsx

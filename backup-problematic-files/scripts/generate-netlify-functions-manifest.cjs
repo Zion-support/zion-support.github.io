@@ -1,31 +1,4 @@
 #!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""#!/usr/bin/env node
-<<<<<<< HEAD
-#!/usr/bin/env node;
-// No-op Netlify functions manifest generator placeholder;
-// Writes a minimal manifest file if functions dir exists;
-const fs = require("$1");
-const path = require("$1");
-const outDir = path.resolve(process.cwd(), "automation");
-const manifestPath = path.join(outDir, "netlify-functions-manifest.json");
-try {;}
-  fs.mkdirSync(outDir, { "recursive": true }),} catch {};
-;
-const manifest = { "functions": [], "generatedAt": new Date().toISOString() };
-try {;}
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log("["netlify": manifest] wrote", manifestPath),} catch (e) {;}
-  console.log("["netlify": manifest] skipped (write failed)"),};
-process.exit(0);
-const fs = require("$1");
-const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {  fs.mkdirSync(outDir, { "recursive": true }),"} catch {};
-;
-const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
-
-#!/usr/bin/env node/usr/bin/env node;/ No-op Netlify functions manifest generator placeholder;/ Writes a minimal manifest file if functions dir exists;const fs = require("$1");"const path = require("$1");"const outDir = path.resolve(process.cwd(), "automation");"const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try {;" fs.mkdirSync(outDir, { recursive: true }),} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() }try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify: manifest] wrote", manifestPath),} catch (e) {;" console.log("[netlify: manifest] skipped (write failed)"),}process.exit(0);"const fs = require("$1");"const path = require("path")";const outDir = path.resolve(process.cwd(), "automation");const manifestPath = path.join(outDir, "netlify-functions-manifest.json");try { fs.mkdirSync(outDir, { recursive: true }),"} catch {};"const manifest = { functions: [], generatedAt: new Date().toISOString() };";try {; fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));" console.log("[netlify:manifest] wrote", manifestPath)} catch (e) { console.log("[netlify:manifest] skipped (write failed)")}";process.exit(0)""#!/usr/bin/env node
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require('fs');
 const path = require('path');
 
@@ -41,8 +14,6 @@ const manifest = {
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 // Placeholder Netlify functions manifest generator to satisfy build pipeline.
 // If Netlify Functions are used, implement manifest generation here.
@@ -60,5 +31,4 @@ fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 

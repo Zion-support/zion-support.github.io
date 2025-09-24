@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 const fs = require('fs').promises;
@@ -42,8 +38,7 @@ class ComprehensiveAutomationTester {
       passed,
       message,
       details,
-      timestamp: new Date().toISOString(),
-    });
+      timestamp: new Date().toISOString()});
   }
 
   async runAllTests() {
@@ -83,8 +78,7 @@ class ComprehensiveAutomationTester {
         `Core File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -92,14 +86,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'Core System Import',
         true,
-        'Core system imported successfully',
-      );
+        'Core system imported successfully');
     } catch (error) {
       this.addTestResult(
         'Core System Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -119,8 +111,7 @@ class ComprehensiveAutomationTester {
         `Netlify File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -128,14 +119,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'Netlify Monitor Import',
         true,
-        'Netlify monitor imported successfully',
-      );
+        'Netlify monitor imported successfully');
     } catch (error) {
       this.addTestResult(
         'Netlify Monitor Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -153,8 +142,7 @@ class ComprehensiveAutomationTester {
         `Performance File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -162,14 +150,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'Performance Monitor Import',
         true,
-        'Performance monitor imported successfully',
-      );
+        'Performance monitor imported successfully');
     } catch (error) {
       this.addTestResult(
         'Performance Monitor Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -188,8 +174,7 @@ class ComprehensiveAutomationTester {
         `CI File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -197,14 +182,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'CI System Import',
         true,
-        'CI system imported successfully',
-      );
+        'CI system imported successfully');
     } catch (error) {
       this.addTestResult(
         'CI System Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -223,8 +206,7 @@ class ComprehensiveAutomationTester {
         `Task File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -232,14 +214,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'Task System Import',
         true,
-        'Task system imported successfully',
-      );
+        'Task system imported successfully');
     } catch (error) {
       this.addTestResult(
         'Task System Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -257,8 +237,7 @@ class ComprehensiveAutomationTester {
         `Cursor File: ${file}`,
         exists,
         exists ? 'File exists' : 'File missing',
-        { file },
-      );
+        { file });
     }
 
     try {
@@ -266,14 +245,12 @@ class ComprehensiveAutomationTester {
       this.addTestResult(
         'Cursor System Import',
         true,
-        'Cursor system imported successfully',
-      );
+        'Cursor system imported successfully');
     } catch (error) {
       this.addTestResult(
         'Cursor System Import',
         false,
-        `Import failed: ${error.message}`,
-      );
+        `Import failed: ${error.message}`);
     }
   }
 
@@ -302,7 +279,7 @@ class ComprehensiveAutomationTester {
     logger.info(`Total Tests: ${total}`);
     logger.info(`Passed: ${passed} ✅`);
     logger.info(`Failed: ${failed} ❌`);
-    logger.info(`Success Rate: ${((passed / total) * 100).toFixed(1)}%`);
+    logger.info(`Success Rate: ${((passed / total) * 10o0).toFixed(1)}%`);
     logger.info(`Duration: ${duration}ms`);
 
     if (failed > 0) {
@@ -321,18 +298,16 @@ class ComprehensiveAutomationTester {
         logger.info(`  - ${r.testName}: ${r.message}`);
       });
 
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       duration,
-      summary: { total, passed, failed, successRate: (passed / total) * 100 },
-      results: this.testResults,
-    };
+      summary: { total, passed, failed, successRate: (passed / total) * 10o0 },
+      results: this.testResults};
 
     fs.writeFile('test-report.json', JSON.stringify(report, null, 2))
       .then(() => this.log('Detailed report saved to test-report.json', 'info'))
       .catch((err) =>
-        this.log(`Failed to save report: ${err.message}`, 'error'),
-      );
+        this.log(`Failed to save report: ${err.message}`, 'error'));
   }
 }
 

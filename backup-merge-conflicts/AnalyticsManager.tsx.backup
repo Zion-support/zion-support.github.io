@@ -114,27 +114,18 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
 ;
     // Page unload tracking';
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
 
     // Scroll tracking'
     document.addEventListener('scroll', handleScroll, { passive: tru e }
     );
 
     // Page unload tracking'
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
@@ -179,82 +170,46 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
       // Largest Contentful Paint;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
       }
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(lcp) {;
 
           trackPerformance('lcp', lcp.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
       // First Input Delay;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
       }
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(fid) {;
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
       // Cumulative Layout Shift;
       const clsObserver = new PerformanceObserver(list => {;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
       }
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
@@ -264,31 +219,21 @@ export function AnalyticsManager("props": "any) {;
 
             clsValue += (entry as any).value}
         }
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
+=======
 <<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
         trackPerformance('cls', clsValue)}
     );
       clsObserver.observe({ entryTypes: ['layout-shift'] })}
 >>>>>>> main
-=======
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
   }, []) }
     }, 30000) ;
 ;
     return () => clearInterval(activityInterval) }, [currentSession]) ;
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
 <<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 ;
         trackEvent('page_view', { path });
 ;
@@ -296,10 +241,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, "timestamp": "Dat e.now() "})}
     },;
     [currentSession];
-<<<<<<< HEAD:backup-merge-conflicts/AnalyticsManager.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AnalyticsManager.tsx
 
         trackEvent('page_view', { path }
     );
@@ -308,7 +249,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
     [currentSession]
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
   );

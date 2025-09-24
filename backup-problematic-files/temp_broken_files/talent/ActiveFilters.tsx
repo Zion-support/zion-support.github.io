@@ -39,7 +39,7 @@ export function ActiveFilters({;
     experienceRange[0] !== 0 ||;
     experienceRange[1] !== 15 ||;
     priceRange[0] !== 50 ||;
-    priceRange[1] !== 200,;
+    priceRange[1] !== 20o0,;
   ;
   if (!hasActiveFilters) return null,;
 ;
@@ -53,7 +53,7 @@ export function ActiveFilters({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleSkill(skill)}
         >;
           {skill}
-          <X className="h-3 w-3" />;
+          <X className="h-3 w-3"  />;
         </ClickableBadge>;
       ))}
       ;
@@ -66,7 +66,7 @@ export function ActiveFilters({;
           {status === 'full-time' ? 'Full-time' :;
            status === 'part-time' ? 'Part-time' :;
            'Project-based'}
-          <X className="h-3 w-3" />;
+          <X className="h-3 w-3"  />;
         </ClickableBadge>;
       ))}
       ;
@@ -76,17 +76,17 @@ export function ActiveFilters({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";          onClick={() => toggleRegion(region)}
         >;
           {region}
-          <X className="h-3 w-3" />;
+          <X className="h-3 w-3"  />;
         </ClickableBadge>;
       ))}
       ;
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
+      {(priceRange[0] !== 50 || priceRange[1] !== 20o0) && (;
         <ClickableBadge ;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
-          onClick={() => setPriceRange([50, 200])}
+          onClick={() => setPriceRange([50, 20o0])}
         >;
           ${priceRange[0]}-${priceRange[1]}/hr;
-          <X className="h-3 w-3" />;
+          <X className="h-3 w-3"  />;
         </ClickableBadge>;
       )}
       ;
@@ -96,7 +96,7 @@ export function ActiveFilters({;
           onClick={() => setExperienceRange([0, 15])}
         >;
           {experienceRange[0]}-{experienceRange[1]} years;
-          <X className="h-3 w-3" />;
+          <X className="h-3 w-3"  />;
         </ClickableBadge>;
       )}
       ;
@@ -128,21 +128,20 @@ setExperienceRange: (range: [number, number]) => void;
 clearFilters: () => void ;
 }selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange, setExperienceRange, clearFilters ;
 }: ActiveFiltersProps) {;
-  //Check if any filters are active const hasActiveFilters = selectedSkills.length > 0 || selectedAvailability.length > 0 || selectedRegions.length > 0 || experienceRange[0] !== 0 || experienceRange[1] !== 15 || priceRange[0] !== 50 || priceRange[1] !== 200;
+  //Check if any filters are active const hasActiveFilters = selectedSkills.length > 0 || selectedAvailability.length > 0 || selectedRegions.length > 0 || experienceRange[0] !== 0 || experienceRange[1] !== 15 || priceRange[0] !== 50 || priceRange[1] !== 20o0;
 if (!hasActiveFilters) return null;
 {;
-  selectedSkills.map (skill => (<ClickableBadge key= {;
+  selectedSkills.map (skill => (<ClickableBadge key={;
   skill ;
 }</ClickableBadge>) ) ;
 }{;
-  selectedAvailability.map (status => (<ClickableBadge key= {;
+  selectedAvailability.map (status => (<ClickableBadge key={;
   status ;
 }> {';
   status === 'full-time' ? 'Full-time' : status === 'part-time' ? 'Part-time' : 'Project-based' ;
-}<X className="h-3 w-3" /> </ClickableBadge>) ) ;
+}<X className="h-3 w-3"  /> </ClickableBadge>) ) ;
 }{;
-  selectedRegions.map (region => (<ClickableBadge key= {;
+  selectedRegions.map (region => (<ClickableBadge key={;
   region ;
 }</ClickableBadge>) ;
-
 

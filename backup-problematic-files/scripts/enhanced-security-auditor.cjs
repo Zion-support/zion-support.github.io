@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
 
 
 
@@ -138,10 +137,6 @@ auditor;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
-
-
->>>>>>> origin/merge-pr-12271:scripts/enhanced-security-auditor.cjs
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -180,7 +175,6 @@ const fs = require("fs")";const path = require("path")""
 
   .then(report => {);    console.log(" Security audit completed successfully");";    process.exit(0),"}
 
-<<<<<<< HEAD:backup-problematic-files/scripts/enhanced-security-auditor.cjs
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -189,5 +183,3 @@ const fs = require("fs")";const path = require("path")""
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-=======
->>>>>>> origin/merge-pr-12271:scripts/enhanced-security-auditor.cjs
