@@ -4,25 +4,10 @@ module.exports = {
   roots: ['<rootDir>/__safe_tests__'],
   testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': [
-      'babel-jest',
-      {
-        presets: [
-          ['@babel/preset-env', { targets: { node: 'current' } }],
-          ['@babel/preset-react', { runtime: 'automatic' }],
-          '@babel/preset-typescript'
-        ]
-      }
-    ]
-  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/$1'
   },
-  // Only run smoke tests to keep CI green while legacy tests are repaired
-  testMatch: ['<rootDir>/__tests__/smoke/**/*.(test|spec).(js|jsx|ts|tsx)'],
-  // Ignore all large/broken suites for now
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
@@ -53,10 +38,10 @@ module.exports = {
     '/ts_files_backup/'
   ],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      { presets: ['@babel/preset-env', ['@babel/preset-react', { runtime: 'automatic' }], '@babel/preset-typescript'] }
+    ]
   },
-  passWithNoTests: true,
+  passWithNoTests: true
 }
-
-module.exports = createJestConfig(customJestConfig)
-
