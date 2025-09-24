@@ -57,21 +57,12 @@ const nextConfig = {
 	
 	
 	// TypeScript and ESLint configuration
-<<<<<<< HEAD
-    typescript: {
-        ignoreBuildErrors: true
-    },
-    eslint: {
-        ignoreDuringBuilds: true
-    },
-=======
 	typescript: {
 		ignoreBuildErrors: false
 	},
 	eslint: {
 		ignoreDuringBuilds: true
 	},
->>>>>>> origin/main
 };
 
 export default nextConfig;
