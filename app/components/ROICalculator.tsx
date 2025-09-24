@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, memo, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface ROIData {
   investment: number;
@@ -8,7 +8,7 @@ interface ROIData {
   timeframe: number;
 }
 
-const ROICalculator = memo(function ROICalculator() {
+export default function ROICalculator() {
   const [data, setData] = useState<ROIData>({
     investment: 50000,
     monthlySavings: 15000,
@@ -172,6 +172,4 @@ const ROICalculator = memo(function ROICalculator() {
       </div>
     </div>
   );
-});
-
-export default ROICalculator;
+}
