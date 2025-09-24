@@ -1,63 +1,63 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
-import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
-import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEO from '../src/components/SEO';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 
 // Import new advanced AI components
-import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from '../components/IntelligentSearchEngine';
-import AdvancedAIAssistant from '../components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from '../components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from '../components/AdvancedSecurityMonitor';
-import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from '../components/EnterpriseDataManagement';
-import APIManagementSystem from '../components/APIManagementSystem';
+import AdvancedContentRecommendationEngine from '../src/components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from '../src/components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from '../src/components/IntelligentSearchEngine';
+import AdvancedAIAssistant from '../src/components/AdvancedAIAssistant';
+import BusinessIntelligenceDashboard from '../src/components/BusinessIntelligenceDashboard';
+import AdvancedSecurityMonitor from '../src/components/AdvancedSecurityMonitor';
+import AdvancedAnalyticsEngine from '../src/components/AdvancedAnalyticsEngine';
+import AutomationWorkflowEngine from '../src/components/AutomationWorkflowEngine';
+import EnterpriseDataManagement from '../src/components/EnterpriseDataManagement';
+import APIManagementSystem from '../src/components/APIManagementSystem';
 
 // Lazy load heavy components
-const ROICalculator = lazy(() => import('../components/ROICalculator'));
-const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
+const ROICalculator = lazy(() => import('../src/components/ROICalculator'));
+const StructuredData = lazy(() => import('../src/components/StructuredData'));
+const PerformanceMetrics = lazy(() => import('../src/components/PerformanceMetrics'));
+const TechnologyStack = lazy(() => import('../src/components/TechnologyStack'));
 
 // Import key promotional components
-import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from '../components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from '../components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from '../components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from '../components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from '../components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from '../components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from '../components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from '../components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from '../components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from '../components/UltimateContentShowcase2025';
+import NewContentPromotionBanner from '../src/components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../src/components/InteractiveContentDiscoveryWidget';
+import ComprehensiveSolutionsBanner2025 from '../src/components/ComprehensiveSolutionsBanner2025';
+import NewServicesShowcase2025 from '../src/components/NewServicesShowcase2025';
+import EnhancedContentPromotionBanner from '../src/components/EnhancedContentPromotionBanner';
+import NewContent2026Showcase from '../src/components/NewContent2026Showcase';
+import RevolutionaryContent2026Banner from '../src/components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../src/components/FeaturedContentShowcase2026';
+import EnhancedContentPromotionBanner2026 from '../src/components/EnhancedContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from '../src/components/ComprehensiveContentShowcase2026';
+import RevolutionaryContent2025Banner from '../src/components/RevolutionaryContent2025Banner';
+import UltimateContentShowcase2025 from '../src/components/UltimateContentShowcase2025';
 // Import new 2026 promotional components
-import UltimatePromotionBanner2026 from '../components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from '../components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from '../components/SuccessMetricsShowcase2026';
+import UltimatePromotionBanner2026 from '../src/components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../src/components/UltimateContentShowcase2026';
+import SuccessMetricsShowcase2026 from '../src/components/SuccessMetricsShowcase2026';
 
 // Import additional promotional components
-import AI2025BreakthroughBanner from '../components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from '../components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from '../components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
-import NewContent2025UltimateBanner from '../components/NewContent2025UltimateBanner';
+import AI2025BreakthroughBanner from '../src/components/AI2025BreakthroughBanner';
+import NewContent2025PromotionBanner from '../src/components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../src/components/LatestContentShowcase2025';
+import RevolutionaryAIContentBanner from '../src/components/RevolutionaryAIContentBanner';
+import NewContent2025UltimateBanner from '../src/components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from '../components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from '../components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from '../components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from '../components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from '../components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from '../components/RevolutionaryContentBanner2025';
+import AI2026QuantumRevolutionBanner from '../src/components/AI2026QuantumRevolutionBanner';
+import AI2026AutonomousSystemsBanner from '../src/components/AI2026AutonomousSystemsBanner';
+import AI2026UltimateShowcaseBanner from '../src/components/AI2026UltimateShowcaseBanner';
+import QuantumAI2026BreakthroughBanner from '../src/components/QuantumAI2026BreakthroughBanner';
+import QuantumAIContentShowcase2026 from '../src/components/QuantumAIContentShowcase2026';
+import RevolutionaryContentBanner2025 from '../src/components/RevolutionaryContentBanner2025';
 
 // Import new promotional banners for latest content
-import QuantumAI2026RevolutionBanner from '../components/QuantumAI2026RevolutionBanner';
-import GenerativeAI2025BreakthroughBanner from '../components/GenerativeAI2025BreakthroughBanner';
+import QuantumAI2026RevolutionBanner from '../src/components/QuantumAI2026RevolutionBanner';
+import GenerativeAI2025BreakthroughBanner from '../src/components/GenerativeAI2025BreakthroughBanner';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',

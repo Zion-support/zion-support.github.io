@@ -1,28 +1,29 @@
-'use client',
-import { useEffect, useState } from 'react',
+'use client';
+import { useEffect, useState } from 'react';
 export default function AccessibilityEnhancer() {
-  const [highContrast, setHighContrast] = useState(false),
-  const [reducedMotion, setReducedMotion] = useState(false),
-  const [fontSize, setFontSize] = useState(16),
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
   useEffect(() => {
     // Check user preferences,
     if (typeof window !== 'undefined') {
       const prefersReducedMotion = window.matchMedia(
-        '(prefers-reduced-motion: reduce)').matches,
+        '(prefers-reduced-motion: reduce)').matches;
       const prefersHighContrast = window.matchMedia(
-        '(prefers-contrast: high)').matches,
-      setReducedMotion(prefersReducedMotion),
-      setHighContrast(prefersHighContrast),
-      // Load saved preferences,
-      const savedFontSize = localStorage.getItem('fontSize'),
-      const savedHighContrast = localStorage.getItem('highContrast'),
-      if (savedFontSize) setFontSize(parseInt(savedFontSize)),
-      if (savedHighContrast) setHighContrast(savedHighContrast === 'true')}
-  }, []),
+        '(prefers-contrast: high)').matches;
+      setReducedMotion(prefersReducedMotion);
+      setHighContrast(prefersHighContrast);
+      // Load saved preferences
+      const savedFontSize = localStorage.getItem('fontSize');
+      const savedHighContrast = localStorage.getItem('highContrast');
+      if (savedFontSize) setFontSize(parseInt(savedFontSize));
+      if (savedHighContrast) setHighContrast(savedHighContrast === 'true');
+    }
+  }, []);
   useEffect(() => {
-    // Apply accessibility settings,
-    const root = document.documentElement,
-    // Font size adjustment,
+    // Apply accessibility settings
+    const root = document.documentElement;
+    // Font size adjustment
     root.style.fontSize = `${fontSize}px`,
     // High contrast mode,
     if (highContrast) {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
-import SEO from '../../components/SEO';
+import SEO from '../../../src/components/SEO';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation 2025: Ultimate Success Story | Zion Tech Group',
