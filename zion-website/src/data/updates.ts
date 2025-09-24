@@ -9,6 +9,8 @@ export type SiteUpdate = {
 export const siteUpdates: SiteUpdate[] = [
   // Added 2025-09-15 (latest content)
   {
+<<<<<<< HEAD
+=======
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -38,6 +40,7 @@ export const siteUpdates: SiteUpdate[] = [
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
 =======
+>>>>>>> cursor/create-and-deploy-new-content-2def
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {

@@ -1,4 +1,6 @@
 >>>>>>> cursor/create-and-deploy-new-content-2def
+<<<<<<< HEAD
+=======
 =======
 const navigation = {
   main: [
@@ -33,6 +35,7 @@ const navigation = {
 }
 =======
 
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> cursor/create-and-deploy-new-content-8472
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======

@@ -1,20 +1,20 @@
-'use client'
+'use client';
 
-import { useState, useEffect, ReactElement } from 'react'
+import { useState, useEffect, ReactElement } from 'react';
 
 interface Testimonial {
-  id: number
-  name: string
-  role: string
-  company: string
-  content: string
-  avatar?: string
-  rating: number
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  content: string;
+  avatar?: string;
+  rating: number;
 }
 
 interface TestimonialCardProps {
-  testimonial?: Testimonial
-  isActive?: boolean
+  testimonial: Testimonial;
+  isActive: boolean;
 }
 
 const testimonials: Testimonial[] = [
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     company: 'TechFlow Inc.',
     content:
       'Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.',
-    rating: 5
+    rating: 5,
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     company: 'CloudScale Solutions',
     content:
       'Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.',
-    rating: 5
+    rating: 5,
   },
   {
     id: 3,
@@ -43,22 +43,25 @@ const testimonials: Testimonial[] = [
     company: 'DataDriven Corp',
     content:
       'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
-    rating: 5
+    rating: 5,
   },
-]
+];
 
-export default function TestimonialCard({ testimonial, isActive = false }: TestimonialCardProps) {
-  const [isVisible, setIsVisible] = useState(false)
+export default function TestimonialCard({
+  testimonial,
+  isActive,
+}: TestimonialCardProps) {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (isActive) {
-      setIsVisible(true)
-      return
+      setIsVisible(true);
+      return undefined;
     } else {
-      const timer = setTimeout(() => setIsVisible(false), 300)
-      return () => clearTimeout(timer)
+      const timer = setTimeout(() => setIsVisible(false), 300);
+      return () => clearTimeout(timer);
     }
-  }, [isActive])
+  }, [isActive]);
 
   const renderStars = (rating: number): ReactElement => {
     return (
@@ -74,8 +77,8 @@ export default function TestimonialCard({ testimonial, isActive = false }: Testi
           </span>
         ))}
       </span>
-    )
-  }
+    );
+  };
 
   return (
     <div
@@ -85,29 +88,29 @@ export default function TestimonialCard({ testimonial, isActive = false }: Testi
     >
       <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 max-w-2xl mx-auto'>
         <div className='flex items-center mb-4'>
-          <div className='flex mr-4'>{renderStars(testimonial?.rating ?? 5)}</div>
+          <div className='flex mr-4'>{renderStars(testimonial.rating)}</div>
         </div>
 
         <blockquote className='text-lg text-gray-700 dark:text-gray-300 mb-6 italic'>
-          "{testimonial?.content ?? ''}"
+          "{testimonial.content}"
         </blockquote>
 
         <div className='flex items-center'>
           <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4'>
-            {(testimonial?.name ?? 'Z').charAt(0)}
+            {testimonial.name.charAt(0)}
           </div>
           <div>
             <div className='font-semibold text-gray-900 dark:text-white'>
-              {testimonial?.name ?? 'Anonymous'}
+              {testimonial.name}
             </div>
             <div className='text-sm text-gray-600 dark:text-gray-400'>
-              {(testimonial?.role ?? '') + (testimonial?.company ? `, ${testimonial.company}` : '')}
+              {testimonial.role}, {testimonial.company}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export { testimonials }
+export { testimonials };

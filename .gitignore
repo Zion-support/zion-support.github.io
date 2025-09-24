@@ -105,10 +105,3 @@ aggressive-merge-*.txt
 aggressive-merge-run.out
 
 tsconfig.tsbuildinfo
-
-# Ignore build outputs to avoid conflicts
-.next/
-out/
-dist/
-coverage/
-tsconfig.tsbuildinfo
