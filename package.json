@@ -25,7 +25,9 @@
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
     "postinstall": "echo 'Dependencies installed successfully'",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "perf": "node scripts/performance-monitor.cjs",
+    "analyze": "npm run build && npm run perf"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
