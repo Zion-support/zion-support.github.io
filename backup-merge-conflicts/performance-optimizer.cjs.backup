@@ -1,0 +1,76 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.metrics = {};
+  }
+
+  async analyzeBundle() {
+    const buildDir = path.join(process.cwd(), '.next');
+    if (fs.existsSync(buildDir)) {
+      const stats = this.getDirectorySize(buildDir);
+      this.metrics.bundleSize = stats;
+      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    }
+  }
+
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    const files = fs.readdirSync(dirPath);
+    
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stats = fs.statSync(filePath);
+      
+      if (stats.isDirectory()) {
+        totalSize += this.getDirectorySize(filePath);
+      } else {
+        totalSize += stats.size;
+      }
+    });
+    
+    return totalSize;
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      metrics: this.metrics,
+      recommendations: this.generateRecommendations()
+    };
+
+    fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
+    console.log('Performance report generated');
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations.push('Consider implementing code splitting');
+      recommendations.push('Use dynamic imports for large components');
+      recommendations.push('Optimize images and assets');
+    }
+    
+    return recommendations;
+  }
+}
+
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json')
+    console.log('⚡ Optimizing performance...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
+  optimizer.analyzeBundle();
+  optimizer.generateReport();
+}
+
+module.exports = PerformanceOptimizer;
+>>>>>>> main
