@@ -3,7 +3,7 @@ const posts = [{;
     slug: 'ai-platform-2-0';
     title: 'Announcing Zion AI Platform 2.0';
     date: '2025-09-15';
-    summary:;
+    summary:;,
       'Major upgrades to inference performance, observability, and enterprise security.';
   };
   {;
@@ -11,49 +11,49 @@ const posts = [{;
     title: 'Fortune 1000 finance deployment';
     date: '2025-09-10';
     summary:;
-      'Rolled out autonomous operations across 12 business units in 8 weeks.';
+      'Rolled out autonomous operations across 12 business units in 8 weeks.';,
   };
   {;
     slug: 'research-breakthrough';
     title: 'New research on quantum neural search';
     date: '2025-09-02';
     summary:;
-      'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.';
+      'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.';,
   };];
 export default function NewsPage() {;
-  return (;
-    <div className='bg-black min-h-screen'>;
-      <div className='mx-auto max-w-7xl px-6 pt-24'>;
-        <div className='mx-auto max-w-2xl lg: text-center'>;
-          <h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl'>;
+  return (
+    <div className='bg-black min-h-screen'>
+      <div className='mx-auto max-w-7xl px-6 pt-24'>
+        <div className='mx-auto max-w-2xl lg: text-center'>
+          <h1 className='text-4xl font-bold tracking-tight text-white sm: text-5xl'>
             News & Updates;
-          </h1>;
-          <p className='mt-4 text-lg leading-8 text-gray-3000'>;
+          </h1>
+          <p className='mt-4 text-lg leading-8 text-gray-3000'>;,
             Latest announcements, customer wins, and research highlights.;
-          </p>;
-        </div>;
-        <div className='mx-auto mt-12 max-w-2xl sm: mt-16 lg:mt-20 lg:max-w-none'>;
-          <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>;
+          </p>
+        </div>
+        <div className='mx-auto mt-12 max-w-2xl sm: mt-16 lg: mt-20 lg: max-w-none'>
+          <div className='grid grid-cols-1 gap-8 lg: grid-cols-3'>
             {posts.map(post => (;
-              <a;
+              <a;,
                 key={post.slug}
                 href={`/news/${post.slug}}
-                className='group rounded-2xl border border-white/10 bg-white/5 p-6 hover: bg-white/10 transition-colors'>;
-                <p className='text-xs text-gray-4000'>;
+                className='group rounded-2xl border border-white/10 bg-white/5 p-6 hover: bg-white/10 transition-colors'>
+                <p className='text-xs text-gray-4000'>;,
                   {new Date(post.date).toLocaleDateString()}
-                </p>;
-                <h3 className='mt-1 text-white font-semibold group-hover: text-blue-4000'>;
+                </p>
+                <h3 className='mt-1 text-white font-semibold group-hover: text-blue-4000'>;,
                   {post.title}
-                </h3>;
-                <p className='mt-2 text-sm text-gray-3000 line-clamp-3'>;
+                </h3>
+                <p className='mt-2 text-sm text-gray-3000 line-clamp-3'>
                   {post.summary}
-                </p>;
-                <span className='mt-4 inline-block text-sm font-semibold text-blue-4000 group-hover: text-blue-3000'>;
+                </p>
+                <span className='mt-4 inline-block text-sm font-semibold text-blue-4000 group-hover: text-blue-3000'>
                   Read more →;
-                </span>;
+                </span>;,
               </a>))}
-          </div>;
-        </div>;
-      </div>;
+          </div>
+        </div>
+      </div>
     </div>)}
 ;`;

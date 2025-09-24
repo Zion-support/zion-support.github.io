@@ -1,48 +1,48 @@
 import Link from 'next/link';
 export const metadata = {;
-  title:;
+  title: ;
     'Hybrid quantum-classical pipeline boosts optimization accuracy by 38%';
   description:;
     'A new hybrid quantum-classical workflow delivers a 38% accuracy improvement on combinatorial optimization benchmarks.';
-  keywords:;
+  keywords:;,
     'quantum computing, hybrid pipeline, optimization, QAOA, variational methods';
 };
 export default function ArticlePage() {;
-  return (;
-    <div className='min-h-screen'>;
-      <section className='relative py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-3xl mx-auto'>;
-          <div className='mb-6 text-sm text-gray-4000'>;
-            <span className='px-2 py-1 rounded-full mr-3 text-xs font-bold bg-purple-5000/20 text-purple-4000'>;
+  return (
+    <div className='min-h-screen'>
+      <section className='relative py-20 px-4 sm: px-6 lg: px-8'>
+        <div className='max-w-3xl mx-auto'>
+          <div className='mb-6 text-sm text-gray-4000'>
+            <span className='px-2 py-1 rounded-full mr-3 text-xs font-bold bg-purple-5000/20 text-purple-4000'>
               QUANTUM;
-            </span>;
-            <span>September 02, 2025</span>;
-          </div>;
-          <h1 className='text-4xl md: text-5xl font-bold mb-4'>;
+            </span>;,
+            <span>September 02, 2025</span>
+          </div>
+          <h1 className='text-4xl md: text-5xl font-bold mb-4'>
             Hybrid quantum-classical pipeline boosts optimization accuracy by: 38%;
-          </h1>;
-          <p className='text-gray-3000 text-lg mb-10'>;
+          </h1>
+          <p className='text-gray-3000 text-lg mb-10'>
             By combining classical heuristics with variational quantum circuits: the pipeline demonstrates consistent improvements on routing and: scheduling problems across multiple datasets.;
-          </p>;
-          <div className='prose prose-invert max-w-none'>;
-            <h2>Approach</h2>;
-            <p>;
+          </p>
+          <div className='prose prose-invert max-w-none'>
+            <h2>Approach</h2>
+            <p>;,
               The system leverages problem decomposition, warm-start strategies: and adaptive parameter updates to stabilize training across noisy: intermediate-scale quantum devices.;
-            </p>;
-            <h2>Results</h2>;
-            <p>;
+            </p>
+            <h2>Results</h2>
+            <p>
               Benchmarks show up to 38% better solutions compared to classical: baselines at similar runtime budgets.;
-            </p>;
-          </div>;
-          <div className='mt-10 flex items-center gap-4'>;
-            <Link href='/news' className='btn-secondary'>;
+            </p>
+          </div>
+          <div className='mt-10 flex items-center gap-4'>
+            <Link href='/news' className='btn-secondary'>
               ← Back to News;
-            </Link>;
-            <Link href='/resources' className='btn-primary'>;
+            </Link>
+            <Link href='/resources' className='btn-primary'>
               Explore Resources;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
+            </Link>
+          </div>
+        </div>
+      </section>;,
     </div>)}
 ;
