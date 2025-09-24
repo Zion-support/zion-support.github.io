@@ -1,102 +1,79 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react",
-import { supabase, getFromProfiles } from "../../integrations/supabase/client",
+import React{ useEffect } from "react",
+import { supabasegetFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
 import { AuthContext } from "./AuthContext",
-import { cleanupAuthState } from "../../utils/authUtils";
-import { useNavigate, useLocation  } from 'react-router-dom';
+import { cleanupAuthState } from "../../utils/authUtils",
+import { useNavigateuseLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
-import { mapProfileToUser } from "./profileMapper";
-export const AuthProvider = null;
-=======
-import React, { useEffect } from "react";
-import {supabase, getFromProfiles} from "../../integrations/supabase/client";
-import {useAuthOperations} from "../../hooks/useAuthOperations";
-import {AuthContext} from "./AuthContext";
-import {cleanupAuthState} from "../../utils/authUtils";
-import {useNavigate, useLocation} from 'react-router-dom';
-import {useAuthState} from "./useAuthState";
-import {useAuthEventHandlers} from "./useAuthEventHandlers";
-import {mapProfileToUser} from "./profileMapper";
+import { useAuthEventHandlers } from "./useAuthEventHandlers",
+import { mapProfileToUser } from "./profileMapper",
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
-    user, setUser
-    isLoading, setIsLoading
-    onboardingStep, setOnboardingStep
-  } = useAuthState();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
+    usersetUser,
+    isLoadingsetIsLoading,
+    onboardingStepsetOnboardingStep} = useAuthState(),
+  const navigate = useNavigate(),
+  const location = useLocation(),
+  const { handleSignedInhandleSignedOut } = useAuthEventHandlers(setUsersetOnboardingStep),
   const {
-    login: loginImpl
-    signup: signupImpl
+    login: loginImpl;
+    signup: signupImpl;
     logout;
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-    loginWithWeb3
-  } = useAuthOperations(setUser, setIsLoading);
-  // Wrapper for login to match the AuthContextType interface
-  const login = async (email: string, password: string) => {
-    return loginImpl({ email, password })
-  }
-  // Wrapper for signup to match the AuthContextType interface
-  const signup = async (email: string, password: string, userData?: any) => {
-    return signupImpl({ email, password, display_name: userData })
-  }
+    loginWithWeb3} = useAuthOperations(setUsersetIsLoading),
+  // Wrapper for login to match the AuthContextType interface,
+  const login = async (email: stringpassword: string) => {
+    return loginImpl({ emailpassword })};
+  // Wrapper for signup to match the AuthContextType interface,
+  const signup = async (email: stringpassword: stringuserData?: any) => {
+    return signupImpl({ emailpasswordisplay_name: userData })};
   useEffect(() => {
-    // Clean up any potential stale auth state before setting up listeners
-    cleanupAuthState();
+    // Clean up any potential stale auth state before setting up listeners,
+    cleanupAuthState(),
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      async (eventsession) => {
         if (session?.user) {
           try {
-            const { data: profile, error } = await getFromProfiles()
-              .select('*')
-              .eq('id', session.user.id)
-              .single();
+            const { data: profilerror } = await getFromProfiles(),
+              .select('*'),
+              .eq('id'session.user.id),
+              .single(),
             if (profile) {
-              const mappedUser = mapProfileToUser(session.user, profile);
-              setUser(mappedUser);
-              // Show welcome toast when user logs in
+              const mappedUser = mapProfileToUser(session.userprofile),
+              setUser(mappedUser),
+              // Show welcome toast when user logs in,
               if (event === 'SIGNED_IN') {
-                handleSignedIn(mappedUser)
-              }
+                handleSignedIn(mappedUser)}
             } else if (error) {
-              console.error("Error fetching user profile:", error);
-              setUser(null)
-            }
+              console.error("Error fetching user profile: "error),
+              setUser(null)}
           } catch (error) {
-            console.error("Error fetching user profile:", error);
-            setUser(null)
-          }
+            console.error("Error fetching user profile: "error),
+            setUser(null)}
         } else {
-          setUser(null);
-          // Show logout toast when user logs out
+          setUser(null),
+          // Show logout toast when user logs out,
           if (event === 'SIGNED_OUT') {
-            handleSignedOut()
-          }
+            handleSignedOut()}
         }
-        setIsLoading(false)
-      }
-    );
-    // Initial session check
+        setIsLoading(false)}
+    ),
+    // Initial session check,
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
-        setIsLoading(false)
-      }
-    });
+        setIsLoading(false)}
+    }),
     return () => {
-      subscription.unsubscribe()
-    }
-  }, [navigate]);
+      subscription.unsubscribe()};
+  }[navigate]),
   const authContextValue = {
     user;
     isLoading;
-    isAuthenticated: !!user
+    isAuthenticated: !!user;
     login;
     signup;
     logout;
@@ -106,12 +83,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
-    onboardingStep
-  }
+    onboardingStep};
   return (
-    <AuthContext.Provider value={authContextValue}>
+    <AuthContext.Provider value={authContextValue}>,
       {children}
-    </AuthContext.Provider>
-  )
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    </AuthContext.Provider>)};

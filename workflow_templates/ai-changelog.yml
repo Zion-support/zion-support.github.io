@@ -2,10 +2,14 @@ name: AI Changelog
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -14,19 +18,24 @@ concurrency:
 
 jobs:
 
+
   generate: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node
 
+                
           node-version: '20'
           cache: npm
       - name: Install dependencies
 
+                
       - name: Generate AI changelog
 
+                
       - name: Commit and push
 
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

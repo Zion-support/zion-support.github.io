@@ -15,9 +15,11 @@ function fixParsingErrors(filePath) {
     }
 
     // Fix missing colons in object properties
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:'),
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2:');
+
     // Fix property assignment syntax
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 ='),
+    content = content.replace(/(\w+)\s*=\s*(\w+)\s*=/g, '$1: $2 =');
+
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;

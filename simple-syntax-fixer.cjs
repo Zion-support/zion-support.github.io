@@ -3,67 +3,140 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrors(filePath) {
+console.log('🚀 Starting Simple Syntax Fixer');
+
+// Fix specific syntax issues
+function fixSimpleSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix common syntax errors
-    content = content.replace(/;\s*;/g, ';');
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/;\s*{/g, ' {');
-    content = content.replace(/;\s*}/g, ' }');
-    content = content.replace(/;\s*return/g, '; return');
-    content = content.replace(/;\s*export/g, '; export');
-    content = content.replace(/;\s*import/g, '; import');
-    
-    // Fix JSX syntax
-    content = content.replace(/;\s*<([^>]+)>/g, ' <$1>');
-    content = content.replace(/;\s*<\/[^>]+>/g, ' </>');
-    
-    // Fix function declarations
-    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'function $1() {');
-    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'export default function $1() {');
-    
-    // Fix object syntax
-    content = content.replace(/{\s*;\s*}/g, '{}');
-    content = content.replace(/{\s*;\s*([^}]+)\s*}/g, '{$1}');
-    
-    // Fix array syntax
-    content = content.replace(/\[\s*;\s*\]/g, '[]');
-    content = content.replace(/\[\s*;\s*([^\]]+)\s*\]/g, '[$1]');
-    
+    const originalContent = content;
+
+    // Fix HTML entity issues
+    content = content.replace(/&amp;apos;/g, "'");
+    content = content.replace(/&amp;quot;/g, '"');
+    content = content.replace(/&amp;lt;/g, '<');
+    content = content.replace(/&amp;gt;/g, '>');
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
+
     // Fix import statements
-    content = content.replace(/import\s+([^;]+);\s*;/g, 'import $1;');
-    
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import React from "react",/g,
+      'import React from "react";'
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+
     // Fix export statements
-    content = content.replace(/export\s+([^;]+);\s*;/g, 'export $1;');
-    
-    // Fix duplicate imports
-    const lines = content.split('\n');
-    const seenImports = new Set();
-    const filteredLines = [];
-    
-    for (const line of lines) {
-      if (line.trim().startsWith('import ')) {
-        if (!seenImports.has(line.trim())) {
-          seenImports.add(line.trim());
-          filteredLines.push(line);
-        }
-      } else {
-        filteredLines.push(line);
-      }
+    content = content.replace(
+      /export default function (\w+)\(\): JSX\.Element \{/g,
+      'export default function $1(): JSX.Element {'
+    );
+    content = content.replace(
+      /export interface (\w+) \{;/g,
+      'export interface $1 {'
+    );
+    content = content.replace(
+      /export const (\w+): (\w+)\[\] = \[;/g,
+      'export const $1: $2[] = [];'
+    );
+
+    // Fix JSX syntax
+    content = content.replace(/&lt;main&gt;/g, '<main>');
+    content = content.replace(/&lt;\/main&gt;/g, '</main>');
+    content = content.replace(/&lt;div&gt;/g, '<div>');
+    content = content.replace(/&lt;\/div&gt;/g, '</div>');
+
+    // Fix object syntax issues
+    content = content.replace(/\{\s*,/g, '{');
+    content = content.replace(/,\s*\}/g, '}');
+    content = content.replace(/,\s*,/g, ',');
+
+    // Fix array syntax issues
+    content = content.replace(/\[\s*,/g, '[');
+    content = content.replace(/,\s*\]/g, ']');
+
+    // Fix function parameter issues
+    content = content.replace(/\(\s*,/g, '(');
+    content = content.replace(/,\s*\)/g, ')');
+
+    // Fix semicolon issues
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/,\s*;/g, ';');
+
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+      'const $1 = () => {'
+    );
+    content = content.replace(/export default (\w+),/g, 'export default $1;');
+
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
+    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
+
+    // Fix JSX syntax
+    content = content.replace(/<(\w+)\s*,/g, '<$1');
+    content = content.replace(/,\s*>/g, '>');
+
+    // Fix performance API issues
+    if (content.includes('performance.')) {
+      content = content.replace(/performance\./g, 'window.performance.');
     }
-    
-    content = filteredLines.join('\n');
-    
-    // Only write if content changed
+
+    // Fix React hooks issues
+    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
+
+    // Fix console statements
+    content = content.replace(/console\.log\(/g, '// console.log(');
+
+    // Fix specific parsing errors
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+    content = content.replace(
+      /export default function App\(\): JSX\.Element \{/g,
+      'export default function App(): JSX.Element {'
+    );
+
+    // Fix vite config issues - handle the specific problematic line
+    if (filePath.includes('vite.config.ts')) {
+      // Split the problematic line and fix it
+      const lines = content.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        if (
+          lines[i].includes(
+            "import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs/plugin-react', import path from 'node: path', export default defineConfig({"
+          )
+        ) {
+          lines[i] =
+            `import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+
+export default defineConfig({`;
+        }
+      }
+      content = lines.join('\n');
+    }
+
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      fs.writeFileSync(filePath, content);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -71,27 +144,45 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
+    ) {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
   }
-  
-  return fixedCount;
+
+  return files;
 }
 
 // Main execution
-console.log('Starting syntax error fixing...');
-const fixedCount = processDirectory('/workspace/src');
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+try {
+  const files = getAllFiles('/workspace');
+  let fixedCount = 0;
+
+  console.log(`Found ${files.length} files to check`);
+
+  for (const file of files) {
+    if (fixSimpleSyntaxIssues(file)) {
+      fixedCount++;
+      console.log(`✅ Fixed: ${file}`);
+    }
+  }
+
+  console.log(`\n🎯 Fixed ${fixedCount} files`);
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
+}

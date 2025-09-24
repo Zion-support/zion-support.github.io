@@ -2,6 +2,7 @@ name: Autonomous Marketing & SEO
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
@@ -9,10 +10,12 @@ on:
 
 concurrency:
 
+
   group: automation-marketing-seo
   cancel-in-progress: true
 
 jobs:
+
 
   marketing-seo: - name: Checkout
            
@@ -20,12 +23,20 @@ jobs:
 
       - name: Setup Node
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
+
+                
+
       - name: Run marketing and SEO automations
+
+
+                
 
           APP_MARKETING_URL: https://ziontechgroup.com
           node automation/linkedin-marketing-factory.cjs || true
@@ -34,6 +45,8 @@ jobs:
 
       - name: Commit and push changes
 
+
+                
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A

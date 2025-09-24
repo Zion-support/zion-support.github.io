@@ -1,4 +1,4 @@
-</names>#!/usr/bin/env node
+#!/usr/bin/env node
 
 /**
  * PM2 Resurrect Hook
@@ -36,10 +36,10 @@ class PM2ResurrectHook {
       const processes = JSON.parse(output);
       
       return {
-        total: processes.length;
-        running: processes.filter(p => p.pm2_env.status === 'online').length;
-        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length;
-        errored: processes.filter(p => p.pm2_env.status === 'errored').length;
+        total: processes.length,
+        running: processes.filter(p => p.pm2_env.status === 'online').length,
+        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length,
+        errored: processes.filter(p => p.pm2_env.status === 'errored').length,
         processes: processes
       };
     } catch (error) {
@@ -223,10 +223,10 @@ class PM2ResurrectHook {
     this.log('Generating resurrection report...');
     
     const report = {
-      timestamp: new Date().toISOString();
-      status: await this.checkPM2Status();
-      ecosystemFiles: this.findEcosystemFiles().map(f => path.basename(f));
-      expectedProcesses: this.getExpectedProcesses(this.findEcosystemFiles());
+      timestamp: new Date().toISOString(),
+      status: await this.checkPM2Status(),
+      ecosystemFiles: this.findEcosystemFiles().map(f => path.basename(f)),
+      expectedProcesses: this.getExpectedProcesses(this.findEcosystemFiles()),
       recommendations: []
     };
 
@@ -292,6 +292,7 @@ async function main() {
       case 'help':
       default:
         console.log('PM2 Resurrect Hook');
+        console.log('==================');
         console.log('');
         console.log('Usage:');
         console.log('  node pm2-resurrect-hook.cjs resurrect      - Resurrect all processes');

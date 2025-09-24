@@ -2,17 +2,22 @@ name: Autonomous Quick Fixes
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
   contents: write
 
+
 concurrency:
+
+
 
   group: automation-quick-fixes
   cancel-in-progress: true
 
 jobs:
+
 
   quick-fixes: - name: Checkout
            
@@ -20,13 +25,20 @@ jobs:
 
       - name: Setup Node
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
+
+                
+
       - name: Run quick factories and fixers
 
+
+                
           node automation/build-rescue-factory.cjs || true
           node automation/security-remediation-factory.cjs || true
           node automation/sitemap-maintenance-factory.cjs || true
@@ -34,6 +46,8 @@ jobs:
 
       - name: Commit and push changes
 
+
+                
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A

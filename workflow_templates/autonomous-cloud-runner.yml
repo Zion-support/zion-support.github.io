@@ -2,10 +2,12 @@ name: Autonomous Cloud Runner (Fast)
 
 on:
 
+
   schedule: - cron: '0 * * * *'
   workflow_dispatch: {}
 
 concurrency:
+
 
   group: "autonomous-cloud-runner-${{ github.ref }}"
   cancel-in-progress: true
@@ -14,19 +16,27 @@ concurrency:
 
 jobs:
 
+
   run-fast-suite: - name: Checkout
            
           fetch-depth: 0
 
       - name: Setup Node.js
 
+
+                
           node-version: 20
           cache: npm
 
       - name: Install dependencies
 
+
+                
+
       - name: Clean git state
 
+
+                
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Clean up any existing rebase state
@@ -38,6 +48,8 @@ jobs:
 
       - name: Run Cloud Autonomous Orchestrator (fast)
 
+
+                
           # Set environment variables for safer git operations
           export GIT_AUTHOR_NAME="github-actions[bot]"
           export GIT_COMMITTER_NAME="github-actions[bot]"
@@ -49,6 +61,8 @@ jobs:
 
       - name: Upload logs
 
+
+          
           name: autonomous-cloud-logs
           path: automation/logs/**/*
           if-no-files-found: ignore

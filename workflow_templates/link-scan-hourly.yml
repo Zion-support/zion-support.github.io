@@ -2,6 +2,7 @@ name: Link Scan Hourly
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -12,20 +13,25 @@ on:
 
 jobs:
 
+
   link-scan: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node.js
 
+                
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
 
+                
       - name: Scan and fix links
 
+                
           npm run links:scan || true
       - name: Push changes (if any)
 
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

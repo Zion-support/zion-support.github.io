@@ -2,6 +2,7 @@ name: "CodeQL"
 
 on:
 
+
   push: branches: [ main ]
   pull_request:
 
@@ -9,12 +10,16 @@ on:
   schedule:
     - cron: '0 3 * * 1'
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
+
 
   analyze: name: Analyze
       actions: read
@@ -23,9 +28,11 @@ jobs:
         language: [ 'javascript' ]
       - name: Initialize CodeQL
 
+                
           languages: "${{ matrix.language }}"
       - name: Autobuild
 
+                
       - name: Perform CodeQL Analysis
 
                 

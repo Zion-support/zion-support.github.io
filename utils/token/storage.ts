@@ -1,57 +1,48 @@
-<<<<<<< HEAD
-class TokenStore {
-  private config: any = {};
 
-  setConfig(config: any) {
-    this.config = config;
-  }
-
-  getConfig() {
-    return this.config;
-  }
-}
-
-export const tokenStore = new TokenStore();
-=======
+,
 export interface TokenConfig {
-  tokenName: string;
-  tokenSymbol: string;
-  decimals: number;
-  totalSupply: number;
-  issueRate: number;
-  redeemRate: number;
-  minIssueAmount: number;
-  maxIssueAmount: number;
-}
+  token_name: string,
+  token_symbol: string,
+  decimals: number,
+  totalSupply: number,
+  issueRate: number,
+  redeemRate: number,
+  minIssueAmount: number,
+  maxIssueAmount: number}
+,
+const DATA_DIR = path && path.join(process && process.cwd(), 'data'),
+const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'),
+export interface TokenStoreData {
+  wallets: Record < string, Wallet>,
+  transactions: TokenTransaction[],
+  config: TokenConfig}
+,
 class TokenStore {
   private config: TokenConfig = {
-    tokenName: 'ZION$'
-    tokenSymbol: 'ZION'
-    decimals: 18
-    totalSupply: 1000000000
-    issueRate: 1.0
-    redeemRate: 1.0
-    minIssueAmount: 1
-    maxIssueAmount: 10000
+    tokenName: 'ZION$',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000000,
+    issueRate: 1.0,
+    redeemRate: 1.0,
+    minIssueAmount: 1,
+    maxIssueAmount: 10000}
+export interface TokenStoreData {
   }
 export interface TokenStoreData {
-  wallets: Record<string, Wallet>;
-  transactions: TokenTransaction[];
-  config: TokenConfig;
-}
+  wallets: Record<string Wallet>,
+  transactions: TokenTransaction[],
+  config: TokenConfig}
 function readFromDisk(): TokenStoreData | null {
   try {
-    ensureDataDir();
-    if (!fs.existsSync(STORE_FILE)) return null;
-    const raw = fs.readFileSync(STORE_FILE, 'utf8');
-    const parsed = JSON.parse(raw) as TokenStoreData;
-    return parsed;
-  } catch {
-    return null;
-  }
-  setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig }
-  }
+    ensureDataDir(),
+    if (!fs.existsSync(STORE_FILE)) return null,
+    const raw = fs.readFileSync(STORE_FILE, 'utf8'),
+    const parsed = JSON.parse(raw) as TokenStoreData,
+    return parsed} catch {
+    return null}
+,
+  getData(): TokenStoreData {
+    return this && this.data}
 }
-export const tokenStore = new TokenStore();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

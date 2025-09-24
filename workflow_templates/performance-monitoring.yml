@@ -2,6 +2,7 @@ name: Performance Monitoring
 
 on:
 
+
   workflow_dispatch: schedule:
     - cron: '0 0 * * *'  # Every 6 hours
   push:
@@ -13,28 +14,45 @@ on:
       - 'next.config.js'
       - 'tailwind.config.js'
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
 
+
   performance-audit: name: Performance Audit
     
       - name: Checkout code
 
+    
+                
+        
       - name: Setup Node.js
 
+        
+                
           'node-version': '18'
           cache: 'npm'
           
       - name: Install dependencies
 
+          
+                
+        
       - name: Build application
 
+        
+                
+        
       - name: Run Lighthouse CI
 
+        
+                
           urls: |
             http:
 
@@ -50,16 +68,22 @@ jobs:
           
       - name: Bundle analysis
 
+          
+                
           npm run build
           npx @next/bundle-analyzer .next/static/chunks/*.js --outDir ./bundle-analysis
           
       - name: Upload bundle analysis
 
+          
+                
           name: bundle-analysis
           path: ./bundle-analysis
           
       - name: Performance metrics report
 
+          
+                
           echo "## Performance Metrics Report" > performance-report.md
           echo " >> performance-report.md
           echo "Generated on: $(date)" >> performance-report.md
@@ -72,44 +96,64 @@ jobs:
           
       - name: Upload performance report
 
+          
+                
           name: performance-report
           path: performance-report.md
 
   bundle-optimization:
 
+
     name: Bundle Optimization
     
       - name: Checkout code
 
+    
+                
+        
       - name: Setup Node.js
 
+        
+                
           'node-version': '18'
           cache: 'npm'
           
       - name: Install dependencies
 
+          
+                
+        
       - name: Analyze bundle
 
+        
+                
           npm run build
           npx webpack-bundle-analyzer .next/static/chunks/*.js --mode static --report
           
       - name: Upload bundle report
 
+          
+                
           name: webpack-bundle-report
           path: webpack-bundle-analyzer-report.html
 
   performance-alerts:
 
+
     name: Performance Alerts
     
       - name: Check performance thresholds
 
+    
+                
           echo "Checking performance thresholds..."
           # Add logic to check if performance metrics are below thresholds
           # and send alerts if needed
           
       - name: Performance summary
 
+          
+                
           echo "## Performance Summary" >> summary.md
           echo " >> summary.md
           echo "All performance checks completed." >> summary.md
@@ -117,5 +161,7 @@ jobs:
           
       - name: Upload summary
 
+          
+                
           name: performance-summary
           path: summary.md

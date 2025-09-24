@@ -4,12 +4,12 @@
 # This script provides immediate steps to start recovery
 
 echo "🚨 EMERGENCY RECOVERY: GitHub Actions Workflows"
-echo "echo "======"
+echo "================================================"
 echo ""
 
 # Check current status
 echo "📊 Current Status Check:"
-echo "echo "==="
+echo "========================"
 if [ -f "workflow-health-report.json" ]; then
     TOTAL=$(grep -o '"total_workflows": [0-9]*' workflow-health-report.json | grep -o '[0-9]*')
     BROKEN=$(grep -o '"broken_workflows": [0-9]*' workflow-health-report.json | grep -o '[0-9]*')
@@ -25,7 +25,7 @@ fi
 
 echo ""
 echo "🛠️  IMMEDIATE ACTION REQUIRED"
-echo "echo "="
+echo "============================="
 echo ""
 
 # Check if auto-heal system is ready
@@ -43,7 +43,7 @@ fi
 
 echo ""
 echo "🚀 RECOVERY STEPS"
-echo "echo "==="
+echo "================="
 echo ""
 
 echo "1. 🚨 EMERGENCY STOP (Next 5 minutes):"
@@ -79,7 +79,7 @@ echo ""
 
 echo ""
 echo "🔧 QUICK FIX TEMPLATE"
-echo "echo ""
+echo "====================="
 echo ""
 
 cat << 'EOF'
@@ -131,7 +131,7 @@ EOF
 
 echo ""
 echo "📞 GETTING HELP"
-echo "echo "="
+echo "==============="
 echo ""
 
 echo "• Run auto-heal engine: python3 workflow-auto-heal-engine.py"
@@ -141,7 +141,7 @@ echo "• Use validation script: ./validate-workflows.sh"
 echo ""
 
 echo "⚠️  CRITICAL REMINDER"
-echo "echo "======"
+echo "===================="
 echo "Your GitHub Actions system is 100% broken."
 echo "Immediate action is required to restore functionality."
 echo "Start with the emergency stop, then begin systematic recovery."

@@ -2,11 +2,15 @@ name: Actionlint
 
 on:
 
+
   workflow_dispatch: {}
   schedule:
     - cron: '0 0 * * *'
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -16,20 +20,29 @@ concurrency:
 
 jobs:
 
+
   main: name: Main Job
       - name: Checkout repository
 
+                
           fetch-depth: 0
 
       - name: Setup Node.js
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
+
+                
+
       - name: Run actionlint
 
+
+                
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           reporter: github-check
           fail_level: error
@@ -37,5 +50,7 @@ jobs:
 
       - name: Check for actionlint issues
 
+
+                
           echo "Actionlint check completed"
           echo "Any issues found will be reported above"

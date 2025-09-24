@@ -32,9 +32,44 @@ class ComprehensiveAutomationRunner {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       this.results.push({ script: scriptName, success: false, error: error.message });
       return { success: false, error: error.message };
+console.log('🚀 Starting Comprehensive Automation Runner...');
+
+class ComprehensiveAutomationRunner {
+  constructor() {
+    this.reportsDir = path.join(process.cwd(), 'automation-reports');
+    this.logsDir = path.join(process.cwd(), 'logs');
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    [this.reportsDir, this.logsDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async runAutomationScript(scriptName, scriptPath) {
+    try {
+      this.log(`🤖 Running ${scriptName}...`);
+      execSync(`node ${scriptPath}`, { stdio: 'inherit' });
+      this.log(`✅ ${scriptName} completed successfully`);
+      return { success: true, script: scriptName };
+    } catch (error) {
+      this.log(`❌ ${scriptName} failed: ${error.message}`);
+      return { success: false, script: scriptName, error: error.message };
     }
   }
 
   async runAllAutomations() {
-this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

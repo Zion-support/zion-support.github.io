@@ -2,10 +2,12 @@ name: Workflow Supervisor
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
 concurrency:
+
 
   group: "workflow-supervisor-${{ github.ref }}"
   cancel-in-progress: true
@@ -14,6 +16,7 @@ concurrency:
   issues: write
 
 jobs:
+
 
   supervise: - name: Supervise critical workflows
            

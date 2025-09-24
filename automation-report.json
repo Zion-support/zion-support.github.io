@@ -1,41 +1,20 @@
 {
-  "timestamp": "2025-09-06T04:52:47.143Z",
-  "duration": "36s",
-  "results": {
-    "tests": {
-      "passed": 0,
-      "failed": 2,
-      "errors": [
-        "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n",
-        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
-      ]
-    },
-    "builds": {
-      "success": false,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n"
-      ]
-    },
-    "linting": {
-      "success": false,
-      "errors": [
-        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: eslint: not found\n"
-      ]
-    },
-    "security": {
-      "issues": [],
-      "fixed": 0
-    },
-    "improvements": [
-      "Created performance monitoring script"
-    ]
-  },
+  "timestamp": "2025-07-25T07:14:20.080Z",
+  "duration": -1753427589075,
   "summary": {
-    "testsPassed": 0,
-    "testsFailed": 2,
-    "buildSuccess": false,
-    "lintingSuccess": false,
-    "securityIssuesFixed": 0,
-    "improvementsCreated": 1
-  }
+    "totalTasks": 1,
+    "successfulTasks": 1,
+    "failedTasks": 0,
+    "successRate": 100
+  },
+  "tasks": {
+    "SecurityScanner": {
+      "success": true,
+      "stdout": "[INFO] 🔒 Starting security scan...\n[INFO] 📦 Scanning npm vulnerabilities...\n[INFO] 📦 Found 0 npm vulnerabilities\n[INFO] 🔍 Scanning code for security issues...\n[INFO] 🔍 Found 4 code security issues\n[INFO] 🔐 Scanning for secrets in files...\n[INFO] 🔐 Found 5 potential secrets\n[INFO] 📋 Scanning dependencies...\n[INFO] 📋 Found 57 dependency issues\n[INFO] 📄 Security report saved to /Users/klebergarciaalcatrao/Documents/GitHub/Zion.App.Clone/security-report.json\n[INFO] 📋 Security recommendations:\n[INFO] 📄 Security scan report saved to /Users/klebergarciaalcatrao/Documents/GitHub/Zion.App.Clone/security-scan-report.json\n✅ Security scan completed\n",
+      "stderr": "[WARN] ⚠️ Found 9 high-severity security issues\n[WARN] 🚨 Handling 9 high-severity issues\n[WARN] 🚨 Security alert would be sent here\n",
+      "exitCode": 0,
+      "duration": 71003
+    }
+  },
+  "recommendations": []
 }

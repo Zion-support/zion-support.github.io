@@ -22,6 +22,6 @@ sed -i 's/export default function ContactPage() {/export default function Contac
 
 # Fix cookies.tsx - remove merge conflict markers
 echo "Fixing cookies.tsx..."
-sed -i '/
+sed -i '/>>>>>>> cursor\/expand-services-advertise-and-build-project-9473/d' pages/cookies.tsx
 
 echo "All remaining issues fixed!"

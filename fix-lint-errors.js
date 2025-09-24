@@ -1,258 +1,96 @@
-// Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item)) {'}; files = files.concat(findFiles(fullPath, extensions)) }} else if (extensions.some(ext = > item.endsWith(ext))) {}; files.push(fullPath) }}};// Function to fix common syntax errors;
-function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/g, (match, p1) = > {}; if (p1.trim() && !p1.trim().endsWith() && !p1.trim().endsWith() && !p1.trim().endsWith('{_') && !p1.trim().endsWith('}')) {_'}; return p1 + ',\n }}
-// Function to fix undefined variables (add basic, imports);
-function fixUndefinedVariables(content, filePath) {}; if (content.includes('React') && !content.includes("import React")) {_"}; if (filePath.endsWith('.jsx') |filePath.endsWith('.tsx')) {_'}; fixed = "import React from 'react',\n" + fixed," }}; // Common Next.js patterns; if (content.includes('useRouter') && !content.includes("import {useRouter}")) {_"}; fixed = "import {useRouter} from 'next/router',\n" + fixed," }; if (content.includes('useState') && !content.includes("import {useState}")) {_"}; fixed = "import {useState} from 'react',\n" + fixed," }; if (content.includes('useEffect') && !content.includes("import {useEffect}")) {_"}; fixed = "import {useEffect} from 'react',\n" + fixed," }}
-#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } ; main().catch(console.error)
-#!/usr/bin/env node;
-#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8");  fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; } ; main().catch(console.error)
-#!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';
-// Function to recursively find all files;
-function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {'}
-  let files = [];
-  const items = fs.readdirSync(dir);
-  for (const item of, items) {}
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      // Skip node_modules, .git, and other common directories}
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {'}
-        files = files.concat(findFiles(fullPath, extensions));
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {}
-      files.push(fullPath);
-    }
-  }
-  return files;
-}
-// Function to fix merge conflict markers;
-function fixMergeConflicts(content) {
-  // Remove merge conflict markers and keep the HEAD version (first, part)}
-  return content
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/    .replace(/^$/gm, '')'
-    .replace(/^}
-// Function to fix common syntax errors;
-function fixSyntaxErrors(content) {}
-  let fixed = content;
-  // Fix missing semicolons at end of lines (basic, cases)
-  fixed = fixed.replace(/([^;{}])\n/g, (match, p1) => {}
-    if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith(',') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {'}
-      return p1 + ';\n';'
-    }
-    return match;
-  });
-  // Fix missing commas in object literals;
-  fixed = fixed.replace(/(\w+):\s*([^,}\n]+)(\n\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1: $2,$3');'
-  // Fix missing commas in arrays;
-  fixed = fixed.replace(/([^,}\]])(\n\s*[^,}\]]+)/g, (match, p1, p2) => {}
-    if (p1.trim() && !p1.trim().endsWith(',') && !p1.trim().endsWith('[') && !p1.trim().endsWith('{')) {'}
-      return p1 + ',' + p2;'
-    }
-    return match;
-  });
-  return fixed;
-}
-// Function to fix undefined variables (add basic, imports)
-function fixUndefinedVariables(content, filePath) {}
-  let fixed = content;
-  // Common _React patterns;
-  if (content.includes('_React') && !content.includes("import _React")) {"}
-    if (filePath.endsWith('.jsx') |filePath.endsWith('.tsx')) {'}
-      fixed = "import _React from 'react';\n" + fixed;"
-    }
-  }
-  // Common Next.js patterns;
-  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"}
-    fixed = "import { useRouter } from 'next/router';\n" + fixed;"
-  }
-  if (content.includes('useState') && !content.includes("import { useState }")) {"}
-    fixed = "import { useState } from 'react';\n" + fixed;"
-  }
-  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"}
-    fixed = "import { useEffect } from 'react';\n" + fixed;"
-  }
-  return fixed;
-}
-// Function to remove unused variables;
-function removeUnusedVariables(content) {_; // Remove common unused variable patterns}}
-// Main function;
-function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file, content, 'utf8'),' fixedCount++ _ }} catch (error) {}; errorCount++ _ }}; try {}; execSync('npm run lint', {stdio: 'pipe'}),' _,' } catch (error) {}; _,' }}; return match.replace(imports, cleanImports)}; return match; fixed = fixed.replace(/import\s*{_\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) = > {_; // Check if imports have proper commas; if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports, cleanImports)}; ); // Fix missing semicolons after variable declarations; fixed = fixed.replace(/(const|let|var)\s+\w+\s* = \s*[^]+$/gm, match = > {_; if (!match.endsWith(", _")) {return match + ", _"}; fixed + = "\n}".repeat(openBraces - closeBraces)}; return fixed}
-// Main function;
-async function $1() {_; // Get all TypeScript/JavaScript files; const files = await glob("src/**/*.{ts, tsx, js, jsx}", {_; "ignore": ["nodemodules/**"]});  let fixedCount = 0; let errorCount = 0; for (const file of files) {_; try {const content = fs.readFileSync(file, _"utf8"); const fixed = fixLintErrors(content); if (content ! = = fixed) {; fs.writeFileSync(file, fixed, _"utf8");  fixedCount++}} catch (error) {_;  errorCount++}}
- }
-function fixUndefinedVariables(content, filePath) {}
-  if (content.includes('React') && !content.includes(&quot;import React&quot;)) {&quot}
-    if (filePath.endsWith('.jsx') |filePath.endsWith('.tsx')) {'}
-      fixed = "import _React from 'react',\n" + fixed,";
-    }
-  }
-  // Common Next.js patterns;
-  if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"}
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
-}
-  if (content.includes('useState') && !content.includes("import { useState }")) {"}
-    fixed = "import { useState } from 'react',\n" + fixed,";
-}
-  if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"}
-    fixed = "import { useEffect } from 'react',\n" + fixed,";
-}
-// Function to remove unused variables;
-function removeUnusedVariables(content) {// Remove common unused variable patterns}
-}
-// Main function;
-function main() {}
-      if (content !== originalContent) {}
-        fs.writeFileSync(file, content, 'utf8'),';
-        fixedCount++;
-        _console.log(`✅ Fixe:d:${file}`);
-      }
-    } catch (error) {}
-      errorCount++;
-      _console.error(`❌ Error fixing ${file} `, error.message);
-}
-}
-  try {}
-    execSync('npm run lint', { stdi:o:'pipe' }),';
-    _console.log('✅ All lint errors fixed!'),';
-  } catch (error) {}
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),';
-}
-}
-        return match.replace(imports, cleanImports)}
-      return match;
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {// Check if imports have proper commas;
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
-  const cleanImports = imports.trim().split(/\s+/).join();
-      return match.replace(imports, cleanImports)}
-  );
-  // Fix missing semicolons after variable declarations;
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {if (!match.endsWith(",")) {;
-  return match + ","}
-  fixed += "\n}".repeat(openBraces - closeBraces)}
-  return fixed}
-// Main function;
-async function $1() {// Get all TypeScript/JavaScript files;
-  const files = await glob("src/**/*.{ts,tsx,js,jsx}", {"ignore":["node_modules/**"]});
-  console.log(""Found ${files.length} files to process..."");
-  let fixedCount = 0;
-  let errorCount = 0;
-  for (const file of files) {try {;
-  const content = fs.readFileSync(file, "utf8");
-      const fixed = fixLintErrors(content);
-      if (content !== fixed) {;
-  fs.writeFileSync(file, fixed, "utf8");
-        console.log("""Fixed":${file}"");
-        fixedCount++}
-    } catch (error) {console.error(`Error processing ${file} `, error.message);
-      errorCount++}
-  }
-;
-  console.log(""\"nCompleted":${fixedCount} files fixed, ${errorCount} errors"")};function main() {}
-      if (content !== originalContent) {}
-        fs.writeFileSync(file, content, 'utf8'),'
-        fixedCount++
-        _console.log(`✅ Fixed: ${file}`)
-      }
-    } catch (error) {}
-      errorCount++
-      _console.error(`❌ Error fixing ${file}:`, error.message)
-}
-};  try {}
-    execSync('npm run lint', { stdio: 'pipe' }),'
-    _console.log('✅ All lint errors fixed!'),'
-  } catch (error) {}
-    _console.log('⚠️  Some lint errors remain. Check the output above.'),'
-}
-}
-return match.replace(imports, cleanImports)}
-#!/usr/bin/env node;
-// Function to fix common lint errors;
-function fixLintErrors(content) {
-  let fixed = content;
-  // Fix missing semicolons after imports;
-  fixed = fixed.replace(/import\s+[^]+$/gm, match => {
-  if (!match.endsWith(";")) {
-  return match + ";"}
-    return match});
-  // Fix malformed imports with missing commas;
-  fixed = fixed.replace(;
-    /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm
-    (match, imports) => {
-  // Check if imports have proper commas;
-      if (;
-        imports &&;
-        !imports.includes(",") &&;
-        imports.trim().split(/\s+/).length > 1;
-      ) {
-  const cleanImports = imports.trim().split(/\s+/).join(", ");
-        return match.replace(imports, cleanImports)}
-      return match;
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {// Check if imports have proper commas;
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
-  const cleanImports = imports.trim().split(/\s+/).join();
-      return match.replace(imports, cleanImports)}
-  );
-  // Fix missing semicolons after variable declarations;
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {if (!match.endsWith(",")) {;
-  return match + ","}
-  fixed += "\n}".repeat(openBraces - closeBraces)}
-  return fixed}
-// Main function;
-async function $1() {// Get all TypeScript/JavaScript files;
-  const files = await glob("src/**/*.{ts, tsx, js, jsx}", {_;
-  "ignore": ["nodemodules/**"]});
-  let fixedCount = 0;
-  let errorCount = 0;
-  for (const file of files) {_;
-  try {const content = fs.readFileSync(file, _"utf8");
-      const fixed = fixLintErrors(content);
-      if (content !== fixed) {;
-  fs.writeFileSync(file, fixed, "utf8");
-        console.log("""Fixed": ${file}"");  fs.writeFileSync(file, fixed, _"utf8");
-        fixedCount++}
-    } catch (error) {_;
-      errorCount++}
-}
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
-  // console.log(""\"nCompleted&quot;: ${fixedCount} files fixed, ${errorCount} errors"&quot;)}
-  }
-}
-        return match.replace(imports, cleanImports)}
-      return match
-  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {
-  // Check if imports have proper commas
-    if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
-  const cleanImports = imports.trim().split(/\s+/).join()
-      return match.replace(imports, cleanImports)}
-  )
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm, match => {
-  if (!match.endsWith(",")) {
-  return match + ","}
-  fixed += "\n}".repeat(openBraces - closeBraces)}
-  return fixed}
-// Main function
-async function $1() {
-  // Get all TypeScript/JavaScript files
-  const files = await glob("src/**/*.{ts,tsx,js,jsx}", {
-  "ignore": ["node_modules/**"]})
-  console.log(""Found ${files.length} files to process..."")
-  let fixedCount = 0
-  let errorCount = 0
-  for (const file of files) {
+import React from 'react';
+#!/usr/bin/env node,
+import { fileURLToPath } from 'url',
+const __filename = fileURLToPath(import.meta.url),
+const __dirname = path.dirname(__filename),
+// Function to fix common linting issues in a file,
+function fixLintIssues(filePath) {
   try {
-  const content = fs.readFileSync(file, "utf8")
-      const fixed = fixLintErrors(content)
-      if (content !== fixed) {
-  fs.writeFileSync(file, fixed, "utf8")
-        console.log("""Fixed": ${file}"")
-        fixedCount++}
-    } catch (error) {
-  console.error(`Error processing ${file}:`, error.message)
-      errorCount++}
+    let content = fs.readFileSync(filePath, 'utf8'),
+    let modified = false,
+    // Remove unused imports (basic patterns),
+    const unusedImportPatterns = [
+      /import\s*{\s*React\s*}\s*from\s*['"]react['"],\s*\n/g;
+      /import\s*React\s*from\s*['"]react['"],\s*\n/g;
+      /import\s*{\s*NextPage\s*}\s*from\s*['"]next['"],\s*\n/g;
+      /import\s*{\s*Head\s*}\s*from\s*['"]next\/head['"],\s*\n/g;
+      /import\s*{\s*Link\s*}\s*from\s*['"]next\/link['"],\s*\n/g;
+      /import\s*{\s*useRouter\s*}\s*from\s*['"]next\/router['"],\s*\n/g;
+      /import\s*{\s*dynamic\s*}\s*from\s*['"]next\/dynamic['"],\s*\n/g;
+      /import\s*{\s*GetStaticProps\s*}\s*from\s*['"]next['"],\s*\n/g;
+      /import\s*fs\s*from\s*['"]fs['"],\s*\n/g;
+      /import\s*path\s*from\s*['"]path['"],\s*\n/g;
+    ],
+    for (const pattern of unusedImportPatterns) {
+      if (pattern.test(content)) {
+        content = content.replace(pattern, ''),
+        modified = true}
+    }
+,
+    // Fix unused variable declarations,
+    const unusedVarPatterns = [
+      /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
+      /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
+      /var\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
+    ],
+    for (const pattern of unusedVarPatterns) {
+      content = content.replace(pattern, '// Removed unused variable'),
+      modified = true}
+,
+    // Fix common syntax issues,
+    content = content,
+      .replace(/,\s*)/g, ')') // Remove trailing commas before closing parens,
+      .replace(/,\s*}/g, '}') // Remove trailing commas before closing braces,
+      .replace(/,\s*,/g, ',') // Remove double commas,
+      .replace(/\s+,\s+/g, ', ') // Normalize comma spacing,
+      .replace(/=\s*{([^}]*)\s*}/g, '={$1}') // Fix object syntax,
+      .replace(/<([^>]*)\s*>/g, '<$1>') // Fix JSX syntax,
+      .replace(/export\s+default\s+function/g, 'export default function'),
+      .replace(/import\s+{\s*}/g, 'import {}'),
+      .replace(/from\s+['"]\s*['"]/g, 'from ""'),
+      .replace(/\n\s*\n\s*\n/g, '\n\n'), // Remove excessive newlines,
+    // Fix octal literal issues,
+    content = content.replace(/0([0-7]+)/g, '0o$1'),
+    // Fix JSX closing tag issues,
+    content = content.replace(/<(\w+)([^>]*)\s*\/>/g, '<$1$2 />'),
+    // Remove unused destructured imports,
+    const destructurePattern =,
+      /import\s*{\s*([^}]*)\s*}\s*from\s*['"][^'"]+['"],?\s*\n/g,
+    content = content.replace(destructurePattern, (match, imports) => {
+      // This is a basic attempt - in practice, you'd need more sophisticated parsing,
+      return match}),
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8'),
+      return true}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
+,
+  return false}
+,
+// Function to recursively process files,
+function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+  const items = fs.readdirSync(dir),
+  let processedCount = 0,
+  for (const item of items) {
+    const fullPath = path.join(dir, item),
+    const stat = fs.statSync(fullPath),
+    if (stat.isDirectory()) {
+      // Skip node_modules, .next, and other build directories,
+      if (
+        !['node_modules', '.next', 'out', 'dist', 'build', '.git'].includes(
+          item)) {
+        processedCount += processFiles(fullPath, extensions)}
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      if (fixLintIssues(fullPath)) {
+        processedCount++}
+    }
   }
-console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")}
-#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
-#!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) |[]).length; const closeBraces = (fixed.match(/\}/g) |[]).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
+,
+  return processedCount}
+,
+// Main execution,
+// // console.log('Starting lint error cleanup...'),
+const workspaceDir = __dirname,
+const processedCount = processFiles(workspaceDir),
+// // console.log(`Processed ${processedCount} files for lint error cleanup`),
+// // console.log('Lint error cleanup completed!'),

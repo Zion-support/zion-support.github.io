@@ -1,68 +1,38 @@
-require("@testing-library/jest-dom");
-// Mock Next.js router
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-      route: "/"
-      pathname: "/"
-      query: {}
-      asPath: "/"
-      push: jest.fn()
-      pop: jest.fn()
-      reload: jest.fn()
-      back: jest.fn()
-      prefetch: jest.fn().mockResolvedValue(undefined)
-      beforePopState: jest.fn()
-      events: {
-        on: jest.fn()
-        off: jest.fn()
-        emit: jest.fn()
-      }
-      isFallback: false
-    }
-  }
-}));
-// Mock Next.js Image component
-jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
-  }
-});
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  return function MockLink({ children, href, ...props }) {
-    return <a href={href} {...props}>{children}</a>;
-  }
-});
-// Mock window.matchMedia
+// Ensure jest-dom matchers are available when tests run
+try {
+  require('@testing-library/jest-dom');
+} catch (error) {
+  // optional in minimal runs
+}
+
+// Mock Next.js Image to a simple function component without JSX here
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: function MockImage() {
+    return null;
+  }}));
+
+// matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
-  writable: true
-  value: jest.fn().mockImplementation(query => ({
-    matches: false
-    media: query
-    onchange: null
-    addListener: jest.fn()
-    removeListener: jest.fn()
-    addEventListener: jest.fn()
-    removeEventListener: jest.fn()
-    dispatchEvent: jest.fn()
-  }))
-});
-// Mock IntersectionObserver
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn()}))});
+
+// Observers
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// Mock ResizeObserver
+};
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
-// Global test setup
-beforeEach(() => {
-  jest.clearAllMocks();
-});
+};

@@ -2,10 +2,14 @@ name: Autonomous Cloud Automations
 
 on:
 
+
   schedule: - cron: '0 0 * * *' # hourly
   workflow_dispatch: {}
 
+
 concurrency:
+
+
 
   group: "github.workflow-${{ github.ref }}"
   cancel-in-progress: true
@@ -14,17 +18,23 @@ concurrency:
 
 jobs:
 
+
   run-automations: - name: Checkout
            
           persist-credentials: true
       - name: Setup Node
 
+                
           node-version: '20'
           cache: 'npm'
       - name: Install dependencies
 
+                
+      
       - name: Clean git state
 
+      
+                
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Clean up any existing rebase state
@@ -36,12 +46,17 @@ jobs:
       
       - name: Generate sitemap
 
+      
+                
       - name: Run AI Trends Radar
 
+                
       - name: Run SEO Audit
 
+                
       - name: Commit and push changes
 
+                
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then

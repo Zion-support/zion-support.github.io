@@ -2,6 +2,7 @@ name: Autonomous Dependency Upgrades
 
 on:
 
+
   schedule: - cron: '0 3 * * *'
   workflow_dispatch: {}
 
@@ -10,10 +11,12 @@ on:
 
 concurrency:
 
+
   group: automation-deps-upgrade
   cancel-in-progress: false
 
 jobs:
+
 
   deps-upgrade: - name: Checkout
            
@@ -21,21 +24,33 @@ jobs:
 
       - name: Setup Node
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
+
+                
+
       - name: Create branch
 
+
+                
           BR="auto/deps-upgrade-$(date +%s)"
           git checkout -b "$BR"
           echo "branch=$BR" >> $GITHUB_OUTPUT
 
       - name: Run auto-upgrade
 
+
+                
+
       - name: Commit changes
 
+
+                
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A
@@ -50,6 +65,8 @@ jobs:
 
       - name: Open PR
 
+
+                
           script: |
             const branch = `${{ steps.branch.outputs.branch }}`;"
             const { data: pr } = await github.rest.pulls.create({ owner: context.repo.owner, repo: context.repo.repo, title:
@@ -58,6 +75,8 @@ jobs:
 
       - name: Auto-merge PR if build ok
 
+
+          
           script: |
             const prNumber = Number(`$${'{'}{ steps.pr.outputs.number }}`);
             if (!prNumber) { core.info('No PR number found.'); return; }

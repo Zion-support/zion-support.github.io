@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zion.app/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-

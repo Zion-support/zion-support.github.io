@@ -28,7 +28,7 @@ class ComprehensiveAutomationSuite {
         errors: [],
         warnings: [],
       },
-      accessibilityImprovement: {
+      accessibilityImprovements: {
         success: false,
         duration: 0,
         errors: [],
@@ -42,46 +42,6 @@ class ComprehensiveAutomationSuite {
       },
       deployment: { success: false, duration: 0, errors: [], warnings: [] },
     };
-    this.path = require('path');
-  }
-
-  /**
-   * Comprehensive Automation Suite
-   * Fixes issues and runs all automation tasks
-   */
-class ComprehensiveAutomationSuite {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.results = {;
-      dependencyFi:x:{ succes:s:false, duratio:n:0, error:s:[], warning:s:[] },;
-      codeQualit:y:{ succes:s:false, duratio:n:0, error:s:[], warning:s:[] },;
-      securityAudi:t:{ succes:s:false, duratio:n:0, error:s:[], warning:s:[] },;
-      buildOptimizatio:n:{;
-        succes:s:false,;
-        duratio:n:0,;
-        error:s:[],;
-        warning:s:[],;
-      },;
-      seoOptimizatio:n:{;
-        succes:s:false,;
-        duratio:n:0,;
-        error:s:[],;
-        warning:s:[],;
-      },;
-      accessibilityImprovement:s:{;
-        succes:s:false,;
-        duratio:n:0,;
-        error:s:[],;
-        warning:s:[],;
-      },;
-      performanceOptimizatio:n:{;
-        succes:s:false,;
-        duratio:n:0,;
-        error:s:[],;
-        warning:s:[],;
-      },;
-      deploymen:t:{ succes:s:false, duratio:n:0, error:s:[], warning:s:[] },;    };
   }
 
   log(message, type = 'INFO') {
@@ -150,17 +110,13 @@ class ComprehensiveAutomationSuite {;
       this.results.dependencyFix = {
         success: installResult.success && eslintResult.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [
+          ...(installResult.success ? [] : [installResult.error]),
+          ...(eslintResult.success ? [] : [eslintResult.error]),
+        ],
         warnings: [],
       };
-
-      if (installResult.success) {
-        this.log('✅ Dependencies fixed successfully');
-      } else {
-        this.log('❌ Failed to fix dependencies', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error fixing dependencies: ${error.message}`, 'ERROR');
       this.results.dependencyFix = {
         success: false,
         duration: Date.now() - startTime,
@@ -175,20 +131,20 @@ class ComprehensiveAutomationSuite {;
     this.log('\n🔍 IMPROVING CODE QUALITY');
 
     try {
-      // Run TypeScript type checking
+      // Run TypeScript check
       const typeCheckResult = await this.runCommand(
         'npx tsc --noEmit --skipLibCheck',
-        'TypeScript Type Check'
+        'TypeScript Check'
       );
 
-      // Run ESLint
+      // Run ESLint with basic rules
       const lintResult = await this.runCommand(
         'npx eslint . --max-warnings 1000',
         'ESLint Check'
       );
 
-      // Fix ESLint issues
-      const lintFixResult = await this.runCommand(
+      // Fix common issues
+      const fixResult = await this.runCommand(
         'npx eslint . --fix --max-warnings 1000',
         'ESLint Fix'
       );
@@ -196,17 +152,13 @@ class ComprehensiveAutomationSuite {;
       this.results.codeQuality = {
         success: typeCheckResult.success && lintResult.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [
+          ...(typeCheckResult.success ? [] : [typeCheckResult.error]),
+          ...(lintResult.success ? [] : [lintResult.error]),
+        ],
         warnings: [],
       };
-
-      if (this.results.codeQuality.success) {
-        this.log('✅ Code quality improved successfully');
-      } else {
-        this.log('❌ Failed to improve code quality', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error improving code quality: ${error.message}`, 'ERROR');
       this.results.codeQuality = {
         success: false,
         duration: Date.now() - startTime,
@@ -224,29 +176,22 @@ class ComprehensiveAutomationSuite {;
       // Run npm audit
       const auditResult = await this.runCommand(
         'npm audit --audit-level moderate',
-        'NPM Security Audit'
+        'Security Audit'
       );
 
-      // Get detailed audit info
-      const auditJsonResult = await this.runCommand(
+      // Check for vulnerabilities
+      const vulnerabilityCheck = await this.runCommand(
         'npm audit --json',
-        'NPM Audit JSON'
+        'Vulnerability Check'
       );
 
       this.results.securityAudit = {
         success: auditResult.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [...(auditResult.success ? [] : [auditResult.error])],
         warnings: [],
       };
-
-      if (auditResult.success) {
-        this.log('✅ Security audit completed successfully');
-      } else {
-        this.log('❌ Security audit failed', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error performing security audit: ${error.message}`, 'ERROR');
       this.results.securityAudit = {
         success: false,
         duration: Date.now() - startTime,
@@ -261,35 +206,31 @@ class ComprehensiveAutomationSuite {;
     this.log('\n🏗️ OPTIMIZING BUILD');
 
     try {
-      // Clean build directory
+      // Clean build
       const cleanBuild = await this.runCommand('npm run clean', 'Clean Build');
 
-      // Build the application
-      const buildResult = await this.runCommand(
+      // Production build
+      const productionBuild = await this.runCommand(
         'npm run build',
-        'Build Application'
+        'Production Build'
       );
 
       // Check build output
       const buildCheck = await this.runCommand(
         'ls -la .next',
-        'Check Build Output'
+        'Build Output Check'
       );
 
       this.results.buildOptimization = {
-        success: buildResult.success,
+        success: cleanBuild.success && productionBuild.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [
+          ...(cleanBuild.success ? [] : [cleanBuild.error]),
+          ...(productionBuild.success ? [] : [productionBuild.error]),
+        ],
         warnings: [],
       };
-
-      if (buildResult.success) {
-        this.log('✅ Build optimization completed successfully');
-      } else {
-        this.log('❌ Build optimization failed', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error optimizing build: ${error.message}`, 'ERROR');
       this.results.buildOptimization = {
         success: false,
         duration: Date.now() - startTime,
@@ -317,19 +258,15 @@ class ComprehensiveAutomationSuite {;
       );
 
       this.results.seoOptimization = {
-        success: sitemapResult.success,
+        success: sitemapResult.success && searchIndexResult.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [
+          ...(sitemapResult.success ? [] : [sitemapResult.error]),
+          ...(searchIndexResult.success ? [] : [searchIndexResult.error]),
+        ],
         warnings: [],
       };
-
-      if (sitemapResult.success) {
-        this.log('✅ SEO optimization completed successfully');
-      } else {
-        this.log('❌ SEO optimization failed', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error optimizing SEO: ${error.message}`, 'ERROR');
       this.results.seoOptimization = {
         success: false,
         duration: Date.now() - startTime,
@@ -344,27 +281,28 @@ class ComprehensiveAutomationSuite {;
     this.log('\n♿ IMPROVING ACCESSIBILITY');
 
     try {
-      // Run accessibility checks
-      const a11yResult = await this.runCommand(
-        'npx eslint . --ext .ts,.tsx,.js,.jsx --config eslint.config.js',
+      // Run accessibility checks with basic rules
+      const accessibilityCheck = await this.runCommand(
+        'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
         'Accessibility Check'
       );
 
-      this.results.accessibilityImprovement = {
-        success: a11yResult.success,
+      // Check for keyboard navigation
+      const keyboardCheck = await this.runCommand(
+        'npx eslint . --rule "jsx-a11y/tabindex-no-positive: warn"',
+        'Keyboard Navigation Check'
+      );
+
+      this.results.accessibilityImprovements = {
+        success: accessibilityCheck.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [
+          ...(accessibilityCheck.success ? [] : [accessibilityCheck.error]),
+        ],
         warnings: [],
       };
-
-      if (a11yResult.success) {
-        this.log('✅ Accessibility improvement completed successfully');
-      } else {
-        this.log('❌ Accessibility improvement failed', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error improving accessibility: ${error.message}`, 'ERROR');
-      this.results.accessibilityImprovement = {
+      this.results.accessibilityImprovements = {
         success: false,
         duration: Date.now() - startTime,
         errors: [error.message],
@@ -378,32 +316,25 @@ class ComprehensiveAutomationSuite {;
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
 
     try {
-      // Run performance analysis
-      const perfResult = await this.runCommand(
-        'npx lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json',
-        'Lighthouse Performance Analysis'
+      // Analyze bundle size
+      const bundleAnalysis = await this.runCommand(
+        'npm run build:analyze',
+        'Bundle Analysis'
       );
 
-      // Build for production
-      const buildResult = await this.runCommand(
+      // Check for performance issues
+      const performanceCheck = await this.runCommand(
         'npm run build',
-        'Production Build'
+        'Performance Build Check'
       );
 
       this.results.performanceOptimization = {
-        success: buildResult.success,
+        success: bundleAnalysis.success || performanceCheck.success,
         duration: Date.now() - startTime,
-        errors: [],
+        errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
         warnings: [],
       };
-
-      if (buildResult.success) {
-        this.log('✅ Performance optimization completed successfully');
-      } else {
-        this.log('❌ Performance optimization failed', 'ERROR');
-      }
     } catch (error) {
-      this.log(`❌ Error optimizing performance: ${error.message}`, 'ERROR');
       this.results.performanceOptimization = {
         success: false,
         duration: Date.now() - startTime,
@@ -434,10 +365,7 @@ class ComprehensiveAutomationSuite {;
         errors: [],
         warnings: [],
       };
-
-      this.log('✅ Deployment completed successfully');
     } catch (error) {
-      this.log(`❌ Error deploying changes: ${error.message}`, 'ERROR');
       this.results.deployment = {
         success: false,
         duration: Date.now() - startTime,
@@ -450,7 +378,7 @@ class ComprehensiveAutomationSuite {;
   generateDetailedReport() {
     const totalDuration = Date.now() - this.startTime;
     const successfulTasks = Object.values(this.results).filter(
-      result => result.success
+      r => r.success
     ).length;
     const totalTasks = Object.keys(this.results).length;
 
@@ -473,27 +401,26 @@ class ComprehensiveAutomationSuite {;
       }
     });
 
-    // Save report to file
-    const reportData = {
+    // Save detailed report
+    const report = {
       timestamp: new Date().toISOString(),
       totalDuration,
       successfulTasks,
       totalTasks,
       results: this.results,
+      recommendations: this.generateRecommendations(),
     };
 
-    const reportPath = path.join(
-      this.projectRoot,
-      'comprehensive-automation-report.json'
+    fs.writeFileSync(
+      'comprehensive-automation-report.json',
+      JSON.stringify(report, null, 2)
     );
-
-    fs.writeFileSync(reportPath, JSON.stringify(reportData, null, 2));
-    this.log(`\n📊 Report saved to: ${reportPath}`);
-
-    return reportData;
+    this.log(
+      '\n📄 Detailed report saved to comprehensive-automation-report.json'
+    );
   }
 
-  getRecommendations() {
+  generateRecommendations() {
     const recommendations = [];
 
     if (!this.results.codeQuality.success) {
@@ -508,7 +435,7 @@ class ComprehensiveAutomationSuite {;
     if (!this.results.seoOptimization.success) {
       recommendations.push('Improve SEO optimization');
     }
-    if (!this.results.accessibilityImprovement.success) {
+    if (!this.results.accessibilityImprovements.success) {
       recommendations.push('Enhance accessibility features');
     }
 
@@ -528,18 +455,18 @@ class ComprehensiveAutomationSuite {;
       await this.improveAccessibility();
       await this.optimizePerformance();
       await this.deployChanges();
-
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
-      this.generateDetailedReport();
     } catch (error) {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
+    } finally {
       this.generateDetailedReport();
     }
   }
 }
 
-// Run the automation suite
-const suite = new ComprehensiveAutomationSuite();
-suite.run().catch(console.error);
+// Run the comprehensive automation suite
+if (require.main === module) {
+  const suite = new ComprehensiveAutomationSuite();
+  suite.run().catch(console.error);
+}
 
 module.exports = ComprehensiveAutomationSuite;

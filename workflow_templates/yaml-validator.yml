@@ -2,6 +2,7 @@ name: YAML Syntax Validator
 
 on:
 
+
   push: paths:
       - '**.yml'
       - '**.yaml'
@@ -14,17 +15,27 @@ on:
 
 jobs:
 
+
   validate-yaml: name: Validate YAML Syntax
       - name: Checkout code
 
+                
+
       - name: Setup Python
 
+
+                
           python-version: '3.11'
 
       - name: Install PyYAML
 
+
+                
+
       - name: Validate YAML files
 
+
+                
           echo "🔍 Validating YAML files..."
           
           # Find all YAML files
@@ -62,6 +73,8 @@ jobs:
 
       - name: Create validation report
 
+
+          
           echo "📝 Creating validation report..."
           
           cat > yaml-validation-report.md << EOF
@@ -87,11 +100,15 @@ jobs:
 
       - name: Upload validation report
 
+
+          
           name: yaml-validation-report
           path: yaml-validation-report.md
 
       - name: Comment on PR
 
+
+          
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('yaml-validation-report.md', 'utf8');

@@ -2,177 +2,226 @@
 
 const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
+
+console.log('🚀 Starting Comprehensive App Improvement Suite...');
+
+const improvements = [
+  {
+    name: 'Performance Optimization',
+    command: 'npm run build && npm run analyze',
+    description: 'Building and analyzing bundle size',
+  },
+  {
+    name: 'Security Audit',
+    command: 'npm audit --audit-level moderate',
+    description: 'Running security audit',
+  },
+  {
+    name: 'Code Quality Check',
+    command: 'npm run lint:check',
+    description: 'Running linting checks',
+  },
+  {
+    name: 'TypeScript Check',
+    command: 'npm run type-check',
+    description: 'Running TypeScript type checking',
+  },
+  {
+    name: 'Test Suite',
+    command: 'npm run test:smoke',
+    description: 'Running smoke tests',
+  },
+  {
+    name: 'Accessibility Check',
+    command:
+      'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
+    description: 'Running accessibility checks',
+  },
+  {
+    name: 'SEO Optimization',
+    command: 'node scripts/generate-sitemap.js',
+    description: 'Generating sitemap for SEO',
+  },
+  {
+    name: 'Bundle Analysis',
+    command: 'npm run build:analyze',
+    description: 'Analyzing bundle size and performance',
+  },
+];
+
+const results = {
+  startTime: new Date().toISOString(),
+  improvements: [],
+  totalDuration: 0,
+  successCount: 0,
+  failureCount: 0,
+};
+
+async function runImprovement(improvement) {
+  const startTime = Date.now();
+  console.log(`\n🔧 Running: ${improvement.name}`);
+  console.log(`📝 ${improvement.description}`);
+
+  try {
+    execSync(improvement.command, {
+      stdio: 'pipe',
+      cwd: process.cwd(),
+      timeout: 300000, // 5 minutes timeout
+    });
+
+    const duration = Date.now() - startTime;
+    console.log(
+      `✅ ${improvement.name} completed successfully (${duration}ms)`
+    );
+
+    results.improvements.push({
+      name: improvement.name,
+      status: 'success',
+      duration: duration,
+      error: null,
+    });
+    results.successCount++;
+  } catch (error) {
+    const duration = Date.now() - startTime;
+    console.log(`❌ ${improvement.name} failed (${duration}ms)`);
+    console.log(`Error: ${error.message}`);
+
+    results.improvements.push({
+      name: improvement.name,
+      status: 'failed',
+      duration: duration,
+      error: error.message,
+    });
+    results.failureCount++;
+  }
+}
+
+async function runAllImprovements() {
+  for (const improvement of improvements) {
+    await runImprovement(improvement);
+  }
+
+  results.endTime = new Date().toISOString();
+  results.totalDuration = Date.now() - new Date(results.startTime).getTime();
+
+  // Generate report
+  const reportPath = path.join(
+    __dirname,
+    'reports',
+    `improvement-report-${Date.now()}.json`
+  );
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2));
+
+  console.log('\n📊 COMPREHENSIVE IMPROVEMENT REPORT');
+  console.log('====================================');
+  console.log(`Total Duration: ${results.totalDuration}ms`);
+  console.log(`Successful: ${results.successCount}/${improvements.length}`);
+  console.log(`Failed: ${results.failureCount}/${improvements.length}`);
+  console.log(`Report saved to: ${reportPath}`);
+
+  // Create additional automation scripts
+  await createAdditionalScripts();
+}
+
+async function createAdditionalScripts() {
+  console.log('\n🛠️ Creating Additional Automation Scripts');
+
+  // 1. Health Check Script
+  const healthCheckScript = `#!/usr/bin/env node
 const { execSync } = require('child_process');
 
-class ComprehensiveAppImprovementSuite {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logsDir = path.join(this.projectRoot, 'logs');
-    
-    // Ensure directories exist
-    [this.reportsDir, this.logsDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
+console.log('🏥 Running Health Check...');
+
+const checks = [
+  { name: 'Build Status', command: 'npm run build' },
+  { name: 'Test Status', command: 'npm run test:smoke' },
+  { name: 'Lint Status', command: 'npm run lint:check' },
+  { name: 'Type Check', command: 'npm run type-check' }
+];
+
+checks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    console.log(\`✅ \${check.name}: OK\`);
+  } catch (error) {
+    console.log(\`❌ \${check.name}: FAILED\`);
   }
+});
+`;
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
+  fs.writeFileSync('automation/health-check.cjs', healthCheckScript);
+  fs.chmodSync('automation/health-check.cjs', '755');
+
+  // 2. Deployment Script
+  const deploymentScript = `#!/usr/bin/env node
+const { execSync } = require('child_process');
+
+console.log('🚀 Starting Deployment Process...');
+
+const steps = [
+  { name: 'Install Dependencies', command: 'npm ci' },
+  { name: 'Run Tests', command: 'npm run test:smoke' },
+  { name: 'Build Application', command: 'npm run build' },
+  { name: 'Deploy to Production', command: 'npm run deploy:production' }
+];
+
+steps.forEach(step => {
+  try {
+    console.log(\`Running: \${step.name}\`);
+    execSync(step.command, { stdio: 'inherit' });
+    console.log(\`✅ \${step.name} completed\`);
+  } catch (error) {
+    console.log(\`❌ \${step.name} failed: \${error.message}\`);
+    process.exit(1);
   }
+});
 
-  async runComprehensiveImprovements() {
-    this.log('🚀 Starting Comprehensive App Improvement Suite...');
-    
-    const improvements = {
-      codeQuality: await this.improveCodeQuality(),
-      performance: await this.optimizePerformance(),
-      security: await this.enhanceSecurity(),
-      accessibility: await this.improveAccessibility(),
-      seo: await this.optimizeSEO(),
-      testing: await this.enhanceTesting(),
-      documentation: await this.improveDocumentation(),
-      monitoring: await this.setupMonitoring()
-    };
+console.log('🎉 Deployment completed successfully!');
+`;
 
-    const report = {
-      timestamp: new Date().toISOString(),
-      improvements,
-      summary: {
-        totalImprovements: Object.keys(improvements).length,
-        successfulImprovements: Object.values(improvements).filter(r => r.success).length,
-        failedImprovements: Object.values(improvements).filter(r => !r.success).length
-      }
-    };
+  fs.writeFileSync('automation/deploy.cjs', deploymentScript);
+  fs.chmodSync('automation/deploy.cjs', '755');
 
-    // Save report
-    const reportPath = path.join(this.reportsDir, 'comprehensive-improvements-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Comprehensive improvements completed! Report saved to: ${reportPath}`);
-    return report;
+  // 3. Code Quality Monitor
+  const qualityMonitorScript = `#!/usr/bin/env node
+const { execSync } = require('child_process');
+const fs = require('fs');
+
+console.log('📊 Running Code Quality Monitor...');
+
+const qualityChecks = [
+  { name: 'ESLint', command: 'npm run lint', output: 'lint-report.json' },
+  { name: 'TypeScript', command: 'npm run type-check', output: 'ts-report.json' },
+  { name: 'Tests', command: 'npm run test:coverage', output: 'test-report.json' }
+];
+
+const report = {
+  timestamp: new Date().toISOString(),
+  checks: []
+};
+
+qualityChecks.forEach(check => {
+  try {
+    execSync(check.command, { stdio: 'pipe' });
+    report.checks.push({ name: check.name, status: 'passed' });
+    console.log(\`✅ \${check.name}: PASSED\`);
+  } catch (error) {
+    report.checks.push({ name: check.name, status: 'failed', error: error.message });
+    console.log(\`❌ \${check.name}: FAILED\`);
   }
+});
 
-  async improveCodeQuality() {
-    this.log('🔧 Improving code quality...');
-    try {
-      // Run linting fixes
-      execSync('npm run lint:fix', { stdio: 'pipe' });
-      
-      // Fix TypeScript issues
-      execSync('npm run type-check', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Code quality improvements applied' };
-    } catch (error) {
-      return { success: false, message: `Code quality improvement failed: ${error.message}` };
-    }
-  }
+fs.writeFileSync('automation/reports/quality-report.json', JSON.stringify(report, null, 2));
+console.log('📄 Quality report saved to automation/reports/quality-report.json');
+`;
 
-  async optimizePerformance() {
-    this.log('⚡ Optimizing performance...');
-    try {
-      // Run performance optimization
-      execSync('npm run performance:optimize', { stdio: 'pipe' });
-      
-      // Analyze bundle
-      execSync('npm run analyze', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Performance optimizations applied' };
-    } catch (error) {
-      return { success: false, message: `Performance optimization failed: ${error.message}` };
-    }
-  }
+  fs.writeFileSync('automation/quality-monitor.cjs', qualityMonitorScript);
+  fs.chmodSync('automation/quality-monitor.cjs', '755');
 
-  async enhanceSecurity() {
-    this.log('🔒 Enhancing security...');
-    try {
-      // Run security audit
-      execSync('npm audit', { stdio: 'pipe' });
-      
-      // Check for security vulnerabilities
-      execSync('npm audit fix --force', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Security enhancements applied' };
-    } catch (error) {
-      return { success: false, message: `Security enhancement failed: ${error.message}` };
-    }
-  }
-
-  async improveAccessibility() {
-    this.log('♿ Improving accessibility...');
-    try {
-      // Run accessibility checks
-      execSync('npm run test:accessibility', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Accessibility improvements applied' };
-    } catch (error) {
-      return { success: false, message: `Accessibility improvement failed: ${error.message}` };
-    }
-  }
-
-  async optimizeSEO() {
-    this.log('🔍 Optimizing SEO...');
-    try {
-      // Generate sitemap
-      execSync('npm run sitemap:generate', { stdio: 'pipe' });
-      
-      return { success: true, message: 'SEO optimizations applied' };
-    } catch (error) {
-      return { success: false, message: `SEO optimization failed: ${error.message}` };
-    }
-  }
-
-  async enhanceTesting() {
-    this.log('🧪 Enhancing testing...');
-    try {
-      // Run comprehensive tests
-      execSync('npm run test:comprehensive', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Testing enhancements applied' };
-    } catch (error) {
-      return { success: false, message: `Testing enhancement failed: ${error.message}` };
-    }
-  }
-
-  async improveDocumentation() {
-    this.log('📚 Improving documentation...');
-    try {
-      // Generate README
-      execSync('npm run readme:generate', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Documentation improvements applied' };
-    } catch (error) {
-      return { success: false, message: `Documentation improvement failed: ${error.message}` };
-    }
-  }
-
-  async setupMonitoring() {
-    this.log('📊 Setting up monitoring...');
-    try {
-      // Setup health monitoring
-      execSync('npm run monitor:health', { stdio: 'pipe' });
-      
-      return { success: true, message: 'Monitoring setup completed' };
-    } catch (error) {
-      return { success: false, message: `Monitoring setup failed: ${error.message}` };
-    }
-  }
+  console.log('✅ Additional automation scripts created successfully!');
 }
 
 // Run the improvement suite
-if (require.main === module) {
-  const suite = new ComprehensiveAppImprovementSuite();
-  suite.runComprehensiveImprovements()
-    .then(report => {
-      console.log('✅ Comprehensive App Improvement Suite completed!');
-      console.log(`📊 Summary: ${report.summary.successfulImprovements}/${report.summary.totalImprovements} improvements successful`);
-    })
-    .catch(error => {
-      console.error('❌ Comprehensive App Improvement Suite failed:', error);
-      process.exit(1);
-    });
-}
-
-module.exports = ComprehensiveAppImprovementSuite;
+runAllImprovements().catch(console.error);

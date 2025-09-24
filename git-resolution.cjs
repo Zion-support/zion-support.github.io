@@ -6,8 +6,8 @@ const path = require('path');
 
 class GitResolver {
   constructor() {
-    this.projectRoot = process.cwd(),
-    this.resolvedConflicts = []
+    this.projectRoot = process.cwd();
+    this.resolvedConflicts = [];
   }
 
   log(message) {
@@ -229,7 +229,7 @@ Enhancements: Performance, Security, SEO, Accessibility, Monitoring`;
     );
 
     this.log('🎉 Git Resolution Process Completed');
-    this.log(`📊 Summary: `),
+    this.log(`📊 Summary:`);
     this.log(`  - Conflicts resolved: ${this.resolvedConflicts.length}`);
     this.log(`  - PRs merged: ${prResult.mergedPRs || 0}`);
     this.log(`  - Success: ${report.success}`);

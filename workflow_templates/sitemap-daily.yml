@@ -2,6 +2,7 @@ name: Sitemap Daily
 
 on:
 
+
   schedule: - cron: '0 1 * * *'
   workflow_dispatch:
 
@@ -12,19 +13,24 @@ on:
 
 jobs:
 
+
   sitemap: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node.js
 
+                
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
 
+                
       - name: Generate sitemap
 
+                
       - name: Push changes (if any)
 
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

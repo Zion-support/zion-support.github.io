@@ -259,8 +259,8 @@ const { execSync } = require('child_process');
 
 class ComprehensiveAppImprover {
   constructor() {
-    this.projectRoot = process.cwd(),
-    this.improvements = []
+    this.projectRoot = process.cwd();
+    this.improvements = [];
   }
 
   log(message) {
@@ -437,7 +437,7 @@ new ComprehensiveAppImprover().runImprovements().catch(console.error);
     );
 
     this.log('🎉 Comprehensive Git Resolution and Automation Completed');
-    this.log(`📊 Summary: `),
+    this.log(`📊 Summary:`);
     this.log(
       `  - Conflicts resolved: ${finalReport.summary.conflictsResolved}`
     );

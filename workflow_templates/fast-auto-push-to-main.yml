@@ -2,6 +2,7 @@ name: Fast Auto Push to Main
 
 on:
 
+
   push: branches-ignore:
       - main
   schedule:
@@ -10,6 +11,7 @@ on:
 
 concurrency:
 
+
   group: "fast-auto-push-${{ github.ref }}"
   cancel-in-progress: true
 
@@ -17,15 +19,21 @@ concurrency:
 
 jobs:
 
+
   fast-push: - name: Checkout
            
           fetch-depth: 0
 
       - name: Setup Node.js
 
+
+                
           node-version: 20
 
       - name: Push HEAD to main fast
+
+
+                
 
           TARGET_BRANCH: main
           PUSH_TO_MAIN: 'true'

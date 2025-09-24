@@ -3,25 +3,49 @@
   "@type": "Organization",
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
-  "description": "AI-powered business solutions and technology services",
+  "logo": "https://ziontechgroup.com/og-image.svg",
+  "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
     "addressCountry": "US"
   },
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-302-464-0950",
-    "contactType": "customer service",
-    "email": "kleber@ziontechgroup.com"
+    "email": "kleber@ziontechgroup.com",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Spanish", "Portuguese"]
   },
   "sameAs": [
-    "https://twitter.com/ziontechgroup",
-    "https://linkedin.com/company/ziontechgroup"
+    "https://linkedin.com/company/ziontechgroup",
+    "https://twitter.com/ziontechgroup"
   ],
-  "offers": {
-    "@type": "Offer",
-    "description": "AI-powered business solutions",
-    "category": "Technology Services"
-  }
+  "foundingDate": "2020",
+  "numberOfEmployees": "50-100",
+  "industry": "Information Technology",
+  "services": [
+    "AI Development",
+    "Cybersecurity",
+    "Cloud Solutions",
+    "Digital Transformation",
+    "IT Consulting",
+    "Custom AI Assistants & Agents",
+    "MLOps & LLMOps",
+    "Computer Vision & Edge AI",
+    "Data Platforms & Warehousing",
+    "vCISO & Security Program",
+    "Secure SDLC & AppSec",
+    "Privacy Engineering",
+    "Cloud Foundation & Landing Zones",
+    "Kubernetes Platform & GitOps",
+    "Site Reliability Engineering",
+    "AI Customer Support Copilot (Micro SaaS)",
+    "InvoiceIQ — Automated AR/AP (Micro SaaS)",
+    "SEO AutoPilot (Micro SaaS)",
+    "SmartDocs Knowledge Base (Micro SaaS)"
+  ]
 }

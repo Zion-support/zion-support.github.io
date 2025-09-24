@@ -5,12 +5,12 @@ const fs = require('fs');
 
 function runCommand(command, description) {
   try {
-    console.log(`Runnin: ${description}`);
-    const result = execSync(command, { encodin: 'utf8', cw: '/workspace' });
+    console.log(`Running: ${description}`);
+    const result = execSync(command, { encoding: 'utf8', cwd: '/workspace' });
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
-    console.error(`❌ ${description} faile: `, error.message);
+    console.error(`❌ ${description} failed:`, error.message);
     throw error;
   }
 }
@@ -24,14 +24,14 @@ async function resolveMergeConflicts() {
 
     try {
       runCommand(
-        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #1170: 3: Enhance and expand ziontechgroup.com services and site"',
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=theirs --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
         'Merge PR #11703 with theirs strategy'
       );
     } catch (error) {
       console.log('Theirs strategy failed, trying ours strategy...');
       runCommand('git merge --abort', 'Abort previous merge');
       runCommand(
-        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #1170: 3: Enhance and expand ziontechgroup.com services and site"',
+        'git merge origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-affd --strategy-option=ours --no-ff -m "Merge PR #11703: Enhance and expand ziontechgroup.com services and site"',
         'Merge PR #11703 with ours strategy'
       );
     }
@@ -43,7 +43,7 @@ async function resolveMergeConflicts() {
 
     try {
       runCommand(
-        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #1170: 2: Website audit and update with deployment"',
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=theirs --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
         'Merge PR #11702 with theirs strategy'
       );
     } catch (error) {
@@ -52,7 +52,7 @@ async function resolveMergeConflicts() {
       );
       runCommand('git merge --abort', 'Abort previous merge');
       runCommand(
-        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #1170: 2: Website audit and update with deployment"',
+        'git merge origin/cursor/website-audit-and-update-with-deployment-58b1 --strategy-option=ours --no-ff -m "Merge PR #11702: Website audit and update with deployment"',
         'Merge PR #11702 with ours strategy'
       );
     }
@@ -64,7 +64,7 @@ async function resolveMergeConflicts() {
 
     console.log('✅ All PRs merged and pushed successfully!');
   } catch (error) {
-    console.error('❌ Merge process: failed:', error.message);
+    console.error('❌ Merge process failed:', error.message);
     process.exit(1);
   }
 }

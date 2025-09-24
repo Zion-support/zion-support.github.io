@@ -2,6 +2,7 @@ name: Auto PR + Automerge
 
 on:
 
+
   push: branches-ignore:
       - main
 
@@ -10,10 +11,12 @@ on:
 
 concurrency:
 
+
   group: "auto-pr-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
+
 
   open-and-automerge: - name: Checkout
            
@@ -21,6 +24,8 @@ jobs:
 
       - name: Create or update PR to main
 
+
+                
           github-token: "${{ secrets.GITHUB_TOKEN }}""
           script: |"
             const branch = context.ref.replace('refs/heads/','');
@@ -61,6 +66,8 @@ jobs:
 
       - name: Ensure 'automerge' label exists
 
+
+                
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |"
             const labelName = 'automerge';
@@ -82,6 +89,8 @@ jobs:
 
       - name: Add automerge label
 
+
+          
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |"
             const pr_number = Number('${{ steps.cpr.outputs.pr_number }}');
@@ -94,6 +103,8 @@ jobs:
 
       - name: Enable auto-merge
 
+
+          
           token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-number: "${{ steps.cpr.outputs.pr_number }}"
           merge-method: squash

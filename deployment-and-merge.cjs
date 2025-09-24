@@ -5,8 +5,8 @@ const fs = require('fs');
 
 class DeploymentAndMerge {
   constructor() {
-    this.projectRoot = process.cwd(),
-    this.startTime = new Date()
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
   }
 
   log(message, type = 'INFO') {
@@ -64,12 +64,13 @@ class DeploymentAndMerge {
     if (statusResult.success) {
       const changes = statusResult.output.trim();
       if (changes) {
-        this.log('Uncommitted changes detected: '), console.log(changes),
+        this.log('Uncommitted changes detected:');
+        console.log(changes);
         return false;
       } else {
-    this.log('No uncommitted changes'),
-    return true
-  }
+        this.log('No uncommitted changes');
+        return true;
+      }
     }
     return false;
   }
@@ -160,7 +161,7 @@ class DeploymentAndMerge {
       'deployment-summary.json',
       JSON.stringify(summary, null, 2)
     );
-    this.log('Deployment summary created: deployment-summary.json'),
+    this.log('Deployment summary created: deployment-summary.json');
   }
 
   async run() {
@@ -210,8 +211,8 @@ class DeploymentAndMerge {
 
 // Run the deployment and merge process
 if (require.main === module) {
-    const deployment = new DeploymentAndMerge(),
-    deployment.run().catch(console.error)
-  }
+  const deployment = new DeploymentAndMerge();
+  deployment.run().catch(console.error);
+}
 
 module.exports = DeploymentAndMerge;

@@ -1,35 +1,39 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts systematically
-# Keep our PM2 automation improvements, accept main branch for others
+# Script to resolve merge conflicts by keeping HEAD version
+# This will resolve conflicts by taking the current (HEAD) version of all conflicted files
 
-echo "Resolving merge conflicts..."
+echo "Resolving merge conflicts by keeping HEAD version..."
 
-# Keep our PM2 automation files
-git checkout --ours ecosystem.config.js
-git checkout --ours pm2-automation.sh
-git checkout --ours eslint.config.cjs
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-# For most other files, accept the main branch version
-git status --porcelain | grep "^UU\|^AA\|^DD" | while read line; do
-    file=$(echo "$line" | cut -c4-)
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
     
-    # Skip our important files
-    if [[ "$file" == "ecosystem.config.js" || "$file" == "pm2-automation.sh" || "$file" == "eslint.config.cjs" ]]; then
-        echo "Keeping our version of $file"
-        continue
+    # Check if file exists
+    if [ -f "$file" ]; then
+        # Extract HEAD version (between <<<<<<< HEAD and =======)
+        # Remove conflict markers and keep only the HEAD version
+        sed -n '/^<<<<<<< HEAD$/,/^=======$/p' "$file" | sed '1d;$d' > "${file}.head"
+        
+        # Check if we have a HEAD section
+        if [ -s "${file}.head" ]; then
+            # Replace the entire file with HEAD version
+            cp "${file}.head" "$file"
+            echo "  ✓ Resolved by keeping HEAD version"
+        else
+            echo "  ⚠ No HEAD section found, keeping original"
+        fi
+        
+        # Clean up temporary file
+        rm -f "${file}.head"
+        
+        # Mark as resolved
+        git add "$file"
+    else
+        echo "  ⚠ File not found: $file"
     fi
-    
-    # Accept main branch version for most files
-    echo "Accepting main branch version of $file"
-    git checkout --theirs "$file"
 done
 
-echo "Adding resolved files..."
-git add .
-
-echo "Committing merge resolution..."
-git commit -m "Resolve merge conflicts - keep PM2 automation improvements"
-
-echo "Pushing resolved changes..."
-git push origin HEAD
+echo "All conflicts resolved. Files marked for commit."

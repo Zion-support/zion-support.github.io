@@ -2,6 +2,7 @@ name: Accessibility Audit
 
 on:
 
+
   schedule: - cron: '30 2 * * *'
   workflow_dispatch:
 
@@ -10,21 +11,26 @@ on:
 
 concurrency:
 
+
   group: "accessibility-audit
   cancel-in-progress: true
 
 jobs:
 
+
   pa11y: SITE_URL: "${{ secrets.SITE_URL }}"
       - name: Ensure SITE_URL present"
 
+                
           if [ -z "${SITE_URL}" ]; then
             echo "SITE_URL secret not set, skipping." && exit 0
           fi
       - name: Run pa11y-ci on homepage
 
+                
       - name: Create issue on failures
 
+          
           SITE_URL: "${{ secrets.SITE_URL }}"
           script: |
             const title = `Accessibility issues detected on ${process.env.SITE_URL}`;

@@ -2,6 +2,7 @@ name: YAML Auto-Fixer
 
 on:
 
+
   workflow_dispatch: inputs:
       fix_mode:
 
@@ -18,22 +19,30 @@ on:
 
 jobs:
 
+
   auto-fix-yaml: name: Auto-Fix YAML Syntax
       - name: Checkout code
 
+                
           token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Setup Python
 
+
+                
           python-version: '3.11'
 
       - name: Install dependencies
 
+
+                
           pip install pyyaml
           pip install ruamel.yaml
 
       - name: Create YAML fixer script
 
+
+                
           cat > yaml_fixer.py << 'EOF'
           #!/usr/bin/env python3
           "
@@ -199,16 +208,23 @@ jobs:
 
       - name: Run YAML auto-fixer
 
+
+                
+
           FIX_MODE: "${{ github.event.inputs.fix_mode || 'conservative' }}"
           python3 yaml_fixer.py
 
       - name: Validate fixed files
 
+
+                
           echo "🔍 Validating fixed files..."
           python3 yaml_fixer.py validate-only
 
       - name: Create fix report
 
+
+          
           echo "📝 Creating fix report..."
           
           cat > yaml-fix-report.md << EOF
@@ -229,5 +245,7 @@ jobs:
 
       - name: Upload fix report
 
+
+                
           name: yaml-fix-report
           path: yaml-fix-report.md

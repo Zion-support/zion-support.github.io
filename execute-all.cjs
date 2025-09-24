@@ -39,7 +39,7 @@ async function runAll() {
   console.log(`📊 Results: ${successful}/${total} scripts successful`);
 
   if (successful < total) {
-    console.log('\n⚠️ Failed scripts: '),
+    console.log('\n⚠️ Failed scripts:');
     results
       .filter(r => !r.success)
       .forEach(r => {
@@ -47,7 +47,8 @@ async function runAll() {
       });
   }
 
-  console.log('\n📋 Next steps: '), console.log('1. Check the generated reports'),
+  console.log('\n📋 Next steps:');
+  console.log('1. Check the generated reports');
   console.log('2. Review any error messages');
   console.log(
     '3. Run: git add . && git commit -m "feat: Comprehensive automation improvements"'

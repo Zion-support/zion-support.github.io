@@ -2,6 +2,7 @@ name: Sitemap Auto-Commit
 
 on:
 
+
   schedule: - cron: '12 3 * * *'
   workflow_dispatch:
 
@@ -9,22 +10,28 @@ on:
 
 concurrency:
 
+
   group: sitemap-auto-commit
   cancel-in-progress: true
 
 jobs:
 
+
   build-and-update: fetch-depth: 0
       - name: Use Node.js 20.x
 
+                
           node-version: 20.x
           cache: 'npm'
       - name: Install dependencies
 
+                
       - name: Generate sitemap
 
+                
       - name: Commit changes if any
 
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

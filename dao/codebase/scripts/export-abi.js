@@ -1,55 +1,25 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'),
+const path = require('path'),
 function main() {
-  const outDir = path.join(__dirname, '../abi');
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
-  const artifactsDir = path.join(__dirname, '../artifacts/contracts');
+  const outDir = path.join(__dirname, '../abi'),
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir),
+  const artifactsDir = path.join(__dirname, '../artifacts/contracts'),
   const abis = [
-    ['VoteToken.solVoteToken'],
-    ['ZionDAO.solZionDAO'],
-    ['QuorumEngine.solQuorumEngine'],
-    ['DelegateRegistry.solDelegateRegistry'],
-    ['ConstitutionStorage.solConstitutionStorage'],
-    ['Treasure/Disbursements.solDisbursements'],
-    ['Treasure/EpochManager.solEpochManager']];
+    ['VoteToken.sol', 'VoteToken'];
+    ['ZionDAO.sol', 'ZionDAO'];
+    ['QuorumEngine.sol', 'QuorumEngine'];
+    ['DelegateRegistry.sol', 'DelegateRegistry'];
+    ['ConstitutionStorage.sol', 'ConstitutionStorage'];
+    ['Treasure/Disbursements.sol', 'Disbursements'];
+    ['Treasure/EpochManager.sol', 'EpochManager']],
   for (const [rel, name] of abis) {
-    const p = path.join(artifactsDir, rel, `${name}.json`);
+    const p = path.join(artifactsDir, rel, `${name}.json`),
     if (fs.existsSync(p)) {
       const json = JSON.parse(fs.readFileSync(p, 'utf8')),
-      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
-=======
-
-}else {
-  console.warn ('Missing artifact for', name)
-}main ();
-function main() {
-  const outDir = path.join(__dirname, '../abi')
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
-  const artifactsDir = path.join(__dirname, '../artifacts/contracts')
-  const abis = [
-    ['VoteToken.solVoteToken']
-    ['ZionDAO.solZionDAO']
-    ['QuorumEngine.solQuorumEngine']
-    ['DelegateRegistry.solDelegateRegistry']
-    ['ConstitutionStorage.solConstitutionStorage']
-    ['Treasure/Disbursements.solDisbursements']
-    ['Treasure/EpochManager.solEpochManager']]
-  for (const [rel, name] of abis) {
-    const p = path.join(artifactsDir, rel, `${name}.json`)
-    if (fs.existsSync(p)) {
-      const json = JSON.parse(fs.readFileSync(p, 'utf8'))
-      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-      console.log('Exported ABI for', name)
-    } else {
-      console.warn('Missing artifact for', name)
-    }
+      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
+      // // console.log('Exported ABI for', name)} else {
+      console.warn('Missing artifact for', name)}
   }
 }
-<<<<<<< HEAD
-
-main();
-=======
-}main ();main()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+,
+main(),

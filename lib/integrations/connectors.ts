@@ -1,54 +1,57 @@
-<<<<<<< HEAD
-import { ProviderConnection, SyncLogEntry  } from './types';
+// Integration connectors
 import { v4 as uuidv4 } from 'uuid';
-export async function simulateAction<T;
-=======
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-async function mockProviderCall<T>(
-  connection: ProviderConnection
-  action: string
-  details: Record<string, any>
+import { ProviderConnection, SyncLogEntry } from './types';
+
+export async function simulateAction<T = unknown>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
-    id: uuidv4()
-    timestamp: Date.now()
-    providerId: connection.providerId
-    level: "info"
-    action
-    details
-  }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+    details,
+  };
+  return { log, result: ({ ok: true } as unknown) as T };
 }
+
 // CRM actions
 export const crm = {
   async syncContact(
-    connection: ProviderConnection
-    contact: Record<string, any>
+    connection: ProviderConnection,
+    contact: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
-  }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
+    return simulateAction(connection, 'crm.syncContact', { contact });
+  },
   async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
+    connection: ProviderConnection,
+    note: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, unknown>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  },
+};
+
 // ATS actions
 export const ats = {
   async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
+    connection: ProviderConnection,
+    status: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "update_status", { status });
-  }
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    return simulateAction(connection, 'ats.updateStatus', { status });
+  },
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, unknown>
+  ) {
+    return simulateAction(connection, 'ats.createCandidate', { candidate });
+  },
+};

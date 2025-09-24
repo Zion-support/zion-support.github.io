@@ -2,6 +2,7 @@ name: Autonomous Intelligence
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -10,24 +11,30 @@ on:
 
 concurrency:
 
+
   group: "autonomous-intelligence-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
+
 
   orchestrate: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node.js
 
+                
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
 
+                
       - name: Run intelligent orchestrator (single pass)
 
+                
       - name: Create Pull Request
 
+                
           token: "${{ secrets.GITHUB_TOKEN }}""
           commit-message:
 
@@ -44,6 +51,7 @@ jobs:
             auto-merge
       - name: Enable Auto-merge
 
+          
           token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-number: "${{ steps.cpr.outputs.pull-request-number }}"
           merge-method: squash

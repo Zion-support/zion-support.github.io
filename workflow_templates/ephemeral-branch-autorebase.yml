@@ -2,6 +2,7 @@ name: Ephemeral Branch Auto-Rebase
 
 on:
 
+
   push: branches:
       - main
   workflow_dispatch:
@@ -14,23 +15,31 @@ on:
 
 jobs:
 
+
   autorebase: - name: Checkout full history
            
           fetch-depth: 0
 
       - name: Configure git
 
+
+                
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: List branches
 
+
+                
           git fetch --all --prune
           git for-each-ref --format='%(refname:short)' refs/remotes/origin > branches.txt
           awk '{print $0}' branches.txt | sed 's#^origin/##' | sort -u > local_branches.txt
           cat local_branches.txt
 
       - name: Rebase ephemeral branches on main
+
+
+                
 
           BRANCH_PREFIXES: 'cursor/,feat/,fix/,chore/,refactor/'
           set -euo pipefail

@@ -2,6 +2,7 @@ name: Autonomous Deep Maintenance
 
 on:
 
+
   schedule: - cron: '0 2 * * *'
   workflow_dispatch: {}
 
@@ -9,10 +10,12 @@ on:
 
 concurrency:
 
+
   group: automation-deep-maintenance
   cancel-in-progress: true
 
 jobs:
+
 
   deep-maintenance: - name: Checkout
            
@@ -20,19 +23,28 @@ jobs:
 
       - name: Setup Node
 
+
+                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
+
+                
+
       - name: Run deep maintenance
 
+
+                
           node automation/deep-maintenance-factory.cjs || true
           node automation/security-audit-factory.cjs || true
           node automation/performance-optimizer.cjs || true
 
       - name: Commit and push changes
 
+
+                
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A

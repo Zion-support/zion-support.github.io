@@ -48,13 +48,13 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Test Suites:')) {
-    const match = line.match(/(\d+) passed/),
-    if (match) passed = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) passed/);
+          if (match) passed = parseInt(match[1]);
+        }
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.smoke = { passed, failed, total };
@@ -83,9 +83,9 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.unit = { passed, failed, total };
@@ -113,9 +113,9 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.integration = { passed, failed, total };
@@ -143,9 +143,9 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.e2e = { passed, failed, total };
@@ -173,9 +173,9 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.accessibility = { passed, failed, total };
@@ -203,9 +203,9 @@ class IntelligentTestRunner {
         if (line.includes('✓')) passed++;
         if (line.includes('✗') || line.includes('×')) failed++;
         if (line.includes('Tests:')) {
-    const match = line.match(/(\d+) total/),
-    if (match) total = parseInt(match[1])
-  }
+          const match = line.match(/(\d+) total/);
+          if (match) total = parseInt(match[1]);
+        }
       }
       
       this.testResults.performance = { passed, failed, total };
@@ -286,8 +286,8 @@ class IntelligentTestRunner {
 
 // Run if called directly
 if (require.main === module) {
-    const testRunner = new IntelligentTestRunner(),
-    testRunner.run().catch(console.error)
-  }
+  const testRunner = new IntelligentTestRunner();
+  testRunner.run().catch(console.error);
+}
 
 module.exports = IntelligentTestRunner;

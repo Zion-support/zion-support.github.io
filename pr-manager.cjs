@@ -123,11 +123,11 @@ async function main() {
   const prs = getOpenPRs();
 
   if (prs.length === 0) {
-    console.log('✅ No open PRs found'),
-    return
+    console.log('✅ No open PRs found');
+    return;
   }
 
-  console.log(`📋 Found ${prs.length} open PRs: `),
+  console.log(`📋 Found ${prs.length} open PRs:`);
   prs.forEach(pr => {
     console.log(`  - PR #${pr.number}: ${pr.title} (${pr.head})`);
   });
@@ -151,7 +151,7 @@ async function main() {
     }
   }
 
-  console.log('\n📊 PR Processing Summary: '),
+  console.log('\n📊 PR Processing Summary:');
   console.log(`✅ Successfully merged: ${successCount}`);
   console.log(`❌ Failed to merge: ${failCount}`);
   console.log(`📋 Total processed: ${prs.length}`);

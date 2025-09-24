@@ -2,6 +2,7 @@ name: Unused Exports Report
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
@@ -9,24 +10,30 @@ on:
 
 concurrency:
 
+
   group: unused-exports-report
   cancel-in-progress: true
 
 jobs:
+
 
   report: - name: Checkout
            
           fetch-depth: 0
       - name: Setup Node
 
+                
           node-version: '20'
           cache: npm
       - name: Install dependencies
 
+                
       - name: Generate unused exports report
 
+                
       - name: Commit and push report
 
+                
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

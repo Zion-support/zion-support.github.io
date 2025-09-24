@@ -2,6 +2,7 @@ name: Autonomous Workflow Watchdog
 
 on:
 
+
   schedule: - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -11,10 +12,12 @@ on:
 
 concurrency:
 
+
   group: "workflow-watchdog-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
+
 
   watchdog: - name: Scan and remediate failed workflow runs
            
@@ -76,5 +79,7 @@ jobs:
 
       - name: Summary
 
+
+                
           echo "Reruns: "${{ steps.scan.outputs.reruns }}"" >> $GITHUB_STEP_SUMMARY
           echo "Issues: "${{ steps.scan.outputs.issues }}"" >> $GITHUB_STEP_SUMMARY

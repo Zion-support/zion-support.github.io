@@ -1,7 +1,17 @@
-// Operator utilities
-export const operator = {
-  // Add operator functionality here
-  logEvent: (event: any) => null
-  getEvents: () => []
-  getEventById: (id: string) => null
-}
+
+,
+export interface OperatorSession {
+  id: string,
+  name: string,
+  status: 'active' | 'inactive' | 'busy',
+  currentSessions: string[],
+  tags: string[],
+  createdAt: Date,
+  updatedAt: Date}
+,
+export interface SupportEvent {
+  type: string,
+  sessionId: string,
+  payload: any,
+  timestamp: Date}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
