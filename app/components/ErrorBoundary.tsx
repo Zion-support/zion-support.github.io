@@ -1,3 +1,5 @@
+export { default } from '@/components/ErrorBoundary';
+export * from '@/components/ErrorBoundary';
 'use client',
 
 import React from 'react',
