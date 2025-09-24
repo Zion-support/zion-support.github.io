@@ -23,7 +23,6 @@ const nextConfig = {
   // Bundle optimization
   experimental: {
     optimizeCss: true,
-    appDir: true,
   },
   // Security headers
   async headers() {
