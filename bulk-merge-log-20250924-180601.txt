@@ -871,3 +871,18 @@ tsconfig.tsbuildinfo
 [2025-09-24 18:08:06] 🔧 Resolving conflicts in package.json for branch cursor/check-fix-push-and-merge-to-main-196b...
 [2025-09-24 18:08:06] 📦 Package file: prefer main version
 [2025-09-24 18:08:08] ✅ Resolved conflicts in package.json
+[2025-09-24 18:08:09] ✅ Successfully resolved conflicts and merged cursor/check-fix-push-and-merge-to-main-196b
+[2025-09-24 18:08:09] ✅ Branch cursor/check-fix-push-and-merge-to-main-196b processed successfully
+[2025-09-24 18:08:09] 📊 Batch progress: 9 successful, 0 failed
+[2025-09-24 18:08:09] 📊 Overall progress: 9 successful, 0 failed, 56 conflicts resolved
+[2025-09-24 18:08:09] 📋 Processing branch 10: cursor/check-fix-push-and-merge-to-main-d542
+[2025-09-24 18:08:10] 🔄 Attempting to merge cursor/check-fix-push-and-merge-to-main-d542...
+[2025-09-24 18:08:11] ⚠️  Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-d542, resolving...
+[2025-09-24 18:08:11] 📋 Conflicted files: package.json
+pnpm-lock.yaml
+[2025-09-24 18:08:11] 🔧 Resolving conflicts in package.json for branch cursor/check-fix-push-and-merge-to-main-d542...
+[2025-09-24 18:08:11] 📦 Package file: prefer main version
+[2025-09-24 18:08:14] ✅ Resolved conflicts in package.json
+[2025-09-24 18:08:14] 🔧 Resolving conflicts in pnpm-lock.yaml for branch cursor/check-fix-push-and-merge-to-main-d542...
+[2025-09-24 18:08:14] 📋 YAML: prefer main version
+[2025-09-24 18:08:16] ✅ Resolved conflicts in pnpm-lock.yaml
