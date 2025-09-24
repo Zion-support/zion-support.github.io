@@ -49,10 +49,10 @@ process_pr() {
         return 1
     fi
     
-    # Extract branch information
-    local head_branch=$(echo "$pr_info" | grep -o '"head":[^}]*"ref":"[^"]*"' | sed 's/.*"ref":"\([^"]*\)".*/\1/')
-    local base_branch=$(echo "$pr_info" | grep -o '"base":[^}]*"ref":"[^"]*"' | sed 's/.*"ref":"\([^"]*\)".*/\1/')
-    local title=$(echo "$pr_info" | grep -o '"title":"[^"]*"' | sed 's/"title":"\([^"]*\)".*/\1/')
+    # Extract branch information robustly using Node to parse JSON
+    local head_branch=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write(p.head&&p.head.ref?p.head.ref:'');}catch{}})")
+    local base_branch=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write(p.base&&p.base.ref?p.base.ref:'');}catch{}})")
+    local title=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write((p.title||'').replace(/\s+/g,' ').trim());}catch{}})")
     
     log "📋 PR #$pr_num: $title"
     log "🌿 Head: $head_branch -> Base: $base_branch"
