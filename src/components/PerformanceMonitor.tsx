@@ -1,136 +1,98 @@
-import { useEffect, useState } from "react"
-interface PerformanceMetrics {;
-  loadTime: number,renderTime: number,memoryUsage: number,networkLatency: number,fps: number,lighthouseScore: number};
+import React, { useEffect, useState } from 'react';
 
-export default function PerformanceMonitor() {;
-      const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-        loadTime: 0,renderTime: 0,memoryUsage: 0,networkLatency: 0,fps: 0,lighthouseScore: 0;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+
+      // Get Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'layout-shift') {
+            const clsEntry = entry as any;
+            if (!clsEntry.hadRecentInput) {
+              setMetrics(prev => ({
+                ...prev!,
+                cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry.value
+              }));
+            }
+          } else if (entry.entryType === 'first-input') {
+            const fidEntry = entry as any;
+            setMetrics(prev => ({
+              ...prev!,
+              firstInputDelay: fidEntry.processingStart - fidEntry.startTime
+            }));
+          }
+        }
       });
-      const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(() => {;
-    //[^;]*
-    const loadTime = performance.now()
-    ;
-    //[^;]*
-    const memoryInfo = (performance as any).memory
-    const memoryUsage = memoryInfo ? memoryInfo.usedJSHeapSize / 1024 / 1024 : 0
+      observer.observe({ entryTypes: ['layout-shift', 'first-input'] });
 
-    //[^;]*
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const renderTime = navigationEntry?.loadEventEnd || 0
-
-    //[^;]*
-    const networkLatency = performance.getEntriesByType('resource')
-      .reduce((acc, entry) => acc + entry.duration, 0) / 10;
-
-    //[^;]*
-    let fps = 60;
-    let lastTime = performance.now()
-    let frameCount = 0;
-
-    const measureFPS = () => {;
-      frameCount++;
-      const currentTime = performance.now()
-      if (currentTime - lastTime >= 1000) {;
-        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        frameCount = 0;
-        lastTime = currentTime;
-      };
-      requestAnimationFrame(measureFPS)
-    };
-    measureFPS()
-
-    //[^;]*
-    const lighthouseScore = Math.max(0, Math.min(100, ;
-      100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10);
-    ));
-
-      setMetrics({;
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        networkLatency: Math.round(networkLatency),
-        fps,;
-        lighthouseScore: Math.round(lighthouseScore)
+      setMetrics({
+        loadTime,
+        firstContentfulPaint,
+        largestContentfulPaint,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0
       });
-    //[^;]*
-    const handleKeyPress = (e: KeyboardEvent) => {;
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {;&& e.shiftKey && e.key === 'P') {; e.shiftKey && e.key === 'P') {
-        setIsVisible(!isVisible)
-      };
-    };
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [isVisible]);
 
-  if (!isVisible) return null;
+      // Show performance panel after 3 seconds
+      setTimeout(() => setIsVisible(true), 3000);
+    };
+
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  if (!isVisible || !metrics) return null;
 
   return (
-    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-xs font-mono z-50 min-w-[280px]">;
-      <div className="flex items-center justify-between mb-3">;
-        <h3 className="text-blue-400 font-bold">Performance Monitor</[^>]*>
-        <button;
-          onClick={() => setIsVisible(false)};
-          className="[^"]*"
-        >;
-          ×;
-        </[^>]*>
-      </[^>]*>
-      ;
-      <div className="space-y-2">;
-        <div className="flex justify-between">;
-          <span className="text-gray-400">Load Time:</[^>]*>
-          <span className={metrics.loadTime < 1000 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.loadTime}ms;
-          </[^>]*>
-        </[^>]*>
-        ;
-        <div className="flex justify-between">;
-          <span className="text-gray-400">Memory:</[^>]*>
-          <span className={metrics.memoryUsage < 50 ? 'text-green-400' : 'text-yellow-400'}>
-            {metrics.memoryUsage}MB;
-          </[^>]*>
-        </[^>]*>
-        ;
-        <div className="flex justify-between">;
-          <span className="text-gray-400">FPS:</[^>]*>
-          <span className={metrics.fps >= 60 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
-            {metrics.fps};
-          </[^>]*>
-        </[^>]*>
-        ;
-        <div className="flex justify-between">;
-          <span className="text-gray-400">Network:</[^>]*>
-          <span className={metrics.networkLatency < 100 ? 'text-green-400' : 'text-red-400'}>
-            {metrics.networkLatency}ms;
-          </[^>]*>
-        </[^>]*>
-        ;
-        <div className="flex justify-between items-center">;
-          <span className="text-gray-400">Score:</[^>]*>
-          <div className="flex items-center">;
-            <div className="w-16 h-2 bg-gray-700 rounded-full mr-2">;
-              <div ;
-                className={`h-full rounded-full transition-all duration-500 ${;
-                  metrics.lighthouseScore >= 90 ? 'bg-green-400' :;
-                  metrics.lighthouseScore >= 70 ? 'bg-yellow-400' :;
-                  'bg-red-400'
-                }`};
-                style={{ width: `${metrics.lighthouseScore}%` }};
-              />;
-            </[^>]*>
-            <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
-                            metrics.lighthouseScore >= 70 ? 'text-yellow-400' : 'text-red-400'}>
-              {metrics.lighthouseScore};
-            </[^>]*>
-          </[^>]*>
-        </[^>]*>
-      </[^>]*>
-      ;
-      <div className="mt-3 pt-2 border-t border-gray-700 text-center">;
-        <span className="text-gray-500 text-xs">Press Ctrl+Shift+P to toggle</[^>]*>
-      </[^>]*>
-    </[^>]*>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-bold">Performance</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+      </div>
+      <div className="space-y-1">
+        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+        <div>FCP: {metrics.firstContentfulPaint.toFixed(0)}ms</div>
+        <div>LCP: {metrics.largestContentfulPaint.toFixed(0)}ms</div>
+        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
+        <div>FID: {metrics.firstInputDelay.toFixed(0)}ms</div>
+      </div>
+    </div>
   );
 };
+
+export default PerformanceMonitor;
