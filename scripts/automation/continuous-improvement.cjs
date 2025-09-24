@@ -1,94 +1,112 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+#!/usr/bin/env node
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/""usr/bin/env""
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting continuous improvement automation...")
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-console.log("" Starting continuous improvement automation...")
-// Get automation interval from environment variable ("default")
-  console.log(` Running continuous improvement at ${new Date().toISOString()}
-// console.log(`"� Checking for pending improvements..."`)
-console.log(" Starting continuous improvement automation...")
-// Get automation interval from environment variable ("default")
-// console.log(""� Checking for pending improvements...")
-    console.log(" Running quality checks...")
-  execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" Linting completed")
-  console.log("⚠  Linting issues found but continuing...")
-    console.log(" Running quality checks...")
-  execSync("npm run lint", { "stdio": "inherit"})
-// console.log(" Linting completed")
-  console.log("⚠  Linting issues found but continuing...")
-    console.log("🧪 Running tests...")
-  execSync("npm test", { "stdio": "inherit"})
-// console.log(" Tests completed")
-  console.log("⚠  Tests failed but continuing...")
-// console.log("⚠  Tests failed but continuing...")
-    console.log("� Checking for outdated dependencies...")
-  execSync("npm outdated", { "stdio": "inherit"})
-// console.log(" All dependencies are up to date")
-  console.log(" All dependencies are up to date")
-console.log(" Generating performance report...")
-  execSync("npm run build", { "stdio": "inherit"})
-// console.log(" Build completed")
-  console.log("⚠  Build failed but continuing...")
-// console.log("⚠  Build failed but continuing...")
-    console.log("� Analyzing bundle size...")
-  execSync("node "scripts/analyze-bundle.js"", { "stdio": "inherit"})
-// console.log(" Bundle analysis completed")
-  console.log("⚠  Bundle analysis failed but continuing...")
-  "timestamp"
-      "summary": "Continuous improvement completed"
-      "status": "completed"
-      process.cwd(),continuous-improvement-report.json"
-    console.log(" Continuous improvement completed successfully")
-  console.error(" Continuous improvement "failed": ")
-  "
-process.on(")
-  console.log("⚠  Bundle analysis failed but continuing...")
-  "timestamp"
-      "summary": "Continuous improvement completed"
-      "status": "completed"
-      process.cwd(),continuous-improvement-report.json"
-    console.log(" Continuous improvement completed successfully")
-  console.error(" Continuous improvement "failed": ")
-    // Don"
-  console.log( Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
-  console.log("� Received SIGTERM, shutting down gracefully...")
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-=======
-  console.error(" Failed to start continuous "improvement": ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-  console.error(" Failed to start continuous "improvement": ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  console.error(" Failed to start continuous "improvement": ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+console.log('🚀 Starting continuous improvement automation...');
 
+// Get automation interval from environment variable (default: 2 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+async function runContinuousImprovement() {
+  try {
+    console.log(`🚀 Running continuous improvement at ${new Date().toISOString()}`);
+    
+    // Check for any pending improvements
+    console.log('📋 Checking for pending improvements...');
+    
+    // Run quality checks
+    console.log('🔍 Running quality checks...');
+    try {
+      execSync('npm run lint', { stdio: 'inherit' });
+      console.log('✅ Linting completed');
+    } catch (error) {
+      console.log('⚠️  Linting issues found but continuing...');
+    }
+    
+    // Run tests
+    console.log('🧪 Running tests...');
+    try {
+      execSync('npm test', { stdio: 'inherit' });
+      console.log('✅ Tests completed');
+    } catch (error) {
+      console.log('⚠️  Tests failed but continuing...');
+    }
+    
+    // Check for outdated dependencies
+    console.log('📦 Checking for outdated dependencies...');
+    try {
+      execSync('npm outdated', { stdio: 'inherit' });
+    } catch (error) {
+      console.log('✅ All dependencies are up to date');
+    }
+    
+    // Generate performance report
+    console.log('📊 Generating performance report...');
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+    }
+    
+    // Check bundle size
+    console.log('📦 Analyzing bundle size...');
+    try {
+      execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
+      console.log('✅ Bundle analysis completed');
+    } catch (error) {
+      console.log('⚠️  Bundle analysis failed but continuing...');
+    }
+    
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: 'Continuous improvement completed',
+      status: 'completed'
+    };
+    
+    const reportPath = path.join(process.cwd(), 'continuous-improvement-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved to ${reportPath}`);
+    
+    console.log('✅ Continuous improvement completed successfully');
+    
+  } catch (error) {
+    console.error('❌ Continuous improvement failed:', error.message);
+    // Don't exit, just log the error and continue
+  }
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial improvement
+  await runContinuousImprovement();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runContinuousImprovement();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous improvement
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous improvement:', error);
+  process.exit(1);
+});

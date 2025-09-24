@@ -1,1073 +1,144 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Layout from "./components/Layout";
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Mail, Lock, Eye } from 'lucide-react';
-import Layout from '../components/Layout';
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-    email: ,
-    password: ')
-
-  const [formData, setFormData] = useState({'
-    email: '',''
-    password: ''')
-  });
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
-    <Layout title="Login - Zion Tech Group">"
-"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
-</div>"
-        <div className="max-w-md w-full space-y-8">"
-</div>
-          <div>
-<<<<<<< HEAD:pages/login.tsx
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your account
-            </h2>
-          </div>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email address
-                </label>
-                <div className="mt-1 relative">
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from './components/Layout';
-=======
-
-import React, { useState } from 'react';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { motion } from 'framer-motion';'
-import Layout from './components/Layout';
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-import {;
-  Mail,;
-  Lock,;
-  Eye,;
-  EyeOff,;
-  ArrowRight,;
-  CheckCircle,;
-  AlertCircle,;
-  User,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Server,;
-  Database,;
-  Cloud,;
-  Brain,;
-  Code,;
-  Settings,;
-  Wrench,;
-  Cog,;
-  Activity,;
-  PieChart,;
-  BarChart,;
-  TrendingUp,;
-  DollarSign,;
-  ShoppingCart,;
-  Home,;
-  Trash2,;
-  Camera,;
-  Heart,;
-  ClipboardList,;
-  TreePine,;
-  Droplets,;
-  Building,;
-  Rocket,;
-  Lightbulb,;
-  Target,;
-  MessageSquare,;
-  HelpCircle,;
-  Info,;
-  XCircle,;
-  Plus,;
-  Minus,;
-  ChevronUp,;
-  ChevronRight,;
-  ChevronLeft,;
-  ChevronDown,;
-  ArrowUp,;
-  ArrowDown,;
-  ArrowLeft,;
-  Pause,;
-  Stop,;
-  SkipForward,;
-  SkipBack,;
-  Volume2,;
-  VolumeX,;
-  Maximize,;
-  Minimize,;
-  RotateCcw,;
-  RotateCw,;
-  RefreshCw,;
-  Upload,;
-  Share,;
-  Copy,;
-  Edit,;
-  Trash,;
-  Save,;
-  Unlock,;
-  Bell,;
-  BellOff,;
-  Star as StarIcon,;
-  Heart as HeartIcon,;
-  ThumbsUp,;
-  ThumbsDown,;
-  MessageCircle,;
-  Send,;
-  Paperclip,;
-  Smile,;
-  Frown,;
-  Meh,;
-  Laugh,;
-  Angry,;
-  Sad,;
-  Surprised,;
-  Wink,;
-  Kiss,;
-  Tongue,;
-  Wink2,;
-  KissWinkHeart,;
-  KissClosedEyes,;
-  StuckOutTongue,;
-  StuckOutTongueWinkingEye,;
-  StuckOutTongueClosedEyes,;
-  Disappointed,;
-  Worried,;
-  Angry2,;
-  Rage,;
-  Cry,;
-  Scream,;
-  Confounded,;
-  Hugging,;
-  Smirk,;
-  NoMouth,;
-  NeutralFace,;
-  Expressionless,;
-  Unamused,;
-  RollingEyes,;
-  Thinking,;
-  LyingFace,;
-  HandOverMouth,;
-  ShushingFace,;
-  ExplodingHead,;
-  CowboyHatFace,;
-  DisguisedFace,;
-  Sunglasses,;
-  NerdFace,;
-  MonocleFace,;
-  Confused,;
-  WorriedFace,;
-  SlightlyFrowningFace,;
-  OpenMouth,;
-  Hushed,;
-  Astonished,;
-  Flushed,;
-  PleadingFace,;
-  FrowningFace,;
-  AnguishedFace,;
-  FearfulFace,;
-  ColdSweat,;
-  DisappointedRelieved,;
-  CryFace,;
-  LoudlyCryingFace,;
-  ScreamFace,;
-  StuckOutTongueFace,;
-  DroolingFace,;
-  UnamusedFace,;
-  SweatSmile,;
-  Sweat,;
-  WearyFace,;
-  TiredFace,;
-  SleepyFace,;
-  YawningFace,;
-  DizzyFace,;
-  ExplodingHeadFace,;
-  CowboyHatFace2,;
-  DisguisedFace2,;
-  SunglassesFace,;
-  NerdFace2,;
-  MonocleFace2,;
-  ConfusedFace,;
-  WorriedFace2,;
-  SlightlyFrowningFace2,;
-  OpenMouthFace,;
-  HushedFace,;
-  AstonishedFace,;
-  FlushedFace,;
-  PleadingFace2,;
-  FrowningFace2,;
-  AnguishedFace2,;
-  FearfulFace2,;
-  ColdSweatFace,;
-  DisappointedRelievedFace,;
-  CryFace2,;
-  LoudlyCryingFace2,;
-  ScreamFace2,;
-  StuckOutTongueFace2,;
-  DroolingFace2,;
-  UnamusedFace2,;
-  SweatSmileFace,;
-  SweatFace,;
-  WearyFace2,;
-  TiredFace2,;
-  SleepyFace2,;
-  YawningFace2,;
-  DizzyFace2,;
-
-} from "lucide-react";
-<<<<<<< HEAD
-  DizzyFace2
-} from 'lucide-react';
-origin/automation-improvements-final
-=======
-
-"
-} from "lucide-react";
-  DizzyFace2'
-} from 'lucide-react';
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-  Mail;
-  Lock;
-  Eye;
-  EyeOff;
-  ArrowRight;
-  CheckCircle;
-  AlertCircle;
-  User;
-  Shield;
-  Globe;
-  Smartphone;
-  Monitor;
-  Server;
-  Database;
-  Cloud;
-  Brain;
-  Code;
-  Settings;
-  Wrench;
-  Cog;
-  Activity;
-  PieChart;
-  BarChart;
-  TrendingUp;
-  DollarSign;
-  ShoppingCart;
-  Home;
-  Trash2;
-  Camera;
-  Heart;
-  ClipboardList;
-  TreePine;
-  Droplets;
-  Building;
-  Rocket;
-  Lightbulb;
-  Target;
-  MessageSquare;
-  HelpCircle;
-  Info;
-  XCircle;
-  Plus;
-  Minus;
-  ChevronUp;
-  ChevronRight;
-  ChevronLeft;
-  ChevronDown;
-  ArrowUp;
-  ArrowDown;
-  ArrowLeft;
-  Pause;
-  Stop;
-  SkipForward;
-  SkipBack;
-  Volume2;
-  VolumeX;
-  Maximize;
-  Minimize;
-  RotateCcw;
-  RotateCw;
-  RefreshCw;
-  Upload;
-  Share;
-  Copy;
-  Edit;
-  Trash;
-  Save;
-  Unlock;
-  Bell;
-  BellOff;
-  Star as StarIcon;
-  Heart as HeartIcon;
-  ThumbsUp;
-  ThumbsDown;
-  MessageCircle;
-  Send;
-  Paperclip;
-  Smile;
-  Frown;
-  Meh;
-  Laugh;
-  Angry;
-  Sad;
-  Surprised;
-  Wink;
-  Kiss;
-  Tongue;
-  Wink2;
-  KissWinkHeart;
-  KissClosedEyes;
-  StuckOutTongue;
-  StuckOutTongueWinkingEye;
-  StuckOutTongueClosedEyes;
-  Disappointed;
-  Worried;
-  Angry2;
-  Rage;
-  Cry;
-  Scream;
-  Confounded;
-  Hugging;
-  Smirk;
-  NoMouth;
-  NeutralFace;
-  Expressionless;
-  Unamused;
-  RollingEyes;
-  Thinking;
-  LyingFace;
-  HandOverMouth;
-  ShushingFace;
-  ExplodingHead;
-  CowboyHatFace;
-  DisguisedFace;
-  Sunglasses;
-  NerdFace;
-  MonocleFace;
-  Confused;
-  WorriedFace;
-  SlightlyFrowningFace;
-  OpenMouth;
-  Hushed;
-  Astonished;
-  Flushed;
-  PleadingFace;
-  FrowningFace;
-  AnguishedFace;
-  FearfulFace;
-  ColdSweat;
-  DisappointedRelieved;
-  CryFace;
-  LoudlyCryingFace;
-  ScreamFace;
-  StuckOutTongueFace;
-  DroolingFace;
-  UnamusedFace;
-  SweatSmile;
-  Sweat;
-  WearyFace;
-  TiredFace;
-  SleepyFace;
-  YawningFace;
-  DizzyFace;
-  ExplodingHeadFace;
-  CowboyHatFace2;
-  DisguisedFace2;
-  SunglassesFace;
-  NerdFace2;
-  MonocleFace2;
-  ConfusedFace;
-  WorriedFace2;
-  SlightlyFrowningFace2;
-  OpenMouthFace;
-  HushedFace;
-  AstonishedFace;
-  FlushedFace;
-  PleadingFace2;
-  FrowningFace2;
-  AnguishedFace2;
-  FearfulFace2;
-  ColdSweatFace;
-  DisappointedRelievedFace;
-  CryFace2;
-  LoudlyCryingFace2;
-  ScreamFace2;
-  StuckOutTongueFace2;
-  DroolingFace2;
-  UnamusedFace2;
-  SweatSmileFace;
-  SweatFace;
-  WearyFace2;
-  TiredFace2;
-  SleepyFace2;
-  YawningFace2;
-  DizzyFace2"
-} from "lucide-react";
-<<<<<<< HEAD
-    email: ""
-    password: ""
-    email: "",
-    password: "",;
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-=======
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    const { name, value } = e.target;
-    setFormData(prev => ({}
-      ...prev,
-<<<<<<< HEAD
-      [name]: value,
-  const [error, setError] = useState('');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-origin/automation-improvements-final
-      ...prev
-      [name]: value
-=======
-      [name]: value;
-      ...prev;
-      [name]: value;
-export default function LoginPage() {}
-  const [formData, setFormData] = useState({}
-"
-    email: "",";
-    password: "",;
-
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {}
-    e.preventDefault();
-<<<<<<< HEAD
-    setIsLoading(true);
-    setError("");
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-=======
-
-    setIsLoading(true);
-"
-    setError("");
-    try {}
-      // Simulate API call;
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        setError("Please fill in all fields");
-      }
-    } catch (err) {;"
-      setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    setError('');
-
-    try {}
-      // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For demo purposes, accept any email/password;
-      if (formData.email && formData.password) {}
-        // Redirect to dashboard or home page'
-        window.location.href = '/';
-      } else {'
-        setError('Please fill in all fields');
-      }
-    } catch (err) {'
-      setError('Login failed. Please try again.');
-<<<<<<< HEAD
-    } finally {
-=======
-
-    } finally {}
-    } finally {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    } finally {;
-      setIsLoading(false);
-    }
-  }
+import { useUser } from '@auth0/nextjs-auth0/client',
+import { useEffect } from 'react',
+import Link from 'next/link',
+import Head from 'next/head',
+const LoginPage = () => {
+  const { userrorisLoading } = useUser(),
+  const router = useRouter(),
+  useEffect(() => {
+    // Redirect authenticated users to dashboard,
+    if (user && !isLoading) {
+      const returnTo = router.query.returnTo as string || '/dashboard',
+      router.push(returnTo)}
+  }[userisLoadingrouter]),
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">,
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-60o0"></div>,
+      </div>)}
+,
+  if (user) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">,
+        <div className="text-center">,
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>,
+          <p className="text-gray-60o0 mb-4">Redirecting to dashboard...</p>,
+        </div>,
+      </div>)}
+,
   return (
-<<<<<<< HEAD
-      </Head>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-=======
-
-
-      </Head>"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        <div className="max-w-md w-full space-y-8">
-          <motion.div"
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >"
-            <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">"
-              <Shield className="h-6 w-6 text-white" />
-            </div>"
-            <h2 className="mt-6 text-3xl font-bold text-gray-900">
-<<<<<<< HEAD
-              Sign in to your account
-            </h2>
-            <p className="mt-2 text-sm text-gray-600">
-              <Link
-=======
-              Sign in to your account;
-            </h2>"
-            <p className="mt-2 text-sm text-gray-600">
-
-
-
-
-
-
-              <Link"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                href="/contact"
-"
-                className="font-medium text-blue-600 hover:text-blue-500">;
-                contact us for access;
-              </Link>;
-            </p>;
-          </motion && motion.div>;
-          <motion&& motion.div;
-"
-            className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;"
-            <form className="space-y-6" onSubmit={handleSubmit}>;
-              {error && (;
-                <motion&& motion.div"
-                  className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg flex items-center"
-                  initial={{ opacity: 0, scale: 0 && 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0 && 0.3 }}>;"
-                  <AlertCircle className="h-5 w-5 mr-2" />;
-                  {error}
-                </motion && motion.div>;
-              )}
-<<<<<<< HEAD
-                  Email address
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-=======
-
-
-
-                  Email address;
-                </label>"
-                <div className="relative">"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    <Mail className="h-5 w-5 text-gray-400" />
-                  </div>
-
-              <div>;
-                <label"
-                  htmlFor="email""
-                  className="block text-sm font-medium text-gray-700 mb-2">;
-                  Email address;
-                </label>;"
-                <div className="relative">;"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
-                    <Mail className="h-5 w-5 text-gray-400" />;
-                  </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Lock, Eye } from 'lucide-react';
-=======
-'
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Mail, Lock, Eye } from 'lucide-react';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import Layout from '../components/Layout';
-
-export default function LoginPage() {}
-  const [formData, setFormData] = useState({'
-    email: '','
-    password: '';
-  });
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
-    setFormData({}
-      ...formData,
-      [e.target.name]: e.target.value;
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {}
-    e.preventDefault();
-    // Handle login logic here;
-  };
-
-  return ("
-    <Layout title="Login - Zion Tech Group">"
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">"
-        <div className="max-w-md w-full space-y-8">
-          <div>"
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your account;
-            </h2>
-          </div>"
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>"
-            <div className="space-y-4">
-              <div>"
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email address;
-                </label>"
-                <div className="mt-1 relative">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                    required
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Enter your email"
-=======
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">"
-</h2>
-          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>"
-</form>"
-            <div className="space-y-4">"
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">"
-</label>
-                </label>"
-                <div className="mt-1 relative">"
-                  <input;"
-                    id="email"""
-                    name="email"""
-                    type="email""
-                    required;"
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"""
-                    placeholder="Enter your email""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/login.tsx
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-</input>"
-                  <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />"
-
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">"
-                    id="password"""
-                    name="password"""
-                    type={showPassword ? 'text' : 'password'}
-                    required;
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 pr-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"""
-                    placeholder="Enter your password""
-                    value={formData.password}
-                  <Lock className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />"
-
-                  <button;"
-                    type="button"""
-                    className="absolute right-3 top-2.5 h-5 w-5 text-gray-400""
-                    onClick={() => setShowPassword(!showPassword)}
-</button>"
-                    <Eye className="h-5 w-5" />"
-
-                  </button>
-
-                type="submit"""
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500""
-              >
-          </form>
-</Eye>
-
-                  </button>
-                </div>
-              </div>
-            </div>
-
-
-            <div>
-</div>
-              <button;"
-                type="submit"""
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500""
-              >
-</button>
-
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-<<<<<<< HEAD:pages/login.tsx
-    </Layout>
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                    autoComplete="email"
-                    required
-                    value={formData && formData.email}
-                    onChange={handleInputChange}
-                    className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                    placeholder="Enter your email"
-                  Password
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-=======
-
-                  <input"
-                    id="email""
-                    name="email""
-                    type="email"
-
-
-                  Password;
-                </label>"
-                <div className="relative">"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    <Lock className="h-5 w-5 text-gray-400" />
-                  </div>
-                  />;
-                </div>;
-              </div>;
-
-              <div>;
-                <label"
-                  htmlFor="password""
-                  className="block text-sm font-medium text-gray-700 mb-2">;
-                  Password;
-                </label>;"
-                <div className="relative">;"
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;"
-                    <Lock className="h-5 w-5 text-gray-400" />;
-                  </div>;
-                  <input"
-                    id="password""
-                    name="password""
-                    type={showPassword ? "text" : "password"}"
-                    autoComplete="current-password"
-                    required;
-                    value={formData && formData.password}
-                    onChange={handleInputChange}"
-                    className="appearance-none relative block w-full pl-10 pr-10 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm""
-                    placeholder="Enter your password"
-                  />;
-                  <button"
-                    type="button""
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >;
-                    {showPassword ? (;"
-                      <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
-                    ) : (;"
-                      <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
-                    )}
-<<<<<<< HEAD
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                    Remember me
-=======
-
-                  <input"
-                    id="remember-me""
-                    name="remember-me""
-                    type="checkbox""
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-
-
-                    Remember me;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  </label>
-                </div>"
-                <div className="text-sm">
-                  <Link"
-                    href="/forgot-password""
-                    className="font-medium text-blue-600 hover:text-blue-500"
-                  >
-                    Forgot your password?
-                  </Link>
-                </div>
-              </div>
-              <div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                </div>
-              </div>"
-              <div className="mt-6 grid grid-cols-2 gap-3">"
-                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">"
-                  <Globe className="h-5 w-5" />"
-                  <span className="ml-2">Google</span>
-                </button>"
-                <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">"
-                  <User className="h-5 w-5" />"
-                  <span className="ml-2">Microsoft</span>
-                </button>
-              </div>
-            </div>
-          </motion.div>
-          <motion.div"
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >"
-            <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-              <Link
-                href="/contact"
-=======
-
-
-
-
-
-
-              <Link"
-                href="/contact""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                className="font-medium text-blue-600 hover:text-blue-500">;
-                Contact us to get started;
-              </Link>;
-            </p>;
-          </motion && motion.div>;
-        </div>;
-      </div>;
-    </Layout>;
-  );
-              <div>;
-                <button;"
-                  type="submit";
-                  disabled={is_loading}"
-                  className="group relative w - full flex justify - center py - 3 px - 4 border border - transparent text - sm font - medium rounded - lg text - white bg - blue - 600 hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 disabled:opacity - 50 disabled:cursor - not - allowed transition - colors";
-                >;
-                  {is_loading ? ("
-                    <div className="flex items - center">;"
-                      <div className="animate - spin rounded - full h - 4 w - 4 border - b-2 border - white mr - 2"></div>;
-                      Signing in...;
-                    </div>) : ("
-                    <div className="flex items - center">;
-                      Sign in;"
-                      <ArrowRight className="ml - 2 h - 4 w - 4 group - hover:translate - x-1 transition - transform" />;
-                    </div>)}
-                </button>;
-              </div>;
-            </form>;"
-            <div className="mt - 6">;"
-              <div className="relative">;"
-                <div className="absolute inset - 0 flex items - center">;"
-                  <div className="w - full border - t border - gray - 300" />;
-                </div>;"
-                <div className="relative flex justify - center text - sm">;"
-                  <span className="px - 2 bg - white text - gray - 500">;
-                    Or continue with;
-                  </span>;
-                </div>;
-              </div>;"
-              <div className="mt - 6 grid grid - cols - 2 gap - 3">;"
-                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;"
-                  <Globe className="h - 5 w - 5" />;"
-                  <span className="ml - 2">Google</span>;
-                </button>;"
-                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;"
-                  <User className="h - 5 w - 5" />;"
-                  <span className="ml - 2">Microsoft</span>;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-          <motion.div;"
-            className="text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >;"
-            <p className="text - sm text - gray - 600">;'"
-              Don't have an account?{" "}
-              <Link;"
-                href="/contact";"
-                className="font - medium text - blue - 600 hover:text - blue - 500";
-              >;
-                Contact us to get started;
-              </Link>;
-            </p>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </Layout>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    required
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-=======
-
-                    required"
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    placeholder="Enter your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />"
-                  <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                </div>
-              </div>
-              <div>"
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                  Password;
-                </label>"
-                <div className="mt-1 relative">
-                  <input"
-                    id="password""
-                    name="password"'
-                    type={showPassword ? 'text' : 'password'}
-                    required"
-                    className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 pr-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500""
-                    placeholder="Enter your password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />"
-                  <Lock className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
-                  <button"
-                    type="button""
-                    className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >"
-                    <Eye className="h-5 w-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <button"
-                type="submit""
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Sign in;
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </Layout>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-}
-=======
-
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </Layout>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a:pages-disabled/login.tsx
+    <>,
+      <Head>,
+        <title>Sign In - Zion Tech Marketplace</title>,
+        <meta name="description" content="Sign in to your Zion Tech Marketplace account"  />,
+      </Head>,
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">,
+        <div className="max-w-md w-full space-y-8">,
+          <div>,
+            <div className="mx-auto h-12 w-auto">,
+              <img
+                className="mx-auto h-12 w-auto",
+                src="/logos/zion-logo.png",
+                alt="Zion Tech",
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement,
+                  target.style.display = 'none'}}
+              />,
+            </div>,
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-90o0">,
+              Sign in to your account,
+            </h2>,
+          <p className="mt-2 text-center text-sm text-gray-60o0">,
+            Or{' '}
+            <Link href="/auth/register" className="font-medium text-blue-60o0 hover: text-blue-50o0">,
+              create a new account,
+            </Link>,
+          </p>,
+          <p className="mt-2 text-center text-sm">,
+            <Link href="/forgot-password" className="text-blue-60o0 hover:text-blue-50o0">,
+              Forgot password?,
+            </Link>,
+          </p>,
+        </div>,
+          {error && (
+            <div className="bg-red-50 border border-red-20o0 rounded-md p-4">,
+              <div className="flex">,
+                <div className="flex-shrink-0">,
+                  <svg className="h-5 w-5 text-red-40o0" viewBox="0 0 20 20" fill="currentColor">,
+                    <path fillRule="evenodd" d="M10 18a8 8 0 10o0-16 8 8 0 0o00 16zM8.70o7 7.293a1 1 0 0o0-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 10o1.414 1.414L10 11.414l1.293 1.293a1 1 0 0o01.414-1.414L11.414 10l1.293-1.293a1 1 0 0o0-1.414-1.414L10 8.586 8.70o7 7.293z" clipRule="evenodd"  />,
+                  </svg>,
+                </div>,
+                <div className="ml-3">,
+                  <h3 className="text-sm font-medium text-red-80o0">,
+                    Authentication Error,
+                  </h3>,
+                  <div className="mt-2 text-sm text-red-70o0">,
+                    <p>{error.message}</p>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>)}
+,
+          <div className="space-y-4">,
+            {/* Primary login button */}
+            <div>,
+              <a
+                href="/api/auth/login",
+                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-60o0 hover: bg-blue-70o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-50o0 transition-colors duration-20o0">,
+                <span className="absolute left-0 inset-y-0 flex items-center pl-3">,
+                  <svg className="h-5 w-5 text-blue-50o0 group-hover:text-blue-40o0" fill="currentColor" viewBox="0 0 20 20">,
+                    <path fillRule="evenodd" d="M5 9V7a5 5 0 0o110 0v2a2 2 0 0o12 2v5a2 2 0 0o1-2 2H5a2 2 0 0o1-2-2v-5a2 2 0 0o12-2zm8-2v2H7V7a3 3 0 0o16 0z" clipRule="evenodd"  />,
+                  </svg>,
+                </span>,
+                Sign in,
+              </a>,
+            </div>,
+            {/* Social login options */}
+            <div className="mt-6">,
+              <div className="relative">,
+                <div className="absolute inset-0 flex items-center">,
+                  <div className="w-full border-t border-gray-30o0"  />,
+                </div>,
+                <div className="relative flex justify-center text-sm">,
+                  <span className="px-2 bg-gray-50 text-gray-50o0">Or continue with</span>,
+                </div>,
+              </div>,
+              <div className="mt-6 grid grid-cols-2 gap-3">,
+                <a
+                  href="/api/auth/login?connection=google-oauth2",
+                  className="w-full inline-flex justify-center py-2 px-4 border border-gray-30o0 rounded-md shadow-sm bg-white text-sm font-medium text-gray-50o0 hover: bg-gray-50 transition-colors duration-20o0">,
+                  <svg className="h-5 w-5" viewBox="0 0 24 24">,
+                    <path fill="currentColor" d="M22.56 12.25c0-.78-.0o7-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.0o4 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"  />,
+                    <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.0o6-3.71 1.0o6-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"  />,
+                    <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.0o7H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"  />,
+                    <path fill="currentColor" d="M12 5.38c1.62 0 3.0o6.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.0o7l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"  />,
+                  </svg>,
+                  <span className="ml-2">Google</span>,
+                </a>,
+                <a
+                  href="/api/auth/login?connection=github",
+                  className="w-full inline-flex justify-center py-2 px-4 border border-gray-30o0 rounded-md shadow-sm bg-white text-sm font-medium text-gray-50o0 hover:bg-gray-50 transition-colors duration-20o0">,
+                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">,
+                    <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.0o17c0 4.425 2.865 8.18 6.839 9.50o4.5.092.682-.217.682-.483 0-.237-.0o08-.868-.0o13-1.70o3-2.782.60o5-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.0o69-.608.0o69-.608 1.0o03.0o7 1.531 1.0o32 1.531 1.0o32.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.0o29-2.688-.10o3-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.0o26A9.564 9.564 0 0o110 4.844c.85.0o04 1.70o5.115 2.50o4.337 1.909-1.296 2.747-1.0o27 2.747-1.0o27.546 1.379.20o3 2.398.1 2.651.64.7 1.0o28 1.595 1.0o28 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.0o12 2.419-.0o12 2.747 0 .268.18.58.688.482A10.0o19 10.0o19 0 0o020 10.0o17C20 4.484 15.522 0 10 0z" clipRule="evenodd"  />,
+                  </svg>,
+                  <span className="ml-2">GitHub</span>,
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+          <div className="text-center">,
+            <p className="text-xs text-gray-50o0">,
+              By signing inyou agree to our{' '}
+              <Link href="/legal/terms" className="text-blue-60o0 hover: text-blue-50o0">,
+                Terms of Service,
+              </Link>{' '}
+              and{' '}
+              <Link href="/legal/privacy" className="text-blue-60o0 hover: text-blue-50o0">,
+                Privacy Policy,
+              </Link>,
+            </p>,
+          </div>,
+        </div>,
+      </div>,
+    </>)};
+export default LoginPage;

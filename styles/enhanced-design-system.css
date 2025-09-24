@@ -12,7 +12,7 @@
 /* Enhanced Typography */
 .enhanced-text {
   font-family:
-    "Inter",
+    'Inter',
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
@@ -92,7 +92,7 @@
   background-color: rgba(0, 0, 0, 0.06);
 }
 .skeleton::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -150%;

@@ -1,466 +1,57 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-export interface FraudEvent {;
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-// Fraud detection types
-=======
-// Fraud detection types;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-export type AdminActionType =
-  | "ban_user""
-  | "suspend_user""
-  | "flag_content""
-  | "remove_content""
-  | "investigate""
-  | "dismiss"";
-  | "escalate";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+// Fraud detection types,
+export type AdminActionType =,
+  | 'ban_user',
+  | 'suspend_user',
+  | 'flag_content',
+  | 'remove_content',
+  | 'investigate',
+  | 'dismiss',
+  | 'escalate',
+  id: string,
+  case_id: string,
+  type: AdminActionType,
 export interface AdminAction {
-=======
-
-
-=======
-export interface AdminAction {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-export interface AdminAction {;
-export interface AdminAction {};
-export interface AdminAction {;
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  id: string;
-<<<<<<< HEAD
-  userId: string | null;
-  source: MonitoredSource;
-  content: string | null;
-  metadata: Record<string unknown> | null;
-  ipAddress: string | null;
-  createdAt: string, // ISO string;
-}
-<<<<<<< HEAD
-;
-export interface HeuristicEvaluation {;
-  flagged: boolean;
-  reasons: string[];
-  severity: 'low' | 'medium' | 'high';
-}
-;
-export interface GptClassification {;
-  label: GptClassificationLabel;
+  id: string,
+  case_id: string,
+  type: AdminActionType,
+  admin_id: string,
   reason: string;
-  confidence: number, // 0..1;
+  details: Record < string, any>,
+  created_at: string,
+  executed_at?: string,
+  status: 'pending' | 'executed' | 'failed';
 }
-;
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-export interface StoredFraudRecord extends FraudEvent {;
-  heuristic: HeuristicEvaluation;
-  gpt?: GptClassification;
-  autoHidden: boolean;
-  status: FraudReviewStatus;
-}
-;
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
-export interface AdminActionRecord {;
-  id: string;
-  fraudId: string;
-  action: AdminActionType;
-  adminId: string | null;
-  reason: string | null;
-  createdAt: string, // ISO;
-}
-;
-export interface PrivacySettings {;
-  userId: string;
-  monitoringContentAnalysisOptOut: boolean;
-  updatedAt: string, // ISO;
-}
-;
-export interface ListFilters {;
-  source?: MonitoredSource;
-  userId?: string;
-  label?: GptClassificationLabel;
-  status?: FraudReviewStatus;
-}
-;
-export interface MonthlyReport {;
-  month: string, // YYYY-MM;
-  totals: {;
-    all: number;
-    safe: number;
-    suspicious: number;
-    dangerous: number;
-  };
-  bySource: Record<MonitoredSource number>;
-  falsePositives: number, // count of IGNORED actions;
-  topReasons: Array<{ reason: string, count: number }>;
-}
-=======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
 export interface FraudDetectionResult {
-  is_fraud: boolean;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-export interface AdminAction {  id: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export interface AdminAction {  id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export interface AdminAction {
-
-export interface AdminAction {;
-export interface AdminAction {
-
-export interface AdminAction {;
-
-  id: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  case_id: string;
-  type: AdminActionType;
-
-export interface AdminAction {  id: string;
-  case_id: string;
-  type: AdminActionType;
-  adminId: string;
-  reason: string;
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;"
-  status: "pending" | "executed" | "failed";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-=======
-=======
-
-  admin_id: string;
-=======
-admin_id: string;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  reason: string,
-  details: Record < string, any>;
-  created_at: string;
-  executed_at?: string;
-  status: 'pending' | 'executed' | 'failed',
-
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-export interface FraudDetectionResult {
-  is_fraud: boolean;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-}
-
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export interface FraudDetectionResult {
-  is_fraud: boolean;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-}
-
-
-}
-
-}
-
-export interface FraudDetectionResult {;
-<<<<<<< HEAD
-  isFraud: boolean;
-  confidence: number;
-  reasons: string[];
-
-
-  isFraud: boolean;
-  confidence: number;
-  reasons: string[];  confidence: number;
-  reasons: string[];
-
-  suggested_actions: AdminActionType[],
-  metadata: Record < string, any>;
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface FraudDetectionConfig {}
-
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  is_fraud: boolean,
+  isFraud: boolean>>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
+  confidence: number,
+  reasons: string[],
 export interface FraudDetectionConfig {
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}
-
-
-export interface FraudDetectionConfig {;
-
-
-
-
-
-  suggestedActions: AdminActionType[];
-  metadata: Record<string, any>;
-}
-
-export interface FraudDetectionConfig {;
-
-
-  enabled: boolean;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
+  enabled: boolean,
   rules: {
     suspiciousActivity: {
-      enabled: boolean;
-
-
-
-      threshold: number,
+      enabled: boolean,
+      threshold: number;
     }
     fake_profile: {
-      enabled: boolean;
-
+      enabled: boolean,
       threshold: number;
-    };
-export interface FraudDetectionConfig {}
-
-export interface FraudDetectionConfig {
-};
-    fakeProfile: {
-      enabled: boolean;
-      threshold: number
-};
-    paymentFraud: {
-      enabled: boolean;
-      threshold: number
-};
-    spam: {
-      enabled: boolean;
-      threshold: number
-};
-  };
-  autoActions: {
-    enabled: boolean;
-    actions: AdminActionType[];
-    confidenceThreshold: number;
-  };
-threshold: number,
     }
     payment_fraud: {
-      enabled: boolean;
-      threshold: number,
+      enabled: boolean,
+      threshold: number;
     }
     spam: {
-      enabled: boolean;
-      threshold: number,
+      enabled: boolean,
+      threshold: number;
     }
   }
   auto_actions: {
-    enabled: boolean;
-    actions: AdminActionType[];
-    confidence_threshold: number,
-  }
+    enabled: boolean,
+    actions: AdminActionType[]}
 }
-
-
-
-
-
-
-    confidenceThreshold: number,
-  };
-
-
-}
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-export interface FraudEvent {;
-  id: string;
-  userId: string | null;
-  source: MonitoredSource;
-  content: string | null;
-  metadata: Record<string unknown> | null;
-  ipAddress: string | null;
-  createdAt: string, // ISO string;
-}
-;
-export interface HeuristicEvaluation {;
-  flagged: boolean;
-  reasons: string[];
-  severity: 'low' | 'medium' | 'high';
-}
-;
-export interface GptClassification {;
-  label: GptClassificationLabel;
-  reason: string;
-  confidence: number, // 0..1;
-}
-;
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-export interface StoredFraudRecord extends FraudEvent {;
-  heuristic: HeuristicEvaluation;
-  gpt?: GptClassification;
-  autoHidden: boolean;
-  status: FraudReviewStatus;
-}
-;
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
-export interface AdminActionRecord {;
-  id: string;
-  fraudId: string;
-  action: AdminActionType;
-  adminId: string | null;
-  reason: string | null;
-  createdAt: string, // ISO;
-}
-;
-export interface PrivacySettings {;
-  userId: string;
-  monitoringContentAnalysisOptOut: boolean;
-  updatedAt: string, // ISO;
-}
-;
-export interface ListFilters {;
-  source?: MonitoredSource;
-  userId?: string;
-  label?: GptClassificationLabel;
-  status?: FraudReviewStatus;
-}
-;
-export interface MonthlyReport {;
-  month: string, // YYYY-MM;
-  totals: {;
-    all: number;
-    safe: number;
-    suspicious: number;
-    dangerous: number;
-  };
-  bySource: Record<MonitoredSource number>;
-  falsePositives: number, // count of IGNORED actions;
-  topReasons: Array<{ reason: string, count: number }>;
-}
-    confidenceThreshold: number
-};
-    confidenceThreshold: number,
-  };
-
-}}
-}
-// Fraud detection types;
-export type AdminActionType =
-  | "ban_user"""
-  | "suspend_user"""
-  | "flag_content"""
-  | "remove_content"""
-  | "investigate"""
-  | "dismiss"""
-  | "escalate";"
-export interface AdminAction {
-  // TODO: Implement
-}
-export interface AdminAction {;
-  // TODO: Implement
-
-  id: string;,
-  case_id: string;
-  type: AdminActionType;,
-  adminId: string;
-  reason: string;,
-  details: Record<string, any>;
-</string>
-  metadata: Record<string, any>;
-  metadata: Record < string, any>;
-
-export interface FraudDetectionConfig {
-  // TODO: Implement
-
-
-export interface FraudDetectionConfig {;
-
-  enabled: boolean;,
-  rules: {
-    suspiciousActivity: {,
-  enabled: boolean;
-
-
-      threshold: number,
-    fake_profile: {,
-      threshold: number;
-    };
-    fakeProfile: {,
-    paymentFraud: {,
-    spam: {,
-  autoActions: {,
-    actions: AdminActionType[];,
-  confidenceThreshold: number;
-    confidenceThreshold: number,
-
-"
-pr-12325
-export type MonitoredSource = 'signup' | 'job post' | 'message' | 'quote' | 'review';
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

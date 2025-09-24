@@ -1,0 +1,117 @@
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, ChevronRight, Search, User, ShoppingCart, 
+  Brain, Atom, Shield, Rocket, Cpu, Database, Target, Sparkles,
+  Home, Briefcase, Users, FileText, Phone, Mail, MapPin, Globe,
+  Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
+  GraduationCap, Building, Truck, Zap as ZapIcon, Heart, DollarSign
+} from 'lucide-react';
+} from 'lucide-react';
+interface NavigationItem {
+  label: string;
+  href?: string;
+  children?: NavigationItem[];
+  icon?: React.ReactNode;
+  description?: string;
+}
+  badge?: string;
+}
+// Memoized navigation items for better performance
+const navigationItems: NavigationItem[] = [
+  {
+    label: 'Home',
+    href: '/',
+    icon: <Zap className="w-4 h-4" />
+  },
+  {
+    label: 'Services',
+    children: [
+      {
+        label: 'AI & Machine Learning',
+        href: '/ai-services',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Advanced AI solutions for enterprise'
+      },
+      {
+        label: 'Quantum Computing',
+        href: '/quantum-services',
+        icon: <Zap className="w-4 h-4" />,
+        description: 'Next-generation quantum solutions'
+      },
+      {
+        label: 'Space Technology',
+        href: '/space-tech',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Innovative space solutions'
+      },
+      {
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: <Lock className="w-4 h-4" />,
+        description: 'Enterprise security solutions'
+      },
+      {
+        label: 'Cloud Solutions',
+        href: '/cloud-platform',
+        icon: <Globe className="w-4 h-4" />,
+        description: 'Scalable cloud infrastructure'
+      },
+      {
+        label: 'Micro SaaS',
+        href: '/micro-saas',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Rapid deployment SaaS solutions'
+      },
+      {
+        label: 'View All Services',
+        href: '/services',
+        icon: <ArrowRight className="w-4 h-4" />,
+        description: 'Complete service portfolio'
+      }
+    ]
+  },
+  {
+    label: 'Solutions',
+    children: [
+      {
+        label: 'Enterprise IT',
+        href: '/enterprise-solutions-showcase',
+        icon: <Globe className="w-4 h-4" />,
+        description: 'Complete enterprise IT solutions'
+      },
+      {
+        label: 'Healthcare',
+        href: '/healthcare-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Healthcare technology solutions'
+      },
+      {
+        label: 'Financial Services',
+        href: '/financial-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Fintech and banking solutions'
+      },
+      {
+        label: 'Manufacturing',
+        href: '/manufacturing-ai-solutions',
+        icon: <Star className="w-4 h-4" />,
+        description: 'Smart manufacturing solutions'
+      }
+    ]
+  },
+  {
+    label: 'About',
+    href: '/about',
+    icon: <Users className="w-4 h-4" />
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+    icon: <Mail className="w-4 h-4" />
+  }
+];
+const UltraFuturisticNavigation2040: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);

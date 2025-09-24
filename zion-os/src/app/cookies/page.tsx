@@ -1,1262 +1,283 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CookiesPage() {;
-  return (;
-
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">;
-      {/* Hero Section */}
-      <section className="relative mb-20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center">;
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-              Cookie <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Policy</span>;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">;
-=======
-
-export default function CookiesPage() {;
-  return (;
-
-    <div className="min-h-screen py-20">;
-export default /**
- * CookiesPage - Function description
- */
-function CookiesPage() {
   return (
-    <div className="min - h-screen py - 20">;
-export default function CookiesPage() {return (;
-export default function CookiesPage() {;
-  return (;
-    <div className="min-h-screen py-20">;
-    <div className="min-h-screen py-20">;    <div className="min-h-screen py-20">;
+    <div className='min-h-screen py-20'>
       {/* Hero Section */}
-      <section className="relative mb-20">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="text-center">;
-            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb-6">;
-              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text-transparent">Policy</span>;
-            </h1>;
-<<<<<<< HEAD
-            <p className="text - xl text - white / 80 max - w-4xl mx-auto">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    <div className="min-h-screen py-20">;    <div className="min-h-screen py-20">;
-      {/* Hero Section */}
-      <section className="relative mb-20">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="text-center">;
-            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb-6">;
-              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text-transparent">Policy</span>;
-            </h1>;
-            <p className="text - xl text - white / 80 max - w-4xl mx-auto">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-export default function CookiesPage() { return null; }
-function CookiesPage() {}
-  return ("
-    <div className="min - h-screen py - 20">;
-
-"
-    <div className="min-h-screen py-20">;
-
-      {/* Hero Section */}"
-      <section className="relative mb - 20">;"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="text - center">;"
-            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;"
-              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">Policy</span>;
-            </h1>;"
-            <p className="text - xl text - white / 80 max - w-4xl mx - auto">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <p className="text - xl text - white / 80 max - w-4xl mx - auto">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <section className="relative mb-20">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center">;
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-              Cookie <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Policy</span>;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-4xl mx-auto">;
-            <p className="text - xl text - white / 80 max - w-4xl mx-auto">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              Information about how we use cookies and similar technologies on our website to enhance your browsing experience.;
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
+      <section className='relative mb-20'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8'>
+          <div className='text-center'>
+            <h1 className='text-4xl md: text-6xl font-bold text-white mb-6'>;,
+              Cookie{' '}
+              <span className='bg-gradient-to-r from-purple-4000 to-cyan-4000 bg-clip-text text-transparent'>
+                Policy;
+              </span>
+            </h1>
+            <p className='text-xl text-white/80 max-w-4xl mx-auto'>
+              Information about how we use cookies and similar technologies on: our website to enhance your browsing experience.;
+            </p>
+          </div>
+        </div>
+      </section>;,
       {/* Cookie Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="mb-20">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="space-y-8">;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">What Are Cookies?</h2>;
-              <p className="text-white/80 mb-4">;
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.;
-              </p>;
-              <p className="text-white/80">;
-                Cookies are widely used to make websites work more efficiently and to provide information to website owners.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">How We Use Cookies</h2>;
-              <p className="text-white/80 mb-4">;
-                Zion Tech Group uses cookies and similar technologies for several purposes:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-=======
-=======
-      <section className="mb-20">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="space-y-8">;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">What Are Cookies?</h2>;
-              <p className="text - white / 80 mb-4">;
-<<<<<<< HEAD
-=======
-      <section className="mb - 20">;
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="space - y-8">;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">What Are Cookies?</h2>;
-              <p className="text - white / 80 mb - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.;
-              </p>;
-              <p className="text-white / 80">;
-                Cookies are widely used to make websites work more efficiently and to provide information to website owners.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">How We Use Cookies</h2>;
-              <p className="text - white / 80 mb-4">;
-                Zion Tech Group uses cookies and similar technologies for several purposes:;
-              </p>;
-<<<<<<< HEAD
-              <ul className="text - white / 70 space - y-2 mb-4">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="space-y-8">;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">What Are Cookies?</h2>;
-              <p className="text - white / 80 mb-4">;
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.;
-              </p>;
-              <p className="text-white / 80">;
-                Cookies are widely used to make websites work more efficiently and to provide information to website owners.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">How We Use Cookies</h2>;
-              <p className="text - white / 80 mb-4">;
-                Zion Tech Group uses cookies and similar technologies for several purposes:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      {/* Cookie Content */}"
-      <section className="mb - 20">;"
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="space - y-8">;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">What Are Cookies?</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.;
-              </p>;"
-              <p className="text - white / 80">;
-                Cookies are widely used to make websites work more efficiently and to provide information to website owners.;
-              </p>;
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">How We Use Cookies</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                Zion Tech Group uses cookies and similar technologies for several purposes:;
-              </p>;"
-              <ul className="text - white / 70 space - y-2 mb - 4">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <section className="mb-20">;
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="space-y-8">;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">What Are Cookies?</h2>;
-              <p className="text-white/80 mb-4">;
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and more useful.;
-              </p>;
-              <p className="text-white/80">;
-                Cookies are widely used to make websites work more efficiently and to provide information to website owners.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">How We Use Cookies</h2>;
-              <p className="text-white/80 mb-4">;
-                Zion Tech Group uses cookies and similar technologies for several purposes:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-              <ul className="text - white / 70 space - y-2 mb-4">;
-    <div className="min-h-screen py-20">;"
-</div>"
-    <div className="min - h-screen py - 20">;"
-      <section className="relative mb - 20">;"
-</section>"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="text - center">;"
-            <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;"
-</h1>"
-              Cookie <span className="bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">Policy</span>;"
-            </h1>;"
-            <p className="text - xl text - white / 80 max - w-4xl mx - auto">;"
-</p>
-            </p>;
-          </div>;
-      </section>;"
-      <section className="mb - 20">;"
-        <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="space - y-8">;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">What Are Cookies?</h2>;""
-              <p className="text - white / 80 mb - 4">;"
-              </p>;"
-              <p className="text - white / 80">;"
-            </div>;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">How We Use Cookies</h2>;""
-              <ul className="text - white / 70 space - y-2 mb - 4">;"
-</ul>
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <li>• To remember your preferences and settings</li>;
-                <li>• To analyze website traffic and usage patterns</li>;
-                <li>• To provide personalized content and advertisements</li>;
-                <li>• To improve website functionality and performance</li>;
-                <li>• To ensure security and prevent fraud</li>;
-                <li>• To understand how visitors interact with our content</li>;
-              </ul>;
-<<<<<<< HEAD
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Types of Cookies We Use</h2>;
-              <div className="space-y-6">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Types of Cookies We Use</h2>;
-              <div className="space-y-6">;
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Types of Cookies We Use</h2>;
-              <div className="space - y-6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Types of Cookies We Use</h2>;
-              <div className="space-y-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <div>;
-                  <h3 className="text - lg font - semibold text - white mb-2">Essential Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
-                  </p>;
-<<<<<<< HEAD
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Types of Cookies We Use</h2>;
-              <div className="space-y-6">;
-                <div>;
-                  <h3 className="text - lg font - semibold text - white mb-2">Essential Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <p className="text - white / 60 text - sm">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Types of Cookies We Use</h2>;
-              <div className="space-y-6">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    Examples: Authentication cookies, security cookies, session cookies;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Performance Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Performance Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Performance Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Performance Cookies</h3>;
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Performance Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
-                  <h3 className="text-lg font-semibold text-white mb-2">Performance Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    Examples: Google Analytics cookies, website performance monitoring;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Functionality Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Functionality Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Functionality Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Functionality Cookies</h3>;
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Functionality Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
-                  <h3 className="text-lg font-semibold text-white mb-2">Functionality Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    Examples: Language preferences, region settings, user preferences;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Marketing Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Marketing Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Marketing Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Types of Cookies We Use</h2>;"
-              <div className="space - y-6">;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Essential Cookies</h3>;"
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies are necessary for the website to function properly. They enable basic functions like page navigation, access to secure areas, and form submissions.;
-                  </p>;"
-                  <p className="text - white / 60 text - sm">;
-                    Examples: Authentication cookies, security cookies, session cookies;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Performance Cookies</h3>;"
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies collect information about how visitors use our website, such as which pages are visited most often and if users get error messages.;
-                  </p>;"
-                  <p className="text - white / 60 text - sm">;
-                    Examples: Google Analytics cookies, website performance monitoring;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Functionality Cookies</h3>;"
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies allow the website to remember choices you make and provide enhanced, more personal features.;
-                  </p>;"
-                  <p className="text - white / 60 text - sm">;
-                    Examples: Language preferences, region settings, user preferences;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Marketing Cookies</h3>;"
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;"
-                  <p className="text - white / 60 text - sm">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Marketing Cookies</h3>;
-                  <p className="text - white / 70 mb - 2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Marketing Cookies</h3>;
-                  <p className="text - white / 70 mb-2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text - white / 60 text - sm">;
-                  <h3 className="text-lg font-semibold text-white mb-2">Marketing Cookies</h3>;
-                  <p className="text-white/70 mb-2">;
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.;
-                  </p>;
-                  <p className="text-white/60 text-sm">;
-                  <p className="text - white / 60 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      <section className='mb-20'>
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg: px-8'>
+          <div className='space-y-8'>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                What Are Cookies? ;
+              </h2>
+              <p className='text-white/80 mb-4'>
+                Cookies are small text files that are stored on your device;,
+                (computer, tablet, or mobile phone) when you visit a website.;
+                They help websites remember information about your visit, such : as your preferred language and other settings, which can make: your next visit easier and more useful.;
+              </p>
+              <p className='text-white/80'>
+                Cookies are widely used to make websites work more efficiently: and to provide information to website owners.;
+              </p>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                How We Use Cookies;
+              </h2>
+              <p className='text-white/80 mb-4'>
+                Zion Tech Group uses cookies and similar technologies for: several purposes: ;
+              </p>
+              <ul className='text-white/70 space-y-2 mb-4'>
+                <li>• To remember your preferences and settings</li>
+                <li>• To analyze website traffic and usage patterns</li>
+                <li>• To provide personalized content and advertisements</li>
+                <li>• To improve website functionality and performance</li>
+                <li>• To ensure security and prevent fraud</li>
+                <li>• To understand how visitors interact with our content</li>
+              </ul>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Types of Cookies We Use;
+              </h2>
+              <div className='space-y-6'>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Essential Cookies;
+                  </h3>
+                  <p className='text-white/70 mb-2'>;,
+                    These cookies are necessary for the website to function: properly. They enable basic functions like page navigation: access to secure areas, and form submissions.;
+                  </p>
+                  <p className='text-white/60 text-sm'>
+                    Examples: Authentication cookies, security cookies, session: cookies;
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Performance Cookies;
+                  </h3>
+                  <p className='text-white/70 mb-2'>;,
+                    These cookies collect information about how visitors use our: website, such as which pages are visited most often and if: users get error messages.;
+                  </p>
+                  <p className='text-white/60 text-sm'>;,
+                    Examples: Google Analytics cookies, website performance: monitoring;
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Functionality Cookies;
+                  </h3>
+                  <p className='text-white/70 mb-2'>;,
+                    These cookies allow the website to remember choices you make: and provide enhanced, more personal features.;
+                  </p>
+                  <p className='text-white/60 text-sm'>
+                    Examples: Language preferences, region settings, user: preferences;
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Marketing Cookies;
+                  </h3>
+                  <p className='text-white/70 mb-2'>
+                    These cookies are used to track visitors across websites to: display relevant and engaging advertisements.;
+                  </p>
+                  <p className='text-white/60 text-sm'>;,
                     Examples: Social media cookies, advertising network cookies;
-                  </p>;
-                </div>;
-              </div>;
-<<<<<<< HEAD
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Third-Party Cookies</h2>;
-              <p className="text-white/80 mb-4">;
-                Some cookies on our website are set by third-party services that we use to enhance your experience:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-                <li>• <strong>Google Analytics:</strong> To analyze website traffic and user behavior</li>;
-                <li>• <strong>Social Media Platforms:</strong> To enable social sharing and integration</li>;
-                <li>• <strong>Advertising Networks:</strong> To display relevant advertisements</li>;
-                <li>• <strong>Customer Support Tools:</strong> To provide live chat and support services</li>;
-              </ul>;
-              <p className="text-white/80">;
-                These third-party services have their own privacy policies and cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Cookie Duration</h2>;
-              <div className="space-y-4">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Session Cookies</h3>;
-                  <p className="text-white/70">;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Third - Party Cookies</h2>;
-              <p className="text - white / 80 mb-4">;
-                Some cookies on our website are set by third - party services that we use to enhance your experience:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
-=======
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Third - Party Cookies</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                Some cookies on our website are set by third - party services that we use to enhance your experience:;
-              </p>;"
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Third - Party Cookies</h2>;
-              <p className="text - white / 80 mb - 4">;
-                Some cookies on our website are set by third - party services that we use to enhance your experience:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Third - Party Cookies</h2>;
-              <p className="text - white / 80 mb-4">;
-                Some cookies on our website are set by third - party services that we use to enhance your experience:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Types of Cookies We Use</h2>;""
-              <div className="space - y-6">;"
-</div>
-                <div>;
-                  <h3 className="text - lg font - semibold text - white mb - 2">Essential Cookies</h3>;""
-                  <p className="text - white / 70 mb - 2">;"
-                  <p className="text - white / 60 text - sm">;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Performance Cookies</h3>;""
-                  <h3 className="text - lg font - semibold text - white mb - 2">Functionality Cookies</h3>;""
-                  <h3 className="text - lg font - semibold text - white mb - 2">Marketing Cookies</h3>;""
-              <h2 className="text - 2xl font - bold text - white mb - 4">Third - Party Cookies</h2>;""
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <li>• <strong > Google Analytics:</strong> To analyze website traffic and user behavior</li>;
-                <li>• <strong > Social Media Platforms:</strong> To enable social sharing and integration</li>;
-                <li>• <strong > Advertising Networks:</strong> To display relevant advertisements</li>;
-                <li>• <strong > Customer Support Tools:</strong> To provide live chat and support services</li>;
-<<<<<<< HEAD
-              </ul>;
-              <p className="text-white / 80">;
-                These third - party services have their own privacy policies and cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Cookie Duration</h2>;
-              <div className="space-y-4">;
-                <div>;
-<<<<<<< HEAD
-                  <h3 className="text - lg font - semibold text - white mb-2">Session Cookies</h3>;
-                  <p className="text-white / 70">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;
-                  <p className="text - white / 70">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Third-Party Cookies</h2>;
-              <p className="text-white/80 mb-4">;
-                Some cookies on our website are set by third-party services that we use to enhance your experience:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-                <li>• <strong>Google Analytics:</strong> To analyze website traffic and user behavior</li>;
-                <li>• <strong>Social Media Platforms:</strong> To enable social sharing and integration</li>;
-                <li>• <strong>Advertising Networks:</strong> To display relevant advertisements</li>;
-                <li>• <strong>Customer Support Tools:</strong> To provide live chat and support services</li>;
-              </ul>;
-              <p className="text-white/80">;
-                These third-party services have their own privacy policies and cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Cookie Duration</h2>;
-              <div className="space-y-4">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Session Cookies</h3>;
-                  <p className="text-white/70">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Session Cookies</h3>;
-                  <p className="text-white / 70">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    These cookies are temporary and are deleted when you close your browser. They are used to maintain your session while you browse our website.;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Persistent Cookies</h3>;
-                  <p className="text-white/70">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Persistent Cookies</h3>;
-                  <p className="text-white / 70">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Persistent Cookies</h3>;
-                  <p className="text-white / 70">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              </ul>;"
-              <p className="text - white / 80">;
-                These third - party services have their own privacy policies and cookie practices.;
-              </p>;
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Cookie Duration</h2>;"
-              <div className="space - y-4">;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;"
-                  <p className="text - white / 70">;
-                    These cookies are temporary and are deleted when you close your browser. They are used to maintain your session while you browse our website.;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;"
-                  <p className="text - white / 70">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;
-                  <p className="text - white / 70">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text-lg font-semibold text-white mb-2">Persistent Cookies</h3>;
-                  <p className="text-white/70">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Persistent Cookies</h3>;
-                  <p className="text-white / 70">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    These cookies remain on your device for a set period or until you delete them. They help us remember your preferences and settings for future visits.;
-                  </p>;
-                </div>;
-              </div>;
-<<<<<<< HEAD
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Managing Your Cookie Preferences</h2>;
-              <p className="text-white/80 mb-4">;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Third-Party Cookies;
+              </h2>
+              <p className='text-white/80 mb-4'>
+                Some cookies on our website are set by third-party services that: we use to enhance your experience: ;
+              </p>
+              <ul className='text-white/70 space-y-2 mb-4'>
+                <li>
+                  • <strong>Google Analytics:</strong> To analyze website: traffic and user behavior;
+                </li>
+                <li>
+                  • <strong>Social Media Platforms:</strong> To enable social: sharing and integration;
+                </li>
+                <li>
+                  • <strong>Advertising Networks:</strong> To display relevant: advertisements;
+                </li>
+                <li>
+                  • <strong>Customer Support Tools:</strong> To provide live: chat and support services;
+                </li>
+              </ul>
+              <p className='text-white/80'>
+                These third-party services have their own privacy policies and: cookie practices.;
+              </p>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Cookie Duration;
+              </h2>
+              <div className='space-y-4'>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Session Cookies;
+                  </h3>
+                  <p className='text-white/70'>
+                    These cookies are temporary and are deleted when you close: your browser. They are used to maintain your session while: you browse our website.;
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Persistent Cookies;
+                  </h3>
+                  <p className='text-white/70'>
+                    These cookies remain on your device for a set period or: until you delete them. They help us remember your: preferences and settings for future visits.;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Managing Your Cookie Preferences;
+              </h2>
+              <p className='text-white/80 mb-4'>
                 You have several options for managing cookies:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-                <li>• <strong>Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
-                <li>• <strong>Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
-                <li>• <strong>Third-Party Opt-Out:</strong> Use opt-out tools provided by third-party services</li>;
-                <li>• <strong>Delete Cookies:</strong> Remove existing cookies from your device</li>;
-              </ul>;
-              <p className="text-white/80">;
-                Please note that disabling certain cookies may affect website functionality and your user experience.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Browser-Specific Instructions</h2>;
-              <div className="space-y-4">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Chrome</h3>;
-                  <p className="text-white/70 text-sm">;
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Managing Your Cookie Preferences</h2>;
-              <p className="text - white / 80 mb-4">;
-                You have several options for managing cookies:;
-              </p>;
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Managing Your Cookie Preferences</h2>;
-              <p className="text - white / 80 mb-4">;
-                You have several options for managing cookies:;
-              </p>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              <ul className="text - white / 70 space - y-2 mb-4">;
-=======
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Managing Your Cookie Preferences</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                You have several options for managing cookies:;
-              </p>;"
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Managing Your Cookie Preferences</h2>;
-              <p className="text - white / 80 mb - 4">;
-                You have several options for managing cookies:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Managing Your Cookie Preferences</h2>;
-              <p className="text - white / 80 mb-4">;
-                You have several options for managing cookies:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
-              </ul>;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Cookie Duration</h2>;""
-              <div className="space - y-4">;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Session Cookies</h3>;""
-                  <p className="text - white / 70">;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Persistent Cookies</h3>;""
-              <h2 className="text - 2xl font - bold text - white mb - 4">Managing Your Cookie Preferences</h2>;""
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <li>• <strong > Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
-                <li>• <strong > Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
-                <li>• <strong > Third - Party Opt - Out:</strong> Use opt - out tools provided by third - party services</li>;
-                <li>• <strong > Delete Cookies:</strong> Remove existing cookies from your device</li>;
-<<<<<<< HEAD
-              </ul>;
-              <p className="text-white / 80">;
-                Please note that disabling certain cookies may affect website functionality and your user experience.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Browser - Specific Instructions</h2>;
-              <div className="space-y-4">;
-                <div>;
-<<<<<<< HEAD
-                  <h3 className="text - lg font - semibold text - white mb-2">Chrome</h3>;
-                  <p className="text - white / 70 text-sm">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;
-                  <p className="text - white / 70 text - sm">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Managing Your Cookie Preferences</h2>;
-              <p className="text-white/80 mb-4">;
-                You have several options for managing cookies:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-                <li>• <strong>Browser Settings:</strong> Most browsers allow you to control cookies through their settings</li>;
-                <li>• <strong>Cookie Consent:</strong> Use our cookie consent banner to manage preferences</li>;
-                <li>• <strong>Third-Party Opt-Out:</strong> Use opt-out tools provided by third-party services</li>;
-                <li>• <strong>Delete Cookies:</strong> Remove existing cookies from your device</li>;
-              </ul>;
-              <p className="text-white/80">;
-                Please note that disabling certain cookies may affect website functionality and your user experience.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Browser-Specific Instructions</h2>;
-              <div className="space-y-4">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-white mb-2">Chrome</h3>;
-                  <p className="text-white/70 text-sm">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Chrome</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    Settings → Privacy and security → Cookies and other site data;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Firefox</h3>;
-                  <p className="text-white/70 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Firefox</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Firefox</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;
-                  <p className="text - white / 70 text - sm">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text-lg font-semibold text-white mb-2">Firefox</h3>;
-                  <p className="text-white/70 text-sm">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Firefox</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </p>
+              <ul className='text-white/70 space-y-2 mb-4'>
+                <li>
+                  • <strong>Browser Settings:</strong> Most browsers allow you: to control cookies through their settings;
+                </li>
+                <li>
+                  • <strong>Cookie Consent:</strong> Use our cookie consent: banner to manage preferences;
+                </li>
+                <li>
+                  • <strong>Third-Party Opt-Out:</strong> Use opt-out tools: provided by third-party services;
+                </li>
+                <li>
+                  • <strong>Delete Cookies:</strong> Remove existing cookies: from your device;
+                </li>
+              </ul>
+              <p className='text-white/80'>
+                Please note that disabling certain cookies may affect website: functionality and your user experience.;
+              </p>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Browser-Specific Instructions;
+              </h2>
+              <div className='space-y-4'>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Chrome;
+                  </h3>
+                  <p className='text-white/70 text-sm'>
+                    Settings → Privacy and security → Cookies and other site: data;
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Firefox;
+                  </h3>
+                  <p className='text-white/70 text-sm'>
                     Options → Privacy & Security → Cookies and Site Data;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Safari</h3>;
-                  <p className="text-white/70 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Safari</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Safari</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;
-                  <p className="text - white / 70 text - sm">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text-lg font-semibold text-white mb-2">Safari</h3>;
-                  <p className="text-white/70 text-sm">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Safari</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Safari;
+                  </h3>
+                  <p className='text-white/70 text-sm'>
                     Preferences → Privacy → Manage Website Data;
-                  </p>;
-                </div>;
-                <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <h3 className="text-lg font-semibold text-white mb-2">Edge</h3>;
-                  <p className="text-white/70 text-sm">;
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Edge</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <h3 className="text - lg font - semibold text - white mb-2">Edge</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              </ul>;"
-              <p className="text - white / 80">;
-                Please note that disabling certain cookies may affect website functionality and your user experience.;
-              </p>;
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Browser - Specific Instructions</h2>;"
-              <div className="space - y-4">;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;"
-                  <p className="text - white / 70 text - sm">;
-                    Settings → Privacy and security → Cookies and other site data;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;"
-                  <p className="text - white / 70 text - sm">;
-                    Options → Privacy & Security → Cookies and Site Data;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;"
-                  <p className="text - white / 70 text - sm">;
-                    Preferences → Privacy → Manage Website Data;
-                  </p>;
-                </div>;
-                <div>;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;"
-                  <p className="text - white / 70 text - sm">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                  <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;
-                  <p className="text - white / 70 text - sm">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <h3 className="text-lg font-semibold text-white mb-2">Edge</h3>;
-                  <p className="text-white/70 text-sm">;
-                  <h3 className="text - lg font - semibold text - white mb-2">Edge</h3>;
-                  <p className="text - white / 70 text-sm">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    Settings → Cookies and site permissions → Cookies and site data;
-                  </p>;
-                </div>;
-              </div>;
-<<<<<<< HEAD
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Updates to This Policy</h2>;
-              <p className="text-white/80 mb-4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Updates to This Policy</h2>;
-              <p className="text - white / 80 mb-4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Updates to This Policy</h2>;
-              <p className="text - white / 80 mb-4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb-4">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Updates to This Policy</h2>;
-              <p className="text - white / 80 mb - 4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Updates to This Policy</h2>;
-              <p className="text - white / 80 mb-4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text - white / 70 space - y-2 mb - 4">;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Updates to This Policy</h2>;
-              <p className="text-white/80 mb-4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;
-              <ul className="text-white/70 space-y-2 mb-4">;
-              <ul className="text - white / 70 space - y-2 mb-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <li>• Posting the updated policy on our website</li>;
-                <li>• Updating the "Last Updated" date at the top of this policy</li>;
-                <li>• Sending you an email notification for significant changes</li>;
-              </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <p className="text-white/80">;
-                We encourage you to review this policy periodically to stay informed about our cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>;
-              <p className="text-white/80 mb-4">;
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
-              </p>;
-              <div className="space-y-2 text-white/70">;
-                <p><strong>Email:</strong> privacy@ziontechgroup.com</p>;
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>;
-                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>;
-              </div>;
-              <p className="text-white/80 mt-4">;
-=======
-              <p className="text-white / 80">;
-=======
-              <p className="text - white / 80">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <p className="text-white / 80">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                We encourage you to review this policy periodically to stay informed about our cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Contact Us</h2>;
-              <p className="text - white / 80 mb-4">;
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
-              </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <p className="text-white / 80">;
-                We encourage you to review this policy periodically to stay informed about our cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border-white / 10">;
-              <h2 className="text - 2xl font - bold text - white mb-4">Contact Us</h2>;
-              <p className="text - white / 80 mb-4">;
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
-              </p>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              <div className="space - y-2 text-white / 70">;
-=======
-              <div className="space - y-2 text - white / 70">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <div className="space - y-2 text-white / 70">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <p><strong > Email:</strong> privacy@ziontechgroup.com</p>;
-                <p><strong > Phone:</strong> +1 (302) 464 - 0950</p>;
-                <p><strong > Address:</strong> Zion Tech Group, Global Operations</p>;
-              </div>;
-<<<<<<< HEAD
-              <p className="text - white / 80 mt-4">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Updates to This Policy</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                We may update this Cookie Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:;
-              </p>;"
-              <ul className="text - white / 70 space - y-2 mb - 4">;
-                <li>• Posting the updated policy on our website</li>;"
-                <li>• Updating the "Last Updated" date at the top of this policy</li>;
-                <li>• Sending you an email notification for significant changes</li>;
-              </ul>;"
-              <p className="text - white / 80">;
-                We encourage you to review this policy periodically to stay informed about our cookie practices.;
-              </p>;
-            </div>;"
-            <div className="bg - white / 5 backdrop - blur - sm rounded - xl p - 8 border border - white / 10">;"
-              <h2 className="text - 2xl font - bold text - white mb - 4">Contact Us</h2>;"
-              <p className="text - white / 80 mb - 4">;
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
-              </p>;"
-              <div className="space - y-2 text - white / 70">;
-                <p><strong > Email:</strong> privacy@ziontechgroup.com</p>;
-                <p><strong > Phone:</strong> +1 (302) 464 - 0950</p>;
-                <p><strong > Address:</strong> Zion Tech Group, Global Operations</p>;
-              </div>;"
-              <p className="text - white / 80 mt - 4">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <p className="text - white / 80 mt - 4">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <p className="text-white/80">;
-                We encourage you to review this policy periodically to stay informed about our cookie practices.;
-              </p>;
-            </div>;
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">;
-              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>;
-              <p className="text-white/80 mb-4">;
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:;
-              </p>;
-              <div className="space-y-2 text-white/70">;
-                <p><strong>Email:</strong> privacy@ziontechgroup.com</p>;
-                <p><strong>Phone:</strong> +1 (302) 464-0950</p>;
-                <p><strong>Address:</strong> Zion Tech Group, Global Operations</p>;
-              </div>;
-              <p className="text-white/80 mt-4">;
-              <p className="text - white / 80 mt-4">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                  </p>
+                </div>
+                <div>
+                  <h3 className='text-lg font-semibold text-white mb-2'>
+                    Edge;
+                  </h3>
+                  <p className='text-white/70 text-sm'>
+                    Settings → Cookies and site permissions → Cookies and site: data;
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Updates to This Policy;
+              </h2>
+              <p className='text-white/80 mb-4'>
+                We may update this Cookie Policy from time to time to reflect: changes in our practices or applicable laws. We will notify you: of any material changes by:;
+              </p>
+              <ul className='text-white/70 space-y-2 mb-4'>
+                <li>• Posting the updated policy on our website</li>
+                <li>
+                  • Updating the "Last Updated" date at the top of this policy;
+                </li>
+                <li>
+                  • Sending you an email notification for significant changes;
+                </li>
+              </ul>
+              <p className='text-white/80'>
+                We encourage you to review this policy periodically to stay: informed about our cookie practices.;
+              </p>
+            </div>
+            <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10'>
+              <h2 className='text-2xl font-bold text-white mb-4'>Contact Us</h2>
+              <p className='text-white/80 mb-4'>;,
+                If you have any questions about our use of cookies or this: Cookie Policy, please contact us: ;
+              </p>
+              <div className='space-y-2 text-white/70'>
+                <p>
+                  <strong>Email:</strong> privacy@ziontechgroup.com;
+                </p>
+                <p>
+                  <strong>Phone:</strong> +1 (302) 464-0950;
+                </p>
+                <p>;,
+                  <strong>Address:</strong> Zion Tech Group, Global Operations;
+                </p>
+              </div>
+              <p className='text-white/80 mt-4'>
                 We will respond to your inquiry within 30 days of receipt.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl font-bold text-white mb-6">Need Help with Cookie Settings?</h2>;
-          <p className="text-xl text-white/70 mb-8">;
-            We're here to help you understand and manage your cookie preferences.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="/contact";
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-200";
-=======
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl font - bold text - white mb-6">Need Help with Cookie Settings?</h2>;
-          <p className="text - xl text - white / 70 mb-8">;
-=======
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
-          <h2 className="text - 3xl font - bold text - white mb - 6">Need Help with Cookie Settings?</h2>;
-          <p className="text - xl text - white / 70 mb - 8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl font - bold text - white mb-6">Need Help with Cookie Settings?</h2>;
-          <p className="text - xl text - white / 70 mb-8">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            We're here to help you understand and manage your cookie preferences.;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
-            <a;
-              href="/contact";
-<<<<<<< HEAD
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-200";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl font - bold text - white mb-6">Need Help with Cookie Settings?</h2>;
-          <p className="text - xl text - white / 70 mb-8">;
-            We're here to help you understand and manage your cookie preferences.;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
-            <a;
-              href="/contact";
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-200";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl font-bold text-white mb-6">Need Help with Cookie Settings?</h2>;
-          <p className="text-xl text-white/70 mb-8">;
-            We're here to help you understand and manage your cookie preferences.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-            <a;
-              href="/contact";
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-200";
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration-200";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            >;
+      <section>
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg: px-8 text-center'>
+          <h2 className='text-3xl font-bold text-white mb-6'>
+            Need Help with Cookie Settings? ;
+          </h2>
+          <p className='text-xl text-white/70 mb-8'>
+            We're here to help you understand and manage your cookie : preferences.;
+          </p>
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+            <a
+              href='/contact';
+              className='bg-gradient-to-r from-purple-6000 to-cyan-6000 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: from-purple-7000 hover: to-cyan-7000 transition-all duration-2000'>
               Contact Us;
-            </a>;
-            <a;
-              href="/privacy";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-200";
-=======
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      <section>;"
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
-          <h2 className="text - 3xl font - bold text - white mb - 6">Need Help with Cookie Settings?</h2>;"
-          <p className="text - xl text - white / 70 mb - 8">;
-            We're here to help you understand and manage your cookie preferences.;
-          </p>;"
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-            <a;"
-              href="/contact";"
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";
-            >;
-              Contact Us;
-            </a>;
-            <a;"
-              href="/privacy";"
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-200";
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration-200";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            >;
+            </a>
+            <a
+              href='/privacy';
+              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: bg-white/10 transition-all duration-2000'>
               Privacy Policy;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-    </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-}
-=======
-}'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </div>;
-  );
-}
-}
-              <h2 className="text - 2xl font - bold text - white mb - 4">Browser - Specific Instructions</h2>;""
-                  <h3 className="text - lg font - semibold text - white mb - 2">Chrome</h3>;""
-                  <p className="text - white / 70 text - sm">;"
-                  <h3 className="text - lg font - semibold text - white mb - 2">Firefox</h3>;""
-                  <h3 className="text - lg font - semibold text - white mb - 2">Safari</h3>;""
-                  <h3 className="text - lg font - semibold text - white mb - 2">Edge</h3>;""
-              <h2 className="text - 2xl font - bold text - white mb - 4">Updates to This Policy</h2>;""
-                <li>• Posting the updated policy on our website</li>;"
-                <li>• Updating the "Last Updated" date at the top of this policy</li>;"
-                <li>• Sending you an email notification for significant changes</li>;
-              <h2 className="text - 2xl font - bold text - white mb - 4">Contact Us</h2>;""
-              <div className="space - y-2 text - white / 70">;"
-                <p><strong > Email:</strong> privacy@ziontechgroup.com</p>;)
-                <p><strong > Phone:</strong> +1 (302) 464 - 0950</p>;
-                <p><strong > Address:</strong> Zion Tech Group, Global Operations</p>;
-              <p className="text - white / 80 mt - 4">;"
-      </section>;
-      <section>;
-        <div className="max - w-4xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
-          <h2 className="text - 3xl font - bold text - white mb - 6">Need Help with Cookie Settings?</h2>;""
-          <p className="text - xl text - white / 70 mb - 8">;"
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
-            <a;"
-              href="/contact";""
-              className="bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - cyan - 700 transition - all duration - 200";"
-            >;
-</a>
-            </a>;
-              href="/privacy";""
-              className="border - 2 border - white / 30 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 10 transition - all duration - 200";"
-    </div>);"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </a>
+          </div>
+        </div>
+      </section>;,
+    </div>)}
+;

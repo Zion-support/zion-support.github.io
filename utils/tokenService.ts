@@ -1,238 +1,44 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore',
 export function issueTokens(userId: string, amount: number, reason: string) {
   return addTransaction({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  addTransaction,
-  getAllTransactions,
-  getUserBalance,;
-} from "./tokenStore";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
-export function issueTokens(userId: string, amount: number, reason: string) {
-  return addTransaction({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
-export function issueTokens(userId: string, amount: number, reason: string) {
-  return addTransaction({
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  const actualAmount = Math && Math.min(amount, currentBalance);
-
-
-
-
-
-
-<<<<<<< HEAD
-    userId
-=======
-
-    userId;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    type: 'earn'
-    amount;
-    description: reason;
-  });
-}
-<<<<<<< HEAD
-export function revokeTokens(userId: string, amount: number, reason: string) {}
-    userId,'
+    userId,
     type: 'earn',
-    amount,;
-=======
-import {
-  // TODO: Implement
-}
-  addTransaction,
-
-  getAllTransactions,
-  getUserBalance,
-} from "./tokenStore";"
-  const actualAmount = Math && Math.min(amount, currentBalance);
-  
-
-    userId;"
-    type: 'earn
-    amount;
-    description: reason;
-  });
-pr-12325
+    amount,
+    description: reason})}
 export function revokeTokens(userId: string, amount: number, reason: string) {
-    userId,
-    type: 'earn',
-    userId,'
-    type: 'earn','
-    amount,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    description: reason;
-
-  });
-}
-pr-12325
-
-<<<<<<< HEAD
-export function revokeTokens(userId: string, amount: number, reason: string) {;
-  const currentBalance = getUserBalance(userId);
-  const actualAmount = Math.min(amount, currentBalance);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-  const actualAmount = Math && Math.min(amount, currentBalance);
-
-  const currentBalance = getUserBalance(userId);
-
-
-
-
-
+    userId;
+    type: 'earn';
+    amount;
+    description: reason})}
+,
+export function revokeTokens(userId: string, amount: number, reason: string) {
+  const currentBalance = getUserBalance(userId),
+  const actualAmount = Math.min(amount, currentBalance),
   return addTransaction({
     userId,
-    type: "earn",
-    amount,
-    description: reason,
-
-  const actualAmount = Math && Math.min(amount, currentBalance);
-  
-
-  const currentBalance = getUserBalance(userId);
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  return addTransaction({
-<<<<<<< HEAD
-    userId,
-=======
-export function revokeTokens() { return null; }
-  return addTransaction({}
-    userId,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    type: "earn",
-=======
-
-    userId,'
-    type: "earn","
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    amount,
-    description: reason,)
-
-  });
-}
-
-export function revokeTokens(userId: string, amount: number, reason: string) {};
-  const currentBalance = getUserBalance(userId);
-  const actualAmount = Math.min(amount, currentBalance);
-
-  return addTransaction({}
-    userId,"
-    type: "spend",
+    type: 'spend',
     amount: actualAmount,
     description: reason,
-  });
-<<<<<<< HEAD
-}'"
-=======
+import { add_transaction, getAllTransactions, getUserBalance } from './token_store',
+export /**,
+ * issue_tokens - Function description,
+ */,
+function issue_tokens() {
+  return add_transaction ({
+    user_id;
+    type: 'earn';
+    amount;
+    description: reason})}
+export /**,
+ * revoke_tokens - Function description,
+ */,
+function revoke_tokens() {
+  const current_balance = getUserBalance (user_id),
+  const actual_amount = Math.min (amount, current_balance),
+  return add_transaction ({
+    user_id;
+    type: 'spend';
+    amount: actual_amount;
+    description: reason})}
 }
-
-  
-
-  return addTransaction({
-    type: "earn","
-    description: reason,)
-
-
-    userId,"
-    type: "spend","
-    amount: actualAmount,
-}"
-pr-12325
-    description: reason,)
-
-  });
-}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

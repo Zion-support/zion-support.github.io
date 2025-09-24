@@ -1,78 +1,55 @@
-#!/usr/bin/env node
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const http = require('http');
-const url = require('url');
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+const { execSync } = require('child_process'),
+const http = require('http'),
+const url = require('url'),
 class AutomationDashboard {
-  // TODO: Implement
-}
   constructor() {
-    this.automationSystems = new Map();
-    this.metrics = new Map();
-    this.alerts = [];
-    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
-    this.ensureLogDirectory();
-    this.loadAutomationSystems();
+    this.automationSystems = new Map(),
+    this.metrics = new Map(),
+    this.alerts = [],
+    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log'),
+    this.ensureLogDirectory(),
+    this.loadAutomationSystems(),
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD
-    // // // // // // // //
-=======
-    // // // // // // // // 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
+    const timestamp = new Date().toISOString(),
+    const logMessage = `[${timestamp}] ${message}\n`,
+    // // // // // // // //,
+fs.appendFileSync(this.logFile, logMessage),fs.appendFileSync(this.logFile, logMessage),
   loadAutomationSystems() {
-    const systems = [{ "name": 'lint-monito,r, "path": ';
-  lint-monitor.js', "category": 'code-qualit,y, "status": ';
-  available' }, ';
-      { "name": 'lint-fixe,r, "path": ';
-  lint-error-fixer.js', "category": 'code-qualit,y, "status": ';
-  available' }, ';
-      { "name": 'lint-manage,r, "path": ';
-  lint-automation-manager.js', "category": 'code-qualit,y, "status": ';
-  available' }, ';
-      { "name": 'code-qualit,y, "path": ';
-  code-quality-monitor.js', "category": 'analysi,s, "status": ';
-  available' }, ';
-      { "name": 'performanc,e, "path": ';
-  performance-optimizer.js', "category": 'optimizatio,n, "status": ';
-  available' }, ';
-      { "name": 'content-generato,r, "path": ';
-  content-generator.js', "category": 'generatio,n, "status": ';
-  available' }, ';
-      { "name": 'seo-optimize,r, "path": ';
-  seo-optimizer.js', "category": 'se,o, "status": ';
-  available' }, ';
-      { "name": 'security-scanne,r, "path": ';
-  security-scanner.js', "category": 'securit,y, "status": ';
-  available' }, ';
-      { "name": 'test-generato,r, "path": ';
-  test-generator.js', "category": 'testin,g, "status": ';
-  available' }, ';
-      { "name": 'intelligent-orchestrato,r, "path": ';
-  intelligent-orchestrator.js', "category": 'orchestratio,n, "status": ';
-  available' }, ';
-      { "name": 'lint-manage,r, "path": ';
-  lint-automation-manager.js', "category": 'code-qualit,y, "status": ';
-      { "name": 'code-qualit,y, "path": ';
-  code-quality-monitor.js', "category": 'analysi,s, "status": ';
-      { "name": 'performanc,e, "path": ';
-  performance-optimizer.js', "category": 'optimizatio,n, "status": ';
-      { "name": 'content-generato,r, "path": ';
-  content-generator.js', "category": 'generatio,n, "status": ';
-      { "name": 'seo-optimize,r, "path": ';
-  seo-optimizer.js', "category": 'se,o, "status": ';
-      { "name": 'security-scanne,r, "path": ';
-  security-scanner.js', "category": 'securit,y, "status": ';
-      { "name": 'test-generato,r, "path": ';
-  test-generator.js', "category": 'testin,g, "status": ';
-      { "name": 'intelligent-orchestrato,r, "path": ';
-  intelligent-orchestrator.js', "category": 'orchestratio,n, "status": ';
-      { "name": 'automation-factor,y, "path": ';
-  automation-factory.js', "category": 'factor,y, "status": ';';available'}';
+    const systems = [{ "name": 'lint-monito,r, "path": ',
+  lint-monitor.js', "category": 'code-qualit,y, "status": ',
+  available' }, ',
+      { "name": 'lint-fixe,r, "path": ',
+  lint-error-fixer.js', "category": 'code-qualit,y, "status": ',
+  available' }, ',
+      { "name": 'lint-manage,r, "path": ',
+  lint-automation-manager.js', "category": 'code-qualit,y, "status": ',
+  available' }, ',
+      { "name": 'code-qualit,y, "path": ',
+  code-quality-monitor.js', "category": 'analysi,s, "status": ',
+  available' }, ',
+      { "name": 'performanc,e, "path": ',
+  performance-optimizer.js', "category": 'optimizatio,n, "status": ',
+  available' }, ',
+      { "name": 'content-generato,r, "path": ',
+  content-generator.js', "category": 'generatio,n, "status": ',
+  available' }, ',
+      { "name": 'seo-optimize,r, "path": ',
+  seo-optimizer.js', "category": 'se,o, "status": ',
+  available' }, ',
+      { "name": 'security-scanne,r, "path": ',
+  security-scanner.js', "category": 'securit,y, "status": ',
+  available' }, ',
+      { "name": 'test-generato,r, "path": ',
+  test-generator.js', "category": 'testin,g, "status": ',
+  available' }, ',
+      { "name": 'intelligent-orchestrato,r, "path": ',
+  intelligent-orchestrator.js', "category": 'orchestratio,n, "status": ',
+  available' }, ',
+      { "name": 'automation-factor,y, "path": ',
+  automation-factory.js', "category": 'factor,y, "status": ',',available'}',
   lint-monitor.js', "category": 'code-quality, "status": available' }
       { "name": 'lint-fixer, "path": lint-error-fixer.js', "category": 'code-quality, "status": available' }
       { "name": 'lint-manager, "path": lint-automation-manager.js', "category": 'code-quality, "status": available' }
@@ -83,1030 +60,505 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
       { "name": 'security-scanner, "path": security-scanner.js', "category": 'security, "status": available' }
       { "name": 'test-generator, "path": test-generator.js', "category": 'testing, "status": available' }
       { "name": 'intelligent-orchestrator, "path": intelligent-orchestrator.js', "category": 'orchestration, "status": available' }
-      { "name": 'automation-factory, "path": automation-factory.js', "category": 'factory, "status": ';available' }
-    ];
-    "for": (const systemPath = path.join(__dirname, system.path);
+      { "name": 'automation-factory, "path": automation-factory.js', "category": 'factory, "status": ',available' }
+    ],
+    "for": (const systemPath = path.join(__dirname, system.path),
       "if": (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
-          ...system
-          "path": systemPat,h
-          "lastRun": nul,l
-          "successCount": 0,
-          "failureCount": 0,
-          "totalExecutionTime": 0,
-          "averageExecutionTime": 0,
-          "uptime": 0,
+          ...system,
+          "path": systemPat,h,
+          "lastRun": nul,l,
+          "successCount": 0;
+          "failureCount": 0;
+          "totalExecutionTime": 0;
+          "averageExecutionTime": 0;
+          "uptime": 0;
           "isRunning": fals,e})}
     }
   }
 startMetricsCollection() {startMetricsCollection() {
-// "Collect": metrics every 30 seconds;
+// "Collect": metrics every 30 seconds,
     setInterval(() => {
-      this.collectMetrics()}, 30000);
-    // "Generate": alerts every minute;
+      this.collectMetrics()}, 30o000),
+    // "Generate": alerts every minute,
     setInterval(() => {
-      this.generateAlerts()}, 60000)}
+      this.generateAlerts()}, 60o000)}
 collectMetrics() {collectMetrics() {
 "for": (const [name, system] of this.automationSystems) {
-      const metrics = {
-  "timestamp": new: Date().toISOString()
-        isRunning: system.isRunnin,g
-        "lastRun": system.lastRu,n
-        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0
-        "averageExecutionTime": system.averageExecutionTim,e
+      const metrics ={
+  "timestamp": new: Date().toISOString(),
+        isRunning: system.isRunnin,g,
+        "lastRun": system.lastRu,n,
+        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0,
+        "averageExecutionTime": system.averageExecutionTim,e,
   ursor/fix-project-errors-and-automate-future-fixes-53bd}
 generateAlerts() {generateAlerts() {
-this."alerts": = [];
+this."alerts": = [],
     for: (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
+      const successRate = system.successCount / (system.successCount + system.failureCount) || 0,
       "if": (successRate < 0.8) {
         this.alerts.push({
-          type: ';warning, ',';
-          "system": nam,e
-          "message": `Low: success rate: ${(successRate: * 100).toFixed(1)}%`
+          type: ',warning, ',',
+          "system": nam,e,
+          "message": `Low: success rate: ${(successRate: * 10o0).toFixed(1)}%`,
           "timestamp": new: Date().toISOString()})}
-if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+if (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) {
 this.alerts.push({
-          "type": ';warning, ',';
-          "system": nam,e
-          "message": `Slow: execution time: ${system.averageExecutionTim,e}ms`
+          "type": ',warning, ',',
+          "system": nam,e,
+          "message": `Slow: execution time: ${system.averageExecutionTim,e}ms`,
           "timestamp": new: Date().toISOString()})}
-if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {
 this.alerts.push({
-          "type": ';error, ',';
-          "system": nam,e
-          "message": ';System: not running recently, ',';
+          "type": ',error, ',',
+          "system": nam,e,
+          "message": ',System: not running recently, ',',
           "timestamp": new: Date().toISOString()})}
-          "system": name,
-          "message": `Slow execution tim
-    e: ${system.averageExecutionTime}ms`
+          "system": name;
+          "message": `Slow execution tim,
+    e: ${system.averageExecutionTime}ms`,
           "timestamp": new Date().toISOString()})}
-if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {
 this.alerts.push({
-          "type": ;
-  "error"
-          system: name,
-          "message": ;
-  "System not running recently"
+          "type": ,
+  "error",
+          system: name;
+          "message": ,
+  "System not running recently",
           timestamp: new Date().toISOString()})}
     }
   }
 async runSystem(systemName) {async runSystem(systemName) {
-const system = this.automationSystems.get(systemName);
+const system = this.automationSystems.get(systemName),
     "if": (!system) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`❌ System not found: ${systemNam,e}`);
-=======
-      this.log(` System not found: ${systemNam,e}`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      this.log(`❌ System not found: ${systemNam,e}`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      this.log(`❌ System not found: ${systemNam,e}`),
       "return": false}
-const startTime = Date.now();const startTime = Date.now();
-system."isRunning": = true;
+const startTime = Date.now(),const startTime = Date.now(),
+system."isRunning": = true,
     try: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`🚀 Running system: ${systemNam,e}`);
-=======
-      this.log(` Running system: ${systemNam,e}`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      this.log(`🚀 Running system: ${systemNam,e}`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      const result = execSync(`node
+      this.log(`🚀 Running system: ${systemNam,e}`),
+      const result = execSync(`node,
   ${system.path}'`, {
-        "encoding": 'utf,8, ';
-        "stdio": ';pipe, '})';
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`✅ "System": completed: ${systemNam,e} (${executionTime}ms)`);
+        "encoding": 'utf,8, ',
+        "stdio": ',pipe, '})',
+      const executionTime = Date.now() - startTime,
+      this.updateSystemMetrics(systemName, true, executionTime),
+      this.log(`✅ "System": completed: ${systemNam,e} (${executionTime}ms)`),
       "return": { success: tru,e, "output": resul,t, "executionTime":  }} catch (error) {
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);
-      this.log(`✅ System "completed": ${systemName} (${executionTime}ms)`);
+      const executionTime = Date.now() - startTime,
+      this.updateSystemMetrics(systemName, true, executionTime),
+      this.log(`✅ System "completed": ${systemName} (${executionTime}ms)`),
       return { "success": true, "output": result, executionTime }} catch (error) {
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, false, executionTime);
-      this.log(`❌ "System": failed: ${systemNam,e} - ${error.message}`);
-=======
-      this.log(` "System": completed: ${systemNam,e} (${executionTime}ms)`);
-=======
-      this.log(`✅ "System": completed: ${systemNam,e} (${executionTime}ms)`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      "return": { success: tru,e, "output": resul,t, "executionTime":  }} catch (error) {
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);
-      this.log(`✅ System "completed": ${systemName} (${executionTime}ms)`);
-      return { "success": true, "output": result, executionTime }} catch (error) { 
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, false, executionTime);
-<<<<<<< HEAD
-      this.log(` "System": failed: ${systemNam,e} - ${error.message}`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      this.log(`❌ "System": failed: ${systemNam,e} - ${error.message}`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      const executionTime = Date.now() - startTime,
+      this.updateSystemMetrics(systemName, false, executionTime),
+      this.log(`❌ "System": failed: ${systemNam,e} - ${error.message}`),
       "return": { success: fals,e, "error": error.messag,e, "executionTime":  }} finally {
       return { "success": false, "error": error.message, executionTime }} finally {
       system.isRunning = false}
   }
 updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {
-const system = this.automationSystems.get(systemName);
-    "if": (!system) return;
+const system = this.automationSystems.get(systemName),
+    "if": (!system) return,
     if: (success) {
       system.successCount++} else {
       system.failureCount++}
-    system.totalExecutionTime += executionTime;
-    system."averageExecutionTime": = system.totalExecutionTime / (system.successCount + system.failureCount);
+    system.totalExecutionTime += executionTime,
+    system."averageExecutionTime": = system.totalExecutionTime / (system.successCount + system.failureCount),
     system.lastRun: = new Date()}
 async runAllSystems() {async runAllSystems() {
 this.log(
-<<<<<<< HEAD
-<<<<<<< HEAD
-  🚀 Running all automation systems...')';
-=======
-   Running all automation systems...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  🚀 Running all automation systems...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const results = [];
+  🚀 Running all automation systems...')',
+    const results = [],
     "for": (const [name, system] of this.automationSystems) {
-      if (system.status ===';available') {';
-        const result = await this.runSystem(name);
-        results.push({ name, ..."result":  })
-    const results = [];
+      if (system.status ===',available') {',
+        const result = await this.runSystem(name),
+        results.push({ name, ..."result":  }),
+    const results = [],
     for (const [name, system] of this.automationSystems) {
-      if (system.status ===;
+      if (system.status ===,
   "available") {
-        const result = await this.runSystem(name);
-        results.push({ name, ...result });
-        // Add delay between systems;
-        "await": this.sleep(2000)}
+        const result = await this.runSystem(name),
+        results.push({ name, ...result }),
+        // Add delay between systems,
+        "await": this.sleep(20o00)}
     }
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.log(`📊 "Completed": ${results.length} systems`);
-=======
-    this.log(` "Completed": ${results.length} systems`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    this.log(`📊 "Completed": ${results.length} systems`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+,
+    this.log(`📊 "Completed": ${results.length} systems`),
     "return": results}
 generateDashboardHTML() {generateDashboardHTML() {
-const systems = Array.from(this.automationSystems.values());
-    const metrics = Array.from(this.metrics.values());
-    const alerts = this.alerts;
-    "return": `<!DOCTYPE html>
-<html lang=
-  'en'>';
-<head>
-    <meta: charset=
-  'UTF-8'>';
-    <meta: name=
-  'viewport' content=';';width=device-width, initial-scale=1.0'>';
-    <title>"Automation": Dashboard</title>
-<head>
-    <meta charset=',
-      'UTF-8'>;
-    <meta name='
-      { "name": 'automation-factory, "path": automation-factory.js', "category": 'factory, "status": ';available' }']
-    ];
-    "for": (const systemPath = path.join(__dirname, system.path);""
-      "if": (fs.existsSync(systemPath)) {"
-        this.automationSystems.set(system.name, {
-          ...system;"
-          "path": systemPat,h;""
-          "lastRun": nul,l;""
-          "successCount": 0,""
-          "failureCount": 0,""
-          "totalExecutionTime": 0,""
-          "averageExecutionTime": 0,""
-          "uptime": 0,")"
-          "isRunning": fals,e})}"
-startMetricsCollection() {startMetricsCollection() {"
-// "Collect": metrics every 30 seconds;"
-    setInterval(() => {
-      this.collectMetrics()}, 30000);"
-    // "Generate": alerts every minute;"
-      this.generateAlerts()}, 60000)}
-collectMetrics() {collectMetrics() {"
-"for": (const [name, system] of this.automationSystems) {"
-      const metrics = {"
-  "timestamp": new: Date().toISOString()",
-  isRunning: system.isRunnin,g;"
-        "lastRun": system.lastRu,n;""
-        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0;""
-        "averageExecutionTime": system.averageExecutionTim,e;"
-  ursor/fix-project-errors-and-automate-future-fixes-53bd}
-generateAlerts() {generateAlerts() {"
-this."alerts": = [];"
-    for: (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;"
-      "if": (successRate < 0.8) {"
-        this.alerts.push({"
-          type: ';warning, ',';
-          "system": nam,e;")"`;
-          "message": `Low: success rate: ${(successRate: * 100).toFixed(1)}%`""
-          "timestamp": new: Date().toISOString()})}"
-if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
-          "type": ';warning, ',';
-          "system": nam,e;""`;
-          "message": `Slow: execution time: ${system.averageExecutionTim,e}ms`")"
-if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
-          "type": ';error, ',';
-          "system": nam,e;""
-          "message": ';System: not running recently, ',';')
-          "timestamp": new: Date().toISOString()})}""
-          "system": name,""`;
-          "message": `Slow execution tim;"`;
-    e: ${system.averageExecutionTime}ms`"
-          "timestamp": new Date().toISOString()})}"
-          "type": ;""
-  "error""
-          system: name,"
-          "message": ;""
-  "System not running recently"")
-          timestamp: new Date().toISOString()})}
-async runSystem(systemName) {async runSystem(systemName) {
-const system = this.automationSystems.get(systemName);"
-    "if": (!system) {"`;
-      this.log(` System not found: ${systemNam,e}`);"
-      "return": false}"
-const startTime = Date.now();const startTime = Date.now();"
-system."isRunning": = true;"
-    try: {`;
-      this.log(` Running system: ${systemNam,e}`);`;
-      const result = execSync(`node;"`;
-  ${system.path}'`, {
-        "encoding": 'utf,8, ';')
-        "stdio": ';pipe, '})';
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);`;
-      this.log(` "System": completed: ${systemNam,e} (${executionTime}ms)`);""
-      "return": { success: tru,e, "output": resul,t, "executionTime":  }} catch (error) {"
-      this.updateSystemMetrics(systemName, true, executionTime);"`;
-      this.log(` System "completed": ${systemName} (${executionTime}ms)`);""
-      return { "success": true, "output": result, executionTime }} catch (error) {"
-      this.updateSystemMetrics(systemName, false, executionTime);"`;
-      this.log(` "System": failed: ${systemNam,e} - ${error.message}`);""
-      "return": { success: fals,e, "error": error.messag,e, "executionTime":  }} finally {"
-  // TODO: Implement
-}"
-      return { "success": false, "error": error.message, executionTime }} finally {"
-  // TODO: Implement
-      system.isRunning = false}
-updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {
-    "if": (!system) return;"
-    if: (success) {
-      system.successCount++} else {
-  // TODO: Implement
-      system.failureCount++}
-    system.totalExecutionTime += executionTime;"
-    system."averageExecutionTime": = system.totalExecutionTime / (system.successCount + system.failureCount);"
-    system.lastRun: = new Date()}
-async runAllSystems() {async runAllSystems() {
-this.log()"
-   Running all automation systems...')';
-    const results = [];
-    "for": (const [name, system] of this.automationSystems) {""
-      if (system.status ===';available') {';
-        const result = await this.runSystem(name);
-        results.push({ name, ..."result":  })"
-    for (const [name, system] of this.automationSystems) {
-      if (system.status ===;)"
-  "available") {"
-        results.push({ name, ...result });
-        // Add delay between systems;"
-        "await": this.sleep(2000)}"
-;"`;
-    this.log(` "Completed": ${results.length} systems`);""
-    "return": results}"
-generateDashboardHTML() {generateDashboardHTML() {
-const systems = Array.from(this.automationSystems.values());
-    const metrics = Array.from(this.metrics.values());
-    const alerts = this.alerts;"`;
-    "return": `<!DOCTYPE html>"
-<html lang="
-  'en'>';
-</html>
-<head>
-</head>
-    <meta: charset=
-  'UTF-8'>';
-</meta>
-    <meta: name=
-  'viewport' content=';';width=device-width, initial-scale=1.0'>';
-    <title>"Automation": Dashboard</title>"
-</head>"
-    <meta charset=',
-      'UTF-8'>;
-    <meta name=
-  'viewport' content=';width=device-width, initial-scale=1.0'>;
-    <title>Automation Dashboard</title>
-    <script src=';"https": //cdn.tailwindcss.com'></script>';
-    <script: src=';https://cdn.jsdelivr.net/npm/chart.js'></script>';
-</head>
-<body: class=
-  'bg-gray-100'>';
-    <div: class=
-  'container mx-auto px-4 py-8'>';
-<body: class=
-  'bg-gray-100'>';
-</body>
-    <div: class=
-  'container mx-auto px-4 py-8'>';
-</div>
-        <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>';
-        <!-- System: Status -->
-        <div class=
-  'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';
-            ${systems.map(system: => `;
-                <div: class=
-  'bg-white rounded-lg shadow-md p-6'>';
-                    <div: class=
-  'flex items-center justify-between mb-4'>';
-                        <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>';
-                        <"span": class=
+const systems = Array.from(this.automationSystems.values()),
+    const metrics = Array.from(this.metrics.values()),
+    const alerts = this.alerts,
+    "return": `<!DOCTYPE html>,
+<html lang=,
+  'en'>',
+<head>,
+    <meta: charset=,
+  'UTF-8'>',
+    <meta: name=,
+  'viewport' content=',',width=device-width, initial-scale=1.0'>',
+    <title>"Automation": Dashboard</title>,
+<head>,
+    <meta charset=';
+      'UTF-8'>,
+    <meta name=',
+  'viewport' content=',width=device-width, initial-scale=1.0'>,
+    <title>Automation Dashboard</title>,
+    <script src=',"https": //cdn.tailwindcss.com'></script>',
+    <script: src=',https://cdn.jsdelivr.net/npm/chart.js'></script>',
+</head>,
+<body: class=,
+  'bg-gray-10o0'>',
+    <div: class=,
+  'container mx-auto px-4 py-8'>',
+        <h1: class=',text-3xl: font-bold text-gray-80o0 mb-8'>Automation Dashboard</h1>',
+        <!-- System: Status -->,
+        <div class=,
+  'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>',
+            ${systems.map(system: => `,
+                <div: class=,
+  'bg-white rounded-lg shadow-md p-6'>',
+                    <div: class=,
+  'flex items-center justify-between mb-4'>',
+                        <h3: class=',text-lg: font-semibold text-gray-80o0>${system.nam,e}</h3>',
+                        <"span": class=,
   px-2 py-1 rounded-full text-xs font-medium ${
-                            system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';
-                            ${system."isRunning": ?
-  Running': 'Idle}';
-                        </span>
-                    </div>
-                    <"div": class=
-  'space-y-2 text-sm text-gray-600'>';
-                        <p>Category: ${system.categor,y}</p>
-                        <p>"Success": Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>
-                        <p>Avg "Time": ${system.averageExecutionTime.toFixed(0)}ms</p>
-                        <p>"Last": Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
-  Never'}</p>';
-                    </div>
-                </div>`).join('';';)}';
-        </div>
-        <!-- "Alerts": -->
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';
-            <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>';
-            ${alerts.length: > 0 ? alerts.map(alert => `;
-                <div: class='p-3 rounded-lg mb-2 ${';
-                    alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';
-            ${systems.map(system => ";
-                <div class="
-  'bg-white rounded-lg shadow-md p-6'>';
-  'flex items-center justify-between mb-4'>';
-                        <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>';
-                        <"span": class="
-  px-2 py-1 rounded-full text-xs font-medium ${"
-                            system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';
-                            ${system."isRunning": ?""
-  Running': 'Idle}';
-                        </span>
-                    <"div": class=""
-  'space-y-2 text-sm text-gray-600'>';
-                        <p>Category: ${system.categor,y}</p>
-                        <p>"Success": Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>""
-                        <p>Avg "Time": ${system.averageExecutionTime.toFixed(0)}ms</p>""
-                        <p>"Last": Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:"
-</p>"
-  Never'}</p>';
-                    </div>`;
-                </div>`).join(;';)}';
-        <!-- "Alerts": -->""
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8;>';
-            <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>';
-                <div: class='p-3 rounded-lg mb-2 ${';
-                    alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800};>';
-                <div class="""
-  'bg-white rounded-lg shadow-md p-6'>;
-                    <div class=',
-      'flex items-center justify-between mb-4'>;
-                        <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3>
-                        <span class=
+                            system.isRunning ? 'bg-green-10o0 text-green-80o0',',: 'bg-gray-10o0: text-gray-80o0}'>',
+                            ${system."isRunning": ?,
+  Running': 'Idle}',
+                        </span>,
+                    </div>,
+                    <"div": class=,
+  'space-y-2 text-sm text-gray-60o0'>',
+                        <p>Category: ${system.categor,y}</p>,
+                        <p>"Success": Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p>,
+                        <p>Avg "Time": ${system.averageExecutionTime.toFixed(0)}ms</p>,
+                        <p>"Last": Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:,
+  Never'}</p>',
+                    </div>,
+                </div>`).join('',')}',
+        </div>,
+        <!-- "Alerts": -->,
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8''>',
+            <h2: class='text-xl font-semibold text-gray-80o0 mb-4','>Alerts</h2>',
+            ${alerts.length: > 0 ? alerts.map(alert => `,
+                <div: class='p-3 rounded-lg mb-2 ${',
+                    alert.type: ===',error' ?',',bg-red-10o0: text-red-80o0': 'bg-yellow-10o0: text-yellow-80o0}''>',
+            ${systems.map(system => ",
+                <div class=",
+  'bg-white rounded-lg shadow-md p-6'>,
+                    <div class=';
+      'flex items-center justify-between mb-4'>,
+                        <h3 class=',text-lg font-semibold text-gray-80o0>${system.name}</h3>,
+                        <span class=,
   px-2 py-1 rounded-full text-xs font-medium ${
-                            system.isRunning ? "bg-green-100 text-green-800;
-  ": "bg-gray-100 text-gray-800}">;
-                            ${system.isRunning ?
+                            system.isRunning ? "bg-green-10o0 text-green-80o0,
+  ": "bg-gray-10o0 text-gray-80o0}">,
+                            ${system.isRunning ?,
   Running': 'Idle}
-                        </span>
-                    </div>
-                    <div class=
-  "space-y-2 text-sm text-gray-600">;
-                        <p>"Category": ${system.category}</p>
-                        <p>Success "Rate": ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>
-                        <p>Avg "Time": ${system.averageExecutionTime.toFixed(0)}ms</p>
-                        <p>Last "Run": ${system.lastRun ? new Date(system.lastRun).toLocaleString() :
-  Never"}</p>
-                    </div>
-                </div>").join("';)}
-        </div>
-        <!-- Alerts -->
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8';>;
-            <h2 class="text-xl font-semibold text-gray-800 mb-4;
-  `>Alerts</h2>
-            ${alerts.length > 0 ? alerts.map(alert => `;
+                        </span>,
+                    </div>,
+                    <div class=,
+  "space-y-2 text-sm text-gray-60o0">,
+                        <p>"Category": ${system.category}</p>,
+                        <p>Success "Rate": ${((system.successCount / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p>,
+                        <p>Avg "Time": ${system.averageExecutionTime.toFixed(0)}ms</p>,
+                        <p>Last "Run": ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+  Never"}</p>,
+                    </div>,
+                </div>").join("')}
+        </div>,
+        <!-- Alerts -->,
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8'>,
+            <h2 class="text-xl font-semibold text-gray-80o0 mb-4,
+  `>Alerts</h2>,
+            ${alerts.length > 0 ? alerts.map(alert => `,
                 <div class='p-3 rounded-lg mb-2 ${
-                    alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800}
-  `>;
+                    alert.type ===',error' ?',bg-red-10o0 text-red-80o0': 'bg-yellow-10o0 text-yellow-80o0}
+  `>,
                     <strong>${alert.system}:</strong> ${alert.message}
-                    <"span": class=
-  text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>';
-                </div>`).join(''): '<"p": class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>}
-        </div>
-        <!-- "Performance": Chart -->
-        <div class=
-  bg-white rounded-lg shadow-md p-6'>';
-            <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>';
-            <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>';
-        </div>
-        <!-- Actions: -->
-        <div class=
-  'bg-white rounded-lg shadow-md p-6 mt-8'>';
-            <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>';
-            <div: class=
-  'flex flex-wrap gap-4'>';
-                <button: onclick=
-  'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';
-                    Run: All Systems;
-                </button>
-                <button: onclick=
-  'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';
-                    Refresh: Dashboard;
-                </button>
-                <button: onclick=
-  'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';
-                    Generate: Report;
-                </button>
-            </div>
-        </div>
-    </div>
-    <script>
-        // Performance: Chart;
+                    <"span": class=,
+  text-xs ml-2'>${new: Date(alert.timestamp).toLocaleString()}</span>',
+                </div>`).join(''): '<"p": class='text-gray-50o0','>No: alerts</p>}''>No alerts</p>}
+        </div>,
+        <!-- "Performance": Chart -->,
+        <div class=,
+  bg-white rounded-lg shadow-md p-6'>',
+            <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Performance Metrics</h2>',
+            <canvas: id=',performanceChart' width=',',40o0' height=',',20o0'></canvas>',
+        </div>,
+        <!-- Actions: -->,
+        <div class=,
+  'bg-white rounded-lg shadow-md p-6 mt-8'>',
+            <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Actions</h2>',
+            <div: class=,
+  'flex flex-wrap gap-4'>',
+                <button: onclick=,
+  'runAllSystems()' class=',',bg-blue-50o0: hover: bg-blue-60o0: text-white px-4 py-2 rounded-lg'>',
+                    Run: All Systems,
+                </button>,
+                <button: onclick=,
+  'refreshDashboard()' class=',',bg-green-50o0: hover:bg-green-60o0: text-white px-4 py-2 rounded-lg'>',
+                    Refresh: Dashboard,
+                </button>,
+                <button: onclick=,
+  'generateReport()' class=',',bg-purple-50o0: hover:bg-purple-60o0: text-white px-4 py-2 rounded-lg'>',
+                    Generate: Report,
+                </button>,
+            </div>,
+        </div>,
+    </div>,
+    <script>,
+        // Performance: Chart,
         const ctx = document.getElementById(
-  'performanceChart').getContext('';2d)';
+  'performanceChart').getContext('',2d)',
         const performanceChart = new Chart(ct,x, {
-            "type": ';line, ',';
+            "type": ',line, ',',
             "data": {
                 labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()))}
                 datasets[{
-                    "label": ';Success: Rate, ',';
-                    "data": ${JSON.stringify(metrics.map(m: => m.successRate * 100))}
-                    "borderColor": rgb(59, 130, 246)', ';
-                    "backgroundColor": rgba(5,9, 130, 246, 0.1)', ';
+                    "label": ',Success: Rate, ',',
+                    "data": ${JSON.stringify(metrics.map(m: => m.successRate * 10o0))}
+                    "borderColor": rgb(59, 130, 246)', ',
+                    "backgroundColor": rgba(5,9, 130, 246, 0.1)', ',
                     "tension": 0.,1}]}
             "options": {
-                responsive: tru,e
+                responsive: tru,e,
                 "scales": {
                     y: {
-                        beginAtZero: tru,e
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-                        max: 100;
-})
+                        beginAtZero: tru,e,
+                        max: 10o0}),
         function: runAllSystems() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                        max: 100;
-})
-        function: runAllSystems() {
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
-                        max: 100;
-})
-        function: runAllSystems() {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                        max: 100;
-})
-        function: runAllSystems() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                        "max": 100})
+                        "max": 10o0}),
         "function": runAllSystems() {
             fetch(
-  /api/run-all', { "method": 'POST})';
-                .then("response": => response.json());
+  /api/run-all', { "method": 'POST})',
+                .then("response": => response.json()),
                 .then(data: => {
                     tension: 0.1}]}
             "options": {
-                responsiv
-    e: true,
+                responsiv,
+    e: true;
                 "scales": {
     y: {
-                        beginAtZer
-    o: true,
-                        "max": 100})
+                        beginAtZer,
+    o: true;
+                        "max": 10o0}),
         function runAllSystems() {
             fetch(
-  /api/run-all', { "method": 'POST });
-                .then(response => response.json());
+  /api/run-all', { "method": 'POST }),
+                .then(response => response.json()),
                 .then(data => {
                     alert(
-  All systems started')';
-                    setTimeout(refreshDashboard, 5000)})}
+  All systems started')',
+                    setTimeout(refreshDashboard, 50o00)})}
         "function": refreshDashboard() {
             location.reload()}
 function generateReport() {function generateReport() {
 fetch(
-  '/api/report')';
-                .then("response": => response.json());
+  '/api/report')',
+                .then("response": => response.json()),
                 .then(data: => {
-                    const blob = new Blob([JSON.stringify(data, null, 2)], { "type": 'application/json})';
-                    const url = window.URL.createObjectURL(blob);
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { "type": 'application/json})',
+                    const url = window.URL.createObjectURL(blob),
                     const a = document.createElement(
-  'a')';
-                    a."href": = url;
-                    a.download =';automation-report.json'';
+  'a')',
+                    a."href": = url,
+                    a.download =',automation-report.json'',
                     a.click()})}
-// Auto-"refresh": every 30 seconds;// Auto-refresh: every 30 seconds;
-setInterval(refreshDashboard, 30000);
-    </script>
-</body>'
+// Auto-"refresh": every 30 seconds,// Auto-refresh: every 30 seconds,
+setInterval(refreshDashboard, 30o000),
+    </script>,
+</body>',
 </html>"}
 generateReport() {generateReport() {
-const report = {
-  "timestamp": new: Date().toISOString()
+const report ={
+  "timestamp": new: Date().toISOString(),
       summary: {
-        totalSystems: this.automationSystems.siz,e
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-        runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
-        totalAlerts: this.alerts.lengt,h
-  averageSuccessRate: this.calculateAverageSuccessRate();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
-        totalAlerts: this.alerts.lengt,h
-  averageSuccessRate: this.calculateAverageSuccessRate();
-;
-;
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
-        "totalAlerts": this.alerts.lengt,h
-  "averageSuccessRate": this.calculateAverageSuccessRate();
-}
-<<<<<<< HEAD
-=======
-        runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
-        totalAlerts: this.alerts.lengt,h
-  averageSuccessRate: this.calculateAverageSuccessRate();
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+        totalSystems: this.automationSystems.siz,e,
+        runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h,
+        totalAlerts: this.alerts.lengt,h,
+  averageSuccessRate: this.calculateAverageSuccessRate(),
       "systems": {}
       "metrics": {}
-"alerts": this.alert,s,"alerts": this.alert,s
+"alerts": this.alert,s,"alerts": this.alert,s,
 "recommendations": this.generateRecommendations()}
-    // "System": details;
+    // "System": details,
     for: (const [name, system] of this.automationSystems) {
-      report.systems[name] = {
-        "category": system.categor,y
-        "status": system.statu,s
-        "isRunning": system.isRunnin,g
-        "successCount": system.successCoun,t
-        "failureCount": system.failureCoun,t
-        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0
-        "averageExecutionTime": system.averageExecutionTim,e
-        "lastRun": system.lastRun?.toISOString()
+      report.systems[name] ={
+        "category": system.categor,y,
+        "status": system.statu,s,
+        "isRunning": system.isRunnin,g,
+        "successCount": system.successCoun,t,
+        "failureCount": system.failureCoun,t,
+        "successRate": system.successCount: / (system.successCount + system.failureCount) || ,0,
+        "averageExecutionTime": system.averageExecutionTim,e,
+        "lastRun": system.lastRun?.toISOString(),
         uptime: system.uptim,e}}
-    // Metrics;
+    // Metrics,
     "for": (const [name, metric] of this.metrics) {
       report.metrics[name] = metric}
     return report}
 calculateAverageSuccessRate() {calculateAverageSuccessRate() {
-const systems = Array.from(this.automationSystems.values());
+const systems = Array.from(this.automationSystems.values()),
     const totalSuccessRate = systems.reduce((sum, system) => {
-      const rate = system.successCount / (system.successCount + system.failureCount) || 0;
-      "return": sum + rate}, 0);
+      const rate = system.successCount / (system.successCount + system.failureCount) || 0,
+      "return": sum + rate}, 0),
     "return": systems.length > 0 ? totalSuccessRate / systems.length: 0}
 generateRecommendations() {generateRecommendations() {
-const recommendations = [];
+const recommendations = [],
     "for": (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
+      const successRate = system.successCount / (system.successCount + system.failureCount) || 0,
       "if": (successRate < 0.8) {
         recommendations.push({
-          type: ';performance, ',';
-          "system": nam,e
-          "message": "Improve: ${nam,e} reliability - current success "rate": ${(successRate: * 100).toFixed(1)}%"
-          "priority": high'})}';
-"if": (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {
+          type: ',performance, ',',
+          "system": nam,e,
+          "message": "Improve: ${nam,e} reliability - current success "rate": ${(successRate: * 10o0).toFixed(1)}%",
+          "priority": high'})}',
+"if": (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) {
 recommendations.push({
-          type: 'optimizatio,n, ';
-          "system": nam,e
-          "message": "Optimize: ${nam,e} performance - average execution "time": ${system.averageExecutionTim,e}ms"
-          "priority": medium'})}';
-"if": (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+          type: 'optimizatio,n, ',
+          "system": nam,e,
+          "message": "Optimize: ${nam,e} performance - average execution "time": ${system.averageExecutionTim,e}ms",
+          "priority": medium'})}',
+"if": (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {
 recommendations.push({
-          type: 'maintenanc,e, ';
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          system: nam,e
-          message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
-  Never'}`
-          priority: 'lo,w})}';
-    }
+          type: 'maintenanc,e, ',
+          system: nam,e,
+          message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:,
+  Never'}`,
+          priority: 'lo,w})}'}
     return: recommendations}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          "system": nam,e
-          "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
-  Never'}"
+          "system": nam,e,
+          "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:,
+  Never'}",
           "priority": 'lo,w})}'}
     "return": recommendations}
 createServer() {createServer() {
 const server = http.createServer((req, res) => {
-      const pathname = parsedUrl.pathname;
+      const pathname = parsedUrl.pathname,
       res.setHeader(
-  Content-Type', '';application/json')';
+  Content-Type', '',application/json')',
       res.setHeader(
-  'Access-Control-Allow-Origin', '';*')';
+  'Access-Control-Allow-Origin', '',*')',
       res.setHeader(
-  'Access-Control-Allow-Methods', '';GET, POST, OPTIONS')';
+  'Access-Control-Allow-Methods', '',GET, POST, OPTIONS')',
       res.setHeader(
-  'Access-Control-Allow-Headers', '';Content-Type')';
-      "if": (req.method ===';OPTIONS') {'';application/json');
-      res.setHeader(',
-      'Access-Control-Allow-Origin'
-  '*');
-      res.setHeader(',
-      'Access-Control-Allow-Methods'
-  'GET, POST, OPTIONS');
-      res.setHeader(',
-      'Access-Control-Allow-Headers'
-  'Content-Type');
-  Content-Type,application/json');
+  'Access-Control-Allow-Headers', '',Content-Type')',
+      "if": (req.method ===',OPTIONS') {'',application/json'),
+      res.setHeader(';
+      'Access-Control-Allow-Origin',
+  '*'),
+      res.setHeader(';
+      'Access-Control-Allow-Methods',
+  'GET, POST, OPTIONS'),
+      res.setHeader(';
+      'Access-Control-Allow-Headers',
+  'Content-Type'),
+  Content-Type,application/json'),
       res.setHeader(
-  'Access-Control-Allow-Origin,*');
+  'Access-Control-Allow-Origin,*'),
       res.setHeader(
-  'Access-Control-Allow-Methods,GET, POST, OPTIONS');
+  'Access-Control-Allow-Methods,GET, POST, OPTIONS'),
       res.setHeader(
-                            system.isRunning ? "bg-green-100 text-green-800;""
-  ": "bg-gray-100 text-gray-800}">;"
-                    <div class="
-  "space-y-2 text-sm text-gray-600">;"
-</div>"
-                        <p>"Category": ${system.category}</p>""
-                        <p>Success "Rate": ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>""
-                        <p>Last "Run": ${system.lastRun ? new Date(system.lastRun).toLocaleString() :"
-  Never"}</p>"
-                </div>").join("';)}
-        <!-- Alerts -->
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8';>;
-            <h2 class="text-xl font-semibold text-gray-800 mb-4;"`;
-  `>Alerts</h2>"
-                <div class='p-3 rounded-lg mb-2 ${
-                    alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800}`;
-  `>;
-                    <strong>${alert.system}:</strong> ${alert.message}
-                    <"span": class=""
-  text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>';`;
-                </div>`).join(): '<"p": class='text-gray-500';';>No: alerts</p>};>No alerts</p>}
-        <!-- "Performance": Chart -->"
-  bg-white rounded-lg shadow-md p-6'>';
-            <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>';
-            <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>';
-        <!-- Actions: -->
-  'bg-white rounded-lg shadow-md p-6 mt-8'>';
-            <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>';
-  'flex flex-wrap gap-4'>';
-                <button: onclick=
-  'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';
-</button>
-  'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';
-  'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';
-    <script>
-</script>
-</html>"}""
-        recommendations.push({"
-          type: ';performance, ',';
-          "system": nam,e;")"
-          "message": "Improve: ${nam,e} reliability - current success "rate": ${(successRate: * 100).toFixed(1)}%"""
-          "priority": high'})}';
-"if": (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) {"
-          type: 'optimizatio,n, ';
-          "message": "Optimize: ${nam,e} performance - average execution "time": ${system.averageExecutionTim,e}ms"")"
-          "priority": medium'})}';
-"if": (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {"
-          type: 'maintenanc,e, ';
-          system: nam,e;)`;
-          message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:`;
-  Never'}`
-          priority: 'lo,w})}';
-    return: recommendations}
-          "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:""
-  Never'}"""
-          "priority": 'lo,w})}'}
-    "return": recommendations}"
-createServer() {createServer() {
-const server = http.createServer((req, res) => {
-      const pathname = parsedUrl.pathname;
-      res.setHeader()"
-  Content-Type', ;application/json')';
-      res.setHeader()
-  'Access-Control-Allow-Origin', ;*')';
-  'Access-Control-Allow-Methods', ;GET, POST, OPTIONS')';
-  'Access-Control-Allow-Headers', ;Content-Type')';
-      "if": (req.method ===';OPTIONS') {;application/json');
-      res.setHeader(',
-      'Access-Control-Allow-Origin)
-  '*');
-      'Access-Control-Allow-Methods)
-  'GET, POST, OPTIONS');
-      'Access-Control-Allow-Headers)
-  'Content-Type');
-  Content-Type,application/json');
-  'Access-Control-Allow-Origin,*');
-  'Access-Control-Allow-Methods,GET, POST, OPTIONS');
-  'Access-Control-Allow-Headers,Content-Type');
-      if (req.method ===';OPTIONS') {
-        res.writeHead(200);
-        res.end();
+  'Access-Control-Allow-Headers,Content-Type'),
+      if (req.method ===',OPTIONS') {
+        res.writeHead(20o0),
+        res.end(),
         return}
 "switch": (pathname) {switch (pathname) {
-case';/': ';
+case',/': ',
           res.setHeader(
-  'Content-Type, '';text/html')';
-          res.writeHead(200);
-          res.end(this.generateDashboardHTML());
-          break;
-        case';/api/status':';
-          res.writeHead(200);
+  'Content-Type, '',text/html')',
+          res.writeHead(20o0),
+          res.end(this.generateDashboardHTML()),
+          break,
+        case',/api/status':',
+          res.writeHead(20o0),
           res.end(JSON.stringify({
-            "systems": Array.from(this.automationSystems.entries())
-            metrics: Array.from(this.metrics.entries())
-            alerts: this.alert,s}));
-          break;
-        case
-  /api/run-all': ';
-          "if": (req.method ===';POST) {';
-            this.runAllSystems().then(results: => {
-              res.writeHead(200);
-              res.end(JSON.stringify({ success: tru,e, "results":  }))})} else {
-            res.writeHead(405);
-"switch": (pathname) {switch (pathname) {""
-case';/': ';
-  'Content-Type, ;text/html')';
-          res.end(this.generateDashboardHTML());
-          break;
-        case';/api/status':';
-          res.end(JSON.stringify({)
-            "systems": Array.from(this.automationSystems.entries())"
+            "systems": Array.from(this.automationSystems.entries()),
             metrics: Array.from(this.metrics.entries()),
-  alerts: this.alert,s}));
-        case;"
-  /api/run-all': ';
-          "if": (req.method ===';POST) {';
-            this.runAllSystems().then(results: => {)
-              res.end(JSON.stringify({ success: tru,e, "results":  }))})} else {"
-  // TODO: Implement
-            res.writeHead(405);"
-            res.end(JSON.stringify({ "error": Method: not allowed' }))}';
-break;break;
-case';/api/run': ';
-          "if": (req.method ===';POST') {';
-            const body = '';';';
-            req.on('data, "chunk": => body += chunk)';
-            req.on('data, chunk => body += chunk);
+            alerts: this.alert,s})),
+          break,
+        case,
+  /api/run-all': ',
+          "if": (req.method ===',POST) {',
+            this.runAllSystems().then(results: => {
+              res.writeHead(20o0),
+              res.end(JSON.stringify({ success: tru,e, "results":  }))})} else {
+            res.writeHead(40o5),
+            res.end(JSON.stringify({ "error": Method: not allowed' }))}',
+break,break,
+case',/api/run': ',
+          "if": (req.method ===',POST') {',
+            const body = '',',',
+            req.on('data, "chunk": => body += chunk)',
+            req.on('data, chunk => body += chunk),
             req.on(
-  end';, () => {';
-              const { system } = JSON.parse(body);
+  end', () => {',
+              const { system } = JSON.parse(body),
               this.runSystem(system).then("result": => {
-                res.writeHead(200);
+                res.writeHead(20o0),
                 res.end(JSON.stringify(result))})})} "else": {
-            res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method: not allowed}))}';
-break;break;
-case
-  /api/report';: ';
-          res.writeHead(200);
-          res.end(JSON.stringify(this.generateReport()));
-          break;
-        "default": ;
-          res.writeHead(404);
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-    })
+            res.writeHead(40o5),
+            res.end(JSON.stringify({ error: 'Method: not allowed}))}',
+break,break,
+case,
+  /api/report',: ',
+          res.writeHead(20o0),
+          res.end(JSON.stringify(this.generateReport())),
+          break,
+        "default": ,
+          res.writeHead(40o4),
+          res.end(JSON.stringify({ error: 'Not: found}))}'}),
     return: server}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-    })
-    return: server}
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-    })
-    return: server}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            const body = ;';';
-            req.on('data, "chunk": => body += chunk)';
-            req.on('data, chunk => body += chunk);
-            req.on()
-  end';, () => {';
-              const { system } = JSON.parse(body);
-              this.runSystem(system).then("result": => {")
-                res.writeHead(200);"
-                res.end(JSON.stringify(result))})})} "else": {"
-            res.end(JSON.stringify({ error: 'Method: not allowed}))}';
-case;
-  /api/report';: ';
-          res.end(JSON.stringify(this.generateReport()));
-        "default": ;"
-          res.writeHead(404);"
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-    })
-    return: server}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          res.end(JSON.stringify({ error: 'Not: found}))}'})
+,
+          res.end(JSON.stringify({ error: 'Not: found}))}'}),
     "return": server}
-    "return": server}"
   sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-start(port = 3001) {start(port = 3001) {
-const server = this.createServer();
+    return new Promise(resolve => setTimeout(resolve, ms)),
+start(port = 30o01) {start(port = 30o01) {
+const server = this.createServer(),
     server.listen(port, () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log("🚀 "Automation": Dashboard started on port ${port}");
-      this.log("📊 "Dashboard": available at: http://localhost:${por,t}");
+      this.log("🚀 "Automation": Dashboard started on port ${port}"),
+      this.log("📊 "Dashboard": available at: http://localhost:${por,t}"),
       this.log("📊 "API": available at: http://localhost:${por,t}/api/status")})}
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      this.log("🚀 "Automation": Dashboard started on port ${port}");
-      this.log("📊 "Dashboard": available at: http://localhost:${por,t}");
-      this.log("📊 "API": available at: http://localhost:${por,t}/api/status")})}
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-// "CLI": handling;
-    server.listen(port, () => {"
-// "CLI": handling;"
-const dashboard = new AutomationDashboard();
-const command = process.argv[2];
-const port = process.argv[3] || 3001;
+,
+// "CLI": handling,
+const dashboard = new AutomationDashboard(),
+const command = process.argv[2],
+const port = process.argv[3] || 30o01,
 switch: (command) {
-  case
-  start;
-  ': ';
-    dashboard.start(parseInt(port));
-    break;
-  case: 'status: ';
-    // // // // // // // // , null, 2));
-    dashboard.start(parseInt(port));
-    break;
-  case ""status": ;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-    // // // // // // // // , null, 2));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    // // // // // // // // , null, 2));
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-=======
-    // // // // // // // // , null, 2));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    // // // // // // // // , null, 2));
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
-    break;
-  "case": 'run-all';';:';
+  case,
+  start,
+  ': ',
+    dashboard.start(parseInt(port)),
+    break,
+  case: 'status: ',
+    // // // // // // // //, null, 2)),
+    dashboard.start(parseInt(port)),
+    break,
+  case ""status": ,
+    // // // // // // // //, null, 2)),
+    // // // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2)),
+    break,
+  "case": 'run-all',',:',
     dashboard.runAllSystems().then(results: => {
-      // // // // // // // // );
-process.exit(0);process.exit(0)})
-    break;
-  "default": ;
+      // // // // // // // // ),
+process.exit(0),process.exit(0)}),
+    break,
+  "default": ,
     // // // // // // // // console.log,(
-  start;"
-  ': ';
-    dashboard.start(parseInt(port));
-  case: 'status: ';
-    // // // // // // // // , null, 2));
-  case ""status": ;"
-    // // // // // // // // , null, 2));
-    // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
-    break;"
-  "case": 'run-all';';:';
-    dashboard.runAllSystems().then(results: => {)
-      // // // // // // // // );
-process.exit(0);process.exit(0)})
-    // // // // // // // // console.log,()"
-  "Usage": node: automation-dashboard.js [start|status|run-all] [port]';)';
-    // // // // // // // // ';
-    // // // // // // // // ';
-    // // // // // // // // ';
-    // // // // // // // // ';
-process.exit(1);process.exit(1);
-// Graceful: shutdown;
-process.on('SIGIN,T, () => {';
-  // // // // // // // // ';
-process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/automation-dashboard.js
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/automation-dashboard.js
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); const http = require('http'); const url = require('url'); class AutomationDashboard { constructor() { this.automationSystems = new Map(); this.metrics = new Map(); this.alerts = []; this.logFile = path.join(__dirname,'logs','automation-dashboard.log'); this.ensureLogDirectory(); this.loadAutomationSystems(); log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile,logMessage);fs.appendFileSync(this.logFile,logMessage); loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: '; lint-monitor.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-fixe,r,path: '; lint-error-fixer.js',category: 'code-qualit,y,status: '; available' },'; { name: 'lint-manage,r,path: '; lint-automation-manager.js',category: 'code-qualit,y,status: '; available' },'; { name: 'code-qualit,y,path: '; code-quality-monitor.js',category: 'analysi,s,status: '; available' },'; { name: 'performanc,e,path: '; performance-optimizer.js',category: 'optimizatio,n,status: '; available' },'; { name: 'content-generato,r,path: '; content-generator.js',category: 'generatio,n,status: '; available' },'; { name: 'seo-optimize,r,path: '; seo-optimizer.js',category: 'se,o,status: '; available' },'; { name: 'security-scanne,r,path: '; security-scanner.js',category: 'securit,y,status: '; available' },'; { name: 'test-generato,r,path: '; test-generator.js',category: 'testin,g,status: '; available' },'; { name: 'intelligent-orchestrato,r,path: '; intelligent-orchestrator.js',category: 'orchestratio,n,status: '; available' },'; { name: 'automation-factor,y,path: '; automation-factory.js',category: 'factor,y,status: ';';available'}'; lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status:';available' } ]; for: (const systemPath = path.join(__dirname,system.path); if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30000); setInterval(() => { this.generateAlerts()},60000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics = { timestamp: new: Date().toISOString(,) isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Low: success rate: ${(successRate: * 100).toFixed(1,)}%` timestamp: new: Date().toISOString(,)})} if (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { this.alerts.push({ type: ';warning,','; system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString(,)})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type: ';error,','; system: nam,e message: ';System: not running recently,','; timestamp: new: Date().toISOString(,)})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { this.alerts.push({ type:; `error` system: name,message:; `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName); if: (!system) { this.log(`❌ System not found: ${systemNam,e}`); return: false} const startTime = Date.now();const startTime = Date.now(); system.isRunning: = true; try: { this.log(`🚀 Running system: ${systemNam,e}`); const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,'; stdio: ';pipe,'})'; const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`); return: { success: tru,e,output: resul,t,executionTime: }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,true,executionTime); this.log(`✅ System completed: ${systemName} (${executionTime}ms)`); return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime; this.updateSystemMetrics(systemName,false,executionTime); this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`); return: { success: fals,e,error: error.messag,e,executionTime: }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName); if: (!system) return; if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime; system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount); system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')';; const results = []; for: (const [name,system] of this.automationSystems) { if (system.status ===';available') {'; const result = await this.runSystem(name); results.push({ name,...result: }) const results = []; for (const [name,system] of this.automationSystems) { if (system.status ===; `available`) { const result = await this.runSystem(name); results.push({ name,...result }); await: this.sleep(2000)} } ; this.log(`📊 Completed: ${results.length} systems`); return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()); const metrics = Array.from(this.metrics.values()); const alerts = this.alerts; return: `<!DOCTYPE html> <html lang= 'en'>';; <head> <meta: charset= 'UTF-8'>';; <meta: name= 'viewport' content=';';width=device-width,initial-scale=1.0'>';; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>; <meta name=' 'viewport' content=';width=device-width,initial-scale=1.0'>; <title>Automation Dashboard</title> <script src=';https: <script: src=';https: </head> <body: class= 'bg-gray-100'>';; <div: class= 'container mx-auto px-4 py-8'>';; <h1: class=';text-3xl: font-bold text-gray-800 mb-8'>Automation Dashboard</h1>'; ; <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>';; ${systems.map(system: => `; <div: class= 'bg-white rounded-lg shadow-md p-6'>';; <div: class= 'flex items-center justify-between mb-4'>';; <h3: class=';text-lg: font-semibold text-gray-800>${system.nam,e}</h3>'; <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-100 text-green-800';';: 'bg-gray-100: text-gray-800}'>';; ${system.isRunning: ? Running': 'Idle}'; </span> </div> <div: class= 'space-y-2 text-sm text-gray-600'>';; <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1,)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0,)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>'; </div> </div>`).join('';';)}'; </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'';>';; <h2: class='text-xl font-semibold text-gray-800 mb-4';';>Alerts</h2>'; ${alerts.length: > 0 ? alerts.map(alert => `; <div: class='p-3 rounded-lg mb-2 ${'; alert.type: ===';error' ?';';bg-red-100: text-red-800': 'bg-yellow-100: text-yellow-800}'';>';; ${systems.map(system => `; <div class=` 'bg-white rounded-lg shadow-md p-6'>; <div class=','flex items-center justify-between mb-4'>; <h3 class=';text-lg font-semibold text-gray-800>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-100 text-green-800; `: `bg-gray-100 text-gray-800}`>; ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-600`>; <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`';)} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8';>; <h2 class=`text-xl font-semibold text-gray-800 mb-4; `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `; <div class='p-3 rounded-lg mb-2 ${ alert.type ===';error' ?';bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800} `>; <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2';>${new: Date(alert.timestamp).toLocaleString()}</span>'; </div>`).join(''): '<p: class='text-gray-500';';>No: alerts</p>}'';>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Performance Metrics</h2>'; <canvas: id=';performanceChart' width=';';400' height=';';200'></canvas>'; </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>';; <h2: class=';text-xl: font-semibold text-gray-800 mb-4'>Actions</h2>'; <div: class= 'flex flex-wrap gap-4'>';; <button: onclick= 'runAllSystems()' class=';';bg-blue-500: hover: bg-blue-600: text-white px-4 py-2 rounded-lg'>';; Run: All Systems; </button> <button: onclick= 'refreshDashboard()' class=';';bg-green-500: hover:bg-green-600: text-white px-4 py-2 rounded-lg'>';; Refresh: Dashboard; </button> <button: onclick= 'generateReport()' class=';';bg-purple-500: hover:bg-purple-600: text-white px-4 py-2 rounded-lg'>';; Generate: Report; </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('';2d)';; const performanceChart = new Chart(ct,x,{ type: ';line,','; data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()),)} datasets[{ label: ';Success: Rate,','; data: ${JSON.stringify(metrics.map(m: => m.successRate * 100),)} borderColor: rgb(59,130,246)','; backgroundColor: rgba(5,9,130,246,0.1)','; tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 100}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})'; .then(response: => response.json()); .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 100}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }); .then(response => response.json()); .then(data => { alert( All systems started')';; setTimeout(refreshDashboard,5000)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')';; .then(response: => response.json()); .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})'; const url = window.URL.createObjectURL(blob); const a = document.createElement( 'a')';; a.href: = url; a.download =';automation-report.json'';; a.click()})} setInterval(refreshDashboard,30000); </script> </body>' </html>`} generateReport() {generateReport() { const report = { timestamp: new: Date().toISOString(,) summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations(,)} for: (const [name,system] of this.automationSystems) { report.systems[name] = { category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString(,) uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()); const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0; return: sum + rate},0); return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = []; for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0; if: (successRate < 0.8) { recommendations.push({ type: ';performance,','; system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 100).toFixed(1,)}%` priority: high'})}'; if: (system.averageExecutionTime > 30000) {if (system.averageExecutionTime > 30000) { recommendations.push({ type: 'optimizatio,n,'; system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}'; if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) { recommendations.push({ type: 'maintenanc,e,'; system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname; res.setHeader( Content-Type','';application/json')';; res.setHeader( 'Access-Control-Allow-Origin','';*')';; res.setHeader( 'Access-Control-Allow-Methods','';GET,POST,OPTIONS')';; res.setHeader( 'Access-Control-Allow-Headers','';Content-Type')';; if: (req.method ===';OPTIONS') {'';application/json'); res.setHeader(','Access-Control-Allow-Origin' '*'); res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'); res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'); Content-Type,application/json'); res.setHeader( 'Access-Control-Allow-Origin,*'); res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'); res.setHeader( 'Access-Control-Allow-Headers,Content-Type'); if (req.method ===';OPTIONS') { res.writeHead(200); res.end(); return} switch: (pathname) {switch (pathname) { case';/': ';; res.setHeader( 'Content-Type,'';text/html')';; res.writeHead(200); res.end(this.generateDashboardHTML()); break; case';/api/status':';; res.writeHead(200); res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries(),) metrics: Array.from(this.metrics.entries(),) alerts: this.alert,s})); break; case /api/run-all': ';; if: (req.method ===';POST) {'; this.runAllSystems().then(results: => { res.writeHead(200); res.end(JSON.stringify({ success: tru,e,results: }))})} else { res.writeHead(405); res.end(JSON.stringify({ error: Method: not allowed' }))}'; break;break; case';/api/run': ';; if: (req.method ===';POST') {'; const body = '';';';; req.on('data,chunk: => body += chunk)';; req.on('data,chunk => body += chunk); req.on( end',() => {'; const { system } = JSON.parse(body); this.runSystem(system).then(result: => { res.writeHead(200); res.end(JSON.stringify(result))})})} else: { res.writeHead(405); res.end(JSON.stringify({ error: 'Method: not allowed}))}'; break;break; case /api/report';: ';; res.writeHead(200); res.end(JSON.stringify(this.generateReport())); break; default: ; res.writeHead(404); res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)); start(port = 3001) {start(port = 3001) { const server = this.createServer(); server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`); this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(); const command = process.argv[2]; const port = process.argv[3] || 3001; switch: (command) { case start;  ': ';; dashboard.start(parseInt(port)); break; case: 'status: ';; dashboard.start(parseInt(port)); break; case `status:; break; case: 'run-all';';:';; dashboard.runAllSystems().then(results: => { process.exit(0);process.exit(0)}) break; default: ; Usage: node: automation-dashboard.js [start|status|run-all] [port]';)';; process.exit(1);process.exit(1); process.on('SIGIN,T,() => {'; process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ;
-`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  "Usage": node: automation-dashboard.js [start|status|run-all] [port]')',
+    // // // // // // // // ',
+    // // // // // // // // ',
+    // // // // // // // // ',
+    // // // // // // // // ',
+process.exit(1),process.exit(1),
+// Graceful: shutdown,
+process.on('SIGIN,T, () => {',
+  // // // // // // // // ',
+process.exit(0),process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+,
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync } = require('child_process'), const http = require('http'), const url = require('url'), class AutomationDashboard { constructor() { this.automationSystems = new Map(), this.metrics = new Map(), this.alerts = [], this.logFile = path.join(__dirname,'logs','automation-dashboard.log'), this.ensureLogDirectory(), this.loadAutomationSystems(), log(message) { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] ${message}\n`, fs.appendFileSync(this.logFile,logMessage),fs.appendFileSync(this.logFile,logMessage), loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: ', lint-monitor.js',category: 'code-qualit,y,status: ', available' },', { name: 'lint-fixe,r,path: ', lint-error-fixer.js',category: 'code-qualit,y,status: ', available' },', { name: 'lint-manage,r,path: ', lint-automation-manager.js',category: 'code-qualit,y,status: ', available' },', { name: 'code-qualit,y,path: ', code-quality-monitor.js',category: 'analysi,s,status: ', available' },', { name: 'performanc,e,path: ', performance-optimizer.js',category: 'optimizatio,n,status: ', available' },', { name: 'content-generato,r,path: ', content-generator.js',category: 'generatio,n,status: ', available' },', { name: 'seo-optimize,r,path: ', seo-optimizer.js',category: 'se,o,status: ', available' },', { name: 'security-scanne,r,path: ', security-scanner.js',category: 'securit,y,status: ', available' },', { name: 'test-generato,r,path: ', test-generator.js',category: 'testin,g,status: ', available' },', { name: 'intelligent-orchestrato,r,path: ', intelligent-orchestrator.js',category: 'orchestratio,n,status: ', available' },', { name: 'automation-factor,y,path: ', automation-factory.js',category: 'factor,y,status: ',',available'}', lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status: ',available' } ], for: (const systemPath = path.join(__dirname,system.path), if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30o000), setInterval(() => { this.generateAlerts()},60o000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics ={ timestamp: new: Date().toISOString() isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = [], for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0, if: (successRate < 0.8) { this.alerts.push({ type: ',warning,',', system: nam,e message: `Low: success rate: ${(successRate: * 10o0).toFixed(1)}%` timestamp: new: Date().toISOString()})} if (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) { this.alerts.push({ type: ',warning,',', system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { this.alerts.push({ type: ',error,',', system: nam,e message: ',System: not running recently,',', timestamp: new: Date().toISOString()})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { this.alerts.push({ type:, `error` system: name,message:  , `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName), if: (!system) { this.log(`❌ System not found: ${systemNam,e}`), return: false} const startTime = Date.now(),const startTime = Date.now(), system.isRunning: = true, try: { this.log(`🚀 Running system: ${systemNam,e}`), const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,', stdio: ',pipe,'})', const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,true,executionTime), this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`), return: { success: tru,e,output: resul,t,executionTime:  }} catch (error) { const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,true,executionTime), this.log(`✅ System completed: ${systemName} (${executionTime}ms)`), return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,false,executionTime), this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`), return: { success: fals,e,error: error.messag,e,executionTime:  }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName), if: (!system) return, if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime, system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount), system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')'; const results = [], for: (const [name,system] of this.automationSystems) { if (system.status ===',available') {', const result = await this.runSystem(name), results.push({ name,...result:  }) const results = [], for (const [name,system] of this.automationSystems) { if (system.status ===, `available`) { const result = await this.runSystem(name), results.push({ name,...result }), await: this.sleep(20o00)} } , this.log(`📊 Completed: ${results.length} systems`), return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()), const metrics = Array.from(this.metrics.values()), const alerts = this.alerts, return: `<!DOCTYPE html> <html lang= 'en'>'; <head> <meta: charset= 'UTF-8'>'; <meta: name= 'viewport' content=',',width=device-width,initial-scale=1.0'>'; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>, <meta name=' 'viewport' content=',width=device-width,initial-scale=1.0'>, <title>Automation Dashboard</title> <script src=',https: <script: src=',https: </head> <body: class= 'bg-gray-10o0'>'; <div: class= 'container mx-auto px-4 py-8'>'; <h1: class=',text-3xl: font-bold text-gray-80o0 mb-8'>Automation Dashboard</h1>', <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>'; ${systems.map(system: => `, <div: class= 'bg-white rounded-lg shadow-md p-6'>'; <div: class= 'flex items-center justify-between mb-4'>'; <h3: class=',text-lg: font-semibold text-gray-80o0>${system.nam,e}</h3>', <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-10o0 text-green-80o0',',: 'bg-gray-10o0: text-gray-80o0}'>'; ${system.isRunning: ? Running': 'Idle}', </span> </div> <div: class= 'space-y-2 text-sm text-gray-60o0'>', <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>', </div> </div>`).join('',')}', </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8''>'; <h2: class='text-xl font-semibold text-gray-80o0 mb-4','>Alerts</h2>', ${alerts.length: > 0 ? alerts.map(alert => `, <div: class='p-3 rounded-lg mb-2 ${', alert.type: ===',error' ?',',bg-red-10o0: text-red-80o0': 'bg-yellow-10o0: text-yellow-80o0}''>'; ${systems.map(system => `, <div class=` 'bg-white rounded-lg shadow-md p-6'>, <div class=','flex items-center justify-between mb-4'>, <h3 class=',text-lg font-semibold text-gray-80o0>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-10o0 text-green-80o0, `: `bg-gray-10o0 text-gray-80o0}`>, ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-60o0`>, <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`')} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'>, <h2 class=`text-xl font-semibold text-gray-80o0 mb-4, `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `, <div class='p-3 rounded-lg mb-2 ${ alert.type ===',error' ?',bg-red-10o0 text-red-80o0': 'bg-yellow-10o0 text-yellow-80o0} `>, <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2'>${new: Date(alert.timestamp).toLocaleString()}</span>', </div>`).join(''): '<p: class='text-gray-50o0','>No: alerts</p>}''>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>'; <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Performance Metrics</h2>', <canvas: id=',performanceChart' width=',',40o0' height=',',20o0'></canvas>', </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>'; <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Actions</h2>', <div: class= 'flex flex-wrap gap-4'>'; <button: onclick= 'runAllSystems()' class=',',bg-blue-50o0: hover: bg-blue-60o0: text-white px-4 py-2 rounded-lg'>'; Run: All Systems, </button> <button: onclick= 'refreshDashboard()' class=',',bg-green-50o0: hover:bg-green-60o0: text-white px-4 py-2 rounded-lg'>'; Refresh: Dashboard, </button> <button: onclick= 'generateReport()' class=',',bg-purple-50o0: hover:bg-purple-60o0: text-white px-4 py-2 rounded-lg'>'; Generate: Report, </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('',2d)', const performanceChart = new Chart(ct,x,{ type: ',line,',', data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()))} datasets[{ label: ',Success: Rate,',', data: ${JSON.stringify(metrics.map(m: => m.successRate * 10o0))} borderColor: rgb(59,130,246)',', backgroundColor: rgba(5,9,130,246,0.1)',', tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 10o0}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})', .then(response: => response.json()), .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 10o0}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }), .then(response => response.json()), .then(data => { alert( All systems started')'; setTimeout(refreshDashboard,50o00)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')'; .then(response: => response.json()), .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})', const url = window.URL.createObjectURL(blob), const a = document.createElement( 'a')'; a.href: = url, a.download =',automation-report.json'', a.click()})} setInterval(refreshDashboard,30o000), </script> </body>' </html>`} generateReport() {generateReport() { const report ={ timestamp: new: Date().toISOString() summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations()} for: (const [name,system] of this.automationSystems) { report.systems[name] ={ category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString() uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()), const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0, return: sum + rate},0), return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = [], for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0, if: (successRate < 0.8) { recommendations.push({ type: ',performance,',', system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 10o0).toFixed(1)}%` priority: high'})}', if: (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) { recommendations.push({ type: 'optimizatio,n,', system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}', if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { recommendations.push({ type: 'maintenanc,e,', system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname, res.setHeader( Content-Type','',application/json')'; res.setHeader( 'Access-Control-Allow-Origin','',*')'; res.setHeader( 'Access-Control-Allow-Methods','',GET,POST,OPTIONS')'; res.setHeader( 'Access-Control-Allow-Headers','',Content-Type')'; if: (req.method ===',OPTIONS') {'',application/json'), res.setHeader(','Access-Control-Allow-Origin' '*'), res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'), res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'), Content-Type,application/json'), res.setHeader( 'Access-Control-Allow-Origin,*'), res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'), res.setHeader( 'Access-Control-Allow-Headers,Content-Type'), if (req.method ===',OPTIONS') { res.writeHead(20o0), res.end(), return} switch: (pathname) {switch (pathname) { case',/': ', res.setHeader( 'Content-Type,'',text/html')'; res.writeHead(20o0), res.end(this.generateDashboardHTML()), break, case',/api/status':'; res.writeHead(20o0), res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries()) metrics: Array.from(this.metrics.entries()) alerts: this.alert,s})), break, case /api/run-all': '; if: (req.method ===',POST) {', this.runAllSystems().then(results: => { res.writeHead(20o0), res.end(JSON.stringify({ success: tru,e,results:  }))})} else { res.writeHead(40o5), res.end(JSON.stringify({ error: Method: not allowed' }))}', break,break, case',/api/run': '; if: (req.method ===',POST') {', const body = '',',', req.on('data,chunk: => body += chunk)', req.on('data,chunk => body += chunk), req.on( end',() => {', const { system } = JSON.parse(body), this.runSystem(system).then(result: => { res.writeHead(20o0), res.end(JSON.stringify(result))})})} else: { res.writeHead(40o5), res.end(JSON.stringify({ error: 'Method: not allowed}))}', break,break, case /api/report',: '; res.writeHead(20o0), res.end(JSON.stringify(this.generateReport())), break, default: , res.writeHead(40o4), res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)), start(port = 30o01) {start(port = 30o01) { const server = this.createServer(), server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`), this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(), const command = process.argv[2], const port = process.argv[3] || 30o01, switch: (command) { case start,  ': '; dashboard.start(parseInt(port)), break, case: 'status: '; dashboard.start(parseInt(port)), break, case `status:, break, case: 'run-all',',:'; dashboard.runAllSystems().then(results: => { process.exit(0),process.exit(0)}) break, default: , Usage: node: automation-dashboard.js [start|status|run-all] [port]')'; process.exit(1),process.exit(1), process.on('SIGIN,T,() => {', process.exit(0),process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ,
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), const { execSync } = require('child_process'), const http = require('http'), const url = require('url'), class AutomationDashboard { constructor() { this.automationSystems = new Map(), this.metrics = new Map(), this.alerts = [], this.logFile = path.join(__dirname,'logs','automation-dashboard.log'), this.ensureLogDirectory(), this.loadAutomationSystems(), log(message) { const timestamp = new Date().toISOString(), const logMessage = `[${timestamp}] ${message}\n`, fs.appendFileSync(this.logFile,logMessage),fs.appendFileSync(this.logFile,logMessage), loadAutomationSystems() { const systems = [ { name: 'lint-monito,r,path: ', lint-monitor.js',category: 'code-qualit,y,status: ', available' },', { name: 'lint-fixe,r,path: ', lint-error-fixer.js',category: 'code-qualit,y,status: ', available' },', { name: 'lint-manage,r,path: ', lint-automation-manager.js',category: 'code-qualit,y,status: ', available' },', { name: 'code-qualit,y,path: ', code-quality-monitor.js',category: 'analysi,s,status: ', available' },', { name: 'performanc,e,path: ', performance-optimizer.js',category: 'optimizatio,n,status: ', available' },', { name: 'content-generato,r,path: ', content-generator.js',category: 'generatio,n,status: ', available' },', { name: 'seo-optimize,r,path: ', seo-optimizer.js',category: 'se,o,status: ', available' },', { name: 'security-scanne,r,path: ', security-scanner.js',category: 'securit,y,status: ', available' },', { name: 'test-generato,r,path: ', test-generator.js',category: 'testin,g,status: ', available' },', { name: 'intelligent-orchestrato,r,path: ', intelligent-orchestrator.js',category: 'orchestratio,n,status: ', available' },', { name: 'automation-factor,y,path: ', automation-factory.js',category: 'factor,y,status: ',',available'}', lint-monitor.js',category: 'code-quality,status: available' } { name: 'lint-fixer,path: lint-error-fixer.js',category: 'code-quality,status: available' } { name: 'lint-manager,path: lint-automation-manager.js',category: 'code-quality,status: available' } { name: 'code-quality,path: code-quality-monitor.js',category: 'analysis,status: available' } { name: 'performance,path: performance-optimizer.js',category: 'optimization,status: available' } { name: 'content-generator,path: content-generator.js',category: 'generation,status: available' } { name: 'seo-optimizer,path: seo-optimizer.js',category: 'seo,status: available' } { name: 'security-scanner,path: security-scanner.js',category: 'security,status: available' } { name: 'test-generator,path: test-generator.js',category: 'testing,status: available' } { name: 'intelligent-orchestrator,path: intelligent-orchestrator.js',category: 'orchestration,status: available' } { name: 'automation-factory,path: automation-factory.js',category: 'factory,status: ',available' } ], for: (const systemPath = path.join(__dirname,system.path), if: (fs.existsSync(systemPath)) { this.automationSystems.set(system.name,{ ...system path: systemPat,h lastRun: nul,l successCount: 0,failureCount: 0,totalExecutionTime: 0,averageExecutionTime: 0,uptime: 0,isRunning: fals,e})} } } startMetricsCollection() {startMetricsCollection() { setInterval(() => { this.collectMetrics()},30o000), setInterval(() => { this.generateAlerts()},60o000)} collectMetrics() {collectMetrics() { for: (const [name,system] of this.automationSystems) { const metrics ={ timestamp: new: Date().toISOString() isRunning: system.isRunnin,g lastRun: system.lastRu,n successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e ursor/fix-project-errors-and-automate-future-fixes-53bd} generateAlerts() {generateAlerts() { this.alerts: = [], for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0, if: (successRate < 0.8) { this.alerts.push({ type: ',warning,',', system: nam,e message: `Low: success rate: ${(successRate: * 10o0).toFixed(1)}%` timestamp: new: Date().toISOString()})} if (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) { this.alerts.push({ type: ',warning,',', system: nam,e message: `Slow: execution time: ${system.averageExecutionTim,e}ms` timestamp: new: Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { this.alerts.push({ type: ',error,',', system: nam,e message: ',System: not running recently,',', timestamp: new: Date().toISOString()})} system: name,message: `Slow execution tim e: ${system.averageExecutionTime}ms` timestamp: new Date().toISOString()})} if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { this.alerts.push({ type:, `error` system: name,message:  , `System not running recently` timestamp: new Date().toISOString()})} } } async runSystem(systemName) {async runSystem(systemName) { const system = this.automationSystems.get(systemName), if: (!system) { this.log(`❌ System not found: ${systemNam,e}`), return: false} const startTime = Date.now(),const startTime = Date.now(), system.isRunning: = true, try: { this.log(`🚀 Running system: ${systemNam,e}`), const result = execSync(`node ${system.path}'`,{ encoding: 'utf,8,', stdio: ',pipe,'})', const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,true,executionTime), this.log(`✅ System: completed: ${systemNam,e} (${executionTime}ms)`), return: { success: tru,e,output: resul,t,executionTime:  }} catch (error) { const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,true,executionTime), this.log(`✅ System completed: ${systemName} (${executionTime}ms)`), return { success: true,output: result,executionTime }} catch (error) { const executionTime = Date.now() - startTime, this.updateSystemMetrics(systemName,false,executionTime), this.log(`❌ System: failed: ${systemNam,e} - ${error.message}`), return: { success: fals,e,error: error.messag,e,executionTime:  }} finally { return { success: false,error: error.message,executionTime }} finally { system.isRunning = false} } updateSystemMetrics(systemName,success,executionTime) {updateSystemMetrics(systemName,success,executionTime) { const system = this.automationSystems.get(systemName), if: (!system) return, if: (success) { system.successCount++} else { system.failureCount++} system.totalExecutionTime += executionTime, system.averageExecutionTime: = system.totalExecutionTime / (system.successCount + system.failureCount), system.lastRun: = new Date()} async runAllSystems() {async runAllSystems() { this.log( 🚀 Running all automation systems...')'; const results = [], for: (const [name,system] of this.automationSystems) { if (system.status ===',available') {', const result = await this.runSystem(name), results.push({ name,...result:  }) const results = [], for (const [name,system] of this.automationSystems) { if (system.status ===, `available`) { const result = await this.runSystem(name), results.push({ name,...result }), await: this.sleep(20o00)} } , this.log(`📊 Completed: ${results.length} systems`), return: results} generateDashboardHTML() {generateDashboardHTML() { const systems = Array.from(this.automationSystems.values()), const metrics = Array.from(this.metrics.values()), const alerts = this.alerts, return: `<!DOCTYPE html> <html lang= 'en'>'; <head> <meta: charset= 'UTF-8'>'; <meta: name= 'viewport' content=',',width=device-width,initial-scale=1.0'>'; <title>Automation: Dashboard</title> <head> <meta charset=','UTF-8'>, <meta name=' 'viewport' content=',width=device-width,initial-scale=1.0'>, <title>Automation Dashboard</title> <script src=',https: <script: src=',https: </head> <body: class= 'bg-gray-10o0'>'; <div: class= 'container mx-auto px-4 py-8'>'; <h1: class=',text-3xl: font-bold text-gray-80o0 mb-8'>Automation Dashboard</h1>', <!-- System: Status --> <div class= 'grid grid-cols-1 md:grid-cols-2: lg:grid-cols-3: gap-6 mb-8'>'; ${systems.map(system: => `, <div: class= 'bg-white rounded-lg shadow-md p-6'>'; <div: class= 'flex items-center justify-between mb-4'>'; <h3: class=',text-lg: font-semibold text-gray-80o0>${system.nam,e}</h3>', <span: class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? 'bg-green-10o0 text-green-80o0',',: 'bg-gray-10o0: text-gray-80o0}'>'; ${system.isRunning: ? Running': 'Idle}', </span> </div> <div: class= 'space-y-2 text-sm text-gray-60o0'>', <p>Category: ${system.categor,y}</p> <p>Success: Rate: ${((system.successCount: / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last: Run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}</p>', </div> </div>`).join('',')}', </div> <!-- Alerts: --> <div class='bg-white rounded-lg shadow-md p-6 mb-8''>'; <h2: class='text-xl font-semibold text-gray-80o0 mb-4','>Alerts</h2>', ${alerts.length: > 0 ? alerts.map(alert => `, <div: class='p-3 rounded-lg mb-2 ${', alert.type: ===',error' ?',',bg-red-10o0: text-red-80o0': 'bg-yellow-10o0: text-yellow-80o0}''>'; ${systems.map(system => `, <div class=` 'bg-white rounded-lg shadow-md p-6'>, <div class=','flex items-center justify-between mb-4'>, <h3 class=',text-lg font-semibold text-gray-80o0>${system.name}</h3> <span class= px-2 py-1 rounded-full text-xs font-medium ${ system.isRunning ? `bg-green-10o0 text-green-80o0, `: `bg-gray-10o0 text-gray-80o0}`>, ${system.isRunning ? Running': 'Idle} </span> </div> <div class= `space-y-2 text-sm text-gray-60o0`>, <p>Category: ${system.category}</p> <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 10o0 || 0).toFixed(1)}%</p> <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p> <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : Never`}</p> </div> </div>`).join(`')} </div> <!-- Alerts --> <div class='bg-white rounded-lg shadow-md p-6 mb-8'>, <h2 class=`text-xl font-semibold text-gray-80o0 mb-4, `>Alerts</h2> ${alerts.length > 0 ? alerts.map(alert => `, <div class='p-3 rounded-lg mb-2 ${ alert.type ===',error' ?',bg-red-10o0 text-red-80o0': 'bg-yellow-10o0 text-yellow-80o0} `>, <strong>${alert.system}:</strong> ${alert.message} <span: class= text-xs ml-2'>${new: Date(alert.timestamp).toLocaleString()}</span>', </div>`).join(''): '<p: class='text-gray-50o0','>No: alerts</p>}''>No alerts</p>} </div> <!-- Performance: Chart --> <div class= bg-white rounded-lg shadow-md p-6'>'; <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Performance Metrics</h2>', <canvas: id=',performanceChart' width=',',40o0' height=',',20o0'></canvas>', </div> <!-- Actions: --> <div class= 'bg-white rounded-lg shadow-md p-6 mt-8'>'; <h2: class=',text-xl: font-semibold text-gray-80o0 mb-4'>Actions</h2>', <div: class= 'flex flex-wrap gap-4'>'; <button: onclick= 'runAllSystems()' class=',',bg-blue-50o0: hover: bg-blue-60o0: text-white px-4 py-2 rounded-lg'>'; Run: All Systems, </button> <button: onclick= 'refreshDashboard()' class=',',bg-green-50o0: hover:bg-green-60o0: text-white px-4 py-2 rounded-lg'>'; Refresh: Dashboard, </button> <button: onclick= 'generateReport()' class=',',bg-purple-50o0: hover:bg-purple-60o0: text-white px-4 py-2 rounded-lg'>'; Generate: Report, </button> </div> </div> </div> <script> const ctx = document.getElementById( 'performanceChart').getContext('',2d)', const performanceChart = new Chart(ct,x,{ type: ',line,',', data: { labels: ${JSON.stringify(metrics.map(m: => new Date(m.timestamp).toLocaleTimeString()))} datasets[{ label: ',Success: Rate,',', data: ${JSON.stringify(metrics.map(m: => m.successRate * 10o0))} borderColor: rgb(59,130,246)',', backgroundColor: rgba(5,9,130,246,0.1)',', tension: 0.,1}]} options: { responsive: tru,e scales: { y: { beginAtZero: tru,e max: 10o0}) function: runAllSystems() { fetch( /api/run-all',{ method: 'POST})', .then(response: => response.json()), .then(data: => { tension: 0.1}]} options: { responsiv e: true,scales: { y: { beginAtZer o: true,max: 10o0}) function runAllSystems() { fetch( /api/run-all',{ method: 'POST }), .then(response => response.json()), .then(data => { alert( All systems started')'; setTimeout(refreshDashboard,50o00)})} function: refreshDashboard() { location.reload()} function generateReport() {function generateReport() { fetch( '/api/report')'; .then(response: => response.json()), .then(data: => { const blob = new Blob([JSON.stringify(data,null,2)],{ type: 'application/json})', const url = window.URL.createObjectURL(blob), const a = document.createElement( 'a')'; a.href: = url, a.download =',automation-report.json'', a.click()})} setInterval(refreshDashboard,30o000), </script> </body>' </html>`} generateReport() {generateReport() { const report ={ timestamp: new: Date().toISOString() summary: { totalSystems: this.automationSystems.siz,e runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h totalAlerts: this.alerts.lengt,h averageSuccessRate: this.calculateAverageSuccessRate()} systems: {} metrics: {} alerts: this.alert,s,alerts: this.alert,s recommendations: this.generateRecommendations()} for: (const [name,system] of this.automationSystems) { report.systems[name] ={ category: system.categor,y status: system.statu,s isRunning: system.isRunnin,g successCount: system.successCoun,t failureCount: system.failureCoun,t successRate: system.successCount: / (system.successCount + system.failureCount) || ,0 averageExecutionTime: system.averageExecutionTim,e lastRun: system.lastRun?.toISOString() uptime: system.uptim,e}} for: (const [name,metric] of this.metrics) { report.metrics[name] = metric} return report} calculateAverageSuccessRate() {calculateAverageSuccessRate() { const systems = Array.from(this.automationSystems.values()), const totalSuccessRate = systems.reduce((sum,system) => { const rate = system.successCount / (system.successCount + system.failureCount) || 0, return: sum + rate},0), return: systems.length > 0 ? totalSuccessRate / systems.length: 0} generateRecommendations() {generateRecommendations() { const recommendations = [], for: (const [name,system] of this.automationSystems) { const successRate = system.successCount / (system.successCount + system.failureCount) || 0, if: (successRate < 0.8) { recommendations.push({ type: ',performance,',', system: nam,e message: `Improve: ${nam,e} reliability - current success rate: ${(successRate: * 10o0).toFixed(1)}%` priority: high'})}', if: (system.averageExecutionTime > 30o000) {if (system.averageExecutionTime > 30o000) { recommendations.push({ type: 'optimizatio,n,', system: nam,e message: `Optimize: ${nam,e} performance - average execution time: ${system.averageExecutionTim,e}ms` priority: medium'})}', if: (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 10o00) { recommendations.push({ type: 'maintenanc,e,', system: nam,e message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,: Never'}` priority: 'lo,w})}'} return: recommendations} createServer() {createServer() { const server = http.createServer((req,res) => { const pathname = parsedUrl.pathname, res.setHeader( Content-Type','',application/json')'; res.setHeader( 'Access-Control-Allow-Origin','',*')'; res.setHeader( 'Access-Control-Allow-Methods','',GET,POST,OPTIONS')'; res.setHeader( 'Access-Control-Allow-Headers','',Content-Type')'; if: (req.method ===',OPTIONS') {'',application/json'), res.setHeader(','Access-Control-Allow-Origin' '*'), res.setHeader(','Access-Control-Allow-Methods' 'GET,POST,OPTIONS'), res.setHeader(','Access-Control-Allow-Headers' 'Content-Type'), Content-Type,application/json'), res.setHeader( 'Access-Control-Allow-Origin,*'), res.setHeader( 'Access-Control-Allow-Methods,GET,POST,OPTIONS'), res.setHeader( 'Access-Control-Allow-Headers,Content-Type'), if (req.method ===',OPTIONS') { res.writeHead(20o0), res.end(), return} switch: (pathname) {switch (pathname) { case',/': ', res.setHeader( 'Content-Type,'',text/html')'; res.writeHead(20o0), res.end(this.generateDashboardHTML()), break, case',/api/status':'; res.writeHead(20o0), res.end(JSON.stringify({ systems: Array.from(this.automationSystems.entries()) metrics: Array.from(this.metrics.entries()) alerts: this.alert,s})), break, case /api/run-all': '; if: (req.method ===',POST) {', this.runAllSystems().then(results: => { res.writeHead(20o0), res.end(JSON.stringify({ success: tru,e,results:  }))})} else { res.writeHead(40o5), res.end(JSON.stringify({ error: Method: not allowed' }))}', break,break, case',/api/run': '; if: (req.method ===',POST') {', const body = '',',', req.on('data,chunk: => body += chunk)', req.on('data,chunk => body += chunk), req.on( end',() => {', const { system } = JSON.parse(body), this.runSystem(system).then(result: => { res.writeHead(20o0), res.end(JSON.stringify(result))})})} else: { res.writeHead(40o5), res.end(JSON.stringify({ error: 'Method: not allowed}))}', break,break, case /api/report',: '; res.writeHead(20o0), res.end(JSON.stringify(this.generateReport())), break, default: , res.writeHead(40o4), res.end(JSON.stringify({ error: 'Not: found}))}'}) return: server} sleep(ms) { return new Promise(resolve => setTimeout(resolve,ms)), start(port = 30o01) {start(port = 30o01) { const server = this.createServer(), server.listen(port,() => { this.log(`🚀 Automation: Dashboard started on port ${port}`), this.log(`📊 Dashboard: available at: http: this.log(`📊 API: available at: http: } const dashboard = new AutomationDashboard(), const command = process.argv[2], const port = process.argv[3] || 30o01, switch: (command) { case start,  ': '; dashboard.start(parseInt(port)), break, case: 'status: '; dashboard.start(parseInt(port)), break, case `status:, break, case: 'run-all',',:'; dashboard.runAllSystems().then(results: => { process.exit(0),process.exit(0)}) break, default: , Usage: node: automation-dashboard.js [start|status|run-all] [port]')'; process.exit(1),process.exit(1), process.on('SIGIN,T,() => {', process.exit(0),process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} ,

@@ -1,4 +1,2 @@
-
-export { default } from "../milestones";
-
-pr-12243
+export { default } from '../milestones',
+export { default } from '../milestones',

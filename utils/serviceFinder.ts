@@ -1,290 +1,71 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
-
-
-
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
-
-export interface Service {
-  id: string;
-  name: string,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export interface Service {
-=======
-
-
-
-
-
-
-
-
-
-
-export interface Service {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price?: number;
-  features: string[];
-}
-<<<<<<< HEAD
-export const findService = (query: string, services: Service[]): Service[] => {};
-=======
-
-export const findService = (query: string, services: Service[]): Service[] => {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  const searchTerm = query.toLowerCase();
-  return services.filter(service =>
-    service.name.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.category.toLowerCase().includes(searchTerm)
-  );
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
-  return services.filter(service =>
-    service.category.toLowerCase() === category.toLowerCase()
-<<<<<<< HEAD
-  )
-=======
-export const getServicesByCategory = (category: string, services: Service[]): Service[] => {}
-  return services.filter(service => 
-    service.category.toLowerCase() === category.toLowerCase();
-  );
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-};
-<<<<<<< HEAD
-export default {}
-  findService,;
-  getServicesByCategory;
-=======
-
-export default {
-  findService,
-  getServicesByCategory
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-};
-<<<<<<< HEAD
-// Service finder utility
-export const findService = ("_serviceName": string) => {
-  // Implementation placeholder
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return null;
-=======
-  return null
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-};
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-<<<<<<< HEAD
-=======
-// Service finder utility;
-export const findService = ("_serviceName": string) => {};
-  // Implementation placeholder;
-  return null;
-};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-
-
-
-
-=======
-  return null;
-};
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const findService = (_serviceName: string) => { return null};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
-<<<<<<< HEAD
-=======
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
-export const findService = (_serviceName: string) => { return null};
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
-
-
-
-
-
-
-
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-  return null
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  return null
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
-
-
-
-export interface Service {
-  // TODO: Implement
-}
-  id: string;,
-  name: string;
-  description: string;,
-  category: string;
-  price?: number;
-  features: string[];
-export const findService = (query: string, services: Service[]): Service[] => {
-  const searchTerm = query.toLowerCase();
-  return services.filter(service => )
-    service.name.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.category.toLowerCase().includes(searchTerm)
-  );
-};
-export const getServicesByCategory = (category: string, services: Service[]): Service[] => {
-    service.category.toLowerCase() === category.toLowerCase()
-export default {
-  // TODO: Implement
-  findService,
-  getServicesByCategory;
-// Service finder utility;
-export const findService = ("_serviceName": string) => {"
-  // Implementation placeholder;
-  return null;
-
-
-
-export const findService = (_serviceName: string) => { return null};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-ursor/integrate-build-improve-and-re-verify-8f7d;
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
-pr-12325
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../data/additional-real-services',
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { enterpriseITServices } from '../data/enterprise-it-services',
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',
+import { emergingTechnologyServices } from '../data/emerging-technology-services',
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions',
+import { realMarketServices } from '../data/real-market-services',
+import { serviceExpansions20o25 } from '../data/service-expansions-20o25',
+import { verifiedRealServices20o25Batch2 } from '../data/verified-real-services-20o25-batch2',
+import { realOperationalServices } from '../data/real-operational-services',
+import { newOperationalServices20o25 } from '../data/new-operational-services-20o25',
+import { innovative20o25Services } from '../data/innovative-20o25-services',
+import { emergingTech20o25Services } from '../data/emerging-tech-20o25-services',
+import { professionalServices } from '../data/professional-services',
+import { real2029Q2Additions } from '../data/real-2029-q2-additions',
+export type ServiceRecord = any,
+const allServiceArrays: ServiceRecord[][] = [
+  enhancedRealMicroSaasServices;
+  innovativeMicroSaasServices;
+  additionalEnhancedServices;
+  innovativeAIServices;
+  enterpriseITServices;
+  nextGenerationAIServices;
+  emergingTechnologyServices;
+  comprehensiveITSolutions;
+  realMarketServices;
+  serviceExpansions2025;
+  realOperationalServices;
+  newOperationalServices2025;
+  verifiedRealServices2025Batch2;
+  innovative2025Services;
+  emergingTech2025Services;
+  professionalServices;
+  real2029Q2Additions;
+],
+export function findServiceBySlug(slug: string): ServiceRecord | undefined {
+  for (const arr of allServiceArrays) {
+    const hit = arr.find((s: any) => {
+      if (!s) return false,
+      if (s.id && s.id === slug) return true,
+      if (s.link && typeof s.link === 'string') {
+        try {
+          const url = new URL(s.link),
+          return url.pathname.replace(/^\/+|\/+$/g, '') === slug} catch {
+          return s.link.endsWith('/' + slug)}
+      }
+      return false}),
+    if (hit) return hit}
+  return undefined}
+export function listServicesByCategory(
+  categoryIncludes: string): ServiceRecord[] {
+  const results: ServiceRecord[] = [],
+  for (const arr of allServiceArrays) {
+    for (const s of arr) {
+      if (
+        s &&,
+        typeof s.category === 'string' &&,
+        s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+        results.push(s)}
+    }
+  }
+  // Deduplicate by id or link,
+  const seen = new Set<string>(),
+  return results.filter(s => {
+    const key = s.id || s.link || s.name,
+    if (seen.has(key)) return false,
+    seen.add(key),
+    return true})}
+,
