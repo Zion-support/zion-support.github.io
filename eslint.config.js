@@ -7,7 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['app/**/*.{ts,tsx}'],
+    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -86,6 +86,7 @@ export default [
   },
   {
     ignores: [
+      'App.tsx',
       '**/app.disabled/**',
       '**/app_disabled/**',
       '**/app_backup/**',
@@ -112,13 +113,10 @@ export default [
       '**/build/**',
       '**/.next/**',
       // Broad ignores to bypass archival/problematic sources
-      '**/src/**',
+      // Keep archival/problematic sources ignored
       '**/src.broken/**',
       '**/ts_files_backup/**',
-      '**/types/**',
       '**/types.disabled/**',
-      // Ignore all plain JS files from linting to avoid legacy scripts
-      '**/*.js',
       // Common config files that trigger parser mismatches
       '**/vite.config.*',
       '**/vitest.config.*',
@@ -134,7 +132,7 @@ export default [
       '**/ts_files_backup/**',
       '**/types/**',
       '**/types.disabled/**',
-      '**/*.js',
+      // Do not ignore all JS globally; allow app JS to be linted
       '**/vite.config.*',
       '**/vitest.config.*',
       '**/tailwind.config.*',
