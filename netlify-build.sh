@@ -16,7 +16,7 @@ rm -rf .pnpm-store
 echo "Cleaning pnpm cache..."
 pnpm store prune
 
-# Install dependencies with pnpm
+# Install dependencies with retry logic
 echo "Installing dependencies with pnpm..."
 for attempt in {1..3}; do
   echo "Installation attempt $attempt of 3..."
@@ -41,8 +41,8 @@ for attempt in {1..3}; do
       fi
       ;;
     3)
-      echo "Attempt 3: Installation with force flag..."
-      if pnpm install --force; then
+      echo "Attempt 3: Installation with legacy peer deps..."
+      if pnpm install --legacy-peer-deps; then
         echo "Dependencies installed successfully!"
         break
       else

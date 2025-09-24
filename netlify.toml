@@ -9,7 +9,7 @@
 [build.environment]
   # Set Node.js version
   NODE_VERSION = "20.18.0"
-  # Enable pnpm
+  # Set pnpm version
   PNPM_VERSION = "8.15.0"
   # Set production environment
   NODE_ENV = "production"
