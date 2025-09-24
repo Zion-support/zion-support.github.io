@@ -1,6 +1,6 @@
-'use client',
+'use client';
 
-import AnimatedCounter from './AnimatedCounter',
+import AnimatedCounter from './AnimatedCounter';
 
 interface StatItem {
   label: string,
@@ -30,7 +30,8 @@ const stats: StatItem[] = [
     label: 'Response Time',
     value: 99.9,
     suffix: '%',
-    description: 'System uptime guarantee'}],
+    description: 'System uptime guarantee'},
+];
 
 export default function StatsSection() {
   return (
@@ -73,5 +74,5 @@ export default function StatsSection() {
         </div>
       </div>
     </div>
-  ),
+  );
 }
