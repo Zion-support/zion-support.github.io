@@ -86,6 +86,10 @@ export default [
   },
          {
            ignores: [
+            '**/app.disabled/**',
+            '**/app_disabled/**',
+            '**/app.disabled*/**',
+            '**/app_backup/**',
             '**/src/**',
             '**/ts_files_backup/**',
             '**/types/**',
