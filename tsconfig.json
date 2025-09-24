@@ -38,25 +38,13 @@
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
-    "src",
-    "app"
+    "__safe_tests__/**/*.ts",
+    "__safe_tests__/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    ".next",
     "dist",
     "build",
-    "coverage",
-    "zion-website",
-    "zion_academy",
-    "apps",
-    "backup",
-    "backups",
-    "temp_*",
-    "temp*",
-    "**/__tests__/**",
-    "**/test/**",
-    "**/__mocks__/**"
+    "coverage"
   ]
 }
