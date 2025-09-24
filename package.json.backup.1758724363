@@ -11,11 +11,19 @@
     "dev": "next dev",
     "build": "npm run type-check && next build",
     "start": "next start",
+<<<<<<< HEAD
+    "lint": "eslint app",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "lint:fix": "eslint app --fix",
+=======
     "lint": "eslint src server types app pages components",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint src server types app pages components --fix",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a92e
     "type-check": "tsc -p tsconfig.typecheck.app.json --noEmit",
     "test": "jest --config jest.config.cjs",
     "test:watch": "jest --config jest.config.cjs --watch",
