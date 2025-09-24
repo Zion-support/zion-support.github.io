@@ -1,9 +1,5 @@
-// Ensure jest-dom matchers are available when tests run
-try {
-  require('@testing-library/jest-dom')
-} catch (error) {
-  // optional in minimal runs
-}
+// Jest setup for safe tests
+import '@testing-library/jest-dom';
 
 // Mock Next.js Image only if available in this workspace (guard for non-Next setups)
 try {
@@ -45,3 +41,24 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 }
+
+// Optional: silence noisy console logs during CI tests
+const originalError = global.console.error;
+const originalWarn = global.console.warn;
+
+beforeAll(() => {
+  if (process.env.CI) {
+    global.console.error = (...args) => {
+      // allow test-related errors
+      if (typeof args[0] === 'string' && args[0].includes('TestingLibraryElementError')) {
+        return originalError(...args);
+      }
+    };
+    global.console.warn = () => {};
+  }
+});
+
+afterAll(() => {
+  global.console.error = originalError;
+  global.console.warn = originalWarn;
+});
