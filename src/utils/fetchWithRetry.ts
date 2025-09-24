@@ -1,7 +1,82 @@
 <<<<<<< HEAD
-// Fetch utility with retry logic and error handling
+/**
+ * Fetch utility with retry logic and error handling
+ */
+
+export interface RetryOptions {
+  maxRetries?: number;
+  retryDelay?: number;
+  retryDelayMultiplier?: number;
+  maxRetryDelay?: number;
+  retryCondition?: (error: Error, attempt: number) => boolean;
+}
+
+export interface FetchOptions extends RequestInit {
+  retry?: RetryOptions;
+  timeout?: number;
+}
+
+const DEFAULT_RETRY_OPTIONS: Required<RetryOptions> = {
+  maxRetries: 3,
+  retryDelay: 1000,
+  retryDelayMultiplier: 2,
+  maxRetryDelay: 10000,
+  retryCondition: (error: Error) => {
+    // Retry on network errors, 5xx server errors, and 429 (rate limit)
+    return (
+      error.name === 'TypeError' || // Network error
+      error.message.includes('fetch') ||
+      error.message.includes('network') ||
+      error.message.includes('timeout')
+    );
+  },
+};
+
+export class FetchError extends Error {
+  constructor(
+    message: string,
+    public status?: number,
+    public statusText?: string,
+    public response?: Response
+  ) {
+    super(message);
+    this.name = 'FetchError';
+  }
+}
+
+async function delay(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit,
+  timeout: number
+): Promise<Response> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const response = await fetch(url, {
+      ...options,
+      signal: controller.signal,
+    });
+    clearTimeout(timeoutId);
+    return response;
+  } catch (error) {
+    clearTimeout(timeoutId);
+    throw error;
+  }
+}
+
+export async function fetchWithRetry(
+  url: string,
+  options: FetchOptions = {}
+): Promise<Response> {
+  const { retry = {}, timeout = 30000, ...fetchOptions } = options;
+  const retryOptions = { ...DEFAULT_RETRY_OPTIONS, ...retry };
+
 =======
-<<<<<<< HEAD
 <<<<<<< HEAD
 // Fetch with retry utility for handling network requests with automatic retries
 
@@ -61,84 +136,43 @@ export const fetchWithRetry = async (
 =======
   const { retries = 3, delay = 1000, timeout = 10000, ...fetchOptions } = options;
   
-=======
-/**
- * Fetch utility with retry logic and error handling
- */
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-
-interface FetchWithRetryOptions {
-  retries?: number;
-  retryDelay?: number;
-  timeout?: number;
-  headers?: Record<string, string>;
-}
-
-export const fetchWithRetry = async (
-  url: string,
-  options: RequestInit & FetchWithRetryOptions = {}
-): Promise<Response> => {
-  const {
-    retries = 3,
-    retryDelay = 1000,
-    timeout = 10000,
-    headers = {},
-    ...fetchOptions
-  } = options;
-
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-<<<<<<< HEAD
-  const attemptFetch = async (attempt: number): Promise<Response> => {
-=======
-  try {
-    const response = await fetch(url, {
-      ...options,
-      signal: controller.signal,
-    });
-    clearTimeout(timeoutId);
-    return response;
-  } catch (error) {
-    clearTimeout(timeoutId);
-    throw error;
-  }
-}
-
-export async function fetchWithRetry(
-  url: string,
-  options: FetchOptions = {}
-): Promise<Response> {
-  const { retry = {}, timeout = 30000, ...fetchOptions } = options;
-  const retryOptions = { ...DEFAULT_RETRY_OPTIONS, ...retry };
-
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-7720
   let lastError: Error;
   let attempt = 0;
 
   while (attempt <= retryOptions.maxRetries) {
->>>>>>> cursor/create-and-deploy-new-content-cc9d
     try {
-      const response = await fetch(url, {
-        ...fetchOptions,
-        headers: {
-          'Content-Type': 'application/json',
-          ...headers,
-          ...fetchOptions.headers,
-        },
-        signal: controller.signal,
-      });
-
-      clearTimeout(timeoutId);
+      const response = timeout
+        ? await fetchWithTimeout(url, fetchOptions, timeout)
+        : await fetch(url, fetchOptions);
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const error = new FetchError(
+          `HTTP ${response.status}: ${response.statusText}`,
+          response.status,
+          response.statusText,
+          response
+        );
+
+        // Don't retry on client errors (4xx) except 429
+        if (response.status >= 400 && response.status < 500 && response.status !== 429) {
+          throw error;
+        }
+
+        // Check if we should retry this error
+        if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(error, attempt)) {
+          throw error;
+        }
+      } else {
+        return response;
       }
 <<<<<<< HEAD
+    } catch (error) {
+      lastError = error as Error;
 
-      return response;
+      // Check if we should retry this error
+      if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(lastError, attempt)) {
 =======
-<<<<<<< HEAD
       
 >>>>>>> main
       return response;
@@ -164,38 +198,24 @@ export async function fetchWithRetry(
   throw lastError || new Error('Fetch failed after all retries');
 =======
       if (attempt === retries) {
-=======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-    } catch (error) {
-      clearTimeout(timeoutId);
-
-<<<<<<< HEAD
-      if (attempt < retries) {
-        console.warn(`Fetch attempt ${attempt + 1} failed, retrying in ${retryDelay}ms:`, error);
-        await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
-        return attemptFetch(attempt + 1);
-=======
-      // Check if we should retry this error
-      if (attempt === retryOptions.maxRetries || !retryOptions.retryCondition(lastError, attempt)) {
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
+>>>>>>> cursor/create-and-deploy-new-content-7720
         throw lastError;
->>>>>>> cursor/create-and-deploy-new-content-cc9d
       }
 
-      throw error;
-    }
-  };
+      // Calculate delay for next retry
+      const delayMs = Math.min(
+        retryOptions.retryDelay * Math.pow(retryOptions.retryDelayMultiplier, attempt),
+        retryOptions.maxRetryDelay
+      );
 
-<<<<<<< HEAD
-  return attemptFetch(0);
-=======
+      await delay(delayMs);
+    }
+
     attempt++;
   }
 
   throw lastError!;
 <<<<<<< HEAD
->>>>>>> main
-=======
 }
 
 export async function fetchJSON<T>(
@@ -298,8 +318,9 @@ export const put = (url: string, body?: any, options: Omit<FetchOptions, 'method
 
 export const del = (url: string, options: Omit<FetchOptions, 'method'> = {}): Promise<Response> => {
   return fetchWithRetry(url, { ...options, method: 'DELETE' });
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
+=======
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-7720
 };
 
 export default fetchWithRetry;
