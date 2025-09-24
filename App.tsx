@@ -39,7 +39,6 @@ import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
-// import AdvancedNeuralInterface2026 from './src/pages/AdvancedNeuralInterface2026';
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import ComprehensiveCaseStudies2026 from './src/pages/ComprehensiveCaseStudies2026';
 import AIInnovationShowcase2026 from './src/pages/AIInnovationShowcase2026';
@@ -285,7 +284,6 @@ export default function App(): JSX.Element {
                         </a>
                   </div>
                 </div>
-              </div>
                 </div>
 
                 {/* Hero Section with New Content Promotions */}
@@ -798,7 +796,6 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
-          {/* <Route path="/pages/AdvancedNeuralInterface2026" element={<AdvancedNeuralInterface2026 />} /> */}
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveCaseStudies2026" element={<ComprehensiveCaseStudies2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<AIInnovationShowcase2026 />} />
