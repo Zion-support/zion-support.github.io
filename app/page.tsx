@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -11,7 +12,8 @@ import { ArrowRightIcon, SparklesIcon, ShieldCheckIcon, CloudIcon } from '@heroi
 
 export default function HomePage() {
   return (
-    <div className="px-6 py-12">
+    <main className="min-h-screen px-6 py-12">
+      {/* Hero Section */}
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
