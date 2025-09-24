@@ -1,55 +1,55 @@
 #!/bin/bash
 
-# Script to merge remaining branches into main
-# This script will attempt to merge remaining branches and resolve conflicts automatically
+# Script to merge remaining cursor branches efficiently
+echo "Starting merge of remaining cursor branches..."
 
-echo "Starting comprehensive merge process..."
+# Get the most recent 10 branches
+branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/check-fix-push-and-merge-to-main" | head -10)
 
-# List of remaining branches to merge
-branches=(
-    "origin/feat/add-ai-lab-articles-and-promos"
-    "origin/feat/enterprise-agent-risk-scorecards-2026"
-    "origin/feature/new-content-sept16-2025"
-    "origin/feature/new-content-sept-16-2025"
-    "origin/feat/content-2025-09-16-v2"
-    "origin/feat/new-content-2025-09-16"
-    "origin/feature/new-blog-promos-2025-09-16"
-    "origin/feat/add-sept-2025-content"
-    "origin/feat/new-content-sept-2025"
-    "origin/feat/add-latest-content-and-homepage-auto-feed"
-)
+success_count=0
+conflict_count=0
+already_merged_count=0
 
-successful_merges=0
-failed_merges=0
-
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
+for branch in $branches; do
+    echo "Processing $branch..."
     
-    # Try to merge the branch
-    if git merge "$branch" --no-ff -m "Merge: $branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        ((successful_merges++))
+    # Check if already merged
+    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
+        echo "  ✓ Already merged"
+        ((already_merged_count++))
+        continue
+    fi
+    
+    # Try to merge
+    if git merge "origin/$branch" --no-commit --no-edit 2>/dev/null; then
+        git commit -m "merge: integrate $branch automatically" --no-edit 2>/dev/null
+        if [ $? -eq 0 ]; then
+            echo "  ✓ Successfully merged"
+            ((success_count++))
+        else
+            echo "  ✗ Failed to commit merge"
+            git merge --abort 2>/dev/null
+            ((conflict_count++))
+        fi
     else
-        echo "⚠️  Merge conflict in $branch, resolving by keeping our version..."
-        
-        # Resolve conflicts by keeping our version
+        echo "  ✗ Merge conflict - resolving automatically"
+        # Auto-resolve conflicts by keeping main branch version
         git checkout --ours . 2>/dev/null
         git add . 2>/dev/null
-        git commit -m "Merge: $branch - Resolved conflicts by keeping our new content" 2>/dev/null
-        
+        git commit -m "resolve: auto-resolve conflicts for $branch" --no-edit 2>/dev/null
         if [ $? -eq 0 ]; then
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            ((successful_merges++))
+            echo "  ✓ Conflict resolved and merged"
+            ((success_count++))
         else
-            echo "❌ Failed to merge $branch, continuing..."
+            echo "  ✗ Failed to resolve conflict"
             git merge --abort 2>/dev/null
-            ((failed_merges++))
+            ((conflict_count++))
         fi
     fi
 done
 
 echo ""
 echo "Merge process completed!"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
-echo "Total branches processed: $((successful_merges + failed_merges))"
+echo "Successfully merged: $success_count"
+echo "Already merged: $already_merged_count"
+echo "Conflicts/Failures: $conflict_count"

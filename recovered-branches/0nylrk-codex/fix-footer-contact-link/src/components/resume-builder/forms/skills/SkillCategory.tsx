@@ -1,12 +1,19 @@
-import React from 'react';
-
-const SkillCategory: React.FC = () => {
+import { SkillCategoryProps } from './types',
+import { SkillItem } from './SkillItem',
+export const SkillCategory = ({
+  categoryskillsonDelete;
+}: SkillCategoryProps) => {
+  if (!skills || skills.length === 0) return null,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SkillCategory</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default SkillCategory;
+    <div className='space-y-2'>,
+      <h4 className='text-sm font-medium text-muted-foreground'>{category}</h4>,
+      <div className='flex flex-wrap gap-2'>,
+        {skills.map(skill => (
+          <SkillItem
+            key={skill.id}
+            skill={skill}
+            category={category}
+            onDelete={onDelete}
+          />))}
+      </div>,
+    </div>)};

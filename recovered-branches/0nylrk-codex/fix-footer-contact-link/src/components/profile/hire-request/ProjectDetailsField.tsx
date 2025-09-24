@@ -1,12 +1,26 @@
-import React from 'react';
-
-const ProjectDetailsField: React.FC = () => {
+import { UseFormReturn } from 'react-hook-form',
+import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form',
+import { Textarea } from '@/components/ui/textarea',
+import { FormValues } from './useHireRequestForm',
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>}
+,
+export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ProjectDetailsField</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ProjectDetailsField;
+    <FormField
+      control={form.control}
+      name='projectOverview',
+      render={({ field }) => (
+        <FormItem>,
+          <FormLabel className='text-white'>Project Overview</FormLabel>,
+          <FormControl>,
+            <Textarea
+              placeholder='Describe your projectgoalsand requirements',
+              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]',
+              {...field}
+            />,
+          </FormControl>,
+          <FormMessage className='text-red-400' />,
+        </FormItem>)}
+    />)}
+,

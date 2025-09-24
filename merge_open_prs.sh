@@ -11,12 +11,7 @@ git checkout main
 git pull --rebase
 
 echo "Fetching open PRs from GitHub..."
-# Use auth header if GITHUB_TOKEN is provided to avoid rate limits and access private PRs
-AUTH_HEADER=""
-if [ -n "${GITHUB_TOKEN:-}" ]; then
-  AUTH_HEADER="-H Authorization: token ${GITHUB_TOKEN}"
-fi
-PR_LIST=$(curl -s ${AUTH_HEADER} "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+PR_LIST=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
 
 if [ -z "$PR_LIST" ]; then
   echo "No open PRs found. Exiting."
@@ -28,7 +23,7 @@ echo "Found PRs: $PR_LIST"
 for pr_number in $PR_LIST; do
   echo "---"
   echo "Processing PR #$pr_number"
-  pr_json=$(curl -s ${AUTH_HEADER} "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
+  pr_json=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number")
   branch_name=$(echo "$pr_json" | grep -o '"head":{[^}]*"ref":"[^"]*"' | grep -o '"ref":"[^"]*"' | cut -d '"' -f4)
   if [ -z "$branch_name" ]; then
     echo "Could not determine branch for PR #$pr_number, skipping."

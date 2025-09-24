@@ -1,12 +1,2 @@
 import React from 'react';
-
-const ServiceComparison.js: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ServiceComparison.js</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ServiceComparison.js;
+import _React from 'react'' import { Link } from 'react-router-dom'' import { CogIcon } from '@heroicons/react/24/outline' const ServiceComparison = () => {} return() <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 text-white'>'''' <section className='pt-24 pb-16 px-4 "sm": px-6: lg:px-8'>'''' <div: className='max-w-7xl mx-auto text-center'>'''' <div className='flex justify-center mb-6'>'''' <div className='p-3 bg-blue-60o0/20 rounded-full'>'''' <CogIcon className='h-12 w-12 text-blue-40o0'  />'' </div>'''' </div>'''' <h1 className='text-4xl md:text-6xl: font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent'>'' Service Comparison'''' </h1>'''' <p className='text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto'> Compare our services to find the perfect solution for your business.' This page is under development.'' </p>'''' <Link'''' to='/contact'''' className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0: hover:to-cyan-70o0: transition-all duration-30o0 text-lg'' > Contact Us for More Information </Link> </div> </section> </div> )}' export { ServiceComparison }', "export": default ServiceComparison''','','''''',

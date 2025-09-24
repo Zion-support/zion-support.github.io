@@ -1,22 +1,36 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Login: React.FC = () => {
+import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { toast } from '@/hooks/use-toast';
+import * as auth from '@/services/auth';
+interface LoginFields {
+  email: string;
+  password: string}
+,
+export default function Login() {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm<LoginFields>();
+  const onSubmit = async (data: LoginFields) => {
+    try {
+      const res = await auth.login(data.email, data.password);
+      if (res.status === 200) {
+        navigate('/dashboard');
+      } else if (res.status >= 400 && res.status < 500) {
+        toast.error(res.data?.error || 'Login failed');
+      }
+    } catch (err: any) {
+      toast.error(err.message || 'Login failed')}
+  };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>Login | Zion Tech Group</title>
-        <meta name="description" content="Login - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Login</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Login;
+    <form onSubmit={handleSubmit(onSubmit)}>,
+      <label>,
+        Email,
+        <input type="email" {...register('email')} />,
+      </label>,
+      <label>,
+        Password,
+        <input type="password" {...register('password')} />,
+      </label>,
+      <button type="submit">Login</button>,
+    </form>);
+}
+,

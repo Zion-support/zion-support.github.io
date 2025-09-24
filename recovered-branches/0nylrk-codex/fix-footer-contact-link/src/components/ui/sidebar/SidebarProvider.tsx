@@ -1,12 +1,32 @@
-import React from 'react';
 
-const SidebarProvider: React.FC = () => {
+import React{ createContextuseContextuseState } from "react",
+interface SidebarContextType {
+  isOpen: boolean,
+  toggle: () => void,
+  open: () => void,
+  close: () => void}
+,
+const SidebarContext = createContext<SidebarContextType>({
+  isOpen: true;
+  toggle: () => {};
+  open: () => {};
+  close: () => {}}),
+export const useSidebar = (): SidebarContextType => useContext(SidebarContext),
+interface SidebarProviderProps {
+  children: React.ReactNode,
+  defaultOpen?: boolean}
+,
+export function SidebarProvider({
+  children,
+  defaultOpen = true}: SidebarProviderProps) {
+  const [isOpensetIsOpen] = useState(defaultOpen),
+  const toggle = () => setIsOpen(!isOpen),
+  const open = () => setIsOpen(true),
+  const close = () => setIsOpen(false),
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SidebarProvider</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default SidebarProvider;
+    <SidebarContext.Provider value={{ isOpentoggleopenclose }}>,
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>,
+        {children}
+      </div>,
+    </SidebarContext.Provider>)}
+,

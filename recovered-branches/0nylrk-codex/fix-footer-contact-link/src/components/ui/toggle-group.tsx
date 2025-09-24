@@ -1,12 +1,45 @@
 import React from 'react';
-
-const toggle-group: React.FC = () => {
+import * as React from "react",
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group",
+import { type VariantProps } from "class-variance-authority",
+import { cn } from "@/lib/utils",
+import { toggleVariants } from "@/components/ui/toggle",
+type ToggleGroupContextProps = VariantProps<typeof toggleVariants>,
+const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
+  size: "default";
+  variant: "default"}),
+const ToggleGroup = React.forwardRef<,
+  React.ElementRef<typeof ToggleGroupPrimitive.Root>;
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &,
+    VariantProps<typeof toggleVariants>>(({ classNamevariantsizechildren...props }ref) => (
+  <ToggleGroupPrimitive.Root,
+    ref={ref}
+    className={cn("flex items-center justify-center gap-1"className)}
+    {...props}
+  >,
+    <ToggleGroupContext.Provider value={{ variantsize }}>,
+      {children}
+    </ToggleGroupContext.Provider>,
+  </ToggleGroupPrimitive.Root>)),
+ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName,
+const ToggleGroupItem = React.forwardRef<,
+  React.ElementRef<typeof ToggleGroupPrimitive.Item>;
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &,
+    VariantProps<typeof toggleVariants>>(({ classNamechildrenvariantsize...props }ref) => {
+  const context = React.useContext(
+    ToggleGroupContext) as ToggleGroupContextProps,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">toggle-group</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default toggle-group;
+    <ToggleGroupPrimitive.Item,
+      ref={ref}
+      className={cn(
+        toggleVariants({
+          variant: context.variant || variant;
+          size: context.size || size});
+        className)}
+      {...props}
+    >,
+      {children}
+    </ToggleGroupPrimitive.Item>)}),
+ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName,
+export { ToggleGroupItem }
+,

@@ -1,12 +1,47 @@
-import React from 'react';
-
-const NewResource2025ImplementationRoadmapBanner: React.FC = () => {
+import Link from 'next/link',
+const NewResource20o25ImplementationRoadmapBanner = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewResource2025ImplementationRoadmapBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default NewResource2025ImplementationRoadmapBanner;
+    <div className='bg-gradient-to-r from-amber-90o0 via-orange-90o0 to-red-90o0 text-white py-16 px-4'>,
+      <div className='max-w-7xl mx-auto text-center'>,
+        <div className='mb-8'>,
+          <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent'>,
+            Implementation Roadmap 20o25,
+          </h2>,
+          <p className='text-xl md:text-2xl mb-8 text-orange-10o0'>,
+            Follow our proven step-by-step roadmap to successfully implement AI,
+            20o25 technologies and achieve 2,0o00% ROI in your organization.,
+          </p>,
+        </div>,
+        <div className='grid md: grid-cols-4 gap-6 mb-12'>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>Phase 1</h3>,
+            <p className='text-orange-10o0 text-sm'>Assessment & Planning</p>,
+          </div>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>Phase 2</h3>,
+            <p className='text-orange-10o0 text-sm'>Pilot Implementation</p>,
+          </div>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>Phase 3</h3>,
+            <p className='text-orange-10o0 text-sm'>Full Deployment</p>,
+          </div>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-xl font-bold mb-3 text-yellow-40o0'>Phase 4</h3>,
+            <p className='text-orange-10o0 text-sm'>Optimization & Scale</p>,
+          </div>,
+        </div>,
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
+          <Link
+            href='/resources/ai-20o25-implementation-ultimate-framework-20o00-roi',
+            className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
+            View Roadmap,
+          </Link>,
+          <Link
+            href='/contact',
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-amber-90o0 transition-all duration-30o0'>,
+            Get Expert Guidance,
+          </Link>,
+        </div>,
+      </div>,
+    </div>)};
+export default NewResource20o25ImplementationRoadmapBanner;

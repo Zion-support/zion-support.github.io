@@ -1,12 +1,3 @@
-import React from 'react';
-
-const CodeBlock.js: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">CodeBlock.js</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default CodeBlock.js;
+import _React from 'react', export {}; children; code,', language = 'text',', className = '; showLineNumbers = false}) {} return null} ', '', ''', const content = code || children || '', return (), <div className={`bg-gray-90o0 rounded-lg p-4 overflow-x-auto ${className}`}> <div className="flex items-center justify-between mb-2"> <span className="text-xs text-gray-40o0 uppercase tracking-wide"> {language} ></div> <div>Broken JSX</div> onClick={}}; className="text-xs text-gray-40o0 "hover": text-white transition-colors"> Copy, </button>", </div> <pre className="text-sm text-gray-10o0"> <code>{content}></div> ></div> </div>)} export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock };
+import React from \'react\', export {}; children; code,\', language = \'text\',\', className = \''; showLineNumbers = false}) {} return null} \', \'', \''\', const content = code || children || \'', return (), <div className={`bg-gray-90o0 rounded-lg p-4 overflow-x-auto ${className}`}> <div className=\"flex items-center justify-between mb-2\"> <span className=\"text-xs text-gray-40o0 uppercase tracking-wide\"> {language} ></div> <div>Broken JSX</div> onClick={}}; className=\"text-xs text-gray-40o0 \"hover\": text-white transition-colors\"> Copy, </button>\", </div> <pre className=\"text-sm text-gray-10o0\"> <code>{content}></div> ></div> </div>)} export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock };
+const React from "react", export {}; children; code,", language = "text",", className = ""; showLineNumbers = false}) {} return null} ", "", """, const content = code | children | "", return (), <div className={`bg-gray-90o0 rounded-lg p-4 overflow-x-auto ${className}`}> <div className="flex items-center justify-between mb-2"> <span className="text-xs text-gray-40o0 uppercase tracking-wide"> {language} ></div> <div>Broken JSX</div> onClick={}}; className="text-xs text-gray-40o0 hover: text-white transition-colors"> Copy, </button>", </div> <pre className="text-sm text-gray-10o0"> <code>{content}></div> ></div> </div>)} export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock }; export { CodeBlock };'"`'"`,

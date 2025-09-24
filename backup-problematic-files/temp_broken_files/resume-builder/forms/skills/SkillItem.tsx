@@ -1,12 +1,25 @@
-import React from 'react';
 
-const SkillItem: React.FC = () => {
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Trash2 } from 'lucide-react',
+import { SkillItemProps } from './types';
+export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">SkillItem</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default SkillItem;
+    <Badge
+      key={skill.id} ,
+      variant="secondary",
+      className="flex items-center gap-1 py-1.5 px-3">,
+      {skill.name}
+      {skill.proficiency && (
+        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>)}
+      <Button
+        variant="ghost",
+        size="icon",
+        className="h-5 w-5 p-0 ml-1",
+        onClick={() => onDelete(skill.id!, category)}
+        aria-label="Delete skill">,
+        <Trash2 className="h-3 w-3"  />,
+      </Button>,
+    </Badge>);
+}; <Badge key={
+  skill.id }variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3"  /> </Button> </Badge>) ,

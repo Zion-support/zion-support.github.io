@@ -1,12 +1,68 @@
-import React from 'react';
 
-const JobApplicationsTable: React.FC = () => {
+import { useState } from "react",
+import { JobApplicationStatus } from "@/types/jobs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import {
+  ApplicationsTable;
+  EmptyState;
+  ErrorState;
+  LoadingState;
+  ScoreDialog} from "./applications",
+interface JobApplicationsTableProps {
+  jobId: string}
+,
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+  const {
+    applications,
+    isLoading,
+    error,
+    updateApplicationStatus,
+    markApplicationAsViewed;
+    refetch} = useJobApplications(jobId),
+  const [processingIdsetProcessingId] = useState<string | null>(null),
+  const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null),
+  const [showScoreDialogsetShowScoreDialog] = useState(false),
+  const handleStatusChange = async (applicationId: stringnewStatus: ApplicationStatus) => {
+    setProcessingId(applicationId),
+    try {
+      await updateApplicationStatus(applicationIdnewStatus),
+      // If it's not already viewedmark it as viewed,
+      const application = applications.find(app => app.id === applicationId),
+      if (application && !application.viewed_at) {
+        await markApplicationAsViewed(applicationId)}
+    } finally {
+      setProcessingId(null)}
+  };
+  const handleViewScore = (application: JobApplication) => {
+    setSelectedApplication(application),
+    setShowScoreDialog(true)};
+  const handleViewApplication = async (applicationId: string) => {
+    await markApplicationAsViewed(applicationId)};
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {
+    refetch()};
+  if (isLoading) {
+    return <LoadingState />}
+,
+  if (error) {
+    return <ErrorState error={error} />}
+,
+  if (applications.length === 0) {
+    return <EmptyState />}
+,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">JobApplicationsTable</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default JobApplicationsTable;
+    <>,
+      <ApplicationsTable
+        applications={applications}
+        processingId={processingId}
+        onViewApplication={handleViewApplication}
+        onStatusChange={handleStatusChange}
+        onViewScore={handleViewScore}
+      />,
+      <ScoreDialog
+        open={showScoreDialog}
+        onOpenChange={setShowScoreDialog}
+        application={selectedApplication}
+        onScoreUpdated={handleScoreUpdated}
+      />,
+    </>)}
+,

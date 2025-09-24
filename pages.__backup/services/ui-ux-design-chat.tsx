@@ -1,12 +1,17 @@
-import React from 'react';
-
-const ui-ux-design-chat: React.FC = () => {
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+const UiUxDesignChat: NextPage = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ui-ux-design-chat</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ui-ux-design-chat;
+    <div>,
+      <Head>,
+        <title>UiUxDesignChat - Zion Tech Solutions</title>,
+        <meta name='description' content='UiUxDesignChat service' />,
+      </Head>,
+      <main>,
+        <h1>UiUxDesignChat</h1>,
+        <p>Service details coming soon...</p>,
+        <Link href='/services'>Back to Services</Link>,
+      </main>,
+    </div>)};
+export default UiUxDesignChat;

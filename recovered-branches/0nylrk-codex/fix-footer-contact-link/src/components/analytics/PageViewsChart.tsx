@@ -1,12 +1,30 @@
 import React from 'react';
-
-const PageViewsChart: React.FC = () => {
+import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
+import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
+interface PageViewsChartProps {
+  data: Array<{ date: string, views: number }>,
+  timeRange: string,
+  onTimeRangeChange: (range: string) => void}
+,
+export function PageViewsChart({
+  datatimeRangeonTimeRangeChange;
+}: PageViewsChartProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">PageViewsChart</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default PageViewsChart;
+    <Card className='bg-zion-blue-dark border-zion-blue-light overflow-hidden'>,
+      <CardHeader className='pb-2'>,
+        <CardTitle className='text-white text-lg'>Page Views Trend</CardTitle>,
+        <CardDescription className='text-zion-slate-light'>,
+          Daily page view statistics,
+        </CardDescription>,
+      </CardHeader>,
+      <CardContent className='p-0 pb-4'>,
+        <AnalyticsChart
+          title='',
+          data={data || []}
+          dataKeys={['views']}
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />,
+      </CardContent>,
+    </Card>)}
+,

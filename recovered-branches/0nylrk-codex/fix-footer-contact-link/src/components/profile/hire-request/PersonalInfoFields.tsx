@@ -1,12 +1,45 @@
-import React from 'react';
-
-const PersonalInfoFields: React.FC = () => {
+import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form',
+import { Input } from '@/components/ui/input',
+import { UseFormReturn } from 'react-hook-form',
+import { FormValues } from './useHireRequestForm',
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>}
+,
+export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">PersonalInfoFields</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default PersonalInfoFields;
+    <>,
+      <FormField
+        control={form.control}
+        name='requesterName',
+        render={({ field }) => (
+          <FormItem>,
+            <FormLabel className='text-white'>Your Name</FormLabel>,
+            <FormControl>,
+              <Input
+                placeholder='Enter your full name',
+                {...field}
+                className='bg-zion-blue-light/20 border-zion-blue-light text-white',
+              />,
+            </FormControl>,
+            <FormMessage />,
+          </FormItem>)}
+      />,
+      <FormField
+        control={form.control}
+        name='requesterEmail',
+        render={({ field }) => (
+          <FormItem>,
+            <FormLabel className='text-white'>Your Email</FormLabel>,
+            <FormControl>,
+              <Input
+                placeholder='Enter your email address',
+                type='email',
+                {...field}
+                className='bg-zion-blue-light/20 border-zion-blue-light text-white',
+              />,
+            </FormControl>,
+            <FormMessage />,
+          </FormItem>)}
+      />,
+    </>)}
+,

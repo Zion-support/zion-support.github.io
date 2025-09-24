@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
-=======
-<<<<<<< HEAD
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-<<<<<<< HEAD:backup-merge-conflicts/PartnersSection.jsx.backup
-=======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
->>>>>>> main
+=======
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 >>>>>>> main
 =======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}

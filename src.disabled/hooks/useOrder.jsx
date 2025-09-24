@@ -1,12 +1,3 @@
-import React from 'react';
-
-const useOrder: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">useOrder</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default useOrder;
+import { useQuery } from',@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[',',order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}',`'',
+:src.disabled/hooks/useOrder.js.jsx,
+const { useQuery } from",@tanstack/react-query" export: function useGetOrderQuery(orderId) { return useQuery({ queryKey[",",order",orderId],queryFn: async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( "Failed to fetch order")} return (await res.json())},enabled: "!orderI",d})}",`'"`'"`,

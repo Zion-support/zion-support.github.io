@@ -1,12 +1,21 @@
-import React from 'react';
-
-const ModeToggle: React.FC = () => {
+import { MoonSun } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+// Create a simplified theme hook for offline mode,
+const useTheme = () => ({
+  theme: 'dark';
+  setTheme: (theme: string) => // // console.log(`Theme would change to: ${theme}`);
+}),
+export function ModeToggle() {
+  const { themesetTheme } = useTheme(),
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ModeToggle</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ModeToggle;
+    <Button
+      variant='ghost',
+      size='icon',
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+    >,
+      {theme === 'dark' ? (
+        <Sun className='h-5 w-5 text-yellow-300' />) : (
+        <Moon className='h-5 w-5 text-slate-300' />)}
+      <span className='sr-only'>Toggle theme</span>,
+    </Button>)}
+,

@@ -1,254 +1,192 @@
-# Zion App - Revolutionary AI Solutions
+# Zion App
 
-A cutting-edge web application showcasing revolutionary AI solutions for enterprise transformation.
+A modern, high-performance web application built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
-- **Advanced AI Showcase**: Comprehensive display of AI innovations and breakthroughs
-- **Quantum Computing**: Revolutionary quantum computing solutions and applications
-- **Space Technology**: Next-generation space technology innovations
-- **Biotechnology**: Advanced biotechnology and genetic engineering solutions
-- **Neural Interfaces**: Brain-computer interface technologies
-- **Responsive Design**: Fully responsive and mobile-optimized interface
-- **Performance Optimized**: Built with Vite for lightning-fast builds and optimal performance
-- **PWA Support**: Progressive Web App capabilities for enhanced user experience
+- **Next.js 14** with App Router
+- **TypeScript** with strict type checking
+- **Tailwind CSS** for styling
+- **Performance monitoring** and optimization
+- **Error boundaries** for better error handling
+- **Security headers** and best practices
+- **Image optimization** with WebP/AVIF support
+- **Bundle optimization** with code splitting
 
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
-- **Frontend**: React 18, TypeScript, Vite
-- **Styling**: Tailwind CSS, Framer Motion
-- **UI Components**: Radix UI, Lucide React
-- **State Management**: Redux Toolkit, React Query
-- **Build Tools**: Vite, ESLint, TypeScript
-- **Deployment**: Netlify
-- **CI/CD**: GitHub Actions
+- **Framework**: Next.js 14.2.0
+- **Language**: TypeScript 5.0.0
+- **Styling**: Tailwind CSS 3.4.0
+- **Icons**: Lucide React, Heroicons
+- **Animation**: Framer Motion
+- **HTTP Client**: Axios
+- **Package Manager**: npm
 
-## 📦 Quick Start
+## 📋 Prerequisites
 
-### Prerequisites
+- Node.js 20.18.1 or higher
+- npm 10.0.0 or higher
 
-- Node.js 18+ 
-- npm or yarn
+## 🚀 Getting Started
 
-### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/Zion-Holdings/zion.app.git
-cd zion.app
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Install dependencies
-npm install
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.local
+   # Edit .env.local with your configuration
+   ```
 
-# Start development server
-npm run dev
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📜 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint errors
+- `npm run type-check` - Run TypeScript type checking
+- `npm run test` - Run tests
+- `npm run test:coverage` - Run tests with coverage
+- `npm run clean` - Clean build artifacts
+
+## 🏗️ Project Structure
+
 ```
-
-## 🏗️ Build Scripts
-
-### Development
-```bash
-npm run dev              # Start development server
-npm run dev:backend      # Start backend server (if available)
-npm run dev:hybrid       # Start both frontend and backend
-```
-
-### Building
-```bash
-npm run build            # Standard build
-npm run build:netlify    # Netlify-optimized build
-npm run build:optimize   # Optimized build with performance enhancements
-npm run build:full       # Full build pipeline with health checks and analysis
-```
-
-### Quality Assurance
-```bash
-npm run lint             # Run ESLint
-npm run type-check       # TypeScript type checking
-npm run health-check     # Comprehensive health checks
-npm run analyze          # Performance analysis
-```
-
-### Deployment
-```bash
-npm run start            # Preview production build
-npm run build:analyze    # Build with performance analysis
+zion.app/
+├── app/                    # Next.js App Router pages
+├── components/             # Reusable React components
+├── lib/                    # Utility functions and configurations
+├── public/                 # Static assets
+├── styles/                 # Global styles
+├── types/                  # TypeScript type definitions
+├── next.config.js          # Next.js configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies and scripts
 ```
 
 ## 🔧 Configuration
 
-### Environment Variables
+### TypeScript Configuration
 
-Create a `.env.local` file in the root directory:
+The project uses strict TypeScript configuration with:
+- Strict type checking enabled
+- Path mapping for clean imports
+- Modern ES2022 target
+- Comprehensive type safety rules
 
-```env
-VITE_API_URL=your_api_url
-VITE_APP_TITLE=Zion App
-VITE_APP_DESCRIPTION=Revolutionary AI Solutions
+### Next.js Configuration
+
+Optimized for performance and security:
+- Image optimization with WebP/AVIF
+- Bundle optimization with code splitting
+- Security headers
+- Performance monitoring
+
+### Tailwind CSS
+
+Configured with:
+- Custom design system
+- Responsive utilities
+- Dark mode support
+- Performance optimizations
+
+## 🚀 Performance Features
+
+- **Code Splitting**: Automatic code splitting for optimal loading
+- **Image Optimization**: Next.js Image component with WebP/AVIF
+- **Bundle Analysis**: Built-in bundle analyzer
+- **Performance Monitoring**: Custom performance tracking utilities
+- **Caching**: Optimized caching strategies
+
+## 🛡️ Security Features
+
+- **Security Headers**: Comprehensive security headers
+- **Content Security Policy**: XSS protection
+- **HTTPS Enforcement**: Strict Transport Security
+- **Input Validation**: Type-safe input handling
+
+## 🧪 Testing
+
+The project includes:
+- Unit tests with Jest
+- Type checking with TypeScript
+- Linting with ESLint
+- Performance testing utilities
+
+## 📦 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main
+
+### Netlify
+
+1. Build command: `npm run build`
+2. Publish directory: `.next`
+3. Configure environment variables
+
+### Docker
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
 ```
-
-### Build Configuration
-
-The application uses Vite with the following optimizations:
-
-- **Code Splitting**: Automatic chunk splitting for optimal loading
-- **Tree Shaking**: Dead code elimination
-- **Compression**: Gzip and Brotli compression
-- **Bundle Analysis**: Built-in bundle size analysis
-- **PWA Support**: Service worker and manifest generation
-
-## 📊 Performance Monitoring
-
-The application includes comprehensive performance monitoring:
-
-### Health Checks
-- Package.json validation
-- Build file verification
-- Dependency checking
-- Configuration validation
-
-### Performance Analysis
-- Bundle size analysis
-- Chunk optimization recommendations
-- Loading performance metrics
-- Resource optimization suggestions
-
-### Usage
-```bash
-npm run health-check     # Run health checks
-npm run analyze          # Analyze performance
-npm run build:full       # Full pipeline with monitoring
-```
-
-## 🚀 Deployment
-
-### Netlify Deployment
-
-The application is configured for seamless Netlify deployment:
-
-1. **Automatic Builds**: Triggered on push to main branch
-2. **Environment Variables**: Configured via Netlify dashboard
-3. **Redirects**: Handled via `_redirects` file
-4. **Build Settings**: Optimized in `netlify.toml`
-
-### Manual Deployment
-
-```bash
-# Build for production
-npm run build:netlify
-
-# Deploy to Netlify (if Netlify CLI is installed)
-netlify deploy --prod --dir=dist
-```
-
-## 🔄 CI/CD Pipeline
-
-GitHub Actions workflow includes:
-
-1. **Health Checks**: Validate project configuration
-2. **Linting & Type Checking**: Code quality validation
-3. **Build & Test**: Compile and test application
-4. **Performance Analysis**: Bundle size and optimization analysis
-5. **Deployment**: Automatic deployment to Netlify
-
-## 📁 Project Structure
-
-```
-zion.app/
-├── src/
-│   ├── components/          # Reusable UI components
-│   ├── pages/              # Page components
-│   ├── hooks/              # Custom React hooks
-│   ├── utils/              # Utility functions
-│   ├── types/              # TypeScript type definitions
-│   └── styles/             # Global styles
-├── public/                 # Static assets
-├── scripts/                # Build and utility scripts
-├── .github/workflows/      # CI/CD workflows
-├── netlify.toml           # Netlify configuration
-├── vite.config.ts         # Vite configuration
-└── package.json           # Dependencies and scripts
-```
-
-## 🎯 Key Features
-
-### AI Innovation Showcase
-- Comprehensive AI technology displays
-- Interactive demonstrations
-- Real-time performance metrics
-
-### Quantum Computing Solutions
-- Quantum algorithm implementations
-- Performance benchmarking
-- Educational content
-
-### Space Technology
-- Advanced propulsion systems
-- Habitat technologies
-- Resource extraction solutions
-
-### Biotechnology
-- Genetic engineering tools
-- Synthetic biology applications
-- Medical technology innovations
-
-## 🔧 Development Tools
-
-### Scripts Available
-
-- `npm run dev` - Development server
-- `npm run build` - Production build
-- `npm run lint` - Code linting
-- `npm run type-check` - TypeScript validation
-- `npm run health-check` - Project health validation
-- `npm run analyze` - Performance analysis
-- `npm run build:full` - Complete build pipeline
-
-### Code Quality
-
-- **ESLint**: Code style and quality enforcement
-- **TypeScript**: Type safety and better developer experience
-- **Prettier**: Code formatting (if configured)
-- **Husky**: Git hooks for quality assurance
-
-## 📈 Performance Optimizations
-
-- **Bundle Splitting**: Automatic code splitting for optimal loading
-- **Lazy Loading**: Route-based code splitting
-- **Image Optimization**: Responsive images and modern formats
-- **Caching**: Aggressive caching strategies
-- **Compression**: Gzip and Brotli compression
-- **CDN**: Content delivery network optimization
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## 🆘 Support
 
 For support and questions:
-
-- Create an issue in the repository
-- Contact the development team
+- Create an issue on GitHub
 - Check the documentation
+- Review the code examples
 
-## 🔮 Future Enhancements
+## 🔄 Changelog
 
-- Advanced AI integration
-- Real-time collaboration features
-- Enhanced mobile experience
-- Progressive Web App improvements
-- Performance monitoring dashboard
-- Advanced analytics integration
+### Latest Updates
+- Enhanced TypeScript configuration
+- Improved performance monitoring
+- Better error handling
+- Security improvements
+- Bundle optimization
 
 ---
 
-**Built with ❤️ by the Zion Holdings team**
+Built with ❤️ by the Zion team

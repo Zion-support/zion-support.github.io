@@ -19,6 +19,8 @@
     "home": "Home",
     "marketplace": "Marketplace",
     "categories": "Categories",
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
@@ -103,3 +105,4 @@
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
   }
+}

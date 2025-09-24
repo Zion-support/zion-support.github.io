@@ -1,22 +1,56 @@
 #!/bin/bash
-set -euo pipefail
+set -e
 
-echo "Starting Netlify/Vite build process (npm) ..."
+echo "Starting Netlify build process..."
 
-# Ensure we're in the workspace
-cd /workspace
+# Check if we're in a Netlify environment
+if [ "$NETLIFY" = "true" ]; then
+  echo "Detected Netlify environment - using optimized build process..."
 
-# Use npm consistently to mirror netlify.toml
-if [ "${NETLIFY:-false}" = "true" ]; then
-  echo "Detected Netlify environment - installing dependencies with npm ci..."
-  npm ci --ignore-scripts --no-audit
+  echo "Installing dependencies with Netlify-optimized settings (npm ci if lockfile exists)..."
+  if [ -f package-lock.json ]; then
+    npm ci --no-fund --no-audit --prefer-offline --cache .npm-cache
+  else
+    npm install --no-fund --no-audit --prefer-offline --cache .npm-cache
+  fi
+
 else
-  echo "Local environment - cleaning and installing dependencies with npm ci..."
-  rm -rf node_modules dist .npm _cache .pnpm-store .yarn .yarn-cache
-  npm ci --ignore-scripts --no-audit
+  echo "Local development environment detected - using full cleanup process..."
+
+  echo "Cleaning previous installations..."
+  rm -rf node_modules
+  rm -rf dist
+  rm -rf .npm-cache
+
+  echo "Cleaning npm cache..."
+  npm cache clean --force >/dev/null 2>&1 || true
+
+  echo "Installing dependencies (with retry logic)..."
+  for i in {1..3}; do
+    echo "Attempt $i of 3..."
+    if [ -f package-lock.json ]; then
+      npm ci --no-fund --no-audit --prefer-offline --cache .npm-cache && success=1 || success=0
+    else
+      npm install --no-fund --no-audit --prefer-offline --cache .npm-cache && success=1 || success=0
+    fi
+    if [ "$success" = "1" ]; then
+      echo "Dependencies installed successfully!"
+      break
+    else
+      echo "Installation failed, cleaning and retrying..."
+      rm -rf node_modules
+      rm -rf .npm-cache
+      npm cache clean --force >/dev/null 2>&1 || true
+      if [ $i -eq 3 ]; then
+        echo "All installation attempts failed!"
+        exit 1
+      fi
+    fi
+  done
 fi
 
-echo "Building project with npm run build:netlify ..."
-npm run build:netlify
+# Build the project
+echo "Building project..."
+npm run build
 
 echo "Build completed successfully!"

@@ -1,12 +1,24 @@
 import React from 'react';
-
-const TalentCardAvatar: React.FC = () => {
+import { AvatarImageAvatarFallback } from '@/components/ui/avatar',
+interface TalentCardAvatarProps {
+  profilePicture?: string,
+  fullName: string}
+,
+export function TalentCardAvatar({
+  profilePicturefullName;
+}: TalentCardAvatarProps) {
+  // Get initials for avatar fallback,
+  const getInitials = (name: string) => {
+    return name,
+      .split(' '),
+      .map(part => part[0]),
+      .join(''),
+      .toUpperCase()};
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">TalentCardAvatar</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default TalentCardAvatar;
+    <Avatar className='w-14 h-14 border-2 border-zion-blue-light'>,
+      <AvatarImage src={profilePicture || undefined} alt={fullName} />,
+      <AvatarFallback className='bg-zion-purple/20 text-zion-purple'>,
+        {getInitials(fullName)}
+      </AvatarFallback>,
+    </Avatar>)}
+,

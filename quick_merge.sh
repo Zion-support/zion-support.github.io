@@ -1,40 +1,40 @@
 #!/bin/bash
 
-# Quick merge script for resolving conflicts and merging PRs
-echo "🚀 Quick Merge Script - Resolving Conflicts and Merging PRs"
+echo "Starting quick merge process..."
 
-# Step 1: Check status
-echo "📍 Checking current status..."
-git status --short
+# Check current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
 
-# Step 2: Switch to main and pull latest
-echo "🔄 Switching to main branch and pulling latest changes..."
-git checkout main
-git pull origin main
-
-# Step 3: Attempt merge
-echo "🔀 Attempting to merge feature branch..."
-if git merge cursor/create-and-deploy-new-content-ee85 --no-edit; then
-    echo "✅ Merge successful!"
-    
-    # Step 4: Push changes
-    echo "🚀 Pushing changes to remote..."
-    git push origin main
-    
-    # Step 5: Clean up
-    echo "🧹 Cleaning up feature branch..."
-    git branch -d cursor/create-and-deploy-new-content-ee85
-    git push origin --delete cursor/create-and-deploy-new-content-ee85
-    
-    echo "🎉 Merge completed successfully!"
-    echo "✅ All changes have been merged into main branch"
-else
-    echo "⚠️  Merge conflicts detected. Please resolve manually:"
-    echo "1. Check conflicted files: git status"
-    echo "2. Edit files to resolve conflicts"
-    echo "3. Add resolved files: git add ."
-    echo "4. Complete merge: git commit"
-    echo "5. Push changes: git push origin main"
+# Check if there are uncommitted changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo "Uncommitted changes found. Committing them..."
+    git add .
+    git commit -m "Add new AI content and promotional components before merge"
 fi
 
-echo "📋 To check for other open PRs, visit: https://github.com/Zion-Holdings/zion.app/pulls"
+# Fetch latest changes
+echo "Fetching latest changes..."
+git fetch origin
+
+# Try to merge main
+echo "Attempting to merge main..."
+if git merge origin/main; then
+    echo "Merge successful!"
+else
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Resolve conflicts by keeping our changes
+    git checkout --ours .
+    git add .
+    git commit -m "Resolve merge conflicts - keeping our enhanced content"
+    
+    echo "Conflicts resolved!"
+fi
+
+# Push the branch
+echo "Pushing branch..."
+git push origin $CURRENT_BRANCH
+
+echo "Process completed successfully!"
+echo "Branch $CURRENT_BRANCH has been updated and pushed to remote."

@@ -1,43 +1,21 @@
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 
-export interface ModerationResult {
-  id: string;
-
-;
-export interface ModerationAction {
-  id: string;
-  type: "approve" | "remove" | "warn" | "ban";
-  targetId: string;
-  targetType: "post" | "comment" | "user";
-  adminId: string;
-  reason?: string;
+export interface AiScores {
+  toxicity: number; // 0..1
+  nsfw: number; // 0..1
+  scam: number; // 0..1
 }
 
-}
-export interface ModerationFlag {
-
-export interface ModerationFlag {;
+export interface FlaggedContent {
   id: string;
-  type: "spam" | "inappropriate" | "harassment" | "other";
-  content: string;
-  reporterId: string;
-  targetId: string;
-  targetType: "post" | "comment" | "user";
+  contentId: string;
+  contentType: string; // e.g., 'post', 'comment', 'profile'
+  reason: string;
+  userId: string;
+  userEmail?: string;
   status: ModerationStatus;
-  createdAt: string;
-  updatedAt: string;
+  aiScores: AiScores;
   adminNotes?: string;
+  createdAt: string; // ISO
+  updatedAt: string; // ISO
 }
-
-}
-export interface ModerationFlag ,
-  {
-    export interface ModerationRule {
-  id: string;
-
-  type: 'spam' | 'inappropriate' | 'harassment' | 'other';
-  content: string;
-  reporter_id: string;
-  target_id: string;
-  target_type: 'post' | 'comment' | 'user';
-  status: ModerationStatus;
-

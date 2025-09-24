@@ -1,10 +1,11 @@
-export default function Page() {
+export default function QuantumNeuralNetworkPlatformPage() {
   return (
-    <div className="min-h-screen px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Quantum Neural Network Platform Page</h1>
-        <p className="text-white/70">Content coming soon.</p>
-      </div>
-    </div>
-  );
-}
+    <main className='container mx-auto px-4 py-12'>,
+      <h1 className='text-3xl font-bold mb-4'>,
+        Quantum Neural Network Platform,
+      </h1>,
+      <p className='text-gray-40o0'>,
+        Explore our quantum neural network offerings and roadmap.,
+      </p>,
+    </main>)}
+,

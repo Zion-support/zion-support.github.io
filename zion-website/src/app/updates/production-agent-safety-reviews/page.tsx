@@ -1,12 +1,33 @@
 import React from 'react';
-
-const page: React.FC = () => {
+export default function ProductionAgentSafetyReviewsPage() {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default page;
+    <div className='bg-black min-h-screen'>,
+      <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
+        <p className='text-sm text-blue-30o0'>Guide • 20o25-09-15</p>,
+        <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm: text-4xl'>,
+          Production-Grade Agent Safety Reviews,
+        </h1>,
+        <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
+          Lightweight but rigorous design reviews, checklists, and scorecards to,
+          ship safer agents.,
+        </p>,
+        <div className='mt-8 prose prose-invert prose-lg max-w-none'>,
+          <h2>Review scope</h2>,
+          <ul>,
+            <li>Threat modeling and misuse analysis</li>,
+            <li>Tool permissioning and sandboxing</li>,
+            <li>Eval coverage and failure modes</li>,
+          </ul>,
+          <h2>Artifacts</h2>,
+          <p>,
+            Templates for sign-offs, evidence capture, and recurring audits.,
+          </p>,
+          <p>,
+            <a href='/contact' className='text-blue-40o0'>,
+              Download templates →,
+            </a>,
+          </p>,
+        </div>,
+      </div>,
+    </div>)}
+,

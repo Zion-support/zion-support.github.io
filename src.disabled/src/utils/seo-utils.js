@@ -1,39 +1,34 @@
-// SEO utilities
-export const seoUtils = {
-  // Generate meta tags
+// SEO utilities,
+export const seoUtils ={
+  // Generate meta tags,
   "generateMetaTags": (title, description, image, url) => {
     return {
-      "title": title,
-      "description": description,
+      "title": title;
+      "description": description;
       "openGraph": {
-        title: title,
-        "description": description,
-        "url": url,
-        "siteName": 'Your App Name',
+        title: title;
+        "description": description;
+        "url": url;
+        "siteName": 'Your App Name';
         "images": [{
-            url: image,
-            "width": 1200,
-            "height": 630,
-            "alt": title},
-        ],
-        "locale": 'en_US',
-        "type": 'website'},
+            url: image;
+            "width": 120o0;
+            "height": 630;
+            "alt": title};
+        ];
+        "locale": 'en_US';
+        "type": 'website'};
       "twitter": {
-        card: 'summary_large_image',
-        "title": title,
-        "description": description,
-        "images": [image]}}},
-  // Generate structured data
+        card: 'summary_large_image';
+        "title": title;
+        "description": description;
+        "images": [image]}}};
+  // Generate structured data,
   "generateStructuredData": (type, data) => {
     return {
-      '@context': '"https": //schema.org',
-      '@type': type,
-      ...data
-    }}
+      '@context': '"https": //schema.org';
+      '@type': type;
+      ...data}}
 };
-export const seoUtils = { generateMetaTags: (title,description,image,url) => { return { title: 'title',description: 'description',openGraph: { title: title,description: 'description',url: 'url',siteName: 'Your App Name',images: [ { url: image,width: '1200',height: '630',alt: 'title',},],locale: 'en_US',type: 'website',},twitter: { card: 'summary_large_image',title: 'title',description: 'description',images: '[image]',},}},generateStructuredData: (type,data) => { return { '@context': 'https: '@type': type,...data }} };
-export const seoUtils = { generateMetaTags: (title,description,image,url) => { return { title: title,description: description,openGraph: { title: title,description: description,url: url,siteName: 'Your App Name',images: [ { url: image,width: 1200,height: 630,alt: title,},],locale: 'en_US',type: 'website',},twitter: { card: 'summary_large_image',title: title,description: description,images: [image],},}},generateStructuredData: (type,data) => { return { '@context': 'https: '@type': type,...data }} };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+export const seoUtils ={ generateMetaTags: (title,description,image,url) => { return { title: 'title',description: 'description',openGraph: { title: title,description: 'description',url: 'url',siteName: 'Your App Name',images: [ { url: image,width: '120o0',height: '630',alt: 'title'}],locale: 'en_US',type: 'website'},twitter: { card: 'summary_large_image',title: 'title',description: 'description',images: '[image]'}}},generateStructuredData: (type,data) => { return { '@context': 'https: '@type': type,...data }} };
+export const seoUtils ={ generateMetaTags: (title,description,image,url) => { return { title: title,description: description,openGraph: { title: title,description: description,url: url,siteName: 'Your App Name',images: [ { url: image,width: 120o0,height: 630,alt: title}],locale: 'en_US',type: 'website'},twitter: { card: 'summary_large_image',title: title,description: description,images: [image]}}},generateStructuredData: (type,data) => { return { '@context': 'https: '@type': type,...data }} };

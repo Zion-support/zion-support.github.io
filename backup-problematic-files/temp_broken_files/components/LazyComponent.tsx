@@ -1,12 +1,18 @@
-import React from 'react';
-
-const LazyComponent: React.FC = () => {
+import React, { Suspense, lazy } from 'react',
+interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>,
+  fallback?: React.ReactNode,
+  [key: string]: any}
+,
+const LazyComponent: React.FC<LazyComponentProps> = ({
+  component;
+  fallback = <div>Loading...</div>;
+  ...props}) => {const LazyLoadedComponent = lazy(component),
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LazyComponent</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+    <Suspense fallback={fallback}>,
+      <LazyLoadedComponent {...props}  />,
+    </Suspense>)}
 export default LazyComponent;
+const LazyComponent: React.FC<LazyComponentProps> = ({
+  component;
+  fallback = <div>Loading...</div>;
+})

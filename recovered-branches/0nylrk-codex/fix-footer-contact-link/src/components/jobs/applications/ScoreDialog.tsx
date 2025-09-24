@@ -1,12 +1,34 @@
-import React from 'react';
-
-const ScoreDialog: React.FC = () => {
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+} from '@/components/ui/dialog',
+import { JobApplication } from '@/types/jobs',
+import { ApplicationScoreCard } from '../ApplicationScoreCard',
+interface ScoreDialogProps {
+  open: boolean,
+  onOpenChange: (open: boolean) => void,
+  application: JobApplication | null,
+  onScoreUpdated: (updatedApplication: JobApplication) => void}
+,
+export function ScoreDialog({
+  open;
+  onOpenChange;
+  application;
+  onScoreUpdated;
+}: ScoreDialogProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ScoreDialog</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ScoreDialog;
+    <Dialog open={open} onOpenChange={onOpenChange}>,
+      <DialogContent className='sm: max-w-md'>,
+        <DialogHeader>,
+          <DialogTitle>Application Match Score</DialogTitle>,
+        </DialogHeader>,
+        {application && (
+          <ApplicationScoreCard
+            application={application}
+            onScoreUpdated={onScoreUpdated}
+          />)}
+      </DialogContent>,
+    </Dialog>)}
+,

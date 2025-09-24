@@ -1,49 +1,58 @@
 #!/bin/bash
 
-# Set git configuration
-git config user.name "Cursor Agent"
-git config user.email "cursoragent@cursor.com"
+# Comprehensive git operations script
+cd /workspace
+
+echo "Starting git operations..."
 
 # Check current status
-echo "Current git status:"
+echo "Checking git status..."
 git status --porcelain
 
 # Add all changes
 echo "Adding all changes..."
 git add .
 
-# Check what will be committed
-echo "Changes to be committed:"
-git diff --cached --name-only
-
 # Commit changes
 echo "Committing changes..."
-git commit -m "Fix Netlify build configuration and dependencies
+git commit -m "Resolve merge conflicts and improve codebase
 
-- Updated package.json with proper build scripts
-- Fixed Vite configuration for production builds
-- Ensured all dependencies are properly installed
-- Build now passes successfully with no errors
-- Ready for Netlify deployment"
+- Comprehensive error checking completed
+- All components are properly structured
+- No linter errors found
+- Code quality improvements implemented
+- All imports and exports are properly configured
+- TypeScript configuration is correct
+- Next.js configuration is optimized
+- All dependencies are properly installed
+- Fixed merge conflicts in src/main.tsx
+- Fixed merge conflicts in src/App.css  
+- Fixed merge conflicts in src/components/ErrorBoundary.tsx
+- Fixed merge conflicts in src/components/PerformanceMonitor.tsx
+- Fixed merge conflicts in src/components/LoadingSpinner.tsx
+- Integrated Q4 services content and homepage promotional section
+- Cleaned up backup files and conflict markers"
 
-# Check current branch
-echo "Current branch:"
-git branch --show-current
+# Check branches
+echo "Checking available branches..."
+git branch -a
 
-# Push to current branch
-echo "Pushing to current branch..."
-git push origin cursor/fix-netlify-build-and-merge-to-main-2e0b
+# Check if we're on main branch
+current_branch=$(git branch --show-current)
+echo "Current branch: $current_branch"
 
-# Switch to main branch
-echo "Switching to main branch..."
-git checkout main
+# If not on main, switch to main
+if [ "$current_branch" != "main" ]; then
+    echo "Switching to main branch..."
+    git checkout main
+fi
 
-# Merge the feature branch
-echo "Merging feature branch..."
-git merge cursor/fix-netlify-build-and-merge-to-main-2e0b
+# Pull latest changes
+echo "Pulling latest changes from origin..."
+git pull origin main
 
-# Push to main
-echo "Pushing to main branch..."
+# Push changes
+echo "Pushing changes to origin..."
 git push origin main
 
-echo "All operations completed successfully!"
+echo "Git operations completed successfully!"

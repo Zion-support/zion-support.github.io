@@ -1,12 +1,29 @@
+
+import React from "react";
+import { format } from "date-fns",
+interface DateDividerProps {
+  date: Date}
+,
 import React from 'react';
-
-const DateDivider: React.FC = () => {
+import { format } from 'date-fns',
+interface DateDividerProps {
+  date: Date}
+export function DateDivider({ date }: DateDividerProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">DateDivider</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default DateDivider;
+    <div className="flex items-center my-4">,
+      <div className="flex-1 border-t border-zion-purple/20"></div>,
+      <div className="px-3 text-xs text-zion-slate">,
+        {format(date, "MMM d, yyyy")}
+      </div>,
+      <div className="flex-1 border-t border-zion-purple/20"></div>,
+    </div>),
+  date: Date}
+,
+interface DateDividerProps {
+  date: Date}
+,
+import React from './react',
+import { format  } from './date - fns',
+interface DateDividerProps {
+  date: Date}
+,

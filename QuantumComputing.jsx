@@ -1,12 +1,26 @@
 import React from 'react';
-
-const QuantumComputing: React.FC = () => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props),
+    this.state ={ hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
+    return this.props.children}
+}
+const QuantumComputing = ({ className }) => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">QuantumComputing</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default QuantumComputing;
+    <div className={className || ''}>,
+      <h1>QuantumComputing</h1>,
+      <p>This component is under development.</p>,
+    </div>)}
+}
+}
+}
+,
