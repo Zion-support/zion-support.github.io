@@ -23,11 +23,13 @@ const nextConfig = {
 	experimental: {
 		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-		// Disable SWC native requirements in this environment
+		// Force SWC to use JavaScript fallback if native binary fails
+		// Disable SWC binary download to force JavaScript fallback
 		forceSwcTransforms: true,
 	},
-
-	// SWC configuration (swcMinify is deprecated in Next.js 15+)
+	
+	// SWC configuration - force JavaScript fallback
+	swcMinify: true,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {

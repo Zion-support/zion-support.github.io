@@ -19,7 +19,7 @@
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "start": "next start",
-    "lint": "eslint app",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "eslint . --fix || true",
