@@ -15,3 +15,15 @@ dist/
 build/
 *.min.js
 *.min.css
+src.broken/
+ts_files_backup/
+types.disabled/
+backup/
+backup-*/
+backup-problematic-files/
+recovered-branches/
+src_backup/
+pages_backup/
+pages.broken/
+pages._quarantine/
+pages-quarantine/

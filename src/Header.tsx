@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
               </div>
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {item.name}
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
                         >
                           <subItem.icon className="h-4 w-4 mr-2" />
@@ -89,7 +89,6 @@ const Header: React.FC = () => {
               <Mail className="h-4 w-4 mr-1" />
               <span>kleber@ziontechgroup.com</span>
             </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
 
           {/* Mobile menu button */}
@@ -110,7 +109,7 @@ const Header: React.FC = () => {
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -121,7 +120,7 @@ const Header: React.FC = () => {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
-                          href={subItem.href}
+                          to={subItem.href}
                           className="flex items-center text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
                           onClick={() => setIsMenuOpen(false)}
                         >
