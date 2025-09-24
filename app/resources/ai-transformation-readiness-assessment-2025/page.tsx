@@ -237,15 +237,15 @@ export default function AITransformationReadinessAssessment2025() {
                     </label>
                     <label className="flex items-center gap-2">
                       <input type="radio" name="data-quality" className="text-blue-600" />
-                      Good (75-89% accuracy)
+                      <span className="text-blue-600">Good (75-89% accuracy)</span>
                     </label>
                     <label className="flex items-center gap-2">
                       <input type="radio" name="data-quality" className="text-blue-600" />
-                      Fair (60-74% accuracy)
+                      <span className="text-blue-600">Fair (60-74% accuracy)</span>
                     </label>
                     <label className="flex items-center gap-2">
                       <input type="radio" name="data-quality" className="text-blue-600" />
-                      Poor (&lt;60% accuracy)
+                      <span className="text-blue-600">Poor (&lt;60% accuracy)</span>
                     </label>
                   </div>
                 </div>
