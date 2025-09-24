@@ -1,79 +1,157 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const banners = [
+    {
+      title: "🚀 Revolutionary AI Content 2025",
+      subtitle: "Experience the future of AI-powered content creation",
+      description: "Discover cutting-edge AI systems that create multi-dimensional content with consciousness awareness",
+      link: "/pages/RevolutionaryAIContent2025",
+      gradient: "from-purple-600 to-pink-600",
+      bgGradient: "from-purple-900/90 to-pink-900/90"
+    },
+    {
+      title: "⚡ Quantum Computing Revolutionary 2025",
+      subtitle: "Unlock infinite computational power",
+      description: "Revolutionary quantum technologies solving impossible problems and reshaping the future",
+      link: "/pages/QuantumComputingRevolutionary2025",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-900/90 to-blue-900/90"
+    },
+    {
+      title: "🧠 Neural Interface Revolution 2025",
+      subtitle: "Bridge mind and machine",
+      description: "Direct neural interfaces that connect human consciousness with artificial intelligence",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-900/90 to-teal-900/90"
+    },
+    {
+      title: "🌟 Ultimate Tech Breakthrough 2025",
+      subtitle: "The most advanced technology showcase",
+      description: "Experience the most revolutionary technological advances that will reshape our world",
+      link: "/pages/UltimateTechBreakthrough2025",
+      gradient: "from-orange-600 to-red-600",
+      bgGradient: "from-orange-900/90 to-red-900/90"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % banners.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🔮</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
-            <p className="text-indigo-100 mb-4 text-sm text-center">
-              Technology that can manipulate the fundamental fabric of reality itself
-            </p>
-            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
-              Explore Reality →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Interfaces</h3>
-            <p className="text-purple-100 mb-4 text-sm text-center">
-              Direct brain-computer interfaces for thought-controlled technology
-            </p>
-            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
-              Connect Mind →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">⚡</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Quantum Teleportation</h3>
-            <p className="text-cyan-100 mb-4 text-sm text-center">
-              Instantaneous matter transportation using quantum entanglement
-            </p>
-            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
-              Teleport Now →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
-            <p className="text-emerald-100 mb-4 text-sm text-center">
-              Computing that exists across multiple realities and dimensions
-            </p>
-            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
-              Enter Dimensions →
-            </a>
-          </div>
-        </div>
-        
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center space-x-4">
-            <div className="text-sm opacity-80">Revolutionary Features:</div>
-            <div className="flex space-x-2">
-              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Reality Control</span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Mind Interface</span>
-              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Tech</span>
-              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Multi-Dimensional</span>
+    <div className="relative mb-12 overflow-hidden">
+      <div className="relative h-96">
+        {banners.map((banner, index) => (
+          <motion.div
+            key={index}
+            className={`absolute inset-0 bg-gradient-to-br ${banner.bgGradient} flex items-center justify-center`}
+            initial={{ opacity: 0, x: index === 0 ? 0 : '100%' }}
+            animate={{ 
+              opacity: currentSlide === index ? 1 : 0,
+              x: currentSlide === index ? 0 : currentSlide > index ? '-100%' : '100%'
+            }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          >
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                  >
+                    <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse">
+                      🌟 NEW REVOLUTIONARY CONTENT • JANUARY 2025
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                      {banner.title}
+                    </h2>
+                    <h3 className="text-xl md:text-2xl text-white/90 mb-4">
+                      {banner.subtitle}
+                    </h3>
+                    <p className="text-lg text-white/80 mb-8 max-w-2xl">
+                      {banner.description}
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a
+                        href={banner.link}
+                        className={`inline-block bg-gradient-to-r ${banner.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400`}
+                      >
+                        Explore Revolutionary Content →
+                      </a>
+                      <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
+                        Learn More
+                      </button>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="relative"
+                  >
+                    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">🚀</div>
+                        <h4 className="text-2xl font-bold mb-4 text-white">Interactive Demo</h4>
+                        <p className="text-white/80 mb-6">
+                          Experience our revolutionary technology in real-time
+                        </p>
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-center space-x-2">
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                            <span className="text-white/90 text-sm">AI Processing Active</span>
+                          </div>
+                          <div className="flex items-center justify-center space-x-2">
+                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <span className="text-white/90 text-sm">Quantum State Ready</span>
+                          </div>
+                          <div className="flex items-center justify-center space-x-2">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                            <span className="text-white/90 text-sm">Neural Interface Connected</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              currentSlide === index ? 'bg-white' : 'bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
+        <motion.div
+          className="h-full bg-gradient-to-r from-purple-500 to-pink-500"
+          initial={{ width: '0%' }}
+          animate={{ width: '100%' }}
+          transition={{ duration: 5, ease: "linear" }}
+          key={currentSlide}
+        />
       </div>
     </div>
   );
