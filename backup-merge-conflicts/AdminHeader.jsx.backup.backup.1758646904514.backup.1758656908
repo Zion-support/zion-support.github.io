@@ -1,9 +1,6 @@
-
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompWorkspace} from "@/hooks/useCompWorkspace";
-<<<<<<< HEAD
-=======
 =======
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
@@ -12,9 +9,6 @@ export function AdminHeader($1) {
     // const { user } = useAuth(); // Unused but available
     const {comp} = useCompWorkspace();
     return (
-=======
-<<<<<<< HEAD
-        <div className="space-y-4">
 =======
     <div className="min-h-screen bg-white">
       <div className="flex items-center justify-between">

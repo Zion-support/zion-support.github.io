@@ -1,26 +1,20 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
+#!/usr/bin/env node,
+const fs = require('fs'),
+const path = require('path'),
+const { execSync } = require('child_process'),
 function findFilesWithConflicts(startDir) {
-	const results = [];
+	const results = [],
 	function walk(dir) {
-		let entries = [];
+		let entries = [],
 		try {
-			entries = fs.readdirSync(dir, { withFileTypes: true });
-		} catch {
-			return;
-		}
+			entries = fs.readdirSync(dir, { withFileTypes: true })} catch {
+			return}
 		for (const entry of entries) {
-			const fullPath = path.join(dir, entry.name);
+			const fullPath = path.join(dir, entry.name),
 			if (entry.isDirectory()) {
 				if (entry.name === '.git' || entry.name === 'node_modules' || entry.name === 'dist' || entry.name === 'build' || entry.name === '.next') {
-					continue;
-				}
-				walk(fullPath);
-			} else {
+					continue}
+				walk(fullPath)} else {
 				try {
-					const content = fs.readFileSync(fullPath, 'utf8');
-					if (content.includes('
+					const content = fs.readFileSync(fullPath, 'utf8'),
+					if (content.includes('}}}}}))

@@ -1,19 +1,10 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-=======
 import React from 'react';
 import Link from 'next/link';
-
 const UltimateContentShowcase2025 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const featuredContent = [
     {
       id: 'enterprise-ai-revolution',
@@ -96,19 +87,14 @@ const UltimateContentShowcase2025 = () => {
       isNew: true
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredContent.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const currentContent = featuredContent[currentIndex];
-
   if (!isVisible) return null;
-
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Animated Background Elements */}
@@ -117,7 +103,6 @@ const UltimateContentShowcase2025 = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -142,7 +127,6 @@ const UltimateContentShowcase2025 = () => {
             Learn from real-world case studies and access practical tools to accelerate your AI transformation.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Featured Articles */}
           <div className="lg:col-span-2">
@@ -178,7 +162,6 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
@@ -209,7 +192,6 @@ const UltimateContentShowcase2025 = () => {
                   </div>
                 </div>
               </div>
-
         {/* Featured Content Card */}
         <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 mb-12 border border-white border-opacity-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -228,15 +210,12 @@ const UltimateContentShowcase2025 = () => {
                   {currentContent.readingTime}
                 </span>
               </div>
-              
               <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
                 {currentContent.title}
               </h3>
-              
               <p className="text-lg opacity-90 mb-6 leading-relaxed">
                 {currentContent.description}
               </p>
-
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {currentContent.tags.map((tag, index) => (
@@ -248,7 +227,6 @@ const UltimateContentShowcase2025 = () => {
                   </span>
                 ))}
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -265,7 +243,6 @@ const UltimateContentShowcase2025 = () => {
                 </Link>
               </div>
             </div>
-
             {/* Metrics Display */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white bg-opacity-10 rounded-xl p-6 text-center">
@@ -295,7 +272,6 @@ const UltimateContentShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Content Navigation */}
         <div className="flex justify-center items-center gap-4 mb-8">
           {featuredContent.map((_, index) => (
@@ -310,7 +286,6 @@ const UltimateContentShowcase2025 = () => {
             />
           ))}
         </div>
-
         {/* All Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredContent.map((content, index) => (
@@ -331,15 +306,12 @@ const UltimateContentShowcase2025 = () => {
                   </span>
                 )}
               </div>
-              
               <h4 className="text-lg font-bold mb-2 line-clamp-2">
                 {content.title}
               </h4>
-              
               <p className="text-sm opacity-75 mb-4 line-clamp-2">
                 {content.description}
               </p>
-
               <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold text-yellow-300">
                   {content.metrics.roi}
@@ -351,7 +323,6 @@ const UltimateContentShowcase2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <Link
@@ -374,5 +345,4 @@ const UltimateContentShowcase2025 = () => {
     </div>
   );
 };
-
 export default UltimateContentShowcase2025;

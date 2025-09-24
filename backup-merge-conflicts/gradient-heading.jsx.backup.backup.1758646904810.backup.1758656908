@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
-=======
 =======
 import {motion} from 'framer-motion';
 export function GradientHeading($1) {

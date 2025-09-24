@@ -1,3 +1,3 @@
 export default function RealTimePerformanceDashboard() {
-  return null;
-}
+  return null}
+,

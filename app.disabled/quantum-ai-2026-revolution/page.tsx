@@ -1,212 +1,202 @@
-import SEO from '../../components/SEO';
-import Link from 'next/link';
-
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {
-  title: 'Quantum AI 20o26 Revolution - The Future of Computing',
-  description:
-    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',
+  title: 'Quantum AI 20o26 Revolution - The Future of Computing';
+  description:,
+    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.';
   keywords: [
-    'quantum AI 20o26',
-    'quantum computing',
-    'neural interfaces',
-    'synthetic intelligence',
-    'AI revolution 20o26',
-  ],
+    'quantum AI 20o26';
+    'quantum computing';
+    'neural interfaces';
+    'synthetic intelligence';
+    'AI revolution 20o26';
+  ];
 };
-
 export default function QuantumAI20o26RevolutionPage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0'>
+    <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0'>,
       <SEO
-        title='Quantum AI 20o26 Revolution - The Future of Computing'
-        description='Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.'
-        keywords='quantum AI 20o26, quantum computing, neural interfaces, synthetic intelligence, AI revolution 20o26'
-        url='/quantum-ai-20o26-revolution'
-      />
-
+        title='Quantum AI 20o26 Revolution - The Future of Computing',
+        description='Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',
+        keywords='quantum AI 20o26, quantum computing, neural interfaces, synthetic intelligence, AI revolution 20o26',
+        url='/quantum-ai-20o26-revolution',
+      />,
       {/* Hero Section */}
-      <section className='py-20 px-4'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <div className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>
-            <span className='text-sm font-medium text-white'>
-              🔮 FUTURE TECHNOLOGY 20o26
-            </span>
-          </div>
-          <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-            Quantum AI 20o26 Revolution
-          </h1>
-          <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>
-            Experience the future of computing with quantum AI technologies.
-            Neural interfaces, synthetic intelligence, and quantum computing
-            that will transform every aspect of human life.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+      <section className='py-20 px-4'>,
+        <div className='max-w-6xl mx-auto text-center'>,
+          <div className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>,
+            <span className='text-sm font-medium text-white'>,
+              🔮 FUTURE TECHNOLOGY 20o26,
+            </span>,
+          </div>,
+          <h1 className='text-5xl md: text-7xl font-bold text-white mb-6'>,
+            Quantum AI 20o26 Revolution,
+          </h1>,
+          <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
+            Experience the future of computing with quantum AI technologies.,
+            Neural interfaces, synthetic intelligence, and quantum computing,
+            that will transform every aspect of human life.,
+          </p>,
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
             <Link
-              href='/contact'
-              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'
-            >
-              Explore the Future
-            </Link>
+              href='/contact',
+              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
+              Explore the Future,
+            </Link>,
             <Link
-              href='/quantum-ai-20o26-revolution/technology-preview'
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all'
-            >
-              Technology Preview
-            </Link>
-          </div>
-        </div>
-      </section>
-
+              href='/quantum-ai-20o26-revolution/technology-preview',
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all'>,
+              Technology Preview,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
       {/* Revolutionary Technologies */}
-      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Revolutionary Technologies
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-cyan-50o0/30'>
-              <div className='text-4xl mb-4'>⚛️</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Quantum Computing
-              </h3>
-              <p className='text-gray-30o0'>
-                Harness the power of quantum mechanics to solve complex problems
-                that are impossible for classical computers.
-              </p>
-            </div>
-            <div className='bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-purple-50o0/30'>
-              <div className='text-4xl mb-4'>🧠</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Neural Interfaces
-              </h3>
-              <p className='text-gray-30o0'>
-                Direct brain-computer interfaces that enable seamless
-                communication between human consciousness and AI systems.
-              </p>
-            </div>
-            <div className='bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-green-50o0/30'>
-              <div className='text-4xl mb-4'>🤖</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Synthetic Intelligence
-              </h3>
-              <p className='text-gray-30o0'>
-                Artificial consciousness that rivals human intelligence and
-                creativity, opening new possibilities for collaboration.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>,
+            Revolutionary Technologies,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
+            <div className='bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-cyan-50o0/30'>,
+              <div className='text-4xl mb-4'>⚛️</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Quantum Computing,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Harness the power of quantum mechanics to solve complex problems,
+                that are impossible for classical computers.,
+              </p>,
+            </div>,
+            <div className='bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-purple-50o0/30'>,
+              <div className='text-4xl mb-4'>🧠</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Neural Interfaces,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Direct brain-computer interfaces that enable seamless,
+                communication between human consciousness and AI systems.,
+              </p>,
+            </div>,
+            <div className='bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 backdrop-blur-sm p-8 rounded-xl border border-green-50o0/30'>,
+              <div className='text-4xl mb-4'>🤖</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Synthetic Intelligence,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Artificial consciousness that rivals human intelligence and,
+                creativity, opening new possibilities for collaboration.,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Impact Statistics */}
-      <section className='py-16 px-4'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <h2 className='text-4xl font-bold text-white mb-12'>
-            Projected Impact by 20o26
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            <div className='bg-gradient-to-br from-cyan-50o0 to-blue-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>10o00x</div>
-              <div className='text-cyan-10o0'>Computing Power</div>
-            </div>
-            <div className='bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>99.9%</div>
-              <div className='text-purple-10o0'>Problem Solving Accuracy</div>
-            </div>
-            <div className='bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>50M+</div>
-              <div className='text-green-10o0'>Jobs Created</div>
-            </div>
-            <div className='bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>$10T</div>
-              <div className='text-orange-10o0'>Economic Impact</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4'>,
+        <div className='max-w-6xl mx-auto text-center'>,
+          <h2 className='text-4xl font-bold text-white mb-12'>,
+            Projected Impact by 20o26,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
+            <div className='bg-gradient-to-br from-cyan-50o0 to-blue-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>10o00x</div>,
+              <div className='text-cyan-10o0'>Computing Power</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>99.9%</div>,
+              <div className='text-purple-10o0'>Problem Solving Accuracy</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>50M+</div>,
+              <div className='text-green-10o0'>Jobs Created</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>$10T</div>,
+              <div className='text-orange-10o0'>Economic Impact</div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Technology Roadmap */}
-      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Technology Roadmap
-          </h2>
-          <div className='space-y-8'>
-            <div className='flex items-center space-x-6'>
-              <div className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>
-                Q1
-              </div>
-              <div>
-                <h3 className='text-xl font-bold text-white'>
-                  Quantum Neural Networks
-                </h3>
-                <p className='text-gray-30o0'>
-                  First quantum-powered neural networks go live
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center space-x-6'>
-              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>
-                Q2
-              </div>
-              <div>
-                <h3 className='text-xl font-bold text-white'>
-                  Brain-Computer Interfaces
-                </h3>
-                <p className='text-gray-30o0'>
-                  Commercial neural interface devices launch
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center space-x-6'>
-              <div className='bg-gradient-to-r from-green-60o0 to-emerald-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>
-                Q3
-              </div>
-              <div>
-                <h3 className='text-xl font-bold text-white'>
-                  Synthetic Consciousness
-                </h3>
-                <p className='text-gray-30o0'>
-                  First synthetic intelligence achieves consciousness
-                </p>
-              </div>
-            </div>
-            <div className='flex items-center space-x-6'>
-              <div className='bg-gradient-to-r from-orange-60o0 to-red-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>
-                Q4
-              </div>
-              <div>
-                <h3 className='text-xl font-bold text-white'>
-                  Full Integration
-                </h3>
-                <p className='text-gray-30o0'>
-                  Complete quantum AI ecosystem deployment
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>,
+            Technology Roadmap,
+          </h2>,
+          <div className='space-y-8'>,
+            <div className='flex items-center space-x-6'>,
+              <div className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>,
+                Q1,
+              </div>,
+              <div>,
+                <h3 className='text-xl font-bold text-white'>,
+                  Quantum Neural Networks,
+                </h3>,
+                <p className='text-gray-30o0'>,
+                  First quantum-powered neural networks go live,
+                </p>,
+              </div>,
+            </div>,
+            <div className='flex items-center space-x-6'>,
+              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>,
+                Q2,
+              </div>,
+              <div>,
+                <h3 className='text-xl font-bold text-white'>,
+                  Brain-Computer Interfaces,
+                </h3>,
+                <p className='text-gray-30o0'>,
+                  Commercial neural interface devices launch,
+                </p>,
+              </div>,
+            </div>,
+            <div className='flex items-center space-x-6'>,
+              <div className='bg-gradient-to-r from-green-60o0 to-emerald-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>,
+                Q3,
+              </div>,
+              <div>,
+                <h3 className='text-xl font-bold text-white'>,
+                  Synthetic Consciousness,
+                </h3>,
+                <p className='text-gray-30o0'>,
+                  First synthetic intelligence achieves consciousness,
+                </p>,
+              </div>,
+            </div>,
+            <div className='flex items-center space-x-6'>,
+              <div className='bg-gradient-to-r from-orange-60o0 to-red-60o0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold'>,
+                Q4,
+              </div>,
+              <div>,
+                <h3 className='text-xl font-bold text-white'>,
+                  Full Integration,
+                </h3>,
+                <p className='text-gray-30o0'>,
+                  Complete quantum AI ecosystem deployment,
+                </p>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* CTA Section */}
-      <section className='py-20 px-4'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <h2 className='text-4xl font-bold text-white mb-6'>
-            Be Part of the Quantum AI Revolution
-          </h2>
-          <p className='text-xl text-gray-30o0 mb-8'>
-            Join the pioneers who are shaping the future of computing. Get early
-            access to quantum AI technologies and be at the forefront of
-            innovation.
-          </p>
+      <section className='py-20 px-4'>,
+        <div className='max-w-4xl mx-auto text-center'>,
+          <h2 className='text-4xl font-bold text-white mb-6'>,
+            Be Part of the Quantum AI Revolution,
+          </h2>,
+          <p className='text-xl text-gray-30o0 mb-8'>,
+            Join the pioneers who are shaping the future of computing. Get early,
+            access to quantum AI technologies and be at the forefront of,
+            innovation.,
+          </p>,
           <Link
-            href='/contact'
-            className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'
-          >
-            Join the Revolution
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
+            href='/contact',
+            className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
+            Join the Revolution,
+          </Link>,
+        </div>,
+      </section>,
+    </div>),
 }
+,

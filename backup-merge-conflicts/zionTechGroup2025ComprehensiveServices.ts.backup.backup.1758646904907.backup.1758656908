@@ -1,11 +1,6 @@
 =======
-<<<<<<< HEAD
-export: interface ZionService {
-<<<<<<< HEAD
-=======
 =======
 "export": interface ZionService {
->>>>>>> main
    id: string;
    title: string;
    description: string;

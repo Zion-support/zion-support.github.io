@@ -1,15 +1,7 @@
 export: const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState ("dark") const [isParticleMode,setIsParticleMode] = useState (enableParticles) const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") useEffect ( () => { """;"";"""
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/UIEnhancer.jsx
-import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
-=======
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
 =======
-<<<<<<< HEAD
-=======
 =======
 import React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';''}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/UIEnhancer.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

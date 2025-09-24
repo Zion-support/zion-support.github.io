@@ -1,14 +1,8 @@
 =======
 "import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
-<<<<<<< HEAD:backup-merge-conflicts/NewServicesShowcase.jsx.backup
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 =======
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
 =======
-'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
->>>>>>> pr-11935
-=======
 =======
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/home/NewServicesShowcase.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

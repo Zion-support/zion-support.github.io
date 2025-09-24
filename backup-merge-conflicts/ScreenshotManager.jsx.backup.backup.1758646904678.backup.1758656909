@@ -1,12 +1,9 @@
-
 =======
 import React, {useState, useRef} from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from 'lucide-react';
 import {toast} from "sonner";
-<<<<<<< HEAD
-=======
 export const ScreenshotManager = (props) => {
     const [screenshots, setScreenshots] = useState([]);
     const [isDragging, setIsDragging] = useState(false);

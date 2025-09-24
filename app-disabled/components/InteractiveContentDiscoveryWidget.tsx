@@ -1,1 +1,1 @@
-export { default } from '../../components/InteractiveContentDiscoveryWidget';
+export { default } from '../../components/InteractiveContentDiscoveryWidget',

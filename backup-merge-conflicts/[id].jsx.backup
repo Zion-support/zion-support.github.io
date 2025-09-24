@@ -1,15 +1,7 @@
 const React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() { return; }; return null} )}""
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/src/pages.disabled/talent/[id].jsx
-import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
-=======
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
 =======
-<<<<<<< HEAD
-=======
 =======
 import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() {}; return null} )}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/pages.disabled/talent/[id].jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

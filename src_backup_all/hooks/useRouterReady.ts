@@ -1,9 +1,7 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react',
 export function useRouterReady() {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(false),
   useEffect(() => {
-    setReady(true);
-  }, []);
-  return ready;
-}
+    setReady(true)}, []),
+  return ready}
+,

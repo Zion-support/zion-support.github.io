@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react',
 export default function CapitalAlias() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/fundraising');
-  }, [router]);
-  return null;
-}
+    router.replace('/fundraising')}, [router]),
+  return null}
+,

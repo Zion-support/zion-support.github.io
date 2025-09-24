@@ -1,76 +1,67 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group',
-  description:
-    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.',
+  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group';
+  description:,
+    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.';
   keywords: [
-    'multimodal agents',
-    'enterprise ai',
-    'ai agents',
-    'governance',
-    'roi',
-  ],
+    'multimodal agents';
+    'enterprise ai';
+    'ai agents';
+    'governance';
+    'roi';
+  ];
 };
-
 const MultimodalAgentsBlueprintPage = () => {
   return (
-    <div className='min-h-screen bg-white'>
+    <div className='min-h-screen bg-white'>,
       <SEO
-        title='AI 20o26: Multimodal Agents Enterprise Blueprint'
-        description='Blueprint to design and scale multimodal agents with measurable ROI and strong governance.'
-        keywords='multimodal agents, enterprise ai, ai agents, governance, roi'
-        url='/blog/ai-20o26-multimodal-agents-enterprise-blueprint'
-      />
-
-      <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h1 className='text-4xl md:text-5xl font-bold mb-6'>
-            AI 20o26: Multimodal Agents Enterprise Blueprint
-          </h1>
-          <p className='text-xl opacity-90'>
-            Design patterns, reference architectures, and adoption roadmap.
-          </p>
-        </div>
-      </section>
-
-      <section className='py-16 bg-white'>
-        <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='prose prose-lg max-w-none'>
-            <h2>Executive Summary</h2>
-            <p>
-              Multimodal agents unify text, vision, and structured data
-              capabilities to unlock new automation frontiers. This guide
-              outlines architecture building blocks, evaluation strategies, and
-              a pragmatic rollout plan for enterprises.
-            </p>
-            <h3>What You Will Learn</h3>
-            <ul>
-              <li>Reference architecture and isolation domains</li>
-              <li>Evaluation harnesses and safety gates</li>
-              <li>ROI modeling and ongoing observability</li>
-            </ul>
-          </div>
-
-          <div className='mt-10 flex flex-col sm:flex-row gap-4'>
+        title='AI 20o26: Multimodal Agents Enterprise Blueprint',
+        description='Blueprint to design and scale multimodal agents with measurable ROI and strong governance.',
+        keywords='multimodal agents, enterprise ai, ai agents, governance, roi',
+        url='/blog/ai-20o26-multimodal-agents-enterprise-blueprint',
+      />,
+      <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
+          <h1 className='text-4xl md:text-5xl font-bold mb-6'>,
+            AI 20o26: Multimodal Agents Enterprise Blueprint,
+          </h1>,
+          <p className='text-xl opacity-90'>,
+            Design patterns, reference architectures, and adoption roadmap.,
+          </p>,
+        </div>,
+      </section>,
+      <section className='py-16 bg-white'>,
+        <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <div className='prose prose-lg max-w-none'>,
+            <h2>Executive Summary</h2>,
+            <p>,
+              Multimodal agents unify text, vision, and structured data,
+              capabilities to unlock new automation frontiers. This guide,
+              outlines architecture building blocks, evaluation strategies, and,
+              a pragmatic rollout plan for enterprises.,
+            </p>,
+            <h3>What You Will Learn</h3>,
+            <ul>,
+              <li>Reference architecture and isolation domains</li>,
+              <li>Evaluation harnesses and safety gates</li>,
+              <li>ROI modeling and ongoing observability</li>,
+            </ul>,
+          </div>,
+          <div className='mt-10 flex flex-col sm: flex-row gap-4'>,
             <Link
-              href='/resources/ai-20o26-enterprise-multimodal-agents-blueprint'
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
-            >
-              Download Full Blueprint
-            </Link>
+              href='/resources/ai-20o26-enterprise-multimodal-agents-blueprint',
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
+              Download Full Blueprint,
+            </Link>,
             <Link
-              href='/blog/ai-20o26-agent-observability-blueprint'
-              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
-            >
-              Agent Observability
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+              href='/blog/ai-20o26-agent-observability-blueprint',
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
+              Agent Observability,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
+    </div>),
 };
-
 export default MultimodalAgentsBlueprintPage;

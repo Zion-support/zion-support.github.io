@@ -1,5 +1,4 @@
-'use client';
-
+'use client',
 export default function AdvancedAnalyticsEngine() {
-  return null;
-}
+  return null}
+,

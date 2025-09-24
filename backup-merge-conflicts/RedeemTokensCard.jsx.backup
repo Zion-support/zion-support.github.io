@@ -1,15 +1,7 @@
 const React,{ useState } from "react"; import { useWallet } from "@/hooks/useWallet"; export default function Page() {; from "@/components/ui/card";"; import { Button } from "@/components/ui/button";"; import { Gift,ArrowRight,ExternalLink } from "lucide-react";"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from "@/components/ui/dialog"; </Card>)} ";'"'"
 import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/src/components/wallet/RedeemTokensCard.jsx
-import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
-=======
 import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
 import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
 =======
-<<<<<<< HEAD
-=======
 =======
 import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/wallet/RedeemTokensCard.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

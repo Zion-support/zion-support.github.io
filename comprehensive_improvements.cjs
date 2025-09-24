@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 /**
  * Comprehensive Improvements Script
  * 
@@ -10,16 +9,12 @@
  * 4. Optimizes the codebase
  * 5. Updates configurations
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 console.log('🚀 Starting comprehensive improvements...');
-
 // 1. Clean up backup and corrupted files
 console.log('🧹 Cleaning up backup and corrupted files...');
-
 const cleanupPatterns = [
     '**/*.backup.*',
     '**/*.cleanup-backup.*',
@@ -35,24 +30,19 @@ const cleanupPatterns = [
     '*.disabled.*',
     '*.corrupted*'
 ];
-
 // Function to recursively find and remove files matching patterns
 function cleanupFiles(dir, patterns) {
     if (!fs.existsSync(dir)) return;
-    
     const items = fs.readdirSync(dir);
-    
     for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory()) {
             // Check if directory name matches cleanup patterns
             const shouldCleanup = patterns.some(pattern => {
                 const regex = new RegExp(pattern.replace(/\*\*/g, '.*').replace(/\*/g, '[^/]*'));
                 return regex.test(item);
             });
-            
             if (shouldCleanup) {
                 console.log(`  🗑️  Removing directory: ${fullPath}`);
                 try {
@@ -69,7 +59,6 @@ function cleanupFiles(dir, patterns) {
                 const regex = new RegExp(pattern.replace(/\*\*/g, '.*').replace(/\*/g, '[^/]*'));
                 return regex.test(item);
             });
-            
             if (shouldCleanup) {
                 console.log(`  🗑️  Removing file: ${fullPath}`);
                 try {
@@ -81,35 +70,21 @@ function cleanupFiles(dir, patterns) {
         }
     }
 }
-
 // Clean up files
 cleanupFiles('.', cleanupPatterns);
-
 // 2. Fix merge conflict markers in remaining files
 console.log('🔧 Fixing merge conflict markers...');
-
 function fixMergeConflicts(dir) {
     if (!fs.existsSync(dir)) return;
-    
     const items = fs.readdirSync(dir);
-    
     for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
             fixMergeConflicts(fullPath);
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx'))) {
             try {
                 let content = fs.readFileSync(fullPath, 'utf8');
-                
-                if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-                    console.log(`  🔧 Fixing merge conflicts in: ${fullPath}`);
-                    
-                    // Simple conflict resolution: keep the first part (HEAD)
-                    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-                    content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-                    
                     fs.writeFileSync(fullPath, content);
                 }
             } catch (error) {
@@ -118,12 +93,9 @@ function fixMergeConflicts(dir) {
         }
     }
 }
-
 fixMergeConflicts('.');
-
 // 3. Fix specific files with known issues
 console.log('🔧 Fixing specific file issues...');
-
 // Fix UserProvider.tsx unused variable
 const userProviderPath = 'providers/UserProvider.tsx';
 if (fs.existsSync(userProviderPath)) {
@@ -132,14 +104,11 @@ if (fs.existsSync(userProviderPath)) {
     fs.writeFileSync(userProviderPath, content);
     console.log('  ✅ Fixed UserProvider.tsx unused variable');
 }
-
 // 4. Update package.json scripts
 console.log('📦 Updating package.json scripts...');
-
 const packageJsonPath = 'package.json';
 if (fs.existsSync(packageJsonPath)) {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    
     // Add useful scripts
     packageJson.scripts = {
         ...packageJson.scripts,
@@ -149,14 +118,11 @@ if (fs.existsSync(packageJsonPath)) {
         'format': 'prettier --write .',
         'test:coverage': 'jest --coverage'
     };
-    
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     console.log('  ✅ Updated package.json scripts');
 }
-
 // 5. Create .eslintignore to exclude problematic files
 console.log('📝 Creating .eslintignore...');
-
 const eslintIgnoreContent = `# Exclude problematic directories and files
 pages_backup/
 pages.broken/
@@ -175,10 +141,8 @@ build/
 *.min.js
 *.min.css
 `;
-
 fs.writeFileSync('.eslintignore', eslintIgnoreContent);
 console.log('  ✅ Created .eslintignore');
-
 // 6. Run lint fix
 console.log('🔧 Running ESLint fix...');
 try {
@@ -187,7 +151,6 @@ try {
 } catch (error) {
     console.log('  ⚠️  ESLint fix had some issues, but continuing...');
 }
-
 // 7. Clean up temporary files
 console.log('🧹 Cleaning up temporary files...');
 try {
@@ -196,7 +159,6 @@ try {
 } catch (error) {
     console.log('  ⚠️  Clean command had issues, but continuing...');
 }
-
 console.log('🎉 Comprehensive improvements completed!');
 console.log('');
 console.log('Summary of improvements:');

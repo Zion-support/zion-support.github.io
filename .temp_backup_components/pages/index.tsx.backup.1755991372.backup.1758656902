@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function HomePage() {
-  return <div>Welcome to Zion App</div>;
-}
-=======
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
 export default function HomePage() {
   const [report, setReport] = useState<{ runAt: string; successCount: number; total: number } | null>(null);
   useEffect(() => {
@@ -15,7 +7,6 @@ export default function HomePage() {
       if (r.ok) setReport(await r.json());
     }).catch(()=>{});
   }, []);
-
   return (
     <div className="relative">
       {/* Futuristic animated background */}
@@ -26,7 +17,6 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(transparent,rgba(0,0,0,0.4))]" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><defs><pattern id=\'grid\' width=\'80\' height=\'80\' patternUnits=\'userSpaceOnUse\'><path d=\'M 80 0 L 0 0 0 80\' fill=\'none\' stroke=\'rgba(255,255,255,0.06)\' stroke-width=\'1\'/></pattern></defs><rect width=\'100%\' height=\'100%\' fill=\'url(%23grid)\'/></svg>')] opacity-40" />
       </div>
-
       {/* Hero */}
       <section className="relative mx-auto max-w-7xl px-4 pt-16 sm:pt-20">
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl dark:bg-black/40">
@@ -55,7 +45,6 @@ export default function HomePage() {
           <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 animate-spin-slow rounded-full bg-[conic-gradient(from_90deg_at_50%_50%,rgba(59,130,246,0.3),rgba(236,72,153,0.3),rgba(34,197,94,0.3),rgba(59,130,246,0.3))] blur-2xl" />
         </div>
       </section>
-
       {/* Feature grid */}
       <section className="mx-auto max-w-7xl px-4 py-12">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -100,7 +89,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
       {/* Capabilities */}
       <section className="mx-auto max-w-7xl px-4 pb-16">
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
@@ -126,7 +114,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <style jsx global>{`
         .animate-pulse-slow { animation: pulseSlow 8s ease-in-out infinite; }
         .animate-pulse-slower { animation: pulseSlower 12s ease-in-out infinite; }
@@ -138,4 +125,3 @@ export default function HomePage() {
     </div>
   );
 }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

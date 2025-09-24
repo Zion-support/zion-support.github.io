@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { useEffect } from 'react',
+import { useRouter } from 'next/router',
 export default function AICustomerServiceRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/customer-service-ai');
-  }, [router]);
-  return null;
-}
+    router.replace('/customer-service-ai')}, [router]),
+  return null}
+,

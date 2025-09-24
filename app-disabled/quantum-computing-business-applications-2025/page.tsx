@@ -1,359 +1,347 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Quantum Computing Business Applications 20o25: Ultimate Guide',
-  description:
-    'Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.',
+  title: 'Quantum Computing Business Applications 20o25: Ultimate Guide';
+  description:,
+    'Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.';
   keywords: [
-    'quantum computing',
-    'business applications',
-    '20o25',
-    'technology innovation',
-    'digital transformation',
-  ],
+    'quantum computing';
+    'business applications';
+    '20o25';
+    'technology innovation';
+    'digital transformation';
+  ];
 };
-
 export default function QuantumComputingBusinessPage() {
   return (
-    <div>
+    <div>,
       <SEO
-        title='Quantum Computing Business Applications 20o25: Ultimate Guide'
-        description='Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.'
-        keywords='quantum computing, business applications, 20o25, technology innovation, digital transformation'
-        url='/quantum-computing-business-applications-20o25'
-      />
-
-      <div className='min-h-screen bg-white'>
+        title='Quantum Computing Business Applications 20o25: Ultimate Guide',
+        description='Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.',
+        keywords='quantum computing, business applications, 20o25, technology innovation, digital transformation',
+        url='/quantum-computing-business-applications-20o25',
+      />,
+      <div className='min-h-screen bg-white'>,
         {/* Hero Section */}
-        <section className='bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-blue-60o0 text-white py-20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center'>
-              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-                <span className='text-sm font-medium'>
-                  ⚛️ QUANTUM COMPUTING
-                </span>
-              </div>
-              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
-                Quantum Computing Business Applications 20o25
-              </h1>
-              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
-                Ultimate Guide to Revolutionary Business Solutions
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-blue-60o0 text-white py-20'>,
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='text-center'>,
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>,
+                <span className='text-sm font-medium'>,
+                  ⚛️ QUANTUM COMPUTING,
+                </span>,
+              </div>,
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>,
+                Quantum Computing Business Applications 20o25,
+              </h1>,
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
+                Ultimate Guide to Revolutionary Business Solutions,
+              </p>,
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
                 <Link
-                  href='#applications'
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
-                >
-                  Explore Applications
-                </Link>
+                  href='#applications',
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
+                  Explore Applications,
+                </Link>,
                 <Link
-                  href='/contact'
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
-                >
-                  Get Expert Consultation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+                  href='/contact',
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
+                  Get Expert Consultation,
+                </Link>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Key Statistics */}
-        <section className='py-16 bg-gray-50'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-purple-60o0 mb-2'>
-                  $65.5B
-                </div>
-                <div className='text-gray-60o0'>Market by 20o30</div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-blue-60o0 mb-2'>
-                  10o00x
-                </div>
-                <div className='text-gray-60o0'>Speed Improvement</div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-green-60o0 mb-2'>
-                  45%
-                </div>
-                <div className='text-gray-60o0'>Fortune 50o0 Adoption</div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-orange-60o0 mb-2'>
-                  340%
-                </div>
-                <div className='text-gray-60o0'>Investment Growth</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className='py-16 bg-gray-50'>,
+          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-purple-60o0 mb-2'>,
+                  $65.5B,
+                </div>,
+                <div className='text-gray-60o0'>Market by 20o30</div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-blue-60o0 mb-2'>,
+                  10o00x,
+                </div>,
+                <div className='text-gray-60o0'>Speed Improvement</div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-green-60o0 mb-2'>,
+                  45%,
+                </div>,
+                <div className='text-gray-60o0'>Fortune 50o0 Adoption</div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-orange-60o0 mb-2'>,
+                  340%,
+                </div>,
+                <div className='text-gray-60o0'>Investment Growth</div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Core Applications */}
-        <section id='applications' className='py-16'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
-              Core Business Applications
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>💰</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Financial Services
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Portfolio optimization, risk assessment, fraud detection, and
-                  algorithmic trading with quantum-enhanced speed.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> 40% better returns, 3-minute
-                  optimization
-                </div>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>🚚</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Supply Chain
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Multi-vehicle routing, dynamic rebalancing, inventory
-                  management, and sustainability optimization.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> 25% delivery time reduction, 30% fuel
-                  savings
-                </div>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>💊</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Drug Discovery
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Molecular simulation, protein folding, drug design, and
-                  personalized medicine development.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> 7-year time reduction, 5 new drug
-                  candidates
-                </div>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>🔒</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Cybersecurity
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Post-quantum cryptography, quantum key distribution, threat
-                  detection, and identity verification.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> Unbreakable encryption, enhanced
-                  security
-                </div>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>🤖</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  AI & Machine Learning
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Quantum neural networks, optimization problems, feature
-                  selection, and accelerated model training.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> 10o00x speedup, 50% accuracy
-                  improvement
-                </div>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>⚡</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Energy & Utilities
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Grid optimization, renewable energy, carbon capture, and
-                  energy trading strategies.
-                </p>
-                <div className='text-sm text-gray-50o0'>
-                  <strong>Impact:</strong> Optimized energy distribution,
-                  reduced costs
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section id='applications' className='py-16'>,
+          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
+              Core Business Applications,
+            </h2>,
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>💰</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Financial Services,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Portfolio optimization, risk assessment, fraud detection, and,
+                  algorithmic trading with quantum-enhanced speed.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> 40% better returns, 3-minute,
+                  optimization,
+                </div>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>🚚</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Supply Chain,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Multi-vehicle routing, dynamic rebalancing, inventory,
+                  management, and sustainability optimization.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> 25% delivery time reduction, 30% fuel,
+                  savings,
+                </div>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>💊</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Drug Discovery,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Molecular simulation, protein folding, drug design, and,
+                  personalized medicine development.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> 7-year time reduction, 5 new drug,
+                  candidates,
+                </div>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>🔒</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Cybersecurity,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Post-quantum cryptography, quantum key distribution, threat,
+                  detection, and identity verification.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> Unbreakable encryption, enhanced,
+                  security,
+                </div>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>🤖</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  AI & Machine Learning,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Quantum neural networks, optimization problems, feature,
+                  selection, and accelerated model training.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> 10o00x speedup, 50% accuracy,
+                  improvement,
+                </div>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>⚡</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Energy & Utilities,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Grid optimization, renewable energy, carbon capture, and,
+                  energy trading strategies.,
+                </p>,
+                <div className='text-sm text-gray-50o0'>,
+                  <strong>Impact:</strong> Optimized energy distribution;
+                  reduced costs,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Implementation Strategy */}
-        <section className='py-16 bg-gray-50'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
-              Implementation Strategy
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>📊</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Phase 1: Assessment
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Identify quantum-suitable problems, evaluate technology
-                  platforms, and assess organizational readiness.
-                </p>
-                <ul className='text-sm text-gray-60o0 space-y-2'>
-                  <li>• Problem identification</li>
-                  <li>• Technology evaluation</li>
-                  <li>• ROI assessment</li>
-                  <li>• Risk analysis</li>
-                </ul>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>🚀</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Phase 2: Pilot
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Start with proof of concept projects to demonstrate value and
-                  build expertise.
-                </p>
-                <ul className='text-sm text-gray-60o0 space-y-2'>
-                  <li>• Small-scale testing</li>
-                  <li>• Performance benchmarking</li>
-                  <li>• Integration testing</li>
-                  <li>• User training</li>
-                </ul>
-              </div>
-              <div className='bg-white p-8 rounded-xl shadow-lg'>
-                <div className='text-4xl mb-4'>⚡</div>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Phase 3: Scale
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Deploy quantum solutions across the organization with full
-                  infrastructure support.
-                </p>
-                <ul className='text-sm text-gray-60o0 space-y-2'>
-                  <li>• Infrastructure deployment</li>
-                  <li>• Software development</li>
-                  <li>• Team building</li>
-                  <li>• Process redesign</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className='py-16 bg-gray-50'>,
+          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
+              Implementation Strategy,
+            </h2>,
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>📊</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Phase 1: Assessment,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Identify quantum-suitable problems, evaluate technology,
+                  platforms, and assess organizational readiness.,
+                </p>,
+                <ul className='text-sm text-gray-60o0 space-y-2'>,
+                  <li>• Problem identification</li>,
+                  <li>• Technology evaluation</li>,
+                  <li>• ROI assessment</li>,
+                  <li>• Risk analysis</li>,
+                </ul>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>🚀</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Phase 2: Pilot,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Start with proof of concept projects to demonstrate value and,
+                  build expertise.,
+                </p>,
+                <ul className='text-sm text-gray-60o0 space-y-2'>,
+                  <li>• Small-scale testing</li>,
+                  <li>• Performance benchmarking</li>,
+                  <li>• Integration testing</li>,
+                  <li>• User training</li>,
+                </ul>,
+              </div>,
+              <div className='bg-white p-8 rounded-xl shadow-lg'>,
+                <div className='text-4xl mb-4'>⚡</div>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Phase 3: Scale,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Deploy quantum solutions across the organization with full,
+                  infrastructure support.,
+                </p>,
+                <ul className='text-sm text-gray-60o0 space-y-2'>,
+                  <li>• Infrastructure deployment</li>,
+                  <li>• Software development</li>,
+                  <li>• Team building</li>,
+                  <li>• Process redesign</li>,
+                </ul>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Success Stories */}
-        <section className='py-16'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
-              Industry Success Stories
-            </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl'>
-                <div className='flex items-center mb-4'>
-                  <div className='text-3xl mr-4'>🏦</div>
-                  <div>
-                    <h3 className='text-xl font-bold text-gray-90o0'>
-                      JPMorgan Chase
-                    </h3>
-                    <p className='text-gray-60o0'>Financial Services</p>
-                  </div>
-                </div>
-                <p className='text-gray-70o0 mb-4'>
-                  Reduced portfolio optimization time from 3 hours to 3 minutes
-                  using quantum algorithms, achieving 40% better risk-adjusted
-                  returns.
-                </p>
-                <div className='text-sm text-gray-60o0'>
-                  <strong>Technology:</strong> Quantum portfolio optimization
-                  algorithms
-                </div>
-              </div>
-              <div className='bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl'>
-                <div className='flex items-center mb-4'>
-                  <div className='text-3xl mr-4'>📦</div>
-                  <div>
-                    <h3 className='text-xl font-bold text-gray-90o0'>Amazon</h3>
-                    <p className='text-gray-60o0'>E-commerce & Logistics</p>
-                  </div>
-                </div>
-                <p className='text-gray-70o0 mb-4'>
-                  Achieved 25% reduction in delivery times and 30% fuel savings
-                  through quantum route optimization for their massive logistics
-                  network.
-                </p>
-                <div className='text-sm text-gray-60o0'>
-                  <strong>Technology:</strong> Quantum logistics optimization
-                </div>
-              </div>
-              <div className='bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl'>
-                <div className='flex items-center mb-4'>
-                  <div className='text-3xl mr-4'>💊</div>
-                  <div>
-                    <h3 className='text-xl font-bold text-gray-90o0'>Pfizer</h3>
-                    <p className='text-gray-60o0'>Pharmaceuticals</p>
-                  </div>
-                </div>
-                <p className='text-gray-70o0 mb-4'>
-                  Reduced drug discovery time from 10 years to 3 years using
-                  quantum molecular simulation, identifying 5 new drug
-                  candidates.
-                </p>
-                <div className='text-sm text-gray-60o0'>
-                  <strong>Technology:</strong> Quantum molecular simulation
-                </div>
-              </div>
-              <div className='bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl'>
-                <div className='flex items-center mb-4'>
-                  <div className='text-3xl mr-4'>🔍</div>
-                  <div>
-                    <h3 className='text-xl font-bold text-gray-90o0'>Google</h3>
-                    <p className='text-gray-60o0'>Technology</p>
-                  </div>
-                </div>
-                <p className='text-gray-70o0 mb-4'>
-                  Achieved 10o00x speedup in certain machine learning tasks and
-                  50% improvement in model accuracy using quantum machine
-                  learning algorithms.
-                </p>
-                <div className='text-sm text-gray-60o0'>
-                  <strong>Technology:</strong> Quantum machine learning
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className='py-16'>,
+          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
+              Industry Success Stories,
+            </h2>,
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
+              <div className='bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl'>,
+                <div className='flex items-center mb-4'>,
+                  <div className='text-3xl mr-4'>🏦</div>,
+                  <div>,
+                    <h3 className='text-xl font-bold text-gray-90o0'>,
+                      JPMorgan Chase,
+                    </h3>,
+                    <p className='text-gray-60o0'>Financial Services</p>,
+                  </div>,
+                </div>,
+                <p className='text-gray-70o0 mb-4'>,
+                  Reduced portfolio optimization time from 3 hours to 3 minutes,
+                  using quantum algorithms, achieving 40% better risk-adjusted,
+                  returns.,
+                </p>,
+                <div className='text-sm text-gray-60o0'>,
+                  <strong>Technology: </strong> Quantum portfolio optimization,
+                  algorithms,
+                </div>,
+              </div>,
+              <div className='bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl'>,
+                <div className='flex items-center mb-4'>,
+                  <div className='text-3xl mr-4'>📦</div>,
+                  <div>,
+                    <h3 className='text-xl font-bold text-gray-90o0'>Amazon</h3>,
+                    <p className='text-gray-60o0'>E-commerce & Logistics</p>,
+                  </div>,
+                </div>,
+                <p className='text-gray-70o0 mb-4'>,
+                  Achieved 25% reduction in delivery times and 30% fuel savings,
+                  through quantum route optimization for their massive logistics,
+                  network.,
+                </p>,
+                <div className='text-sm text-gray-60o0'>,
+                  <strong>Technology:</strong> Quantum logistics optimization,
+                </div>,
+              </div>,
+              <div className='bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl'>,
+                <div className='flex items-center mb-4'>,
+                  <div className='text-3xl mr-4'>💊</div>,
+                  <div>,
+                    <h3 className='text-xl font-bold text-gray-90o0'>Pfizer</h3>,
+                    <p className='text-gray-60o0'>Pharmaceuticals</p>,
+                  </div>,
+                </div>,
+                <p className='text-gray-70o0 mb-4'>,
+                  Reduced drug discovery time from 10 years to 3 years using,
+                  quantum molecular simulation, identifying 5 new drug,
+                  candidates.,
+                </p>,
+                <div className='text-sm text-gray-60o0'>,
+                  <strong>Technology: </strong> Quantum molecular simulation,
+                </div>,
+              </div>,
+              <div className='bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl'>,
+                <div className='flex items-center mb-4'>,
+                  <div className='text-3xl mr-4'>🔍</div>,
+                  <div>,
+                    <h3 className='text-xl font-bold text-gray-90o0'>Google</h3>,
+                    <p className='text-gray-60o0'>Technology</p>,
+                  </div>,
+                </div>,
+                <p className='text-gray-70o0 mb-4'>,
+                  Achieved 10o00x speedup in certain machine learning tasks and,
+                  50% improvement in model accuracy using quantum machine,
+                  learning algorithms.,
+                </p>,
+                <div className='text-sm text-gray-60o0'>,
+                  <strong>Technology:</strong> Quantum machine learning,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Call to Action */}
-        <section className='py-16 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl font-bold mb-6'>
-              Ready to Harness Quantum Computing?
-            </h2>
-            <p className='text-xl mb-8 opacity-90'>
-              Join the organizations already leveraging quantum computing to
-              gain unprecedented competitive advantages and drive innovation in
-              their industries.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='py-16 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white'>,
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
+            <h2 className='text-3xl font-bold mb-6'>,
+              Ready to Harness Quantum Computing?,
+            </h2>,
+            <p className='text-xl mb-8 opacity-90'>,
+              Join the organizations already leveraging quantum computing to,
+              gain unprecedented competitive advantages and drive innovation in,
+              their industries.,
+            </p>,
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
               <Link
-                href='/contact'
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
-              >
-                Get Expert Consultation
-              </Link>
+                href='/contact',
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
+                Get Expert Consultation,
+              </Link>,
               <Link
-                href='/services'
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  );
+                href='/services',
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
+                Explore Our Services,
+              </Link>,
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </div>),
 }
+,

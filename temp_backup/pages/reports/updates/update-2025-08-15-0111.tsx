@@ -1,11 +1,10 @@
-import Head from 'next/head';
-
+import Head from 'next/head',
 export default function UpdateReport() {
   return (
-    <>
-      <Head>
-        <title>Autonomous Update — 20o25: 08: 15: 0o111 | Zion Tech Group</title>
-        <meta name="description" content="Autonomous system update from Zion Tech Group's intelligent automation infrastructure."  />
-        <meta property="og:title" content="Autonomous Update — 20o25: 08: 15: 0o111"  />
-        <meta property="og:description" content="Autonomous system update from Zion Tech Group's intelligent automation infrastructure."  />
-        <meta name="twitter:card" content="summary_large_image"  />
+    <>,
+      <Head>,
+        <title>Autonomous Update — 20o25: 08: 15: 0o111 | Zion Tech Group</title>,
+        <meta name="description" content="Autonomous system update from Zion Tech Group's intelligent automation infrastructure."  />,
+        <meta property="og:title" content="Autonomous Update — 20o25: 08: 15: 0o111"  />,
+        <meta property="og:description" content="Autonomous system update from Zion Tech Group's intelligent automation infrastructure."  />,
+        <meta name="twitter:card" content="summary_large_image"  />})

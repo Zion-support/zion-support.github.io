@@ -1,12 +1,3 @@
-<<<<<<< HEAD:components.disabled/SEOEnhancer.dynamic.jsx
-const SEOEnhancer = dynamic(() => import(\"./SEOEnhancer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOEnhancer\' ,
-=======
 =======
 const SEOEnhancer = dynamic(() => import("./SEOEnhancer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOEnhancer' ,'
 </p>'
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

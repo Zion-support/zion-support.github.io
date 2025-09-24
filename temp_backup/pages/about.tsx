@@ -1,156 +1,143 @@
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import {
-  Mail,
-  Phone,
-  MapPin,
-  ShieldCheck,
-  Rocket,
-  Sparkles,
-  Globe,
-  Cpu,
-  Brain,
-} from 'lucide-react';
-
+  Mail;
+  Phone;
+  MapPin;
+  ShieldCheck;
+  Rocket;
+  Sparkles;
+  Globe;
+  Cpu;
+  Brain;
+} from 'lucide-react',
 export default function AboutPage() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 10o08 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-
   const pillars = [
     {
-      title: 'AI-first Engineering',
-      icon: <Brain className='w-6 h-6' />,
-      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.',
-    },
+      title: 'AI-first Engineering';
+      icon: <Brain className='w-6 h-6' />;
+      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.';
+    };
     {
-      title: 'Platform and SRE',
-      icon: <ShieldCheck className='w-6 h-6' />,
-      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.',
-    },
+      title: 'Platform and SRE';
+      icon: <ShieldCheck className='w-6 h-6' />;
+      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.';
+    };
     {
-      title: 'Quantum R&D',
-      icon: <Cpu className='w-6 h-6' />,
-      desc: 'Exploratory quantum workloads with pragmatic business outcomes.',
-    },
+      title: 'Quantum R&D';
+      icon: <Cpu className='w-6 h-6' />;
+      desc: 'Exploratory quantum workloads with pragmatic business outcomes.';
+    };
     {
-      title: 'Global Delivery',
-      icon: <Globe className='w-6 h-6' />,
-      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.',
-    },
-  ];
-
+      title: 'Global Delivery';
+      icon: <Globe className='w-6 h-6' />;
+      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.';
+    };
+  ],
   return (
-    <UltraFuturisticBackground variant='holographic' intensity='high'>
-      <Head>
-        <title>About Us - Zion Tech Group</title>
+    <UltraFuturisticBackground variant='holographic' intensity='high'>,
+      <Head>,
+        <title>About Us - Zion Tech Group</title>,
         <meta
-          name='description'
-          content='Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.'
-        />
-      </Head>
-      <section className='relative py-24 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-14'>
-            <h1 className='text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-blue-40o0 bg-clip-text text-transparent'>
-              We build practical AI and platform solutions
-            </h1>
-            <p className='mt-4 text-gray-30o0 max-w-3xl mx-auto'>
-              From micro SaaS accelerators to enterprise AI services, we focus
-              on measurable outcomes: faster delivery, higher reliability, and
-              lower cost.
-            </p>
-          </div>
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
-            <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>
-              <div className='flex items-center gap-3 mb-4'>
-                <Rocket className='w-6 h-6 text-cyan-40o0' />
-                <h2 className='text-2xl font-bold text-white'>Our Mission</h2>
-              </div>
-              <p className='text-gray-30o0'>
-                Deliver future-grade capabilities with present-day ROI. We
-                productize repeatable outcomes so you start fast and scale
-                predictably.
-              </p>
-            </Card>
-            <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>
-              <div className='flex items-center gap-3 mb-4'>
-                <Sparkles className='w-6 h-6 text-purple-40o0' />
-                <h2 className='text-2xl font-bold text-white'>How We Work</h2>
-              </div>
-              <ul className='list-disc list-inside text-gray-30o0 space-y-2'>
-                <li>Productized service tiers with clear SLAs</li>
-                <li>Security, compliance, and FinOps baked in</li>
-                <li>Build-operate-transfer options for in-house teams</li>
-                <li>Transparent pricing and usage-based add-ons</li>
-              </ul>
-            </Card>
-          </div>
-
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-16'>
+          name='description',
+          content='Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.',
+        />,
+      </Head>,
+      <section className='relative py-24 px-4'>,
+        <div className='max-w-6xl mx-auto'>,
+          <div className='text-center mb-14'>,
+            <h1 className='text-4xl md: text-6xl font-extrabold bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-blue-40o0 bg-clip-text text-transparent'>,
+              We build practical AI and platform solutions,
+            </h1>,
+            <p className='mt-4 text-gray-30o0 max-w-3xl mx-auto'>,
+              From micro SaaS accelerators to enterprise AI services, we focus,
+              on measurable outcomes: faster delivery, higher reliability, and,
+              lower cost.,
+            </p>,
+          </div>,
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mb-12'>,
+            <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>,
+              <div className='flex items-center gap-3 mb-4'>,
+                <Rocket className='w-6 h-6 text-cyan-40o0' />,
+                <h2 className='text-2xl font-bold text-white'>Our Mission</h2>,
+              </div>,
+              <p className='text-gray-30o0'>,
+                Deliver future-grade capabilities with present-day ROI. We,
+                productize repeatable outcomes so you start fast and scale,
+                predictably.,
+              </p>,
+            </Card>,
+            <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>,
+              <div className='flex items-center gap-3 mb-4'>,
+                <Sparkles className='w-6 h-6 text-purple-40o0' />,
+                <h2 className='text-2xl font-bold text-white'>How We Work</h2>,
+              </div>,
+              <ul className='list-disc list-inside text-gray-30o0 space-y-2'>,
+                <li>Productized service tiers with clear SLAs</li>,
+                <li>Security, compliance, and FinOps baked in</li>,
+                <li>Build-operate-transfer options for in-house teams</li>,
+                <li>Transparent pricing and usage-based add-ons</li>,
+              </ul>,
+            </Card>,
+          </div>,
+          <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-16'>,
             {pillars.map(p => (
               <Card
                 key={p.title}
-                className='bg-gradient-to-br from-gray-90o0/70 to-black/80 border border-gray-70o0/40 p-6'
-              >
-                <div className='flex items-center gap-3 mb-3 text-white'>
+                className='bg-gradient-to-br from-gray-90o0/70 to-black/80 border border-gray-70o0/40 p-6'>,
+                <div className='flex items-center gap-3 mb-3 text-white'>,
                   {p.icon}
-                  <span className='font-semibold'>{p.title}</span>
-                </div>
-                <p className='text-gray-30o0 text-sm'>{p.desc}</p>
-              </Card>
-            ))}
-          </div>
-
-          <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-              <div className='flex items-center gap-3 text-cyan-40o0'>
-                <Phone className='w-5 h-5' />
+                  <span className='font-semibold'>{p.title}</span>,
+                </div>,
+                <p className='text-gray-30o0 text-sm'>{p.desc}</p>,
+              </Card>))}
+          </div>,
+          <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>,
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
+              <div className='flex items-center gap-3 text-cyan-40o0'>,
+                <Phone className='w-5 h-5' />,
                 <a
                   href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}
-                  className='hover:text-white'
-                >
+                  className='hover: text-white'>,
                   {contactInfo.mobile}
-                </a>
-              </div>
-              <div className='flex items-center gap-3 text-purple-40o0'>
-                <Mail className='w-5 h-5' />
+                </a>,
+              </div>,
+              <div className='flex items-center gap-3 text-purple-40o0'>,
+                <Mail className='w-5 h-5' />,
                 <a
-                  href={`mailto:${contactInfo.email}`}
-                  className='hover:text-white'
-                >
+                  href={`mailto: ${contactInfo.email}`}
+                  className='hover: text-white'>,
                   {contactInfo.email}
-                </a>
-              </div>
-              <div className='flex items-center gap-3 text-green-40o0'>
-                <MapPin className='w-5 h-5' />
+                </a>,
+              </div>,
+              <div className='flex items-center gap-3 text-green-40o0'>,
+                <MapPin className='w-5 h-5' />,
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='hover:text-white'
-                >
+                  href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
+                  target='_blank',
+                  rel='noopener noreferrer',
+                  className='hover: text-white'>,
                   {contactInfo.address}
-                </a>
-              </div>
-            </div>
-            <div className='mt-6 flex justify-center'>
+                </a>,
+              </div>,
+            </div>,
+            <div className='mt-6 flex justify-center'>,
               <Button
-                href='/contact'
-                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'
-              >
-                Contact Us
-              </Button>
-            </div>
-          </Card>
-        </div>
-      </section>
-    </UltraFuturisticBackground>
-  );
-}
+                href='/contact',
+                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'>,
+                Contact Us,
+              </Button>,
+            </div>,
+          </Card>,
+        </div>,
+      </section>,
+    </UltraFuturisticBackground>)}
+,

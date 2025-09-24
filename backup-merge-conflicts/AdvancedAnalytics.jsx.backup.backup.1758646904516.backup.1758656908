@@ -1,7 +1,2 @@
 export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
-<<<<<<< HEAD:backup-merge-conflicts/AdvancedAnalytics.jsx.backup
 "export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
-"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
-=======
-"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

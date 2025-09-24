@@ -1,10 +1,5 @@
 =======
 const SecurityHeaders = dynamic(() => import("./SecurityHeaders"),{"; loading: () => <p>Loading.</p,>,}) export: "default SecurityHeaders" ,"""
-<<<<<<< HEAD
-=======
 const SecurityHeaders = dynamic(() => import("./SecurityHeaders"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityHeaders' ,'
->>>>>>> main
->>>>>>> main
 </p>'
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

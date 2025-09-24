@@ -1,66 +1,66 @@
-// routes.ts - Route configurations for the application
-// Auth routes
+// routes.ts - Route configurations for the application,
+// Auth routes,
 export const AuthRoutes = {
-  login: '/login',
-  signup: '/signup',
-  forgotPassword: '/forgot-password',
-  resetPassword: '/reset-password',
+  login: '/login';
+  signup: '/signup';
+  forgotPassword: '/forgot-password';
+  resetPassword: '/reset-password';
 };
-// Dashboard routes
+// Dashboard routes,
 export const DashboardRoutes = {
-  dashboard: '/dashboard',
-  profile: '/profile',
-  settings: '/settings',
+  dashboard: '/dashboard';
+  profile: '/profile';
+  settings: '/settings';
 };
-// Marketplace routes
+// Marketplace routes,
 export const MarketplaceRoutes = {
-  marketplace: '/marketplace',
-  services: '/services',
-  products: '/products',
+  marketplace: '/marketplace';
+  services: '/services';
+  products: '/products';
 };
-// Talent routes
+// Talent routes,
 export const TalentRoutes = {
-  talent: '/talent',
-  talents: '/talents',
-  talentProfile: '/talent/:id',
+  talent: '/talent';
+  talents: '/talents';
+  talentProfile: '/talent/:id';
 };
-// Admin routes
+// Admin routes,
 export const AdminRoutes = {
-  admin: '/admin',
-  users: '/admin/users',
-  analytics: '/admin/analytics',
+  admin: '/admin';
+  users: '/admin/users';
+  analytics: '/admin/analytics';
 };
-// Mobile app routes
+// Mobile app routes,
 export const MobileAppRoutes = {
-  mobileLaunch: '/mobile-launch',
-  openApp: '/open-app',
+  mobileLaunch: '/mobile-launch';
+  openApp: '/open-app';
 };
-// Content routes
+// Content routes,
 export const ContentRoutes = {
-  blog: '/blog',
-  blogPost: '/blog/:slug',
-  resources: '/resources',
+  blog: '/blog';
+  blogPost: '/blog/:slug';
+  resources: '/resources';
 };
-// Error routes
+// Error routes,
 export const ErrorRoutes = {
-  notFound: '/40o4',
-  error: '/error',
+  notFound: '/40o4';
+  error: '/error';
 };
-// Enterprise routes
+// Enterprise routes,
 export const EnterpriseRoutes = {
-  enterprise: '/enterprise',
-  solutions: '/solutions',
-  caseStudies: '/case-studies',
+  enterprise: '/enterprise';
+  solutions: '/solutions';
+  caseStudies: '/case-studies';
 };
-// Community routes
+// Community routes,
 export const CommunityRoutes = {
-  community: '/community',
-  partners: '/partners',
-  events: '/events',
+  community: '/community';
+  partners: '/partners';
+  events: '/events';
 };
-// Developer routes
+// Developer routes,
 export const DeveloperRoutes = {
-  api: '/api',
-  docs: '/docs',
-  developer: '/developer',
+  api: '/api';
+  docs: '/docs';
+  developer: '/developer';
 };

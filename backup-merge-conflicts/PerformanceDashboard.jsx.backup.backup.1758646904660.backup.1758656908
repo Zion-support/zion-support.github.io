@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 =======
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -18,8 +15,6 @@ import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 import X from 'lucide-react/dist/esm/icons/x';
 import Info from 'lucide-react/dist/esm/icons/info';
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-=======
 export function PerformanceDashboard($1) {
     const { metrics, observers, performanceScore, logMetrics } = usePerformance();
     const [isExpanded, setIsExpanded] = useState(showDetails);

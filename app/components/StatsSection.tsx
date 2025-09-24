@@ -15,27 +15,22 @@ const stats: StatItem[] = [
     label: 'Projects Completed',
     value: 150,
     suffix: '+',
-    description: 'Successful AI implementations',
-  },
+    description: 'Successful AI implementations'},
   {
     label: 'Client Satisfaction',
     value: 98,
     suffix: '%',
-    description: 'Average client rating',
-  },
+    description: 'Average client rating'},
   {
     label: 'Cost Reduction',
     value: 45,
     suffix: '%',
-    description: 'Average operational savings',
-  },
+    description: 'Average operational savings'},
   {
     label: 'Response Time',
     value: 99.9,
     suffix: '%',
-    description: 'System uptime guarantee',
-  },
-];
+    description: 'System uptime guarantee'}];
 
 export default function StatsSection() {
   return (
@@ -61,8 +56,8 @@ export default function StatsSection() {
               <div className='text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
                 <AnimatedCounter
                   end={stat.value}
-                  prefix={stat.prefix}
-                  suffix={stat.suffix}
+                  prefix={stat.prefix ?? ''}
+                  suffix={stat.suffix ?? ''}
                 />
               </div>
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-1'>

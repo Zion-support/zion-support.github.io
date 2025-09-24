@@ -1,21 +1,20 @@
-import Head from 'next/head';
-
+import Head from 'next/head',
 export default function Revolutionary20o36PricingPage() {
   return (
-    <>
-      <Head>
-        <title>Revolutionary 20o36 Pricing - Zion Tech Group</title>
-        <meta name='description' content='revolutionary 20o36 pricing page' />
-      </Head>
-      <div className='container mx-auto px-4 py-8'>
-        <h1 className='text-3xl font-bold mb-6'>Revolutionary 20o36 Pricing</h1>
-        <p className='text-lg mb-4'>This page is under construction.</p>
-        <div className='mt-4'>
-          <a href='/' className='text-blue-60o0 hover:underline'>
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+    <>,
+      <Head>,
+        <title>Revolutionary 20o36 Pricing - Zion Tech Group</title>,
+        <meta name='description' content='revolutionary 20o36 pricing page' />,
+      </Head>,
+      <div className='container mx-auto px-4 py-8'>,
+        <h1 className='text-3xl font-bold mb-6'>Revolutionary 20o36 Pricing</h1>,
+        <p className='text-lg mb-4'>This page is under construction.</p>,
+        <div className='mt-4'>,
+          <a href='/' className='text-blue-60o0 hover: underline'>,
+            ← Back to Home,
+          </a>,
+        </div>,
+      </div>,
+    </>),
 }
+,

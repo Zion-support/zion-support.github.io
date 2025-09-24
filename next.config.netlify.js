@@ -1,81 +1,70 @@
-// @ts-check
-/** @type {import('next').NextConfig} */
+// @ts-check,
+/** @type {import('next').NextConfig} */,
 const nextConfig = {
-  reactStrictMode: true,
-  trailingSlash: true,
-  output: 'export',
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
-
-  // Completely disable SWC to avoid binary download issues
-  swcMinify: false,
-  swcLoader: false,
-
-  // Performance optimizations
+  reactStrictMode: true;
+  trailingSlash: true;
+  output: 'export';
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'];
+  // Completely disable SWC to avoid binary download issues,
+  swcMinify: false;
+  swcLoader: false;
+  // Performance optimizations,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-
-  // Image optimization
+    removeConsole: process.env.NODE_ENV === 'production';
+  };
+  // Image optimization,
   images: {
-    unoptimized: true,
-    domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-  },
-
-  // Bundle optimization
+    unoptimized: true;
+    domains: ['localhost'];
+    formats: ['image/webp', 'image/avif'];
+    minimumCacheTTL: 60;
+  };
+  // Bundle optimization,
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-    // Disable SWC completely to avoid download issues
-    swcMinify: false,
-    swcLoader: false,
-  },
-
-  // SWC configuration
-  swcMinify: true,
-
-  // Webpack optimizations
+    optimizeCss: true;
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'];
+    // Disable SWC completely to avoid download issues,
+    swcMinify: false;
+    swcLoader: false;
+  };
+  // SWC configuration,
+  swcMinify: true;
+  // Webpack optimizations,
   webpack: (config, { dev, isServer }) => {
-    // Force use of Terser instead of SWC
+    // Force use of Terser instead of SWC,
     if (!dev) {
-      config.optimization.minimizer = config.optimization.minimizer || [];
-      // Remove SWC minifier if present
+      config.optimization.minimizer = config.optimization.minimizer || [],
+      // Remove SWC minifier if present,
       config.optimization.minimizer = config.optimization.minimizer.filter(
-        plugin => plugin.constructor.name !== 'SwcMinifyWebpackPlugin'
-      );
-    }
-
-    // Production optimizations
+        plugin => plugin.constructor.name !== 'SwcMinifyWebpackPlugin')}
+,
+    // Production optimizations,
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
-        chunks: 'all',
+        chunks: 'all';
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
+            test: /[\\/]node_modules[\\/]/;
+            name: 'vendors';
+            chunks: 'all';
+          };
           common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
+            name: 'common';
+            minChunks: 2;
+            chunks: 'all';
+            enforce: true;
+          };
+        };
       };
     }
-
-    return config;
-  },
-
-  // TypeScript and ESLint configuration
+,
+    return config};
+  // TypeScript and ESLint configuration,
   typescript: {
-    ignoreBuildErrors: false,
-  },
+    ignoreBuildErrors: false;
+  };
   eslint: {
-    ignoreDuringBuilds: false,
-  },
+    ignoreDuringBuilds: false;
+  };
 };
-
-module.exports = nextConfig;
+module.exports = nextConfig,

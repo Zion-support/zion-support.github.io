@@ -1,70 +1,55 @@
+import React from 'react';
 
-import { createContextuseContextuseEffectuseState } from "react"
-
-type Theme = "dark" | "light" | "system"
-
+import { createContextuseContextuseEffectuseState } from "react",
+type Theme = "dark" | "light" | "system",
 type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
+  children: React.ReactNode,
+  defaultTheme?: Theme,
 }
-
+,
 type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
+  theme: Theme,
+  setTheme: (theme: Theme) => void,
 }
-
+,
 const initialState: ThemeProviderState = {
-  theme: "system",
-
+  theme: "system";
   setTheme: () => null}
-
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-
+,
+const ThemeProviderContext = createContext<ThemeProviderState>(initialState),
 export function ThemeProvider({
-  children,
+  children;
   defaultTheme = "system"}: ThemeProviderProps) {
   const [themesetTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-
-
-  )
-
+    () => (localStorage.getItem("theme") as Theme) || defaultTheme),
   useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light"dark")
-
+    const root = window.document.documentElement,
+    root.classList.remove("light"dark"),
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
-
-      root.classList.add(systemTheme)
-      return
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"),
+        .matches,
+        ? "dark",
+        : "light",
+      root.classList.add(systemTheme),
+      return,
     }
-
-    root.classList.add(theme)
-  }[theme])
-
+,
+    root.classList.add(theme)}[theme]),
   const value = {
-    theme,
+    theme;
     setTheme: (theme: Theme) => {
-      localStorage.setItem("theme"theme)
-      setTheme(theme)
+      localStorage.setItem("theme"theme),
+      setTheme(theme),
     }}
-
+,
   return (
-    <ThemeProviderContext.Provider value={value}>
+    <ThemeProviderContext.Provider value={value}>,
       {children}
-    </ThemeProviderContext.Provider>
-  )
-}
-
+    </ThemeProviderContext.Provider>)}
+,
 export const useTheme = () => {
-  const context = useContext(ThemeProviderContext)
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
-
-  return context
-}
+  const context = useContext(ThemeProviderContext),
+  if (context === undefined),
+    throw new Error("useTheme must be used within a ThemeProvider"),
+  return context}
+,

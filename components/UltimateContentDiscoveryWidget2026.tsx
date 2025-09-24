@@ -1,484 +1,424 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap
-import { 
-  Search
-  Filter
-  Grid
-  List
-  Star
-  Clock
-  Users
-  TrendingUp,
-  ArrowRight,
-  Play,
-  BookOpen,
-  Zap,
-  Brain,
-  Rocket,
-  Globe,
-  ChevronDown,
-  ChevronUp,
-  X,
-  Video,
-  FileText,
-  Download,
-  Share2,
-  Heart,
-  Bookmark
-} from 'lucide-react';
-import Link from 'next/link';
-
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+SearchFilterStarClockTrendingUpBookOpenVideoFileTextUsersZap,
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  Star,
+  Clock,
+  Users,
+  TrendingUp;
+  ArrowRight;
+  Play;
+  BookOpen;
+  Zap;
+  Brain;
+  Rocket;
+  Globe;
+  ChevronDown;
+  ChevronUp;
+  X;
+  Video;
+  FileText;
+  Download;
+  Share2;
+  Heart;
+  Bookmark} from 'lucide-react',
+import Link from 'next/link',
 const UltimateContentDiscoveryWidget20o26 = () => {
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [isSearchingsetIsSearching] = useState(false);
-
+  const [searchQuerysetSearchQuery] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [isSearchingsetIsSearching] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-4 h-4"  /> },
-    { id: ''ai', 'name: 'AI 'Solutions', 'icon: <Zap className="w-4 h-4"  /> },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <TrendingUp className="w-4 h-4"  /> },
-    { id: ''automation', 'name: ''Automation', 'icon: <Users className="w-4 h-4"  /> },
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: <Video className="w-4 h-4"  /> },
+    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-4 h-4"  /> };
+    { id: ''ai', 'name: 'AI 'Solutions', 'icon: <Zap className="w-4 h-4"  /> };
+    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <TrendingUp className="w-4 h-4"  /> };
+    { id: ''automation', 'name: ''Automation', 'icon: <Users className="w-4 h-4"  /> };
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: <Video className="w-4 h-4"  /> };
     { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: <FileText className="w-4 h-4"  /> }
-  const [viewModesetViewMode] = useState('grid');
-  const [sortBysetSortBy] = useState('trending');
-  const [isFilterOpensetIsFilterOpen] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
-
+  const [viewModesetViewMode] = useState('grid'),
+  const [sortBysetSortBy] = useState('trending'),
+  const [isFilterOpensetIsFilterOpen] = useState(false),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
+    setIsVisible(true)}[]),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-purple-50o0 to-pink-50o0' },
-    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-blue-50o0 to-cyan-50o0' },
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-50o0 to-emerald-50o0' },
-    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcolor: 'from-orange-50o0 to-red-50o0' },
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' },
+    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-purple-50o0 to-pink-50o0' };
+    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-blue-50o0 to-cyan-50o0' };
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-50o0 to-emerald-50o0' };
+    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcolor: 'from-orange-50o0 to-red-50o0' };
+    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' };
     { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: TrendingUpcolor: 'from-pink-50o0 to-rose-50o0' }
-  ];
-
+  ],
   const contentItems = [
     {
-      id: 1,
-      title: "AI-Powered Business Transformation Guide 20o26",
-      category: 'ai',
-      type: 'guide',
-      title: 'Neural Interface Revolution 20o26',
-      description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems',
-      category: 'ai-innovations',
-      type: 'Video',
-      duration: '15 min',
-      views: '2.3M',
-      rating: 4.9,
-      trending: true,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: [', 'AI', 'Neural 'Networks', 'Brain-Computer 'Interface', 'Revolutionary']
-    },
+      id: 1;
+      title: "AI-Powered Business Transformation Guide 20o26";
+      category: 'ai';
+      type: 'guide';
+      title: 'Neural Interface Revolution 20o26';
+      description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems';
+      category: 'ai-innovations';
+      type: 'Video';
+      duration: '15 min';
+      views: '2.3M';
+      rating: 4.9;
+      trending: true;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: [', 'AI', 'Neural 'Networks', 'Brain-Computer 'Interface', 'Revolutionary']};
     {
-      id: 2,
-      title: 'Quantum AI Fusion Platform',
-      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented power',
-      category: 'future-tech',
-      type: 'Article',
-      duration: '8 min read',
-      views: '1.8M',
-      rating: 4.8,
-      trending: true,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Advanced']
-    },
+      id: 2;
+      title: 'Quantum AI Fusion Platform';
+      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented power';
+      category: 'future-tech';
+      type: 'Article';
+      duration: '8 min read';
+      views: '1.8M';
+      rating: 4.8;
+      trending: true;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Advanced']};
     {
-      id: 3,
-      title: 'Autonomous Business Operations',
-      description: 'Complete business process automation with zero human intervention using advanced AI',
-      category: 'automation',
-      type: 'Case Study',
-      duration: '12 min read',
-      views: '1.5M',
-      rating: 4.7,
-      trending: false,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: [', 'Automation', 'Business', 'AI', 'Operations']
-    },
+      id: 3;
+      title: 'Autonomous Business Operations';
+      description: 'Complete business process automation with zero human intervention using advanced AI';
+      category: 'automation';
+      type: 'Case Study';
+      duration: '12 min read';
+      views: '1.5M';
+      rating: 4.7;
+      trending: false;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: [', 'Automation', 'Business', 'AI', 'Operations']};
     {
-      id: 4,
-      title: 'Consciousness AI Systems',
-      description: 'Next-generation AI with self-awareness and emotional intelligence capabilities',
-      category: 'ai-innovations',
-      type: 'Interactive',
-      duration: '25 min',
-      views: '3.1M',
-      rating: 4.9,
-      trending: true,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: [', 'Consciousness', 'AI'Self-'Awareness', 'Emotional Intelligence']
-    },
+      id: 4;
+      title: 'Consciousness AI Systems';
+      description: 'Next-generation AI with self-awareness and emotional intelligence capabilities';
+      category: 'ai-innovations';
+      type: 'Interactive';
+      duration: '25 min';
+      views: '3.1M';
+      rating: 4.9;
+      trending: true;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: [', 'Consciousness', 'AI'Self-'Awareness', 'Emotional Intelligence']};
     {
-      id: 5,
-      title: 'Smart Manufacturing 4.0',
-      description: 'AI-powered manufacturing with predictive maintenance and optimization systems',
-      category: 'automation',
-      type: 'Video',
-      duration: '20 min',
-      views: '2.1M',
-      rating: 4.8,
-      trending: false,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: [', 'Manufacturing', 'AI'Predictive 'Maintenance', 'Industry 4.0']
-    },
+      id: 5;
+      title: 'Smart Manufacturing 4.0';
+      description: 'AI-powered manufacturing with predictive maintenance and optimization systems';
+      category: 'automation';
+      type: 'Video';
+      duration: '20 min';
+      views: '2.1M';
+      rating: 4.8;
+      trending: false;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: [', 'Manufacturing', 'AI'Predictive 'Maintenance', 'Industry 4.0']};
     {
-      id: 6,
-      title: 'Space Technology Integration',
-      description: 'AI systems for space exploration and interplanetary communication networks',
-      category: 'future-tech',
-      type: 'Documentary',
-      duration: '60 min',
-      views: '2.8M',
-      rating: 4.8,
-      trending: true,
-      thumbnail: '/api/placeholder/40o0/225',
-      tags: [', 'Space', 'AI', 'Exploration', 'Communication']
-    }
-  ];
-
+      id: 6;
+      title: 'Space Technology Integration';
+      description: 'AI systems for space exploration and interplanetary communication networks';
+      category: 'future-tech';
+      type: 'Documentary';
+      duration: '60 min';
+      views: '2.8M';
+      rating: 4.8;
+      trending: true;
+      thumbnail: '/api/placeholder/40o0/225';
+      tags: [', 'Space', 'AI', 'Exploration', 'Communication']}
+  ],
   const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory}),
   const handleSearch = async (query: string) => {
-    setSearchQuery(query);
-    setIsSearching(true);
-    // Simulate search delay
-    setTimeout(() => setIsSearching(false)10o00);
+    setSearchQuery(query),
+    setIsSearching(true),
+    // Simulate search delay,
+    setTimeout(() => setIsSearching(false)10o00),
   };
-
   const toggleFavorite = (id) => {
     setFavorites(prev => {
-      const newFavorites = new Set(prev);
+      const newFavorites = new Set(prev),
       if (newFavorites.has(id)) {
-        newFavorites.delete(id);
-      } else {
-        newFavorites.add(id);
-      }
-      return newFavorites;
-    });
-
+        newFavorites.delete(id)} else {
+        newFavorites.add(id)}
+      return newFavorites}),
   const handleSearch = (query: string) => {
-    setSearchQuery(query);
+    setSearchQuery(query),
   };
-
   const toggleFavorite = (id: number) => {
-    const newFavorites = new Set(favorites);
+    const newFavorites = new Set(favorites),
     if (newFavorites.has(id)) {
-      newFavorites.delete(id);
+      newFavorites.delete(id),
     } else {
-      newFavorites.add(id);
-    }
-    setFavorites(newFavorites);
-  };
-
+      newFavorites.add(id)}
+    setFavorites(newFavorites)};
   const toggleBookmark = (id: number) => {
-    const newBookmarks = new Set(bookmarks);
+    const newBookmarks = new Set(bookmarks),
     if (newBookmarks.has(id)) {
-      newBookmarks.delete(id);
+      newBookmarks.delete(id),
     } else {
-      newBookmarks.add(id);
-    }
-    setBookmarks(newBookmarks);
-  };
-
+      newBookmarks.add(id)}
+    setBookmarks(newBookmarks)};
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         {/* Header */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
-            Ultimate Content Discovery 20o26
-          </h1>
-          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-            Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
-          </p>
-        </motion.div>
-
+          className="text-center mb-12">,
+          <h1 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">,
+            Ultimate Content Discovery 20o26,
+          </h1>,
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
+            Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.,
+          </p>,
+        </motion.div>,
         {/* Search and Filters */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2duration: 0.6 }}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
-        >
-          <div className="flex flex-col lg:flex-row gap-4">
-    <section className="py-16 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+          className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">,
+          <div className="flex flex-col lg: flex-row gap-4">,
+    <section className="py-16 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
+        <motion.div,
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ultimate Content Discovery
-            <span className="block bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
-              Powered by AI 20o26
+          className="text-center mb-12">,
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
+            Ultimate Content Discovery,
+            <span className="block bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">,
+              Powered by AI 20o26,
   const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
-      case 'trending':
-        return b.trending - a.trending || b.views.localeCompare(a.views);
-      case 'rating':
-        return b.rating - a.rating;
-      case 'views':
-        return parseInt(b.views) - parseInt(a.views);
-      case 'newest':
-        return b.id - a.id;
-      default:
-        return 0;
+      case 'trending':,
+        return b.trending - a.trending || b.views.localeCompare(a.views),
+      case 'rating':,
+        return b.rating - a.rating,
+      case 'views':,
+        return parseInt(b.views) - parseInt(a.views),
+      case 'newest':,
+        return b.id - a.id,
+      default:,
+        return 0,
     }
-  });
-
+  }),
   return (
-    <motion.div
+    <motion.div,
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
       transition={{ duration: 0.8 }}
-      className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0"
-    >
+      className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       {/* Header */}
-      <div className="relative z-10 container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Search className="w-4 h-4"  />
-            Ultimate Content Discovery 20o26
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Discover Revolutionary
-            <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
-              {' '}Content
-            </span>
-          </h1>
-          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-            Explore the most advanced AI innovationsautomation solutionsand future technologies
-            with our intelligent content discovery system.
-          </p>
-        </div>
-
+      <div className="relative z-10 container mx-auto px-4 py-12">,
+        <div className="text-center mb-12">,
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">,
+            <Search className="w-4 h-4"  />,
+            Ultimate Content Discovery 20o26,
+          </div>,
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
+            Discover Revolutionary,
+            <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
+              {' '}Content,
+            </span>,
+          </h1>,
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
+            Explore the most advanced AI innovationsautomation solutionsand future technologies,
+            with our intelligent content discovery system.,
+          </p>,
+        </div>,
         {/* Search and Filters */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
-          <div className="flex flex-col lg:flex-row gap-4">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">,
+          <div className="flex flex-col lg: flex-row gap-4">,
             {/* Search Bar */}
-            <div className="relative flex-1">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-40o0"  />
-              </div>
+            <div className="relative flex-1">,
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">,
+                <Search className="h-5 w-5 text-gray-40o0"  />,
+              </div>,
               <input
-                type="text"
-                placeholder="Search for contentutorialsguides..."
+                type="text",
+                placeholder="Search for contentutorialsguides...",
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-30o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
-                placeholder="Search for contentopicsor technologies..."
+                className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-30o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent",
+                placeholder="Search for contentopicsor technologies...",
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
-              />
-            </div>
-
+                className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent",
+              />,
+            </div>,
             {/* Category Filter */}
-            <div className="relative">
+            <div className="relative">,
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus:outline-none focus:ring-2 focus:ring-purple-50o0"
-              >
+                className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus: outline-none focus:ring-2 focus:ring-purple-50o0">,
                 {categories.map(category => (
-                  <option key={category.id} value={category.id} className="bg-slate-80o0">
+                  <option key={category.id} value={category.id} className="bg-slate-80o0">,
                     {category.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />
-            </div>
+                  </option>))}
+              </select>,
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />,
+            </div>,
             {/* Filter Button */}
-            <button className="flex items-center px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white hover:bg-white/30 transition-colors">
-              <Filter className="w-5 h-5 mr-2"  />
-              Filters
-            </button>
-          </div>
-
+            <button className="flex items-center px-6 py-4 bg-white/20 border border-white/30 rounded-xl text-white hover: bg-white/30 transition-colors">,
+              <Filter className="w-5 h-5 mr-2"  />,
+              Filters,
+            </button>,
+          </div>,
             {/* Sort Options */}
-            <div className="relative">
+            <div className="relative">,
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus:outline-none focus:ring-2 focus:ring-purple-50o0"
-              >
-                <option value="trending" className="bg-slate-80o0">Trending</option>
-                <option value="rating" className="bg-slate-80o0">Highest Rated</option>
-                <option value="views" className="bg-slate-80o0">Most Viewed</option>
-                <option value="newest" className="bg-slate-80o0">Newest</option>
-              </select>
-              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />
-            </div>
-
+                className="appearance-none bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white pr-8 focus: outline-none focus:ring-2 focus:ring-purple-50o0">,
+                <option value="trending" className="bg-slate-80o0">Trending</option>,
+                <option value="rating" className="bg-slate-80o0">Highest Rated</option>,
+                <option value="views" className="bg-slate-80o0">Most Viewed</option>,
+                <option value="newest" className="bg-slate-80o0">Newest</option>,
+              </select>,
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />,
+            </div>,
             {/* View Mode Toggle */}
-            <div className="flex bg-white/10 rounded-xl p-1">
+            <div className="flex bg-white/10 rounded-xl p-1">,
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'grid' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover:text-white'
+                  viewMode === 'grid' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover: text-white',
                 }`}
-              >
-                <Grid className="w-5 h-5"  />
-              </button>
+              >,
+                <Grid className="w-5 h-5"  />,
+              </button>,
               <button
                 onClick={() => setViewMode('list')}
                 className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'list' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover:text-white'
+                  viewMode === 'list' ? 'bg-purple-50o0 text-white' : 'text-gray-40o0 hover: text-white',
                 }`}
-              >
-                <List className="w-5 h-5"  />
-              </button>
-            </div>
-          </div>
-        </div>
-
+              >,
+                <List className="w-5 h-5"  />,
+              </button>,
+            </div>,
+          </div>,
+        </div>,
         {/* Content Grid */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8delay: 0.2 }}
           className={`grid gap-6 ${
-            viewMode === 'grid' 
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-              : 'grid-cols-1'
+            viewMode === 'grid',
+              ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
+              : 'grid-cols-1',
           }`}
-        >
-          <AnimatePresence>
+        >,
+          <AnimatePresence>,
             {sortedContent.map((itemindex) => (
-              <motion.div
+              <motion.div,
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5delay: index * 0.1 }}
-                className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-30o0 ${
-                  viewMode === 'list' ? 'flex' : ''
+                className={`bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover: bg-white/10 transition-all duration-30o0 ${
+                  viewMode === 'list' ? 'flex' : '',
                 }`}
-              >
-                <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} aspect-video bg-gradient-to-br from-purple-50o0 to-blue-50o0 relative`}>
+              >,
+                <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} aspect-video bg-gradient-to-br from-purple-50o0 to-blue-50o0 relative`}>,
                   <img
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-full object-cover"
-                   />
+                    className="w-full h-full object-cover",
+                   />,
                   {item.featured && (
-                    <div className="absolute top-3 left-3 bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-bold">
-                      FEATURED
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-10o0 transition-opacity">
-                    <Play className="w-12 h-12 text-white"  />
-                  </div>
-                </div>
-                
-                <div className={`p-6 ${viewMode === 'list' ? 'w-2/3' : 'w-full'}`}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categories.find(c => c.id === item.category)?.color} text-white`}>
+                    <div className="absolute top-3 left-3 bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-bold">,
+                      FEATURED,
+                    </div>)}
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover: opacity-10o0 transition-opacity">,
+                    <Play className="w-12 h-12 text-white"  />,
+                  </div>,
+                </div>,
+                <div className={`p-6 ${viewMode === 'list' ? 'w-2/3' : 'w-full'}`}>,
+                  <div className="flex items-center gap-2 mb-2">,
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categories.find(c => c.id === item.category)?.color} text-white`}>,
                       {categories.find(c => c.id === item.category)?.name}
-                    </span>
+                    </span>,
                     {item.trending && (
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-50o0 text-white">
-                        TRENDING
-                      </span>
-                    )}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-gray-30o0 mb-4 line-clamp-2">{item.description}</p>
-                  
-                  <div className="flex items-center gap-4 text-sm text-gray-40o0 mb-4">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4"  />
+                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-50o0 text-white">,
+                        TRENDING,
+                      </span>)}
+                  </div>,
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>,
+                  <p className="text-gray-30o0 mb-4 line-clamp-2">{item.description}</p>,
+                  <div className="flex items-center gap-4 text-sm text-gray-40o0 mb-4">,
+                    <span className="flex items-center gap-1">,
+                      <Clock className="w-4 h-4"  />,
                       {item.duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Users className="w-4 h-4"  />
+                    </span>,
+                    <span className="flex items-center gap-1">,
+                      <Users className="w-4 h-4"  />,
                       {item.views.toLocaleString()}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Star className="w-4 h-4"  />
+                    </span>,
+                    <span className="flex items-center gap-1">,
+                      <Star className="w-4 h-4"  />,
                       {item.rating}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex gap-2">
+                    </span>,
+                  </div>,
+                  <div className="flex items-center justify-between">,
+                    <div className="flex gap-2">,
                       <button
                         onClick={() => toggleFavorite(item.id)}
                         className={`p-2 rounded-lg transition-colors ${
-                          favorites.has(item.id) ? 'text-red-50o0 bg-red-50o0/20' : 'text-gray-40o0 hover:text-red-50o0'
+                          favorites.has(item.id) ? 'text-red-50o0 bg-red-50o0/20' : 'text-gray-40o0 hover: text-red-50o0',
                         }`}
-                      >
-                        <Heart className="w-5 h-5"  />
-                      </button>
+                      >,
+                        <Heart className="w-5 h-5"  />,
+                      </button>,
                       <button
                         onClick={() => toggleBookmark(item.id)}
                         className={`p-2 rounded-lg transition-colors ${
-                          bookmarks.has(item.id) ? 'text-blue-50o0 bg-blue-50o0/20' : 'text-gray-40o0 hover:text-blue-50o0'
+                          bookmarks.has(item.id) ? 'text-blue-50o0 bg-blue-50o0/20' : 'text-gray-40o0 hover: text-blue-50o0',
                         }`}
-                      >
-                        <Bookmark className="w-5 h-5"  />
-                      </button>
-                      <button className="p-2 rounded-lg text-gray-40o0 hover:text-white transition-colors">
-                        <Share2 className="w-5 h-5"  />
-                      </button>
-                    </div>
-                    
+                      >,
+                        <Bookmark className="w-5 h-5"  />,
+                      </button>,
+                      <button className="p-2 rounded-lg text-gray-40o0 hover: text-white transition-colors">,
+                        <Share2 className="w-5 h-5"  />,
+                      </button>,
+                    </div>,
                     <Link
                       href={`/content/${item.id}`}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-4 py-2 rounded-lg hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0"
-                    >
-                      Explore
-                      <ArrowRight className="w-4 h-4"  />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
-
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-4 py-2 rounded-lg hover: from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0">,
+                      Explore,
+                      <ArrowRight className="w-4 h-4"  />,
+                    </Link>,
+                  </div>,
+                </div>,
+              </motion.div>))}
+          </AnimatePresence>,
+        </motion.div>,
         {/* No Results */}
         {sortedContent.length === 0 && (
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-12"
-          >
-            <div className="w-24 h-24 mx-auto mb-4 bg-gray-80o0 rounded-full flex items-center justify-center">
-              <Search className="w-12 h-12 text-gray-40o0"  />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
-            <p className="text-gray-40o0">Try adjusting your search or filter criteria</p>
-          </motion.div>
-        )}
-      </div>
-  );
-};
-
-export default UltimateContentDiscoveryWidget20o26;
+            className="text-center py-12">,
+            <div className="w-24 h-24 mx-auto mb-4 bg-gray-80o0 rounded-full flex items-center justify-center">,
+              <Search className="w-12 h-12 text-gray-40o0"  />,
+            </div>,
+            <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>,
+            <p className="text-gray-40o0">Try adjusting your search or filter criteria</p>,
+          </motion.div>)}
+      </div>)};
+export default UltimateContentDiscoveryWidget20o26})]

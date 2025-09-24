@@ -1,7 +1,4 @@
-
 import React, {useEffect, useRef} from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React, {useEffect, useRef} from 'react';
 export function FloatingOrbs($1) {

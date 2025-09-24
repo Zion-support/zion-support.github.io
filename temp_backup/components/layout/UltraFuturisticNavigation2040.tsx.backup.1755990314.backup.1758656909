@@ -8,10 +8,7 @@ import {
   Zap, Star, TrendingUp, Award, Clock, CheckCircle, ExternalLink,
   GraduationCap, Building, Truck, Zap as ZapIcon, Heart, DollarSign
 } from 'lucide-react';
-
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 } from 'lucide-react';
-
 interface NavigationItem {
   label: string;
   href?: string;
@@ -19,12 +16,9 @@ interface NavigationItem {
   icon?: React.ReactNode;
   description?: string;
 }
-
   badge?: string;
 }
-
 // Memoized navigation items for better performance
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
@@ -104,7 +98,6 @@ const navigationItems: NavigationItem[] = [
         href: '/manufacturing-ai-solutions',
         icon: <Star className="w-4 h-4" />,
         description: 'Smart manufacturing solutions'
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       }
     ]
   },
@@ -119,70 +112,6 @@ const navigationItems: NavigationItem[] = [
     icon: <Mail className="w-4 h-4" />
   }
 ];
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8b41
 const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-
-  // Handle scroll effect with throttling for better performance
-  useEffect(() => {
-    let ticking = false;
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Enhanced accessibility: Close dropdowns when clicking outside
-        description: 'Join our innovative team'
-      },
-      {
-        label: 'News & Updates',
-        href: '/news',
-        icon: <TrendingUp className="w-4 h-4" />,
-        description: 'Latest company updates'
-      },
-      {
-        label: 'Contact',
-        href: '/contact',
-        icon: <Mail className="w-4 h-4" />,
-        description: 'Get in touch with us'
-      }
-    ]
-  }
-];
-
-const UltraFuturisticNavigation2040: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showSearch, setShowSearch] = useState(false);
-  const [searchResults, setSearchResults] = useState<any[]>([]);
-  const router = useRouter();
-  const searchRef = useRef<HTMLDivElement>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setShowSearch(false);
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-        setIsSearchOpen(false);
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);

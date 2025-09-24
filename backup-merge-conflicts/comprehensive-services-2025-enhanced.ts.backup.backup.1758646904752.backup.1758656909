@@ -1,11 +1,6 @@
 =======
-<<<<<<< HEAD
-export: interface EnhancedServiceItem {
-<<<<<<< HEAD
-=======
 =======
 "export": interface EnhancedServiceItem {
->>>>>>> main
    id: string;
    title: string;
    description: string;

@@ -1,77 +1,74 @@
-import Link from 'next/link';
-import { Brain, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
+import Link from 'next/link',
+import { Brain, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react',
 export default function AICopilots() {
-  const benefits = ['Accelerate employee productivity by 25-40% with task automation',
-    'Reduce support response times with context-aware assistance',
-    'Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)',
-    'On-prem or VPC deployment options to keep data private',
-  ];
+  const benefits = ['Accelerate employee productivity by 25-40% with task automation';
+    'Reduce support response times with context-aware assistance';
+    'Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)';
+    'On-prem or VPC deployment options to keep data private';
+  ],
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-16">
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 rounded-lg bg-blue-60o0 text-white w-fit">
-              <Brain className="w-6 h-6"  />
-            </div>
-            <h1 className="text-3xl font-bold text-gray-90o0">AI Copilots for Teams</h1>
-          </div>
-          <p className="text-gray-70o0 text-lg max-w-3xl">
-            Deploy custom AI copilots that understand your processes, documents, and tools. From sales and support copilots to engineering and operations copilots, we design, fine-tune, and deploy secure assistants aligned with your workflows.
-          </p>
-        </div>
-      </section>
-      <section className="py-12">
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8 grid md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg border p-6">
-            <h3 className="font-semibold text-gray-90o0 mb-2">Starter</h3>
-            <p className="text-sm text-gray-60o0 mb-4">Single copilot for one team</p>
-            <div className="flex items-center justify-between mb-4 text-gray-70o0">
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>From $4,0o00</span></div>
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>2-3 weeks</span></div>
-            </div>
-            <ul className="space-y-2 mb-4">
+    <main className="min-h-screen bg-white">,
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-16">,
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg: px-8">,
+          <div className="flex items-center gap-3 mb-6">,
+            <div className="p-3 rounded-lg bg-blue-60o0 text-white w-fit">,
+              <Brain className="w-6 h-6"  />,
+            </div>,
+            <h1 className="text-3xl font-bold text-gray-90o0">AI Copilots for Teams</h1>,
+          </div>,
+          <p className="text-gray-70o0 text-lg max-w-3xl">,
+            Deploy custom AI copilots that understand your processes, documents, and tools. From sales and support copilots to engineering and operations copilots, we design, fine-tune, and deploy secure assistants aligned with your workflows.,
+          </p>,
+        </div>,
+      </section>,
+      <section className="py-12">,
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg: px-8 grid md:grid-cols-3 gap-6">,
+          <div className="bg-white rounded-lg border p-6">,
+            <h3 className="font-semibold text-gray-90o0 mb-2">Starter</h3>,
+            <p className="text-sm text-gray-60o0 mb-4">Single copilot for one team</p>,
+            <div className="flex items-center justify-between mb-4 text-gray-70o0">,
+              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>From $4,0o00</span></div>,
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>2-3 weeks</span></div>,
+            </div>,
+            <ul className="space-y-2 mb-4">,
               {['Requirements workshop','Private data ingestion (5 sources)','Prompt + policy design','Secure auth (SSO/Key)'].map((b) => (
-                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>
-              ))}
-            </ul>
-            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Request proposal <ArrowRight className="w-4 h-4 ml-2" /></Link>
-          </div>
-          <div className="bg-white rounded-lg border p-6 ring-2 ring-blue-60o0/10">
-            <h3 className="font-semibold text-gray-90o0 mb-2">Professional</h3>
-            <p className="text-sm text-gray-60o0 mb-4">Multi-team copilots with integrations</p>
-            <div className="flex items-center justify-between mb-4 text-gray-70o0">
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>$12,0o00–$25,0o00</span></div>
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>4-6 weeks</span></div>
-            </div>
-            <ul className="space-y-2 mb-4">
+                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
+            </ul>,
+            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Request proposal <ArrowRight className="w-4 h-4 ml-2" /></Link>,
+          </div>,
+          <div className="bg-white rounded-lg border p-6 ring-2 ring-blue-60o0/10">,
+            <h3 className="font-semibold text-gray-90o0 mb-2">Professional</h3>,
+            <p className="text-sm text-gray-60o0 mb-4">Multi-team copilots with integrations</p>,
+            <div className="flex items-center justify-between mb-4 text-gray-70o0">,
+              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>$12,0o00–$25,0o00</span></div>,
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>4-6 weeks</span></div>,
+            </div>,
+            <ul className="space-y-2 mb-4">,
               {['RAG with vector DB','Tool integrations (Jira/Slack/GitHub)','Analytics & guardrails','Fine-tuning & evals'].map((b) => (
-                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>
-              ))}
-            </ul>
-            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Talk to an expert <ArrowRight className="w-4 h-4 ml-2" /></Link>
-          </div>
-          <div className="bg-white rounded-lg border p-6">
-            <h3 className="font-semibold text-gray-90o0 mb-2">Enterprise</h3>
-            <p className="text-sm text-gray-60o0 mb-4">Compliance-first, private deployment</p>
-            <div className="flex items-center justify-between mb-4 text-gray-70o0">
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>Custom (RFP)</span></div>
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>6-10 weeks</span></div>
-            </div>
-            <ul className="space-y-2 mb-4">
+                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
+            </ul>,
+            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Talk to an expert <ArrowRight className="w-4 h-4 ml-2" /></Link>,
+          </div>,
+          <div className="bg-white rounded-lg border p-6">,
+            <h3 className="font-semibold text-gray-90o0 mb-2">Enterprise</h3>,
+            <p className="text-sm text-gray-60o0 mb-4">Compliance-first, private deployment</p>,
+            <div className="flex items-center justify-between mb-4 text-gray-70o0">,
+              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4"  /><span>Custom (RFP)</span></div>,
+              <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>6-10 weeks</span></div>,
+            </div>,
+            <ul className="space-y-2 mb-4">,
               {['SSO/SAML, audit logging','PII redaction & data residency','SOC2/ISO alignment','HA & on-call SRE'].map((b) => (
-                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>
-              ))}
-            </ul>
-            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Start RFP <ArrowRight className="w-4 h-4 ml-2" /></Link>
-          </div>
-        </div>
-      </section>
-      <section className="pb-16">
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <p className="text-sm text-gray-50o0">Questions? Call +1 30o2 464 0950 or email <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </section>
-    </main>
-  );
+                <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
+            </ul>,
+            <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Start RFP <ArrowRight className="w-4 h-4 ml-2" /></Link>,
+          </div>,
+        </div>,
+      </section>,
+      <section className="pb-16">,
+        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg: px-8">,
+          <p className="text-sm text-gray-50o0">Questions? Call +1 30o2 464 0950 or email <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>,
+        </div>,
+      </section>,
+    </main>),
 }
+,

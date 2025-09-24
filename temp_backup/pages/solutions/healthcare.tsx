@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion',
 import {
-  Brain,
-  Sparkles,
-  Zap,
-  Target,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Heart,
-  Activity,
-} from 'lucide-react';
-import Link from 'next/link';
+  Brain;
+  Sparkles;
+  Zap;
+  Target;
+  Users;
+  Award;
+  Clock;
+  CheckCircle;
+  Heart;
+  Activity;
+} from 'lucide-react',
+import Link from 'next/link',

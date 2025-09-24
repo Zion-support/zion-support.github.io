@@ -1,8 +1,5 @@
-
 import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
-<<<<<<< HEAD
-=======
 =======
 import React, {useState, useEffect} from 'react';
 const AccessibilityContext = createContext(null);
@@ -113,8 +110,6 @@ export const AccessibilityProvider = (props) => {
       {children}
     </AccessibilityContext.Provider>)};
 // Accessibility toolbar component
-<<<<<<< HEAD
-=======
 export const AccessibilityToolbar = (props) => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText}; = useAccessibility();
     return (
