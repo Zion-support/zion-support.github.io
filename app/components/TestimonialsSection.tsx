@@ -49,10 +49,12 @@ export default function TestimonialsSection() {
         </div>
 
         <div className='relative'>
-          <TestimonialCard
-            testimonial={testimonials[currentIndex]}
-            isActive={true}
-          />
+          {testimonials[currentIndex] && (
+            <TestimonialCard
+              testimonial={testimonials[currentIndex]}
+              isActive={true}
+            />
+          )}
 
           {/* Navigation Arrows */}
           <button

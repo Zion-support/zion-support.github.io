@@ -41,13 +41,30 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
-    "dist"
+    "dist",
+    "automation",
+    "server",
+    "utils",
+    "lib",
+    "components",
+    "types",
+    "data",
+    "zion-os*",
+    "zion-ai-assistant",
+    "zion-website",
+    "apps.backup",
+    "recovered-branches",
+    "backup*",
+    "backups",
+    "**/*.backup.*",
+    "**/*.disabled/**",
+    "**/*.conflicted.*"
   ]
 }

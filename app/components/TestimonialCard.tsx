@@ -56,10 +56,10 @@ export default function TestimonialCard({
   useEffect(() => {
     if (isActive) {
       setIsVisible(true);
-    } else {
-      const timer = setTimeout(() => setIsVisible(false), 300);
-      return () => clearTimeout(timer);
+      return;
     }
+    const timer = setTimeout(() => setIsVisible(false), 300);
+    return () => clearTimeout(timer);
   }, [isActive]);
 
   const renderStars = (rating: number) => {
