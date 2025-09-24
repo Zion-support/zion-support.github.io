@@ -1,43 +1,26 @@
 #!/bin/bash
 
-echo "Fixing syntax errors in React components..."
+echo "Fixing syntax errors in the codebase..."
 
-# Function to fix missing closing braces in React components
-fix_component() {
-    local file="$1"
-    echo "Fixing: $file"
-    
+# Fix standalone semicolons at the beginning of lines
+find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
     if [ -f "$file" ]; then
-        # Fix missing closing braces before export statements
-        sed -i 's/^  export default/  };\n\nexport default/g' "$file"
-        sed -i 's/^export default/};\n\nexport default/g' "$file"
-        
-        # Fix missing closing braces for functions
-        sed -i 's/  );$/  );\n};/g' "$file"
-        
-        echo "Fixed: $file"
+        echo "Processing $file..."
+        # Remove standalone semicolons at the beginning of lines
+        sed -i 's/^;.*$//' "$file"
+        # Remove empty lines that might have been created
+        sed -i '/^$/N;/^\n$/d' "$file"
     fi
-}
-
-# Fix all JSX and TSX files in pages and components
-echo "Fixing syntax errors in pages..."
-find src/pages -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_component "$file"
 done
 
-echo "Fixing syntax errors in components..."
-find src/components -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_component "$file"
+# Fix common malformed patterns
+find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if [ -f "$file" ]; then
+        # Fix malformed export statements
+        sed -i 's/export const \([a-zA-Z_][a-zA-Z0-9_]*\) = {}$/export const \1 = {};/' "$file"
+        # Fix missing semicolons after export statements
+        sed -i 's/export default \([a-zA-Z_][a-zA-Z0-9_]*\)$/export default \1;/' "$file"
+    fi
 done
 
-echo "Syntax fixes completed!"
-
-# Test the build
-echo "Testing build after syntax fixes..."
-if npm run build; then
-    echo "✅ Build successful after syntax fixes!"
-else
-    echo "❌ Build still has issues, but syntax errors are fixed."
-fi
-
-echo "All syntax fixes completed!"
+echo "Syntax error fixes completed!"

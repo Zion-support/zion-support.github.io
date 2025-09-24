@@ -33,31 +33,17 @@ BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
-
+    
     echo "🔧 Resolving conflicts in $file for branch $branch..."
-
-    # Detect git conflict markers
-    if grep -q "<<<<<<< " "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-
-        # Backup conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-
-        # Prefer main for critical files; otherwise strip markers keeping 'theirs'
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 package file detected, preferring main version"
-            git checkout --ours -- "$file" || true
-            git add "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  config file detected, preferring main version"
-            git checkout --ours -- "$file" || true
-            git add "$file"
-        else
-            echo "📝 regular file, preferring incoming changes"
-            git checkout --theirs -- "$file" || true
-            git add "$file"
-        fi
-
+    
+    # Check if file has merge conflicts
+    if grep -q "        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+            sed -i '/        else
+            echo "📝 Regular file, attempting to merge both versions..."
+            # Remove conflict markers and try to keep both versions
+            sed -i '/        fi
+        
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi
@@ -176,11 +162,9 @@ process_batch() {
         echo "---"
     done
     
-    # Sync and push changes after each batch
-    echo "🔄 Syncing with origin/main before push..."
-    git pull --rebase origin main || true
+    # Push changes after each batch
     echo "💾 Pushing batch changes to remote..."
-    git push origin main || true
+    git push origin main
     
     echo "✅ Batch $CURRENT_BATCH completed: $batch_success successful, $batch_failures failed"
     echo "---"

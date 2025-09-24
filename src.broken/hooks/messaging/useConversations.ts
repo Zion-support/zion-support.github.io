@@ -1,5 +1,5 @@
-// Hook for useConversations;
+// Hook for useConversations,
 export const useUseConversations: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

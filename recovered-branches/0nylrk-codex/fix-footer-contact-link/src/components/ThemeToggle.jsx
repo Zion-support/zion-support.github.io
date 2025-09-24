@@ -1,12 +1,32 @@
-import React from 'react';
-
-const ThemeToggle: React.FC = () => {
+import React, { useState, useEffect } from 'react',
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline',
+const ThemeToggle = () => {
+  const [isDark, setIsDark] = useState(true),
+  useEffect(() => {
+    // Check for saved theme preference or default to dark,
+    const savedTheme = localStorage.getItem('zion-theme'),
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark')}
+  }, []),
+  const toggleTheme = () => {
+    const newTheme = !isDark,
+    setIsDark(newTheme),
+    localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light'),
+    // Apply theme to document,
+    if (newTheme) {
+      document.documentElement.classList.add('dark'),
+      document.documentElement.classList.remove('light')} else {
+      document.documentElement.classList.add('light'),
+      document.documentElement.classList.remove('dark')}
+  };
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ThemeToggle</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+    <button
+      onClick={toggleTheme}
+      className='p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover: bg-white/20 transition-all duration-30o0 group',
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+    >,
+      {isDark ? (
+        <SunIcon className='w-5 h-5 text-yellow-40o0 group-hover: text-yellow-30o0 transition-colors duration-30o0' />) : (
+        <MoonIcon className='w-5 h-5 text-blue-40o0 group-hover:text-blue-30o0 transition-colors duration-30o0' />)}
+    </button>)};
 export default ThemeToggle;

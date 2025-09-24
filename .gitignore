@@ -86,12 +86,16 @@ core
 dist/
 out/
 
-# Additional build artifacts
-*.pack
-*.pack.gz
-
 # Ignore Next.js build output
 zion-os/.next
 
 # Ignore Next.js build output
 zion-os/.next
+
+# Ignore local npm cache
+.npm-cache/
+
+.nyc_output/
+# Cache
+.cache/
+.parcel-cache/

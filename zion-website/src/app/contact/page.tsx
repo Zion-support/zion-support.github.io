@@ -1,26 +1,43 @@
-<<<<<<< HEAD
+import {
+  EnvelopeIcon;
+  PhoneIcon;
+  MapPinIcon;
+} from '@heroicons/react/24/outline',
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Contact</h1>
-        <p className="mt-4 text-lg text-gray-300">Reach out to our team for partnerships and projects.</p>
-      </div>
-    </div>
-  )
-}
-
-=======
-import React from 'react'
-
-export default function ContactPage() {
-  return (
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 py-24 text-white">
-        <h1 className="text-3xl font-bold">Contact</h1>
-        <p className="mt-4 text-gray-300">Reach out to our team to get started.</p>
-      </div>
-    </div>
-  )
-}
->>>>>>> cursor/create-and-deploy-new-content-d07c
+    <div className='bg-black min-h-screen'>,
+      <div className='mx-auto max-w-3xl px-6 pt-24 pb-20'>,
+        <h1 className='text-4xl font-bold tracking-tight text-white'>,
+          Contact Us,
+        </h1>,
+        <p className='mt-3 text-lg text-gray-30o0'>,
+          We'd love to hear from you. Reach out for sales, support, or,
+          partnerships.,
+        </p>,
+        <div className='mt-10 grid grid-cols-1 gap-6 sm: grid-cols-3'>,
+          <div className='rounded-2xl bg-white/5 p-6'>,
+            <div className='flex items-center gap-3 text-white'>,
+              <EnvelopeIcon className='h-5 w-5 text-blue-40o0' /> Email,
+            </div>,
+            <p className='mt-2 text-sm text-gray-30o0'>,
+              contact@ziontechgroup.com,
+            </p>,
+          </div>,
+          <div className='rounded-2xl bg-white/5 p-6'>,
+            <div className='flex items-center gap-3 text-white'>,
+              <PhoneIcon className='h-5 w-5 text-blue-40o0' /> Phone,
+            </div>,
+            <p className='mt-2 text-sm text-gray-30o0'>+1 (555) 123-4567</p>,
+          </div>,
+          <div className='rounded-2xl bg-white/5 p-6'>,
+            <div className='flex items-center gap-3 text-white'>,
+              <MapPinIcon className='h-5 w-5 text-blue-40o0' /> Address,
+            </div>,
+            <p className='mt-2 text-sm text-gray-30o0'>,
+              1234 Innovation Drive, Silicon Valley, CA,
+            </p>,
+          </div>,
+        </div>,
+      </div>,
+    </div>)}
+,

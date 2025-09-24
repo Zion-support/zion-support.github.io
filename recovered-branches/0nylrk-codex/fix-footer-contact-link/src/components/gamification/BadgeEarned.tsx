@@ -1,12 +1,50 @@
 import React from 'react';
-
-const BadgeEarned: React.FC = () => {
+import { getBadgeMetaBadgeKey } from './badgeConfig',
+interface BadgeEarnedProps {
+  badge: BadgeKey,
+  size?: number,
+  showName?: boolean,
+  showDesc?: boolean,
+  earnedDate?: string}
+,
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+  badge;
+  size = 44;
+  showName = true;
+  showDesc = false;
+  earnedDate;
+}) => {
+  const meta = getBadgeMeta(badge),
+  if (!meta) return null,
+  const Icon = meta.icon,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">BadgeEarned</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default BadgeEarned;
+    <div className='flex flex-col items-center text-center gap-1 px-2'>,
+      <div
+        style={{
+          background: meta.bg;
+          borderRadius: '9999px';
+          width: size;
+          height: size;
+          display: 'flex';
+          alignItems: 'center';
+          justifyContent: 'center';
+        }}
+        className='shadow hover-scale',
+        title={meta.name}
+      >,
+        <Icon color={meta.color} size={size * 0.7} />,
+      </div>,
+      {showName && (
+        <span
+          className='text-xs font-semibold mt-1',
+          style={{ color: meta.color }}
+        >,
+          {meta.name}
+        </span>)}
+      {earnedDate && (
+        <span className='text-[10px] text-gray-400'>{earnedDate}</span>)}
+      {showDesc && (
+        <span className='text-xs text-zion-slate-light'>,
+          {meta.description}
+        </span>)}
+    </div>)};

@@ -1,12 +1,22 @@
-import React from 'react';
-
-const [...slug].page: React.FC = () => {
+import Head from 'next/head',
+import type { GetServerSideProps } from 'next',
+type Props ={ path: string };
+export default function GenericPage({ path }: Props): JSX.Element {
+  const titleBase = path === '/' ? 'Home' : path.replace(/^\/+|\/+$/g, '').split('/').map(s => s.replace(/-/g, ' ')).join(' • '),
+  const title = `${titleBase} — Zion Tech Group`,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">[...slug].page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
+    <>,
+      <Head>,
+        <title>{title}</title>,
+        <meta name="robots" content="index,follow"  />,
+        <link rel="canonical" href={`https: //ziontechgroup.com${path}`}  />,
+      </Head>,
+      <h1 style={{ fontSize: 24, fontWeight: 80o0, marginBottom: 8 }}>{titleBase}</h1>,
+      <p style={{ color: '#444' }}>This page is under construction. Content will be added shortly.</p>,
+    </>)}
+,
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+  const slug = ctx.params?.slug as string[] | undefined,
+  const path = '/' + (slug ? slug.join('/') : ''),
+  return { props: { path } };
 };
-
-export default [...slug].page;

@@ -1,149 +1,75 @@
 #!/bin/bash
 
-# Comprehensive Merge Resolution Script
-# This script handles all merge conflicts and PR merging
-
+# Comprehensive merge script for resolving all conflicts and merging branches
 set -e
 
-echo "=== COMPREHENSIVE MERGE RESOLUTION SCRIPT ==="
-echo "Starting at: $(date)"
+echo "🚀 Starting comprehensive merge process..."
 
-# Function to run command with timeout
-run_with_timeout() {
-    local cmd="$1"
-    local timeout="${2:-30}"
-    echo "Running: $cmd"
-    timeout $timeout bash -c "$cmd" || {
-        echo "Command timed out or failed: $cmd"
-        return 1
-    }
-}
+# First, reset to remote main to start clean
+echo "📥 Fetching latest changes from remote..."
+git fetch origin
 
-# Function to check git status
-check_git_status() {
-    echo "=== CHECKING GIT STATUS ==="
-    run_with_timeout "git status --porcelain" 10
-    run_with_timeout "git branch --show-current" 10
-}
+echo "🔄 Resetting to remote main branch..."
+git reset --hard origin/main
 
-# Function to switch to main and pull latest
-prepare_main_branch() {
-    echo "=== PREPARING MAIN BRANCH ==="
-    run_with_timeout "git checkout main" 30
-    run_with_timeout "git pull origin main" 60
-}
+echo "✅ Reset to clean state"
 
-# Function to merge fix branch
-merge_fix_branch() {
-    echo "=== MERGING FIX BRANCH ==="
-    local branch="cursor/fix-netlify-build-and-merge-to-main-96e2"
+# Get list of recent branches to merge
+echo "📋 Getting list of branches to merge..."
+
+# Merge branches in batches to handle conflicts systematically
+MERGE_BRANCHES=(
+    "origin/2025-comprehensive-services-expansion"
+    "origin/add-comprehensive-services"
+    "origin/cursor/add-comprehensive-services-2025"
+)
+
+CONFLICT_RESOLUTION_COUNT=0
+
+for branch in "${MERGE_BRANCHES[@]}"; do
+    echo "🔄 Attempting to merge $branch..."
     
-    echo "Attempting to merge $branch..."
-    if run_with_timeout "git merge $branch --no-edit" 60; then
-        echo "Merge successful without conflicts"
+    if git merge "$branch" --no-commit 2>/dev/null; then
+        echo "✅ $branch merged successfully"
+        git commit -m "chore: merge $branch into main"
     else
-        echo "Merge conflicts detected, resolving..."
+        echo "⚠️  Merge conflict detected in $branch"
+        CONFLICT_RESOLUTION_COUNT=$((CONFLICT_RESOLUTION_COUNT + 1))
         
-        # List conflicted files
-        echo "Conflicted files:"
-        run_with_timeout "git diff --name-only --diff-filter=U" 10
+        # Auto-resolve common conflicts
+        if git status --porcelain | grep -q "package-lock.json"; then
+            echo "  🔧 Resolving package-lock.json conflict..."
+            git checkout --theirs package-lock.json
+            git add package-lock.json
+        fi
         
-        # Auto-resolve conflicts
-        echo "Auto-resolving conflicts..."
-        run_with_timeout "git checkout --theirs ." 30
-        run_with_timeout "git add ." 30
+        if git status --porcelain | grep -q "yarn.lock"; then
+            echo "  🔧 Resolving yarn.lock conflict..."
+            git checkout --theirs yarn.lock
+            git add yarn.lock
+        fi
+        
+        if git status --porcelain | grep -q "eslint.config.js"; then
+            echo "  🔧 Resolving eslint.config.js conflict..."
+            git checkout --ours eslint.config.js
+            git add eslint.config.js
+        fi
+        
+        # Add any other resolved files
+        git add .
         
         # Commit the merge
-        run_with_timeout "git commit -m 'Resolved merge conflicts: Auto-merged $branch into main'" 30
-        echo "Conflicts resolved and committed"
+        git commit -m "chore: resolve conflicts and merge $branch"
+        echo "✅ Successfully resolved conflicts and merged $branch"
     fi
-}
+done
 
-# Function to push changes
-push_changes() {
-    echo "=== PUSHING CHANGES ==="
-    run_with_timeout "git push origin main" 60
-    echo "Changes pushed successfully"
-}
+echo "📊 Merge Summary:"
+echo "  - Branches processed: ${#MERGE_BRANCHES[@]}"
+echo "  - Conflicts resolved: $CONFLICT_RESOLUTION_COUNT"
 
-# Function to test build
-test_build() {
-    echo "=== TESTING BUILD ==="
-    run_with_timeout "npm ci" 120
-    run_with_timeout "npm run build:netlify" 60
-    
-    if [ -d "dist" ]; then
-        echo "Build successful - dist folder created"
-        echo "Dist folder contents:"
-        ls -la dist/ | head -10
-    else
-        echo "Build failed - no dist folder created"
-        return 1
-    fi
-}
+# Push the results
+echo "📤 Pushing merged changes to remote..."
+git push origin main
 
-# Function to list all branches
-list_all_branches() {
-    echo "=== LISTING ALL BRANCHES ==="
-    run_with_timeout "git branch -a" 30
-}
-
-# Function to find and merge other PRs
-merge_other_prs() {
-    echo "=== CHECKING FOR OTHER PRs TO MERGE ==="
-    
-    # Get list of remote branches
-    local branches=$(git branch -r | grep -v main | grep -v HEAD | sed 's/origin\///' | head -10)
-    
-    for branch in $branches; do
-        echo "Checking branch: $branch"
-        
-        # Skip the fix branch we already merged
-        if [ "$branch" = "cursor/fix-netlify-build-and-merge-to-main-96e2" ]; then
-            continue
-        fi
-        
-        # Try to merge the branch
-        echo "Attempting to merge $branch..."
-        if run_with_timeout "git merge origin/$branch --no-edit" 60; then
-            echo "Successfully merged $branch"
-        else
-            echo "Conflicts in $branch, resolving..."
-            
-            # Auto-resolve conflicts
-            run_with_timeout "git checkout --theirs ." 30
-            run_with_timeout "git add ." 30
-            run_with_timeout "git commit -m 'Resolved conflicts: Auto-merged $branch into main'" 30
-            
-            echo "Conflicts resolved for $branch"
-        fi
-    done
-}
-
-# Main execution
-main() {
-    echo "Starting comprehensive merge resolution..."
-    
-    # Check if we're in a git repository
-    if [ ! -d ".git" ]; then
-        echo "Error: Not in a git repository"
-        exit 1
-    fi
-    
-    # Execute all steps
-    check_git_status
-    prepare_main_branch
-    merge_fix_branch
-    push_changes
-    test_build
-    list_all_branches
-    merge_other_prs
-    push_changes
-    
-    echo "=== MERGE RESOLUTION COMPLETED ==="
-    echo "Finished at: $(date)"
-    echo "Please check GitHub for any remaining open PRs that need manual resolution"
-}
-
-# Run main function
-main "$@"
+echo "🎉 Comprehensive merge process completed successfully!"

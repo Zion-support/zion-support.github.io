@@ -36,7 +36,8 @@
 
 /* Enhanced animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -50,7 +51,8 @@
 
 /* Gradient text animations */
 @keyframes gradient-shift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -78,7 +80,9 @@
 
 /* Hover effects */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
@@ -134,7 +138,7 @@
   .no-print {
     display: none !important;
   }
-  
+
   .print-optimized {
     background: white !important;
     color: black !important;

@@ -1,12 +1,14 @@
 import React from 'react';
 
-const skeleton: React.FC = () => {
+import { cn } from "@/lib/utils",
+function Skeleton({
+  className;
+  ...props}: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">skeleton</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default skeleton;
+    <div
+      className={cn("animate-pulse rounded-md bg-muted"className)}
+      {...props}
+    />)}
+,
+export { Skeleton }
+,

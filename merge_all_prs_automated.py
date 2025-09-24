@@ -11,7 +11,7 @@ import sys
 import time
 
 # GitHub API configuration
-GITHUB_TOKEN = "ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r"
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 REPO_OWNER = "Zion-Holdings"
 REPO_NAME = "zion.app"
 API_BASE = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}"

@@ -1,12 +1,17 @@
-import React from 'react';
-
-const mobile-app-development-chat: React.FC = () => {
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+const MobileAppDevelopmentChat: NextPage = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">mobile-app-development-chat</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default mobile-app-development-chat;
+    <div>,
+      <Head>,
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>,
+        <meta name='description' content='MobileAppDevelopmentChat service' />,
+      </Head>,
+      <main>,
+        <h1>MobileAppDevelopmentChat</h1>,
+        <p>Service details coming soon...</p>,
+        <Link href='/services'>Back to Services</Link>,
+      </main>,
+    </div>)};
+export default MobileAppDevelopmentChat;

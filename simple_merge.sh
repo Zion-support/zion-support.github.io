@@ -1,42 +1,34 @@
 #!/bin/bash
 
-echo "Starting simple merge process..."
+echo "🚀 Starting simple PR merge process..."
 
-# Fetch latest changes
-git fetch origin
+# Get the most recent non-draft PRs and try to merge them
+PR_NUMBERS=(17249 17248 17247 17246 17242 17241 17240 17239)
 
-# Add all current changes
-git add .
-
-# Commit current changes
-git commit -m "Add comprehensive 2034 content and improvements - Ultimate Tech Revolution, Revolutionary Services, and enhanced promotional banners"
-
-# Try to merge recent branches
-branches=(
-    "origin/cursor/create-and-deploy-new-content-f527"
-    "origin/cursor/create-and-deploy-new-content-f495"
-    "origin/cursor/create-and-deploy-new-content-f105"
-)
-
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
-    if git merge "$branch" --no-edit 2>/dev/null; then
-        echo "✓ Successfully merged $branch"
-    else
-        echo "⚠ Conflict in $branch, resolving..."
-        git checkout --ours . 2>/dev/null
-        git add . 2>/dev/null
-        if git commit -m "Merge $branch - resolved conflicts" 2>/dev/null; then
-            echo "✓ Resolved conflicts and merged $branch"
-        else
-            echo "✗ Failed to merge $branch, aborting..."
-            git merge --abort 2>/dev/null
-        fi
-    fi
+for pr_number in "${PR_NUMBERS[@]}"; do
+  echo "📋 Processing PR #$pr_number"
+  
+  # Try to merge via API
+  echo "  🔄 Attempting API merge..."
+  response=$(curl -s -X PUT \
+    -H "Accept: application/vnd.github.v3+json" \
+    -H "Authorization: token ${GITHUB_TOKEN}" \
+    -d '{"commit_title":"Merge PR '$pr_number'","merge_method":"merge"}' \
+    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number/merge")
+  
+  # Check if merge was successful
+  if echo "$response" | grep -q '"merged":true'; then
+    echo "  ✅ Successfully merged PR #$pr_number"
+  else
+    echo "  ❌ Failed to merge PR #$pr_number"
+    echo "  Response: $response"
+  fi
+  
+  echo ""
 done
 
-# Push all changes
-echo "Pushing changes..."
-git push origin main --force
+# Push any changes
+echo "🚀 Pushing changes to main branch..."
+git push origin main
 
-echo "✓ Simple merge process completed!"
+echo "📊 Merge process completed"

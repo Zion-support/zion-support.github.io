@@ -1,22 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const NewProductsPage: React.FC = () => {
+import { useState } from "react";
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { NEW_PRODUCTS } from "@/data/newProductsData";
+const CATEGORY_FILTERS = Array.from(
+  new Set(NEW_PRODUCTS.map(p => p.category))).map(c => ({ label: c, value: c }));
+export default function NewProductsPage() {
+  const [listings] = useState<ProductListing[]>([...NEW_PRODUCTS]);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>NewProductsPage | Zion Tech Group</title>
-        <meta name="description" content="NewProductsPage - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">NewProductsPage</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default NewProductsPage;
+    <DynamicListingPage
+      title="New Products",
+      description="Explore our latest products priced for today's market.",
+      categorySlug="new-products",
+      listings={listings}
+      categoryFilters={CATEGORY_FILTERS}
+      initialPrice={{ min: 0, max: 5000 }}
+      detailBasePath="/product",
+    />);
+}
+,

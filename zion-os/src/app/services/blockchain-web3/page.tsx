@@ -1,10 +1,12 @@
-export default function Page() {
+'use client',
+export default function BlockchainWeb3Page() {
   return (
-    <div className="min-h-screen px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Services Blockchain Web3 Page</h1>
-        <p className="text-white/70">Content coming soon.</p>
-      </div>
-    </div>
-  );
-}
+    <div className='min-h-screen bg-white'>,
+      <section className='py-20 text-center'>,
+        <h1 className='text-4xl font-bold'>Blockchain & Web3</h1>,
+        <p className='text-lg text-gray-600 max-w-2xl mx-auto'>,
+          Secure blockchain integrations and Web3 solutions.,
+        </p>,
+      </section>,
+    </div>)}
+,

@@ -1,12 +1,4 @@
 from django.urls import path, include
-<<<<<<< HEAD
-from . import views
-
-urlpatterns = [
-    path('auth/', include('authentication.urls')),
-    path('api/coupons/', include('promotions.urls')),
-]
-=======
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.permissions import AllowAny
@@ -18,8 +10,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('auth/', include('authentication.urls')),
-    path('api/', include('public_api.urls')),
+    path('auth/', include('backend.authentication.urls')),
+    path('api/', include('backend.public_api.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
 ]
 
@@ -37,4 +29,3 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     # Add staticfiles serving for development if not already handled by runserver or whitenoise for /static/
     # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
->>>>>>> origin/auto/autonomy-17186719616

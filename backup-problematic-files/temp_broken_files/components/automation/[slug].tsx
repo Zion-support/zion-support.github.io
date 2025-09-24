@@ -1,12 +1,30 @@
-import React from 'react';
 
-const [slug]: React.FC = () => {
+,
+import type { NextPage } from 'next';
+import Head from 'next / head';
+import { use_router } from 'next / router';
+import EnhancedLayout from '@/components / layout / EnhancedLayout';
+const AutomationDetail: NextPage = () => {
+  const router = use_router ();
+  const { slug } = router.query as { slug?: string };
+  let title = 'Automation Report';
+  let data: any = null;
+  try {
+    // Check condition,
+if ( {) {
+  $2}
+      data = require ('@/data / reports / marketplace - insights.json');
+      title = 'Marketplace Insights'} else // Check condition,
+if ( {) {
+  $2}
+      data = require ('@/data / reports / content - health.json');
+      title = 'Content Health'}
+  } catch (e) {
+    data = null}
+,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">[slug]</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default [slug];
+    <EnhancedLayout>,
+      <Head>,
+        <title>{_title} - Zion Tech Solutions</title>,
+      </Head>,
+      <h1 className=&quot,text-xl font-semibold mb-4&quot>{title}</h1>})

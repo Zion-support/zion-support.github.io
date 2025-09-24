@@ -1,12 +1,37 @@
 import React from 'react';
-
-const ConversionAnalysisChart: React.FC = () => {
+import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
+import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
+interface ConversionAnalysisProps {
+  data: Array<Record<stringany>>,
+  timeRange: string,
+  onTimeRangeChange: (range: string) => void}
+,
+export function ConversionAnalysisChart({
+  datatimeRangeonTimeRangeChange;
+}: ConversionAnalysisProps) {
+  const dataKeys =,
+    data && data.length > 0,
+      ? Object.keys(data[0]).filter(key => key !== 'date'),
+      : [],
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ConversionAnalysisChart</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ConversionAnalysisChart;
+    <Card className='bg-zion-blue-dark border-zion-blue-light'>,
+      <CardHeader>,
+        <CardTitle className='text-white text-lg'>,
+          Conversion Analysis,
+        </CardTitle>,
+        <CardDescription className='text-zion-slate-light'>,
+          Track different conversion types,
+        </CardDescription>,
+      </CardHeader>,
+      <CardContent>,
+        <AnalyticsChart
+          title='',
+          data={data || []}
+          dataKeys={dataKeys}
+          type='bar',
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />,
+      </CardContent>,
+    </Card>)}
+,

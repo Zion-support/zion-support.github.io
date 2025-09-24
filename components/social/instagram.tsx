@@ -1,12 +1,22 @@
-import React from 'react';
-
-const instagram: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">instagram</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default instagram;
+"use client",
+import React{ useEffect } from 'react',
+import Head from 'next/head',
+export default function InstagramRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //instagram.com/ziontechgroup')}
+	}[]),
+	return (
+		<>,
+			<Head>,
+				<title>Instagram | Zion Tech Group</title>,
+				<link rel="canonical" href="https: //instagram.com/ziontechgroup"  />,
+				<meta httpEquiv="refresh" content="0,url=https://instagram.com/ziontechgroup"  />,
+				<meta name="robots" content="noindexnofollow"  />,
+			</Head>,
+			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">,
+				<a href="https://instagram.com/ziontechgroup" className="text-cyan-40o0 underline">,
+					Continue to Instagram,
+				</a>,
+			</div>,
+		</>)}

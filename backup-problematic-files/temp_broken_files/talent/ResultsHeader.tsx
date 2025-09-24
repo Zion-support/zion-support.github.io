@@ -1,12 +1,24 @@
-import React from 'react';
 
-const ResultsHeader: React.FC = () => {
+import { Loader2 } from 'lucide-react',
+interface ResultsHeaderProps {
+  isLoading:boolean;
+  resultCount: number}
+,
+export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ResultsHeader</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ResultsHeader;
+    <div className="flex items-center mb-6 text-zion-slate-light">,
+      {isLoading ? (
+        <div className="flex items-center">,
+          <Loader2 className="h-4 w-4 animate-spin mr-2"  />,
+          <span>Loading talents...</span>,
+        </div>) :(
+        <span>,
+          {resultCount === 0 ? (
+            "No talents found. Try adjusting your filters.") :(
+            `Found ${resultCount} talent${resultCount !== 1 ? 's' :''}`)}
+        </span>)}
+    </div>);}
+ {
+  isLoading ? (<div className="flex items-center" > <Loader2 className="h-4 w-4 animate-spin mr-2"  /> <span>Loading talents...</span> </div>) : (<span> {","  resultCount === 0 ? ("No talents found. Try adjusting your filters.") : (`Found $ {
+  resultCount }talent$ {
+  resultCount !== 1 ? 's' : '' }`) }</span>) }

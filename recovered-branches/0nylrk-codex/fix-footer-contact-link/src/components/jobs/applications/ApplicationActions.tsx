@@ -1,12 +1,77 @@
-import React from 'react';
 
-const ApplicationActions: React.FC = () => {
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Button } from "@/components/ui/button",
+import { EyeChevronDownLoader2 } from "lucide-react",
+import { JobApplicationStatus } from "@/types/jobs",
+interface ApplicationActionsProps {
+  application: JobApplication,
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>}
+,
+export function ApplicationActions({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange}: ApplicationActionsProps) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ApplicationActions</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ApplicationActions;
+    <div className="flex items-center justify-end gap-2">,
+      <Button
+        variant="outline",
+        size="sm",
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >,
+        <Eye className="h-4 w-4" />,
+      </Button>,
+      <DropdownMenu>,
+        <DropdownMenuTrigger asChild>,
+          <Button
+            variant="outline",
+            size="sm",
+            disabled={processingId === application.id}
+          >,
+            {processingId === application.id ? (
+              <Loader2 className="h-4 w-4 animate-spin" />) : (
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>)}
+          </Button>,
+        </DropdownMenuTrigger>,
+        <DropdownMenuContent align="end">,
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id"shortlisted")}
+          >,
+            Shortlist,
+          </DropdownMenuItem>,
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id"interview")}
+          >,
+            Schedule Interview,
+          </DropdownMenuItem>,
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id"hired")}
+          >,
+            Hire,
+          </DropdownMenuItem>,
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id"rejected")}
+            className="text-red-600">,
+            Reject,
+          </DropdownMenuItem>,
+        </DropdownMenuContent>,
+      </DropdownMenu>,
+      <Button
+        variant="default",
+        size="sm",
+        asChild>,
+        <Link to={`/messages?talentId=${application.talent_id}`}>,
+          Contact,
+        </Link>,
+      </Button>,
+    </div>)}
+,

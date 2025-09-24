@@ -2,8 +2,8 @@
   "folders": [
     {
       "name": "zion.app",
-      "path": "."
-    }
+      "path": ".",
+    },
   ],
   "settings": {
     "git.enabled": true,
@@ -14,13 +14,13 @@
     "git.showPushSuccessNotification": true,
     "git.showProgress": true,
     "git.autoStash": true,
-    "git.autoRepositoryDetection": true
+    "git.autoRepositoryDetection": true,
   },
   "extensions": {
     "recommendations": [
       "ms-vscode.vscode-git",
       "ms-vscode.vscode-git-graph",
-      "eamodio.gitlens"
-    ]
-  }
+      "eamodio.gitlens",
+    ],
+  },
 }

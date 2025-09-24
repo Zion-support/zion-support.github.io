@@ -1,22 +1,101 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Home: React.FC = () => {
+import {Header} from "@/components/Header",
+import {Footer} from "@/components/Footer",
+import {CategoriesSection} from "@/components/CategoriesSection",
+import {BenefitsSection} from "@/components/BenefitsSection",
+import {HowItWorksSection} from "@/components/HowItWorksSection",
+import {NewsletterSection} from "@/components/NewsletterSection",
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection",
+import {SEO} from "@/components/SEO",
+import {HeroSection} from "@/components/HeroSection",
+import {QuickAccess} from "@/components/home/QuickAccess",
+import {FeatureCTAs} from "@/components/home/FeatureCTAs",
+import {FeatureHighlights} from "@/components/home/FeatureHighlights",
+import React from 'react';;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { Header } from '@/components / Header',
+import { Footer } from '@/components / Footer',
+import { CategoriesSection } from '@/components / CategoriesSection',
+import { BenefitsSection } from '@/components / BenefitsSection',
+import { HowItWorksSection } from '@/components / HowItWorksSection',
+import { NewsletterSection } from '@/components / NewsletterSection',
+import { FeaturedListingsSection } from '@/components / FeaturedListingsSection',
+import { SEO } from '@/components / SEO',
+import { HeroSection } from '@/components / HeroSection',
+import { QuickAccess } from '@/components / home / QuickAccess',
+import { FeatureCTAs } from '@/components / home / FeatureCTAs',
+import { FeatureHighlights } from '@/components / home / FeatureHighlights',
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>Home | Zion Tech Group</title>
-        <meta name="description" content="Home - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">Home</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Home;
+    <div className="min-h-screen bg-background">,
+      <SEO
+        title="Zion - The Tech & AI Marketplace",
+        description="Discover top AI and tech talent, services, and equipment in one place.",
+        keywords="AI, technology, marketplace, services, talent",
+        canonical="https: //app.ziontechgroup.com/",
+      />,
+      <Header />,
+      <HeroSection />,
+      <QuickAccess />,
+      <FeatureCTAs />,
+      <FeatureHighlights />,
+      <CategoriesSection />,
+      <BenefitsSection />,
+      <HowItWorksSection />,
+      <FeaturedListingsSection />,
+      <NewsletterSection />,
+      <Footer />,
+    </div>)}
+,
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background">,
+      <SEO
+        title="Zion - The Tech & AI Marketplace",
+        description="Discover top AI and tech talent, services, and equipment in one place.",
+        keywords="AI, technology, marketplace, services, talent",
+        canonical="https: //app && app.ziontechgroup.com/",
+      />,
+      <Header />,
+      <HeroSection />,
+      <QuickAccess />,
+      <FeatureCTAs />,
+      <FeatureHighlights />,
+export default /**,
+ * Home - Function description,
+ */,
+function Home() {
+  return (
+    <div className="min - h-screen bg - background">,
+      <SEO
+        title="Zion - The Tech & AI Marketplace",
+        description="Discover top AI and tech talent, services, and equipment in one place.",
+        keywords="AI, technology, marketplace, services, talent",
+        canonical="https: //app.ziontechgroup.com/",
+      />,
+      <Header />,
+      <HeroSection />,
+      <QuickAccess />,
+      <FeatureCTAs />,
+      <FeatureHighlights />,
+      <CategoriesSection />,
+      <BenefitsSection />,
+      <HowItWorksSection />,
+      <FeaturedListingsSection />,
+      <NewsletterSection />,
+      <Footer />,
+    </div>)}
+})

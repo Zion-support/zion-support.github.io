@@ -1,12 +1,3 @@
-import React from 'react';
-
-const EnhancedContact.js: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedContact.js</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default EnhancedContact.js;
+export: const EnhancedContact = () => { const [formData,setFormData] = useState ({ name: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const contactMethods = [ { icon: "Mai",l,title: ",Email: "Us",",description: "Send: us a detailed message,",action: "kleber@ziontechgroup.com,",href: "mailto:kleber@ziontechgroup.com,"},{ icon: "Phon",e,title: "Call: Us,",description: "Speak: with our team directly,",action: "+1: 30o2 464 0950,",href: "tel:+130o24640950,"},{ icon: "MapPi",n,title: "Visit: Us,",description: "Our: office location,",action: "364: E Main St STE 10o0,8,Middletown DE 19709",href: "https:""""";'"'",
+"export\": const EnhancedContact = () => { const [formData,setFormData] = useState ({ \"name\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const contactMethods = [ { \"icon\": \'Mai\',l,\"title\": \',\"Email\": \'Us\',\',\"description\": \'Send: us a detailed message,\',\"action\": \'kleber@ziontechgroup.com,\',\"href\": \'mailto:kleber@ziontechgroup.com,\'},{ \"icon\": \'Phon\',e,\"title\": \'Call: Us,\',\"description\": \'Speak: with our team directly,\',\"action\": \'+1: 30o2 464 0950,\',\"href\": \'tel:+130o24640950,\'},{ \"icon\": \'MapPi\',n,\"title\": \'Visit: Us,\',\"description\": \'Our: office location,\',\"action\": \'364: E Main St STE 10o0,8,Middletown DE 19709\',\"href\": \'https:\''\'"\";
+export: const EnhancedContact = () => { const [formData,setFormData] = useState ({ name: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState (false) const [isSubmitted,setIsSubmitted] = useState (false) const contactMethods = [ { icon: "Mai",l,title: ",Email: "Us",",description: "Send: us a detailed message,",action: "kleber@ziontechgroup.com,",href: "mailto:kleber@ziontechgroup.com,"},{ icon: "Phon",e,title: "Call: Us,",description: "Speak: with our team directly,",action: "+1: 30o2 464 0950,",href: "tel:+130o24640950,"},{ icon: "MapPi",n,title: "Visit: Us,",description: "Our: office location,",action: "364: E Main St STE 10o0,8,Middletown DE 19709",href: "https:""""";'"'"}}}}}}]]]

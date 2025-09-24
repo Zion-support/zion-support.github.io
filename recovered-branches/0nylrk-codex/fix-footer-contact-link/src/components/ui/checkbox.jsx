@@ -1,12 +1,21 @@
-import React from 'react';
-
-const checkbox: React.FC = () => {
+export function Checkbox({
+  checked;
+  onChange;
+  label;
+  disabled = false;
+  className = '';
+}) {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">checkbox</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default checkbox;
+    <label
+      className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}
+    >,
+      <input
+        type='checkbox',
+        checked={checked}
+        onChange={e => onChange(e.target.checked)}
+        disabled={disabled}
+        className='w-4 h-4 text-zion-cyan border-gray-30o0 rounded focus: ring-zion-cyan focus:ring-2',
+      />,
+      {label && <span className='text-sm text-gray-70o0'>{label}</span>}
+    </label>)}
+,

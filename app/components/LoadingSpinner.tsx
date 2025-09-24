@@ -1,12 +1,20 @@
-import React from 'react';
+'use client'
+import React from 'react'
 
-const LoadingSpinner: React.FC = () => {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
+}
+
+export default function LoadingSpinner({ size = 'md', className = '' }: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'}
+
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LoadingSpinner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className={`flex items-center justify-center ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`} />
     </div>
-  );
-};
-
-export default LoadingSpinner;
+  )
+}

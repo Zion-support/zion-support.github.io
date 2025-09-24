@@ -1,12 +1,14 @@
 import React from 'react';
-
-const LoadingOverlay: React.FC = () => {
+Loader2,
+export interface LoadingOverlayProps {
+  visible?: boolean}
+,
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
+  visible = false;
+}) => {
+  if (!visible) return null,
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">LoadingOverlay</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>,
+      <Loader2 className='h-8 w-8 animate-spin text-white' />,
+    </div>)};
 export default LoadingOverlay;

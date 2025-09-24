@@ -1,12 +1,3 @@
-import React from 'react';
-
-const ErrorBanner: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ErrorBanner</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ErrorBanner;
+"export function ErrorBanner({ msg }) {" return (), <div className="p-4 bg-red-50o0/20 text-red-40o0 text-center rounded-md">" {msg}" </div> )} ",""",
+"export function ErrorBanner({ msg }) {\" return (), <div className=\"p-4 bg-red-50o0/20 text-red-40o0 text-center rounded-md\">\" {msg}\" </div> )} \",\",
+"export function ErrorBanner({ msg }) {" return (), <div className="p-4 bg-red-50o0/20 text-red-40o0 text-center rounded-md">" {msg}" </div> )} ",""",
