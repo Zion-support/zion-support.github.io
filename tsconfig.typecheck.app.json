@@ -1,0 +1,38 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
+    "automation/**",
+    "server/**",
+    "scripts/**",
+    "__tests__/**",
+    "tests/**",
+    "test/**",
+    "src/**",
+    "components/**",
+    "utils/**",
+    "zion-*/**",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*",
+    "**/*.bak/**",
+    "**/backups/**",
+    "**/backup/**",
+    "**/recovered-branches/**"
+  ]
+}

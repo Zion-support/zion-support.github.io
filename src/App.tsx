@@ -1,10 +1,4 @@
-function App() {
-  return (
-    <div className="App">
-      <h1>Zion Tech Group</h1>
-      <p>Welcome to our technology platform</p>
-    </div>
-  )
+/* simplified to resolve conflicts and router deps */
+export default function Placeholder() {
+  return null;
 }
-
-export default App
