@@ -286,7 +286,8 @@ export default [
              '**/test/**',
              '**/src-corrupted/**',
              '**/src.corrupted/**',
-             '**/src-clean/**',
+             // Project scoping: ignore legacy corrupted src, allow src-clean
+             '**/src/**',
              '**/services_backup/**',
              '**/solutions.disabled/**',
              '**/solutions/**',
