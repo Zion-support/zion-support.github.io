@@ -13,9 +13,52 @@ import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
 import PerformanceOptimizations from '../components/PerformanceOptimizations';
 
 export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-};
+  title: {
+    default: 'Zion Tech Group - AI & Technology Solutions',
+    template: '%s | Zion Tech Group'
+  },
+  description:
+    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: ['AITechnology', 'CloudCybersecurity', 'Micro SaaSConsulting', 'Digital Transformation'],
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  metadataBase: new URL('https://zion.app'),
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://zion.app',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description:
+      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    siteName: 'Zion Tech Group'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description:
+      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+    creator: '@ziontech'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  verification: { google: 'your-google-verification-code' }
+}
 
 function Header() {
   return (
