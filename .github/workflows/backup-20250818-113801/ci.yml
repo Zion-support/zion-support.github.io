@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CI
 
 on:
   push:
@@ -40,7 +40,7 @@ jobs:
         run: npm run type-check
 
       - name: Lint
-        run: npm run lint -- --max-warnings 100 || echo "Linting completed with warnings/errors - continuing build"
+        run: npm run lint
 
       - name: Build
         env:
@@ -51,6 +51,5 @@ jobs:
         env:
           CI: true
         run: npm run test:smoke
-        continue-on-error: true
 
 

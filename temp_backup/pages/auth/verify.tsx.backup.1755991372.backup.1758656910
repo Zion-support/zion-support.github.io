@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default function VerifyPage() {
+  return <div>Verify Account</div>;
+}
+export default function Verify() {
+  return <div className="py-10">Verify Email</div>;
+}
+=======
+export default function VerifyEmail() { return <div>Verify email…</div>; }
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
