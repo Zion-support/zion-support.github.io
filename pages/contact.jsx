@@ -71,7 +71,7 @@ function Contact() {
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000)
-    } catch (error) {
+    } catch {
       // Swallow error in demo form
     } finally {
       setIsSubmitting(false)
