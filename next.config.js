@@ -23,7 +23,7 @@ const nextConfig = {
   // Bundle optimization
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+    appDir: true,
   },
   // Security headers
   async headers() {
