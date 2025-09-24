@@ -1,82 +1,82 @@
-'use client',
-,
-import AnimatedCounter from './AnimatedCounter',
-,
-interface StatItem {,
-  label: string,
-  value: number,
-  prefix?: string | undefined,
-  suffix?: string | undefined,
-  description?: string,
-,}
-,
-const stats: StatItem[] = [,
-  {,
-    label: 'Projects Completed',;
-    value: 150,;
-    suffix: '+',;
-    description: 'Successful AI implementations',;
-  },;
-  {,
-    label: 'Client Satisfaction',;
-    value: 98,;
-    suffix: '%',;
-    description: 'Average client rating',;
-  },;
-  {,
-    label: 'Cost Reduction',;
-    value: 45,;
-    suffix: '%',;
-    description: 'Average operational savings',;
-  },;
-  {,
-    label: 'Response Time',;
-    value: 99.9,;
-    suffix: '%',;
-    description: 'System uptime guarantee',;
-  },;
-],
-,
-export default function StatsSection() {,
-  return (,
-    <div className='bg-gradient-to-r from-blue-50 to-indigo-100 dark: from-blue-900/20 dark:to-indigo-900/20 py-16'>,
-      <div className='max-w-6xl mx-auto px-6'>,
-        <div className='text-center mb-12'>,
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4'>,
-            Trusted by Industry Leaders,
-          </h2>,
-          <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto'>,
-            Our proven track record speaks for itself. Here's what we've,
-            achieved for our clients.,
-          </p>,
-        </div>,
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>,
-          {stats.map((stat, index) => (,
-            <div,
-              key={stat.label}
-              className='text-center p-6 bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300',
-              style={{ animationDelay: `${index * 0.1,}s` }}
-            >,
-              <div className='text-3xl md: text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'>,
-                <AnimatedCounter,
-                  end={stat.value,}
-                  prefix={stat.prefix}
-                  suffix={stat.suffix}
-                />,
-              </div>,
-              <h3 className='text-lg font-semibold text-gray-900 dark: text-white mb-1'>,
-                {stat.label,}
-              </h3>,
-              {stat.description && (,
-                <p className='text-sm text-gray-600 dark: text-gray-300'>,
-                  {stat.description,}
-                </p>,
-              )}
-            </div>,
-          ))}
-        </div>,
-      </div>,
-    </div>,
-  ),
+'use client';
+
+import AnimatedCounter from './AnimatedCounter';
+
+interface StatItem {
+  label: string;
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  description?: string;
 }
-,
+
+const stats: StatItem[] = [
+  {
+    label: 'Projects Completed',
+    value: 150,
+    suffix: '+',
+    description: 'Successful AI implementations',
+  },
+  {
+    label: 'Client Satisfaction',
+    value: 98,
+    suffix: '%',
+    description: 'Average client rating',
+  },
+  {
+    label: 'Cost Reduction',
+    value: 45,
+    suffix: '%',
+    description: 'Average operational savings',
+  },
+  {
+    label: 'Response Time',
+    value: 99.9,
+    suffix: '%',
+    description: 'System uptime guarantee',
+  },
+];
+
+export default function StatsSection() {
+  return (
+    <div className='bg-gradient-to-r from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 py-16'>
+      <div className='max-w-6xl mx-auto px-6'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4'>
+            Trusted by Industry Leaders
+          </h2>
+          <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto'>
+            Our proven track record speaks for itself. Here's what we've
+            achieved for our clients.
+          </p>
+        </div>
+
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className='text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300'
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className='text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
+                <AnimatedCounter
+                  end={stat.value}
+                  prefix={stat.prefix ?? ''}
+                  suffix={stat.suffix ?? ''}
+                />
+              </div>
+              <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-1'>
+                {stat.label}
+              </h3>
+              {stat.description && (
+                <p className='text-sm text-gray-600 dark:text-gray-300'>
+                  {stat.description}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
