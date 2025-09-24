@@ -1,0 +1,18 @@
+=======
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",;
+=======
+"export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+>>>>>>> main
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+"export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+=======
+=======
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",;
+"export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/addedServices2025.ts
+>>>>>>> pr-11935

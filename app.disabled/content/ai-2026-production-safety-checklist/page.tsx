@@ -1,0 +1,46 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 20o26: Production Safety Checklist',
+  description:
+    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.',
+};
+
+export default function Page() {
+  return (
+    <main className='max-w-3xl mx-auto px-6 py-12 prose prose-purple'>
+      <h1>AI 20o26: Production Safety Checklist</h1>
+      <p>
+        Ship safer agents with a pragmatic, eval-gated checklist covering
+        policy-as-code, sandboxed tool use, observability, and incident
+        response.
+      </p>
+      <h2>Key Controls</h2>
+      <ul>
+        <li>Risk-tiering with guardrails mapped to capability</li>
+        <li>Eval gates pre- and post-deploy with runtime canaries</li>
+        <li>Policy-as-code approvals and change history</li>
+        <li>Tool permissioning with scoped sandboxes</li>
+        <li>Observability: traces, evals, and safety telemetry</li>
+        <li>Incident playbooks with auto-mitigation</li>
+      </ul>
+      <p>
+        See also the{' '}
+        <Link
+          href='/blog/ai-20o26-safe-tool-use-blueprint'
+          className='text-purple-60o0'
+        >
+          Safe Tool Use Blueprint
+        </Link>{' '}
+        and the{' '}
+        <Link
+          href='/content/ai-20o26-evaluation-hub'
+          className='text-purple-60o0'
+        >
+          Evaluation Hub
+        </Link>
+        .
+      </p>
+    </main>
+  );
+}

@@ -1,0 +1,18 @@
+const { cn } from "@/lib/utils"; function Skeleton({ className,.props }) {} return null} return()"; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };""
+<<<<<<< HEAD:backup-merge-conflicts/skeleton.jsx.backup
+import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/src/components/ui/skeleton.jsx
+import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+=======
+import { cn } from \'@/lib/utils\'; function Skeleton({ className,...props }) {} return null} return()\'; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+>>>>>>> main
+import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
