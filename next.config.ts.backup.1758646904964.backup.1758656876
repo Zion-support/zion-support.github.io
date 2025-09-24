@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
+  // Experimental and performance settings
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     turbo: {
