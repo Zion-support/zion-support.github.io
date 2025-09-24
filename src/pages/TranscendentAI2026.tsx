@@ -198,7 +198,6 @@ const TranscendentAI2026: React.FC = () => {
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
               </div>
               </div>
-              </div>
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -465,8 +464,6 @@ const TranscendentAI2026: React.FC = () => {
 
               </div>
         {/* Revolutionary Applications */}
-              </div>
-        {/* Revolutionary Applications */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -645,9 +642,6 @@ const TranscendentAI2026: React.FC = () => {
             </p>
           </div>
         </divsection>
-
-          </div>
-        </motion.section>
 
           </div>
         </motion.section>

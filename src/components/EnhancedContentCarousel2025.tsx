@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-const EnhancedContentCarousel2025: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const contentItems = [
     {

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 const InteractiveTechShowcase2037: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
@@ -72,15 +71,6 @@ const InteractiveTechShowcase2037: React.FC = () => {
         <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Showcase 2037</h2>
         <p className="text-xl opacity-90 max-w-4xl mx-auto">
           Explore the most advanced technologies of 2037 with interactive demonstrations and real-time data
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white">
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          🚀 INTERACTIVE DEMO • 2037 TECHNOLOGY
-        </div>
-        <h2 className="text-4xl font-bold mb-4">Interactive Technology Showcase 2037</h2>
-        <p className="text-xl opacity-90 max-w-3xl mx-auto">
-          Experience the future of technology through our interactive demonstrations. 
-          Select a technology below to explore its capabilities and potential applications.
         </p>
       </div>
 

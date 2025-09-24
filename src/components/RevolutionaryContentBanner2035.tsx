@@ -87,10 +87,6 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             🚀 LIMITED TIME: Early Access to Revolutionary Technology
           </div>
         </div>
-          <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology 2035</h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the most advanced technology ever created: Conscious AI Systems, 
-            Quantum Consciousness, and Interdimensional Technology that transcends reality itself
           </p>
         </div>
         
