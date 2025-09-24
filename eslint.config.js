@@ -62,22 +62,11 @@ export default [
 			ecmaVersion: 2021,
 			sourceType: 'module',
 			globals: {
-				window: 'readonly',
-				document: 'readonly',
-				localStorage: 'readonly',
-				setTimeout: 'readonly',
-				clearTimeout: 'readonly',
-				setInterval: 'readonly',
-				clearInterval: 'readonly',
-				requestAnimationFrame: 'readonly',
-				cancelAnimationFrame: 'readonly',
-				IntersectionObserver: 'readonly',
-				HTMLImageElement: 'readonly',
-				HTMLSpanElement: 'readonly',
-				URL: 'readonly',
+				...globals.browser,
 				process: 'readonly',
 				console: 'readonly'
-			}},
+			}
+		},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
