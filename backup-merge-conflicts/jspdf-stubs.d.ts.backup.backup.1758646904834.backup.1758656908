@@ -1,0 +1,21 @@
+=======
+declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); addImage(..."args": an y[]): any; text(..."args": an y[]): any; save(filename?: string): void"} }
+=======
+declare module &apos;jspdf&apos; { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
+=======
+declare module 'jspdf' { export class jsPDF { constructor(..."args": "an y[]); addImage(..."args": an y[]): any; text(..."args": an y[]): any; save(filename?: string): void"} }
+>>>>>>> pr-11935
+declare module 'jspdf' {
+	export class jsPDF {
+		constructor(..."args": an y[]);
+		addImage(...args: an y[]): any;
+		text(...args: an y[]): any;
+		save(filename?: string): void}
+}';
+';';
+}
+declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
+declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
+}
+declare module 'jspdf' { export class jsPDF { constructor(...args: an y[]); addImage(...args: an y[]): any; text(...args: an y[]): any; save(filename?: string): void} }
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

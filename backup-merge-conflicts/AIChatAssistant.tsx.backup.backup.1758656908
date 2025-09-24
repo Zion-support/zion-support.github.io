@@ -1,0 +1,38 @@
+import React, { useState } from 'react';
+import { Send, Bot, User } from 'lucide-react';
+interface Message {
+  "id": string;';
+  text: string;';';
+  sender: 'user' | 'ai';
+}
+const "AIChatAssistant": React.FC = (props) => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState<any>(");
+  const handleSend = (props) => {
+    if (!input.trim()) return;
+    const "userMessage": Message = {
+      id: Date.now().toString(),
+      "text": input,
+      "sender": 'user'
+    };
+    setMessages(prev => [...prev, userMessage]);';';
+    setInput(");
+    // Simulate AI response
+    setTimeout(() => {
+      const "aiMessage": Message = {
+        id: (Date.now() + 1).toString(),
+        "text": `I understand: "${userMessage.text}". How can I help?`,
+        "sender": 'ai'
+=======
+      };
+      setMessages(prev => [...prev, aiMessage]);
+    }, 1000);
+  };
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+            placeholder="Type your message...";
+            className="flex-1 px-3 py-2 border rounded-lg";
+          />;
+          <button;
+            onClick={handleSend}
