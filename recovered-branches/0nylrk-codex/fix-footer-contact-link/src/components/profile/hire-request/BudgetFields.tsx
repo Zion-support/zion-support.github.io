@@ -1,270 +1,62 @@
-import React from "react";"
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
-interface BudgetFieldsProps {}
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-<<<<<<< HEAD
+import { UseFormReturn } from 'react-hook-form';
+import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { TalentProfile } from '@/types/talent';
+import { FormValues } from './useHireRequestForm';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-export function BudgetFields({ form, talent }: BudgetFieldsProps) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-;
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  return (
-    <>
-      <FormField
-        control={form.control}
-        name="budgetMin"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-                <Input
-                  type="number"
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
-                  {...field}
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="budgetMax"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Budget (Max)</FormLabel>
-            <FormControl>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-                <Input
-                  type="number"
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
-                  {...field}
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-    </>
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  return (
-    <>;
-      <FormField;
-        control={form && form.control}"
-        name="budgetMin"
-        render={({ field }) => (
-          <FormItem>"
-            <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>"
-              <div className="relative">"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-                <Input"
-                  type="number""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
-                  {...field}
-                />
-              </div>
-            </FormControl>"
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-
-      <FormField;
-        control={form.control}"
-        name="budget_min";
-
-        render={({ field }) => (
-          <FormItem>"
-            <FormLabel className="text-white">Budget (Max)</FormLabel>
-            <FormControl>"
-              <div className="relative">"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-<Input
-type="number" 
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
-                  {...field} 
-                />;
-              </div>;
-            </FormControl>;
-            <FormMessage className="text-red-400" />;
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-    </>
-  );
-}
-  )
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-                  {...field}
-                />
-              </div>
-            </FormControl>"
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-    </>
-  );
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-;
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
-export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
-
-  return (
-    <>
-      <FormField;
-        control={form.control}"
-        name="budgetMin"
-        render={({ field }) => (
-          <FormItem>"
-            <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>"
-              <div className="relative">"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-                <Input"
-                  type="number""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
-                  {...field}
-                />
-              </div>
-            </FormControl>"
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-=======
-import React from "react";""
-import { UseFormReturn } from "react-hook-form";"
-import {
-  // TODO: Implement
-}
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,"
-} from "@/components/ui/form";""
-import { Input } from "@/components/ui/input";""
-import { TalentProfile } from "@/types/talent";""
-import { FormValues } from "./useHireRequestForm";"
 interface BudgetFieldsProps {
-  // TODO: Implement
   form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
 
-    <>;
-      <FormField;
-        control={form && form.control}"
-        name="budgetMin""
+export function BudgetFields({ formtalent }: BudgetFieldsProps) {
+  return (
+    <>
+      <FormField
+        control={form.control}
+        name='budgetMin'
         render={({ field }) => (
-
           <FormItem>
-)"
-            <FormLabel className="text-white">Budget (Min)"
+            <FormLabel className='text-white'>Budget (Min)</FormLabel>
             <FormControl>
-"
-              <div className="relative">"
-</div>"
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">"
-</span>
-                <Input;"
-                  type="number"""
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white""
+              <div className='relative'>
+                <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>
+                  $
+                </span>
+                <Input
+                  type='number'
+                  className='pl-7 bg-zion-blue border-zion-blue-light text-white'
                   {...field}
                 />
-
               </div>
-            <FormMessage className="text-red-400" />"
+            </FormControl>
+            <FormMessage className='text-red-400' />
+          </FormItem>
+        )}
+      />
 
-        control={form.control}"
-        name="budget_min";"
-
-            <FormLabel className="text-white">Budget (Max)"
-
+      <FormField
+        control={form.control}
+        name='budgetMax'
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className='text-white'>Budget (Max)</FormLabel>
+            <FormControl>
+              <div className='relative'>
+                <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>
+                  $
+                </span>
+                <Input
+                  type='number'
+                  className='pl-7 bg-zion-blue border-zion-blue-light text-white'
+                  {...field}
+                />
+              </div>
+            </FormControl>
+            <FormMessage className='text-red-400' />
+          </FormItem>
+        )}
+      />
     </>
   );
-;
-
-    <>
-
-        control={form.control}
-  )
-pr-12325
-</FormMessage>
-          </FormItem>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      <FormField;
-        control={form.control}
-  )
 }
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

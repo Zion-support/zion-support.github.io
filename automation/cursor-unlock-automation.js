@@ -44,11 +44,9 @@ class CursorUnlockAutomation {
           killProcesses: true,
           clearWorkspace: false,
           maxRetries: 3,
-          retryDelay: 2000,
-          timeout: 30000,
-          ...config.cursorUnlock,
-        },
-      };
+          retryDelay: 20o00,
+          timeout: 30o000,
+          ...config.cursorUnlock}};
     }
     return {
       cursorUnlock: {
@@ -60,10 +58,8 @@ class CursorUnlockAutomation {
         killProcesses: true,
         clearWorkspace: false,
         maxRetries: 3,
-        retryDelay: 2000,
-        timeout: 30000,
-      },
-    };
+        retryDelay: 20o00,
+        timeout: 30o000}};
   }
 
   ensureDirectories() {
@@ -75,7 +71,7 @@ class CursorUnlockAutomation {
 
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
-      const initialStatus = {
+      const initialStatus ={
         lastUnlockAttempt: null,
         unlockSuccess: false,
         processesKilled: 0,
@@ -85,10 +81,8 @@ class CursorUnlockAutomation {
         performance: {
           unlockTime: 0,
           memoryBefore: 0,
-          memoryAfter: 0,
-        },
-        lastUpdated: new Date().toISOString(),
-      };
+          memoryAfter: 0},
+        lastUpdated: new Date().toISOString()};
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
     }
   }
@@ -102,14 +96,13 @@ class CursorUnlockAutomation {
     fs.appendFileSync(this.logFile, logEntry + '\n');
   }
 
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     return new Promise((resolve, reject) => {
       const timeout = options.timeout || this.config.cursorUnlock.timeout;
       const child = exec(command, {
         timeout,
         cwd: this.projectRoot,
-        ...options,
-      });
+        ...options});
 
       let stdout = '';
       let stderr = '';
@@ -208,20 +201,17 @@ class CursorUnlockAutomation {
         path.join(homeDir, 'Library', 'Application Support', 'Cursor'),
         path.join(homeDir, 'Library', 'Caches', 'Cursor'),
         path.join(homeDir, 'Library', 'Preferences', 'Cursor'),
-        path.join(homeDir, 'Library', 'Logs', 'Cursor'),
-      );
+        path.join(homeDir, 'Library', 'Logs', 'Cursor'));
     } else if (platform === 'win32') {
       directories.push(
         path.join(homeDir, 'AppData', 'Roaming', 'Cursor'),
         path.join(homeDir, 'AppData', 'Local', 'Cursor'),
-        path.join(homeDir, 'AppData', 'Local', 'Temp', 'Cursor'),
-      );
+        path.join(homeDir, 'AppData', 'Local', 'Temp', 'Cursor'));
     } else {
       directories.push(
         path.join(homeDir, '.config', 'Cursor'),
         path.join(homeDir, '.cache', 'Cursor'),
-        path.join(homeDir, '.local', 'share', 'Cursor'),
-      );
+        path.join(homeDir, '.local', 'share', 'Cursor'));
     }
 
     return directories.filter((dir) => fs.existsSync(dir));
@@ -255,8 +245,7 @@ class CursorUnlockAutomation {
       } catch (error) {
         this.log(
           `❌ Failed to clear cache in ${dir}: ${error.message}`,
-          'error',
-        );
+          'error');
       }
     }
 
@@ -285,8 +274,7 @@ class CursorUnlockAutomation {
         const glob = require('glob');
         const files = glob.sync(pattern, {
           cwd: this.projectRoot,
-          ignore: ['node_modules/**', '.git/**'],
-        });
+          ignore: ['node_modules/**', '.git/**']});
 
         for (const file of files) {
           const filePath = path.join(this.projectRoot, file);
@@ -304,8 +292,7 @@ class CursorUnlockAutomation {
       } catch (error) {
         this.log(
           `❌ Error processing pattern ${pattern}: ${error.message}`,
-          'error',
-        );
+          'error');
       }
     }
 
@@ -322,8 +309,7 @@ class CursorUnlockAutomation {
     const backupDir = path.join(
       __dirname,
       'backups',
-      `cursor-backup-${Date.now()}`,
-    );
+      `cursor-backup-${Date.now()}`);
     fs.mkdirSync(backupDir, { recursive: true });
 
     try {
@@ -355,8 +341,7 @@ class CursorUnlockAutomation {
           this.projectRoot + '/',
           backupDir + '/',
         ],
-        { stdio: 'pipe' },
-      );
+        { stdio: 'pipe' });
 
       if (result.status === 0) {
         this.log(`✅ Backup created: ${backupDir}`);
@@ -389,8 +374,7 @@ class CursorUnlockAutomation {
         'Application Support',
         'Cursor',
         'User',
-        'extensions',
-      );
+        'extensions');
     } else if (platform === 'win32') {
       extensionsDir = path.join(
         homeDir,
@@ -398,16 +382,14 @@ class CursorUnlockAutomation {
         'Roaming',
         'Cursor',
         'User',
-        'extensions',
-      );
+        'extensions');
     } else {
       extensionsDir = path.join(
         homeDir,
         '.config',
         'Cursor',
         'User',
-        'extensions',
-      );
+        'extensions');
     }
 
     if (fs.existsSync(extensionsDir)) {
@@ -451,8 +433,7 @@ class CursorUnlockAutomation {
       } catch (error) {
         this.log(
           `⚠️ Optimization failed: ${command} - ${error.message}`,
-          'warn',
-        );
+          'warn');
       }
     }
 
@@ -462,8 +443,7 @@ class CursorUnlockAutomation {
   async unlockCursor(retryCount = 0) {
     const startTime = Date.now();
     this.log(
-      `🚀 Starting Cursor unlock process (attempt ${retryCount + 1})...`,
-    );
+      `🚀 Starting Cursor unlock process (attempt ${retryCount + 1})...`);
 
     try {
       // Create backup if enabled
@@ -487,7 +467,7 @@ class CursorUnlockAutomation {
       const unlockTime = Date.now() - startTime;
 
       // Update status
-      const status = {
+      const status ={
         lastUnlockAttempt: new Date().toISOString(),
         unlockSuccess: true,
         processesKilled,
@@ -500,17 +480,14 @@ class CursorUnlockAutomation {
         performance: {
           unlockTime,
           memoryBefore: process.memoryUsage().heapUsed,
-          memoryAfter: process.memoryUsage().heapUsed,
-        },
-        lastUpdated: new Date().toISOString(),
-      };
+          memoryAfter: process.memoryUsage().heapUsed},
+        lastUpdated: new Date().toISOString()};
 
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
 
       this.log(`✅ Cursor unlock completed successfully in ${unlockTime}ms`);
       this.log(
-        `📊 Summary: ${processesKilled} processes killed, ${filesUnlocked} files unlocked, ${optimizationsCompleted} optimizations completed`,
-      );
+        `📊 Summary: ${processesKilled} processes killed, ${filesUnlocked} files unlocked, ${optimizationsCompleted} optimizations completed`);
 
       return true;
     } catch (error) {
@@ -521,8 +498,7 @@ class CursorUnlockAutomation {
       status.errors.push({
         timestamp: new Date().toISOString(),
         error: error.message,
-        attempt: retryCount + 1,
-      });
+        attempt: retryCount + 1});
       status.unlockSuccess = false;
       status.lastUpdated = new Date().toISOString();
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
@@ -531,8 +507,7 @@ class CursorUnlockAutomation {
       if (retryCount < this.config.cursorUnlock.maxRetries) {
         this.log(`🔄 Retrying in ${this.config.cursorUnlock.retryDelay}ms...`);
         await new Promise((resolve) =>
-          setTimeout(resolve, this.config.cursorUnlock.retryDelay),
-        );
+          setTimeout(resolve, this.config.cursorUnlock.retryDelay));
         return this.unlockCursor(retryCount + 1);
       }
 
@@ -556,7 +531,7 @@ class CursorUnlockAutomation {
         this.log('🔍 Cursor processes detected, checking for locks...');
         await this.unlockCursor();
       }
-    }, 30000); // Check every 30 seconds
+    }, 30o000); // Check every 30 seconds
   }
 
   async execute() {

@@ -5,11 +5,11 @@ const originalImportMeta = globalThis.importMeta;
 
 beforeAll(() => {
   // Mock import.meta.env to simulate an invalid VITE_REOWN_PROJECT_ID
-  globalThis.importMeta = {
+  globalThis.importMeta ={
     env: {
       VITE_REOWN_PROJECT_ID: YOUR_DEFAULT_PROJECT_ID_ENV_MISSING',      // Add other environment variables that App.tsx or its children might require
       // to prevent unrelated errors during rendering. These are examples.
-      VITE_API_BASE_URL: http://localhost:3001/api',      VITE_APP_NAME: Zion Test App',      VITE_ENABLE_MAINTENANCE_MODE: false',      VITE_SENTRY_DSN: , // Assuming Sentry might be initialized'      VITE_ENVIRONMENT: test',      VITE_FLAG_SHOW_NEW_FEATURE: false', // Example feature flag'      // Ensure all critical env vars for App init are present
+      VITE_API_BASE_URL: http://localhost:30o01/api',      VITE_APP_NAME: Zion Test App',      VITE_ENABLE_MAINTENANCE_MODE: false',      VITE_SENTRY_DSN:, // Assuming Sentry might be initialized'      VITE_ENVIRONMENT: test',      VITE_FLAG_SHOW_NEW_FEATURE: false', // Example feature flag'      // Ensure all critical env vars for App init are present
     }
   };
 });
@@ -23,7 +23,7 @@ vi.mock('@reown/appkit/react', () => ({'  createAppKit: vi.fn().mockReturnValue(
   useAppKit: vi.fn().mockReturnValue(undefined)
 }));
 
-vi.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock',}));
+vi.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'}));
 
 describe('App Integration - Wallet Initialization Failure', () => {'  let _consoleErrorSpy: jest.SpyInstance;
 
@@ -37,7 +37,7 @@ describe('App Integration - Wallet Initialization Failure', () => {'  let _conso
   });
 
   test('should log critical error and still render basic app layout when VITE_REOWN_PROJECT_ID is invalid', async () => {'    render(
-      <MemoryRouter initialEntries={['/']}> {/* Wrap with MemoryRouter if App uses react-router */}        <App />
+      <MemoryRouter initialEntries={['/']}> {/* Wrap with MemoryRouter if App uses react-router */}        <App  />
       </MemoryRouter>
     );
 

@@ -1,147 +1,123 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    fcp: 0,
-    ttfb: 0,
-    isVisible: false
-  });
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Web Vitals monitoring
+    const vitals = {};
 
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') return;
+    getCLS(metric => {
+      vitals.CLS = metric.value;
+      console.log('CLS:', metric);
+    });
 
-    const measurePerformance = () => {
-      // Largest Contentful Paint
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
+    getFID(metric => {
+      vitals.FID = metric.value;
+      console.log('FID:', metric);
+    });
 
-      // First Input Delay
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime 
-          }));
-        }
-      }).observe({ entryTypes: ['first-input'] });
+    getFCP(metric => {
+      vitals.FCP = metric.value;
+      console.log('FCP:', metric);
+    });
 
-      // Cumulative Layout Shift
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!entry.hadRecentInput) {
-            setMetrics(prev => ({ 
-              ...prev, 
-              cls: prev.cls + entry.value 
-            }));
+    getLCP(metric => {
+      vitals.LCP = metric.value;
+      console.log('LCP:', metric);
+    });
+
+    getTTFB(metric => {
+      vitals.TTFB = metric.value;
+      console.log('TTFB:', metric);
+    });
+
+    setMetrics(vitals);
+
+    // Performance API monitoring
+    if ('performance' in window) {
+      const observer = new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'measure') {
+            console.log('Performance measure:', entry.name, entry.duration);
+          }
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+          if (entry.entryType === 'paint') {
+            console.log('Paint timing:', entry.name, entry.startTime);
           }
         }
-      }).observe({ entryTypes: ['layout-shift'] });
+      });
 
-      // First Contentful Paint
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        }
-      }).observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+    }
 
-      // Time to First Byte
-      const navigation = performance.getEntriesByType('navigation')[0];
-      if (navigation) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigation.responseStart - navigation.requestStart 
-        }));
+    // Error tracking
+    const handleError = event => {
+      console.error('JavaScript error:', event.error);
+      // Send to analytics service
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.error?.message || 'Unknown error',
+          fatal: false,
+        });
       }
     };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-      setMetrics(prev => ({ ...prev, isVisible: true }));
-    } else {
-      window.addEventListener('load', () => {
-        measurePerformance();
-        setMetrics(prev => ({ ...prev, isVisible: true }));
-      });
-    }
+    const handleUnhandledRejection = event => {
+      console.error('Unhandled promise rejection:', event.reason);
+      // Send to analytics service
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.reason?.message || 'Unhandled promise rejection',
+          fatal: false,
+        });
+      }
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener(
+        'unhandledrejection',
+        handleUnhandledRejection
+      );
+    };
   }, []);
 
-  // Don't render in production
-  if (process.env.NODE_ENV !== 'development' || !metrics.isVisible) {
-    return null;
+  // Development mode performance panel
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className='fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50'>
+        <div className='flex items-center gap-2 mb-2'>
+          <span>Performance Monitor</span>
+          <button
+            onClick={() => setIsVisible(!isVisible)}
+            className='text-blue-40o0 hover:text-blue-30o0'
+          >
+            {isVisible ? 'Hide' : 'Show'}
+          </button>
+        </div>
+        {isVisible && (
+          <div className='space-y-1'>
+            {Object.entries(metrics).map(([key, value]) => (
+              <div key={key} className='flex justify-between gap-4'>
+                <span>{key}:</span>
+                <span className='text-green-40o0'>
+                  {value?.toFixed(2) || 'N/A'}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
   }
 
-  const getScoreColor = (value, thresholds) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value, thresholds) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold text-cyan-400">Performance Metrics</div>
-      
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-gray-600">
-        <div className="text-xs text-gray-400">
-          Core Web Vitals Monitor
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
+  return null;
+}

@@ -37,7 +37,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
 ;
     setIsLoading(true),;
     try {;
-      const params:TalentRateParams = {;
+      const params:TalentRateParams ={;
         skills,;
         yearsExperience,;
         location},;
@@ -82,7 +82,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
             disabled={skills.length === 0 || yearsExperience <= 0}
             className="w-full";
           >;
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
+            <Sparkles className="h-4 w-4 mr-2"  /> Optimize Rate with AI;
           </Button>;
         ) :(;
           <PricingSuggestionBox;
@@ -90,7 +90,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
-          />;
+           />;
         )}
       </div>;
     </div>;
@@ -111,15 +111,14 @@ const handleApplySuggestion = () => {;
 }
 }
 };
-return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
+return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2"  /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion={;
   suggestion ;
-}isLoading= {;
+}isLoading={;
   isLoading ;
-}onApplySuggestion= {;
+}onApplySuggestion={;
   handleApplySuggestion ;
-}rateType= {;
+}rateType={;
   rateType ;
-}/>) ;
+} />) ;
 }</div> </div>) ;
-
 

@@ -20,17 +20,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-<<<<<<< HEAD
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-=======
   security-audit:
     name: Security Audit
     runs-on: ubuntu-latest
@@ -39,76 +28,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
->>>>>>> origin/auto/autonomy-17186719616
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-<<<<<<< HEAD
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-      - name: Run npm audit
-        run: |
-          echo "Running npm audit..."
-          npm audit --audit-level=high --json > audit-report.json || true
-          
-          # Check for high/critical vulnerabilities
-          if npm audit --audit-level=high; then
-            echo "✅ No high or critical vulnerabilities found"
-          else
-            echo "⚠️ High or critical vulnerabilities detected"
-            exit 1
-          fi
-
-      - name: Check for outdated packages
-        run: |
-          echo "Checking for outdated packages..."
-          npm outdated --json > outdated-packages.json || true
-          
-          # Count outdated packages
-          OUTDATED_COUNT=$(cat outdated-packages.json | jq 'length' 2>/dev/null || echo "0")
-          echo "Found $OUTDATED_COUNT outdated packages"
-
-      - name: Run Snyk security scan
-        uses: snyk/actions/node@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --severity-threshold=high
-
-      - name: Upload security results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: security-scan-results
-          path: |
-            audit-report.json
-            outdated-packages.json
-          retention-days: 7
-
-      - name: Create security summary
-        run: |
-          echo "# Security Scan Summary" > security-summary.md
-          echo "Generated: $(date)" >> security-summary.md
-          echo "" >> security-summary.md
-          
-          if [ -f "audit-report.json" ]; then
-            echo "## NPM Audit Results" >> security-summary.md
-            echo "✅ NPM audit completed" >> security-summary.md
-          fi
-          
-          if [ -f "outdated-packages.json" ]; then
-            echo "## Outdated Packages" >> security-summary.md
-            echo "📦 Package update check completed" >> security-summary.md
-          fi
-          
-          echo "## Snyk Security Scan" >> security-summary.md
-          echo "🔒 Snyk security scan completed" >> security-summary.md
-=======
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run npm audit
@@ -160,4 +84,3 @@ jobs:
             outdated-deps.json
             audit-report.json
           retention-days: 30
->>>>>>> origin/auto/autonomy-17186719616

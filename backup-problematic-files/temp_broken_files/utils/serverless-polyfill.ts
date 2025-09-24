@@ -38,7 +38,7 @@ if (typeof self === 'undefined') {;
     (window as any).self = window,;
   } else {;
     // Last resort - create minimal self object;
-    (globalThis as any).self = {},;
+    (globalThis as any).self ={},;
   }
 }
 ;
@@ -59,7 +59,7 @@ if (typeof webpackChunk_N_E === 'undefined') {;
 }
 ;
 // TypeScript helper polyfills for runtime;
-const tsHelpers = {;
+const tsHelpers ={;
   __extends:function(d:any, b:any) {;
     if (typeof b !== "function" && b !== null);
       throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),;
@@ -80,7 +80,7 @@ const tsHelpers = {;
   }(),;
   ;
   __rest:function (s:any, e:string[]) {;
-    let t:any = {},;
+    let t:any ={},;
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0);
       t[p] = s[p],;
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {;
@@ -102,7 +102,7 @@ const tsHelpers = {;
     };
   }(),
   
-  __rest: function (_s: unknown, _e: string[]) {_let t: unknown = {};
+  __rest: function (_s: unknown, _e: string[]) {_let t: unknown ={};
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
       t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function") {_const _symbols = Object.getOwnPropertySymbols(s);
@@ -122,11 +122,11 @@ const tsHelpers = {;
   },;
   ;
   __awaiter:function (thisArg:any, _arguments:any, P:any, generator:any) {;
-    function adopt(value:any) { return value instanceof P ? value :new P(function (resolve:any) { resolve(value) }), }
+    function adopt(value:any) { return value instanceof P ? value :new P(function (resolve:any) { resolve(value) })}
     return new (P || (P = Promise))(function (resolve:any, reject:any) {;
-      function fulfilled(value:any) { try { step(generator.next(value)) } catch (e) { reject(e), } }
-      function rejected(value:any) { try { step(generator["throw"](value)) } catch (e) { reject(e), } }
-      function step(result:any) { result.done ? resolve(result.value) :adopt(result.value).then(fulfilled, rejected), }
+      function fulfilled(value:any) { try { step(generator.next(value)) } catch (e) { reject(e)} }
+      function rejected(value:any) { try { step(generator["throw"](value)) } catch (e) { reject(e)} }
+      function step(result:any) { result.done ? resolve(result.value) :adopt(result.value).then(fulfilled, rejected)}
       step((generator = generator.apply(thisArg, _arguments || [])).next()),;
     }),;
   }
@@ -222,7 +222,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
 ;
 // Export a verification function for testing;
 export const verifyPolyfills = () => {;
-  const checks = {;
+  const checks ={;
     selfDefined:typeof self !== 'undefined',;
     webpackChunkDefined:typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),;
     tsHelpersDefined:typeof __extends !== 'undefined' && typeof __assign !== 'undefined',;
@@ -235,7 +235,7 @@ export const verifyPolyfills = () => {;
 ;
 // Auto-verify in development;
 if (process.env.NODE_ENV === 'development') {;
-  setTimeout(() => verifyPolyfills(), 100),;
+  setTimeout(() => verifyPolyfills(), 10o0),;
 }
 ;export default {}, // Ensure this can be imported as a module
 /* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation ;
@@ -257,7 +257,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
 
-
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -275,5 +274,4 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {;
   return Object.values (checks) .every (Boolean);
 };
-
 

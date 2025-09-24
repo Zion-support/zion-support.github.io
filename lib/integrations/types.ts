@@ -1,24 +1,13 @@
-// Integration types and interfaces
-
-export interface IntegrationConfig {
-  id: string;
-  name: string;
-  type: string;
-  enabled: boolean;
-  credentials: Record<string, any>;
-  settings: Record<string, any>;
-}
-
 export type IntegrationCategory = 'crm' | 'ats';
 
-export type IntegrationProviderId = 
-  | 'salesforce' 
-  | 'hubspot' 
-  | 'zoho' 
-  | 'pipedrive' 
-  | 'greenhouse' 
-  | 'lever' 
-  | 'workable' 
+export type IntegrationProviderId =
+  | 'salesforce'
+  | 'hubspot'
+  | 'zoho'
+  | 'pipedrive'
+  | 'greenhouse'
+  | 'lever'
+  | 'workable'
   | 'bamboohr';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -33,10 +22,8 @@ export interface IntegrationProviderMeta {
 }
 
 export interface SyncRules {
-  // CRM rules
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
-  // ATS rules
   autoSyncApplicants?: boolean;
   autoUploadResumes?: boolean;
 }
@@ -59,7 +46,7 @@ export interface SyncLogEntry {
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export interface ManualOverride {
@@ -72,7 +59,7 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
+  payload: Record<string, unknown>;
 }
 
 export interface IntegrationsState {
@@ -80,31 +67,4 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-}
-
-export interface IntegrationResponse {
-  success: boolean;
-  data?: any;
-  error?: string;
-}
-
-export interface WebhookPayload {
-  event: string;
-  data: any;
-  timestamp: string;
-  source: string;
-}
-
-export interface ApiEndpoint {
-  url: string;
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: any;
-}
-
-export interface IntegrationStatus {
-  connected: boolean;
-  lastSync?: string;
-  errorCount: number;
-  lastError?: string;
 }

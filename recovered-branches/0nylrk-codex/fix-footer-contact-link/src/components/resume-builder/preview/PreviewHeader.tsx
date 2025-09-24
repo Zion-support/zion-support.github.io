@@ -1,452 +1,85 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link  } from 'lucide-react';
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types/resume';
-import { useState  } from 'react';
+import { Button } from '@/components/ui/button';
+ArrowLeftFileTextLink
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume';
+import { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import {Button} from '@/components/ui/button';
-import {ArrowLeft, FileText, Link} from 'lucide-react';
-import {PdfExportButton} from '../PdfExportButton';
-import {Resume} from '@/types/resume';
-import {useState} from 'react';
-import {useIsMobile} from '@/hooks/use-mobile';
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, FileText, Link } from "lucide-react";
-import { PdfExportButton } from "../PdfExportButton";
-import { Resume } from "@/types/resume";
-import { useState } from "react";
 
-import { useIsMobile } from "@/hooks/use-mobile";
-interface PreviewHeaderProps {}
-  resume: Resume;
-  onBack: () => void;
-}
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-  const [isPrinting, setIsPrinting] = useState(false);
-
-  const isMobile = useIsMobile();
-  resume: Resume;
-  onBack: () => void;
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
-  resume: Resume;
-  onBack: () => void;
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const handleBrowserPrint = () => {
-=======
-
-  const handleBrowserPrint = () => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    setIsPrinting(true);
-    // Inject print-specific CSS only for the duration of printing"
-    const style = document.createElement("style");
-    style.innerHTML = `
-      @media print {}
-        body * {}
-          visibility: hidden;
-import { Button } from '@/components/ui/button',;'
-import { ArrowLeft, FileText, Link } from 'lucide-react',;'
-import { PdfExportButton } from '../PdfExportButton',;'
-import { Resume } from '@/types/resume',;'
-import { useState } from 'react',;'
-import { useIsMobile } from '@/hooks/use-mobile',;
-interface PreviewHeaderProps {;
-  resume: Resume,;
-  onBack: () => void;
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-  const handleBrowserPrint = () => {;
-    setIsPrinting(true);
-
-// Inject print-specific CSS only for the duration of printing;
-    const style = document && document.createElement('style');
-    style && style.innerHTML = `;
-      @media print {;
-        body * {;
-          visibility: hidden;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        .print-section {
-          position: absolute
-          left: 0
-          top: 0
-          width: 100%
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        .print-section {;
-          position: absolute,;
-          left: 0,;
-          top: 0,;
-          width: 100%;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        }
-        .no-print {;
-import { Button  } from '@/components / ui / button';
-import { ArrowLeft, FileText, Link  } from './lucide-react';
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types / resume';
-import { useState  } from './react';
-import { useIsMobile  } from '@/hooks / use - mobile';
 interface PreviewHeaderProps {
   resume: Resume;
-  on_back: () => void;
+  onBack: () => void;
 }
-export /**
- * PreviewHeader - Function description
- */
-function PreviewHeader() {
-  const [is_printing, setIsPrinting] = useState (false);
-  const is_mobile = useIsMobile ();
-;
-  const handleBrowserPrint = () =>: any {
-    setIsPrinting (true);
-;
-    // Inject print - specific CSS only for the duration of printing;
-    const style = document.create_element ("style");
-    style.innerHTML = `;
-=======
-    // Inject print-specific CSS only for the duration of printing
-    const style = document.createElement("style");
-    style.innerHTML = `
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-      @media print {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        body * {
-=======
 
-export function PreviewHeader() { return null; }
-      @media print {}
-        body * {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
+  const [isPrintingsetIsPrinting] = useState(false);
+  const isMobile = useIsMobile();
+
+  const handleBrowserPrint = () => {
+    setIsPrinting(true);
+    
+    // Inject print-specific CSS only for the duration of printing
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @media print {
+        body * {
           visibility: hidden;
         }
-        .print - section, .print - section * {}
+        .print-section * {
           visibility: visible;
         }
-        .print - section {}
-          position: absolute,
-          left: 0,
-          top: 0,
+        .print-section {
+          position: absolute;
+          left: 0;
+          top: 0;
           width: 100%;
         }
-        .no - print {}
+        .no-print {
           display: none !important;
-}
+        }
       }
-<<<<<<< HEAD
     `;
     document.head.appendChild(style);
+    
     // Trigger print dialog
     window.print();
+    
     // Remove the temporary style element after printing
     setTimeout(() => {
       document.head.removeChild(style);
       setIsPrinting(false);
-    }, 1000);
-  }
-    `,
-    document.head.appendChild(style),
-    `,
-    document.head.appendChild(style),
-    `,
-    document.head.appendChild(style),
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-    // Trigger print dialog
-    window.print(),
-
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style),
-      setIsPrinting(false)
-    }, 1000)
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-    // Trigger print dialog
-    window.print();
-
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
+    }1000);
   };
+
   return (
-    <div
-      className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
-    >
-      <Button variant="outline" onClick={onBack} className="gap-2 no-print">
+    <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>
+      <Button 
+        variant="outline" 
+        onClick={onBack} 
+        className="gap-2 no-print"
+      >
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
-      >
-        <PdfExportButton resume={resume} />
-        <Button
-          variant="outline"
-          onClick={handleBrowserPrint}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+      
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
+        
         <Button 
           variant="outline" 
-onClick={handleBrowserPrint} 
-<<<<<<< HEAD
-      <div
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
-      >
-        <PdfExportButton resume={resume} />
-        <Button 
-          variant="outline" 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-          onClick={handleBrowserPrint}           disabled={isPrinting}
-=======
-
-      <div
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
-      >
-      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
-        <PdfExportButton resume={resume} />
-<Button
-          variant="outline"
-          onClick={handleBrowserPrint}
+          onClick={handleBrowserPrint} 
           disabled={isPrinting}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
-
+        
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
-</div>    document.head.append_child (style);
-=======
     </div>
   );
 }
-document.head.append_child (style);
-;
-
-  );
-}
-    document.head.append_child (style);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-;
-    // Trigger print dialog;
-    window.print ();
-;
-    // Remove the temporary style element after printing;
-    set_timeout (() => {}
-      document.head.remove_child (style);
-      setIsPrinting (false);
-    }, 1000);
-  }
-;
-  return (
-    <div;"`
-      className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
->;
-<<<<<<< HEAD
-      <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
-        <ArrowLeft className="h - 4 w-4" />;
-=======
-      <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
-        <ArrowLeft className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        Back;
-      </Button>;
-      <div;"`
-        className={`flex ${is_mobile ? "flex - col" : "flex - row"} space-${is_mobile ? "y - 2" : "x - 2"} no - print`}
-      >;
-        <PdfExportButton resume={resume} />;
-        <Button;"
-          variant="outline";
-          on_click={handleBrowserPrint}
-disabled={is_printing}
-          className="gap-2";
-        >;
-          <FileText className="h - 4 w-4" />;
-          Print;
-        </Button>;
-<<<<<<< HEAD
-        <Button variant="outline" className="gap-2">;
-          <Link className="h - 4 w-4" />;
-=======
-        <Button variant="outline" className="gap-2">;
-          <Link className="h - 4 w-4" />;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          Add to Profile;
-        </Button>;
-      </div>;
-    </div>);
-}
-),;}
-}`;
-document.head.appendChild (style);
-//Trigger print dialog window.print ();
-//Remove the temporary style element after printing return (<div className= {
-  `flex $ {
-  isMobile ? 'flex-col' : 'justify-between' 
-}items-$ {
-  isMobile ? 'stretch' : 'center' 
-}gap-3` 
-}> <Button > <ArrowLeft className="h-4 w-4" /> Back </Button> <div className= {
-  `flex $ {
-  isMobile ? 'flex-col' : 'flex-row' 
-}space-$ {
-  isMobile ? 'y-2' : 'x-2' 
-}no-print` 
-}> <PdfExportButton resume= {
-  resume 
-}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>) 
-}
-  );
-}
-}
-;
-
-  )
-}
-;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        .no - print {
-  // TODO: Implement
-          display: none !important;
-      }`;
-    `;
-    document.head.appendChild(style);
-
-    // Trigger print dialog;
-    window.print();
-
-    // Remove the temporary style element after printing;
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-
-  return (
-    <div;"`;
-      className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}"
-    >
-</div>"
-      <Button variant="outline" onClick={onBack} className="gap-2 no-print">"
-"
-        <ArrowLeft className="h-4 w-4" />"
-
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}"
-</div>
-
-        <PdfExportButton resume={resume} />
-
-        <Button;"
-          variant="outline""
-          onClick={handleBrowserPrint}
-          disabled={isPrinting}"
-          className="gap-2""
-          <FileText className="h-4 w-4" />"
-
-        <Button variant="outline" className="gap-2">"
-          <Link className="h-4 w-4" />"
-
-</Link>
-
-        </Button>
-      </div>
-
-    </div>
-
-    <div;"
-      className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}"
-    >;
-      <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;"
-        <ArrowLeft className="h - 4 w - 4" />;"
-
-        className={`flex ${is_mobile ? "flex - col" : "flex - row"} space-${is_mobile ? "y - 2" : "x - 2"} no - print`}"
-        <PdfExportButton resume={resume} />;
-
-          variant="outline";"
-          on_click={handleBrowserPrint}
-          disabled={is_printing}"
-          className="gap - 2";"
-          <FileText className="h - 4 w - 4" />;"
-
-        ;"
-        <Button variant="outline" className="gap - 2">;"
-          <Link className="h - 4 w - 4" />;"
-
-      </div>;)
-    </div>);
-//Remove the temporary style element after printing return (<div className= {`;
-  `flex $ {"
-  isMobile ? 'flex-col' : 'justify-between
-}items-$ {
-  isMobile ? 'stretch' : 'center`;
-}gap-3` 
-}> <Button > <ArrowLeft className="h-4 w-4" /> Back  <div className= {"
-}> <PdfExportButton resume= {
-  resume;)"
-}/> <Button > <FileText className="h-4 w-4" /> Print  <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile  </div> </div>)"
-"`;
-pr-12325
-}/> <Button > <FileText className="h-4 w-4" /> Print </Button> <Button variant="outline" className="gap-2" > <Link className="h-4 w-4" /> Add to Profile </Button> </div> </div>)"
-</PdfExportButton>"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

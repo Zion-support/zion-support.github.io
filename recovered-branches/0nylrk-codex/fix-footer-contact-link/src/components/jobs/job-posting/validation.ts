@@ -1,236 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+import { z } from 'zod';
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  salary_range: z && z.string().optional(),
-  description: z && z.string().min(10, {}
-=======
-salary_range: z && z.string().optional(),
-  description: z && z.string().min(10, {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    message: "Description must be at least 10 characters."});
-  responsibilities: z && z.string().optional();
-  qualifications: z && z.string().optional();
-  benefits: z && z.string().optional();
-  application_instructions: z && z.string().optional(),
-  contact_email: z && z.string().email({"
-    message: "Please enter a valid email address."}).optional();
-  published_date: z && z.string().optional();
-  expiry_date: z && z.string().optional();
-  is_remote: z && z.boolean().default(false).optional();
-  category: z && z.string().optional();
-  status: z && z.string().optional(),
-  external_apply_link: z && z.string().url({"
-    message: "Please enter a valid URL."}).optional()});
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { z } from './zod';
-export const job_schema = z.object ({}
-  title: z.string ().min (3, {";
-    message: "Title must be at least 3 characters."});
-  company: z.string ().min (3, {"
-    message: "Company name must be at least 3 characters."});
-  location: z.string ().min (3, {"
-    message: "Location must be at least 3 characters."});
-  job_type: z.string ().min (3, {"
-    message: "Job type must be at least 3 characters."});
-  salary_range: z.string ().optional (),
-  description: z.string ().min (10, {"
-import { z } from './zod';
-export const job_schema = z.object ({
-  title: z.string ().min (3, {
-    message: "Title must be at least 3 characters."});
-  company: z.string ().min (3, {
-    message: "Company name must be at least 3 characters."});
-  location: z.string ().min (3, {
-    message: "Location must be at least 3 characters."});
-  job_type: z.string ().min (3, {
-    message: "Job type must be at least 3 characters."});
-  salary_range: z.string ().optional (),
-  description: z.string ().min (10, {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    message: "Description must be at least 10 characters."});
-  responsibilities: z.string ().optional ();
-  qualifications: z.string ().optional ();
-  benefits: z.string ().optional ();
-  application_instructions: z.string ().optional (),
-contact_email: z.string ().email ({"
-    message: "Please enter a valid email address."}).optional ();
-  published_date: z.string ().optional ();
-  expiry_date: z.string ().optional ();
-  is_remote: z.boolean ().default (false).optional ();
-  category: z.string ().optional ();
-  status: z.string ().optional (),
-external_apply_link: z.string ().url ({"
-    message: "Please enter a valid URL."}).optional ()});
-;
-export type JobSchemaType = z.infer < typeof job_schema>;
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-"
-import {z} from "zod";"
-import { z } from "zod",
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-import {z} from "zod";
-import { z } from "zod",
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {z} from "zod";
-export const jobSchema = z.object({
-  title: z.string().min(3, {;
-    message: "Title must be at least 3 characters."});
-import { z } from "zod",
 export const jobSchema = z.object({
   title: z.string().min(3, {
-    message: "Title must be at least 3 characters."}),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { z } from "zod",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export const jobSchema = z.object({
-  title: z.string().min(3, {
-    message: "Title must be at least 3 characters."}),
-
+    message: 'Title must be at least 3 characters.',
+  }),
   company: z.string().min(3, {
-    message: "Company name must be at least 3 characters."}),
-  location: z.string().min(3, {"
-    message: "Location must be at least 3 characters."}),
-job_type: z.string().min(3, {
-<<<<<<< HEAD
-
-=======
-=======
-  job_type: z.string().min(3, {}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    message: "Job type must be at least 3 characters."}),
-  salary_range: z.string().optional(),
-  description: z.string().min(10, {"
-=======
-import { z } from "zod",
-export const jobSchema = z.object({
-  title: z.string().min(3, {
-    message: "Title must be at least 3 characters."}),
-  company: z.string().min(3, {
-    message: "Company name must be at least 3 characters."}),
+    message: 'Company name must be at least 3 characters.',
+  }),
   location: z.string().min(3, {
-    message: "Location must be at least 3 characters."}),
+    message: 'Location must be at least 3 characters.',
+  }),
   job_type: z.string().min(3, {
-
-    message: "Job type must be at least 3 characters."}),
+    message: 'Job type must be at least 3 characters.',
+  }),
   salary_range: z.string().optional(),
   description: z.string().min(10, {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    message: "Description must be at least 10 characters."}),
+    message: 'Description must be at least 10 characters.',
+  }),
   responsibilities: z.string().optional(),
   qualifications: z.string().optional(),
   benefits: z.string().optional(),
   application_instructions: z.string().optional(),
-contact_email: z.string().email({"
-    message: "Please enter a valid email address."}).optional(),
+  contact_email: z
+    .string()
+    .email({
+      message: 'Please enter a valid email address.',
+    })
+    .optional(),
   published_date: z.string().optional(),
   expiry_date: z.string().optional(),
   is_remote: z.boolean().default(false).optional(),
   category: z.string().optional(),
   status: z.string().optional(),
-external_apply_link: z.string().url({"
-    message: "Please enter a valid URL."}).optional()}),
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export type JobSchemaType = z.infer<typeof jobSchema>,
-=======
-import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { z } from "zod",export type JobSchemaType = z.infer<typeof jobSchema>,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;
-export type JobSchemaType = z.infer<typeof jobSchema>,";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  external_apply_link: z.string().url({
-    message: "Please enter a valid URL."}).optional()}),
+  external_apply_link: z
+    .string()
+    .url({
+      message: 'Please enter a valid URL.',
+    })
+    .optional(),
+});
 
 export type JobSchemaType = z.infer<typeof jobSchema>;
-export type JobSchemaType = z.infer<typeof jobSchema>,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { z } from "zod",;
-export const jobSchema = z.object({;
-  title: z.string().min(3, {;"
-    message: "Title must be at least 3 characters."}),;
-  company: z.string().min(3, {;"
-    message: "Company name must be at least 3 characters."}),;
-  location: z.string().min(3, {;"
-    message: "Location must be at least 3 characters."}),;
-  job_type: z.string().min(3, {;"
-    message: "Job type must be at least 3 characters."}),;
-salary_range: z.string().optional(),,
-  description: z.string().min(10, {;
-    message: "Description must be at least 10 characters."}),;
-  responsibilities: z.string().optional(),;
-  qualifications: z.string().optional(),;
-  benefits: z.string().optional(),;
-  application_instructions: z.string().optional(),;
-  contact_email: z.string().email({;"
-    message: "Please enter a valid email address."}).optional(),;
-  published_date: z.string().optional(),;
-  expiry_date: z.string().optional(),;
-  is_remote: z.boolean().default(false).optional(),;
-  category: z.string().optional(),;
-  status: z.string().optional(),;
-  external_apply_link: z.string().url({;"
-    message: "Please enter a valid URL."}).optional()});
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export type JobSchemaType = z.infer<typeof jobSchema>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-export type JobSchemaType = z.infer<typeof jobSchema>;
-export type JobSchemaType = z.infer<typeof jobSchema>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  salary_range: z && z.string().optional(),
-
-export type JobSchemaType = z && z.infer<typeof jobSchema>;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

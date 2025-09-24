@@ -27,7 +27,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 class AIEnhancer extends AutomationTask {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super({
       name: 'AIEnhancer',
       schedule: 0 */6 * * *', // Every 6 hours
@@ -46,7 +46,7 @@ class AIEnhancer extends AutomationTask {
     logger.info('🤖 Starting AI enhancement process...');
     
     try {
-      const results = {
+      const results ={
         timestamp: new Date().toISOString(),
         enhancements: {},
         suggestions: {},
@@ -109,7 +109,7 @@ class AIEnhancer extends AutomationTask {
       claude: {
         enabled: process.env.CLAUDE_ENABLED === 'true',
         apiKey: process.env.CLAUDE_API_KEY,
-        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20240229
+        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229
       },
       local: {
         enabled: process.env.LOCAL_AI_ENABLED === 'true',
@@ -257,9 +257,9 @@ Format the response as JSON with the following structure:
       "type": "quality|performance|security|accessibility",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""code": "Improved code snippet",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"
     }
   ],
-  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""performance": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""security": 0-100
+  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""performance": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""security": 0-10o0
   },
-  "confidence": 0-100
+  "confidence": 0-10o0
 }`;
   }
 
@@ -351,7 +351,7 @@ Format the response as JSON with the following structure:
       return response;
     } catch (error) {
       logger.warn('⚠️ Failed to parse AI response:', error);
-      return this.localCodeAnalysis('', );
+      return this.localCodeAnalysis('');
     }
   }
 
@@ -488,7 +488,7 @@ Format the response as JSON with the following structure:
       "type": "clarity|structure|content|style",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""improvement": "Improved text",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"
     }
   ],
-  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""clarity": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""completeness": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""structure": 0-100
+  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""clarity": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""completeness": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""structure": 0-10o0
   }
 }`;
   }
@@ -634,7 +634,7 @@ Format the response as JSON with the following structure:
       "type": "coverage|mocking|assertion|organization",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""code": "Improved test code",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"
     }
   ],
-  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""coverage": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""maintainability": 0-100
+  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""coverage": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""maintainability": 0-10o0
   }
 }`;
   }
@@ -701,7 +701,7 @@ Format the response as JSON with the following structure:
       "type": "code|config|build",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the optimization",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""implementation": "How to implement",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""expectedImprovement": "Expected improvement"
     }
   ],
-  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""bundle": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""build": 0-100,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""runtime": 0-100
+  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""bundle": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""build": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""runtime": 0-10o0
   }
 }`;
 
@@ -792,7 +792,7 @@ Format the response as JSON with the following structure:
     
     // Sort by impact
     suggestions.sort((a, b) => {
-      const impactOrder = { high: 3, medium: 2, low: 1 };
+      const impactOrder ={ high: 3, medium: 2, low: 1 };
       return impactOrder[b.impact] - impactOrder[a.impact];
     });
     
@@ -800,7 +800,7 @@ Format the response as JSON with the following structure:
   }
 
   generateSummary(results) {
-    const summary = {
+    const summary ={
       totalEnhancements: 0,
       totalSuggestions: results.suggestions.length,
       highImpactSuggestions: results.suggestions.filter(s => s.impact === 'high').length,
@@ -917,7 +917,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                                60000);
+const timeoutId = setTimeout(resolve,                                                                60o000);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed

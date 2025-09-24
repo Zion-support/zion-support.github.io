@@ -1,147 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { GradientHeading } from '@/components/GradientHeading';
+import { EnhancedNewsletterForm } from '@/components/EnhancedNewsletterForm';
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import { GradientHeading } from "@/components/GradientHeading",
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
-import {GradientHeading} from "@/components/GradientHeading";
-import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
-import { GradientHeading } from "@/components/GradientHeading",
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-import { GradientHeading } from "@/components/GradientHeading";
-=======
-import { GradientHeading } from "@/components/GradientHeading";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-export function NewsletterSection() {}
-  return ("
-    <section className="py-20 bg-zion-blue-dark" id="newsletter">"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-4xl mx-auto text-center">
-          <GradientHeading>Stay Informed</GradientHeading>"
-          <p className="mt-4 text-zion-slate-light text-xl mb-8">;
-            Subscribe to our newsletter for the latest updates on Zion's;
-            services, Google trending tech news, and marketplace opportunities.
-          </p>"
-=======
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {
   return (
-    <section className="py-20 bg-zion-blue-dark" id="newsletter">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className='py-20 bg-zion-blue-dark' id='newsletter'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>
           <GradientHeading>Stay Informed</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl mb-8">
+          <p className='mt-4 text-zion-slate-light text-xl mb-8'>
             Subscribe to our newsletter for the latest updates on Zion's
-            services, Google trending tech news, and marketplace opportunities.
+            servicesGoogle trending tech newsand marketplace opportunities.
           </p>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          <div className="max-w-md mx-auto">
-=======
-
-export function NewsletterSection() {
-  return ("
-    <section className="py-20 bg-zion-blue-dark" id="newsletter">"
-</section>"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
-</div>"
-        <div className="max-w-4xl mx-auto text-center">"
-</div>
-          <GradientHeading>Stay Informed"
-          <p className="mt-4 text-zion-slate-light text-xl mb-8">"
-</p>
-          </p>"
-          <div className="max-w-md mx-auto">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <div className='max-w-md mx-auto'>
             <EnhancedNewsletterForm />
-</div>
-
-            <EnhancedNewsletterForm />
-</EnhancedNewsletterForm>
           </div>
         </div>
       </div>
-
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-)
-  )
-import { GradientHeading } from "@/components/GradientHeading",;
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-export function NewsletterSection() {;
-  return (
-=======
-export function NewsletterSection() {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <section className="py-20 bg-zion-blue-dark" id="newsletter">;
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <GradientHeading>Stay Informed</GradientHeading>;
-          <p className="mt-4 text-zion-slate-light text-xl mb-8">;
-            Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.;
-          </p>;
-          <div className="max-w-md mx-auto">;
-
-            <EnhancedNewsletterForm />;
-          </div>;
-        </div>;
-      </div>;
-</section>);
-=======
-  );
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-
-  )
-  )
-
-    </section>;
-  );
-  );
-  );
-}
-;
-
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    </section>);
-}
-    </section>;
-  ),;
-} export function NewsletterSection() { return null; }
-}
-}
-;
-
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    </section>;)
-    </section>);
-    </section>;"
-  return (<section className="py-20 bg-zion-blue-dark" id="newsletter" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="max-w-4xl mx-auto text-center" > <GradientHeading>Stay Informed <p className="mt-4 text-zion-slate-light text-xl mb-8" > Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities. max-w-md mx-auto" > <EnhancedNewsletterForm /> </div> </div> </div> </section>")"
-pr-12325
-  return (<section className="py-20 bg-zion-blue-dark" id="newsletter" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="max-w-4xl mx-auto text-center" > <GradientHeading>Stay Informed</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl mb-8" > Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities. max-w-md mx-auto" > <EnhancedNewsletterForm /> </div> </div> </div> </section>")"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,468 +1,115 @@
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
+
+import React{ useStateuseRef } from "react";
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { UploadTrash2Plus } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React, { useState, useRef } from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-=======
-import React, { useState, useRef } from "react";"
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
-import {Upload, Trash2, Plus} from "lucide-react";"
-import {AppPlatform} from "./MetadataManager";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import {toast} from "sonner";
-interface ScreenshotManagerProps {}
-  platform: AppPlatform;
-}
-
-type Screenshot = {}
-  id: string;
-  url: string;
-  file: File;
-}
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {};
-};
-
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {}
-    if (e.target.files) {}
-      addScreenshots(Array.from(e.target.files))
-    }
-"
-import { AppPlatform } from "./MetadataManager","
-import { toast } from "sonner",
-interface ScreenshotManagerProps {}
-  platform: AppPlatform";
-import React, { useState, useRef } from "react",;"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
-import { Button } from "@/components/ui/button",;"
-import { Upload, Trash2, Plus } from "lucide-react",;"
-import { AppPlatform } from "./MetadataManager",;"
-import { toast } from "sonner",;
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
-;
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-},;
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
-  const [isDragging, setIsDragging] = useState(false),;
-  const fileInputRef = useRef<HTMLInputElement>(null),;
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      addScreenshots(Array.from(e.target.files));
-    }
-},
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useRef } from './react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Upload, Trash2, Plus } from './lucide-react';
-import { AppPlatform } from './MetadataManager';
-=======
-
-import React, { useState, useRef } from './react';'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';'
-import { Button } from '@/components / ui / button';'
-import { Upload, Trash2, Plus } from './lucide-react';'
-import { AppPlatform } from './MetadataManager';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { toast } from './sonner';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
 interface ScreenshotManagerProps {
-  platform: AppPlatform
+  platform: AppPlatform;
 }
 
 type Screenshot = {
-  id: string
-  url: string
-  file: File
+  id: string;
+  url: string;
+  file: File;
+};
 
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+  const [screenshotsetScreenshots] = useState<Screenshot[]>([]);
+  const [isDraggingsetIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      addScreenshots(Array.from(e.target.files))
-    }
-
-import { AppPlatform } from "./MetadataManager",
-import { toast } from "sonner",
-interface ScreenshotManagerProps {
-  platform: AppPlatform
-import React, { useState, useRef } from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Upload, Trash2, Plus } from "lucide-react",;
-import { AppPlatform } from "./MetadataManager",;
-import { toast } from "sonner",;
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
-;
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-},;
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
-  const [isDragging, setIsDragging] = useState(false),;
-  const fileInputRef = useRef<HTMLInputElement>(null),;
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
       addScreenshots(Array.from(e.target.files));
     }
-  },
-<<<<<<< HEAD
-
+  };
+  
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
     if (imageFiles.length === 0) {
-=======
-  },    if (imageFiles.length === 0) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  },    if (imageFiles.length === 0) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-interface ScreenshotManagerProps {}
-  platform: AppPlatform;
-}
-type Screenshot = {}
-  const addScreenshots = (files: File[]) => {}
-    // Filter for image files only'
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-
-    if (imageFiles.length === 0) {"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-    if (imageFiles.length === 0) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      toast.error("Please select valid image files")
+      toast.error("Please select valid image files");
       return;
     }
-// Limit the number of screenshots
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    const maxScreenshots = platform === "ios" ? 10 : 8,
-    const availableSlots = maxScreenshots - screenshots.length,
-
+    
+    // Limit the number of screenshots
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
+    
     if (availableSlots <= 0) {
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      return
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+      return;
     }
-
-    const filesToAdd = imageFiles.slice(0, availableSlots);
-
+    
+    const filesToAdd = imageFiles.slice(0availableSlots);
+    
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
+      id: Math.random().toString(36).substring(29),
       url: URL.createObjectURL(file),
       file
     }));
-
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-
+    
+    setScreenshots(prev => [...prev...newScreenshots]);
+    
     if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
   };
-
+  
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id);
-
+      
       // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id),
+      const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
-        URL.revokeObjectURL(removed.url)
-      }
-
-      return filtered
-    })
-  };
-
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault(),
-    setIsDragging(true)
-  };
-
-  const handleDragLeave = () => {
-    setIsDragging(false)
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false),
-
-    if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
-    }
-  };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    // Limit the number of screenshots;
-"
-    const maxScreenshots = platform === "ios" ? 10 : 8,
-    const availableSlots = maxScreenshots - screenshots.length,
-
-    if (availableSlots <= 0) {}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
-      return;
-  },;
-  const addScreenshots = (files: File[]) => {;
-    // Filter for image files only;'
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),;
-    if (imageFiles.length === 0) {;"
-      toast.error("Please select valid image files"),;
-      return;
-    }
-;
-    // Limit the number of screenshots;"
-    const maxScreenshots = platform === "ios" ? 10 : 8,;
-    const availableSlots = maxScreenshots - screenshots.length,;
-    if (availableSlots <= 0) {;"`
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),;
-      return;
-    }
-;
-    const filesToAdd = imageFiles.slice(0, availableSlots),;
-    const newScreenshots = filesToAdd.map(file => ({;
-      id: Math.random().toString(36).substring(2, 9),;
-      url: URL.createObjectURL(file),;
-      file;
-    })),;
-    setScreenshots(prev => [...prev, ...newScreenshots]),;
-    if (filesToAdd.length < imageFiles.length) {;`
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-    }
-  },;
-  const removeScreenshot = (id: string) => {;
-    setScreenshots(prev => {;
-      const filtered = prev.filter(screenshot => screenshot.id !== id),;
-      // Revoke object URL to avoid memory leaks;
-      const removed = prev.find(screenshot => screenshot.id === id),;
-      if (removed) {;
         URL.revokeObjectURL(removed.url);
       }
-;
+      
       return filtered;
     });
-  },;
-  const handleDragOver = (e: React.DragEvent) => {;
-    e.preventDefault(),;
+  };
+  
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
     setIsDragging(true);
-  },;
-  const handleDragLeave = () => {;
+  };
+  
+  const handleDragLeave = () => {
     setIsDragging(false);
-  },;
-  const handleDrop = (e: React.DragEvent) => {;
-    e.preventDefault(),;
-    setIsDragging(false),;
-    if (e.dataTransfer.files) {;
+  };
+  
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    
+    if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files));
     }
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  return (
-=======
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    <Card className="bg-zion-blue border-zion-purple/30">
-      <CardHeader>"
-        <CardTitle className="text-lg">App Screenshots</CardTitle>
-      </CardHeader>
-      <CardContent>
-
-import React, { useState, useRef } from "react";
-=======
-  import React, { useState, useRef } from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  import React, { useState, useRef } from "react";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
+  };
+  
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-import React, { useState, useRef } from "react";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-=======
-
-"
-import React, { useState, useRef } from "react";"
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";"
-import {Button} from "@/components/ui/button";"
-import {Upload, Trash2, Plus} from "lucide-react";"
-import {AppPlatform} from "./MetadataManager";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import {toast} from "sonner";
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-};
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const handleFileSelect = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    if (e && e.target.files) {;
-      addScreenshots(Array && Array.from(e && e.target.files));
-    }
-  };
-    if (imageFiles && imageFiles.length === 0) {;"
-      toast && toast.error("Please select valid image files"),;
-      return;
-    }
-    if (availableSlots <= 0) {;"`
-      toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return;
-    }
-    const newScreenshots = filesToAdd && filesToAdd.map(file => ({;
-      id: Math && Math.random().toString(36).substring(2, 9);
-      url: URL && URL.createObjectURL(file),;
-      file;
-    }));
-    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;`
-      toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-    }
-  };
-      // Revoke object URL to avoid memory leaks;
-      const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
-      if (removed) {;
-        URL && URL.revokeObjectURL(removed && removed.url);
-      }
-  const handleDragOver = (e: React && React.DragEvent) => {;
-    e && e.preventDefault(),;
-    setIsDragging(true);
-  };
-    if (e && e.dataTransfer.files) {;
-      addScreenshots(Array && Array.from(e && e.dataTransfer.files));
-    }
-  };
-
-return (    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle className="text-lg">App Screenshots</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        <div
+        <div 
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-
-<<<<<<< HEAD
-
-            isDragging "
-              ? "border-zion-cyan bg-zion-cyan/10" 
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        <div
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
-
-        <div
-          className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            isDragging
-              ? "border-zion-cyan bg-zion-cyan/10"
-            isDragging 
-              ? "border-zion-cyan bg-zion-cyan/10" 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               : "border-zion-purple/30"
-=======
-
-=======              : "border-zion-purple/30"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-=======              : "border-zion-purple/30"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              : "border-zion-purple/30"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
           }`}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
-          onDrop={handleDrop}>;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-          onDrop={handleDrop}>;
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
+          onDrop={handleDrop}
+        >
+          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
+          <p className="text-sm mb-2">Drag & drop screenshots here</p>
           <input
             ref={fileInputRef}
             type="file"
@@ -470,187 +117,42 @@ return (    <Card className="bg-zion-blue border-zion-purple/30">;
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          onDrop={handleDrop}>;"
-          <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />;"
-          <p className="text-sm mb-2">Drag & drop screenshots here</p>;
-
-          <input;
-            ref={fileInputRef}"
-            type="file"
-            multiple"
-            accept="image/*"
-            onChange={handleFileSelect}"
-            className="hidden"
-"
-            className="mt-2";
-          >;"
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-
-"
-                alt="App screenshot""
-                className="w-full h-auto rounded border border-zion-purple/20"
-              />;
-              <button;
-                onClick={() => removeScreenshot(screenshot && screenshot.id)}
-
-"
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-              >;"
-                <Trash2 className="h-3 w-3" />;
-              </button>;
-            </div>;
-          ))}
-</div>
-      </CardContent>
-    </Card>
-  )
-}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-          />;
-          <Button
+          />
+          <Button 
             variant="outline" 
-            onClick={() => fileInputRef && fileInputRef.current?.click()}
-            className="mt-2";
-          >;
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-
-        <div className="text-xs text-gray-400 mb-4">;
-          {platform === "ios" ;
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
+            onClick={() => fileInputRef.current?.click()}
+            className="mt-2"
+          >
+            <Plus className="mr-2 h-4 w-4" />
+            Select Files
+          </Button>
+        </div>
+        
+        <div className="text-xs text-gray-400 mb-4">
+          {platform === "ios" 
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
-        </div>;
-
-        <div className="grid grid-cols-2 gap-3">;
-          {screenshots && screenshots.map((screenshot) => (;
-            <div key={screenshot && screenshot.id} className="relative group">;
-              <img
-                src={screenshot && screenshot.url}
-
+        </div>
+        
+        <div className="grid grid-cols-2 gap-3">
+          {screenshots.map((screenshot) => (
+            <div key={screenshot.id} className="relative group">
+              <img 
+                src={screenshot.url}
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
-              />;
+              />
               <button
-                onClick={() => removeScreenshot(screenshot && screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
-              >;
-                <Trash2 className="h-3 w-3" />;
-              </button>;
-            </div>;
+                onClick={() => removeScreenshot(screenshot.id)}
+                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <Trash2 className="h-3 w-3" />
+              </button>
+            </div>
           ))}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-
-};
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-        <CardTitle className="text - lg">App Screenshots</CardTitle>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      </CardHeader>;
-      <CardContent>;
-        <div;`
-          className={`border - 2 border - dashed rounded - lg p - 4 mb - 4 text - center transition - colors ${}
-            is_dragging;"
-              ? "border - zion - cyan bg - zion - cyan / 10";"
-              : "border - zion - purple / 30";`
-          }`}
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          on_drop={handle_drop}
->;
-<Upload className="mx - auto h - 8 w - 8 text - gray - 400 mb-2" />;
-          <p className="text - sm mb-2">Drag & drop screenshots here</p>;
-          <input;
-            ref={fileInputRef}"
-            type="file";
-            multiple;"
-            accept="image/*";
-            on_change={handleFileSelect}"
-            className="hidden";
-          />;
-          <Button;"
-            variant="outline";
-on_click={() => fileInputRef.current?.click ()}
-            className="mt - 2";
-          >;
-            <Plus className="mr - 2 h - 4 w - 4" />;
-            Select Files;
-          </Button>;
-        </div>;
-        <div className="text - xs text - gray - 400 mb - 4">;
-          {platform === "ios";
-            ? "Recommended size: 1290x2796 pixels for i_phone. Max 10 screenshots.";
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
-          }
-        </div>;
-        <div className="grid grid - cols - 2 gap - 3">;
-          {screenshots.map ((screenshot) => (
-            <div key={screenshot.id} className="relative group">;
-              <img;
-                src={screenshot.url}
-                alt="App screenshot";
-                className="w - full h - auto rounded border border - zion - purple / 20";
-              />;
-              <button;
-                on_click={() => remove_screenshot (screenshot.id)}
-                className="absolute top - 1 right - 1 bg - red - 500 / 80 text - white p - 1 rounded - full opacity - 0 group - hover:opacity - 100 transition - opacity";
-              >;
-<Trash2 className="h - 3 w-3" />;
-              </button>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-<<<<<<< HEAD
-;
-
-<<<<<<< HEAD
-        </div>;
-      </CardContent>;
-    </Card>;
+        </div>
+      </CardContent>
+    </Card>
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-
 import {fileURLToPath} from 'url';
 import {glob} from 'glob';
 const __filename = fileURLToPath(import && import.meta.url);

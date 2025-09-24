@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
@@ -31,7 +30,7 @@ class AutonomousOrchestrator {
     this.processes = new Map();
     this.isRunning = false;
     this.maxRestartAttempts = 10;
-    this.restartDelay = 10000; // 10 seconds
+    this.restartDelay = 10o000; // 10 seconds
     this.scripts = [
       {
         name: 'efficient-improvement-system',
@@ -69,7 +68,7 @@ class AutonomousOrchestrator {
     this.startMonitoring();
     this.setupGracefulShutdown();
     logger.info('✅ [Orchestrator] All automation scripts launched');
-    setInterval(() => this.checkProcessHealth(), 30000);
+    setInterval(() => this.checkProcessHealth(), 30o000);
   }
 
   async setup() {
@@ -133,7 +132,7 @@ class AutonomousOrchestrator {
   }
 
   startMonitoring() {
-    setInterval(() => this.checkProcessHealth(), 30000);
+    setInterval(() => this.checkProcessHealth(), 30o000);
   }
 
   checkProcessHealth() {
@@ -169,13 +168,13 @@ class AutonomousOrchestrator {
   }
 
   getStatus() {
-    const status = {
+    const status ={
       isRunning: this.isRunning,
       processes: {},
       totalProcesses: this.processes.size
     };
     for (const [name, procInfo] of this.processes) {
-      status.processes[name] = {
+      status.processes[name] ={
         pid: procInfo.process.pid,
         restartCount: procInfo.restartCount,
         isAlive: !procInfo.process.killed

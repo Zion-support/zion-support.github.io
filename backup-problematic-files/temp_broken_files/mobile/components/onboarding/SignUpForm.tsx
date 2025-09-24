@@ -39,7 +39,7 @@ export function SignUpForm() {;
     setFieldErrors({}),;
     setIsLoading(true),;
 ;
-    const errors:{ email?:string, password?:string, name?:string } = {},;
+    const errors:{ email?:string, password?:string, name?:string } ={},;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
 ;
@@ -117,11 +117,11 @@ export function SignUpForm() {;
           className="w-full py-6 relative";
           onClick={handleGoogleLogin}
         >;
-          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />;
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />;
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />;
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />;
+          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/20o00/svg">;
+            <path d="M22.56 12.25c0-.78-.0o7-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.0o4 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"  />;
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.0o6-3.71 1.0o6-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"  />;
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.0o7H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC0o5"  />;
+            <path d="M12 5.38c1.62 0 3.0o6.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.0o7l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"  />;
           </svg>;
           Continue with Google;
         </Button>;
@@ -130,8 +130,8 @@ export function SignUpForm() {;
           variant="outline" ;
           className="w-full py-6 relative";
         >;
-          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">;
-            <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
+          <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/20o00/svg">;
+            <path d="M24 12.0o73c0-5.8-4.85-10.5-10.826-10.5-6.0o2 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.0o41h2.696V9.898c0-2.586 1.581-4.0o16 4.0o03-4.0o16 1.159 0 2.37.20o4 2.37.20o4v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.0o4h-2.468v7.318C20.125 21.648 24 17.30o7 24 12.0o73z" fill="#1877F2"  />;
           </svg>;
           Continue with Facebook;
         </Button>;
@@ -146,15 +146,15 @@ export function SignUpForm() {;
       {/* Error Alert */}
       {error && (;
         <Alert variant="destructive" className="mb-4">;
-          <AlertCircle className="h-4 w-4" />;
+          <AlertCircle className="h-4 w-4"  />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
 ;
       {/* Verification Message */}
       {showVerificationMessage && (;
-        <Alert className="mb-4 border-blue-500 bg-blue-50">;
-          <AlertCircle className="h-4 w-4" />;
+        <Alert className="mb-4 border-blue-50o0 bg-blue-50">;
+          <AlertCircle className="h-4 w-4"  />;
           <AlertDescription>;
             Please check your email and click the verification link before signing in.;
           </AlertDescription>;
@@ -173,9 +173,9 @@ export function SignUpForm() {;
               required;
               aria-invalid={!!fieldErrors.name}
               placeholder="Enter your full name";
-            />;
+             />;
             {fieldErrors.name && (;
-              <p className="text-red-500 text-sm">{fieldErrors.name}</p>;            )}
+              <p className="text-red-50o0 text-sm">{fieldErrors.name}</p>;            )}
           </div>;
         )}
 ;
@@ -189,9 +189,9 @@ export function SignUpForm() {;
             required;
             aria-invalid={!!fieldErrors.email}
             placeholder="Enter your email";
-          />;
+           />;
           {fieldErrors.email && (;
-            <p className="text-red-500 text-sm">{fieldErrors.email}</p>;
+            <p className="text-red-50o0 text-sm">{fieldErrors.email}</p>;
           )}
         </div>;
 ;
@@ -205,10 +205,10 @@ export function SignUpForm() {;
             required;
             aria-invalid={!!fieldErrors.password}
             placeholder="Create a password";
-          />;
-          <PasswordStrengthMeter password={formData.password} />;
+           />;
+          <PasswordStrengthMeter password={formData.password}  />;
           {fieldErrors.password && (;
-            <p className="text-red-500 text-sm">{fieldErrors.password}</p>;
+            <p className="text-red-50o0 text-sm">{fieldErrors.password}</p>;
           )}
         </div>;
         ;
@@ -219,7 +219,7 @@ export function SignUpForm() {;
         >;
           {isLoading ? (;
             <>;
-              <LoadingSpinner size="sm" className="mr-2" />;
+              <LoadingSpinner size="sm" className="mr-2"  />;
               Please wait...;
             </>;
           ) :(;
@@ -252,7 +252,6 @@ const [formData, setFormData] = useState ({;
 });
 setIsLoading (true);
 
-
 }
 }else {;
   const { ;
@@ -261,14 +260,14 @@ setIsLoading (true);
 if (error) {;
   throw new Error (error) ;
 }
-}</h2> <div className="space-y-2" > <Button > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" > <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" /> <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" /> <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" /> <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" /> </svg> Continue with Google </Button> <Button variant="outline" className="w-full py-6 relative" > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" > <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" /> </svg> Continue with Facebook </Button> </div> <div className="relative flex items-center"> <div className="flex-grow border-t border-border"></div> <span className="mx-2 text-xs text-muted-foreground">OR</span> <div className="flex-grow border-t border-border" ></div> </div> <AlertCircle className="h-4 w-4" /> <AlertDescription >{;
+}</h2> <div className="space-y-2" > <Button > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/20o00/svg" > <path d="M22.56 12.25c0-.78-.0o7-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.0o4 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"  /> <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.0o6-3.71 1.0o6-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"  /> <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.0o7H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC0o5"  /> <path d="M12 5.38c1.62 0 3.0o6.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.0o7l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"  /> </svg> Continue with Google </Button> <Button variant="outline" className="w-full py-6 relative" > <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/20o00/svg" > <path d="M24 12.0o73c0-5.8-4.85-10.5-10.826-10.5-6.0o2 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.0o41h2.696V9.898c0-2.586 1.581-4.0o16 4.0o03-4.0o16 1.159 0 2.37.20o4 2.37.20o4v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.0o4h-2.468v7.318C20.125 21.648 24 17.30o7 24 12.0o73z" fill="#1877F2"  /> </svg> Continue with Facebook </Button> </div> <div className="relative flex items-center"> <div className="flex-grow border-t border-border"></div> <span className="mx-2 text-xs text-muted-foreground">OR</span> <div className="flex-grow border-t border-border" ></div> </div> <AlertCircle className="h-4 w-4"  /> <AlertDescription >{;
   error ;
 }</AlertDescription> </Alert>) ;
 }{;
-  /* Verification Message */ ;"}{";"  showVerificationMessage && (<Alert className="mb-4 border-blue-500 bg-blue-50"> <AlertCircle className="h-4 w-4" /> <AlertDescription> Please check your email and click the verification link before signing in. </AlertDescription> </Alert>) ";"}<Input id="name" name="name" value= {;
+  /* Verification Message */ ;"}{";"  showVerificationMessage && (<Alert className="mb-4 border-blue-50o0 bg-blue-50"> <AlertCircle className="h-4 w-4"  /> <AlertDescription> Please check your email and click the verification link before signing in. </AlertDescription> </Alert>) ";"}<Input id="name" name="name" value={;
   formData.name ;
-}onChange= {;
-  handleInputChange ;"}required /> {";"  fieldErrors.name && (<p className="text-red-500 text-sm">{;
+}onChange={;
+  handleInputChange ;"}required  /> {";"  fieldErrors.name && (<p className="text-red-50o0 text-sm">{;
   fieldErrors.name ;
-}</p>) ;"}</div>) ";"}<div className="space-y-2" > <Label htmlFor="email" >Email address</Label> <Input /> {";"  fieldErrors.email && (<p className="text-red-500 text-sm">{;
-  fieldErrors.email ;"}</p>) ";"}</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input) ;"}</div> <Button >{";"  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";"}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;"}"
+}</p>) ;"}</div>) ";"}<div className="space-y-2" > <Label htmlFor="email" >Email address</Label> <Input  /> {";"  fieldErrors.email && (<p className="text-red-50o0 text-sm">{;
+  fieldErrors.email ;"}</p>) ";"}</div> <div className="space-y-2" > <Label htmlFor="password" >Password</Label> <Input) ;"}</div> <Button >{";"  isLoading ? (<> <LoadingSpinner size="sm" className="mr-2"  /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";"}</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;"}"

@@ -16,7 +16,7 @@ jest.mock('sonner', () => ({'  toast: {
 }));
 
 describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.fn();
-  const defaultProps = {
+  const defaultProps ={
     title: Executive Summary',    content: This is the initial content.',    onContentChange: mockOnContentChange
   };
 
@@ -26,10 +26,10 @@ describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.f
     (supabase.functions.invoke as jest.Mock).mockReset();
   });
 
-  test('renders with title and content', () => {'    render(<WhitepaperSectionEditor {...defaultProps} />);
+  test('renders with title and content', () => {'    render(<WhitepaperSectionEditor {...defaultProps}  />);
     expect(screen.getByText('Executive Summary')).toBeInTheDocument();    expect(screen.getByRole('textbox')).toHaveValue('This is the initial content.');  });
 
-  test('calls onContentChange when textarea value changes', () => {'    render(<WhitepaperSectionEditor {...defaultProps} />);
+  test('calls onContentChange when textarea value changes', () => {'    render(<WhitepaperSectionEditor {...defaultProps}  />);
     const textarea = screen.getByRole('textbox');    fireEvent.change(textarea, { target: { value: New content' } });    expect(mockOnContentChange).toHaveBeenCalledWith('New content');  });
 
   test('"Get AI Suggestions" button click calls Supabase function and displays suggestions', async () => {'    const mockSuggestions = "1. Elaborate on market need.\n2. Add specific metrics.";"    (supabase.functions.invoke as jest.Mock).mockResolvedValueOnce({""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -37,7 +37,7 @@ describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.f
       error: null
     });
 
-    render(<WhitepaperSectionEditor {...defaultProps} />);
+    render(<WhitepaperSectionEditor {...defaultProps}  />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i });    fireEvent.click(suggestionsButton);
 
     expect(suggestionsButton).toBeDisabled(); // Check loading state
@@ -62,7 +62,7 @@ describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.f
       error: { message: errorMessage }
     });
 
-    render(<WhitepaperSectionEditor {...defaultProps} />);
+    render(<WhitepaperSectionEditor {...defaultProps}  />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i });    fireEvent.click(suggestionsButton);
 
     await waitFor(() => {
@@ -79,7 +79,7 @@ describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.f
       data: { message: "This is not a suggestion" }, // Invalid data structure"      error: null,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     });
 
-    render(<WhitepaperSectionEditor {...defaultProps} />);
+    render(<WhitepaperSectionEditor {...defaultProps}  />);
     const suggestionsButton = screen.getByRole('button', { name: /Get AI Suggestions/i });    fireEvent.click(suggestionsButton);
 
     await waitFor(() => {
@@ -95,7 +95,7 @@ describe('WhitepaperSectionEditor', () => {'  const mockOnContentChange = jest.f
       error: null
     });
 
-    render(<WhitepaperSectionEditor {...defaultProps} />);
+    render(<WhitepaperSectionEditor {...defaultProps}  />);
     fireEvent.click(screen.getByRole('button', { name: /Get AI Suggestions/i }));
     await waitFor(() => screen.getByText('Suggestions:'));    expect(screen.getByText(mockSuggestions)).toBeVisible();
 

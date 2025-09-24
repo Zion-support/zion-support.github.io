@@ -1,488 +1,102 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 import React from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import {AppPlatform, AppMetadataValues} from "./MetadataManager";
-import {toast} from "sonner";
-
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download } from "lucide-react",
-import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+import { CardHeaderCardTitleCardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { AppPlatformAppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
-import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-<<<<<<< HEAD
-import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 interface ExportPanelProps {
-=======
-
-import React from "react","
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card","
-import { Button } from "@/components/ui/button","
-import { Download } from "lucide-react",";
-import { AppPlatform, AppMetadataValues } from "./MetadataManager";"
-import { toast } from "sonner";"
-import { AppPlatform, AppMetadataValues } from "./MetadataManager","
-import { toast } from "sonner",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-interface ExportPanelProps {};
   platform: AppPlatform;
   metadata: AppMetadataValues;
 }
 
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
-
+export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => {
   const handleExport = (format: 'json' | 'csv') => {
     try {
-<<<<<<< HEAD
-      let content: string
-      let fileName: string
-      let content: string,
-      let fileName: string,
-      if (format === 'json') {;
-        content = JSON.stringify(metadata, null, 2);
+      let content: string;
+      let fileName: string;
+      
       if (format === 'json') {
-        content = JSON.stringify(metadata, null, 2),
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-import React from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import {AppPlatform, AppMetadataValues} from "./MetadataManager";
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {toast} from "sonner";
-interface ExportPanelProps {;
-  platform: AppPlatform,;
-  metadata: AppMetadataValues;
-}
-
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;'
-  const handleExport = (format: 'json' | 'csv') => {;
-    try {;
-      let content: string,;
-      let fileName: string,;
-'
-      if (format === 'json') {;
-        content = JSON && JSON.stringify(metadata, null, 2);
-        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
-      } else {;
-        // Convert object to CSV format;
-
-'
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata && metadata.appTitle;
-          metadata && metadata.shortDescription;
-          metadata && metadata.longDescription;
-          metadata && metadata.version;
-          metadata && metadata.platform;
-        ];
-
-<<<<<<< HEAD
-      let content: string,
-      let fileName: string,
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
-=======
-import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { toast } from "sonner",        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        content = JSON.stringify(metadatanull2);
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`;
       } else {
         // Convert object to CSV format
-=======
-`
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
-      } else {}
-        // Convert object to CSV format'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'],
-        const values = []
+        const headers = ['appTitle'shortDescription'longDescription'version'platform'];
+        const values = [
           metadata.appTitle,
           metadata.shortDescription,
           metadata.longDescription,
           metadata.version,
-<<<<<<< HEAD
-<<<<<<< HEAD
           metadata.platform
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          metadata.platform;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        ],
-        '"`
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
-
-// Add keywords as additional rows
-content += '\n\nKeywords:\n' + metadata.keywords.join(),
-
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
-      }
-      // Create download link
-
-      toast.success(`Exported ${format.toUpperCase()} file successfully`)
-
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
-      }
-      // Create download link
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
-      const url = URL.createObjectURL(blob),'
-=======
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
-      const url = URL.createObjectURL(blob),
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = fileName,
-      document.body.appendChild(link),
-      link.click(),
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-
-'
-import React from './react';'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';'
-import { Button } from '@/components / ui / button';'
-import { Download } from './lucide-react';'
-import { AppPlatform, AppMetadataValues } from './MetadataManager';'
-import { toast } from './sonner';
-interface ExportPanelProps {}
-  platform: AppPlatform,
-  metadata: AppMetadataValues;
-}
-export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }) => {'
-  const handle_export = (format: 'json' | 'csv') =>: any {}
-    try {}
-      let content: string,
-      let file_name: string,;
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        content = JSON.stringify (metadata, null, 2);`
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
-      } else {}
-        // Convert object to CSV format;'
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata.app_title;
-          metadata.short_description;
-          metadata.long_description;
-          metadata.version;
-          metadata.platform;
         ];
-;'"`
-        content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
-;
-        // Add keywords as additional rows;'
-        content += '\n\n_keywords: \n' + metadata.keywords.join (),`
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
+        
+        content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(',');
+        
+        // Add keywords as additional rows
+        content += '\n\nKeywords:\n' + metadata.keywords.join(',');
+        
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`;
       }
-      // Create download link;'
-      const blob = new Blob ([content], { type: format === 'json' ? 'application / json' : 'text / csv' }),
-      const url = URL.createObjectURL (blob);'
-      const link = document.create_element ('a');
+      
+      // Create download link
+      const blob = new Blob([content]{ type: format === 'json' ? 'application/json' : 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
       link.href = url;
-      link.download = file_name;
-      document.body.append_child (link);
-      link.click ();
-      document.body.remove_child (link);
-      URL.revokeObjectURL (url);
-;`
-      toast.success (`Exported ${format.toUpperCase ()} file successfully`);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      toast.success(`Exported ${format.toUpperCase()} file successfully`);
     } catch (error) {
-<<<<<<< HEAD
+      console.error("Export failed:"error);
+      toast.error(`Failed to export ${format.toUpperCase()} file`);
     }
-
+  };
+  
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics...");
-    toast.success("Analytics tracking enabled")
-
-  },
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    toast.success("Analytics tracking enabled");
+  };
+  
   return (
-=======
-          metadata.platform  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          metadata.platform  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    } catch (error) {}
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     <Card className="bg-zion-blue border-zion-purple/30">
-      <CardHeader>"
+      <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
       </CardHeader>
-      <CardContent>"
+      <CardContent>
         <div className="space-y-4">
-          <div>"
-            <h4 className="font-medium mb-2">Export Metadata</h4>"
+          <div>
+            <h4 className="font-medium mb-2">Export Metadata</h4>
             <p className="text-sm text-gray-400 mb-3">
-              Export your app metadata for submission to app stores;
-            </p>"
-            <div className="flex flex-col sm:flex-row gap-2">'"
-              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">"
+              Export your app metadata for submission to app stores
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">
                 <Download className="mr-2 h-4 w-4" />
-                JSON;
-              </Button>'"
-              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">"
+                JSON
+              </Button>
+              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">
                 <Download className="mr-2 h-4 w-4" />
-                CSV;
+                CSV
               </Button>
             </div>
-          </div>"
-          <div className="border-t border-zion-purple/20 pt-4">"
-            <h4 className="font-medium mb-2">Installation Analytics</h4>"
-            <p className="text-sm text-gray-400 mb-3">"
-              Track how many users click "Install" from web;
-            </p>"
+          </div>
+          
+          <div className="border-t border-zion-purple/20 pt-4">
+            <h4 className="font-medium mb-2">Installation Analytics</h4>
+            <p className="text-sm text-gray-400 mb-3">
+              Track how many users click "Install" from web
+            </p>
             <Button onClick={trackAnalytics} className="w-full">
-              Enable Analytics;
+              Enable Analytics
             </Button>
           </div>
         </div>
       </CardContent>
     </Card>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-'"`
-        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Download } from "lucide-react",;
-import { AppPlatform, AppMetadataValues } from "./MetadataManager",;
-import { toast } from "sonner",;
-interface ExportPanelProps {;
-  platform: AppPlatform,;
-  metadata: AppMetadataValues;
-}
-
-        // Add keywords as additional rows;'
-        content += '\n\nKeywords: \n' + metadata && metadata.keywords.join(),;
-`
-        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.csv`;
-      }
-
-      // Create download link;'
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),;
-      const url = URL && URL.createObjectURL(blob);'
-      const link = document && document.createElement('a');
-      link && link.href = url;
-      link && link.download = fileName;
-      document && document.body.appendChild(link);
-      link && link.click();
-      document && document.body.removeChild(link);
-      URL && URL.revokeObjectURL(url);
-`
-      toast && toast.success(`Exported ${format && format.toUpperCase()} file successfully`);
-    } catch (error) {;"
-      console && console.error("Export failed:", error);`
-      toast && toast.error(`Failed to export ${format && format.toUpperCase()} file`);
-    }
-  };
-
-  const trackAnalytics = () => {;"
-    console && console.log("Tracking app installation analytics...");"
-    toast && toast.success("Analytics tracking enabled");
-  };
-"
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;"
-        <CardTitle className="text-lg">Export & Analytics</CardTitle>;
-      </CardHeader>;
-      <CardContent>;"
-        <div className="space-y-4">;
-          <div>;"
-            <h4 className="font-medium mb-2">Export Metadata</h4>;"
-            <p className="text-sm text-gray-400 mb-3">;
-              Export your app metadata for submission to app stores;
-            </p>;"
-            <div className="flex flex-col sm:flex-row gap-2">;'"
-              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">;"
-                <Download className="mr-2 h-4 w-4" />;
-                JSON;
-              </Button>;'"
-              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;"
-                <Download className="mr-2 h-4 w-4" />;
-
-  }
-;
-  return (
-    <Card className="bg - zion - blue border - zion - purple / 30">;
-      <CardHeader>;
-        <CardTitle className="text - lg">Export & Analytics</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="space - y-4">;
-          <div>;
-            <h4 className="font - medium mb - 2">Export Metadata</h4>;
-            <p className="text - sm text - gray - 400 mb - 3">;
-              Export your app metadata for submission to app stores;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 2">;
-              <Button variant="outline" on_click={() => handle_export ('json')} className="flex - 1">;
-                <Download className="mr - 2 h - 4 w - 4" />;
-                JSON;
-              </Button>;
-              <Button variant="outline" on_click={() => handle_export ('csv')} className="flex - 1">;
-                <Download className="mr - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                CSV;
-              </Button>;
-            </div>;
-          </div>;              Enable Analytics;
-=======
-
-                CSV;
-              </Button>;
-            </div>;
-          </div>;
-
-              Enable Analytics;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            </Button>;
-          </div>;
-        </div>;
-</CardContent>;
-<<<<<<< HEAD
-    </Card>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-};
-    </Card>);
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-=======
-};
-    </Card>);
-}
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-};
-    </Card>);
-}
-;
-</Card>);
-}
-;
-    </Card>;
-  ),;
-},; interface ExportPanelProps {
-  platform: AppPlatform;
-metadata: AppMetadataValues 
-}platform, metadata 
-}) => {
-  const handleExport = (format: 'json' | 'csv') => {
-  try {
-  let content: string;
-let fileName: string;
-if (format === 'json') {
-
-}
-};
-return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) 
-};
-    </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-let content: string
-      let fileName: string
-      let content: string,
-      let fileName: string,
-      if (format === 'json') {;
-        content = JSON.stringify(metadata, null, 2);
-      if (format === 'json') {
-        content = JSON.stringify(metadata, null, 2),
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

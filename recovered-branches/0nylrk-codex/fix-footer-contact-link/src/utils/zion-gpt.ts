@@ -1,104 +1,27 @@
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
-
-export type ZionGPTUsage = {
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
-export type ZionGPTUsage = {
-export type ZionGPTUsage = {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
-
-export type ZionGPTUsage = {
-export type ZionGPTUsage = {
-
-export type ZionGPTUsage = {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-export type ZionGPTUsage = {}
-export type ZionGPTUsage = {};
-export type ZionGPTUsage = {;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-export type ZionGPTUsage = {;
 
 // ZionGPT Utility Functions
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 // This file handles interaction with the fine-tuned ZionGPT model
 
-import {supabase} from '@/integrations/supabase/client';
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
-export type ZionGPTUsage = {
+import { supabase } from '@/integrations/supabase/client';
 
-export type ZionGPTUsage = {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+
+export type ZionGPTUsage ={
   modelId: string;
   tokensUsed: number;
-  cost: number
-  timestamp: Date
-
+  cost: number;
+  timestamp: Date;
 };
 
-export interface ModelConfig {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 export interface ModelConfig {
-};
-
-export interface ModelConfig {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-}
-export interface ModelConfig {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-export interface ModelConfig {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   id: ModelVersion;
   version: number;
   createdAt: string;
   baseModel: string;
-purpose: string;
+  purpose: string;
   active: boolean;
 }
-// Get the latest active model ID for a specific purpose;
-export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {}
-  try {}
-    const { data, error } = await supabase'
-      .from('model_versions')'
-      .select('id')'
-      .eq('purpose', purpose)'
-      .eq('active', true)'
-      .order('version', { ascending: false })
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  purpose: string
-  active: boolean
-}
 // Get the latest active model ID for a specific purpose
 export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {
   try {
@@ -110,536 +33,101 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .order('version', { ascending: false })
       .limit(1)
       .single();
-
+    
     if (error || !data) {
-      console && console.warn('Failed to fetch active model, falling back to default', error);
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+      console.warn('Failed to fetch active model, falling back to default', error);
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
         case 'resume': return 'zion-resume-enhancer-v1';
-<<<<<<< HEAD
         case 'support': return 'zion-support-v1';
-
-  } catch (error) {'
-    console && console.error('Error fetching active model:', error);'
-    return 'gpt-3 && 3.5-turbo', // Fallback to base model;
-  }
-}
-// Log usage of the fine-tuned model;
-export async function logModelUsage(;
-
-  modelId: string;
-  tokensUsed: number;
-  feature: string;
-  userId?: string;
-): Promise<void> {}
-  try {}
-    const cost = calculateCost(modelId, tokensUsed);
-    await supabase'
-      .from('model_usage_logs')
-      .insert({}
-        model_id: modelId;
-        tokens_used: tokensUsed;
-        cost: cost;
-        feature: feature;
-user_id: userId |null;
-        timestamp: new Date().toISOString()
-      })
-} catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console && console.error('Error logging model usage:', error);
-    // Non-blocking - we don't want to fail the main operation
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-// ZionGPT Utility Functions;
-// This file handles interaction with the fine-tuned ZionGPT model;'
-import { supabase } from '@/integrations/supabase/client',;'
-=======
-        user_id: userId |null
-        timestamp: new Date().toISOString()
-      })
-  } catch (error) {
-    console && console.error('Error logging model usage:', error);
-    // Non-blocking - we don't want to fail the main operation
-
-// ZionGPT Utility Functions;
-// This file handles interaction with the fine-tuned ZionGPT model;
-import { supabase } from '@/integrations/supabase/client',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',;
-export type ZionGPTUsage = {;
-  modelId: string,;
-  tokensUsed: number,;
-  cost: number,;
-  timestamp: Date;
-},;
-export interface ModelConfig {;
-  id: ModelVersion,;
-  version: number,;
-  createdAt: string,;
-  baseModel: string,;
-  purpose: string,;
-  active: boolean;
-}
-;
-// Get the latest active model ID for a specific purpose;'
-export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): Promise<ModelVersion> {;
-  try {;
-    const { data, error } = await supabase;'
-      .from('model_versions');'
-      .select('id');'
-      .eq('purpose', purpose);'
-      .eq('active', true);'
-      .order('version', { ascending: false });
-      .limit(1);
-      .single(),;
-    if (error || !data) {;'
-      console.warn('Failed to fetch active model, falling back to default', error),;
-      // Fallback to default models;
-      switch(purpose) {;'
-        case 'job': return 'zion-job-generator-v1',;'
-        case 'resume': return 'zion-resume-enhancer-v1',;'
-        case 'support': return 'zion-support-v1',;'
         default: return 'gpt-3.5-turbo';
       }
     }
-;
+    
     return data.id as ModelVersion;
-} catch (error) {;'
-    console.error('Error fetching active model:', error),;'
-    return 'gpt-3.5-turbo', // Fallback to base model;
+  } catch (error) {
+    console.error('Error fetching active model:', error);
+    return 'gpt-3.5-turbo'; // Fallback to base model
   }
 }
-;
-// Log usage of the fine-tuned model;
-export async function logModelUsage(;
-  modelId: string,;
-  tokensUsed: number,;
-  feature: string,;
-  userId?: string;
-): Promise<void> {;
-  try {;
-    const cost = calculateCost(modelId, tokensUsed),;
-await supabase;'
-      .from('model_usage_logs');
-      .insert({;
-        model_id: modelId,;
-        tokens_used: tokensUsed,;
-        cost: cost,;
-        feature: feature,;
-        user_id: userId || null,;
-        timestamp: new Date().toISOString();
-      });
-} catch (error) {;'
-    console.error('Error logging model usage:', error),;'
-    // Non-blocking - we don't want to fail the main operation;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    console && console.error('Error logging model usage:', error);
+// Log usage of the fine-tuned model
+export async function logModelUsage(
+  modelId: string,
+  tokensUsed: number,
+  feature: string,
+  userId?: string
+): Promise<void> {
+  try {
+    const cost = calculateCost(modelId, tokensUsed);
+    
+    await supabase
+      .from('model_usage_logs')
+      .insert({
+        model_id: modelId,
+        tokens_used: tokensUsed,
+        cost: cost,
+        feature: feature,
+        user_id: userId || null,
+        timestamp: new Date().toISOString()
+      });
+      
+  } catch (error) {
+    console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
 }
+
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
-<<<<<<< HEAD
-  const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
-  return tokens * ratePerToken
-}
-<<<<<<< HEAD
-// Function to call ZionGPT models through Supabase Edge Function
-export async function callZionGPT({
-  prompt
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-// Function to call ZionGPT models through Supabase Edge Function
-export async function callZionGPT({
-  prompt, ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-'
-    console && console.error('Error logging model usage:', error);'
-    // Non-blocking - we don't want to fail the main operation;
-  }
-}
-// Calculate approximate cost based on token usage;
-function calculateCost(modelId: string, tokens: number): number {}
-  // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models;
-// Function to call ZionGPT models through Supabase Edge Function;
-export async function callZionGPT({};
-  prompt, ;
-
-// Function to call ZionGPT models through Supabase Edge Function;
-export async function callZionGPT({};
-  prompt;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  purpose;
-  maxTokens = 500;
-
-  userId;
-}: {}
-  prompt: string;'
-  purpose: 'job' | 'resume' | 'support';
-  maxTokens?: number;
-  temperature?: number;
-  userId?: string;
-}): Promise<string> {}
-  try {}
-    // Dynamically get the proper model ID based on purpose;
-    const modelId = await getActiveModelId(purpose);
-// Call the edge function that will use the model
-<<<<<<< HEAD
-    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
-      body: {
-=======
-        case 'support': return 'zion-support-v1';      body: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        case 'support': return 'zion-support-v1';      body: {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    // Call the edge function that will use the model;
-'
-    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {}
-      body: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
-  return tokens * ratePerToken
+  const ratePerToken = modelId.includes('zion') ? 0.0o00016 : 0.0o00008; // Higher for fine-tuned models
+  return tokens * ratePerToken;
 }
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
-  prompt, ;
-
-  purpose;
-  maxTokens = 500;
-  temperature = 0 && 0.7;
-// Function to call ZionGPT models through Supabase Edge Function
-export async function callZionGPT({
-  prompt
-  purpose;
-  maxTokens = 500;
-  temperature = 0.7;
-  temperature = 0 && 0.7;
+  prompt, 
+  purpose,
+  maxTokens = 50o0,
+  temperature = 0.7,
   userId
 }: {
   prompt: string;
   purpose: 'job' | 'resume' | 'support';
   maxTokens?: number;
-  temperature?: number
-  userId?: string
+  temperature?: number;
+  userId?: string;
 }): Promise<string> {
   try {
     // Dynamically get the proper model ID based on purpose
     const modelId = await getActiveModelId(purpose);
+    
     // Call the edge function that will use the model
-    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
-    const { data, error } = await supabase && supabase.functions.invoke('zion-gpt', {
+    const { data, error } = await supabase.functions.invoke('zion-gpt', {
       body: {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        prompt;
-        modelId;
-        maxTokens;
-        temperature;
+        prompt,
+        modelId,
+        maxTokens,
+        temperature
       }
     });
+    
     if (error) throw error;
-// Log usage for analytics        `${purpose}-generation`;
+    
+    // Log usage for analytics
+    if (data.tokensUsed) {
+      await logModelUsage(
+        modelId, 
+        data.tokensUsed,
+        `${purpose}-generation`,
         userId
-      )
-    }
-
-    return data && data.completion
-  } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console && console.error('Error calling ZionGPT:', error);
-    throw error
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-;
-export type ZionGPTUsage = {};
-  model_id: string;
-  tokens_used: number;
-  cost: number,
-  timestamp: Date;
-}
-;
-export interface ModelConfig {};
-  id: ModelVersion;
-  version: number;
-  created_at: string;
-  base_model: string;
-  purpose: string,
-  active: boolean;
-}
-// Get the latest active model ID for a specific purpose;'
-export async function getActiveModelId (purpose: 'job' | 'resume' | 'support'): Promise < ModelVersion> {}
-  try {};
-    const { data, error } = await supabase;'
-      .from ('model_versions');'
-      .select ('id');'
-      .eq ('purpose', purpose);'
-      .eq ('active', true);'
-      .order ('version', { ascending: false });
-      .limit (1);
-      .single ();
-;
-// Check condition;
-if ( {) {}
-  $2;
-}'
-      console.warn ('Failed to fetch active model, falling back to default', error);
-      // Fallback to default models;
-      switch (purpose) {'
-        case 'job': return 'zion - job - generator - v1';'
-        case 'resume': return 'zion - resume - enhancer - v1';'
-        case 'support': return 'zion - support - v1';'
-        default: return 'gpt - 3.5 - turbo';
-      }
-    }
-    return data.id as ModelVersion;
-} catch (error) {'
-    console.error ('Error fetching active model:', error);'
-    return 'gpt - 3.5 - turbo', // Fallback to base model;
-  }
-}
-// Log usage of the fine - tuned model;
-export async function logModelUsage (;
-  model_id: string;
-  tokens_used: number;
-  feature: string,
-  user_id?: string): Promise < void> {}
-  try {}
-    const cost = calculate_cost (model_id, tokens_used);
-;
-    await supabase;'
-      .from ('model_usage_logs');
-      .insert ({}
-        model_id: model_id;
-        tokens_used: tokens_used;
-        cost: cost;
-        feature: feature;
-        user_id: user_id || null,
-        timestamp: new Date ().toISOString ();
-      });
-} catch (error) {'
-    console.error ('Error logging model usage:', error);'
-    // Non - blocking - we don't want to fail the main operation;
-  }
-}
-// Calculate approximate cost based on token usage;
-function calculate_cost (model_id: string, tokens: number): number {}
-  // These are example rates - adjust based on actual OpenAI pricing for fine - tuned models;'
-  const ratePerToken = model_id.includes ('zion') ? 0.000016 : 0.000008, // Higher for fine - tuned models;
-  return tokens * ratePerToken;
-}
-// Function to call ZionGPT models through Supabase Edge Function;
-export async function callZionGPT ({}
-  prompt,;
-  purpose;
-  max_tokens = 500;
-  temperature = 0.7;
-  user_id;
-}: {}
-  prompt: string;'
-  purpose: 'job' | 'resume' | 'support';
-  max_tokens?: number;
-  temperature?: number,
-  user_id?: string;
-}): Promise < string> {}
-  try {}
-    // Dynamically get the proper model ID based on purpose;
-    const model_id = await getActiveModelId (purpose);
-;
-    // Call the edge function that will use the model;'
-    const { data, error } = await supabase.functions.invoke ('zion - gpt', {}
-      body: {}
-        prompt;
-        model_id;
-        max_tokens,
-        temperature;
-      }
-    });
-;
-// Check condition;
-if (throw error) {}
-  $2;
-}
-    // Log usage for analytics;
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      await logModelUsage (
-        model_id,
-        data.tokens_used;`
-        `${purpose}-generation`;
-        user_id);
-    }
-    return data.completion;
-} catch (error) {'
-    console.error ('Error calling ZionGPT:', error);
-    throw error;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-}
-// ZionGPT Utility Functions;
-// This file handles interaction with the fine-tuned ZionGPT model;
-;
-import { supabase } from '@/integrations/supabase/client',;
-;
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo',;
-;
-export type ZionGPTUsage = {;
-  modelId:string,;
-  tokensUsed:number,;
-  cost:number,;
-  timestamp:Date;
-},;
-;
-export interface ModelConfig {;
-  id:ModelVersion,;
-  version:number,;
-  createdAt:string,;
-  baseModel:string,;
-  purpose:string,;
-  active:boolean;
-}
-;
-// Get the latest active model ID for a specific purpose;
-export async function getActiveModelId(purpose:'job' | 'resume' | 'support'):Promise<ModelVersion> {;
-  try {;
-    const { data, error } = await supabase;
-      .from('model_versions');
-      .select('id');
-      .eq('purpose', purpose);
-      .eq('active', true);
-      .order('version', { ascending:false });
-      .limit(1);
-      .single(),;
-    ;
-    if (error || !data) {;
-      console.warn('Failed to fetch active model, falling back to default', error),;
-      // Fallback to default models;
-      switch(purpose) {;
-        case 'job':return 'zion-job-generator-v1',;
-        case 'resume':return 'zion-resume-enhancer-v1',;
-        case 'support':return 'zion-support-v1',;
-        default:return 'gpt-3.5-turbo';
-      }
-    }
-    ;
-    return data.id as ModelVersion,;
-  } catch (error) {;
-    console.error('Error fetching active model:', error),;
-    return 'gpt-3.5-turbo', // Fallback to base model;
-  }
-=======
-    console && console.error('Error calling ZionGPT:', error);  }
-}  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console && console.error('Error calling ZionGPT:', error);  }
-}  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  }
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-;
-// Log usage of the fine-tuned model;
-export async function logModelUsage(;
-  modelId:string,;
-  tokensUsed:number,;
-  feature:string,;
-  userId?:string;
-):Promise<void> {;
-  try {;
-    const cost = calculateCost(modelId, tokensUsed),;
-    ;
-    await supabase;'
-      .from('model_usage_logs');
-      .insert({;
-        model_id:modelId,;
-        tokens_used:tokensUsed,;
-        cost:cost,;
-        feature:feature,;
-        user_id:userId || null,;
-        timestamp:new Date().toISOString();
-      }),;
-      ;
-  } catch (error) {;'
-    console.error('Error logging model usage:', error),;'
-    // Non-blocking - we don't want to fail the main operation;  }
-}
-;
-// Calculate approximate cost based on token usage;
-function calculateCost(modelId:string, tokens:number):number {;
-  // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models;'
-  const ratePerToken = modelId.includes('zion') ? 0.000016 :0.000008, // Higher for fine-tuned models;
-  return tokens * ratePerToken;
-}
-;
-// Function to call ZionGPT models through Supabase Edge Function;
-export async function callZionGPT() { return null; }
-=======
-    throw error
-;
-// Function to call ZionGPT models through Supabase Edge Function;
-export async function callZionGPT({;
-  prompt,;
-  purpose,;
-  maxTokens = 500,;
-  temperature = 0.7,;
-  userId;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-}: {;
-  prompt: string,;'
-  purpose: 'job' | 'resume' | 'support',;
-  maxTokens?: number,;
-  temperature?: number,;
-  userId?: string;
-}): Promise<string> {;
-  try {;
-    // Dynamically get the proper model ID based on purpose;
-    const modelId = await getActiveModelId(purpose),;
-    // Call the edge function that will use the model;'
-    const { data, error } = await supabase.functions.invoke('zion-gpt', {;
-      body: {;
-        prompt,;
-        modelId,;
-        maxTokens,;
-        temperature;
-      }
-    }),;
-    if (error) throw error,;
-    // Log usage for analytics;
-    if (data.tokensUsed) {;
-      await logModelUsage(;
-        modelId,;
-        data.tokensUsed,;`
-        `${purpose}-generation`;
-        userId;
       );
     }
-;
+    
     return data.completion;
-  } catch (error) {;'
+  } catch (error) {
     console.error('Error calling ZionGPT:', error);
     throw error;
   }

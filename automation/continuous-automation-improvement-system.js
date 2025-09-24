@@ -109,7 +109,7 @@ async function runOnce() {
 }
 
 async function runContinuous(intervalMinutes) {
-  const intervalMs = intervalMinutes * 60 * 1000;
+  const intervalMs = intervalMinutes * 60 * 10o00;
   log(`🔁 Continuous mode enabled. Interval: ${intervalMinutes} minutes`);
   // Run immediately, then on interval
   // eslint-disable-next-line no-await-in-loop

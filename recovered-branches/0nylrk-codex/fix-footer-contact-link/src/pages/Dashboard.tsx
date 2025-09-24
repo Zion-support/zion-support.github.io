@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+
+
+
+
+
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -19,48 +16,9 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";
-
-import { Badge } from "@/components/ui/badge";
-import {}
-  UserCheck,
-  Bell,
-  MessageSquare,
-  LogOut,
-  Send,
-Settings,";
-} from "lucide-react";
-import {}
-  createTestNotification,
-  createOnboardingNotification,
-  createSystemNotification,";
-} from "@/utils/notifications";"
-import { NotificationCenter } from "@/components/NotificationCenter";"
-import { useToast } from "@/hooks/use-toast";"
-import { Link } from "react-router-dom";
-export default function Dashboard() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-export default function Dashboard() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-
-const { user, logout } = useAuth();
-  const { toast } = useToast();
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
   const { user, logout } = useAuth();
   const { toast } = useToast();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -70,27 +28,10 @@ import { Badge } from "@/components/ui/badge",
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
 import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
 import { NotificationCenter } from "@/components/NotificationCenter",
-
+import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-export default function Dashboard() {};
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export default function Dashboard() {
 
-  const handleTestNotification = async () => {;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -100,343 +41,230 @@ export default function Dashboard() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
 
+
   if (!user) return null,
 
+
+
   const handleTestNotification = async () => {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const result = await createTestNotification(user && user.id);
     if (result && result.success) {;
-toast({;
-        title: "Test notification created",,
-  description: "Check your notification center"});
+      toast({;
+        title: "Test notification created",;
+        description: "Check your notification center"});
     } else {;
       toast({;
-        title: "Error creating test notification",,
-  description: "Something went wrong",;
+        title: "Error creating test notification",;
+        description: "Something went wrong",;
         variant: "destructive"});
 
-  const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id);
-    if (result.success) {
-      toast({
-        title: "Test notification created",
-        description: "Check your notification center",
-      });
-    } else {
-      toast({
-        title: "Error creating test notification",
-        description: "Something went wrong",
-        variant: "destructive",
-      });
     }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }
+  },
+
+
   return (
     <>;
-      <Header />;"
-      <div className="min-h-screen bg-zion-blue">;"
-        <div className="container mx-auto px-4 py-8">;"
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-{/* Left Sidebar - User Profile */}
-<<<<<<< HEAD
+            {/* Left Sidebar - User Profile */}
+
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
-=======
-            {/* Left Sidebar - User Profile */}"
-            <div className="lg:col-span-1">"
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">"
-                <div className="flex flex-col items-center text-center">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
-                    {user.displayName"
-                      .split(" ")
-                      .map((name) => name[0])"
-                      .join("")}
-                  </div>"
-                  <h2 className="text-xl font-bold text-white">
-                    {user.displayName}
-                  </h2>"
+                    {user.displayName.split(' ').map(name => name[0]).join('')}
+                  </div>
+                  <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
-<<<<<<< HEAD
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+                  <Badge
                   <Badge 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
-=======
-
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <Badge className="bg-zion-purple text-white mb-4">
-                    {user.userType;
-                      ? user.userType.charAt(0).toUpperCase() +
-                        user.userType.slice(1)"
-                      : "New User"}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                   </Badge>
-<Button
+
                   <Button
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+                  <Button 
+
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-=======
-                  <Button"
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                    onClick={() => (window.location.href = "/profile")}
+                    onClick={() => window.location.href = "/profile"}
                   >
                     <UserCheck size={16} />
-                    Edit Profile;
+                    Edit Profile
                   </Button>
                 </div>
               </div>
-
-              {/* Stats & Metrics */}"
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">"
-                <h3 className="text-lg font-bold text-white mb-4">
-                  Your Activity;
-                </h3>"
-                <div className="space-y-4">"
-                  <div className="flex justify-between items-center">"
-                    <span className="text-zion-slate-light">
-                      Profile Completion;
-                    </span>"
+              {/* Stats & Metrics */}
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Profile Completion</span>
                     <span className="text-zion-cyan font-medium">65%</span>
-                  </div>"
-                  <div className="w-full bg-zion-blue rounded-full h-2">
-                    <div"
-                      className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full""
-                      style={{ width: "65%" }}
-                    ></div>
                   </div>
-"
-                  <div className="flex justify-between items-center">"
-                    <span className="text-zion-slate-light">
-                      Community Points;
-                    </span>"
+                  <div className="w-full bg-zion-blue rounded-full h-2">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Community Points</span>
                     <span className="text-zion-cyan font-medium">125</span>
-</div>
+                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
-                      <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
+                      <a href="/wallet" className="hover:underline">View Wallet</a>
+                    </span>
                   </div>
-"
-                  <div className="flex justify-between items-center">"
-                    <span className="text-zion-slate-light">Badges Earned</span>"
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
                   </div>
-
-                  {/* Test notification buttons */}"
+                  {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
-                    <Button"
-                      className="w-full flex items-center justify-center gap-2""
+                    <Button
+                      className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={handleTestNotification}
-                    >"
+                    >
                       <Send size={16} className="text-zion-cyan" />
-                      Send Test Notification;
+                      Send Test Notification
                     </Button>
-<Button
+
+                    <Button
                     <Button 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
-await createOnboardingNotification({
-<<<<<<< HEAD
+                        await createOnboardingNotification({
+
+                          userId: user.id
+                          missingMilestone: 'profile_completed'
+                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
+                        });
                           userId: user.id,
-missingMilestone: 'profile_completed',
+                          missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                    <Button"
-                      className="w-full flex items-center justify-center gap-2""
-                      variant="outline"
-                      onClick={async () => {}
-                        await createOnboardingNotification({}
-                          userId: user.id,"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                          missingMilestone: "profile_completed",
-                          userRole:"
-                            user.userType === "employer" ||"
-                            user.userType === "buyer""
-                              ? "client""
-                              : "talent",
-                        });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
                         toast({
-                          title: "Onboarding notification sent",
-                          description: "Check your notification center",
-                        });
+                          title: "Onboarding notification sent"
+                          description: "Check your notification center"
+                        })
                       }}
-                    >"
+                    >
                       <Settings size={16} className="text-zion-purple" />
-                      Send Onboarding Nudge;
+                      Send Onboarding Nudge
                     </Button>
-<Button
+
+                    <Button
                     <Button 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
                       className="w-full flex items-center justify-center gap-2"
-=======
-                    <Button"
-                      className="w-full flex items-center justify-center gap-2""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
                       variant="outline"
-                      onClick={async () => {}
-                        await createSystemNotification({}
-                          userId: user.id,"
-                          title: "New Feature Available!",
-                          message:"
-                            "We've added a new notification center to help you stay updated with important information.","
-                          actionUrl: "/notifications","
-                          actionText: "Explore Now",
+                      onClick={async () => {
+                        await createSystemNotification({
+                          userId: user.id
+                          title: "New Feature Available!"
+                          message: "We've added a new notification center to help you stay updated with important information."
+                          actionUrl: "/notifications"
+                          actionText: "Explore Now"
                         });
+                        toast({
+                          title: "System notification sent"
 
-                        }),
-
-                        }),
-
-                        toast({"
-                          title: "System notification sent","
-                          description: "Check your notification center",
-                        });
+                          description: "Check your notification center"
+                        })
                       }}
-                    >"
+                    >
                       <Bell size={16} className="text-yellow-500" />
-                      Send System Alert;
+                      Send System Alert
                     </Button>
                   </div>
                 </div>
               </div>
-
-              {/* Notifications */}"
-              <div className="bg-zion-blue-dark rounded-xl p-6">"
-                <h3 className="text-lg font-bold text-white mb-4 flex items-center">"
+              {/* Notifications */}
+              <div className="bg-zion-blue-dark rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white mb-4 flex items-center">
                   <Bell size={18} className="mr-2 text-zion-cyan" />
-                  Recent Notifications;
-                </h3>"
-                <div className="space-y-4">"
-                  <Link to="/notifications" className="block">"
-                    <Button variant="outline" className="w-full">"
+                  Recent Notifications
+                </h3>
+                <div className="space-y-4">
+                  <Link to="/notifications" className="block">
+                    <Button variant="outline" className="w-full">
                       <Bell className="mr-2 h-4 w-4" />
-                      View All Notifications;
+                      View All Notifications
                     </Button>
                   </Link>
                 </div>
               </div>
             </div>
-
-            {/* Main Content - Dashboard */}"
-            <div className="lg:col-span-2">"
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">"
-                <div className="flex items-center justify-between mb-6">"
-                  <h2 className="text-2xl font-bold text-white">Dashboard</h2>"
+            {/* Main Content - Dashboard */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-white">Dashboard</h2>
                   <div className="flex items-center gap-2">
                     <NotificationCenter />
-                    <Button"
-                      variant="outline""
+                    <Button
+                      variant="outline"
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
                       onClick={logout}
-                    >"
+                    >
                       <LogOut size={16} className="mr-2" />
-                      Logout;
+                      Logout
                     </Button>
                   </div>
                 </div>
-"
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">"
-                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">"
-                    <h3 className="text-lg font-medium text-white">"
-                      Welcome, {user.displayName.split(" ")[0]}
-                    </h3>"
-                    <p className="text-zion-slate-light mt-1">
-                      Your journey on Zion has just begun!
-                    </p>
-                  </div>"
-                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">"
-                    <h3 className="text-lg font-medium text-white">
-                      Getting Started;
-                    </h3>"
-                    <p className="text-zion-slate-light mt-1">
-                      Complete your profile to unlock all features.
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Welcome, {user.displayName.split(' ')[0]}</h3>
+                    <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Getting Started</h3>
+                    <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>
                   </div>
                 </div>
-
-                {/* Badges Preview */}"
-                <div className="mb-8">"
-                  <h3 className="text-lg font-bold text-white mb-4">
-                    Your Badges;
-                  </h3>"
-                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">"
-                    <div className="flex flex-col items-center">"
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">"
+                {/* Badges Preview */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
                         <UserCheck size={24} className="text-white" />
-                      </div>"
-                      <span className="text-xs text-center text-zion-slate-light">
-                        Newcomer;
-                      </span>
-                    </div>"
-                    <div className="flex flex-col items-center">"
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">"
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">
                         <MessageSquare size={24} className="text-white" />
-                      </div>"
-                      <span className="text-xs text-center text-zion-slate-light">
-                        First Post;
-                      </span>
-                    </div>"
-                    <div className="flex flex-col items-center opacity-40">"
-                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">"
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">First Post</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
                         <Bell size={24} className="text-zion-slate-light" />
-                      </div>"
-                      <span className="text-xs text-center text-zion-slate-light">
-                        Locked;
-                      </span>
-                    </div>"
-                    <div className="flex flex-col items-center opacity-40">"
-                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">"
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
+                    </div>
+                    <div className="flex flex-col items-center opacity-40">
+                      <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
                         <span className="text-zion-slate-light text-xl">?</span>
-                      </div>"
-                      <span className="text-xs text-center text-zion-slate-light">
-                        Locked;
-                      </span>
+                      </div>
+                      <span className="text-xs text-center text-zion-slate-light">Locked</span>
                     </div>
                   </div>
                 </div>
-
                 {/* Community Section */}
-                <div>"
-                  <h3 className="text-lg font-bold text-white mb-4">
-                    Community;
-                  </h3>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>
                   <CommunityDiscussion />
                 </div>
               </div>
@@ -446,14 +274,9 @@ missingMilestone: 'profile_completed',
       </div>
       <Footer />
     </>
-)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            <div className="lg:col-span-1">;
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
-                <div className="flex flex-col items-center text-center">;
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">;
-{user && user.displayName.split(' ').map(name => name[0]).join('')}
+  )
+
+}
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -473,7 +296,7 @@ export default function Dashboard() {;
     const result = await createTestNotification(user.id),;
     if (result.success) {;
       toast({;
-title: "Test notification created",;
+        title: "Test notification created",;
         description: "Check your notification center"});
     } else {;
       toast({;
@@ -494,7 +317,8 @@ title: "Test notification created",;
                 <div className="flex flex-col items-center text-center">
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
                     {user.displayName.split(' ').map(name => name[0]).join('')}
-</div>;
+
+                  </div>;
                   <h2 className="text-xl font-bold text-white">{user && user.displayName}</h2>;
                   <p className="text-zion-slate-light mb-2">{user && user.email}</p>;
 
@@ -522,10 +346,10 @@ title: "Test notification created",;
                     <span className="text-zion-cyan font-medium">65%</span>;
                   </div>;
                   <div className="w-full bg-zion-blue rounded-full h-2">;
-<div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>;
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>;
                   </div>;
 
-<div className="flex justify-between items-center">;
+                  <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Community Points</span>;
                     <span className="text-zion-cyan font-medium">125</span>;
                   </div>;
@@ -535,11 +359,13 @@ title: "Test notification created",;
                       <a href="/wallet" className="hover:underline">View Wallet</a>;
                     </span>;
                   </div>;
+
                   <div className="flex justify-between items-center">;
                     <span className="text-zion-slate-light">Badges Earned</span>;
                     <span className="text-zion-cyan font-medium">3/12</span>;
                   </div>;
-{/* Test notification buttons */}
+
+                  {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">;
                     <Button
                       className="w-full flex items-center justify-center gap-2"
@@ -552,7 +378,7 @@ title: "Test notification created",;
                     <Button
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
-onClick={async () => {;
+                      onClick={async () => {;
                         await createOnboardingNotification({;
                           userId: user && user.id,;
                           missingMilestone: 'profile_completed',;
@@ -571,7 +397,7 @@ onClick={async () => {;
                     <Button
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
-onClick={async () => {;
+                      onClick={async () => {;
                         await createSystemNotification({;
                           userId: user && user.id,;
                           title: "New Feature Available!",;
@@ -580,7 +406,7 @@ onClick={async () => {;
                           actionText: "Explore Now";
                         });
                         toast({;
-title: "System notification sent",;
+                          title: "System notification sent",;
                           description: "Check your notification center";
                         });
                       }}
@@ -616,7 +442,7 @@ title: "System notification sent",;
                   <h2 className="text-2xl font-bold text-white">Dashboard</h2>;
                   <div className="flex items-center gap-2">;
                     <NotificationCenter />;
-<Button
+                    <Button
                       variant="outline" 
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
                       onClick={logout}>;
@@ -625,7 +451,8 @@ title: "System notification sent",;
                     </Button>;
                   </div>;
                 </div>;
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">;
                   <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">;
                     <h3 className="text-lg font-medium text-white">Welcome, {user && user.displayName.split(' ')[0]}</h3>;
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>;
@@ -666,49 +493,72 @@ title: "System notification sent",;
                     </div>;
                   </div>;
                 </div>;
-{/* Community Section */}
+
+                {/* Community Section */}
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
+
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { CommunityDiscussion } from '@/components / CommunityDiscussion';
+import { Badge } from '@/components / ui / badge';
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from './lucide-react';
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from '@/utils / notifications';
+import { NotificationCenter } from '@/components / NotificationCenter';
+import { use_toast } from '@/hooks / use - toast';
+import { Link } from './react-router-dom';
+export default /**
+ * Dashboard - Function description
+ */
+function Dashboard() {
+  const { user, logout } = use_auth ();
+  const { toast } = use_toast ();
+;
+  // Check condition
+if (return null) {
+  $2
 }
-  const handleTestNotification = async () => {}
+  const handleTestNotification = async () => {
     const result = await createTestNotification (user.id);
-    // Check condition;
-if ( {) {}
-  $2;
+    // Check condition
+if ( {) {
+  $2
 }
-      toast ({"
-        title: "Test notification created","
+      toast ({
+        title: "Test notification created",
         description: "Check your notification center"});
-    } else {}
-      toast ({"
-        title: "Error creating test notification","
-        description: "Something went wrong","
+    } else {
+      toast ({
+        title: "Error creating test notification",
+        description: "Something went wrong",
         variant: "destructive"});
     }
   }
 ;
   return (
     <>;
-<Header />;"
-      <div className="min - h-screen bg - zion - blue">;"
-        <div className="container mx - auto px - 4 py - 8">;"
+      <Header />;
+      <div className="min - h-screen bg - zion - blue">;
+        <div className="container mx - auto px - 4 py - 8">;
           <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-            {/* Left Sidebar - User Profile */}"
-            <div className="lg:col - span - 1">;"
-              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;"
-                <div className="flex flex - col items - center text - center">;"
-                  <div className="w - 24 h - 24 rounded - full bg - zion - purple flex items - center justify - center text - 2xl font - bold text - white mb - 4">;'
+            {/* Left Sidebar - User Profile */}
+            <div className="lg:col - span - 1">;
+              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;
+                <div className="flex flex - col items - center text - center">;
+                  <div className="w - 24 h - 24 rounded - full bg - zion - purple flex items - center justify - center text - 2xl font - bold text - white mb - 4">;
                     {user.display_name.split (' ').map (name => name[0]).join ('')}
-                  </div>;"
-                  <h2 className="text - xl font - bold text - white">{user.display_name}</h2>;"
+                  </div>;
+                  <h2 className="text - xl font - bold text - white">{user.display_name}</h2>;
                   <p className="text - zion - slate - light mb - 2">{user.email}</p>;
-                  <Badge;"
+                  <Badge;
                     className="bg - zion - purple text - white mb - 4";
-                  >;"
+                  >;
                     {user.user_type ? user.user_type.char_at (0).toUpperCase () + user.user_type.slice (1) : "New User"}
                   </Badge>;
-                  <Button;"
-                    className="w - full flex items - center gap - 2 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";"
+                  <Button;
+                    className="w - full flex items - center gap - 2 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
                     on_click={() => window.location.href = "/profile"}
                   >;
                     <UserCheck size={16} />;
@@ -716,91 +566,91 @@ if ( {) {}
                   </Button>;
                 </div>;
               </div>;
-{/* Stats & Metrics */}"
-              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;"
-                <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3>;"
-                <div className="space - y-4">;"
-                  <div className="flex justify - between items - center">;"
-                    <span className="text - zion - slate - light">Profile Completion</span>;"
+              {/* Stats & Metrics */}
+              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;
+                <h3 className="text - lg font - bold text - white mb - 4">Your Activity</h3>;
+                <div className="space - y-4">;
+                  <div className="flex justify - between items - center">;
+                    <span className="text - zion - slate - light">Profile Completion</span>;
                     <span className="text - zion - cyan font - medium">65%</span>;
-                  </div>;"
-                  <div className="w - full bg - zion - blue rounded - full h - 2">;"
+                  </div>;
+                  <div className="w - full bg - zion - blue rounded - full h - 2">;
                     <div className="bg - gradient - to - r from - zion - cyan to - zion - purple h - 2 rounded - full" style={{ width: "65%" }}></div>;
-                  </div>;"
-                  <div className="flex justify - between items - center">;"
-                    <span className="text - zion - slate - light">Community Points</span>;"
+                  </div>;
+                  <div className="flex justify - between items - center">;
+                    <span className="text - zion - slate - light">Community Points</span>;
                     <span className="text - zion - cyan font - medium">125</span>;
-                  </div>;"
-                  <div className="flex justify - between items - center">;"
-                    <span className="text - zion - slate - light">ZION$ Balance</span>;"
-                    <span className="text - zion - cyan font - medium">;"
+                  </div>;
+                  <div className="flex justify - between items - center">;
+                    <span className="text - zion - slate - light">ZION$ Balance</span>;
+                    <span className="text - zion - cyan font - medium">;
                       <a href="/wallet" className="hover:underline">View Wallet</a>;
                     </span>;
-                  </div>;"
-                  <div className="flex justify - between items - center">;"
-                    <span className="text - zion - slate - light">Badges Earned</span>;"
+                  </div>;
+                  <div className="flex justify - between items - center">;
+                    <span className="text - zion - slate - light">Badges Earned</span>;
                     <span className="text - zion - cyan font - medium">3 / 12</span>;
                   </div>;
-                  {/* Test notification buttons */}"
+                  {/* Test notification buttons */}
                   <div className="flex flex - col gap - 2 mt - 4">;
-                    <Button;"
-                      className="w - full flex items - center justify - center gap - 2";"
+                    <Button;
+                      className="w - full flex items - center justify - center gap - 2";
                       variant="outline";
                       on_click={handleTestNotification}
-                    >;"
+                    >;
                       <Send size={16} className="text - zion - cyan" />;
                       Send Test Notification;
                     </Button>;
-                    <Button;"
-                      className="w - full flex items - center justify - center gap - 2";"
+                    <Button;
+                      className="w - full flex items - center justify - center gap - 2";
                       variant="outline";
-                      on_click={async () => {}
-                        await createOnboardingNotification ({}
-                          user_id: user.id,'
-                          missing_milestone: 'profile_completed','
+                      on_click={async () => {
+                        await createOnboardingNotification ({
+                          user_id: user.id,
+                          missing_milestone: 'profile_completed',
                           user_role: user.user_type === 'employer' || user.user_type === 'buyer' ? 'client' : 'talent';
                         });
-                        toast ({"
-                          title: "Onboarding notification sent","
+                        toast ({
+                          title: "Onboarding notification sent",
                           description: "Check your notification center";
                         });
                       }}
-                    >;"
+                    >;
                       <Settings size={16} className="text - zion - purple" />;
                       Send Onboarding Nudge;
                     </Button>;
-                    <Button;"
-                      className="w - full flex items - center justify - center gap - 2";"
+                    <Button;
+                      className="w - full flex items - center justify - center gap - 2";
                       variant="outline";
-                      on_click={async () => {}
-                        await createSystemNotification ({}
-                          user_id: user.id,"
-                          title: "New Feature Available!",'"
-                          message: "We've added a new notification center to help you stay updated with important information.","
-                          action_url: "/notifications","
+                      on_click={async () => {
+                        await createSystemNotification ({
+                          user_id: user.id,
+                          title: "New Feature Available!",
+                          message: "We've added a new notification center to help you stay updated with important information.",
+                          action_url: "/notifications",
                           action_text: "Explore Now";
                         });
-                        toast ({"
-                          title: "System notification sent","
+                        toast ({
+                          title: "System notification sent",
                           description: "Check your notification center";
                         });
                       }}
-                    >;"
+                    >;
                       <Bell size={16} className="text - yellow - 500" />;
                       Send System Alert;
                     </Button>;
                   </div>;
                 </div>;
               </div>;
-{/* Notifications */}"
-              <div className="bg - zion - blue - dark rounded - xl p - 6">;"
-                <h3 className="text - lg font - bold text - white mb - 4 flex items - center">;"
+              {/* Notifications */}
+              <div className="bg - zion - blue - dark rounded - xl p - 6">;
+                <h3 className="text - lg font - bold text - white mb - 4 flex items - center">;
                   <Bell size={18} className="mr - 2 text - zion - cyan" />;
                   Recent Notifications;
-                </h3>;"
-                <div className="space - y-4">;"
-                  <Link to="/notifications" className="block">;"
-                    <Button variant="outline" className="w - full">;"
+                </h3>;
+                <div className="space - y-4">;
+                  <Link to="/notifications" className="block">;
+                    <Button variant="outline" className="w - full">;
                       <Bell className="mr - 2 h - 4 w - 4" />;
                       View All Notifications;
                     </Button>;
@@ -808,95 +658,68 @@ if ( {) {}
                 </div>;
               </div>;
             </div>;
-{/* Main Content - Dashboard */}"
-            <div className="lg:col - span - 2">;"
-              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;"
-                <div className="flex items - center justify - between mb - 6">;"
-                  <h2 className="text - 2xl font - bold text - white">Dashboard</h2>;"
+            {/* Main Content - Dashboard */}
+            <div className="lg:col - span - 2">;
+              <div className="bg - zion - blue - dark rounded - xl p - 6 mb - 6">;
+                <div className="flex items - center justify - between mb - 6">;
+                  <h2 className="text - 2xl font - bold text - white">Dashboard</h2>;
                   <div className="flex items - center gap - 2">;
                     <NotificationCenter />;
-                    <Button;"
-                      variant="outline";"
+                    <Button;
+                      variant="outline";
                       className="text - zion - slate - light border - zion - blue - light hover:bg - zion - blue hover:text - white";
                       on_click={logout}
-                    >;"
+                    >;
                       <LogOut size={16} className="mr - 2" />;
                       Logout;
                     </Button>;
                   </div>;
-</div>;"
-                <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 2 gap - 4 mb - 6">;"
-                  <div className="p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - purple / 30 border border - zion - blue - light">;'"
-                    <h3 className="text - lg font - medium text - white">Welcome, {user.display_name.split (' ')[0]}</h3>;"
+                </div>;
+                <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 2 gap - 4 mb - 6">;
+                  <div className="p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - purple / 30 border border - zion - blue - light">;
+                    <h3 className="text - lg font - medium text - white">Welcome, {user.display_name.split (' ')[0]}</h3>;
                     <p className="text - zion - slate - light mt - 1">Your journey on Zion has just begun!</p>;
-                  </div>;"
-                  <div className="p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - cyan / 30 border border - zion - blue - light">;"
-                    <h3 className="text - lg font - medium text - white">Getting Started</h3>;"
+                  </div>;
+                  <div className="p - 4 rounded - lg bg - gradient - to - br from - zion - blue to - zion - cyan / 30 border border - zion - blue - light">;
+                    <h3 className="text - lg font - medium text - white">Getting Started</h3>;
                     <p className="text - zion - slate - light mt - 1">Complete your profile to unlock all features.</p>;
                   </div>;
                 </div>;
-                {/* Badges Preview */}"
-                <div className="mb - 8">;"
-                  <h3 className="text - lg font - bold text - white mb - 4">Your Badges</h3>;"
-                  <div className="grid grid - cols - 3 sm:grid - cols - 4 gap - 4">;"
-                    <div className="flex flex - col items - center">;"
-                      <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - zion - purple to - zion - cyan flex items - center justify - center mb - 2">;"
+                {/* Badges Preview */}
+                <div className="mb - 8">;
+                  <h3 className="text - lg font - bold text - white mb - 4">Your Badges</h3>;
+                  <div className="grid grid - cols - 3 sm:grid - cols - 4 gap - 4">;
+                    <div className="flex flex - col items - center">;
+                      <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - zion - purple to - zion - cyan flex items - center justify - center mb - 2">;
                         <UserCheck size={24} className="text - white" />;
-                      </div>;"
+                      </div>;
                       <span className="text - xs text - center text - zion - slate - light">Newcomer</span>;
-                    </div>;"
-                    <div className="flex flex - col items - center">;"
-                      <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - zion - purple to - zion - purple - light flex items - center justify - center mb - 2">;"
+                    </div>;
+                    <div className="flex flex - col items - center">;
+                      <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - zion - purple to - zion - purple - light flex items - center justify - center mb - 2">;
                         <MessageSquare size={24} className="text - white" />;
-                      </div>;"
+                      </div>;
                       <span className="text - xs text - center text - zion - slate - light">First Post</span>;
-                    </div>;"
-                    <div className="flex flex - col items - center opacity - 40">;"
-                      <div className="w - 16 h - 16 rounded - full bg - zion - blue - light flex items - center justify - center mb - 2">;"
+                    </div>;
+                    <div className="flex flex - col items - center opacity - 40">;
+                      <div className="w - 16 h - 16 rounded - full bg - zion - blue - light flex items - center justify - center mb - 2">;
                         <Bell size={24} className="text - zion - slate - light" />;
-                      </div>;"
+                      </div>;
                       <span className="text - xs text - center text - zion - slate - light">Locked</span>;
-                    </div>;"
-                    <div className="flex flex - col items - center opacity - 40">;"
-                      <div className="w - 16 h - 16 rounded - full bg - zion - blue - light flex items - center justify - center mb - 2">;"
+                    </div>;
+                    <div className="flex flex - col items - center opacity - 40">;
+                      <div className="w - 16 h - 16 rounded - full bg - zion - blue - light flex items - center justify - center mb - 2">;
                         <span className="text - zion - slate - light text - xl">?</span>;
-                      </div>;"
+                      </div>;
                       <span className="text - xs text - center text - zion - slate - light">Locked</span>;
                     </div>;
                   </div>;
                 </div>;
                 {/* Community Section */}
-<div>;"
+                <div>;
                   <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
 
-                ;
-                {/* Community Section */}
-                <div>;"
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
-                {/* Community Section */}
-                <div>;"
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <CommunityDiscussion />;
-=======
-                        await createOnboardingNotification({                  <CommunityDiscussion />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                        await createOnboardingNotification({                  <CommunityDiscussion />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                <div>;
-                  <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
-                ;
-                {/* Community Section */}
-                <div>;
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
-                {/* Community Section */}
-                <div>;
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
-                  <CommunityDiscussion />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
                 </div>;
               </div>;
             </div>;
@@ -905,83 +728,17 @@ if ( {) {}
       </div>;
       <Footer />;
 
-</>);
-
+    </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-    </>;
-  ),; export default function Dashboard () {}
-  const {};
-  user, logout;
-}= useAuth ();
-const {}
-  toast;
 
-    </>;
-  ),; export default function Dashboard () {
-  const {
-  // TODO: Implement
-  user, logout;
-}= useAuth ();
-const {
-  toast 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}= useToast ();
 
-};"
-return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {}
-  16 "
-}/> Edit Profile </Button> </div> </div> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Community Points</span> <span className="text-zion-cyan font-medium" >125</span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >ZION$ Balance</span> <span className="text-zion-cyan font-medium" > <a href="/wallet" className="hover:underline" >View Wallet</Link> </span> </div> <div className="flex justify-between items-center" > <span className="text-zion-slate-light" >Badges Earned</span> <span className="text-zion-cyan font-medium" >3/12</span> </div> Send Test Notification </Button> <Button;
-}
-}> <Settings size= {}
-  16 "
-}className="text-zion-purple" /> 
-}
-}> <Bell size= {}
-  16 "
-}className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications </Button> </Link> </div> </div> </div> Logout </Button> </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {}
-  /* Community Section */ "
-}> <Settings size= {
-  16;"
-}className="text-zion-purple" />"
 
-}> <Bell size= {
-  16 
-}className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications </Button> </Link> </div> </div> </div> Logout </Button> </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {
-  /* Community Section */ 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>) 
-}
-    </>;
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-}className="text-yellow-500" /> space-y-4"> <Link to=" /notifications"className=" block"> <Button variant=" outline"className=" w-full"> <Bell className=" mr-2 h-4 w-4"/> View All Notifications   </div> </div> </div> Logout  </div> </div> </div> <div className=" p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light"> <h3 className=" text-lg font-medium text-white">Getting Started</h3> <p className=" text-zion-slate-light mt-1">Complete your profile to unlock all features.</p> </div> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Newcomer</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">First Post</span> </div> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> <div className=" flex flex-col items-center opacity-40"> <div className=" w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2"> <span className=" text-zion-slate-light text-xl">?</span> </div> <span className=" text-xs text-center text-zion-slate-light">Locked</span> </div> </div> </div> {"
-)"
-}<div> <h3 className=" text-lg font-bold text-white mb-4" >Community</h3> <CommunityDiscussion /> </div> </div> </div> </div> </div> </div> <Footer /> </>)"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

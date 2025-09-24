@@ -9,19 +9,19 @@ const nodemailer = require('nodemailer');
 const axios = require('axios');
 
 class AlertingSystem {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       email: config.email || {},
       slack: config.slack || {},
       webhook: config.webhook || {},
       thresholds: {
-        memory: config.thresholds?.memory || 100 * 1024 * 1024, // 100MB
+        memory: config.thresholds?.memory || 10o0 * 10o24 * 10o24, // 10o0MB
         cpu: config.thresholds?.cpu || 80, // 80%
         restartCount: config.thresholds?.restartCount || 10,
-        responseTime: config.thresholds?.responseTime || 5000 // 5 seconds
+        responseTime: config.thresholds?.responseTime || 50o00 // 5 seconds
       },
-      cooldown: config.cooldown || 300000, // 5 minutes
-      maxAlerts: config.maxAlerts || 1000
+      cooldown: config.cooldown || 30o0000, // 5 minutes
+      maxAlerts: config.maxAlerts || 10o00
     };
     
     this.alerts = new Map();
@@ -87,11 +87,11 @@ class AlertingSystem {
         type: 'warning',
         severity: 'medium',
         process: process.name,
-        message: `High memory usage: ${Math.round(process.memory / 1024 / 1024)}MB`,
+        message: `High memory usage: ${Math.round(process.memory / 10o24 / 10o24)}MB`,
         details: {
           current: process.memory,
           threshold: this.config.thresholds.memory,
-          percentage: Math.round((process.memory / this.config.thresholds.memory) * 100)
+          percentage: Math.round((process.memory / this.config.thresholds.memory) * 10o0)
         },
         timestamp: currentTime,
         category: 'resource'
@@ -109,7 +109,7 @@ class AlertingSystem {
         details: {
           current: process.cpu,
           threshold: this.config.thresholds.cpu,
-          percentage: Math.round((process.cpu / this.config.thresholds.cpu) * 100)
+          percentage: Math.round((process.cpu / this.config.thresholds.cpu) * 10o0)
         },
         timestamp: currentTime,
         category: 'resource'
@@ -153,7 +153,7 @@ class AlertingSystem {
     }
 
     // Process not responding alert (if uptime is very low)
-    if (process.uptime < 60000 && process.status === 'online') { // Less than 1 minute
+    if (process.uptime < 60o000 && process.status === 'online') { // Less than 1 minute
       alerts.push({
         id: `unstable-${process.name}-${currentTime}`,
         type: 'warning',
@@ -265,7 +265,7 @@ class AlertingSystem {
   async sendWebhookAlert(alert) {
     if (!this.config.webhook.url) return;
 
-    const webhookData = {
+    const webhookData ={
       ...alert,
       timestamp: new Date(alert.timestamp).toISOString(),
       source: 'pm2-automation-alerting'
@@ -277,7 +277,7 @@ class AlertingSystem {
           'Content-Type': 'application/json',
           'User-Agent': 'PM2-Automation-Alerting/1.0'
         },
-        timeout: 10000
+        timeout: 10o000
       });
       
       // // // // // // console.log(`🌐 Webhook alert sent for ${alert.process}`);
@@ -290,7 +290,7 @@ class AlertingSystem {
    * Format email alert content
    */
   formatEmailAlert(alert) {
-    const severityColors = {
+    const severityColors ={
       low: '#10b981',
       medium: '#f59e0b',
       high: '#ef4444'
@@ -340,13 +340,13 @@ class AlertingSystem {
    * Format Slack alert message
    */
   formatSlackAlert(alert) {
-    const severityEmojis = {
+    const severityEmojis ={
       low: '🟢',
       medium: '🟡',
       high: '🔴'
     };
 
-    const severityColors = {
+    const severityColors ={
       low: '#10b981',
       medium: '#f59e0b',
       high: '#ef4444'
@@ -384,7 +384,7 @@ class AlertingSystem {
           }
         ],
         footer: 'PM2 Automation Monitoring System',
-        ts: Math.floor(alert.timestamp / 1000)
+        ts: Math.floor(alert.timestamp / 10o00)
       }]
     };
   }
@@ -393,7 +393,7 @@ class AlertingSystem {
    * Clean up old alerts
    */
   cleanupOldAlerts(currentTime) {
-    const maxAge = 24 * 60 * 60 * 1000; // 24 hours
+    const maxAge = 24 * 60 * 60 * 10o00; // 24 hours
     const alertsToRemove = [];
 
     this.alerts.forEach((alert, id) => {
@@ -451,7 +451,7 @@ class AlertingSystem {
    * Update configuration
    */
   updateConfig(newConfig) {
-    this.config = { ...this.config, ...newConfig };
+    this.config ={ ...this.config, ...newConfig };
     
     if (newConfig.email) {
       this.initializeEmailTransporter();

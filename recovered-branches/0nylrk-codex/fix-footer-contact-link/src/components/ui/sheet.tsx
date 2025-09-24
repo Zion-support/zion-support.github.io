@@ -1,125 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import { cva, type VariantProps } from &quot;class-variance-authority&quot;
-import { X } from &quot;lucide-react&quot;
-import * as React from &quot;react&quot;
-import { cn } from &quot;@/lib/utils&quot;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as SheetPrimitive from "@radix-ui/react-dialog"
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import * as SheetPrimitive from "@radix-ui/react-dialog"
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import * as SheetPrimitive from "@radix-ui/react-dialog"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { cva, type VariantProps } from "class-variance-authority"
+import { cvatype VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
-=======
-
-import * as SheetPrimitive from "@radix-ui/react-dialog""
-import { cva, type VariantProps } from "class-variance-authority""
-import { X } from "lucide-react""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 import * as React from "react"
-"
+
 import { cn } from "@/lib/utils"
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const Sheet = SheetPrimitive.Root
+
 const SheetTrigger = SheetPrimitive.Trigger
+
 const SheetClose = SheetPrimitive.Close
+
 const SheetPortal = SheetPrimitive.Portal
-=======
 
-;
-const Sheet = SheetPrimitive.Root;
-const SheetTrigger = SheetPrimitive.Trigger;
-const SheetClose = SheetPrimitive.Close;
-const SheetPortal = SheetPrimitive.Portal;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const SheetOverlay = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Overlay>
+  React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
->(({ className, ...props }, ref) => (
-<SheetPrimitive.Overlay
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>(({ className...props }ref) => (
+  <SheetPrimitive.Overlay
     className={cn(
-<<<<<<< HEAD
-
-&quot;fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0&quot;
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      className
-=======
-    className={cn(      className
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-=======
-    className={cn(      className
-import * as SheetPrimitive from "@radix-ui/react-dialog"""
-import { cva, type VariantProps } from "class-variance-authority"""
-import { X } from "lucide-react"""
-import * as React from "react"""
-import { cn } from "@/lib/utils""
-const Sheet = SheetPrimitive.Root;
-const SheetTrigger = SheetPrimitive.Trigger;
-const SheetClose = SheetPrimitive.Close;
-const SheetPortal = SheetPrimitive.Portal;
-const SheetOverlay = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Overlay>
-</typeof>
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
-  <SheetPrimitive.Overlay;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    className={cn(
-
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-
-"fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-
-      &quot;fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0&quot;
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     )}
     {...props}
     ref={ref}
   />
 ))
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
+SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
+
 const sheetVariants = cva(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-&quot;fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500&quot;
-  {
-    variants: {
-      side: {
-=======
-
-  {}
-    variants: {}
-      side: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-        top: &quot;inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top&quot;
-        bottom:
-          &quot;inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom&quot;
-        left: &quot;inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm&quot;
-        right:
-defaultVariants: {
-      side: "right"}}  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
       side: {
@@ -129,531 +39,89 @@ defaultVariants: {
         left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-    defaultVariants: {
-      side: &quot;right&quot;}}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     defaultVariants: {
       side: "right"}}
+)
 
-)
-interface SheetContentProps;
-=======
-defaultVariants: {
-      side: "right"}}
-      side: &quot;right&quot;}}    defaultVariants: {
-      side: "right"}}
-)
 interface SheetContentProps
-
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
+  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
   VariantProps<typeof sheetVariants> { }
+
 const SheetContent = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Content>
-<<<<<<< HEAD
-<<<<<<< HEAD
+  React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
-<<<<<<< HEAD
-<<<<<<< HEAD
->(({ side = &quot;right&quot;, className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content
-<<<<<<< HEAD
-=======
-  SheetContentProps;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import * as SheetPrimitive from &quot;@radix - ui / react - dialog & quot;
-import { cva, type VariantProps } from &quot;class - variance - authority & quot;
-import { X } from &quot;lucide-react & quot;
-import * as React from &quot;react & quot;
-;
-import { cn } from &quot;@/lib / utils & quot;
-;
-const Sheet = SheetPrimitive.Root;
-const SheetTrigger = SheetPrimitive.Trigger;
-const SheetClose = SheetPrimitive.Close;
-const SheetPortal = SheetPrimitive.Portal;
-const SheetOverlay = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Overlay>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Overlay>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Overlay;
-    className={cn (
-      &quot;fixed inset - 0 z - 50 bg - black / 80  data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0&quot;,
-      class_name)}
-    {...props}
-    ref={ref}
-  />));
-SheetOverlay.display_name = SheetPrimitive.Overlay.display_name;
-const sheet_variants = cva (
-  &quot;fixed z - 50 gap - 4 bg - background p - 6 shadow - lg transition ease - in - out data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:duration - 300 data-[state = open]:duration - 500 & quot;,
-{}
-    variants: {}
-      side: {}
-        top: &quot;inset - x-0 top - 0 border - b data-[state = closed]:slide - out - to - top data-[state = open]:slide - in - from - top & quot;,
-        bottom:;
-          &quot;inset - x-0 bottom - 0 border - t data-[state = closed]:slide - out - to - bottom data-[state = open]:slide - in - from - bottom & quot;,
-        left: &quot;inset - y-0 left - 0 h - full w - 3/4 border - r data-[state = closed]:slide - out - to - left data-[state = open]:slide - in - from - left sm:max - w-sm & quot;,
-        right:;
-          &quot;inset - y-0 right - 0 h - full w - 3/4  border - l data-[state = closed]:slide - out - to - right data-[state = open]:slide - in - from - right sm:max - w-sm & quot;}},
-default_variants: {}
-      side: &quot;right & quot;}}
-);
-interface SheetContentProps;
-  extends React.ComponentPropsWithoutRef < typeof SheetPrimitive.Content>,
-  VariantProps < typeof sheet_variants> { }
-const SheetContent = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Content>,
-  SheetContentProps;
->(({ side = &quot;right & quot;, class_name, children, ...props }, ref) => (
-<SheetPortal>;
-    <SheetOverlay />;
-    <SheetPrimitive.Content;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      ref={ref}
-      className={cn (sheet_variants ({ side }), class_name)}
-      {...props}
-    >;
-      {children}
-
-<SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->(({ side = "right", className, children, ...props }, ref) => (
+>(({ side = "right"classNamechildren...props }ref) => (
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ side }), className)}
+      className={cn(sheetVariants({ side })className)}
       {...props}
-    >;
+    >
       {children}
-<SheetPrimitive.Close className=&quot;absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary&quot;>
-        <X className=&quot;h-4 w-4&quot; />
-        <span className=&quot;sr-only&quot;>Close</span>
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
       </SheetPrimitive.Close>
-=======
-  SheetContentProps      </SheetPrimitive.Close>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  SheetContentProps      </SheetPrimitive.Close>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    </SheetPrimitive.Content>
-  </SheetPortal>
-))
-SheetContent.displayName = SheetPrimitive.Content.displayName;
-const SheetHeader = ({}
-  className;
-  ...props;
-=======
-      </SheetPrimitive.Close>
-  SheetContentProps      </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
 ))
 SheetContent.displayName = SheetPrimitive.Content.displayName
+
 const SheetHeader = ({
-  className
+  className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-
-      "flex flex-col space-y-2 text-center sm:text-left",
-
-"flex flex-col space-y-2 text-center sm:text-left",
-
-      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
       "flex flex-col space-y-2 text-center sm:text-left",
       className
     )}
     {...props}
   />
 )
-
 SheetHeader.displayName = "SheetHeader"
 
-SheetHeader.displayName = &quot;SheetHeader&quot;
-SheetHeader.displayName = "SheetHeader"
 const SheetFooter = ({
-    className={cn(const SheetFooter = ({
-  className
+  className,
   ...props
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 }: React.HTMLAttributes<HTMLDivElement>) => (
-<div
-<<<<<<< HEAD
+  <div
     className={cn(
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-      &quot;flex flex-col space-y-2 text-center sm:text-left&quot;
-      "flex flex-col space-y-2 text-center sm:text-left",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
-=======
-      className;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     )}
     {...props}
   />
 )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-const SheetFooter = ({
-=======
-    className={cn(const SheetFooter = ({
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    className={cn(const SheetFooter = ({
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  className
-  ...props
-=======
-
-const SheetFooter = ({}
-  className;
-  ...props;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div;
-    className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-&quot;flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2&quot;
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      className
-=======
-
-      className
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    )}
-    {...props}
-  />
-)
-<<<<<<< HEAD
-
 SheetFooter.displayName = "SheetFooter"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-SheetFooter.displayName = &quot;SheetFooter&quot;
-SheetFooter.displayName = "SheetFooter"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>
+  React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
->(({ className, ...props }, ref) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
+>(({ className...props }ref) => (
   <SheetPrimitive.Title
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    className={cn("text-lg font-semibold text-foreground", className)}
-    {...props}
-  />;
-));
-SheetTitle.displayName = SheetPrimitive.Title.displayName;
-const SheetDescription = React.forwardRef<;
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  <SheetPrimitive.Title
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<SheetPrimitive.Close className=&quot;absolute right - 4 top - 4 rounded - sm opacity - 70 ring - offset - background transition - opacity hover:opacity - 100 focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none data-[state = open]:bg - secondary & quot;>;
-        <X className=&quot;h - 4 w - 4&quot; />;
-        <span className=&quot;sr - only & quot;>Close</span>;
-      </SheetPrimitive.Close>;
-    </SheetPrimitive.Content>;
-  </SheetPortal>));
-SheetContent.display_name = SheetPrimitive.Content.display_name;
-const SheetHeader = ({}
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLDivElement>) =>: any (
-  <div;
-    className={cn (
-      &quot;flex flex - col space - y-2 text - center sm:text - left & quot;,
-      class_name)}
-    {...props}
-  />);
-SheetHeader.display_name = &quot;SheetHeader & quot;
-;
-const SheetFooter = ({}
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLDivElement>) =>: any (
-  <div;
-    className={cn (
-      &quot;flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 & quot;,
-      class_name)}
-    {...props}
-  />);
-SheetFooter.display_name = &quot;SheetFooter & quot;
-;
-const SheetTitle = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Title>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Title>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Title;
-ref={ref}
-
-=======
     ref={ref}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  <SheetPrimitive.Title    ref={ref}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
+    className={cn("text-lg font-semibold text-foreground"className)}
     {...props}
-React.ElementRef<typeof SheetPrimitive.Description>,;
+  />
+))
+SheetTitle.displayName = SheetPrimitive.Title.displayName
 
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;    ref={ref}
-    className={cn("text-lg font-semibold text-foreground", className)}
-    {...props}
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-
-  />));
-SheetTitle.display_name = SheetPrimitive.Title.display_name;
-const SheetDescription = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Description;
+const SheetDescription = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Description>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
+>(({ className...props }ref) => (
+  <SheetPrimitive.Description
     ref={ref}
-    className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
+    className={cn("text-sm text-muted-foreground"className)}
     {...props}
+  />
+))
+SheetDescription.displayName = SheetPrimitive.Description.displayName
 
-/>));
-SheetDescription.display_name = SheetPrimitive.Description.display_name;
 export {
-
-export {;
-
-  Sheet, SheetClose;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-
-=======
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-
-}
-  <SheetPortal>
-
-    <SheetOverlay />
-
-    <SheetPrimitive.Content;
-import * as SheetPrimitive from &quot;@radix - ui / react - dialog & quot;
-import { cva, type VariantProps } from &quot;class - variance - authority & quot;
-import { X } from &quot;lucide-react & quot;
-import * as React from &quot;react & quot;
-;
-
-<SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">;
-        <X className="h-4 w-4" />;
-        <span className="sr-only">Close</span>;
-import { cn } from &quot;@/lib / utils & quot;
-const SheetOverlay = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Overlay>,
-
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Overlay>;
->(({ class_name, ...props }, ref) => (
-    className={cn (
-      &quot;fixed inset - 0 z - 50 bg - black / 80  data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0&quot;,)
-      class_name)}
-  />));
-
-  extends React.ComponentPropsWithoutRef < typeof SheetPrimitive.Content>,
-  VariantProps < typeof sheet_variants> { }
-const SheetContent = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Content>,
-  SheetContentProps;
->(({ side = &quot;right & quot;, class_name, children, ...props }, ref) => (
-  <SheetPortal>;
-
-    <SheetOverlay />;
-
-      ref={ref})
-      className={cn (sheet_variants ({ side }), class_name)}
-    >;
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">"
-        <X className="h-4 w-4" />"
-        <span className="sr-only">Close</span>"
-
-      className={cn(sheetVariants({ side }), className)}
-
-<SheetPrimitive.Close className=&quot;absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary&quot;>
-
-        <X className=&quot;h-4 w-4&quot; />
-
-        <span className=&quot;sr-only&quot;>Close</span>"
-      </SheetPrimitive.Close>
-    </SheetPrimitive.Content>
-
-}: React.HTMLAttributes<HTMLDivElement>) => (
-
-  <div;
-
-      "flex flex-col space-y-2 text-center sm:text-left","
-</div>
-
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2","
-const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
-  <SheetPrimitive.Title;
-<SheetPrimitive.Close className=&quot;absolute right - 4 top - 4 rounded - sm opacity - 70 ring - offset - background transition - opacity hover:opacity - 100 focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none data-[state = open]:bg - secondary & quot;>;
-
-        <X className=&quot;h - 4 w - 4&quot; />;
-
-        <span className=&quot;sr - only & quot;>Close</span>;
-      </SheetPrimitive.Close>;
-    </SheetPrimitive.Content>;
-  ));
-}: React.HTMLAttributes < HTMLDivElement>) =>: any (
-      &quot;flex flex - col space - y-2 text - center sm:text - left & quot;,)
-  />);
-      &quot;flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 & quot;,)
-const SheetTitle = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Title>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Title>;
-    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
-
-  React.ElementRef<typeof SheetPrimitive.Description>,;
-
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
-const SheetDescription = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
-  <SheetPrimitive.Description;
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />;
-));
-SheetDescription.displayName = SheetPrimitive.Description.displayName;
-}
-; const Sheet = SheetPrimitive.Root const SheetTrigger = SheetPrimitive.Trigger const SheetClose = SheetPrimitive.Close const SheetPortal = SheetPrimitive.Portal const SheetOverlay = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Overlay>;
-React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay> > ( ({
-  className, ...props 
-}, ref) => (<SheetPrimitive.Overlay) 
-}{
-  ...props 
-}ref= {
-  ref 
-}/>) ) SheetOverlay.displayName = SheetPrimitive.Overlay.displayName) interface SheetContentProps extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>;
-VariantProps<typeof sheetVariants> {
-
-}const SheetContent = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Content>;
-SheetContentProps <SheetPortal> <SheetOverlay /> <SheetPrimitive.Content ref= {
-  ref 
-}className= {
-  cn (sheetVariants ({
-  side 
-}), className) 
-}{
-  ...props 
-}> </SheetPrimitive.Close> </SheetPrimitive.Content> </SheetPortal>) ) SheetContent.displayName = SheetPrimitive.Content.displayName const SheetHeader = ({
-  className, ...props 
-}: React.HTMLAttributes<HTMLDivElement>) => (<div) 
-}{
-  ...props 
-}/>) SheetHeader.displayName = "SheetHeader" const SheetFooter = ({
-  className, ...props 
-}: React.HTMLAttributes<HTMLDivElement>) => (<div) 
-}{
-  ...props 
-}/>) SheetFooter.displayName = "SheetFooter" const SheetTitle = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Title>;
-React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title> > ( ({
-  className, ...props 
-}, ref) => (<SheetPrimitive.Title />) ) SheetTitle.displayName = SheetPrimitive.Title.displayName const SheetDescription = React.forwardRef< React.ElementRef<typeof SheetPrimitive.Description>;
-React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description> > ( ({
-  className, ...props 
-}, ref) => (<SheetPrimitive.Description />) ) SheetDescription.displayName = SheetPrimitive.Description.displayName export {
-  Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger 
-}
-export {Sheet, SheetClose;
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-;
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-export {;
-  Sheet, SheetClose;
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
+  SheetClose,
+  SheetContentSheetDescriptionSheetFooterSheetHeaderSheetOverlaySheetPortalSheetTitleSheetTrigger
 }
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-}
-    className={cn (&quot;text - sm text - muted - foreground & quot;, class_name)}
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

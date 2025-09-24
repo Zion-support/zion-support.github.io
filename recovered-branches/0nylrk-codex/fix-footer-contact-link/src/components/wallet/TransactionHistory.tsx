@@ -1,573 +1,58 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ScrollArea } from "@/components/ui/scroll-area",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React from "react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Badge} from "@/components/ui/badge";
-import {formatDistanceToNow} from "date-fns";
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet();
-import React from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "@/components/ui/badge";
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-CardTitle,";
-} from "@/components/ui/card";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { ScrollArea } from "@/components/ui/scroll-area";"
-import { Badge } from "@/components/ui/badge";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { formatDistanceToNow } from "date-fns";
-export function TransactionHistory() {};
-  const { transactions, loading } = useWallet();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  if (loading) {
-    return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react",;
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Badge } from "@/components/ui/badge",;
-import { formatDistanceToNow } from "date-fns",;
-;
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet(),;
-;
-  if (loading) {;
-    return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet(),;
-  if (loading) {;
-    return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </Card>;
-<<<<<<< HEAD
-    );
-  }
-
-  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
-  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
-
-  return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { ScrollArea } from "@/components/ui/scroll-area",
+import { useWallet } from "@/hooks/useWallet";
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
+
 export function TransactionHistory() {
-  const { transactions, loading } = useWallet();
-import { Badge } from "@/components/ui/badge",
-import { formatDistanceToNow } from "date-fns",
-export function TransactionHistory() {
-  const { transactions, loading } = useWallet(),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  const { transactionsloading } = useWallet();
 
   if (loading) {
     return (
-
-=======
-      </Card>;    return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      </Card>;    return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      </Card>;    return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       <Card>
         <CardHeader>
-      <Card>
-</Card>
-        <CardHeader>
-</CardHeader>
           <CardTitle>Transaction History</CardTitle>
           <CardDescription>Loading transactions...</CardDescription>
         </CardHeader>
       </Card>
-);
+    );
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const earnTransactions = transactions.filter(
-    (tx) => tx.transaction_type === "earn",
-  );
-  const burnTransactions = transactions.filter("
-    (tx) => tx.transaction_type === "burn",
-  );
+  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
+  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Transaction History</CardTitle>
-        <CardDescription>Your recent ZION$ activity</CardDescription>
-      </CardHeader>
-      <CardContent>"
-        <Tabs defaultValue="earned">"
-          <TabsList className="w-full">"
-            <TabsTrigger value="earned" className="flex-1">
-              Earned;
-            </TabsTrigger>"
-            <TabsTrigger value="spent" className="flex-1">
-              Spent;
-            </TabsTrigger>
-          </TabsList>"
-          <TabsContent value="earned">"
-            <ScrollArea className="h-64">
-              {earnTransactions.length === 0 ? ("
-                <p className="text-center py-8 text-muted-foreground">
-                  No tokens earned yet;
-                </p>
-              ) : ("
-                <div className="space-y-2 mt-2">
-                  {earnTransactions.map((tx) => (
-                    <div;
-                      key={tx.id}"
-                      className="flex items-center justify-between py-2 border-b"
-                    >
-                      <div>"
-                        <p className="font-medium">"
-                          {tx.reason || "Token reward"}
-                        </p>"
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), {}
-                            addSuffix: true,
-                          })}
-                        </p>
-                      </div>
-                      <Badge"
-                        variant="outline""
-                        className="bg-green-100 text-green-800"
-                      >
-                        +{tx.amount} ZION$
-                      </Badge>
-                    </div>
-<<<<<<< HEAD
-import React from "react",;
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Badge } from "@/components/ui/badge",;
-import { formatDistanceToNow } from "date-fns",;
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet(),;
-  if (loading) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>;
-    );
-  }
-;
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
-  return (;
-<Card>;
-      <CardHeader>;
-        <CardTitle>Transaction History</CardTitle>;
-        <CardDescription>Your recent ZION$ activity</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <Tabs defaultValue="earned">;
-          <TabsList className="w-full">;
-            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>;
-            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="earned">;
-            <ScrollArea className="h-64">;
-{earnTransactions && earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {earnTransactions && earnTransactions.map(tx => (;
-                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx && tx.reason || "Token reward"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx && tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  ))}
-                </div>;
-              )}
-            </ScrollArea>
-          </TabsContent>"
-          <TabsContent value="spent">"
-            <ScrollArea className="h-64">
-              {burnTransactions.length === 0 ? ("
-                <p className="text-center py-8 text-muted-foreground">
-                  No tokens spent yet;
-                </p>
-              ) : ("
-                <div className="space-y-2 mt-2">
-                  {burnTransactions.map((tx) => (
-                    <div;
-                      key={tx.id}"
-                      className="flex items-center justify-between py-2 border-b"
-                    >
-                      <div>"
-                        <p className="font-medium">"
-                          {tx.reason || "Feature purchase"}
-                        </p>"
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), {}
-                            addSuffix: true,
-                          })}
-                        </p>
-                      </div>
-                      <Badge"
-                        variant="outline""
-                        className="bg-red-100 text-red-800"
-                      >
-                        -{tx.amount} ZION$
-                      </Badge>
-                    </div>
-                  ))}
-                </div>;
-              )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-)
-
-import React from "react",;
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Badge } from "@/components/ui/badge",;
-import { formatDistanceToNow } from "date-fns",;
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet(),;
-  if (loading) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>;
-    );
-  }
-;
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
-  return (;
-
-  const earnTransactions = transactions.filter(
-    (tx) => tx.transaction_type === "earn",
-  );
-  const burnTransactions = transactions.filter(
-    (tx) => tx.transaction_type === "burn",
-  );
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    <Card>
-</Card>
-      <CardHeader>
-</CardHeader>
         <CardTitle>Transaction History</CardTitle>
         <CardDescription>Your recent ZION$ activity</CardDescription>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="earned">
           <TabsList className="w-full">
-            <TabsTrigger value="earned" className="flex-1">
-              Earned
-            </TabsTrigger>
-            <TabsTrigger value="spent" className="flex-1">
-              Spent
-            </TabsTrigger>
+            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>
+            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>
           </TabsList>
           <TabsContent value="earned">
             <ScrollArea className="h-64">
               {earnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">
-                  No tokens earned yet
-                </p>
+                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>
               ) : (
                 <div className="space-y-2 mt-2">
-                  {earnTransactions.map((tx) => (
-                    <div
-                      key={tx.id}
-                      className="flex items-center justify-between py-2 border-b"
-                    >
+                  {earnTransactions.map(tx => (
+                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">
-                          {tx.reason || "Token reward"}
-                        </p>
+                        <p className="font-medium">{tx.reason || "Token reward"}</p>
                         <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), {
-                            addSuffix: true,
-                          })}
+                          {formatDistanceToNow(new Date(tx.created_at){ addSuffix: true })}
                         </p>
                       </div>
-                      <Badge
-                        variant="outline"
-                        className="bg-green-100 text-green-800"
-                      >
+                      <Badge variant="outline" className="bg-green-100 text-green-800">
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
-                  ))}
-                </div>;
-              )}
-            </ScrollArea>
-          </TabsContent>
-          <TabsContent value="spent">
-            <ScrollArea className="h-64">
-              {burnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">
-                  No tokens spent yet
-                </p>
-              ) : (
-                <div className="space-y-2 mt-2">
-                  {burnTransactions.map((tx) => (
-                    <div
-                      key={tx.id}
-                      className="flex items-center justify-between py-2 border-b"
-                    >
-                      <div>
-                        <p className="font-medium">
-                          {tx.reason || "Feature purchase"}
-                        </p>
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), {
-                            addSuffix: true,
-                          })}
-                        </p>
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className="bg-red-100 text-red-800"
-                      >
-                        -{tx.amount} ZION$
-                      </Badge>
-                    </div>
-                  ))}
-                </div>;
-              )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  );
-}
-    return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle > Transaction History</CardTitle>;
-          <CardDescription > Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>);
-  }
-  const earn_transactions = transactions.filter (tx => tx.transaction_type === 'earn');
-  const burn_transactions = transactions.filter (tx => tx.transaction_type === 'burn');
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle > Transaction History</CardTitle>;
-        <CardDescription > Your recent ZION$ activity</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <Tabs default_value="earned">;
-          <TabsList className="w - full">;
-            <TabsTrigger value="earned" className="flex - 1">Earned</TabsTrigger>;
-            <TabsTrigger value="spent" className="flex - 1">Spent</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="earned">;
-<ScrollArea className="h-64">;
-))}
-              {earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
-              ) :(;
-                <div className="space-y-2 mt-2">;
-                  {earnTransactions.map(tx => (;
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx.reason || "Token reward"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix:true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx.amount} ZION$;
-                      </Badge>;
-                    </div>;                  ))}
-                </div>;
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-            </ScrollArea>;
-          </TabsContent>;
-          <TabsContent value="spent">;
-            <ScrollArea className="h-64">;
-<<<<<<< HEAD
-              {burnTransactions && burnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {burnTransactions && burnTransactions.map(tx => (;
-                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
-                      <div>;
-                        <p className="font-medium">{tx && tx.reason || "Feature purchase"}</p>;
-                        <p className="text-xs text-muted-foreground">;
-                          {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg-red-100 text-red-800">;
-                        -{tx && tx.amount} ZION$;
-                      </Badge>;
-                    </div>;
-                  ))}
-                </div>;
-              )}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                  ))}
-                </div>
-              )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React from './react';
-import { use_wallet } from '@/hooks / use_wallet';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { ScrollArea } from '@/components / ui / scroll - area';
-import { Badge } from '@/components / ui / badge';
-import { formatDistanceToNow } from './date - fns';
-export /**
- * TransactionHistory - Function description
- */
-function TransactionHistory() {
-  const { transactions, loading } = use_wallet ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Card>;
-        <CardHeader>;
-          <CardTitle > Transaction History</CardTitle>;
-          <CardDescription > Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>);
-  }
-  const earn_transactions = transactions.filter (tx => tx.transaction_type === 'earn');'
-  const burn_transactions = transactions.filter (tx => tx.transaction_type === 'burn');
-;
-  return (
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    <Card>;
-      <CardHeader>;
-        <CardTitle>Transaction History</CardTitle>;
-        <CardDescription>Your recent ZION$ activity</CardDescription>;
-      </CardHeader>;
-<CardContent>;
-        <Tabs defaultValue="earned">;
-          <TabsList className="w-full">;
-            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>;
-            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="earned">;
-            <ScrollArea className="h-64">;
-              ) : (;
-                <div className="space-y-2 mt-2">;
-                  {burnTransactions && burnTransactions.map(tx => (;
-                    <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;                      <div>;
-                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>;
-                        <p className="text - xs text - muted-foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg - green - 100 text - green - 800">;
-                        +{tx.amount} ZION$;
-                      </Badge>;
-                    </div>))}
-                </div>)}
-            </ScrollArea>;
-          </TabsContent>;
-          <TabsContent value="spent">;
-            <ScrollArea className="h - 64">;
-              {burn_transactions.length === 0 ? (
-                <p className="text - center py - 8 text - muted - foreground">No tokens spent yet</p>) : (
-                <div className="space - y-2 mt - 2">;
-                  {burn_transactions.map (tx => (
-                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
-                      <div>;
-                        <p className="font - medium">{tx.reason || "Feature purchase"}</p>;
-                        <p className="text - xs text - muted - foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;
-                      <Badge variant="outline" className="bg - red - 100 text - red - 800">;
-                        -{tx.amount} ZION$;
-                      </Badge>;
-</div>;                  ))}
-                </div>;
-              )}
-<<<<<<< HEAD
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  )
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
                 </div>
               )}
@@ -582,9 +67,9 @@ if ( {) {
                   {burnTransactions.map(tx => (
                     <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
+                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>
                         <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(tx.created_at){ addSuffix: true })}
                         </p>
                       </div>
                       <Badge variant="outline" className="bg-red-100 text-red-800">
@@ -594,75 +79,10 @@ if ( {) {
                   ))}
                 </div>
               )}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-      <CardContent>;"
-        <Tabs default_value="earned">;"
-          <TabsList className="w - full">;"
-            <TabsTrigger value="earned" className="flex - 1">Earned</TabsTrigger>;"
-            <TabsTrigger value="spent" className="flex - 1">Spent</TabsTrigger>;
-          </TabsList>;"
-          <TabsContent value="earned">;"
-            <ScrollArea className="h - 64">;
-              {earn_transactions.length === 0 ? ("
-                <p className="text - center py - 8 text - muted - foreground">No tokens earned yet</p>) : ("
-                <div className="space - y-2 mt - 2">;
-                  {earn_transactions.map (tx => ("
-                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
-                      <div>;"
-                        <p className="font - medium">{tx.reason || "Token reward"}</p>;"
-                        <p className="text - xs text - muted - foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;"
-                      <Badge variant="outline" className="bg - green - 100 text - green - 800">;
-                        +{tx.amount} ZION$;
-                      </Badge>;
-                    </div>))}
-                </div>)}
-</ScrollArea>;
-          </TabsContent>;"
-          <TabsContent value="spent">;"
-            <ScrollArea className="h - 64">;
-              {burn_transactions.length === 0 ? ("
-                <p className="text - center py - 8 text - muted - foreground">No tokens spent yet</p>) : ("
-                <div className="space - y-2 mt - 2">;
-                  {burn_transactions.map (tx => ("
-                    <div key={tx.id} className="flex items - center justify - between py - 2 border - b">;
-                      <div>;"
-                        <p className="font - medium">{tx.reason || "Feature purchase"}</p>;"
-                        <p className="text - xs text - muted - foreground">;
-                          {formatDistanceToNow (new Date (tx.created_at), { add_suffix: true })}
-                        </p>;
-                      </div>;"
-                      <Badge variant="outline" className="bg - red - 100 text - red - 800">;
-                        -{tx.amount} ZION$;
-                      </Badge>;
-                    </div>))}
-                </div>)}
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            </ScrollArea>;
-          </TabsContent>;
-        </Tabs>;
-      </CardContent>;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                    </div>))}
-                </div>)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                    </div>))}
-                </div>)}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </Card>);
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  );
 }
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31

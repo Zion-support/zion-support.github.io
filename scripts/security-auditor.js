@@ -1,121 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report ={ timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
 #!/usr/bin/env node
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-#!/usr/bin/env node
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-#!/usr/bin/env node;`;
-#!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 class SecurityAuditor {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
     this && this.issues = [];
     this && this.fixes = [];
-<<<<<<< HEAD
-    this.fixes = [];
   }
   async runAudit() {
-    console.log('🔒 Running security audit...');
-=======
-    this && this.issues = [];
-    this && this.fixes = [];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+    console && console.log(' Running security audit...');
     try {
-=======
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-
-#!/usr/bin/env node'
-const { execSync } = require('child_process');'
-const fs = require('fs');
-class SecurityAuditor {}
-  constructor() {}
-    try {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    this.projectRoot = process.cwd();
-    this.vulnerabilities = [];
-    this.recommendations = [];
-  }
-
-  log(message, type = 'info') {
-    const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`${prefix} ${message}`);
-  }
-
-  async runSecurityAudit() {
-    this.log('🔒 Running security audit...');
-
-    try {
-  // TODO: Implement
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const result = execSync('npm audit --json', { encoding: 'utf8' });
-      const audit = JSON.parse(result);
-      if (audit.vulnerabilities) {}
-        Object.keys(audit.vulnerabilities).forEach(pkg => {}
-          const vuln = audit.vulnerabilities[pkg];
-          this.issues.push({}
+      const audit = JSON && JSON.parse(result);
+      if (audit && audit.vulnerabilities) {
+        Object && Object.keys(audit && audit.vulnerabilities).forEach(pkg => {
+          const vuln = audit && audit.vulnerabilities[pkg];
+          this && this.issues.push({
             package: pkg,
-            severity: vuln.severity,
-description: vuln.description;
+            severity: vuln && vuln.severity,
+            description: vuln && vuln.description
           });
         });
-      }`
-      console.log(`Found ${this.issues.length} security issues`);
-    } catch (error) {'
-      console.log('No security issues found or audit failed');
-}
-  }
-async fixIssues() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (this.issues.length > 0) {
-      console.log('🔧 Attempting to fix security issues...');
-  // TODO: Implement
-        execSync('npm audit fix', { stdio: 'inherit' });
-        this.fixes.push('Applied automatic security fixes');
-        console.log('✅ Security fixes applied');
-        console.log('❌ Could not apply automatic fixes');
-}
+      }
+      console && console.log(`Found ${this && this.issues.length} security issues`);
+    } catch (error) {
+      console && console.log('No security issues found or audit failed');
     }
-this.issues = [];
-    this.fixes = [];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  async fixIssues() {
+    if (this && this.issues.length > 0) {
+      console && console.log(' Attempting to fix security issues...');
+      try {
+        execSync('npm audit fix', { stdio: 'inherit' });
+        this && this.fixes.push('Applied automatic security fixes');
+        console && console.log(' Security fixes applied');
+      } catch (error) {
+        console && console.log('❌ Could not apply automatic fixes');
+      }
+    }
+  }
 #!/usr/bin/env node
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
 
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report ={ timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -123,10 +53,7 @@ class SecurityAuditor {
   constructor() {
     this.issues = [];
     this.fixes = [];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   async runAudit() {
     console.log('🔒 Running security audit...');
     try {
@@ -155,576 +82,233 @@ class SecurityAuditor {
         this.fixes.push('Applied automatic security fixes');
         console.log('✅ Security fixes applied');
       } catch (error) {
-console && console.log('❌ Could not apply automatic fixes');      }
-    }
-  }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        console && console.log('❌ Could not apply automatic fixes');
-console.log('❌ Could not apply automatic fixes');
+        console.log('❌ Could not apply automatic fixes');
       }
     }
   }
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
-#!/usr/bin/env node
-
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = // // require('fs');
-class SecurityAuditor {}
-  constructor() {}
+class SecurityAuditor {
+  constructor() {
     this.issues = [];
-    this.fixes = []}
-  checkPackageJson() {}
-    try {'
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-<<<<<<< HEAD
-<<<<<<< HEAD
+    this.fixes = [];
+  }
+  async runAudit() {
+    console.log(' Running security audit...');
+    try {
+      const result = execSync('npm audit --json', { encoding: 'utf8' });
+      const audit = JSON.parse(result);
+      if (audit.vulnerabilities) {
+        Object.keys(audit.vulnerabilities).forEach(pkg => {
+          const vuln = audit.vulnerabilities[pkg];
+          this.issues.push({
+            package: pkg,
+            severity: vuln.severity,
+            description: vuln.description
+          });
+        });
+      }
+      console.log(`Found ${this.issues.length} security issues`);
+    } catch (error) {
+      console.log('No security issues found or audit failed');
+    }
+  }
+  async fixIssues() {
+    if (this.issues.length > 0) {
+      console.log(' Attempting to fix security issues...');
+      try {
+        execSync('npm audit fix', { stdio: 'inherit' });
+        this.fixes.push('Applied automatic security fixes');
+        console.log(' Security fixes applied');
+      } catch (error) {
+        console.log(' Could not apply automatic fixes');
+      }
+    }
+  }
+const fs = // // require('fs');
+class SecurityAuditor {
+  constructor() {
+    this && this.issues = [];
+    this && this.fixes = []}
+  checkPackageJson() {
+    try {
+      const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));
       // Check for security-related scripts
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (!packageJson.scripts.audit) {
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-
-        this.issues.push('Missing security audit script');
-      }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-      // Check for security-related scripts        this.issues.push('Missing security audit script');
-      }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      // Check for security-related scripts
-
-if (!packageJson.scripts.audit) {
-
-        this.issues.push('Missing security audit script');
-      }
-      // Check for security-related scripts;
-        this.issues.push('Missing security audit script');
-
-      if (!packageJson.scripts.audit) {
-
       if (!packageJson.scripts.audit) {
 
         this.issues.push('Missing security audit script');
       }
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-      if (!packageJson.scripts.audit) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        this.issues.push('Missing security audit script');
+      }
+ursor/add-new-services-and-deploy-updates-0o462
+ursor/fix-syntax-push-and-merge-to-main-40de
+        this.issues.push('Missing security audit script');
+      }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
         this.issues.push('Missing security audit script')}
-      // Check for known vulnerable packages'
+      // Check for known vulnerable packages
       const vulnerablePackages = ['lodash', 'moment'];
-vulnerablePackages.forEach(pkg => {
+      vulnerablePackages.forEach(pkg => {
         if (packageJson.dependencies && packageJson.dependencies[pkg]) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-      vulnerablePackages.forEach(pkg => {}
-        if (packageJson.dependencies && packageJson.dependencies[pkg]) {}`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
           this.issues.push(`Potentially vulnerable package: ${pkg}`);
+      if (!packageJson && packageJson.scripts.audit) {
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script');
+      }
+        this && this.issues.push('Missing security audit script')}
+      // Check for known vulnerable packages
+      const vulnerablePackages = ['lodash', 'moment'];
+      vulnerablePackages && vulnerablePackages.forEach(pkg => {
+        if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) {
+          this && this.issues.push(`Potentially vulnerable package: ${pkg}`);
         }
       });
-    } catch (error) {}`
-=======
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-`;
-          this.issues.push(`Potentially vulnerable package: ${pkg}`);
-    } catch (error) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      this.issues.push(`Error reading package.json: ${error.message}`);
+    } catch (error) {
+      this && this.issues.push(`Error reading package && package.json: ${error && error.message}`);
     }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
-      })} catch (error) {"`
-      this.issues.push(`Error reading package."json": ${error.message}`)}
+          this && this.issues.push(`Potentially vulnerable "package": ${pkg}`)}
+      })} catch (error) {
+      this && this.issues.push(`Error reading package."json": ${error && error.message}`)}
   }
-checkNextConfig() {
-    try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8');
-        if (!content.includes('poweredByHeader')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-
-          this.issues.push('X-Powered-By header not disabled');
-        }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-          this.issues.push('X-Powered-By header not disabled');
-        }
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-=======
-
-if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8');
-        if (!content.includes('poweredByHeader')) {
-
-          this.issues.push('X-Powered-By header not disabled');
-        }
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;`;
-          this.issues.push(`Potentially vulnerable "package": ${pkg}`)}"
-      })} catch (error) {"`;
-      this.issues.push(`Error reading package."json": ${error.message}`)}"
   checkNextConfig() {
-  // TODO: Implement
-}"
-          this.issues.push('X-Powered-By header not disabled');
-
-      if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8');
-        if (!content.includes('poweredByHeader')) {
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    try {
       if (fs.existsSync('next.config.js')) {
         const content = fs.readFileSync('next.config.js', 'utf8');
         if (!content.includes('poweredByHeader')) {
 
           this.issues.push('X-Powered-By header not disabled');
         }
-      if (fs.existsSync('next.config.js')) {
-        const content = fs.readFileSync('next.config.js', 'utf8');
-        if (!content.includes('poweredByHeader')) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          this.issues.push('X-Powered-By header not disabled');
+        }
+ursor/add-new-services-and-deploy-updates-0o462
+ursor/fix-syntax-push-and-merge-to-main-40de
+          this.issues.push('X-Powered-By header not disabled');
+        }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
           this.issues.push('X-Powered-By header not disabled')}
         if (!content.includes('X-Content-Type-Options')) {
-=======
-  checkNextConfig() {}
-    try {}
-'
-          this.issues.push('X-Powered-By header not disabled');
-        }
-'
-      if (fs.existsSync('next.config.js')) {'
-        const content = fs.readFileSync('next.config.js', 'utf8');'
-        if (!content.includes('poweredByHeader')) {}
-'
-          this.issues.push('X-Powered-By header not disabled')}'
-        if (!content.includes('X-Content-Type-Options')) {'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
           this.issues.push('Security headers not configured');
         }
-    } catch (error) {}`
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
-
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+    } catch (error) {
 
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
       this.issues.push(`Error reading next.config.js: ${error.message}`);
     }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-`
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }`
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
-ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;`
-      this.issues.push(`Error reading next.config.js: ${error.message}`);
-    }
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-"`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       this.issues.push(`Error reading next.config."js": ${error.message}`)}
-  generateReport() {}
-    const report = {"
-      "timestamp": new Date().toISOString(),"
-      "issues": this.issues,"
-      "fixes": this.fixes,"
-      "summary": {}
-        totalIssues: this.issues.length,"
-        "fixesApplied": this.fixes.length;
+      if (fs && fs.existsSync('next && next.config.js')) {
+        const content = fs && fs.readFileSync('next && next.config.js', 'utf8');
+        if (!content && content.includes('poweredByHeader')) {
+          this && this.issues.push('X-Powered-By header not disabled');
+        }
+          this && this.issues.push('X-Powered-By header not disabled');
+        }
+          this && this.issues.push('X-Powered-By header not disabled');
+        }
+          this && this.issues.push('X-Powered-By header not disabled');
+        }
+          this && this.issues.push('X-Powered-By header not disabled')}
+        if (!content && content.includes('X-Content-Type-Options')) {
+          this && this.issues.push('Security headers not configured');
+        }
+    } catch (error) {
+      this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`);
+    }
+      this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`);
+    }
+      this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`);
+    }
+      this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`);
+    }
+      this && this.issues.push(`Error reading next && next.config."js": ${error && error.message}`)}
+  generateReport() {
+    const report ={
+      "timestamp": new Date().toISOString(),
+      "issues": this && this.issues,
+      "fixes": this && this.fixes,
+      "summary": {
+        totalIssues: this && this.issues.length,
+        "fixesApplied": this && this.fixes.length
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };
-
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');
-  }
-
-};
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    };
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');
-  }
 
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }
 
+    };
     };
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     };
 
 ursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    };
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    };
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-    };
-
-    };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
   }
 }
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.checkPackageJson();
-  auditor.checkNextConfig();
-  auditor.generateReport()}
-module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-    };
-
-    };
-
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-=======
-'
-    fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     console.log('Security report generated');
   }
 
-if (require.main === module) {}
+if (require.main === module) {
   const auditor = new SecurityAuditor();
-<<<<<<< HEAD
+
   auditor.checkPackageJson();
   auditor.checkNextConfig();
   auditor.generateReport()}
 module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-}
-module && module.exports = SecurityAuditor;
-  auditor && auditor.checkPackageJson();
-  auditor && auditor.checkNextConfig();
-  auditor && auditor.generateReport();
-}
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report ={ timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
 
-<<<<<<< HEAD
-module && module.exports = SecurityAuditor;
-  auditor && auditor.generateReport()}
-module && module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this && this.issues = []; this && this.fixes = []} checkPackageJson() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.audit) { this && this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages && vulnerablePackages.forEach(pkg => { if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) { this && this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this && this.issues.push(`Error reading package && package.json: ${error && error.message}`)} } checkNextConfig() { try { if (fs && fs.existsSync('next && next.config.js')) { const content = fs && fs.readFileSync('next && next.config.js','utf8'); if (!content && content.includes('poweredByHeader')) { this && this.issues.push('X-Powered-By header not disabled')} if (!content && content.includes('X-Content-Type-Options')) { this && this.issues.push('Security headers not configured')} } catch (error) { this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this && this.issues,fixes: this && this.fixes,summary: { totalIssues: this && this.issues.length,fixesApplied: this && this.fixes.length } fs && fs.writeFileSync('security-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Security report generated')} } if (require && require.main === module) { const auditor = new SecurityAuditor(); auditor && auditor.checkPackageJson(); auditor && auditor.checkNextConfig(); auditor && auditor.generateReport()} module && module.exports = SecurityAuditor;
-  auditor && auditor.checkPackageJson();
-  auditor && auditor.checkNextConfig();
-  auditor && auditor.generateReport()}
-module && module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this && this.issues = []; this && this.fixes = []} checkPackageJson() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.audit) { this && this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages && vulnerablePackages.forEach(pkg => { if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) { this && this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this && this.issues.push(`Error reading package && package.json: ${error && error.message}`)} } checkNextConfig() { try { if (fs && fs.existsSync('next && next.config.js')) { const content = fs && fs.readFileSync('next && next.config.js','utf8'); if (!content && content.includes('poweredByHeader')) { this && this.issues.push('X-Powered-By header not disabled')} if (!content && content.includes('X-Content-Type-Options')) { this && this.issues.push('Security headers not configured')} } catch (error) { this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this && this.issues,fixes: this && this.fixes,summary: { totalIssues: this && this.issues.length,fixesApplied: this && this.fixes.length } fs && fs.writeFileSync('security-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Security report generated')} } if (require && require.main === module) { const auditor = new SecurityAuditor(); auditor && auditor.checkPackageJson(); auditor && auditor.checkNextConfig(); auditor && auditor.generateReport()} module && module.exports = SecurityAuditor;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-"
-    fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.checkPackageJson();
-  auditor.checkNextConfig();
-  auditor.generateReport()}
-module.exports = SecurityAuditor;`;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   auditor.runAudit();
   auditor.fixIssues();
   auditor.generateReport();
-module.exports = SecurityAuditor;
-  auditor.checkPackageJson();
-  auditor.checkNextConfig();
-  auditor.generateReport();
-}
-<<<<<<< HEAD
-if (require && require.main === module) {
-  auditor && auditor.runAudit();
-  auditor && auditor.fixIssues();
-  auditor && auditor.generateReport();
-module && module.exports = SecurityAuditor;
-  auditor && auditor.checkPackageJson();
-  auditor && auditor.checkNextConfig();
-
-  auditor && auditor.generateReport()}
-module && module.exports = SecurityAuditor;`;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this && this.issues = []; this && this.fixes = []} checkPackageJson() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.audit) { this && this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages && vulnerablePackages.forEach(pkg => { if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) { this && this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this && this.issues.push(`Error reading package && package.json: ${error && error.message}`)} } checkNextConfig() { try { if (fs && fs.existsSync('next && next.config.js')) { const content = fs && fs.readFileSync('next && next.config.js','utf8'); if (!content && content.includes('poweredByHeader')) { this && this.issues.push('X-Powered-By header not disabled')} if (!content && content.includes('X-Content-Type-Options')) { this && this.issues.push('Security headers not configured')} } catch (error) { this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this && this.issues,fixes: this && this.fixes,summary: { totalIssues: this && this.issues.length,fixesApplied: this && this.fixes.length } fs && fs.writeFileSync('security-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Security report generated')} } if (require && require.main === module) { const auditor = new SecurityAuditor(); auditor && auditor.checkPackageJson(); auditor && auditor.checkNextConfig(); auditor && auditor.generateReport()} module && module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;`;
-      execSync('npm audit', { 
-        cwd: this.projectRoot,
-        stdio: 'pipe'
-      });
-      this.log('Security audit completed', 'success');
-    } catch (error) {
-      this.vulnerabilities.push('Security vulnerabilities found');
-      this.log('Security vulnerabilities found', 'error');
-    }
-  }
-
-  async checkDependencies() {
-    this.log('📦 Checking dependencies...');
-    this.recommendations.push('Keep dependencies updated');
-    this.log('Dependency check completed', 'success');
-  }
-
-  async run() {
-    this.log('🚀 Starting Security Auditor...');
-    await this.runSecurityAudit();
-    await this.checkDependencies();
-    this.log('🎉 Security audit completed!', 'success');
+    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Security report generated');
   }
 }
-
-module && module.exports = SecurityAuditor;
-  auditor && auditor.generateReport()}
-module && module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this && this.issues = []; this && this.fixes = []} checkPackageJson() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.audit) { this && this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages && vulnerablePackages.forEach(pkg => { if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) { this && this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this && this.issues.push(`Error reading package && package.json: ${error && error.message}`)} } checkNextConfig() { try { if (fs && fs.existsSync('next && next.config.js')) { const content = fs && fs.readFileSync('next && next.config.js','utf8'); if (!content && content.includes('poweredByHeader')) { this && this.issues.push('X-Powered-By header not disabled')} if (!content && content.includes('X-Content-Type-Options')) { this && this.issues.push('Security headers not configured')} } catch (error) { this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this && this.issues,fixes: this && this.fixes,summary: { totalIssues: this && this.issues.length,fixesApplied: this && this.fixes.length } fs && fs.writeFileSync('security-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Security report generated')} } if (require && require.main === module) { const auditor = new SecurityAuditor(); auditor && auditor.checkPackageJson(); auditor && auditor.checkNextConfig(); auditor && auditor.generateReport()} module && module.exports = SecurityAuditor;
-  auditor && auditor.checkPackageJson();
-  auditor && auditor.checkNextConfig();
-  auditor && auditor.generateReport()}
-module && module.exports = SecurityAuditor;
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this && this.issues = []; this && this.fixes = []} checkPackageJson() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.audit) { this && this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages && vulnerablePackages.forEach(pkg => { if (packageJson && packageJson.dependencies && packageJson && packageJson.dependencies[pkg]) { this && this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this && this.issues.push(`Error reading package && package.json: ${error && error.message}`)} } checkNextConfig() { try { if (fs && fs.existsSync('next && next.config.js')) { const content = fs && fs.readFileSync('next && next.config.js','utf8'); if (!content && content.includes('poweredByHeader')) { this && this.issues.push('X-Powered-By header not disabled')} if (!content && content.includes('X-Content-Type-Options')) { this && this.issues.push('Security headers not configured')} } catch (error) { this && this.issues.push(`Error reading next && next.config.js: ${error && error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this && this.issues,fixes: this && this.fixes,summary: { totalIssues: this && this.issues.length,fixesApplied: this && this.fixes.length } fs && fs.writeFileSync('security-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Security report generated')} } if (require && require.main === module) { const auditor = new SecurityAuditor(); auditor && auditor.checkPackageJson(); auditor && auditor.checkNextConfig(); auditor && auditor.generateReport()} module && module.exports = SecurityAuditor;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-module.exports = SecurityAuditor;
-  auditor.generateReport()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = SecurityAuditor;module.exports = SecurityAuditor;
-  auditor.generateReport()}
-module.exports = SecurityAuditor;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-  const auditor = new SecurityAuditor();
-  auditor.checkPackageJson();
-  auditor.checkNextConfig();
-  auditor.generateReport()}
-module.exports = SecurityAuditor;'`
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-module.exports = SecurityAuditor;
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-if (require.main === module) {
-  const auditor = new SecurityAuditor();
-  auditor.run().catch(console.error);
+    };
+    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Security report generated');
+  }
 }
-
 module.exports = SecurityAuditor;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report = { timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  auditor.generateReport()}
+module.exports = SecurityAuditor;
+
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report ={ timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
+#!/usr/bin/env node const fs = class SecurityAuditor { constructor() { this.issues = []; this.fixes = []} checkPackageJson() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.audit) { this.issues.push('Missing security audit script')} const vulnerablePackages = ['lodash','moment']; vulnerablePackages.forEach(pkg => { if (packageJson.dependencies && packageJson.dependencies[pkg]) { this.issues.push(`Potentially vulnerable package: ${pkg}`)} })} catch (error) { this.issues.push(`Error reading package.json: ${error.message}`)} } checkNextConfig() { try { if (fs.existsSync('next.config.js')) { const content = fs.readFileSync('next.config.js','utf8'); if (!content.includes('poweredByHeader')) { this.issues.push('X-Powered-By header not disabled')} if (!content.includes('X-Content-Type-Options')) { this.issues.push('Security headers not configured')} } catch (error) { this.issues.push(`Error reading next.config.js: ${error.message}`)} generateReport() { const report ={ timestamp: new Date().toISOString(),issues: this.issues,fixes: this.fixes,summary: { totalIssues: this.issues.length,fixesApplied: this.fixes.length } fs.writeFileSync('security-report.json',JSON.stringify(report,null,2)); console.log('Security report generated')} } if (require.main === module) { const auditor = new SecurityAuditor(); auditor.checkPackageJson(); auditor.checkNextConfig(); auditor.generateReport()} module.exports = SecurityAuditor;
+ursor/add-new-services-and-deploy-updates-0o462
+ursor/fix-syntax-push-and-merge-to-main-40de
+

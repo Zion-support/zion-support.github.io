@@ -1,120 +1,48 @@
-const BASE_URL = 'https: //zionai && zionai.com',
-      method: 'POST',
-      headers: {'
-        'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
-      },
-    return true;
-  }'
-  if (message && message.type === 'post-job') {}`
-    chrome && chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
-  }'
-  if (message && message.type === 'resume-search') {}`
-    chrome && chrome.tabs.create({ url: `${BASE_URL}/talent` })
-  }'
-  if (message && message.type === 'view-notifications') {}`
-    chrome && chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-      body: JSON.stringify ({'
-        model: 'gpt - 3.5 - turbo','
-        messages: [{ role: 'user', content: prompt }];
-      });
-    }),
-    // Check condition;
-if ( {) {}
-  $2;
-}'
-      console.error ('OpenAI request failed', res.status, await res.text ()),'
-      return { answer: 'Error contacting model' }
-    }
-    const data = await res.json (),'
-    return { answer: data.choices?.[0]?.message?.content || '' }
-  } catch (err) {'
-    console.error ('OpenAI request error', err),'
-    return { answer: 'Error contacting model' }
-  }
-}
-chrome.runtime.on_message.add_listener ((message, sender, send_response) => {}
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    askZionGPT (message.prompt).then (send_response),
-    return true;
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}`
-    chrome.tabs.create ({ url: `${BASE_URL}/jobs / new` });
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}`
-    chrome.tabs.create ({ url: `${BASE_URL}/talent` });
-  }
-if (message.type === 'view-notifications') {
-    chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-  }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+const OPENAI_API_KEY = '';
+// Base URL for opening Zion pages in a new tab
+const BASE_URL = 'https://zionai.com';
+
+async function askZionGPT(prompt) {
+  if (!OPENAI_API_KEY) return { answer: 'Model key missing' };
+
+  try {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST,
-  headers: {`;
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${OPENAI_API_KEY}`
-      body: JSON.stringify({,
-  model: 'gpt-3.5-turbo
-        messages: [{ role: 'user', content: prompt }]')
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo',
+        messages: [{ role: 'user', content: prompt }],
+      }),
+    });
+
     if (!res.ok) {
-      console.error('OpenAI request failed', res.status, await res.text())
-    const data = await res.json()
-    return { answer: data.choices?.[0]?.message?.content | }
-    console.error('OpenAI request error', err)
+      console.error('OpenAI request failed', res.status, await res.text());
+      return { answer: 'Error contacting model' };
+    }
+
+    const data = await res.json();
+    return { answer: data.choices?.[0]?.message?.content || '' };
+  } catch (err) {
+    console.error('OpenAI request error', err);
+    return { answer: 'Error contacting model' };
+  }
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'ask') {
-    askZionGPT(message.prompt).then(sendResponse)
-
-  if (message.type === 'post-job') {`;
-    chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
-  if (message.type === 'resume-search') {`;
-    chrome.tabs.create({ url: `${BASE_URL}/talent` })
-  if (message.type === 'view-notifications') {`;
-    chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}),
-;
-}),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}),
-;
-}),;
-
-}),
-;
-}),;
-
-'`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}),
-;
-}),;
-}),
-;
-}),;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    askZionGPT(message.prompt).then(sendResponse);
+    return true;
+  }
+  if (message.type === 'post-job') {
+    chrome.tabs.create({ url: `${BASE_URL}/jobs/new` });
+  }
+  if (message.type === 'resume-search') {
+    chrome.tabs.create({ url: `${BASE_URL}/talent` });
+  }
+  if (message.type === 'view-notifications') {
+    chrome.tabs.create({ url: `${BASE_URL}/notifications` });
+  }
+});

@@ -1,257 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus  } from '@/components/icons';
+import React{ useState } from 'react';
+import { MilestoneStatusMilestoneActivity } from '@/hooks/useMilestones';
+import { useAuth } from '@/hooks/useAuth';
+import { MilestoneCard } from './MilestoneCard';
+import { AddMilestoneForm } from './AddMilestoneForm';
+import { Button } from '@/components/ui/button';
+import { CardContent } from '@/components/ui/card';
+// lucide-react doesn't export PlusIconuse our icon wrapper
+import { Plus } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
-<<<<<<< HEAD
+
 interface MilestonesListProps {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
-import {useAuth} from '@/hooks/useAuth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components/icons';
-
-import {EmptyState} from '@/components/ui/empty-state';
-interface MilestonesListProps {}
-=======
-import {EmptyState} from '@/components/ui/empty-state';
-interface MilestonesListProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  milestones: Milestone[],
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean,
-  isClient: boolean,
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,
-  isSubmitting: boolean,
-  onApprove?: (id: string) => Promise<void>,
-  onReject?: (id: string) => Promise<void>
-}
-
-export const MilestonesList: React.FC<MilestonesListProps> = ({;
-  milestones;
-  activities;
-  isLoading;
-  isClient;
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-  onUploadDeliverable;
-  isSubmitting;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import React, { useState } from 'react',;
-=======
-interface MilestonesListProps {import React, { useState } from 'react',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-interface MilestonesListProps {import React, { useState } from 'react',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-import React, { useState } from 'react',;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MilestoneCard } from './MilestoneCard',;
-import { AddMilestoneForm } from './AddMilestoneForm',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus } from '@/components/icons',;
-=======
-
-'
-import React, { useState } from 'react',;'
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;'
-import { useAuth } from '@/hooks/useAuth',;'
-import { MilestoneCard } from './MilestoneCard',;'
-import { AddMilestoneForm } from './AddMilestoneForm',;'
-import { Button } from '@/components/ui/button',;'
-import { Card, CardContent } from '@/components/ui/card',;'
-// lucide-react doesn't export PlusIcon, use our icon wrapper;'
-import { Plus } from '@/components/icons',;'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { EmptyState } from '@/components/ui/empty-state',;
-interface MilestonesListProps {;
-  milestones: Milestone[],;
-  activities: Record<string MilestoneActivity[]>,;
-  isLoading: boolean,;
-  isClient: boolean,;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
-  onDeleteMilestone: (id: string) => Promise<boolean>,;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  isSubmitting: boolean,;
-  onApprove?: (id: string) => Promise<void>,;
-  onReject?: (id: string) => Promise<void>;
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  milestones: Milestone[]
-  activities: Record<string, MilestoneActivity[]>;
+  milestones: Milestone[];
+  activities: Record<stringMilestoneActivity[]>;
   isLoading: boolean;
   isClient: boolean;
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  milestones: Milestone[]
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean
-  isClient: boolean
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  onCreateMilestone: (data: any) => Promise<Milestone | null>
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>
-  onUploadDeliverable: (id: string, file: File) => Promise<any>
-isSubmitting: boolean;
-  onApprove?: (id: string) => Promise<void>
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import { Plus  } from '@/components/icons';
-import { EmptyState } from '@/components/ui/empty-state';
-
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';''
-import { useAuth  } from '@/hooks/useAuth';''
-import { MilestoneCard  } from './MilestoneCard';''
-import { AddMilestoneForm  } from './AddMilestoneForm';''
-import { Button  } from '@/components/ui/button';''
-import { Card, CardContent  } from '@/components/ui/card';''
-// lucide-react doesn't export PlusIcon, use our icon wrapper;''
-import { Plus  } from '@/components/icons';''
-import { EmptyState } from '@/components/ui/empty-state';'
-interface MilestonesListProps {
-
-  onReject?: (id: string) => Promise<void>
-}
-<<<<<<< HEAD
-export const MilestonesList: React.FC<MilestonesListProps> = ({
-<<<<<<< HEAD
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
-import {useAuth} from '@/hooks/useAuth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent} from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components/icons';
-import {EmptyState} from '@/components/ui/empty-state';
-interface MilestonesListProps {;
-  milestones: Milestone[],;
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean,;
-  isClient: boolean,;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>,;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  isSubmitting: boolean,;
-  onApprove?: (id: string) => Promise<void>,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>;
+  onUpdateStatus: (id: stringstatus: MilestoneStatuscomment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>;
+  onUploadDeliverable: (id: stringfile: File) => Promise<any>;
+  isSubmitting: boolean;
+  onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;
 }
-export const MilestonesList: React.FC<MilestonesListProps> = ({;
-
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
-import {use_auth} from '@/hooks / use_auth';
-import {MilestoneCard} from './MilestoneCard';
-import {AddMilestoneForm} from './AddMilestoneForm';
-import {Button} from '@/components / ui / button';
-import {Card, CardContent} from '@/components / ui / card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper;
-import {Plus} from '@/components / icons';
-
-import {EmptyState} from '@/components / ui / empty - state';
-interface MilestonesListProps {}
-=======
-import {EmptyState} from '@/components / ui / empty - state';
-interface MilestonesListProps {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  milestones: Milestone[],
-  activities: Record<string MilestoneActivity[]>,;
-</string>)
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
-
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
-  onDeleteMilestone: (id: string) => Promise<boolean>,;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
-  onApprove?: (id: string) => Promise<void>,;
-  onReject?: (id: string) => Promise<void>;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>
-
-  onDeleteMilestone: (id: string) => Promise<boolean>
-  onUploadDeliverable: (id: string, file: File) => Promise<any>
-  onApprove?: (id: string) => Promise<void>
 
 export const MilestonesList: React.FC<MilestonesListProps> = ({
-
-  activities: Record < string, MilestoneActivity[]>;
-  is_loading: boolean,
-  is_client: boolean,)
-  onCreateMilestone: (data: any) => Promise < Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
-  onDeleteMilestone: (id: string) => Promise < boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise < any>,
-  is_submitting: boolean,
-  on_approve?: (id: string) => Promise < void>,
-  on_reject?: (id: string) => Promise < void>;
-}
-<<<<<<< HEAD
-export const MilestonesList: React.FC < MilestonesListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export const MilestonesList: React.FC < MilestonesListProps> = ({};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-export const MilestonesList: React.FC < MilestonesListProps> = ({
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-export const MilestonesList: React.FC < MilestonesListProps> = ({
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  milestones;
-  activities;
-  is_loading;
-  is_client;
-
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-<<<<<<< HEAD
-  onUploadDeliverable;
   milestones,
   activities,
   isLoading,
@@ -261,51 +34,20 @@ pr-12325
   onDeleteMilestone,
   onUploadDeliverable,
   isSubmitting,
-
   onApprove,
-onReject;
-}) => {}
-  const [showAddForm, setShowAddForm] = useState(false),
-
-<<<<<<< HEAD
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data)
-    setShowAddForm(false)
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data)
-    setShowAddForm(false)
-
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    )
-  }
-
-=======
   onReject
 }) => {
-  const [showAddForm, setShowAddForm] = useState(false),
-
+  const [showAddFormsetShowAddForm] = useState(false);
+  
   const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data)
-    setShowAddForm(false)
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  },
+    await onCreateMilestone(data);
+    setShowAddForm(false);
+  };
 
   if (isLoading) {
     return (
       <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
+        {[123].map((i) => (
           <Card key={i}>
             <CardContent className="p-6">
               <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
@@ -315,204 +57,28 @@ onReject;
           </Card>
         ))}
       </div>
-    )
-  }
-
-  },
-
-if (isLoading) {}
-  onApprove,;
-  onReject;
-}) => {;
-  const [showAddForm, setShowAddForm] = useState(false);
-
-  const handleSubmit = async (data: any) => {;
-    await onCreateMilestone(data),;
-    setShowAddForm(false);
-  };
-if (isLoading) {;
-    return (
-
-if (isLoading) {;
-
-    return (
-
-      <div className="space-y-4">;
-        {[1, 2, 3].map((i) => (;
-          <Card key={i}>;"
-            <CardContent className="p-6">;"
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;"
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;"
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
-            </CardContent>;
-          </Card>;
-        ))}
-      </div>;
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     );
   }
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-    );
-  }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  if (milestones.length === 0 && !showAddForm) {
-=======
-  if (milestones.length === 0 && !showAddForm) {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    return (
-      <EmptyState"
-        icon={<span className="text-3xl">📊</span>}"
-        title="No Milestones Yet"
-        description={isClient ?"
-          "Break down the project into manageable milestones to track progress and payments." :"
-          "No milestones have been created for this project yet."}
-        action={isClient ?
-          {"
-            text: "Create First Milestone"
-            onClick: () => setShowAddForm(true)
-          } : undefined;
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState"
-        icon={<span className="text-3xl">📊</span>}"
-        title="No Milestones Yet";
-        description={isClient ? ;"
-          "Break down the project into manageable milestones to track progress and payments." : ;"
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;"
-=======
+  
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
-        description={isClient ?
-          "Break down the project into manageable milestones to track progress and payments." :
+        description={isClient ? 
+          "Break down the project into manageable milestones to track progress and payments." : 
           "No milestones have been created for this project yet."}
-        action={isClient ?
+        action={isClient ? 
           {
-            text: "Create First Milestone"
+            text: "Create First Milestone",
             onClick: () => setShowAddForm(true)
           } : undefined
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            text: "Create First Milestone",;
-            onClick: () => setShowAddForm(true);
-          } : undefined;
-
         }
-      />;
+      />
     );
   }
 
-        }
-      />
-    )
-  }
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-  return (
-),;
-  }
-  ;
-  if (milestones.length === 0 && !showAddForm) {;
-    return (;
-      <EmptyState;
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text:"Create First Milestone",;
-            onClick:() => setShowAddForm(true);
-          } undefined;
-        }
-      />;
-    ),;
-  }
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  onUploadDeliverable;  return (  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  onUploadDeliverable;  return (  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  return (
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-  onUploadDeliverable;  return (  return (
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <div className="space-y-6">;
-      {isClient && !showAddForm && (;"
-        <div className="flex justify-end">;
-          <Button onClick={() => setShowAddForm(true)}>;"
-            <Plus className="h-4 w-4 mr-2" />;
-            Add Milestone;
-          </Button>;
-        </div>;
-<<<<<<< HEAD
-      )}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      {showAddForm && (;
-        <Card>;"
-          <CardContent className="pt-6">;"
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
-            <AddMilestoneForm;
-            <AddMilestoneForm ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              onSubmit={handleSubmit}
-=======
-      )}              onSubmit={handleSubmit}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      )}              onSubmit={handleSubmit}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      )}
-
-return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
         <div className="flex justify-end">
@@ -522,76 +88,11 @@ return (
           </Button>
         </div>
       )}
+      
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-
-      ;
-      {showAddForm && (;
-        <Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
-            <AddMilestoneForm
-
-<AddMilestoneForm
-            <AddMilestoneForm 
-
-            <AddMilestoneForm ;
-              onSubmit={handleSubmit}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />;
-          </CardContent>;
-        </Card>;
-)}
-<div className="space-y-4">
-        {milestones.map((milestone) => (
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-"
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone) => (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          <MilestoneCard
-<<<<<<< HEAD
-            key={milestone && milestone.id}
-            id={milestone && milestone.id}
-            projectId={milestone && milestone.project_id}
-            title={milestone && milestone.title}
-            description={milestone && milestone.description}
-            amount={parseFloat(milestone && milestone.amount.toString())}
-            status={milestone && milestone.status}
-            dueDate={milestone && milestone.due_date}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            onApprove={onApprove}
-            onReject={onReject}
-          />;
-        ))}
-}
-
-  onUploadDeliverable;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      ;
-      <div className="space-y-4">;
-        {milestones.map((milestone) => (;
-          <MilestoneCard;
-            key={milestone.id}            id={milestone.id}
-            projectId={milestone.projectid}
-            <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
@@ -600,7 +101,7 @@ return (
           </CardContent>
         </Card>
       )}
-
+      
       <div className="space-y-4">
         {milestones.map((milestone) => (
           <MilestoneCard
@@ -611,258 +112,6 @@ return (
             description={milestone.description}
             amount={parseFloat(milestone.amount.toString())}
             status={milestone.status}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-      </div>;
-    </div>;
-  );
-
-<<<<<<< HEAD
-
-};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  is_submitting;
-  on_approve,
-  on_reject;
-}) => {}
-  const [showAddForm, setShowAddForm] = useState (false);
-;
-  const handle_submit = async (data: any) => {}
-    await onCreateMilestone (data),
-    setShowAddForm (false);
-  }
-;
-  // Check condition;
-if ( {) {}
-  $2;
-}
-<<<<<<< HEAD
-    return (
-      <div className="space-y-4">;
-        {[1, 2, 3].map ((i) => (
-          <Card key={i}>;
-            <CardContent className="p-6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb-4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb-2"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w-3/4"></div>;
-            </CardContent>;
-          </Card>))}
-      </div>);
-  }
-  // Check condition;
-if ( {) {}
-  $2;
-}
-    return (
-<EmptyState;
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={is_client ?;"
-          "Break down the project into manageable milestones to track progress and payments." :;"
-          "No milestones have been created for this project yet."}
-        action={is_client ?;
-          {"
-            text: "Create First Milestone",
-            on_click: () => setShowAddForm (true);
-          } : undefined;
-        }
-      />);
-  }
-return (
-    <div className="space-y-6">;
-      {is_client && !showAddForm && (
-        <div className="flex justify-end">;
-          <Button on_click={() => setShowAddForm (true)}>;
-            <Plus className="h - 4 w - 4 mr-2" />;
-            Add Milestone;
-          </Button>;
-        </div>)}
-      {showAddForm && (
-<Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text - lg font - medium mb-4">Create New Milestone</h3>;
-            <AddMilestoneForm;
-              on_submit={handle_submit}
-              is_submitting={is_submitting}
-              on_cancel={() => setShowAddForm (false)}
-            />;
-          </CardContent>;
-</Card>)}
-      <div className="space-y-4">;
-        {milestones.map ((milestone) => (
-          <MilestoneCard;
-            key={milestone.id}
-            id={milestone.id}
-            project_id={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parse_float (milestone.amount.to_string ())}
-            status={milestone.status}
-            due_date={milestone.due_date}
-            on_approve={on_approve}
-            on_reject={on_reject}
-          />))}
-      </div>;
-    </div>);
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      </div>
-    </div>
-  )
-}
-
-      </div>;
-    </div>;
-  );
-  is_submitting;
-  on_approve,
-  on_reject;
-}) => {
-  const [showAddForm, setShowAddForm] = useState (false);
-;
-  const handle_submit = async (data: any) => {
-    await onCreateMilestone (data),
-    setShowAddForm (false);
-  }
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="space - y-4">;
-        {[1, 2, 3].map ((i) => (
-          <Card key={i}>;
-            <CardContent className="p - 6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
-            </CardContent>;
-          </Card>))}
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <EmptyState;
-        icon={<span className="text - 3xl">📊</span>}
-        title="No Milestones Yet";
-        description={is_client ?;
-          "Break down the project into manageable milestones to track progress and payments." :;
-          "No milestones have been created for this project yet."}
-        action={is_client ?;
-          {
-            text: "Create First Milestone",
-            on_click: () => setShowAddForm (true);
-          } : undefined;
-        }
-      />);
-  }
-  return (
-    <div className="space - y-6">;
-      {is_client && !showAddForm && (
-        <div className="flex justify - end">;
-          <Button on_click={() => setShowAddForm (true)}>;
-            <Plus className="h - 4 w - 4 mr - 2" />;
-            Add Milestone;
-          </Button>;
-        </div>)}
-      {showAddForm && (
-        <Card>;
-          <CardContent className="pt - 6">;
-            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
-            <AddMilestoneForm;
-              on_submit={handle_submit}
-              is_submitting={is_submitting}
-              on_cancel={() => setShowAddForm (false)}
-            />;
-          </CardContent>;
-        </Card>)}
-      <div className="space - y-4">;
-        {milestones.map ((milestone) => (
-          <MilestoneCard;
-            key={milestone.id}
-            id={milestone.id}
-            project_id={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parse_float (milestone.amount.to_string ())}
-            status={milestone.status}
-            due_date={milestone.due_date}
-            on_approve={on_approve}
-            on_reject={on_reject}
-          />))}
-      </div>;
-    </div>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-};
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-;
-  ),;
-},; <Card key= {
-  i 
-}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) 
-}</div>) 
-}
-}/>) 
-}<Button onClick= {
-  () => setShowAddForm (true) 
-}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) 
-}<AddMilestoneForm onSubmit= {
-  handleSubmit 
-}isSubmitting= {
-  isSubmitting 
-}onCancel= {
-  () => setShowAddForm (false) 
-}/> </CardContent> </Card>) 
-}<MilestoneCard key= {
-  milestone.id 
-}id= {
-  milestone.id 
-}projectId= {
-  milestone.project id 
-}title= {
-  milestone.title 
-}description= {
-  milestone.description 
-}amount= {
-  parseFloat (milestone.amount.toString () ) 
-}status= {
-  milestone.status 
-}dueDate= {
-  milestone.due date 
-}onApprove= {
-  onApprove 
-}onReject= {
-  onReject 
-}/>) ) 
-}</div> </div>) 
-};
             dueDate={milestone.due_date}
             onApprove={onApprove}
             onReject={onReject}
@@ -870,13 +119,5 @@ if ( {) {
         ))}
       </div>
     </div>
-  )
-}
-
-      </div>;
-    </div>;
   );
 };
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

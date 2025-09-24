@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -230,3 +231,5 @@ export const generateStructuredData = (data: any) => {
 
 // Run improvements
 runImprovements();
+=======
+>>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9

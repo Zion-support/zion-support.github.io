@@ -18,7 +18,7 @@ describe('GlobalErrorBoundary', () => {'  // Test Case 1: Renders children when 
   it('renders children when there is no error', () => {'    const TestChild = () => <div>Test Child Content</div>;
     render(
       <GlobalErrorBoundary>
-        <TestChild />
+        <TestChild  />
       </GlobalErrorBoundary>
     );
     expect(screen.getByText('Test Child Content')).toBeInTheDocument();  });
@@ -28,7 +28,7 @@ describe('GlobalErrorBoundary', () => {'  // Test Case 1: Renders children when 
       throw new Error('Test error');    };
     render(
       <GlobalErrorBoundary>
-        <ErrorComponent />
+        <ErrorComponent  />
       </GlobalErrorBoundary>
     );
     // Check for fallback UI elements
@@ -45,11 +45,11 @@ describe('GlobalErrorBoundary', () => {'  // Test Case 1: Renders children when 
     // @ts-expect-error - Intentionally deleting window.location for test mocking
     delete window.location;
     // Intentionally overriding window.location with mock for testing
-    window.location = { ...originalLocation, reload: jest.fn() };
+    window.location ={ ...originalLocation, reload: jest.fn() };
 
     render(
       <GlobalErrorBoundary>
-        <ErrorComponent />
+        <ErrorComponent  />
       </GlobalErrorBoundary>
     );
 

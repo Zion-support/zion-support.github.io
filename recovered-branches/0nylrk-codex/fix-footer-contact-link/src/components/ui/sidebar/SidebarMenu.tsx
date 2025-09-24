@@ -1,153 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
-import { cn } from "@/lib/utils",
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React from "react";
 
 import { cn } from "@/lib/utils";
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {}
-=======
 
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className?: string;
   children?: React.ReactNode;
 }
 
-export function SidebarMenu({}
-  className,
-  children,;
-  ...props;
-}: SidebarMenuProps) {}
-  return ("
-    <ul className={cn("space-y-1", className)} {...props}>
+export function SidebarMenu({ classNamechildren...props }: SidebarMenuProps) {
+  return (
+    <ul 
+      className={cn("space-y-1"className)} 
+      {...props}
+    >
       {children}
     </ul>
   );
 }
-
-import React from "react",;
-import { cn } from "@/lib/utils",;
-;
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-  className?:string,;
-  children?:React.ReactNode,;
-}
-;
-export function SidebarMenu({ className, children, ...props } SidebarMenuProps) {;
-  return (;
-    <ul ;
-=======
-
-    </ul>);
-}
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    <ul className={cn("space-y-1", className)} {...props}>
-      {children}
-    </ul>
-    <ul "
-      className={cn("space-y-1", className)} 
-    <ul "
-      className={cn("space-y-1", className)} 
-      {...props}
-    >
-      {children}
-    </ul>
-  )"
-import React from "react",;"
-import { cn } from "@/lib/utils",;
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React from "react",
-import { cn } from "@/lib/utils",
-
-=======
-"
-import React from "react","
-import { cn } from "@/lib/utils",
-
-";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from "react",
-import { cn } from "@/lib/utils",
-import React from "react",;
-import { cn } from "@/lib/utils",;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import {cn} from "@/lib/utils";
-interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  className?: string;
-  children?: React && React.ReactNode;
-}
-  return ("
-    <ul className={cn ("space - y-1", class_name)} {...props}>;
-      {children}
-<<<<<<< HEAD
-
-export function SidebarMenu(): any ({ className, children, ...props }: SidebarMenuProps) {;
-  return (
-    <ul
-      className={cn("space-y-1", className)} 
-      {...props}>;
-      {children}
-    </ul>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </ul>);
-}
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    </ul>);
-}
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-import React from "react";""
-import { cn } from "@/lib/utils";"
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
-"
-    <ul className={cn("space-y-1", className)} {...props}>"
-</ul>
-    </ul>);
-interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-
-    <ul ;"
-    <ul;"
-      className={cn("space-y-1", className)}"
-      {...props}
-    >
-
-interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
-    <ul className={cn ("space - y-1", class_name)} {...props}>;"
-    </ul>);"
-pr-12325
-}
-}
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

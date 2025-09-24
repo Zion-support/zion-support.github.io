@@ -21,10 +21,10 @@ afterEach(async () => {
   await mongoose.connection.db.dropDatabase();
 });
 
-test('registerUser persists user to the database', async () => {'  const req = { body: { name: 'Test', email: persist@test.com', password: 'Password123' } };  const res = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+test('registerUser persists user to the database', async () => {'  const req ={ body: { name: 'Test', email: persist@test.com', password: 'Password123' } };  const res ={ status: jest.fn().mockReturnThis(), json: jest.fn() };
 
   await registerUser(req, res);
 
   const exists = await User.findOne({ email: persist@test.com' });  expect(exists).toBeTruthy();
-  expect(res.status).toHaveBeenCalledWith(201);
+  expect(res.status).toHaveBeenCalledWith(20o1);
 });

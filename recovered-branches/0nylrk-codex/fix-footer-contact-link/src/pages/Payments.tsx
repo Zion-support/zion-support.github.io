@@ -1,153 +1,95 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TransactionHistory} from "@/components/transactions/TransactionHistory";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 export default function Payments() {
-=======
-import React from "react";"
-import {Header} from "@/components/Header";"
-import {Footer} from "@/components/Footer";"
-import {TransactionHistory} from "@/components/transactions/TransactionHistory";"
-import {GradientHeading} from "@/components/GradientHeading";"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-export default function Payments() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
     <>
       <Header />
-"
-      <div className="min-h-screen bg-zion-blue py-12 px-4">"
-        <div className="container mx-auto">"
+
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
           <div className="mb-12 text-center">
-            <GradientHeading"
-              level="h1""
-              className="text-4xl lg:text-5xl font-bold mb-4"
-            >;
-              Payments & Transactions;
-            </GradientHeading>"
+            <GradientHeading level="h1" className="text-4xl lg:text-5xl font-bold mb-4">
+              Payments & Transactions
+            </GradientHeading>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Track your payment history, manage transactions in escrow, and;
-              view your financial activities.
+              Track your payment history, manage transactions in escrow, and view your financial activities.
             </p>
           </div>
-"
-          <Tabs defaultValue="history" className="w-full">"
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">"
-              <TabsTrigger value="history">Transaction History</TabsTrigger>"
+          <Tabs defaultValue="history" className="w-full">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+              <TabsTrigger value="history">Transaction History</TabsTrigger>
               <TabsTrigger value="settings">Payment Settings</TabsTrigger>
             </TabsList>
-"
             <TabsContent value="history">
               <TransactionHistory />
             </TabsContent>
-"
-            <TabsContent value="settings">"
-              <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">"
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  Payment Settings;
-                </h2>
-"
-                <div className="space-y-8">"
-                  <div className="border-b border-zion-blue-light pb-6">"
-                    <h3 className="text-lg font-medium text-white mb-3">
-                      Default Payment Method;
-                    </h3>"
+            <TabsContent value="settings">
+              <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
+                <h2 className="text-2xl font-bold text-white mb-6">Payment Settings</h2>
+                <div className="space-y-8">
+                  <div className="border-b border-zion-blue-light pb-6">
+                    <h3 className="text-lg font-medium text-white mb-3">Default Payment Method</h3>
                     <p className="text-zion-slate-light mb-4">
-                      Manage your payment methods and set your default;
-                      preference.
+                      Manage your payment methods and set your default preference.
                     </p>
-                    <Button"
-                      onClick={() => window.open("https://stripe.com_blank")}"
+                    <Button
+                      onClick={() => window.open('https://stripe.com_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
-                      Manage Payment Methods;
+                      Manage Payment Methods
                     </Button>
                   </div>
-"
-                  <div className="border-b border-zion-blue-light pb-6">"
-                    <h3 className="text-lg font-medium text-white mb-3">
-                      Escrow Settings;
-                    </h3>"
+                  <div className="border-b border-zion-blue-light pb-6">
+                    <h3 className="text-lg font-medium text-white mb-3">Escrow Settings</h3>
                     <p className="text-zion-slate-light mb-4">
-                      Set your preferences for escrow services. Escrow holds;
-                      funds until both parties confirm the service has been;
-                      completed satisfactorily.
-                    </p>"
-                    <div className="flex items-center space-x-2">"
-                      <Switch id="escrow-default" />"
+                      Set your preferences for escrow services. Escrow holds funds until both parties confirm the service has been completed satisfactorily.
+                    </p>
+                    <div className="flex items-center space-x-2">
+                      <Switch id="escrow-default" />
                       <Label htmlFor="escrow-default" className="text-white">
-                        Use escrow by default;
+                        Use escrow by default
                       </Label>
                     </div>
                   </div>
-
-                  <div>"
-                    <h3 className="text-lg font-medium text-white mb-3">
-                      Payment Notifications;
-                    </h3>"
+                  <div>
+                    <h3 className="text-lg font-medium text-white mb-3">Payment Notifications</h3>
                     <p className="text-zion-slate-light mb-4">
-                      Choose how you want to be notified about payments and;
-                      transactions.
-                    </p>"
-                    <div className="space-y-2">"
-                      <div className="flex items-center space-x-2">"
+                      Choose how you want to be notified about payments and transactions.
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
-                        <label"
-                          htmlFor="notify-email""
+
+                        <label
+                          htmlFor="notify-email"
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
                         >
-                          Email notifications;
+                          Email notifications
                         </label>
-                      </div>"
-                      <div className="flex items-center space-x-2">"
+                      </div>
+                      <div className="flex items-center space-x-2">
                         <Checkbox id="notify-push" defaultChecked />
-                        <label"
-                          htmlFor="notify-push""
+                        <label
+                          htmlFor="notify-push"
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
                         >
-                          Push notifications;
+                          Push notifications
                         </label>
                       </div>
                     </div>
@@ -160,81 +102,43 @@ export default function Payments() {}
       </div>
       <Footer />
     </>
-  );
+  )
 }
+
+
+
+
+
+
+
 // Import UI components for Payment Settings tab;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+
+
 import {Button} from "@/components/ui/button";
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import {Button} from "@/components/ui/button";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======                        <label
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                          htmlFor="notify-email"
-                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
-=======
 
-// Import UI components for Payment Settings tab;
 
-"
-import {Button} from "@/components/ui/button";"
-import {Switch} from "@/components/ui/switch";"
-import {Label} from "@/components/ui/label";"
-import {Checkbox} from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export default function Payments() {;
+  return (;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                          Email notifications;
-                        </label>;
-                      </div>;"
-                      <div className="flex items-center space-x-2">;"
-                        <Checkbox id="notify-push" defaultChecked />;
-                        <label"
-                          htmlFor="notify-push""
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
-                          Push notifications;
-                        </label>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          </Tabs>;
-        </div>;
-      </div>;
-      <Footer />;
-    </>;
-  );
-}
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { TransactionHistory } from '@/components / transactions / TransactionHistory';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-export default /**;
- * Payments - Function description;
- */
-function Payments() {}
-  return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
-<Header />;
+      <Header />;
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
         <div className="container mx - auto">;
           <div className="mb - 12 text - center">;
@@ -249,10 +153,10 @@ function Payments() {}
             <TabsList className="grid w - full max - w-md mx - auto grid - cols - 2 mb - 8">;
               <TabsTrigger value="history">Transaction History</TabsTrigger>;
               <TabsTrigger value="settings">Payment Settings</TabsTrigger>;
-            </TabsList>;"
+            </TabsList>;
             <TabsContent value="history">;
               <TransactionHistory />;
-</TabsContent>;
+            </TabsContent>;
             <TabsContent value="settings">;
               <div className="bg - zion - blue - dark rounded - lg border border - zion - blue - light p - 6">;
                 <h2 className="text - 2xl font - bold text - white mb - 6">Payment Settings</h2>;
@@ -276,12 +180,12 @@ function Payments() {}
                     </p>;
                     <div className="flex items - center space - x-2">;
                       <Switch id="escrow - default" />;
-<Label html_for="escrow - default" className="text-white">;
+                      <Label html_for="escrow - default" className="text - white">;
                         Use escrow by default;
                       </Label>;
                     </div>;
                   </div>;
-<div>;
+                  <div>;
                     <h3 className="text - lg font - medium text - white mb - 3">Payment Notifications</h3>;
                     <p className="text - zion - slate - light mb - 4">;
                       Choose how you want to be notified about payments and transactions.;
@@ -300,7 +204,7 @@ function Payments() {}
                         <Checkbox id="notify - push" default_checked />;
                         <label;
                           html_for="notify - push";
-className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text-white";
+                          className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white";
                         >;
                           Push notifications;
                         </label>;
@@ -317,42 +221,24 @@ className="text - sm font - medium leading - none peer - disabled:cursor - not -
     </>);
 }
 // Import UI components for Payment Settings tab;
-import { Button } from "@/components/ui/button",;
-import { Switch } from "@/components/ui/switch",;
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+import { Button } from '@/components / ui / button';
+import { Switch } from '@/components / ui / switch';
+import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
-;
-// Import UI components for Payment Settings tab;"
-import { Button } from "@/components/ui/button",;"
-import { Switch } from "@/components/ui/switch",;"
-import { Label } from "@/components/ui/label",;"
-import { Checkbox } from "@/components/ui/checkbox",; return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="mb-12 text-center" > <GradientHeading level="h1" className="text-4xl lg:text-5xl font-bold mb-4" > Payments & Transactions </GradientHeading> </p> </div> <Tabs defaultValue="history" className="w-full" > <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8" > <TabsTrigger value="history" >Transaction History</TabsTrigger> <TabsTrigger value="settings" >Payment Settings</TabsTrigger> </TabsList> <TabsContent value="history" > <TransactionHistory /> </TabsContent> <TabsContent value="settings" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <h2 className="text-2xl font-bold text-white mb-6" >Payment Settings</h2> <div className="space-y-8" > <div className="border-b border-zion-blue-light pb-6" > <h3 className="text-lg font-medium text-white mb-3" >Default Payment Method</h3> <p className="text-zion-slate-light mb-4" > Manage your payment methods and set your default preference. </p> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" border-b border-zion-blue-light pb-6"> <h3 className=" text-lg font-medium text-white mb-3">Escrow Settings</h3> <p className=" text-zion-slate-light mb-4"> Set your preferences for escrow services. Escrow holds funds until both parties confirm the service has been completed satisfactorily. </p> <div className=" flex items-center space-x-2"> <Switch id=" escrow-default"/> <Label htmlFor=" escrow-default"className=" text-white"> Use escrow by default </Label> </div> </div> <div> <h3 className=" text-lg font-medium text-white mb-3">Payment Notifications</h3> <p className=" text-zion-slate-light mb-4"> Choose how you want to be notified about payments and transactions. </p> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-email"defaultChecked /> <label > Email notifications </label> </div> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-push"defaultChecked /> <label htmlFor=" notify-push"className=" text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white" > Push notifications </label> </div> </div> </div> </div> </div> </TabsContent> </Tabs> </div> </div> <Footer /> </>) 
-<<<<<<< HEAD
-}// Import UI components for Payment Settings tab 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-}// Import UI components for Payment Settings tab;
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-// Import UI components for Payment Settings tab;
-import { Button } from "@/components/ui/button",;
-import { Switch } from "@/components/ui/switch",;
-import { Label } from "@/components/ui/label",;
-import { Checkbox } from "@/components/ui/checkbox",; return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="mb-12 text-center" > <GradientHeading level="h1" className="text-4xl lg:text-5xl font-bold mb-4" > Payments & Transactions </GradientHeading> </p> </div> <Tabs defaultValue="history" className="w-full" > <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8" > <TabsTrigger value="history" >Transaction History</TabsTrigger> <TabsTrigger value="settings" >Payment Settings</TabsTrigger> </TabsList> <TabsContent value="history" > <TransactionHistory /> </TabsContent> <TabsContent value="settings" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <h2 className="text-2xl font-bold text-white mb-6" >Payment Settings</h2> <div className="space-y-8" > <div className="border-b border-zion-blue-light pb-6" > <h3 className="text-lg font-medium text-white mb-3" >Default Payment Method</h3> <p className="text-zion-slate-light mb-4" > Manage your payment methods and set your default preference. </p> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" border-b border-zion-blue-light pb-6"> <h3 className=" text-lg font-medium text-white mb-3">Escrow Settings</h3> <p className=" text-zion-slate-light mb-4"> Set your preferences for escrow services. Escrow holds funds until both parties confirm the service has been completed satisfactorily. </p> <div className=" flex items-center space-x-2"> <Switch id=" escrow-default"/> <Label htmlFor=" escrow-default"className=" text-white"> Use escrow by default </Label> </div> </div> <div> <h3 className=" text-lg font-medium text-white mb-3">Payment Notifications</h3> <p className=" text-zion-slate-light mb-4"> Choose how you want to be notified about payments and transactions. </p> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-email"defaultChecked /> <label > Email notifications </label> </div> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-push"defaultChecked /> <label htmlFor=" notify-push"className=" text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white" > Push notifications </label> </div> </div> </div> </div> </div> </TabsContent> </Tabs> </div> </div> <Footer /> </>) 
-}// Import UI components for Payment Settings tab 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

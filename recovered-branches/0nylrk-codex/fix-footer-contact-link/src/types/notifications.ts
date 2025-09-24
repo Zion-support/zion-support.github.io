@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export interface Notification {
-=======
-export interface Notification {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
   user_id: string;
   title: string;
@@ -13,42 +6,6 @@ export interface Notification {};
   type: string;
   related_id?: string;
   read: boolean;
-
-created_at: string,
-  updated_at: string;
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  created_at: string,
-  updated_at: string;
-}
-
-export interface Notification {;
-
-}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
-export interface Notification {;
-
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   created_at: string;
-
-  updated_at: string
+  updated_at: string;
 }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

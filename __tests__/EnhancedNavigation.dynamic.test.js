@@ -1,33 +1,29 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 
 describe('EnhancedNavigation', () => {
   test('renders without crashing', () => {
-    render(<EnhancedNavigation />);
+    render(<EnhancedNavigation  />);
     expect(screen.getByTestId('enhancednavigation')).toBeInTheDocument();
   });
   
   test('displays correct content', () => {
-    render(<EnhancedNavigation />);
+    render(<EnhancedNavigation  />);
   });
   
   test('handles user interactions', () => {
-    render(<EnhancedNavigation />);
+    render(<EnhancedNavigation  />);
   });
   
   test('applies correct styling', () => {
-    render(<EnhancedNavigation />);
+    render(<EnhancedNavigation  />);
   });
 });
-<<<<<<< HEAD
-=======
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe("EnhancedNavigationdynamic",() => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic />)}); test("applies correct styling",() => { render(<EnhancedNavigationdynamic />)})});''"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe("EnhancedNavigationdynamic",() => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic  />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic  />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic  />)}); test("applies correct styling",() => { render(<EnhancedNavigationdynamic  />)})});''"
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -39,8 +35,7 @@ describe('EnhancedNavigationdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe('EnhancedNavigationdynamic', () => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe('EnhancedNavigationdynamic', () => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic  />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic  />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic  />)}); test("applies correct styling"
 
 });
 });
->>>>>>> origin/merge-pr-12271

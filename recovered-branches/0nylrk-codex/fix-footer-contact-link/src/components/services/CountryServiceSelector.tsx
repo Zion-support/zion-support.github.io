@@ -1,19 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 import {
-  onsiteServicePricing
-  CountryPricing
+  onsiteServicePricing,
+  CountryPricing,
 } from "@/data/onsiteServicePricing";
 import { CountrySelector } from "./CountrySelector";
-
 import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
@@ -23,7 +16,21 @@ import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricin
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
+
+
+
+
+
+
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -31,40 +38,17 @@ interface CountryServiceSelectorProps {
 export function CountryServiceSelector({
   onCountryChange
   selectedCountry: initialCountry
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-import {
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  onsiteServicePricing,
-  CountryPricing,;
-} from "@/data/onsiteServicePricing";"
-import { CountrySelector } from "./CountrySelector";"
-import { PaymentSection } from "./PaymentSection";"
-import { ServiceDetails } from "./ServiceDetails";
-interface CountryServiceSelectorProps {}
-  onCountryChange?: (country: CountryPricing | null) => void;
-  selectedCountry?: CountryPricing | null;
-}
-
-export function CountryServiceSelector({}
-  onCountryChange,
-  selectedCountry: initialCountry,
 }: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
-<<<<<<< HEAD
-<<<<<<< HEAD
           onCountryChange={onCountryChange |(() => {})}
           selectedCountry={initialCountry |null}
         />
-<<<<<<< HEAD
+
+
+
 
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountrySelector } from "./CountrySelector",;
@@ -83,195 +67,56 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
-          onCountryChange={onCountryChange || (() => {})}
-          selectedCountry={initialCountry || null}
-        />
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-import {
-  onsiteServicePricing,
-  CountryPricing,
-} from "@/data/onsiteServicePricing";
-import { CountrySelector } from "./CountrySelector";
-import { PaymentSection } from "./PaymentSection";
-import { ServiceDetails } from "./ServiceDetails";
-interface CountryServiceSelectorProps {
-  onCountryChange?: (country: CountryPricing | null) => void;
-  selectedCountry?: CountryPricing | null;
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+
+
+
+
 
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
 import {ServiceDetails} from "./ServiceDetails";
-
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { CountrySelector } from "./CountrySelector",
-import { PaymentSection } from "./PaymentSection",
-import { ServiceDetails } from "./ServiceDetails",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
-import { CountrySelector } from "./CountrySelector",;
-import { PaymentSection } from "./PaymentSection",;
-import { ServiceDetails } from "./ServiceDetails",;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-      </div>
-
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
-    </div>
-{initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-      </div>;
-
-{initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
-    </div>;
-  );
-}
-;
-
-<<<<<<< HEAD
-        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
-      </div>
-
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
-    </div>
-  );
-}
-;
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
-import { CountrySelector } from "./CountrySelector",;
-import { PaymentSection } from "./PaymentSection",;
-=======
-"
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;"
-import { CountrySelector } from "./CountrySelector",;"
-import { PaymentSection } from "./PaymentSection",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { ServiceDetails } from "./ServiceDetails",;
-;
 interface CountryServiceSelectorProps {;
-  onCountryChange?:(country:CountryPricing | null) => void,;
-  selectedCountry?:CountryPricing | null;
+  onCountryChange?: (country: CountryPricing | null) => void,;
+  selectedCountry?: CountryPricing | null;
 }
-;
-export function CountryServiceSelector() { return null; }
+
+export function CountryServiceSelector(): any ({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {;
+  return (
+    <div className="space-y-6">;
+      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
+        <CountrySelector
           onCountryChange={onCountryChange || (() => {})} ;
           selectedCountry={initialCountry || null} ;
         />;
-        ;
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>;
-      ;
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
-    </div>;
-  ),;}
- interface CountryServiceSelectorProps {}
-  onCountryChange?: (country: CountryPricing | null) => void;
-selectedCountry?: CountryPricing | null;
-}export function CountryServiceSelector() { return null; }
-  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {}
-}) 
-}selectedCountry= {}
-  initialCountry || null;
-}/> {}
-  initialCountry && <PaymentSection selectedCountry= {}
-  initialCountry;
-}/> 
-}</div> {}
-  initialCountry && <ServiceDetails country= {}
-  initialCountry.country;
-}/> 
-}</div>) 
-}
-);
-}
-}
-;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      {initialCountry && <ServiceDetails country={initialCountry && initialCountry.country} />}
+    </div>;
   );
 }
-  )
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-  // TODO: Implement
-}
-  onsiteServicePricing,
-  CountryPricing,
-} from "@/data/onsiteServicePricing";""
-import { CountrySelector } from "./CountrySelector";""
-import { PaymentSection } from "./PaymentSection";""
-import { ServiceDetails } from "./ServiceDetails";"
-interface CountryServiceSelectorProps {
-  // TODO: Implement
-  onCountryChange?: (country: CountryPricing | null) => void;
-  selectedCountry?: CountryPricing | null;
 
-export function CountryServiceSelector({
-  onCountryChange,
-  selectedCountry: initialCountry,)
-}: CountryServiceSelectorProps) {
-  return ("
-    <div className="space-y-6">"
-</div>"
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">"
-</div>
-        <CountrySelector;)
-          onCountryChange={onCountryChange || (() => {})}
-</CountrySelector>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
-        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
 
-      {initialCountry && <ServiceDetails country={initialCountry.country} />}
 
-    <div className="space-y-6">;"
-      <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;"
-        <CountrySelector ;
-          onCountryChange={onCountryChange || (() => {})} ;
-
-      </div>;
-
-    </div>;"
-  return (<div className="space-y-6" > <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light" > onCountryChange || ( () => {"
-  initialCountry && <PaymentSection selectedCountry= {
-  initialCountry;
-}/> 
-
-}</div> {
-  initialCountry && <ServiceDetails country= {
-  initialCountry.country;
-
-}</div>) "
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

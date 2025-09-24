@@ -1,33 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {TalentProfile, as, TalentProfileType} from "@/types/talent";
-import {ProfileData} from "@/types/profile";
-import {MOCK_TALENTS} from "@/data/mockTalents";
-import {MOCK_PROFILES} from "@/data/mockProfiles";
-import {convertProfileToTalentProfile} from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {;
-=======
-import { useState, useEffect } from "react";"
-import { TalentProfile, as, TalentProfileType } from "@/types/talent";"
-import { ProfileData } from "@/types/profile";"
-import { MOCK_TALENTS } from "@/data/mockTalents";"
-import { MOCK_PROFILES } from "@/data/mockProfiles";"
+import { useState, useEffect } from "react";
+import { TalentProfile as TalentProfileType } from "@/types/talent";
+import { ProfileData } from "@/types/profile";
+import { MOCK_TALENTS } from "@/data/mockTalents";
+import { MOCK_PROFILES } from "@/data/mockProfiles";
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(
-    null,
-  );
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
 
-  useEffect(() => {}
-    const fetchProfile = async () => {}
-      if (!id) {"
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!id) {
         setError("No profile ID provided");
         setIsLoading(false);
         return;
@@ -35,126 +22,30 @@ export function useTalentProfile(id: string | undefined) {};
 
       setIsLoading(true);
       setError(null);
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { convertProfileToTalentProfile } from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {};
-=======
-import { convertProfileToTalentProfile } from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-const [error, setError] = useState<string | null>(null);
-const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);"
-import { convertProfileToTalentProfile } from "@/utils/profileConverter",
-export function useTalentProfile(id: string | undefined) {}
-  const [profile, setProfile] = useState<TalentProfileType | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  useEffect(() => {}
-    const fetchProfile = async () => {};
-      if (!id) {";
-        setError("No profile ID provided");
-        setIsLoading(false);
-        return;
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setIsLoading(true);
-      setError(null);
-
-      setIsLoading(true),
-      setError(null),
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-          const foundProfile = MOCK_TALENTS.find((talent) => talent.id === id);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======      try {
-        // In a real implementation, we would fetch from Supabase
-        // For now, we'll use mock data
-        setTimeout(() => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======      try {
-        // In a real implementation, we would fetch from Supabase
-        // For now, we'll use mock data
-        setTimeout(() => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      try {
-        // In a real implementation, we would fetch from Supabase
-        // For now, we'll use mock data
-        setTimeout(() => {
-          const foundProfile = MOCK_TALENTS.find((talent) => talent.id === id);
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
+          
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile));
           } else {
-// Try fetching from ProfileData mock as fallback
-            // This is just for development purposes
-            const mockProfile = MOCK_PROFILES[id];
-            if (mockProfile) {}
-              setMockProfileData(mockProfile);
-// Convert the ProfileData to TalentProfileType
-<<<<<<< HEAD
-              const convertedProfile = convertProfileToTalentProfile(mockProfile),
-              setProfile(convertedProfile)
-            } else {
-              setError("Profile not found")
-            }
-          }
-          setIsLoading(false)
-        }, 800)
-      } catch (err) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-        console.error("Error fetching profile:", err),
-        setError("Failed to load profile data"),
-        setIsLoading(false)
-      }
-    }
-    fetchProfile()
-  }, [id]);
-
-              setProfile(convertedProfile);
-=======
             // Try fetching from ProfileData mock as fallback
             // This is just for development purposes
             const mockProfile = MOCK_PROFILES[id];
             if (mockProfile) {
               setMockProfileData(mockProfile);
               // Convert the ProfileData to TalentProfileType
-              const convertedProfile =
-                convertProfileToTalentProfile(mockProfile);
+              const convertedProfile = convertProfileToTalentProfile(mockProfile);
               setProfile(convertedProfile);
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
             } else {
               setError("Profile not found");
             }
           }
           setIsLoading(false);
-        }, 800);
+        }, 80o0);
       } catch (err) {
         console.error("Error fetching profile:", err);
         setError("Failed to load profile data");
@@ -163,69 +54,7 @@ export function useTalentProfile(id: string | undefined) {}
     };
 
     fetchProfile();
-=======
-  return { profile, isLoading, error, mockProfileData }
-        console.error ("Error fetching profile:", err);
-        set_error ("Failed to load profile data");
-        setIsLoading (false);
-      }
-    }
-;
-    fetch_profile ();
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }, [id]);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return { profile, isLoading, error, mockProfileData }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-;
-  return { profile, is_loading, error, mockProfileData }
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-;
-  return { profile, is_loading, error, mockProfileData }
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   return { profile, isLoading, error, mockProfileData };
 }
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  return { profile, isLoading, error, mockProfileData };
-}
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import { useState, useEffect } from "react";""
-import { TalentProfile, as, TalentProfileType } from "@/types/talent";""
-import { ProfileData } from "@/types/profile";""
-import { MOCK_TALENTS } from "@/data/mockTalents";""
-import { MOCK_PROFILES } from "@/data/mockProfiles";""
-import { convertProfileToTalentProfile } from "@/utils/profileConverter";"
-export function useTalentProfile(id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-
-  const [error, setError] = useState<string | null>(null);
-</string>
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(
-)
-
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
-
-  const [profile, setProfile] = useState<TalentProfileType | null>(null),
-
-  const [error, setError] = useState<string | null>(null),
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
-"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

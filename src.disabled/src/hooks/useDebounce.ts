@@ -1,22 +1,6 @@
-import { useState, useEffect } from "react"; export function useDebounce<T>(value: T, delay: number) T {, const [debouncedValue, setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)}, delay); return () => {; clearTimeout(handler)}}, [value, delay]); return debouncedValue};"),
-}
+import { useState, useEffect } from "react"; export function useDebounce<T>(value: T, delay: number) T {, const [debouncedValue, setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)}, delay); return () => {; clearTimeout(handler)}}, [value, delay]); return debouncedValue};")}
 "export default ComponentName;"
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: 'T',delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};");,} "export default ComponentName;"
+import { useState,useEffect } from "react"; export function useDebounce<T>(value: 'T',delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};");} "export default ComponentName;"
 import { useState, useEffect } from "react"; export function useDebounce<T>("value": T, "delay": number) T {, const [debouncedValue, setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)}, delay); return () => {; clearTimeout(handler)}}, [value, delay]); return debouncedValue};")}
 "export default ComponentName;"
-<<<<<<< HEAD
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: T,delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};"),} "export default ComponentName;"
-<<<<<<< HEAD
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: T,delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};"),} "export default ComponentName;"
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: T,delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};"),} "export default ComponentName;"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: 'T',delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};");,} "export default ComponentName;""
-import { useState, useEffect } from "react"; export function useDebounce<T>("value": T, "delay": number) T {, const [debouncedValue, setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)}, delay); return () => {; clearTimeout(handler)}}, [value, delay]); return debouncedValue};")}"
-"export default ComponentName;""
-import { useState,useEffect } from "react"; export function useDebounce<T>(value: T,delay: number) T {,const [debouncedValue,setDebouncedValue] = useState<any>(value); useEffect(() => {; const handler = setTimeout(() => {; setDebouncedValue(value)},delay); return () => {; clearTimeout(handler)}},[value,delay]); return debouncedValue};"),} "export default ComponentName;"
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+
 import React from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -18,12 +13,7 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -35,148 +25,36 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { SEO } from "@/components/SEO",
 import { HeroSection } from "@/components/HeroSection",
 import { QuickAccess } from "@/components/home/QuickAccess",
+
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+
 export default function Home() {
-=======
-import { FeatureHighlights } from "@/components/home/FeatureHighlights",export default function Home() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-export default function Home() {
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
   return (
-=======
-import React from "react";"
-import { Header } from "@/components/Header";"
-import { Footer } from "@/components/Footer";"
-import { CategoriesSection } from "@/components/CategoriesSection";"
-import { BenefitsSection } from "@/components/BenefitsSection";"
-import { HowItWorksSection } from "@/components/HowItWorksSection";"
-import { NewsletterSection } from "@/components/NewsletterSection";"
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"
-import { SEO } from "@/components/SEO";"
-import { HeroSection } from "@/components/HeroSection";"
-import { QuickAccess } from "@/components/home/QuickAccess";"
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";"
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-export default function Home() {}
-  return ("
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     <div className="min-h-screen bg-background">
-      <SEO"
-        title="Zion - The Tech & AI Marketplace""
-        description="Discover top AI and tech talent, services, and equipment in one place.""
-        keywords="AI, technology, marketplace, services, talent""
+      <SEO
+        title="Zion - The Tech & AI Marketplace"
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
         canonical="https: //app.ziontechgroup.com/"
-=======
-
-export default function Home() {
-  return ("
-    <div className="min-h-screen bg-background">"
-</div>
-      <SEO;"
-        title="Zion - The Tech & AI Marketplace"""
-        description="Discover top AI and tech talent, services, and equipment in one place."""
-        keywords="AI, technology, marketplace, services, talent"""
-        canonical="https: //app.ziontechgroup.com/""
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       />
-
       <Header />
-
-</Header>
-
       <HeroSection />
-
       <QuickAccess />
-
       <FeatureCTAs />
-
       <FeatureHighlights />
-
       <CategoriesSection />
-
       <BenefitsSection />
-
       <HowItWorksSection />
-
       <FeaturedListingsSection />
-
       <NewsletterSection />
-
       <Footer />
-</div>
-<<<<<<< HEAD
+    </div>
   )
-<<<<<<< HEAD
+
 }
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CategoriesSection} from "@/components/CategoriesSection";
-import {BenefitsSection} from "@/components/BenefitsSection";
-import {HowItWorksSection} from "@/components/HowItWorksSection";
-import {NewsletterSection} from "@/components/NewsletterSection";
-import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
-import {SEO} from "@/components/SEO";
-import {HeroSection} from "@/components/HeroSection";
-import {QuickAccess} from "@/components/home/QuickAccess";
-import {FeatureCTAs} from "@/components/home/FeatureCTAs";
-import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -190,6 +68,7 @@ import { HeroSection } from "@/components/HeroSection",;
 import { QuickAccess } from "@/components/home/QuickAccess",;
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+
 export default function Home() {;
   return (
     <div className="min-h-screen bg-background">;
@@ -208,56 +87,26 @@ export default function Home() {;
       <FeatureCTAs />;
 
       <FeatureHighlights />;
-      <SEO;
-        title="Zion - The Tech & AI Marketplace";
-        description="Discover top AI and tech talent, services, and equipment in one place.";
-        keywords="AI, technology, marketplace, services, talent";
-        canonical="https: //app.ziontechgroup.com/";
-      />;
-      <Header />;
-      <HeroSection />;
-      <QuickAccess />;
-      <FeatureCTAs />;
-      <FeatureHighlights />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      <CategoriesSection />;
-      <BenefitsSection />;
-      <HowItWorksSection />;
-      <FeaturedListingsSection />;
-      <NewsletterSection />;
-      <Footer />;
-</div>);
-}
 
 import React from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CategoriesSection} from "@/components/CategoriesSection";
-import {BenefitsSection} from "@/components/BenefitsSection";
-import {HowItWorksSection} from "@/components/HowItWorksSection";
-import {NewsletterSection} from "@/components/NewsletterSection";
-import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
-import {SEO} from "@/components/SEO";
-import {HeroSection} from "@/components/HeroSection";
-import {QuickAccess} from "@/components/home/QuickAccess";
-import {FeatureCTAs} from "@/components/home/FeatureCTAs";
-import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-import React from 'react',;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { CategoriesSection } from "@/components/CategoriesSection",;
-import { BenefitsSection } from "@/components/BenefitsSection",;
-import { HowItWorksSection } from "@/components/HowItWorksSection",;
-import { NewsletterSection } from "@/components/NewsletterSection",;
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
-import { SEO } from "@/components/SEO",;
-import { HeroSection } from "@/components/HeroSection",;
-import { QuickAccess } from "@/components/home/QuickAccess",;
-import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { CategoriesSection } from '@/components / CategoriesSection';
+import { BenefitsSection } from '@/components / BenefitsSection';
+import { HowItWorksSection } from '@/components / HowItWorksSection';
+import { NewsletterSection } from '@/components / NewsletterSection';
+import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
+import { SEO } from '@/components / SEO';
+import { HeroSection } from '@/components / HeroSection';
+import { QuickAccess } from '@/components / home / QuickAccess';
+import { FeatureCTAs } from '@/components / home / FeatureCTAs';
+import { FeatureHighlights } from '@/components / home / FeatureHighlights';
+export default /**
+ * Home - Function description
+ */
+function Home() {
+  return (
+    <div className="min - h-screen bg - background">;
       <SEO;
         title="Zion - The Tech & AI Marketplace";
         description="Discover top AI and tech talent, services, and equipment in one place.";
@@ -275,40 +124,8 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-    </div>);
-}}
-;
-
-<<<<<<< HEAD
-
-</Footer>
-    </div>)
-    </div>);
-}
     </div>;
   );
-} export default function Home() { return null; }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-    </div>);
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>;"
-  return (<div className="min-h-screen bg-background" >"
-    </div>;)
-    </div>);"
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

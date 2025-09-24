@@ -1,33 +1,29 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityManager from '../components/AccessibilityManager';
 
 describe('AccessibilityManager', () => {
   test('renders without crashing', () => {
-    render(<AccessibilityManager />);
+    render(<AccessibilityManager  />);
     expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
   });
   
   test('displays correct content', () => {
-    render(<AccessibilityManager />);
+    render(<AccessibilityManager  />);
   });
   
   test('handles user interactions', () => {
-    render(<AccessibilityManager />);
+    render(<AccessibilityManager  />);
   });
   
   test('applies correct styling', () => {
-    render(<AccessibilityManager />);
+    render(<AccessibilityManager  />);
   });
 });
-<<<<<<< HEAD
-=======
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe("AccessibilityManagerdynamic",() => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic />)}); test("applies correct styling",() => { render(<AccessibilityManagerdynamic />)})});''"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe("AccessibilityManagerdynamic",() => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic  />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic  />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic  />)}); test("applies correct styling",() => { render(<AccessibilityManagerdynamic  />)})});''"
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -39,8 +35,7 @@ describe('AccessibilityManagerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe('AccessibilityManagerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe('AccessibilityManagerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic  />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic  />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic  />)}); test("applies correct styling"
 
 });
 });
->>>>>>> origin/merge-pr-12271
