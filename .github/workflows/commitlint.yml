@@ -2,27 +2,20 @@ name: Commitlint
 
 on:
   pull_request:
-  push:
-    branches: ["**"]
-  workflow_dispatch:
-
-permissions:
-  contents: read
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
-  commitlint:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: wagoid/commitlint-github-action@v6
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: npm
       - name: Install dependencies
-        run: npm ci
-      - name: Validate commit messages (last 50)
-        run: npx commitlint --from=HEAD~50 --to=HEAD --verbose || true
-
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"
