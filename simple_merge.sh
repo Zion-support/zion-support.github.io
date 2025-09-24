@@ -1,78 +1,34 @@
 #!/bin/bash
 
-# Simple merge script for the specific PR
-set -e
+echo "🚀 Starting simple PR merge process..."
 
-echo "🚀 Starting simple merge for cursor/create-and-deploy-new-content-8032..."
+# Get the most recent non-draft PRs and try to merge them
+PR_NUMBERS=(17249 17248 17247 17246 17242 17241 17240 17239)
 
-# Change to workspace directory
-cd /workspace
+for pr_number in "${PR_NUMBERS[@]}"; do
+  echo "📋 Processing PR #$pr_number"
+  
+  # Try to merge via API
+  echo "  🔄 Attempting API merge..."
+  response=$(curl -s -X PUT \
+    -H "Accept: application/vnd.github.v3+json" \
+    -H "Authorization: token ${GITHUB_TOKEN}" \
+    -d '{"commit_title":"Merge PR '$pr_number'","merge_method":"merge"}' \
+    "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number/merge")
+  
+  # Check if merge was successful
+  if echo "$response" | grep -q '"merged":true'; then
+    echo "  ✅ Successfully merged PR #$pr_number"
+  else
+    echo "  ❌ Failed to merge PR #$pr_number"
+    echo "  Response: $response"
+  fi
+  
+  echo ""
+done
 
-# Check current status
-echo "📊 Current git status:"
-git status --short
-
-# Ensure we're on main
-echo "🔄 Switching to main branch..."
-git checkout main
-
-# Pull latest changes
-echo "📥 Pulling latest changes..."
-git pull origin main
-
-# Fetch the specific branch
-echo "📋 Fetching the specific branch..."
-git fetch origin cursor/create-and-deploy-new-content-8032
-
-# Try to merge
-echo "✅ Attempting to merge cursor/create-and-deploy-new-content-8032..."
-if git merge --no-commit --no-ff origin/cursor/create-and-deploy-new-content-8032 2>/dev/null; then
-    echo "✅ Successfully merged cursor/create-and-deploy-new-content-8032"
-    git commit -m "Merge cursor/create-and-deploy-new-content-8032 into main - $(date)"
-else
-    echo "⚠️  Merge conflicts detected, resolving..."
-    
-    # Get conflicted files
-    CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-    
-    if [ -n "$CONFLICTED_FILES" ]; then
-        echo "📋 Conflicted files: $CONFLICTED_FILES"
-        
-        # Resolve conflicts
-        for file in $CONFLICTED_FILES; do
-            if [ -f "$file" ]; then
-                echo "🔧 Resolving conflicts in $file..."
-                
-                # For critical files, keep main version
-                if [[ "$file" == "package.json" || "$file" == "package-lock.json" || "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-                    echo "📦 Critical file, keeping main version..."
-                    git checkout --ours "$file"
-                else
-                    echo "📝 Regular file, removing conflict markers..."
-                    # Remove conflict markers
-                    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                    sed -i '/>>>>>>> /d' "$file"
-                fi
-            fi
-        done
-        
-        # Add resolved files
-        git add .
-        
-        # Commit the merge
-        git commit -m "Resolve merge conflicts for cursor/create-and-deploy-new-content-8032 - $(date)"
-        
-        echo "✅ Successfully resolved conflicts and merged cursor/create-and-deploy-new-content-8032"
-    else
-        echo "❌ No conflicted files found, aborting merge..."
-        git merge --abort
-    fi
-fi
-
-# Push changes
-echo "💾 Pushing changes to remote..."
+# Push any changes
+echo "🚀 Pushing changes to main branch..."
 git push origin main
 
-echo "🎉 Simple merge completed!"
-echo "📊 Final status:"
-git status --short
+echo "📊 Merge process completed"

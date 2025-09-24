@@ -1,5 +1,5 @@
-// Hook for useRecommendations;
+// Hook for useRecommendations,
 export const useUseRecommendations: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

@@ -1,5 +1,5 @@
-// Hook for usePortfolio;
+// Hook for usePortfolio,
 export const useUsePortfolio: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

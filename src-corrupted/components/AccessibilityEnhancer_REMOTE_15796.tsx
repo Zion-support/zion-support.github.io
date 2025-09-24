@@ -1,5 +1,0 @@
-
-
-</AccessibilityFeature>
-</AccessibilitySettings>
-</any>

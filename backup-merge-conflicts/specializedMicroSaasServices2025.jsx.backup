@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"export\": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
-=======
-<<<<<<< HEAD
-export: const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [""
-<<<<<<< HEAD:backup-merge-conflicts/specializedMicroSaasServices2025.jsx.backup
-=======
 "export": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = ["]"
->>>>>>> main
+=======
+"export\": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
 >>>>>>> main
 =======
 "export": const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = ["]"

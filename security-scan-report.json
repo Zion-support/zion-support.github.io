@@ -8,12 +8,7 @@
       "medium": 57,
       "low": 0
     },
-    "scanTypes": [
-      "npm",
-      "code",
-      "secrets",
-      "dependencies"
-    ],
+    "scanTypes": ["npm", "code", "secrets", "dependencies"],
     "timestamp": "2025-07-25T07:13:10.949Z"
   },
   "details": {
@@ -623,12 +618,7 @@
         "medium": 57,
         "low": 0
       },
-      "scanTypes": [
-        "npm",
-        "code",
-        "secrets",
-        "dependencies"
-      ],
+      "scanTypes": ["npm", "code", "secrets", "dependencies"],
       "timestamp": "2025-07-25T07:13:10.949Z"
     }
   }

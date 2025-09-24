@@ -1,5 +1,5 @@
-// Hook for useCurrency;
+// Hook for useCurrency,
 export const useUseCurrency: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

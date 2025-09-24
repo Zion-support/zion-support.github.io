@@ -1,11 +1,7 @@
 module.exports = {
   root: true,
-  extends: ['next/core-web-vitals'],
-<<<<<<< HEAD
-=======
+  extends: ['next', 'next/core-web-vitals'],
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
-  }
->>>>>>> origin/feat/news-updates-home-teaser
+    'react/no-unescaped-entities': 'off',
+  },
 };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -18,7 +17,6 @@ class RunAllAutomations {
 
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     }
 
   async runAutomation(scriptName, scriptPath) {
@@ -42,11 +40,6 @@ class RunAllAutomations {
         "success": false,
         "error": error.message
       }}
-=======
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
->>>>>>> main
   }
 
   async runCommand(command, options = {}) {
@@ -172,7 +165,6 @@ if (require.main === module) {
 }
 
 module.exports = RunAllAutomations;
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -206,4 +198,3 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
->>>>>>> main

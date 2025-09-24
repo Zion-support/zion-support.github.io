@@ -9,7 +9,7 @@ from datetime import datetime
 # Configuration
 BATCH_SIZE = 10
 MAX_CONFLICTS_PER_BATCH = 3
-GITHUB_TOKEN = "ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR"
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "")
 REPO_URL = "https://api.github.com/repos/Zion-Holdings/zion.app"
 
 def run_command(cmd, check=True):
