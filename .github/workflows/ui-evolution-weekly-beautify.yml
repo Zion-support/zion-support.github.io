@@ -1,0 +1,36 @@
+---
+name: UI Evolution Weekly Beautify
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Every Monday at 8 AM UTC
+  workflow_dispatch: {}
+jobs:
+  beautify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run UI evolution beautify
+        run: node automation/beautify-hightech-ui.cjs | cat
+      - name: Run UI evolution dashboard
+        run: node automation/ui-evolution-dashboard.cjs | tee ui-evolution-summary.json
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-evolution-results
+          path: ui-evolution-summary.json
+          retention-days: 7
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ui-evolution-weekly-beautify.yml-${{ github.ref }}
+  cancel-in-progress: true
