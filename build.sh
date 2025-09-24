@@ -1,49 +1,49 @@
 #!/bin/bash
 set -e
 
-echo "Starting Netlify build process..."
+echo "Starting build process..."
 
-# Check if we're in a Netlify environment
-if [ "$NETLIFY" = "true" ]; then
-  echo "Detected Netlify environment - using specialized build process..."
-  
-  # Use the specialized Netlify build script
-  exec ./netlify-build.sh
-  
-else
-  echo "Local development environment detected - using full cleanup process..."
-  
-  # Clean everything for local development
-  echo "Cleaning previous installations..."
-  rm -rf node_modules
-  rm -rf .pnpm-store
-  rm -rf dist
+# Clean everything
+echo "Cleaning previous installations..."
+rm -rf node_modules
+rm -rf .yarn-cache
+rm -rf dist
 
-  # Clean pnpm cache completely
-  echo "Cleaning pnpm cache..."
-  pnpm store prune
+# Clean yarn cache completely
+echo "Cleaning yarn cache..."
+yarn cache clean --all
 
-  # Install dependencies with retry logic
-  echo "Installing dependencies..."
-  for i in {1..3}; do
-    echo "Attempt $i of 3..."
-    if pnpm install --frozen-lockfile; then
-      echo "Dependencies installed successfully!"
-      break
-    else
-      echo "Installation failed, cleaning and retrying..."
-      rm -rf node_modules
-      pnpm store prune
-      if [ $i -eq 3 ]; then
-        echo "All installation attempts failed!"
-        exit 1
-      fi
-    fi
-  done
+# Remove yarn.lock if it exists to force fresh resolution
+echo "Backing up yarn.lock..."
+if [ -f yarn.lock ]; then
+  cp yarn.lock yarn.lock.backup
 fi
+
+# Install dependencies with retry logic
+echo "Installing dependencies..."
+for i in {1..3}; do
+  echo "Attempt $i of 3..."
+  if yarn install --frozen-lockfile --network-timeout 100000 --ignore-engines --ignore-platform --force; then
+    echo "Dependencies installed successfully!"
+    break
+  else
+    echo "Installation failed, cleaning and retrying..."
+    rm -rf node_modules
+    rm -rf .yarn-cache
+    yarn cache clean --all
+    if [ $i -eq 3 ]; then
+      echo "All installation attempts failed!"
+      # Restore yarn.lock if we backed it up
+      if [ -f yarn.lock.backup ]; then
+        mv yarn.lock.backup yarn.lock
+      fi
+      exit 1
+    fi
+  fi
+done
 
 # Build the project
 echo "Building project..."
-pnpm run build
+yarn build
 
 echo "Build completed successfully!"
