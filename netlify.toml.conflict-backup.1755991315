@@ -5,7 +5,6 @@
 [build.environment]
   SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
 
-<<<<<<< HEAD
 # New autonomous functions schedules
 [[scheduled.functions]]
   name = "auto-redirect-mapper"
@@ -15,10 +14,6 @@
   name = "asset-size-guardian"
   schedule = "*/30 * * * *"
 
-=======
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
@@ -26,7 +21,6 @@
 [[plugins]]
   package = "./.scripts/netlify-rollback-monitor"
   [plugins.inputs]
-<<<<<<< HEAD
     # Optional: comma-separated includes/excludes
     include = ""
     exclude = ""
@@ -270,7 +264,3 @@
 [[scheduled.functions]]
   name = "perf-asset-watcher"
   schedule = "*/20 * * * *"
-=======
-    monitorMinutes = 20
-    intervalSeconds = 60 
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

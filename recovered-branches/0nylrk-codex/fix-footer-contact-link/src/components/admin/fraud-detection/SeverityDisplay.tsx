@@ -1,124 +1,57 @@
 
+,
 interface SeverityDisplayProps {
-  severity: string
-}
-
+  severity: string}
+,
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
-  severity
-}) => {
+  severity}) => {
   return (
-
-
-
-
-
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
       showText={true}
-
-
-
-
-
-    />
-  );
-}
-
-
+,
+    />)}
+,
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
-
-    />;
-);
-
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
-import React from "react",;
-import { SeverityIndicator } from "@/components/ui/severity-indicator",;
-interface SeverityDisplayProps {;
-  severity: string;
-}
-;
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
-  return (;
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"} ;
-      showIcon={true}
-      showText={true}
-    />;
-  );
-
-
-
-
-
-  return (
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      show_icon={true}
-      show_text={true}
-    />);
-}
-;
-
-
-
-
-
-
-import React from './react';
-import { SeverityIndicator  } from '@/components / ui / severity - indicator';
-interface SeverityDisplayProps {
-  severity: string;
-}
-export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
-  severity,
-
-}) => {
-
-  return (
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      show_icon={true}
-      show_text={true}
-    />);
-}
-;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-interface SeverityDisplayProps {
-  severity: string
-}
-
-
-
-
-
-
-
-
-};
-
-=======
-import React from "react";
+    />),
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"} ,
+import React from "react";;
 import { SeverityIndicator } from "@/components/ui/severity-indicator";
-
 interface SeverityDisplayProps {
-  severity: string;
-}
-
+  severity: string}
+,
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"} ,
       showIcon={true}
       showText={true}
-    />
-  );
+    />),
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />)}
+,
+import React from './react',
+import { SeverityIndicator  } from '@/components / ui / severity - indicator',
+interface SeverityDisplayProps {
+  severity: string}
+export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
+  severity;
+}) => {
+  return (
+    <SeverityIndicator
+      severity={severity as "safe" | "suspicious" | "dangerous"}
+      show_icon={true}
+      show_text={true}
+    />)}
+,
+interface SeverityDisplayProps {
+  severity: string}
 };
->>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

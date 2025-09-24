@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
         {/* Hero Section */}
         <AnimatePresence>
@@ -336,10 +335,6 @@ import React, { useState, useEffect } from 'react';
     </>
   );
 }
-=======
-=======
-import React from 'react';
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 import Head from 'next/head';
 import Container from '../components/ui/Container';
 
@@ -666,10 +661,6 @@ export default function ServicesPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default ServicesPage;
-=======
-}
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

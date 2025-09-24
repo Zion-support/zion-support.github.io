@@ -1,5 +1,5 @@
-// Hook for useAuthStatus;
+// Hook for useAuthStatus,
 export const useUseAuthStatus: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

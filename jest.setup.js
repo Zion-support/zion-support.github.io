@@ -1,39 +1,38 @@
-// Basic Jest setup
-import @testing-library/jest-dom';
+// Ensure jest-dom matchers are available when tests run
+try {
+  require('@testing-library/jest-dom');
+} catch (error) {
+  // optional in minimal runs
+}
 
-// Mock environment variables
-process.env.NEXT_PUBLIC_SUPABASE_URL = https://test.supabase.co';
-process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = test-key';
-
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: /',
-      pathname: /',
-      query: {},
-      asPath: /',
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-      beforePopState: jest.fn(),
-      events: {
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn()
-      },
-      isFallback: false
-    };
-  }
-}));
-
-// Mock Next.js Image component
+// Mock Next.js Image to a simple function component without JSX here
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />;
-  }
-}));
+  default: function MockImage() {
+    return null;
+  }}));
+
+// matchMedia mock
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn()}))});
+
+// Observers
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};

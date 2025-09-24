@@ -1,4 +1,30 @@
-export const TALENT_PROFILES = [
+export type TalentProfile = {
+  id: string;
+  slug: string;
+  name: string;
+  title: string;
+  category: string;
+  location: string;
+  timezone: string;
+  region: string;
+  skills: string[];
+  summary: string;
+  bio: string;
+  hourlyRateUsd: number;
+  requestQuote: boolean;
+  availability: string;
+  profileImageUrl: string | null;
+  videoUrl: string | null;
+  portfolio: string | null;
+  verified: boolean;
+  rating: number;
+  reviewsCount: number;
+  createdAt: string;
+  originalLanguage: string;
+  translations?: Record<string unknown>;
+};
+
+export const TALENT_PROFILES: TalentProfile[] = [
   {
     id: '1',
     slug: 'sample-talent',
@@ -22,3 +48,4 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
+    translations: {}}];

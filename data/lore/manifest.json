@@ -12,10 +12,7 @@
     "data/language-packs/zlingua.json",
     "public/nft/genesis-key-021.json"
   ],
-  "routesSuggested": [
-    "/media/lore",
-    "/universe/genesis"
-  ],
+  "routesSuggested": ["/media/lore", "/universe/genesis"],
   "scenes": [
     "Data Ruin",
     "Talent Nightscape",

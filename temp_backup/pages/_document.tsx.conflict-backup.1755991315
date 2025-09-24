@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-<<<<<<< HEAD
 export default class ZionDocument extends Document {
 	render() {
 		return (
@@ -22,25 +21,6 @@ export default class ZionDocument extends Document {
 			</Html>
 		);
 	}
-=======
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
-  render() {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 }
 
 export default MyDocument;

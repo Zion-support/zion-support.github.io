@@ -1,5 +1,5 @@
-// Hook for useUpdateMilestone;
+// Hook for useUpdateMilestone,
 export const useUseUpdateMilestone: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

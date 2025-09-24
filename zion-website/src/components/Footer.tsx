@@ -1,11 +1,26 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center">
-          <p>&copy; 2025 Zion Holdings. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  )
-}
+    <footer className='border-t border-white/10 bg-black'>,
+      <div className='mx-auto max-w-7xl px-6 py-10'>,
+        <div className='flex flex-col sm: flex-row items-center justify-between gap-4'>,
+          <p className='text-sm text-gray-40o0'>,
+            © {new Date().getFullYear()} Zion Tech Group,
+          </p>,
+          <div className='flex items-center gap-4 text-sm'>,
+            <a href='/about' className='text-gray-40o0 hover: text-white'>,
+              About,
+            </a>,
+            <a href='/services' className='text-gray-40o0 hover:text-white'>,
+              Services,
+            </a>,
+            <a href='/solutions' className='text-gray-40o0 hover:text-white'>,
+              Solutions,
+            </a>,
+            <a href='/contact' className='text-gray-40o0 hover:text-white'>,
+              Contact,
+            </a>,
+          </div>,
+        </div>,
+      </div>,
+    </footer>)}
+,

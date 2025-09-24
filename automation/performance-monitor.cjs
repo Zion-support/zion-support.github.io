@@ -1,151 +1,87 @@
-#!/usr/bin/env node
-
+const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      memoryUsage: 0,
-      cpuUsage: 0,
-      lastUpdated: new Date().toISOString()
-    };
-    this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
-    this.ensureLogDirectory();
-  }
+const PERFORMANCE_LOG_PATH = path.join(process.cwd(), 'performance-report.json');
 
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
-  }
+async function monitorPerformance() {
+  console.log('🔍 Monitoring application performance...');
+  
+  try {
+    // Run performance audit
+    const auditResult = await new Promise((resolve, reject) => {
+      exec('npm run build', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Build failed: ${error}`);
+          return reject(error);
+        }
+        resolve({ stdout, stderr });
+      });
+    });
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
+    // Check bundle size
+    const bundleSize = await new Promise((resolve) => {
+      exec('du -sh .next/static', (error, stdout) => {
+        if (error) {
+          resolve('Unknown');
+        } else {
+          resolve(stdout.trim().split('\t')[0]);
+        }
+      });
+    });
 
-  async monitorPerformance() {
-    this.log('⚡ Starting performance monitoring...');
+    // Check memory usage
+    const memoryUsage = process.memoryUsage();
     
-    try {
-      // Monitor build time
-      const buildTime = await this.measureBuildTime();
-      this.metrics.buildTime = buildTime;
-      
-      // Monitor bundle size
-      const bundleSize = await this.measureBundleSize();
-      this.metrics.bundleSize = bundleSize;
-      
-      // Monitor memory usage
-      const memoryUsage = process.memoryUsage();
-      this.metrics.memoryUsage = memoryUsage.heapUsed / 1024 / 1024; // MB
-      
-      // Monitor CPU usage
-      const cpuUsage = process.cpuUsage();
-      this.metrics.cpuUsage = cpuUsage.user / 1000000; // seconds
-      
-      this.metrics.lastUpdated = new Date().toISOString();
-      
-      await this.saveMetrics();
-      await this.generatePerformanceReport();
-      
-      this.log('Performance monitoring completed');
-      return this.metrics;
-    } catch (error) {
-      this.log(`Performance monitoring failed: ${error.message}`, 'ERROR');
-      return null;
-    }
-  }
-
-  async measureBuildTime() {
-    const startTime = Date.now();
-    try {
-      execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
-      return Date.now() - startTime;
-    } catch (error) {
-      return -1; // Build failed
-    }
-  }
-
-  async measureBundleSize() {
-    try {
-      const buildDir = path.join(process.cwd(), '.next');
-      if (!fs.existsSync(buildDir)) {
-        return 0;
-      }
-      
-      const getDirSize = (dir) => {
-        let size = 0;
-        const files = fs.readdirSync(dir);
-        
-        files.forEach(file => {
-          const filePath = path.join(dir, file);
-          const stat = fs.statSync(filePath);
-          
-          if (stat.isDirectory()) {
-            size += getDirSize(filePath);
-          } else {
-            size += stat.size;
-          }
-        });
-        
-        return size;
-      };
-      
-      return getDirSize(buildDir);
-    } catch (error) {
-      return 0;
-    }
-  }
-
-  async saveMetrics() {
-    const metricsFile = path.join(__dirname, 'reports', 'performance-metrics.json');
-    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
-    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
-  }
-
-  async generatePerformanceReport() {
-    const report = {
-      ...this.metrics,
-      recommendations: this.generateRecommendations()
+    const performanceReport = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'success',
+      bundleSize: bundleSize,
+      memoryUsage: {
+        rss: Math.round(memoryUsage.rss / 1024 / 1024) + ' MB',
+        heapUsed: Math.round(memoryUsage.heapUsed / 1024 / 1024) + ' MB',
+        heapTotal: Math.round(memoryUsage.heapTotal / 1024 / 1024) + ' MB'
+      },
+      recommendations: []
     };
 
-    const reportFile = path.join(__dirname, 'reports', 'performance-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`Performance report generated: ${reportFile}`);
-  }
+    // Add recommendations based on performance metrics
+    if (memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+      performanceReport.recommendations.push('Consider optimizing memory usage - heap usage is high');
+    }
 
-  generateRecommendations() {
-    const recommendations = [];
-    
-    if (this.metrics.buildTime > 60000) { // 1 minute
-      recommendations.push('Consider optimizing build process - build time is high');
+    if (bundleSize.includes('M') && parseInt(bundleSize) > 10) {
+      performanceReport.recommendations.push('Bundle size is large - consider code splitting');
     }
+
+    fs.mkdirSync(path.dirname(PERFORMANCE_LOG_PATH), { recursive: true });
+    fs.writeFileSync(PERFORMANCE_LOG_PATH, JSON.stringify(performanceReport, null, 2));
     
-    if (this.metrics.bundleSize > 5000000) { // 5MB
-      recommendations.push('Consider code splitting - bundle size is large');
+    console.log('✅ Performance monitoring completed');
+    console.log(`📊 Bundle size: ${bundleSize}`);
+    console.log(`💾 Memory usage: ${performanceReport.memoryUsage.heapUsed}`);
+    
+    if (performanceReport.recommendations.length > 0) {
+      console.log('💡 Recommendations:');
+      performanceReport.recommendations.forEach(rec => console.log(`   - ${rec}`));
     }
+
+  } catch (error) {
+    console.error('❌ Performance monitoring failed:', error);
     
-    if (this.metrics.memoryUsage > 100) { // 100MB
-      recommendations.push('Consider memory optimization - high memory usage detected');
-    }
+    const errorReport = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'failed',
+      error: error.message,
+      recommendations: ['Fix build errors before performance optimization']
+    };
     
-    return recommendations;
+    fs.writeFileSync(PERFORMANCE_LOG_PATH, JSON.stringify(errorReport, null, 2));
   }
 }
 
-// Run if called directly
-if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.monitorPerformance().catch(console.error);
-}
+// Run performance monitoring every 30 minutes
+setInterval(monitorPerformance, 30 * 60 * 1000);
+monitorPerformance(); // Run immediately on startup
 
-module.exports = PerformanceMonitor;
+console.log('🚀 Performance monitor started');

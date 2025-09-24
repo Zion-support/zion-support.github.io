@@ -1,10 +1,13 @@
-export default function Page() {
+'use client',
+export default function AIAutomationPage() {
   return (
-    <div className="min-h-screen px-4 py-12">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Services Ai Automation Page</h1>
-        <p className="text-white/70">Content coming soon.</p>
-      </div>
-    </div>
-  );
-}
+    <div className='space-y-8'>,
+      <div className='text-center space-y-4'>,
+        <h1 className='text-4xl font-bold'>AI Workflow Automation</h1>,
+        <p className='text-xl opacity-80 max-w-3xl mx-auto'>,
+          Transform your business processes with intelligent automation powered,
+          by cutting-edge AI technology,
+        </p>,
+      </div>,
+    </div>)}
+,

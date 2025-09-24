@@ -7,13 +7,8 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
-<<<<<<< HEAD
 const START_TOKEN = 'AUTO-GENERATED: FRONT_ADS_START';
 const END_TOKEN = 'AUTO-GENERATED: FRONT_ADS_END';
-=======
-const START = '{/* AUTO-GENERATED: FRONT_ADS_START */}';
-const END = '{/* AUTO-GENERATED: FRONT_ADS_END */}';
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 function log(msg) {
   process.stdout.write(`[front-index-auto-advertiser] ${msg}\n`);
@@ -27,7 +22,6 @@ function buildTiles() {
     { href: '/reports/ai-trends', label: 'AI Trends', tagline: 'Signals for new automations' },
     { href: '/newsroom', label: 'Newsroom', tagline: 'Autonomous updates & highlights' },
     { href: '/.netlify/functions/docs-index-runner', label: 'Docs', tagline: 'Technical notes & guides' },
-<<<<<<< HEAD
     { href: '/reports/capability-map', label: 'Capability Map', tagline: 'Live map of functions and automations' },
     { href: '/reports/dependency-freshness', label: 'Dependency Freshness', tagline: 'Up-to-date dependency insights' },
     { href: '/.netlify/functions/automation-status-dashboard', label: 'Automation Dashboard', tagline: 'Overview and quick links' },
@@ -35,10 +29,6 @@ function buildTiles() {
     { href: '/reports/unused-media', label: 'Unused Media', tagline: 'Find and clean unused assets' },
     { href: '/reports/orphan-pages', label: 'Orphan Pages', tagline: 'Unlinked pages report' },
     { href: '/newsroom', label: 'AI Changelog', tagline: 'Summarized autonomous changes' }
-=======
-    { href: '/newsroom', label: 'AI Changelog', tagline: 'Summarized autonomous changes' },
-    { href: '/automation/functions-directory', label: 'Autonomy Directory', tagline: 'Browse all cloud functions' }
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   ];
 
   return items.map((it) => {
@@ -70,7 +60,6 @@ function ensureImports(tsx) {
   return tsx;
 }
 
-<<<<<<< HEAD
 function discoverExternalLinks() {
   return [
     { type: 'internal', href: '/.netlify/functions/supreme-orchestrator', label: 'Supreme Orchestrator', tagline: 'Meta trigger (1m)' },
@@ -119,9 +108,6 @@ ${buildTiles()}
 }
 
 (function main() {
-=======
-function apply() {
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   if (!fs.existsSync(FRONT_PAGE)) {
     throw new Error(`Front page not found at ${FRONT_PAGE}`);
   }

@@ -1,71 +1,52 @@
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import globals from 'globals';
+import eslintJs from '@eslint/js'
+import reactPlugin from 'eslint-plugin-react'
+import reactHooksPlugin from 'eslint-plugin-react-hooks'
+import tseslint from 'typescript-eslint'
 
 export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      '**/.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      'automation/**',
-      'public/**',
-      'netlify/**',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      'zion-os.disabled/**',
-      'zion-website/.next/**',
-      'zion-os/.next/**',
-      'zion.app/**',
-      'zion_academy/**',
-      '**/static/**',
-      '**/*.min.js'
-    ]
-  }
-];
+	{
+		ignores: [
+			'node_modules/**',
+			'.next/**',
+			'out/**',
+			'dist/**',
+			'build/**',
+			'public/**',
+			'automation/**',
+			'apps.backup/**',
+			'backup/**',
+			'backups/**',
+			'backup-merge-conflicts/**',
+			'backup-problematic-files/**',
+			'recovered-branches/**',
+			'server/**',
+			'zion-os/**',
+			'zion-website/**',
+			'zion-ai-assistant/**',
+			'ts_files_backup/**',
+			'src_backup/**',
+			'src_backup_temp/**',
+			'components/2025-advanced-services-showcase.tsx',
+			'components/2025-comprehensive-services-showcase-v2.tsx',
+			'components/AI2025AdvancedAutomationShowcase.tsx',
+			'components/AI2025AdvancedAnalyticsDashboard.tsx',
+			'**/*.min.js']},
+	eslintJs.configs.recommended,
+	...tseslint.configs.recommended,
+	{
+		files: ['app/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+		languageOptions: {
+			parser: tseslint.parser,
+			ecmaVersion: 2021,
+			sourceType: 'module'},
+		plugins: {
+			react: reactPlugin,
+			'react-hooks': reactHooksPlugin,
+			'@typescript-eslint': tseslint.plugin},
+		settings: { react: { version: 'detect' } },
+		rules: {
+			'react/react-in-jsx-scope': 'off',
+			'no-console': 'warn',
+			'@typescript-eslint/no-unused-vars': [
+				'warn',
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}]
