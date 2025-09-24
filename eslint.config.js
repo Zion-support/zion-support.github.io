@@ -189,7 +189,6 @@ export default [
              '**/src/components/ui/avatar.tsx',
              '**/src/components/ui/badge.tsx',
              '**/src/components/ui/button.tsx',
-             '**/src/components/ui/card.tsx',
              '**/src/components/ui/floating-action-button.tsx',
              '**/src/components/ui/input.tsx',
              '**/src/components/ui/loading-spinner.tsx',
